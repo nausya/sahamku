@@ -5,3 +5,4 @@ plotly
 matplotlib
 ta
 xgboost
+scikit-learn
