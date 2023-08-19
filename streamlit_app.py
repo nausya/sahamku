@@ -1,8 +1,8 @@
-!pip install yfinance
+
 
 import streamlit as st
 import pandas as pd
-import yfinance as yf
+#import yfinance as yf
 from ta.volatility import BollingerBands
 from ta.trend import MACD, EMAIndicator, SMAIndicator
 from ta.momentum import RSIIndicator
