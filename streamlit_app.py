@@ -1,9 +1,9 @@
 import streamlit as st
 import pandas as pd
 #import yfinance as yf
-from ta.volatility import BollingerBands
-from ta.trend import MACD, EMAIndicator, SMAIndicator
-from ta.momentum import RSIIndicator
+#from ta.volatility import BollingerBands
+#from ta.trend import MACD, EMAIndicator, SMAIndicator
+#from ta.momentum import RSIIndicator
 import datetime
 from datetime import date
 from sklearn.preprocessing import StandardScaler
