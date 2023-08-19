@@ -1,4 +1,5 @@
-scikit-learn
+streamlit>=0.78.0
 yfinance
-ta
-xgboost
+pandas
+plotly
+matplotlib
