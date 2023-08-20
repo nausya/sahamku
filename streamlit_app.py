@@ -38,8 +38,6 @@ def download_data(op, start_date, end_date):
     return df
 
 #AMBIL KODE EMITEN DARI CSV
-#option2 = st.sidebar.selectbox('Pilih Kode Emiten', ['PGAS','TLKM', 'INDY'])
-#option2 = option2 + ".JK"
 
 ## Load the data
 dataemiten = pd.read_csv('kodesaham.csv')
@@ -57,7 +55,7 @@ selected_emiten = st.sidebar.selectbox('Pilih Emiten:', emiten)
 ## Display the filtered data
 st.sidebar.write(selected_emiten)
 
-option = selected_emiten + ".JK"
+option = selected_emiten.split(' | ')[0] + ".JK"
 option = option.upper()
 today = datetime.date.today()
 duration = st.sidebar.number_input('Durasi', value=3000)
