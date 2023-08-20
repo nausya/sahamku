@@ -30,7 +30,7 @@ def main():
     else:
         predict()
 
-st.sidebar.info("Desain Oleh [Jonaben](https://www.linkedin.com/in/jonathan-ben-okah-7b507725b)")
+
 
 @st.cache_resource
 def download_data(op, start_date, end_date):
@@ -39,21 +39,22 @@ def download_data(op, start_date, end_date):
 
 
 
-option = st.sidebar.text_input('Ketik Kode Emiten', value='PGAS.JK')
+option = st.sidebar.text_input('Ketik Kode Emiten', value='PGAS')
+option = option + ".JK"
 option = option.upper()
 today = datetime.date.today()
 duration = st.sidebar.number_input('Durasi', value=3000)
 before = today - datetime.timedelta(days=duration)
-start_date = st.sidebar.date_input('Start Date', value=before)
-end_date = st.sidebar.date_input('End date', today)
-if st.sidebar.button('Send'):
+start_date = st.sidebar.date_input('Tanggal Awal', value=before)
+end_date = st.sidebar.date_input('Tanggal Akhir', today)
+if st.sidebar.button('Proses'):
     if start_date < end_date:
-        st.sidebar.success('Start date: `%s`\n\nEnd date: `%s`' %(start_date, end_date))
+        st.sidebar.success('Tanggal Awal: `%s`\n\nEnd date: `%s`' %(start_date, end_date))
         download_data(option, start_date, end_date)
     else:
-        st.sidebar.error('Error: End date must fall after start date')
+        st.sidebar.error('Terdapat Kesalahan: Tanggal akhir harus ditulis setelah tanggal awal')
 
-
+st.sidebar.info("Desain Oleh [Jonaben](https://www.linkedin.com/in/jonathan-ben-okah-7b507725b)")
 
 
 data = download_data(option, start_date, end_date)
