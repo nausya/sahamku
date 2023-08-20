@@ -51,7 +51,7 @@ emiten = dataemiten['Kode'].unique()
 selected_emiten = st.selectbox('Pilih Emiten:', emiten)
  
 ## Filter the data
-filtered_data = dataemiten[dataemiten['Kode'] == selected_emiten]
+filtered_data = dataemiten.loc[dataemiten['Kode'] == selected_emiten]
  
 ## Display the filtered data
 st.write(filtered_data)
