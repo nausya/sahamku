@@ -45,7 +45,8 @@ def download_data(op, start_date, end_date):
 dataemiten = pd.read_csv('kodesaham.csv')
  
 ## Get the list of countries
-emiten = dataemiten[['Kode','Nama Perusahaan']]
+emiten = dataemiten['Kode'] + '|' + dataemiten['Nama Perusahaan']
+#dataemiten[['Kode','Nama Perusahaan']]
  
 ## Create the select box
 selected_emiten = st.sidebar.selectbox('Pilih Emiten:', emiten)
