@@ -37,8 +37,11 @@ def download_data(op, start_date, end_date):
     df = yf.download(op, start=start_date, end=end_date, progress=False)
     return df
 
+#AMBIL KODE EMITEN DARI CSV
+option2 = st.sidebar.selectbox('Pilih Kode Emiten', ['PGAS','TLKM', 'INDY'])
+option2 = option2 + ".JK"
 
-
+#AMBIL KODE ISI TEXT
 option = st.sidebar.text_input('Ketik Kode Emiten', value='PGAS')
 option = option + ".JK"
 option = option.upper()
