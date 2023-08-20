@@ -11,11 +11,11 @@ Shown are the stock **closing price** and **volume** of Apple!
 
 # https://towardsdatascience.com/how-to-get-stock-data-using-python-c0de1df17e75
 #define the ticker symbol
-tickerSymbol = 'AAPL'
+tickerSymbol = 'PGAS.JK'
 #get data on this ticker
 tickerData = yf.Ticker(tickerSymbol)
 #get the historical prices for this ticker
-tickerDf = tickerData.history(period='1d', start='2010-5-31', end='2020-5-31')
+tickerDf = tickerData.history(period='1d', start='2015-1-1', end='2023-7-31')
 # Open	High	Low	Close	Volume	Dividends	Stock Splits
 
 st.line_chart(tickerDf.Close)
