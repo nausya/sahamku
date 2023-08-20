@@ -53,7 +53,7 @@ selected_emiten = st.sidebar.selectbox('Pilih Emiten:', emiten)
 #filtered_data = dataemiten.loc[dataemiten['Kode'] == selected_emiten]
  
 ## Display the filtered data
-st.write(selected_emiten.split(' | ')[1])
+st.header(selected_emiten.split(' | ')[1])
 
 option = selected_emiten.split(' | ')[0] + ".JK"
 option = option.upper()
