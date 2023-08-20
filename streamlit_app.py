@@ -56,7 +56,7 @@ filtered_data = dataemiten.[dataemiten['Kode'] == selected_emiten]
 ## Display the filtered data
 #st.write(filtered_data)
 
-option = filtered_data + ".JK"
+option = selected_emiten + ".JK"
 
 #AMBIL KODE ISI TEXT
 #option = st.sidebar.text_input('Ketik Kode Emiten', value='PGAS')
