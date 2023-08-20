@@ -17,15 +17,15 @@ from sklearn.metrics import r2_score, mean_absolute_error
 
 
 
-st.title('Stock Price Predictions')
-st.sidebar.info('SELAMAT DATANG DI ANALITIK SAHAM BURSA EFEK INDONESIA. SILAKAN KETIK KODE EMITEN')
-st.sidebar.info("Created and designed by [Jonaben](https://www.linkedin.com/in/jonathan-ben-okah-7b507725b)")
+st.title('ANALITIK SAHAM BURSA EFEK INDONESIA')
+st.sidebar.info('SELAMAT DATANG DI ANALITIK SAHAM BEI. SILAKAN KETIK KODE EMITEN')
+st.sidebar.info("Desain Oleh [Jonaben](https://www.linkedin.com/in/jonathan-ben-okah-7b507725b)")
 
 def main():
-    option = st.sidebar.selectbox('Make a choice', ['Visualize','Recent Data', 'Predict'])
-    if option == 'Visualize':
+    option = st.sidebar.selectbox('Silakan Pilih', ['Grafik','Data', 'Prediksi'])
+    if option == 'Grafik':
         tech_indicators()
-    elif option == 'Recent Data':
+    elif option == 'Data':
         dataframe()
     else:
         predict()
@@ -39,10 +39,10 @@ def download_data(op, start_date, end_date):
 
 
 
-option = st.sidebar.text_input('Enter a Stock Symbol', value='PGAS.JK')
+option = st.sidebar.text_input('Ketik Kode Emiten', value='PGAS.JK')
 option = option.upper()
 today = datetime.date.today()
-duration = st.sidebar.number_input('Enter the duration', value=3000)
+duration = st.sidebar.number_input('Durasi', value=3000)
 before = today - datetime.timedelta(days=duration)
 start_date = st.sidebar.date_input('Start Date', value=before)
 end_date = st.sidebar.date_input('End date', today)
@@ -60,8 +60,8 @@ data = download_data(option, start_date, end_date)
 scaler = StandardScaler()
 
 def tech_indicators():
-    st.header('Technical Indicators')
-    option = st.radio('Choose a Technical Indicator to Visualize', ['Close', 'BB', 'MACD', 'RSI', 'SMA', 'EMA'])
+    st.header('Teknikal Indikator')
+    option = st.radio('Pilih Teknikal Indikator', ['Close', 'BB', 'MACD', 'RSI', 'SMA', 'EMA'])
 
     # Bollinger bands
     bb_indicator = BollingerBands(data.Close)
@@ -100,7 +100,7 @@ def tech_indicators():
 
 
 def dataframe():
-    st.header('Recent Data')
+    st.header('10 Data Terkini')
     st.dataframe(data.tail(10))
 
 
