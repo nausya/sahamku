@@ -19,7 +19,7 @@ from sklearn.metrics import r2_score, mean_absolute_error
 
 st.title('ANALITIK SAHAM BURSA EFEK INDONESIA')
 st.sidebar.info('SELAMAT DATANG DI ANALITIK SAHAM BEI')
-st.sidebar.info("Desain Oleh [Jonaben](https://www.linkedin.com/in/jonathan-ben-okah-7b507725b)")
+
 
 def main():
     option = st.sidebar.selectbox('Silakan Pilih', ['Grafik','Data', 'Prediksi'])
@@ -30,7 +30,7 @@ def main():
     else:
         predict()
 
-
+st.sidebar.info("Desain Oleh [Jonaben](https://www.linkedin.com/in/jonathan-ben-okah-7b507725b)")
 
 @st.cache_resource
 def download_data(op, start_date, end_date):
