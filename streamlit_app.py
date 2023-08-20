@@ -45,13 +45,13 @@ def download_data(op, start_date, end_date):
 dataemiten = pd.read_csv('kodesaham.csv')
  
 ## Get the list of countries
-emiten = dataemiten['Kode'].unique()
+emiten = dataemiten[['Kode','Nama Perusahaan']]
  
 ## Create the select box
-selected_emiten = st.selectbox('Pilih Emiten:', emiten)
+selected_emiten = st.sidebar.selectbox('Pilih Emiten:', emiten)
  
 ## Filter the data
-filtered_data = dataemiten.loc[dataemiten['Kode'] == selected_emiten]
+filtered_data = emiten.loc[dataemiten['Kode'] == selected_emiten]
  
 ## Display the filtered data
 st.write(filtered_data)
