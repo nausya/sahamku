@@ -45,18 +45,18 @@ def download_data(op, start_date, end_date):
 dataemiten = pd.read_csv('kodesaham.csv')
  
 ## Get the list of countries
-emiten = dataemiten[['Kode','Nama Perusahaan']]
+emiten = dataemiten['Kode']
  
 ## Create the select box
 selected_emiten = st.sidebar.selectbox('Pilih Emiten:', emiten)
  
 ## Filter the data
-filtered_data = emiten.loc[dataemiten['Kode'] == selected_emiten]
+filtered_data = dataemiten.[dataemiten['Kode'] == selected_emiten]
  
 ## Display the filtered data
 #st.write(filtered_data)
 
-#option = filtered_data + ".JK"
+option = filtered_data + ".JK"
 
 #AMBIL KODE ISI TEXT
 #option = st.sidebar.text_input('Ketik Kode Emiten', value='PGAS')
