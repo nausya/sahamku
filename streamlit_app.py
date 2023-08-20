@@ -54,7 +54,7 @@ if st.sidebar.button('Proses'):
     else:
         st.sidebar.error('Terdapat Kesalahan: Tanggal akhir harus ditulis setelah tanggal awal')
 
-st.sidebar.info("Desain Oleh [Jonaben](https://www.linkedin.com/in/jonathan-ben-okah-7b507725b)")
+
 
 
 data = download_data(option, start_date, end_date)
@@ -162,3 +162,5 @@ def model_engine(model, num):
 
 if __name__ == '__main__':
     main()
+    
+st.sidebar.info("Desain Oleh [Jonaben](https://www.linkedin.com/in/jonathan-ben-okah-7b507725b)")
