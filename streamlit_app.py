@@ -18,7 +18,7 @@ from sklearn.metrics import r2_score, mean_absolute_error
 
 
 st.title('Stock Price Predictions')
-st.sidebar.info('Welcome to the Stock Price Prediction App. Choose your options below')
+st.sidebar.info('SELAMAT DATANG DI ANALITIK SAHAM BURSA EFEK INDONESIA. SILAKAN KETIK KODE EMITEN')
 st.sidebar.info("Created and designed by [Jonaben](https://www.linkedin.com/in/jonathan-ben-okah-7b507725b)")
 
 def main():
@@ -39,7 +39,7 @@ def download_data(op, start_date, end_date):
 
 
 
-option = st.sidebar.text_input('Enter a Stock Symbol', value='SPY')
+option = st.sidebar.text_input('Enter a Stock Symbol', value='PGAS.JK')
 option = option.upper()
 today = datetime.date.today()
 duration = st.sidebar.number_input('Enter the duration', value=3000)
