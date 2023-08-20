@@ -18,7 +18,7 @@ from sklearn.metrics import r2_score, mean_absolute_error
 
 
 st.title('ANALITIK SAHAM BURSA EFEK INDONESIA')
-st.sidebar.info('SELAMAT DATANG DI ANALITIK SAHAM BEI')
+st.sidebar.info('SELAMAT DATANG')
 
 
 def main():
@@ -58,7 +58,7 @@ st.header(selected_emiten.split(' | ')[1])
 option = selected_emiten.split(' | ')[0] + ".JK"
 option = option.upper()
 today = datetime.date.today()
-duration = st.sidebar.number_input('Durasi', value=3000)
+duration = st.sidebar.number_input('Durasi Hari', value=3000)
 before = today - datetime.timedelta(days=duration)
 start_date = st.sidebar.date_input('Tanggal Awal', value=before)
 end_date = st.sidebar.date_input('Tanggal Akhir', today)
