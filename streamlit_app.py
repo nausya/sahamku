@@ -122,10 +122,10 @@ def dataframe():
 
 
 def predict():
-    model = st.radio('Choose a model', ['LinearRegression', 'RandomForestRegressor', 'ExtraTreesRegressor', 'KNeighborsRegressor', 'XGBoostRegressor'])
-    num = st.number_input('How many days forecast?', value=5)
+    model = st.radio('Pilih Model Komputasi', ['LinearRegression', 'RandomForestRegressor', 'ExtraTreesRegressor', 'KNeighborsRegressor', 'XGBoostRegressor'])
+    num = st.number_input('Prediksi harga saham beberapa hari ke depan?', value=5)
     num = int(num)
-    if st.button('Predict'):
+    if st.button('Prediksi Harga Saham'):
         if model == 'LinearRegression':
             engine = LinearRegression()
             model_engine(engine, num)
@@ -171,11 +171,11 @@ def model_engine(model, num):
     forecast_pred = model.predict(x_forecast)
     day = 1
     for i in forecast_pred:
-        st.text(f'Day {day}: {i}')
+        st.text(f'Hari ke-{day}: {i}')
         day += 1
 
 
 if __name__ == '__main__':
     main()
     
-st.sidebar.info("Desain Oleh [Jonaben](https://www.linkedin.com/in/jonathan-ben-okah-7b507725b)")
+st.sidebar.info("Desain Oleh [Jonaben] dan dimodifikasi oleh DwiA")
