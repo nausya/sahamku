@@ -58,7 +58,7 @@ st.header(selected_emiten.split(' | ')[1])
 option = selected_emiten.split(' | ')[0] + ".JK"
 option = option.upper()
 today = datetime.date.today()
-duration = st.sidebar.number_input('Durasi Hari', value=3000)
+duration = st.sidebar.number_input('Durasi Hari', value=1000)
 before = today - datetime.timedelta(days=duration)
 start_date = st.sidebar.date_input('Tanggal Awal', value=before)
 end_date = st.sidebar.date_input('Tanggal Akhir', today)
@@ -165,8 +165,8 @@ def model_engine(model, num):
     # training the model
     model.fit(x_train, y_train)
     preds = model.predict(x_test)
-    st.text(f'r2_score: {r2_score(y_test, preds)} \
-            \nMAE: {mean_absolute_error(y_test, preds)}')
+    st.text(f'Akurasi \nr2_score: {r2_score(y_test, preds)*100}% \
+            \nMAE: {mean_absolute_error(y_test, preds)}%')
     # predicting stock price based on the number of days
     forecast_pred = model.predict(x_forecast)
     day = 1
