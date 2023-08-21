@@ -165,8 +165,8 @@ def model_engine(model, num):
     # training the model
     model.fit(x_train, y_train)
     preds = model.predict(x_test)
-    st.text(f'AKURASI \nr2_score: {round(r2_score(y_test, preds)*100,2)}% \
-            \nMAE: {round(mean_absolute_error(y_test, preds),2)}%')
+    st.text(f'AKURASI \nr2_score: {round(r2_score(y_test, preds)*100)}% \
+            \nMAE: {round(mean_absolute_error(y_test, preds))}%')
     # predicting stock price based on the number of days
     forecast_pred = model.predict(x_forecast)
     day = 1
