@@ -178,4 +178,4 @@ def model_engine(model, num):
 if __name__ == '__main__':
     main()
     
-st.sidebar.info("Desain oleh Jonaben dengan perubahan selanjutnya oleh DwiA")
+st.sidebar.info("Desain Jonaben dengan modifikasi DwiA")
