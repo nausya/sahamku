@@ -171,11 +171,11 @@ def model_engine(model, num):
     forecast_pred = model.predict(x_forecast)
     day = 1
     for i in forecast_pred:
-        st.text(f'Hari ke-{day}: {i}')
+        st.text(f'Hari ke-{day}: {round(i)}')
         day += 1
 
 
 if __name__ == '__main__':
     main()
     
-st.sidebar.info("Desain Jonaben dengan modifikasi DwiA")
+st.sidebar.info("Desain Jonaben & modifikasi oleh DwiA")
