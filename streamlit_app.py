@@ -64,8 +64,7 @@ H52 = detil.info['fiftyTwoWeekHigh']
 C = detil.info['currentPrice']
 D = (H52-L52)/100
 P = (C - L52)/D
-#st.subheader('Persentil =' round(P))
-st.write('Persentil =', round(P))
+st.subheader('Persentil =', round(P))
 
 
 #Proses sidebar data
@@ -124,7 +123,7 @@ def tech_indicators():
         st.write('Simple Moving Average')
         st.line_chart(sma)
     else:
-        st.write('Expoenetial Moving Average')
+        st.write('Exponential Moving Average')
         st.line_chart(ema)
     
     st.bar_chart(data.Volume)
