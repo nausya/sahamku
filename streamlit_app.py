@@ -40,11 +40,10 @@ def download_data(op, start_date, end_date):
 #AMBIL KODE EMITEN DARI CSV
 
 ## Load the data
-dataemiten = pd.read_csv('kodesaham.csv')
+dataemiten = pd.read_csv('kodesaham.csv').sort_values('Kode')
  
 ## Get the list of countries
-order = dataemiten['Kode'].sort_values(by=['Kode'])
-emiten = order + ' | ' + dataemiten['Nama Perusahaan']
+emiten = dataemiten['Kode'] + ' | ' + dataemiten['Nama Perusahaan']
 
  
 ## Create the select box
