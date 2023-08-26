@@ -65,7 +65,7 @@ C = detil.info['currentPrice']
 D = (H52-L52)/100
 P = (C - L52)/D
 st.write('Persentil :')
-st.write(P, 'dari skala 100', divider='rainbow')
+st.text(P, 'dari skala 100', divider='rainbow')
 
 #Proses sidebar data
 option = option.upper()
