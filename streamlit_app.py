@@ -64,7 +64,7 @@ start_date = st.sidebar.date_input('Tanggal Awal', value=before)
 end_date = st.sidebar.date_input('Tanggal Akhir', today)
 if st.sidebar.button('Proses'):
     if start_date < end_date:
-        st.sidebar.success('Tanggal Awal: `%s`\n\nEnd date: `%s`' %(start_date, end_date))
+        st.sidebar.success('Tanggal Awal: `%s`\n\nTanggal Akhir: `%s`' %(start_date, end_date))
         download_data(option, start_date, end_date)
     else:
         st.sidebar.error('Terdapat Kesalahan: Tanggal akhir harus ditulis setelah tanggal awal')
