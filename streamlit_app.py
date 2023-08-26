@@ -62,9 +62,9 @@ detil = yf.Ticker(option)
 L52 = detil.info['fiftyTwoWeekLow']
 H52 = detil.info['fiftyTwoWeekHigh']
 C = detil.info['currentPrice']
-D = (H52-L52)/100
+D = (H52-L52)/100 #format(1234, "8.,1f") 
 P = (C - L52)/D
-st.subheader(f"Harga terkini Rp{format(int(C),',d')}.- berada pada level {round(P)} dari skala 100", divider="rainbow")
+st.subheader(f"Harga terkini Rp{format(int(C),"8.,1f")}.- berada pada level {round(P)} dari skala 100", divider="rainbow")
 st.info('Untuk jangka panjang perlu diperhatikan kisaran level harga kurang dari 10')
 
 
