@@ -64,7 +64,7 @@ H52 = detil.info['fiftyTwoWeekHigh']
 C = detil.info['currentPrice']
 D = (H52-L52)/100
 P = (C - L52)/D
-st.subheader(f"Harga terkini Rp.{{:7,.0f}.format(C}- berada pada level {round(P)} dari skala 100", divider="rainbow")
+st.subheader(f"Harga terkini Rp.{{:7,.0f}.format(C)}- berada pada level {round(P)} dari skala 100", divider="rainbow")
 st.info('Untuk jangka panjang perlu diperhatikan kisaran level harga kurang dari 10')
 
 
