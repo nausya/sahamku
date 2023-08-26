@@ -56,6 +56,18 @@ selected_emiten = st.sidebar.selectbox('Pilih Emiten:', emiten)
 st.header(selected_emiten.split(' | ')[1])
 
 option = selected_emiten.split(' | ')[0] + ".JK"
+
+#Display Persentil
+detil = yf.Ticker(option)
+L52 = detil.info['fiftyTwoWeekLow']
+H52 = detil.info['fiftyTwoWeekHigh']
+C = detil.info['currentPrice']
+D = round((H52 - L52)/100)
+P = (C - L52)/D
+st.subheader('Persentil =')
+round(P)
+
+#Proses sidebar data
 option = option.upper()
 today = datetime.date.today()
 duration = st.sidebar.number_input('Durasi Hari', value=1000)
