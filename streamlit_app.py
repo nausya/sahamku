@@ -90,7 +90,7 @@ scaler = StandardScaler()
 
 def tech_indicators():
     st.header('Teknikal Indikator')
-    option = st.radio('Pilih Teknikal Indikator', ['Close', 'BB', 'MACD', 'RSI', 'SMA', 'EMA'])
+    option = st.radio('Pilih Teknikal Indikator', ['Close', 'BB', 'MACD', 'RSI', 'EMA'])
 
     # Bollinger bands
     bb_indicator = BollingerBands(data.Close)
@@ -104,7 +104,7 @@ def tech_indicators():
     # RSI
     rsi = RSIIndicator(data.Close).rsi()
     # SMA
-    sma = SMAIndicator(data.Close, window=14).sma_indicator()
+    #sma = SMAIndicator(data.Close, window=14).sma_indicator()
     # EMA
     ema = EMAIndicator(data.Close).ema_indicator()
 
@@ -120,9 +120,9 @@ def tech_indicators():
     elif option == 'RSI':
         st.write('Relative Strength Indicator')
         st.line_chart(rsi)
-    elif option == 'SMA':
-        st.write('Simple Moving Average')
-        st.line_chart(sma)
+    #elif option == 'SMA':
+        #st.write('Simple Moving Average')
+        #st.line_chart(sma)
     else:
         st.write('Exponential Moving Average')
         st.line_chart(ema)
