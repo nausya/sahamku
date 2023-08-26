@@ -113,6 +113,8 @@ def tech_indicators():
     else:
         st.write('Expoenetial Moving Average')
         st.line_chart(ema)
+    
+    st.line_chart(data.Volume)
 
 
 def dataframe():
