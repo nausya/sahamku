@@ -62,8 +62,8 @@ detil = yf.Ticker(option)
 L52 = detil.info['fiftyTwoWeekLow']
 H52 = detil.info['fiftyTwoWeekHigh']
 C = detil.info['currentPrice']
-D = round((H52-L52)/100)
-P = (C-L52)/D
+D = (H52-L52)/100
+P = (C - L52)/D
 st.subheader('Persentil =')
 round(P)
 
