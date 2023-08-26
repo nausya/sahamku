@@ -64,7 +64,7 @@ H52 = detil.info['fiftyTwoWeekHigh']
 C = detil.info['currentPrice']
 D = (H52-L52)/100
 P = (C - L52)/D
-st.subheader('Persentil =','round(P)')
+st.subheader('Persentil =','P')
 
 
 #Proses sidebar data
