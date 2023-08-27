@@ -38,8 +38,10 @@ def main():
         tech_indicators()
     elif selected2 == 'Screener':
         dataframe()
-    else selected2 == 'Prediksi':
+    elif selected2 == 'Prediksi':
         predict()
+    else:
+        st.write('Home')
 
 #Halaman Utama
 @st.cache_resource
