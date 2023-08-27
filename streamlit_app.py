@@ -22,7 +22,7 @@ from sklearn.metrics import r2_score, mean_absolute_error
 app = hy.HydraApp(title='Analitik Saham Indonesia')
 
 @app.addapp()
-def my_home():
+def My_home():
  hy.info('Halaman Depan')
 
 @app.addapp()
