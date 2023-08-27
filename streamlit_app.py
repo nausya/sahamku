@@ -1,5 +1,5 @@
 import streamlit as st
-import hydralit_components as hc
+import hydralit as hy
 import pandas as pd
 import matplotlib.pyplot as plt
 import yfinance as yf
@@ -18,14 +18,20 @@ from sklearn.ensemble import ExtraTreesRegressor
 from sklearn.metrics import r2_score, mean_absolute_error
 
 
+#when we import hydralit, we automatically get all of Streamlit
+app = hy.HydraApp(title='Simple Multi-Page App')
 
-menu_data = [
-    {'label':"Home"},
-    {'label':"Emiten"},
-    {'label':"Screener"},
-]
+@app.addapp()
+def my_home():
+ hy.info('Hello from app1')
 
-menu_id = hc.nav_bar(menu_definition=menu_data)
+@app.addapp()
+def app2():
+ hy.info('Hello from app 2')
+
+
+#Run the whole lot, we get navbar, state management and app isolation, all with this tiny amount of work.
+app.run()
 
 st.info(f"{menu_id=}")
 
