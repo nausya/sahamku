@@ -25,7 +25,7 @@ def main():
     if selected2 == 'Data Emiten':
          dataframe()
     elif selected2 == 'Screener':
-         st.write('Penyaringan Saham')
+         st.write('Penyaringan Saham (Tahap Pengembangan)')
     elif selected2 == 'Prediksi':
          predict()
     else:
