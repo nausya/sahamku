@@ -18,9 +18,6 @@ from sklearn.ensemble import ExtraTreesRegressor
 from sklearn.metrics import r2_score, mean_absolute_error
 
 
-
-
-
 st.title('ANALITIK SAHAM BURSA EFEK INDONESIA')
 st.sidebar.info('SELAMAT DATANG')
 
@@ -53,7 +50,7 @@ def Screener():
 @app.addapp()
 def Prediksi():
  hy.info('Prediksi Saham')
-  #predict()
+ predict()
 
 #Run the whole lot, we get navbar, state management and app isolation, all with this tiny amount of work.
 app.run()
