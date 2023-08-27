@@ -28,8 +28,6 @@ def main():
    # else:
     #    predict()
 
-st.title('ANALITIK SAHAM INDONESIA')
-
     selected2 = option_menu(None, ["Home", "Emiten", "Screener", 'Prediksi'], 
     icons=['house', 'cloud-upload', "list-task", 'gear'], 
     menu_icon="cast", default_index=0, orientation="horizontal")
@@ -44,7 +42,8 @@ st.title('ANALITIK SAHAM INDONESIA')
     else:
         #st.write('Home')
          tech_indicators()
-    
+
+st.title('ANALITIK SAHAM INDONESIA')   
 
 #Halaman Utama
 @st.cache_resource
