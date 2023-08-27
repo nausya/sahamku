@@ -34,14 +34,12 @@ def main():
     selected2 = option_menu(None, ["Home", "Emiten", "Screener", 'Prediksi'], 
     icons=['house', 'cloud-upload', "list-task", 'gear'], 
     menu_icon="cast", default_index=0, orientation="horizontal")
-    if option == 'Emiten':
+    if selected2 == 'Emiten':
         tech_indicators()
-    elif option == 'Screener':
+    elif selected2 == 'Screener':
         dataframe()
-    elif option == 'Prediksi':
+    else selected2 == 'Prediksi':
         predict()
-    else:    
-        selected2
 
 #Halaman Utama
 @st.cache_resource
