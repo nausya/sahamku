@@ -23,25 +23,28 @@ st.sidebar.info('SELAMAT DATANG (Versi Beta)')
 
 
 def main():
-    option = st.sidebar.selectbox('Silakan Pilih', ['Grafik','Data', 'Prediksi'])
-    if option == 'Grafik':
-        tech_indicators()
-    elif option == 'Data':
-        dataframe()
-    else:
-        predict()
+   # option = st.sidebar.selectbox('Silakan Pilih', ['Grafik','Data', 'Prediksi'])
+   # if option == 'Grafik':
+    #    tech_indicators()
+   # elif option == 'Data':
+   #     dataframe()
+   # else:
+    #    predict()
 
-selected2 = option_menu(None, ["Home", "Emiten", "Screener", 'Prediksi'], 
-icons=['house', 'cloud-upload', "list-task", 'gear'], 
-menu_icon="cast", default_index=0, orientation="horizontal")
-if selected2 == 'Emiten':
-    st.write('Prediksi')
-elif selected2 == 'Screener':
-    st.write('Prediksi')
-elif selected2 == 'Prediksi':
-    st.write('Prediksi')
-else:
-    st.write('Home') 
+    selected2 = option_menu(None, ["Home", "Emiten", "Screener", 'Prediksi'], 
+    icons=['house', 'cloud-upload', "list-task", 'gear'], 
+    menu_icon="cast", default_index=0, orientation="horizontal")
+    if selected2 == 'Emiten':
+        #st.write('Prediksi')
+        dataframe()
+    elif selected2 == 'Screener':
+        #st.write('Prediksi')
+    elif selected2 == 'Prediksi':
+        #st.write('Prediksi')
+         predict()
+    else:
+        #st.write('Home')
+        tech_indicators()
     
 
 #Halaman Utama
@@ -61,9 +64,7 @@ emiten = dataemiten['Kode'] + ' | ' + dataemiten['Nama Perusahaan']
  
 ## Create the select box
 selected_emiten = st.sidebar.selectbox('Pilih Emiten:', emiten)
- 
-## Filter the data
-#filtered_data = dataemiten.loc[dataemiten['Kode'] == selected_emiten]
+
  
 ## Display the filtered data
 st.header(selected_emiten.split(' | ')[1])
