@@ -31,10 +31,17 @@ def main():
     else:
         predict()
  
-selected2 = option_menu(None, ["Home", "Upload", "Tasks", 'Settings'], 
+    selected2 = option_menu(None, ["Home", "Emiten", "Screener", 'Prediksi'], 
     icons=['house', 'cloud-upload', "list-task", 'gear'], 
     menu_icon="cast", default_index=0, orientation="horizontal")
-selected2
+    if option == 'Emiten':
+        tech_indicators()
+    elif option == 'Screener':
+        dataframe()
+    elif option == 'Prediksi':
+        predict()
+    else:    
+        selected2
 
 #Halaman Utama
 @st.cache_resource
