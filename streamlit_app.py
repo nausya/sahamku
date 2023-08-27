@@ -35,11 +35,9 @@ selected2 = option_menu(None, ["Home", "Emiten", "Screener", 'Prediksi'],
 icons=['house', 'cloud-upload', "list-task", 'gear'], 
 menu_icon="cast", default_index=0, orientation="horizontal")
 if selected2 == 'Emiten':
-    def main():
-    tech_indicators()
+    st.write('Prediksi')
 elif selected2 == 'Screener':
-    def main():
-    dataframe()
+    st.write('Prediksi')
 elif selected2 == 'Prediksi':
     st.write('Prediksi')
 else:
