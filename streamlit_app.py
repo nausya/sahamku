@@ -23,8 +23,8 @@ app = hy.HydraApp(title='Analitik Saham Indonesia')
 
 @app.addapp()
 def My_home():
- #hy.info('Halaman Depan')
-  tech_indicators()
+ hy.info('Halaman Depan')
+  #tech_indicators()
 
 @app.addapp()
 def Emiten():
@@ -36,8 +36,8 @@ def Screener():
 
 @app.addapp()
 def Prediksi():
- #hy.info('Penyaringan Saham')
-  predict()
+ hy.info('Prediksi Saham')
+  #predict()
 
 #Run the whole lot, we get navbar, state management and app isolation, all with this tiny amount of work.
 app.run()
