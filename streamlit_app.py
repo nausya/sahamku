@@ -189,7 +189,87 @@ def model_engine(model, num):
         st.text(f'Hari ke-{day}: {round(i)}')
         day += 1
 
+#Screener Grafik Kuadran
+def quadrant_chart(x, y, xtick_labels=None, ytick_labels=None, data_labels=None,
+ highlight_quadrants=None, ax=None):
+    """
+    Create the classic four-quadrant chart.
+    Args:
+        x -- array-like, the x-coordinates to plot
+        y -- array-like, the y-coordinates to plot
+        xtick_labels -- list, default: None, a two-value list xtick labels
+        ytick_labels -- list, default: None, a two-value list of ytick labels
+        data_labels -- array-like, default: None, data point annotations
+        highlight_quadrants -- list, default: None, list of quadrants to
+            emphasize (quadrants are numbered 1-4)
+        ax -- matplotlib.axes object, default: None, the user can pass their own
+            axes object if desired
+    """
+    # allow user to specify their own axes
+    ax = ax if ax else plt.axes()
 
+    data = pd.DataFrame({'x': x, 'y': y, 'data_labels': data_labels})
+
+    # calculate averages up front to avoid repeated calculations
+    y_avg = data['y'].mean()
+    x_avg = data['x'].mean()
+
+    # set x limits
+    adj_x = max((data['x'].max() - x_avg), (x_avg - data['x'].min())) * 1.1
+    lb_x, ub_x = (x_avg - adj_x, x_avg + adj_x)
+    ax.set_xlim(lb_x, ub_x)
+
+    # set y limits
+    adj_y = max((data['y'].max() - y_avg), (y_avg - data['y'].min())) * 1.1
+    lb_y, ub_y = (y_avg - adj_y, y_avg + adj_y)
+    ax.set_ylim(lb_y, ub_y)
+
+    # set x tick labels
+    if xtick_labels:
+        ax.set_xticks([(x_avg - adj_x / 2), (x_avg + adj_x / 2)])
+        ax.set_xticklabels(xtick_labels)
+
+    # set y tick labels
+    if ytick_labels:
+        ax.set_yticks([(y_avg - adj_y / 2), (y_avg + adj_y / 2)])
+        ax.set_yticklabels(ytick_labels, rotation='vertical', va='center')
+
+    # determine which points to highlight
+    if highlight_quadrants:
+        quadrants = []
+        for x_val, y_val in zip(x, y):
+            q = []
+            if (x_val >= x_avg) and (y_val >= y_avg):
+                q.append(1)
+            if (x_val <= x_avg) and (y_val >= y_avg):
+                q.append(2)
+            if (x_val <= x_avg) and (y_val <= y_avg):
+                q.append(3)
+            if (x_val >= x_avg) and (y_val <= y_avg):
+                q.append(4)
+            quadrants.append(q)
+        data['quadrant'] = quadrants
+
+        # boolean mask - True = highlight, False = don't highlight
+        highlight = data['quadrant'].apply(lambda q: len(set(
+        highlight_quadrants) & set(q)) > 0)
+
+        # plot the non-highlighted points within the conditional block
+        ax.scatter(data['x'][~highlight], data['y'][~highlight], alpha=0.5,
+        c='lightblue', edgecolor='darkblue', zorder=99)
+        data = data[highlight]
+
+    # plot remaining points and quadrant lines
+    ax.scatter(x=data['x'], y=data['y'], c='lightblue', edgecolor='darkblue',
+    zorder=99)
+    ax.axvline(x_avg, c='k', lw=1)
+    ax.axhline(y_avg, c='k', lw=1)
+
+    # add data labels
+    for ix, row in data.iterrows():
+        ax.annotate(row['data_labels'], (row['x'], row['y']), xytext=(2, 5),
+        textcoords='offset pixels')
+        
 if __name__ == '__main__':
     main()
     
