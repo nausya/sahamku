@@ -31,6 +31,8 @@ def main():
     else:
         predict()
 
+    app.run()
+
 #when we import hydralit, we automatically get all of Streamlit
 app = hy.HydraApp(title='Analitik Saham Indonesia')
 
