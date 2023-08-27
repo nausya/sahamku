@@ -22,18 +22,21 @@ from sklearn.metrics import r2_score, mean_absolute_error
 app = hy.HydraApp(title='Simple Multi-Page App')
 
 @app.addapp()
-def my_home():
- hy.info('Hello from app1')
+def Home():
+ hy.info('Halaman Depan')
 
 @app.addapp()
-def app2():
- hy.info('Hello from app 2')
+def Emiten():
+ hy.info('Detil Saham')
+
+@app.addapp()
+def Screener():
+ hy.info('Penyaringan Saham')
 
 
 #Run the whole lot, we get navbar, state management and app isolation, all with this tiny amount of work.
 app.run()
 
-st.info(f"{menu_id=}")
 
 st.title('ANALITIK SAHAM BURSA EFEK INDONESIA')
 st.sidebar.info('SELAMAT DATANG')
