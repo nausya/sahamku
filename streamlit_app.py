@@ -51,8 +51,8 @@ def Screener():
 @app.addapp()
 def Prediksi():
  hy.info('Prediksi Saham')
- main()
- predict()
+ main(option='Prediksi')
+ 
 
 #Run the whole lot, we get navbar, state management and app isolation, all with this tiny amount of work.
 app.run()
