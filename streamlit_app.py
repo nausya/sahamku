@@ -19,10 +19,10 @@ from sklearn.metrics import r2_score, mean_absolute_error
 
 
 #when we import hydralit, we automatically get all of Streamlit
-app = hy.HydraApp(title='Simple Multi-Page App')
+app = hy.HydraApp(title='Analitik Saham Indonesia')
 
 @app.addapp()
-def Home():
+def my_home():
  hy.info('Halaman Depan')
 
 @app.addapp()
