@@ -31,7 +31,6 @@ def main():
     else:
         predict()
 
-    app.run()
 
 #when we import hydralit, we automatically get all of Streamlit
 app = hy.HydraApp(title='Analitik Saham Indonesia')
@@ -52,6 +51,7 @@ def Screener():
 @app.addapp()
 def Prediksi():
  hy.info('Prediksi Saham')
+ main()
  predict()
 
 #Run the whole lot, we get navbar, state management and app isolation, all with this tiny amount of work.
