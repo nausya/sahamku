@@ -30,7 +30,7 @@ def main():
 
 st.title('ANALITIK SAHAM INDONESIA')
 
-    selected2 = st.header.option_menu(None, ["Home", "Emiten", "Screener", 'Prediksi'], 
+    selected2 = option_menu(None, ["Home", "Emiten", "Screener", 'Prediksi'], 
     icons=['house', 'cloud-upload', "list-task", 'gear'], 
     menu_icon="cast", default_index=0, orientation="horizontal")
     if selected2 == 'Emiten':
