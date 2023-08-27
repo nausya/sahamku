@@ -1,4 +1,5 @@
 import streamlit as st
+import hydralit_components as hc
 import pandas as pd
 import matplotlib.pyplot as plt
 import yfinance as yf
@@ -17,6 +18,16 @@ from sklearn.ensemble import ExtraTreesRegressor
 from sklearn.metrics import r2_score, mean_absolute_error
 
 
+
+menu_data = [
+    {'label':"Home"},
+    {'label':"Emiten"},
+    {'label':"Screener"},
+]
+
+menu_id = hc.nav_bar(menu_definition=menu_data)
+
+st.info(f"{menu_id=}")
 
 st.title('ANALITIK SAHAM BURSA EFEK INDONESIA')
 st.sidebar.info('SELAMAT DATANG')
