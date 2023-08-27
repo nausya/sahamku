@@ -38,13 +38,13 @@ def main():
         #st.write('Prediksi')
         dataframe()
     elif selected2 == 'Screener':
-        #st.write('Prediksi')
+         st.write('Penyaringan Saham')
     elif selected2 == 'Prediksi':
         #st.write('Prediksi')
          predict()
     else:
         #st.write('Home')
-        tech_indicators()
+         tech_indicators()
     
 
 #Halaman Utama
