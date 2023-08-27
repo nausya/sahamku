@@ -21,8 +21,8 @@ st.sidebar.info('SELAMAT DATANG (Versi Beta)')
 st.title('ANALITIK SAHAM INDONESIA') 
 
 def main():
-    selected2 = option_menu(None, ["Home", "Emiten", "Screener", 'Prediksi'], icons=['house', 'cloud-upload', "list-task", 'gear'], menu_icon="cast", default_index=0, orientation="horizontal")
-    if selected2 == 'Emiten':
+    selected2 = option_menu(None, ["Home", "Data Emiten", "Screener", 'Prediksi'], icons=['house', 'cloud-upload', "list-task", 'gear'], menu_icon="cast", default_index=0, orientation="horizontal")
+    if selected2 == 'Data Emiten':
          dataframe()
     elif selected2 == 'Screener':
          st.write('Penyaringan Saham')
