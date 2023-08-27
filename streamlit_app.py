@@ -18,7 +18,7 @@ from sklearn.ensemble import ExtraTreesRegressor
 from sklearn.metrics import r2_score, mean_absolute_error
 
 
-st.title('ANALITIK SAHAM BURSA EFEK INDONESIA')
+st.title('ANALITIK SAHAM INDONESIA')
 st.sidebar.info('SELAMAT DATANG')
 
 
