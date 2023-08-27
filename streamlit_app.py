@@ -1,8 +1,8 @@
 import streamlit as st
-import hydralit as hy
 import pandas as pd
 import matplotlib.pyplot as plt
 import yfinance as yf
+from streamlit_option_menu import option_menu
 from ta.volatility import BollingerBands
 from ta.trend import MACD, EMAIndicator, SMAIndicator
 from ta.momentum import RSIIndicator
@@ -30,32 +30,11 @@ def main():
         dataframe()
     else:
         predict()
-
-
-#when we import hydralit, we automatically get all of Streamlit
-app = hy.HydraApp(title='Analitik Saham Indonesia')
-
-@app.addapp()
-def My_home():
- hy.info('Halaman Depan')
-  #tech_indicators()
-
-@app.addapp()
-def Emiten():
- hy.info('Detil Saham')
-
-@app.addapp()
-def Screener():
- hy.info('Penyaringan Saham')
-
-@app.addapp()
-def Prediksi():
- hy.info('Prediksi Saham')
  
- 
-
-#Run the whole lot, we get navbar, state management and app isolation, all with this tiny amount of work.
-app.run()
+selected2 = option_menu(None, ["Home", "Upload", "Tasks", 'Settings'], 
+    icons=['house', 'cloud-upload', "list-task", 'gear'], 
+    menu_icon="cast", default_index=0, orientation="horizontal")
+selected2
 
 #Halaman Utama
 @st.cache_resource
