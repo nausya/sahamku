@@ -18,6 +18,22 @@ from sklearn.ensemble import ExtraTreesRegressor
 from sklearn.metrics import r2_score, mean_absolute_error
 
 
+
+
+
+st.title('ANALITIK SAHAM BURSA EFEK INDONESIA')
+st.sidebar.info('SELAMAT DATANG')
+
+
+def main():
+    option = st.sidebar.selectbox('Silakan Pilih', ['Grafik','Data', 'Prediksi'])
+    if option == 'Grafik':
+        tech_indicators()
+    elif option == 'Data':
+        dataframe()
+    else:
+        predict()
+
 #when we import hydralit, we automatically get all of Streamlit
 app = hy.HydraApp(title='Analitik Saham Indonesia')
 
@@ -42,22 +58,7 @@ def Prediksi():
 #Run the whole lot, we get navbar, state management and app isolation, all with this tiny amount of work.
 app.run()
 
-
-st.title('ANALITIK SAHAM BURSA EFEK INDONESIA')
-st.sidebar.info('SELAMAT DATANG')
-
-
-def main():
-    option = st.sidebar.selectbox('Silakan Pilih', ['Grafik','Data', 'Prediksi'])
-    if option == 'Grafik':
-        tech_indicators()
-    elif option == 'Data':
-        dataframe()
-    else:
-        predict()
-
-
-
+#Halaman Utama
 @st.cache_resource
 def download_data(op, start_date, end_date):
     df = yf.download(op, start=start_date, end=end_date, progress=False)
