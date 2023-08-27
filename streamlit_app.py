@@ -17,10 +17,7 @@ from sklearn.ensemble import RandomForestRegressor
 from sklearn.ensemble import ExtraTreesRegressor
 from sklearn.metrics import r2_score, mean_absolute_error
 
-
-st.title('ANALITIK SAHAM INDONESIA')
 st.sidebar.info('SELAMAT DATANG (Versi Beta)')
-
 
 def main():
    # option = st.sidebar.selectbox('Silakan Pilih', ['Grafik','Data', 'Prediksi'])
@@ -30,6 +27,8 @@ def main():
    #     dataframe()
    # else:
     #    predict()
+
+st.title('ANALITIK SAHAM INDONESIA')
 
     selected2 = st.header.option_menu(None, ["Home", "Emiten", "Screener", 'Prediksi'], 
     icons=['house', 'cloud-upload', "list-task", 'gear'], 
