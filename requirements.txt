@@ -1,5 +1,6 @@
 scikit-learn
 streamlit>=0.78.0
+hydralit_components
 yfinance
 pandas
 plotly
