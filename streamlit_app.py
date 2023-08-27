@@ -18,32 +18,18 @@ from sklearn.ensemble import ExtraTreesRegressor
 from sklearn.metrics import r2_score, mean_absolute_error
 
 st.sidebar.info('SELAMAT DATANG (Versi Beta)')
+st.title('ANALITIK SAHAM INDONESIA') 
 
 def main():
-   # option = st.sidebar.selectbox('Silakan Pilih', ['Grafik','Data', 'Prediksi'])
-   # if option == 'Grafik':
-    #    tech_indicators()
-   # elif option == 'Data':
-   #     dataframe()
-   # else:
-    #    predict()
-
-    selected2 = option_menu(None, ["Home", "Emiten", "Screener", 'Prediksi'], 
-    icons=['house', 'cloud-upload', "list-task", 'gear'], 
-    menu_icon="cast", default_index=0, orientation="horizontal")
+    selected2 = option_menu(None, ["Home", "Emiten", "Screener", 'Prediksi'], icons=['house', 'cloud-upload', "list-task", 'gear'], menu_icon="cast", default_index=0, orientation="horizontal")
     if selected2 == 'Emiten':
-        #st.write('Prediksi')
-        dataframe()
+         dataframe()
     elif selected2 == 'Screener':
          st.write('Penyaringan Saham')
     elif selected2 == 'Prediksi':
-        #st.write('Prediksi')
          predict()
     else:
-        #st.write('Home')
          tech_indicators()
-
-st.title('ANALITIK SAHAM INDONESIA')   
 
 #Halaman Utama
 @st.cache_resource
