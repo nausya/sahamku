@@ -5,7 +5,6 @@ import yfinance as yf
 from streamlit_option_menu import option_menu
 from ta.volatility import BollingerBands
 from ta.trend import MACD, EMAIndicator, SMAIndicator
-from ta.momentum import ultimate_oscillator
 from ta.momentum import RSIIndicator
 import datetime
 from datetime import date
@@ -89,7 +88,7 @@ scaler = StandardScaler()
 
 def tech_indicators():
     st.header('Teknikal Indikator')
-    option = st.radio('Pilih Teknikal Indikator', ['Close', 'BB', 'UltimateOsc', 'RSI', 'EMA'])
+    option = st.radio('Pilih Teknikal Indikator', ['Close', 'BB', 'MACD', 'RSI', 'EMA'])
 
     # Bollinger bands
     bb_indicator = BollingerBands(data.Close)
@@ -99,8 +98,7 @@ def tech_indicators():
     # Creating a new dataframe
     bb = bb[['Close', 'bb_h', 'bb_l']]
     # MACD
-    #macd = MACD(data.Close).macd()
-    ultios = ultimate_oscillator(data.Close).ultimate_oscillator()
+    macd = MACD(data.Close).macd()
     # RSI
     rsi = RSIIndicator(data.Close).rsi()
     # SMA
@@ -114,9 +112,9 @@ def tech_indicators():
     elif option == 'BB':
         st.write('BollingerBands')
         st.line_chart(bb)
-    elif option == 'UltimateOsc':
+    elif option == 'MACD':
         st.write('Moving Average Convergence Divergence')
-        st.line_chart(ultios)
+        st.line_chart(macd)
     elif option == 'RSI':
         st.write('Relative Strength Indicator')
         st.line_chart(rsi)
