@@ -100,7 +100,7 @@ def tech_indicators():
     bb = bb[['Close', 'bb_h', 'bb_l']]
     # MACD
     #macd = MACD(data.Close).macd()
-    ultimate_oscillator = ultimate_oscillator(data.Close).ultimate_oscillator()
+    ultios = ultimate_oscillator(data.Close).ultimate_oscillator()
     # RSI
     rsi = RSIIndicator(data.Close).rsi()
     # SMA
@@ -114,9 +114,9 @@ def tech_indicators():
     elif option == 'BB':
         st.write('BollingerBands')
         st.line_chart(bb)
-    elif option == 'MACD':
+    elif option == 'UltimateOsc':
         st.write('Moving Average Convergence Divergence')
-        st.line_chart(macd)
+        st.line_chart(ultios)
     elif option == 'RSI':
         st.write('Relative Strength Indicator')
         st.line_chart(rsi)
