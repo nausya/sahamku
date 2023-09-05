@@ -63,10 +63,10 @@ C = detil.info['currentPrice']
 D = (H52-L52)/100 #format(1234, "8.,1f") 
 P = (C - L52)/D
 st.subheader(f"Harga terkini Rp{format(int(C),',d')}.- berada pada level {int(P)} dari skala 100", divider="rainbow")
-om  = round(detil.info['operatingMargins'],2)*100
+om  = detil.info['operatingMargins']
 dev = detil.info['payoutRatio']
 roe = detil.info['returnOnEquity']
-st.subheader(f"Op.Margin : {int(om)}%, DevPay : {dev}%, ROE : {roe}%", divider="rainbow")
+st.subheader(f"Op.Margin : {om}%, DevPay : {dev}%, ROE : {roe}%", divider="rainbow")
 st.info('Untuk jangka panjang perlu diperhatikan kisaran level harga kurang dari 10')
 
 
