@@ -59,7 +59,7 @@ option = selected_emiten.split(' | ')[0] + ".JK"
 #ganti value None
 def ceknon(x):
     if x is not None:
-       return round(int(x),2)
+       return round(int(x),2)*100
     else:
        return 0
         
@@ -71,9 +71,9 @@ C = detil.info['currentPrice']
 D = (H52-L52)/100 #format(1234, "8.,1f") 
 P = (C - L52)/D
 st.subheader(f"Harga terkini Rp{format(int(C),',d')}.- berada pada level {int(P)} dari skala 100", divider="rainbow")
-om  = detil.info['operatingMargins']*100
-dev = detil.info['payoutRatio']*100
-roe = detil.info['returnOnEquity']*100
+om  = detil.info['operatingMargins']
+dev = detil.info['payoutRatio']
+roe = detil.info['returnOnEquity']
 st.subheader(f"Op.Margin : {ceknon(om)}%, DevPay : {ceknon(dev)}%, ROE : {ceknon(roe)}%", divider="rainbow")
 st.info('Untuk jangka panjang perlu diperhatikan kisaran level harga kurang dari 10')
 
