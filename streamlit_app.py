@@ -63,7 +63,8 @@ def ceknon(x):
        x = int(x)
        return x
     else:
-       return 0
+       x = 0
+       return x
         
 #Display Persentil
 detil = yf.Ticker(option)
