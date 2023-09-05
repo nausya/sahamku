@@ -59,7 +59,9 @@ option = selected_emiten.split(' | ')[0] + ".JK"
 #ganti value None
 def ceknon(x):
     if x is not None:
-       return int(x)
+       x = round(x,2)*100
+       x = int(x)
+       return x
     else:
        return 0
         
