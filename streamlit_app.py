@@ -214,8 +214,6 @@ def screener():
     scr1['dev'] = round(scr1['dev'],2)*100
     scr1['roe'] = round(scr1['roe'],2)*100
     scr1= scr1.loc[(scr1['p']<6) & (scr1['skg']>50) & (scr1['om']>5) & (scr1['dev']>5) & (scr1['roe']>5)]
-
-    
     
     x = scr1['p']
     y = scr1['om']
@@ -223,8 +221,9 @@ def screener():
     dev = scr1['dev']
  
     #Plot Grafik
-    scr1.plot.scatter(x = 'p', y = 'om', xlabel='<< Rendah <--- Posisi Harga ---> Tinggi >>', ylabel='Margin Operasi(%)',title='Hasil Screener (Mrg.Ops,DPR,ROE)>5%',marker=">")
-    
+    #scr1.plot.scatter(x = 'p', y = 'om', xlabel='<< Rendah <--- Posisi Harga ---> Tinggi >>', ylabel='Margin Operasi(%)',title='Hasil Screener (Mrg.Ops,DPR,ROE)>5%',marker=">")
+    scr1.plot.scatter(x = 'p', y = 'om')
+                      
     # zip joins x and y coordinates in pairs
     for a,b,c,d in zip(x,y,kd,dev):
         b = int(b)
