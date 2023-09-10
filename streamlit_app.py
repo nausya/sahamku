@@ -224,7 +224,7 @@ def screener():
     dev = scr1['dev']
  
     #Plot Grafik
-    #scr1.plot.scatter(x = 'p', y = 'om', xlabel='<< Rendah <--- Posisi Harga ---> Tinggi >>', ylabel='Margin Operasi(%)',title='Hasil Screener (MarginOps,DevPR,ROE)>5%',marker=">")
+    scr1.st.plot.scatter(x = 'p', y = 'om', xlabel='<< Rendah <--- Posisi Harga ---> Tinggi >>', ylabel='Margin Operasi(%)',title='Hasil Screener (MarginOps,DevPR,ROE)>5%',marker=">")
     
                       
     # zip joins x and y coordinates in pairs
@@ -232,29 +232,11 @@ def screener():
         b = int(b)
         d = int(d)
         label = f"{c} {b}%-Dev:{d}%"
-        plt.annotate(label,(a,b),textcoords="offset points",xytext=(4,-2), ha='left')
+        st.plt.annotate(label,(a,b),textcoords="offset points",xytext=(4,-2), ha='left')
     
     scr1 = scr1.rename(columns = {"kode": "Emiten", "skg": "Harga", "p": "Level", "om": "Margin Operasi", "dev": "DevPR", "roe": "ROE"}).sort_values(['Harga','Level'])
     scr1
 
-    
-
-# Add histogram data
-    x1 = np.random.randn(200) - 2
-    x2 = np.random.randn(200)
-    x3 = np.random.randn(200) + 2
-
-# Group data together
-    hist_data = [x1, x2, x3]
-
-    group_labels = ['Group 1', 'Group 2', 'Group 3']
-
-# Create distplot with custom bin_size
-    fig = ff.create_distplot(
-        hist_data, group_labels, bin_size=[.1, .25, .5])
-
-# Plot!
-    st.plotly_chart(fig, use_container_width=True)
 
 if __name__ == '__main__':
     main()
