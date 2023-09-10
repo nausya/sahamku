@@ -210,7 +210,7 @@ def model_engine(model, num):
 def screener():
     st.subheader('Tabular Screener (Margin Operasi,DevPRatio,ROE)>5%')
     stocks = pd.read_csv('50p.csv')
-    stocks = stocks.to_string(index=False)
+    #stocks = stocks.to_string(index=False)
     #stocks['p'] = (stocks['skg'] - stocks['lo'])/((stocks['hi'] - stocks['lo'])/100)
     #scr1 = stocks.reindex(columns = ['kode','skg','p','om','dev','roe'])
     stocks
