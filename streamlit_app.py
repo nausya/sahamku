@@ -220,11 +220,11 @@ def screener():
     #stocks = stocks.to_string(index=False)
     #stocks['p'] = (stocks['skg'] - stocks['lo'])/((stocks['hi'] - stocks['lo'])/100)
     #scr1 = stocks.copy()
-    scr1 = pd.DataFrame(stocks, columns = ['kode','skg','p','om','dev','roe'])
-    scr1['p'] = round(scr1['p'],0)
-    scr1['om'] = round(scr1['om'],2)*100
-    scr1['dev'] = round(scr1['dev'],2)*100
-    scr1['roe'] = round(scr1['roe'],2)*100
+        scr1 = pd.DataFrame(stocks, columns = ['kode','skg','p','om','dev','roe'])
+        scr1['p'] = round(scr1['p'],0)
+        scr1['om'] = round(scr1['om'],2)*100
+        scr1['dev'] = round(scr1['dev'],2)*100
+        scr1['roe'] = round(scr1['roe'],2)*100
     #scr1= scr1.loc[(scr1['p']<11) & (scr1['skg']>50) & (scr1['om']>5) & (scr1['dev']>5) & (scr1['roe']>5)]
 
     x = scr1['p']
@@ -243,8 +243,8 @@ def screener():
        # label = f"{c} {b}%-Dev:{d}%"
         #plt.annotate(label,(a,b),textcoords="offset points",xytext=(4,-2), ha='left')
     
-    scr1 = scr1.rename(columns = {"Emiten":"kode","skg": "Harga", "p": "Level", "om": "Margin Operasi", "dev": "DevPR", "roe": "ROE"}).sort_values(['Harga','Level'])
-    scr1
+        scr1 = scr1.rename(columns = {"Emiten":"kode","skg": "Harga", "p": "Level", "om": "Margin Operasi", "dev": "DevPR", "roe": "ROE"}).sort_values(['Harga','Level'])
+        scr1
    
 if __name__ == '__main__':
     main()
