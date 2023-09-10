@@ -237,33 +237,7 @@ def screener():
     scr1 = scr1.rename(columns = {"kode": "Emiten", "skg": "Harga", "p": "Level", "om": "Margin Operasi", "dev": "DevPR", "roe": "ROE"}).sort_values(['Harga','Level'])
     scr1
 
-    # Matplotlib example
-    from vega_datasets import data
-
-
-
-# Using different charting libraries
-
-    @st.cache
-    def get_data():
-    return pd.read_json(data.cars.url)
-
-    df = get_data()
-    with st.echo(code_location='below'):
-
-        fig = plt.figure()
-        ax = fig.add_subplot(1,1,1)
-
-        ax.scatter(
-        df["Acceleration"],
-        df["Miles_per_Gallon"],
-        )
-
-        ax.set_xlabel("Acceleration")
-        ax.set_ylabel("Miles per gallon")
-
-        st.write(fig)
-        
+   
 if __name__ == '__main__':
     main()
     
