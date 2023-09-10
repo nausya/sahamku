@@ -209,14 +209,15 @@ def model_engine(model, num):
 #Screener Grafik Kuadran
 def screener():
     st.subheader('Tabular Screener (Margin Operasi,DevPRatio,ROE)>5%')
-    stocks = pd.read_csv('50p.csv', index_col = [0])
+    stocks = pd.read_csv('50p.csv')
+    stocks = stocks.to_string(index=False)
     #stocks['p'] = (stocks['skg'] - stocks['lo'])/((stocks['hi'] - stocks['lo'])/100)
     scr1 = stocks.reindex(columns = ['kode','skg','p','om','dev','roe'])
     scr1['p'] = round(scr1['p'],0)
     scr1['om'] = round(scr1['om'],2)*100
     scr1['dev'] = round(scr1['dev'],2)*100
     scr1['roe'] = round(scr1['roe'],2)*100
-    scr1= scr1.loc[(scr1['p']<11) & (scr1['skg']>50) & (scr1['om']>5) & (scr1['dev']>5) & (scr1['roe']>5)]
+    #scr1= scr1.loc[(scr1['p']<11) & (scr1['skg']>50) & (scr1['om']>5) & (scr1['dev']>5) & (scr1['roe']>5)]
     
     x = scr1['p']
     y = scr1['om']
