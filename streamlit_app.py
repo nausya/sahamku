@@ -229,7 +229,8 @@ def screener():
         d = int(d)
         label = f"{c} {b}%-Dev:{d}%"
         plt.annotate(label,(a,b),textcoords="offset points",xytext=(4,-2), ha='left')
-
+    
+    scr1.rename(columns = {"kode": "Emiten", "skg": "Harga", "p": "Level", "om": "Margin Operasi", "dev": "DPR", "roe": "ROE"}).sort_values('Harga')
 
 if __name__ == '__main__':
     main()
