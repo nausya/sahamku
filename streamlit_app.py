@@ -239,8 +239,8 @@ def screener():
     scr1 = scr1.rename(columns = {"Emiten":"kode","skg": "Harga", "p": "Level", "om": "Margin Operasi", "dev": "DevPR", "roe": "ROE"}).sort_values(['Harga','Level'])
     scr1
 
-    df = pd.DataFrame(scr1, columns = ['p','om'])
-    ax1 = df.plot.scatter(x='p',y='om',c='DarkBlue')
+    df = pd.DataFrame(scr1, columns = ['Level','Margin Operasi'])
+    ax1 = df.plot.scatter(x='Level',y='Margin Operasi',c='DarkBlue')
    
 if __name__ == '__main__':
     main()
