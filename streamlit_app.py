@@ -238,7 +238,17 @@ def screener():
     scr1
 
     # Matplotlib example
+    from vega_datasets import data
 
+
+
+# Using different charting libraries
+
+    @st.cache
+    def get_data():
+    return pd.read_json(data.cars.url)
+
+    df = get_data()
     with st.echo(code_location='below'):
 
         fig = plt.figure()
