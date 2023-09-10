@@ -212,11 +212,11 @@ def screener():
     screenlevel = st.selectbox('Pilih Level Saham:', ['Saham25Persen','Saham35Persen'])
     st.subheader('Tabular Screener (Margin Operasi,DevPRatio,ROE)>5%')
     if option == 'Saham25Persen':
-        st.write('Screener Saham Harga 50-200')
-        stocks = pd.read_csv('50p.csv')
-    else:
         st.write('Screener Saham Harga Kurang Dari 5000')
         stocks = pd.read_csv('201p.csv')
+    else:
+        st.write('Screener Saham Harga 50-200')
+        stocks = pd.read_csv('50p.csv')
     #stocks = stocks.to_string(index=False)
     #stocks['p'] = (stocks['skg'] - stocks['lo'])/((stocks['hi'] - stocks['lo'])/100)
     #scr1 = stocks.copy()
