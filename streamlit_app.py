@@ -222,7 +222,7 @@ def screener():
     dev = scr1['dev']
  
     #Plot Grafik
-    scr1.st.pyplot.scatter(x = 'p', y = 'om', xlabel='<< Rendah <--- Posisi Harga ---> Tinggi >>', ylabel='Margin Operasi(%)',title='Hasil Screener (Mrg.Ops,DPR,ROE)>5%',marker=">")
+    scr1.plot.scatter(x = 'p', y = 'om', xlabel='<< Rendah <--- Posisi Harga ---> Tinggi >>', ylabel='Margin Operasi(%)',title='Hasil Screener (Mrg.Ops,DPR,ROE)>5%',marker=">")
     
                       
     # zip joins x and y coordinates in pairs
