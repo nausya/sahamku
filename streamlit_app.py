@@ -209,8 +209,14 @@ def model_engine(model, num):
 
 #Screener Grafik Kuadran
 def screener():
+    screenlevel = st.selectbox('Pilih Level Saham:', ['Saham35Persen','Saham25Persen'])
     st.subheader('Tabular Screener (Margin Operasi,DevPRatio,ROE)>5%')
-    stocks = pd.read_csv('50p.csv')
+    if option == 'Saham35Persen':
+        st.write('Screener Saham Harga 50-200')
+        stocks = pd.read_csv('50p.csv')
+    else:
+        st.write('Screener Saham Harga Kurang Dari 5000')
+        stocks = pd.read_csv('201p.csv')
     #stocks = stocks.to_string(index=False)
     #stocks['p'] = (stocks['skg'] - stocks['lo'])/((stocks['hi'] - stocks['lo'])/100)
     #scr1 = stocks.copy()
