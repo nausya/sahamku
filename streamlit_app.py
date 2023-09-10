@@ -222,7 +222,7 @@ def screener():
     dev = scr1['dev']
  
     #Plot Grafik
-    #scr1.plot.scatter(x = 'p', y = 'om', xlabel='<< Rendah <--- Posisi Harga ---> Tinggi >>', ylabel='Margin Operasi(%)',title='Hasil Screener (Mrg.Ops,DPR,ROE)>5%',marker=">")
+    #scr1.plot.scatter(x = 'p', y = 'om', xlabel='<< Rendah <--- Posisi Harga ---> Tinggi >>', ylabel='Margin Operasi(%)',title='Hasil Screener (MarginOps,DevPR,ROE)>5%',marker=">")
     
                       
     # zip joins x and y coordinates in pairs
@@ -232,7 +232,7 @@ def screener():
         label = f"{c} {b}%-Dev:{d}%"
         plt.annotate(label,(a,b),textcoords="offset points",xytext=(4,-2), ha='left')
     
-    scr1 = scr1.rename(columns = {"kode": "Emiten", "skg": "Harga", "p": "Level", "om": "Margin Operasi", "dev": "DPR", "roe": "ROE"}).sort_values(['Harga','Level'])
+    scr1 = scr1.rename(columns = {"kode": "Emiten", "skg": "Harga", "p": "Level", "om": "Margin Operasi", "dev": "DevPR", "roe": "ROE"}).sort_values(['Harga','Level'])
     scr1
 
 if __name__ == '__main__':
