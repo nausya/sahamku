@@ -217,6 +217,8 @@ def screener():
     elif option == 'Saham25Persen':
         st.write('Screener Saham Harga 50-200')
         stocks = pd.read_csv('50p.csv')
+    else:
+        stocks = pd.read_csv('50p.csv')
     #stocks = stocks.to_string(index=False)
     #stocks['p'] = (stocks['skg'] - stocks['lo'])/((stocks['hi'] - stocks['lo'])/100)
     #scr1 = stocks.copy()
