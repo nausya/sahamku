@@ -2,6 +2,8 @@ import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
 import yfinance as yf
+import numpy as np
+import plotly.figure_factory as ff
 from matplotlib import markers
 from streamlit_option_menu import option_menu
 from ta.volatility import BollingerBands
@@ -235,7 +237,7 @@ def screener():
     scr1 = scr1.rename(columns = {"kode": "Emiten", "skg": "Harga", "p": "Level", "om": "Margin Operasi", "dev": "DevPR", "roe": "ROE"}).sort_values(['Harga','Level'])
     scr1
 
-    import plotly.figure_factory as ff
+    
 
 # Add histogram data
     x1 = np.random.randn(200) - 2
