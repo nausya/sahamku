@@ -206,6 +206,7 @@ def model_engine(model, num):
 
 #Screener Grafik Kuadran
 def screener():
+    st.header('Tabular Data Screener (Mrg.Ops,DPR,ROE)>5%')
     stocks = pd.read_csv('funda.csv', index_col = [0])
     stocks['p'] = (stocks['skg'] - stocks['lo'])/((stocks['hi'] - stocks['lo'])/100)
     scr1 = stocks.reindex(columns = ['kode','skg','p','om','dev','roe'])
@@ -213,7 +214,7 @@ def screener():
     scr1['om'] = round(scr1['om'],2)*100
     scr1['dev'] = round(scr1['dev'],2)*100
     scr1['roe'] = round(scr1['roe'],2)*100
-    scr1= scr1.loc[(scr1['p']<6) & (scr1['skg']>50) & (scr1['om']>5) & (scr1['dev']>5) & (scr1['roe']>5)]
+    scr1= scr1.loc[(scr1['p']<11) & (scr1['skg']>50) & (scr1['om']>5) & (scr1['dev']>5) & (scr1['roe']>5)]
     
     x = scr1['p']
     y = scr1['om']
@@ -221,8 +222,8 @@ def screener():
     dev = scr1['dev']
  
     #Plot Grafik
-    #scr1.plot.scatter(x = 'p', y = 'om', xlabel='<< Rendah <--- Posisi Harga ---> Tinggi >>', ylabel='Margin Operasi(%)',title='Hasil Screener (Mrg.Ops,DPR,ROE)>5%',marker=">")
-    scr1.plot.scatter(x = 'p', y = 'om')
+    scr1.st.pyplot.scatter(x = 'p', y = 'om', xlabel='<< Rendah <--- Posisi Harga ---> Tinggi >>', ylabel='Margin Operasi(%)',title='Hasil Screener (Mrg.Ops,DPR,ROE)>5%',marker=">")
+    
                       
     # zip joins x and y coordinates in pairs
     for a,b,c,d in zip(x,y,kd,dev):
@@ -231,7 +232,7 @@ def screener():
         label = f"{c} {b}%-Dev:{d}%"
         plt.annotate(label,(a,b),textcoords="offset points",xytext=(4,-2), ha='left')
     
-    scr1 = scr1.rename(columns = {"kode": "Emiten", "skg": "Harga", "p": "Level", "om": "Margin Operasi", "dev": "DPR", "roe": "ROE"}).sort_values('Harga')
+    scr1 = scr1.rename(columns = {"kode": "Emiten", "skg": "Harga", "p": "Level", "om": "Margin Operasi", "dev": "DPR", "roe": "ROE"}).sort_values('Level','Harga')
     scr1
 
 if __name__ == '__main__':
