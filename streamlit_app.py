@@ -220,7 +220,7 @@ def screener():
     scr1['dev'] = round(scr1['dev'],2)*100
     scr1['roe'] = round(scr1['roe'],2)*100
     #scr1= scr1.loc[(scr1['p']<11) & (scr1['skg']>50) & (scr1['om']>5) & (scr1['dev']>5) & (scr1['roe']>5)]
-    penguins = pd.DataFrame(scr1, columns = ['p','om'])
+
     x = scr1['p']
     y = scr1['om']
     kd = scr1['kode']
@@ -239,10 +239,6 @@ def screener():
     
     scr1 = scr1.rename(columns = {"Emiten":"kode","skg": "Harga", "p": "Level", "om": "Margin Operasi", "dev": "DevPR", "roe": "ROE"}).sort_values(['Harga','Level'])
     scr1
-
-    fig, ax = plt.subplots()
-    sns.scatterplot(data=penguins, x="level", y="margin-operasi", ax=ax)
-    st.pyplot(fig)
    
 if __name__ == '__main__':
     main()
