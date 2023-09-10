@@ -214,7 +214,7 @@ def screener():
     scr1['dev'] = round(scr1['dev'],2)*100
     scr1['roe'] = round(scr1['roe'],2)*100
     scr1= scr1.loc[(scr1['p']<6) & (scr1['skg']>50) & (scr1['om']>5) & (scr1['dev']>5) & (scr1['roe']>5)]
-    scr1
+    
     x = scr1['p']
     y = scr1['om']
     kd = scr1['kode']
