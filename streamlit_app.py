@@ -240,20 +240,20 @@ def screener():
     # Matplotlib example
 
     with st.echo(code_location='below'):
-    import matplotlib.pyplot as plt
 
-    fig = plt.figure()
-    ax = fig.add_subplot(1,1,1)
+        fig = plt.figure()
+        ax = fig.add_subplot(1,1,1)
 
-    ax.scatter(
+        ax.scatter(
         df["Acceleration"],
         df["Miles_per_Gallon"],
-    )
+        )
 
-    ax.set_xlabel("Acceleration")
-    ax.set_ylabel("Miles per gallon")
+        ax.set_xlabel("Acceleration")
+        ax.set_ylabel("Miles per gallon")
 
-    st.write(fig)
+        st.write(fig)
+        
 if __name__ == '__main__':
     main()
     
