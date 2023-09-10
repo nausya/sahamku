@@ -212,7 +212,7 @@ def screener():
     stocks = pd.read_csv('50p.csv')
     #stocks = stocks.to_string(index=False)
     #stocks['p'] = (stocks['skg'] - stocks['lo'])/((stocks['hi'] - stocks['lo'])/100)
-    #scr1 = stocks.reindex(columns = ['kode','skg','p','om','dev','roe'])
+    scr1 = stocks.reindex(columns = ['kode','skg','p','om','dev','roe'])
     scr1 = stocks.copy()
     scr1['p'] = round(scr1['p'],0)
     scr1['om'] = round(scr1['om'],2)*100
@@ -236,8 +236,8 @@ def screener():
         label = f"{c} {b}%-Dev:{d}%"
         plt.annotate(label,(a,b),textcoords="offset points",xytext=(4,-2), ha='left')
     
-    #scr1 = scr1.rename(columns = {"Emiten":"kode","skg": "Harga", "p": "Level", "om": "Margin Operasi", "dev": "DevPR", "roe": "ROE"}).sort_values(['Harga','Level'])
-    #scr1
+    scr1 = scr1.rename(columns = {"Emiten":"kode","skg": "Harga", "p": "Level", "om": "Margin Operasi", "dev": "DevPR", "roe": "ROE"}).sort_values(['Harga','Level'])
+    scr1
 
    
 if __name__ == '__main__':
