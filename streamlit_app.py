@@ -241,7 +241,6 @@ def screener():
 
     df = pd.DataFrame(scr1, columns = ['p','om'])
     ax1 = df.plot.scatter(x='p',y='om',c='DarkBlue')
-    ax1
    
 if __name__ == '__main__':
     main()
