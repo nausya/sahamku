@@ -7,3 +7,4 @@ plotly
 matplotlib
 ta
 xgboost
+seaborn
