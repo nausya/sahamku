@@ -3,7 +3,7 @@ streamlit>=0.78.0
 streamlit-option-menu
 yfinance
 pandas
-plotly
+plotly-express
 matplotlib
 ta
 xgboost
