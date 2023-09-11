@@ -231,7 +231,7 @@ def screener():
     import plotly.express as px
     x = scr1['p']
     y = scr1['om']
-    fig = px.scatter(, x="x", y="y")
+    fig = px.scatter(scr1, x="x", y="y")
     fig.show()
     
     #x = scr1['p']
