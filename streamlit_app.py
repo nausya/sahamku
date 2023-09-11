@@ -246,6 +246,11 @@ def screener():
     
     scr1 = scr1.rename(columns = {"Emiten":"kode","skg": "Harga", "p": "Level", "om": "Margin Operasi", "dev": "DevPR", "roe": "ROE"}).sort_values(['Harga','Level'])
     scr1
+
+    import plotly.express as px
+    df = scr1 # iris is a pandas DataFrame
+    fig = px.scatter(df, x="df['Level']", y="df['Margin Operasi']")
+    fig.show()
    
 if __name__ == '__main__':
     main()
