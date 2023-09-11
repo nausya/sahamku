@@ -77,7 +77,7 @@ H52 = detil.info['fiftyTwoWeekHigh']
 C = detil.info['currentPrice']
 D = (H52-L52)/100 #format(1234, "8.,1f") 
 P = (C - L52)/D
-st.subheader(f"Harga terkini Rp{format(int(C),',d')}.- berada pada level {int(P)} dari skala 100", divider="rainbow")
+st.subheader(f"Harga terkini Rp{format(int(C),',d')}.- berada pada level {round(P,0)} dari skala 100", divider="rainbow")
 om  = detil.info['operatingMargins']
 dev = detil.info['payoutRatio']
 roe = detil.info['returnOnEquity']
@@ -221,7 +221,7 @@ def screener():
     #stocks['p'] = (stocks['skg'] - stocks['lo'])/((stocks['hi'] - stocks['lo'])/100)
     #scr1 = stocks.copy()
     scr1 = pd.DataFrame(stocks, columns = ['kode','skg','p','om','dev','roe'])
-    scr1['p'] = int(scr1['p'])
+    scr1['p'] = round((scr1['p'],0)
     scr1['om'] = round(scr1['om'],2)*100
     scr1['dev'] = round(scr1['dev'],2)*100
     scr1['roe'] = round(scr1['roe'],2)*100
