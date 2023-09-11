@@ -228,21 +228,21 @@ def screener():
     #scr1= scr1.loc[(scr1['p']<11) & (scr1['skg']>50) & (scr1['om']>5) & (scr1['dev']>5) & (scr1['roe']>5)]
     
     
-    #x = scr1['p']
-    #y = scr1['om']
-    #kd = scr1['kode']
-    #dev = scr1['dev']
+    x = scr1['p']
+    y = scr1['om']
+    kd = scr1['kode']
+    dev = scr1['dev']
  
     #Plot Grafik
-    #scr1.plot.scatter(x = 'p', y = 'om', xlabel='<< Rendah <--- Posisi Harga ---> Tinggi >>', ylabel='Margin Operasi(%)',title='Hasil Screener (MarginOps,DevPR,ROE)>5%',marker=">")
+    scr1.plot.scatter(x = 'p', y = 'om', xlabel='<< Rendah <--- Posisi Harga ---> Tinggi >>', ylabel='Margin Operasi(%)',title='Hasil Screener (MarginOps,DevPR,ROE)>5%',marker=">")
     
                       
     # zip joins x and y coordinates in pairs
-    #for a,b,c,d in zip(x,y,kd,dev):
-     #   b = int(b)
-      #  d = int(d)
-       # label = f"{c} {b}%-Dev:{d}%"
-        #plt.annotate(label,(a,b),textcoords="offset points",xytext=(4,-2), ha='left')
+    for a,b,c,d in zip(x,y,kd,dev):
+        b = int(b)
+        d = int(d)
+        label = f"{c} {b}%-Dev:{d}%"
+        plt.annotate(label,(a,b),textcoords="offset points",xytext=(4,-2), ha='left')
     
     scr1 = scr1.rename(columns = {"Emiten":"kode","skg": "Harga", "p": "Level", "om": "Margin Operasi", "dev": "DevPR", "roe": "ROE"}).sort_values(['Harga','Level'])
     scr1
