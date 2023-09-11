@@ -81,7 +81,8 @@ st.subheader(f"Harga terkini Rp{format(int(C),',d')}.- berada pada level {int(P)
 om  = detil.info['operatingMargins']
 dev = detil.info['payoutRatio']
 roe = detil.info['returnOnEquity']
-st.subheader(f"MarginOps : {ceknon(om)}%, DevPR : {ceknon(dev)}%, ROE : {ceknon(roe)}%", divider="rainbow")
+roe = ceknon(roe)
+st.subheader(f"MarginOps : {ceknon(om)}%, DevPR : {ceknon(dev)}%, ROE : {roe}%", divider="rainbow")
 st.info('Untuk jangka panjang perlu diperhatikan kisaran level harga kurang dari 10')
 
 
