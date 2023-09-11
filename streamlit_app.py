@@ -212,7 +212,7 @@ def model_engine(model, num):
 def screener():
     screenlevel = st.selectbox('Pilih Level Saham:', ['Saham25Persen','Saham35Persen'])
     st.subheader('Tabular Hasil Screener')
-    if screenlevel == 'Saham25Persen':
+    if screenlevel == 'Saham35Persen':
         st.write('Screener Saham Harga Kurang Dari 5000')
         stocks = pd.read_csv('201p.csv')
     else:
