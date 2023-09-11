@@ -68,8 +68,7 @@ def ceknon(x):
        x = int(x)
        return x
     else:
-       x = 0
-       return x
+       st.error('This is an error', icon="🚨")
         
 #Display Persentil
 detil = yf.Ticker(option)
