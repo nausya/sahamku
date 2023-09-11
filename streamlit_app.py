@@ -227,7 +227,13 @@ def screener():
     scr1['dev'] = round(scr1['dev'],2)*100
     scr1['roe'] = round(scr1['roe'],2)*100
     #scr1= scr1.loc[(scr1['p']<11) & (scr1['skg']>50) & (scr1['om']>5) & (scr1['dev']>5) & (scr1['roe']>5)]
-
+    
+    import plotly.express as px
+    x = scr1['p']
+    y = scr1['om']
+    fig = px.scatter(, x="x", y="y")
+    fig.show()
+    
     #x = scr1['p']
     #y = scr1['om']
     #kd = scr1['kode']
@@ -247,10 +253,6 @@ def screener():
     scr1 = scr1.rename(columns = {"Emiten":"kode","skg": "Harga", "p": "Level", "om": "Margin Operasi", "dev": "DevPR", "roe": "ROE"}).sort_values(['Harga','Level'])
     scr1
 
-    import plotly.express as px
-    df = scr1 # iris is a pandas DataFrame
-    fig = px.scatter(df, x="df['Level']", y="df['Margin Operasi']")
-    fig.show()
    
 if __name__ == '__main__':
     main()
