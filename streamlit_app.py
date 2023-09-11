@@ -80,7 +80,6 @@ P = (C - L52)/D
 st.subheader(f"Harga terkini Rp{format(int(C),',d')}.- berada pada level {int(P)} dari skala 100", divider="rainbow")
 om  = detil.info['operatingMargins']
 dev = detil.info['payoutRatio']
-dev = ceknon(dev)
 roe = detil.info['returnOnEquity']
 
 st.subheader(f"MarginOps : {ceknon(om)}%, DevPR : {ceknon(dev)}%, ROE : {roe}%", divider="rainbow")
