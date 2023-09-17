@@ -232,7 +232,7 @@ def screener():
     scr1['OpMargin'] = (scr1['OpMargin']*100).map('{:,.0f}%'.format)
     scr1['RoE'] = (scr1['RoE']*100).map('{:,.0f}%'.format)
     scr1 = scr1.rename(columns = {"Emiten":"Kode","Current": "Harga", "P": "Level", "OpMargin": "Margin Operasi", "DevPR": "DevPR", "RoE": "ROE"}).sort_values(['Harga','Level'])
-    scr1.style.set_properties(**{'text-align': 'right'})
+    pd.style.set_properties(**{'text-align': 'right'})
     scr1
     
 if __name__ == '__main__':
