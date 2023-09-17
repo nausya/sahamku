@@ -209,10 +209,8 @@ def model_engine(model, num):
 
 #Screener Grafik Kuadran
 def screener():
-    #sektor = pd.read_csv('PersentilN.csv').sort_values('Industri')
-    #sektor = sektor['Industri'].unique()
+
     screenlevel = st.selectbox('Pilih Level Saham:', ['Saham35Persen','Saham25Persen','Saham20Persen'])
-    #screensektor = st.selectbox('Pilih Sektor:', sektor)
     st.subheader('Tabular Hasil Screener')
     scr1 = pd.read_csv('PersentilN.csv', usecols=["Kode","Current","P","OpMargin","DevPR","RoE"],index_col=[0])
     scr1 = scr1.fillna(0)
@@ -233,6 +231,15 @@ def screener():
     scr1['RoE'] = (scr1['RoE']*100).map('{:,.0f}%'.format)
     scr1 = scr1.rename(columns = {"Emiten":"Kode","Current": "Harga", "P": "Level", "OpMargin": "Margin Operasi", "DevPR": "DevPR", "RoE": "ROE"}).sort_values(['Harga','Level'])
     scr1
+
+    scr2 = pd.read_csv('PersentilN.csv', usecols=["Kode","Current","P","Industri","Marcap(M)","VolAvg","Vol","Share(Juta)","CHG%"],index_col=[0])
+    sektor = scr2['Industri'].unique()
+    screensektor = st.selectbox('Pilih Sektor:', sektor)
+    scr2 = scr2.fillna(0)
+    st.write(f'Sektor :{screensektor}')
+    scr2 = scr2.query("Industri == screensektor")
+    scr2 = scr2.rename(columns = {"Emiten":"Kode","Current": "Harga", "P": "Level", "Marcap(M)": "Margin Capital (Milyar)", "VolAvg": "Rata2 Volume", "Vol": "Volume","Share(Juta)": "Share (Juta)","CHG%": "Change"}).sort_values(['Margin Capital (Milyar)'])
+    scr2
     
 if __name__ == '__main__':
     main()
