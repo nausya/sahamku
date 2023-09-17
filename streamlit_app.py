@@ -225,7 +225,7 @@ def screener():
     else:
        st.write('Screener Saham Harga Rentang 50-200')
        scr1=scr1.query("Current > 50 and Current <= 200 and P<=10 and OpMargin >= 0.1") 
-    scr1 = scr1.rename(columns = {"Emiten":"Kode","Current": "Harga", "P": "Level", "OpMargin": "Margin Operasi", "DevPR": "DevPR", "RoE": "ROE"}).sort_values(['Harga','Level'])
+    scr1 = scr1.rename(columns = {"Emiten":"Kode","Current": "Harga", "int(P)": "Level", "OpMargin": "Margin Operasi", "DevPR": "DevPR", "RoE": "ROE"}).sort_values(['Harga','Level'])
     scr1
     
 if __name__ == '__main__':
