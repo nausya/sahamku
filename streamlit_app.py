@@ -209,8 +209,8 @@ def model_engine(model, num):
 
 #Screener Grafik Kuadran
 def screener():
-    scr = pd.read_csv('PersentilN.csv')
-    sektor = scr['Industri'].sort_values('Industri').unique()
+    sektor = pd.read_csv('PersentilN.csv').sort_values('Industri')
+    sektor = scr['Industri'].unique()
     screenlevel = st.selectbox('Pilih Level Saham:', ['Saham25Persen','Saham35Persen'])
     screensektor = st.selectbox('Pilih Sektor:', sektor)
     st.subheader('Tabular Hasil Screener')
