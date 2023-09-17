@@ -219,7 +219,7 @@ def screener():
         stocks = pd.read_csv('201p.csv')
     else:
         st.write('Screener Saham Harga 50-200')
-        scr2 = sektor['Current']<201
+        scr2 = pd.read_csv('PersentilN.csv').sort_values('Industri')
     #Kode	Saham	Min	Mak	Current	P	P0	P5	P10	P15	...	Marcap(M)	VolAvg	Vol	Share(Juta)	CHG%	CHG	KD	DevPR	OpMargin	RoE
     scr2 = pd.DataFrame(scr2, columns = ['Kode','Current','P','OpMargin','DevPR','RoE'])
     scr1 = pd.DataFrame(stocks, columns = ['kode','skg','p','om','dev','roe'])
