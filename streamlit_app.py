@@ -216,17 +216,16 @@ def screener():
     st.subheader('Tabular Hasil Screener')
     if screenlevel == 'Saham35Persen':
         st.write('Screener Saham Harga Kurang Dari 5000')
-        stocks = pd.read_csv('201p.csv')
+        stocks = pd.read_csv('201p.csv', columns = ['kode','skg','p','om','dev','roe'])
+        scr1 = scr1.rename(columns = {"Emiten":"kode","skg": "Harga", "p": "Level", "om": "Margin Operasi", "dev": "DevPR", "roe": "ROE"}).sort_values(['Harga','Level'])
     else:
         st.write('Screener Saham Harga 50-200')
-        scr2 = pd.read_csv('PersentilN.csv').sort_values('Industri')
-    #Kode	Saham	Min	Mak	Current	P	P0	P5	P10	P15	...	Marcap(M)	VolAvg	Vol	Share(Juta)	CHG%	CHG	KD	DevPR	OpMargin	RoE
-    scr2 = pd.DataFrame(scr2, columns = ['Kode','Current','P','OpMargin','DevPR','RoE'])
-    scr1 = pd.DataFrame(stocks, columns = ['kode','skg','p','om','dev','roe'])
-    scr1 = scr1.rename(columns = {"Emiten":"kode","skg": "Harga", "p": "Level", "om": "Margin Operasi", "dev": "DevPR", "roe": "ROE"}).sort_values(['Harga','Level'])
-    scr1
-    scr2
+        scr2 = pd.read_csv('PersentilN.csv', columns = ['Kode','Current','P','OpMargin','DevPR','RoE']).sort_values('Industri')
+        scr2
+        #Kode	Saham	Min	Mak	Current	P	P0	P5	P10	P15	...	Marcap(M)	VolAvg	Vol	Share(Juta)	CHG%	CHG	KD	DevPR	OpMargin	RoE
+    
 
+    
    
 if __name__ == '__main__':
     main()
