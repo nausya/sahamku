@@ -235,9 +235,9 @@ def screener():
     scr2 = pd.read_csv('PersentilN.csv', usecols=["Kode","Current","P","Industri","Marcap(M)","VolAvg","Vol","Share(Juta)","CHG%"],index_col=[0])
     sektor = scr2['Industri'].unique()
     screensektor = st.selectbox('Pilih Sektor:', sektor)
-    #scr2 = scr2.fillna(0)
-    st.write(f'Sektor :{screensektor}')
-    scr2 = scr2.query("Industri == screensektor")
+    scr2 = scr2.fillna(0)
+    st.write(f'Sektor :{screensektor[0]}')
+    scr2 = scr2.query("Industri == screensektor[0]")
     scr2 = scr2.rename(columns = {"Emiten":"Kode","Current": "Harga", "P": "Level", "Marcap(M)": "Margin Capital (Milyar)", "VolAvg": "Rata2 Volume", "Vol": "Volume","Share(Juta)": "Share (Juta)","CHG%": "Change"}).sort_values(['Margin Capital (Milyar)'])
     scr2
     
