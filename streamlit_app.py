@@ -225,7 +225,7 @@ def screener():
     else:
        st.write('Screener Saham Harga Rentang 50-200')
        scr1=scr1.query("Current > 50 and Current <= 200 and P<=10 and OpMargin >= 0.1")
-    pd.options.display.float_format = '{:,.0f}'.format
+    pd.options.display.float_format = '{:,.0f}%'.format
     scr1['Current'] = scr1['Current'].astype(int)
     scr1['P'] = scr1['P'].astype(int)
     scr1['DevPR'] = scr1['DevPR']*100
