@@ -214,7 +214,7 @@ def screener():
     screenlevel = st.selectbox('Pilih Level Saham:', ['Saham25Persen','Saham35Persen'])
     #screensektor = st.selectbox('Pilih Sektor:', sektor)
     st.subheader('Tabular Hasil Screener')
-    scr1 = pd.read_csv('PersentilN.csv', columns =["Kode","Current","P","OpMargin","DevPR","RoE"])
+    scr1 = pd.read_csv('PersentilN.csv', usecols=["Kode","Current","P","OpMargin","DevPR","RoE"])
     if screenlevel == 'Saham35Persen':
        st.write('Screener Saham Harga Kurang Dari 5000')
        scr1=scr1.query("Current > 50 and Current <= 200 and P<=10 and OpMargin >= 0.1")
