@@ -210,7 +210,7 @@ def model_engine(model, num):
 #Screener Grafik Kuadran
 def screener():
     sektor = pd.read_csv('PersentilN.csv').sort_values('Industri')
-    sektor = scr['Industri'].unique()
+    sektor = sektor['Industri'].unique()
     screenlevel = st.selectbox('Pilih Level Saham:', ['Saham25Persen','Saham35Persen'])
     screensektor = st.selectbox('Pilih Sektor:', sektor)
     st.subheader('Tabular Hasil Screener')
@@ -219,12 +219,13 @@ def screener():
         stocks = pd.read_csv('201p.csv')
     else:
         st.write('Screener Saham Harga 50-200')
-        stocks = pd.read_csv('50p.csv')
+        scr2 = sektor['Current']<201
     #Kode	Saham	Min	Mak	Current	P	P0	P5	P10	P15	...	Marcap(M)	VolAvg	Vol	Share(Juta)	CHG%	CHG	KD	DevPR	OpMargin	RoE
-    scr1 = pd.DataFrame(stocks, columns = ['Kode','Current','P','OpMargin','DevPR','RoE'])
+    scr2 = pd.DataFrame(scr2, columns = ['Kode','Current','P','OpMargin','DevPR','RoE'])
     scr1 = pd.DataFrame(stocks, columns = ['kode','skg','p','om','dev','roe'])
     scr1 = scr1.rename(columns = {"Emiten":"kode","skg": "Harga", "p": "Level", "om": "Margin Operasi", "dev": "DevPR", "roe": "ROE"}).sort_values(['Harga','Level'])
     scr1
+    scr2
 
    
 if __name__ == '__main__':
