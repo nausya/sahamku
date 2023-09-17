@@ -228,7 +228,7 @@ def screener():
     
     scr1['Current'] = scr1['Current'].astype(int)
     scr1['P'] = scr1['P'].astype(int)
-    scr1['DevPR'] = scr1['DevPR']*100
+    scr1['DevPR'] = scr1['DevPR']*100.astype(int)
     scr1['OpMargin'] = scr1['OpMargin']*100
     scr1['RoE'] = scr1['RoE']*100
     scr1 = scr1.rename(columns = {"Emiten":"Kode","Current": "Harga", "P": "Level", "OpMargin": "Margin Operasi", "DevPR": "DevPR", "RoE": "ROE"}).sort_values(['Harga','Level'])
