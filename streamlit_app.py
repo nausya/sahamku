@@ -211,16 +211,19 @@ def model_engine(model, num):
 def screener():
     #sektor = pd.read_csv('PersentilN.csv').sort_values('Industri')
     #sektor = sektor['Industri'].unique()
-    screenlevel = st.selectbox('Pilih Level Saham:', ['Saham25Persen','Saham35Persen'])
+    screenlevel = st.selectbox('Pilih Level Saham:', ['Saham35Persen','Saham25Persen','Saham20Persen'])
     #screensektor = st.selectbox('Pilih Sektor:', sektor)
     st.subheader('Tabular Hasil Screener')
     scr1 = pd.read_csv('PersentilN.csv', usecols=["Kode","Current","P","OpMargin","DevPR","RoE"])
     scr1 = scr1.fillna(0)
-    if screenlevel == 'Saham25Persen':
+    if screenlevel == 'Saham20Persen':
+       st.write('Screener Saham Harga Lebih Dari 5000')
+       scr1=scr1.query("Current > 5000 and P<=10 and OpMargin >= 0.1")
+    elif screenlevel == 'Saham25Persen':
        st.write('Screener Saham Harga Kurang Dari 5000')
        scr1=scr1.query("Current > 200 and Current <= 5000 and P<=10 and OpMargin >= 0.1")
     else:
-       st.write('Screener Saham Harga 50-200')
+       st.write('Screener Saham Harga Rentang 50-200')
        scr1=scr1.query("Current > 50 and Current <= 200 and P<=10 and OpMargin >= 0.1") 
     scr1 = scr1.rename(columns = {"Emiten":"Kode","Current": "Harga", "P": "Level", "OpMargin": "Margin Operasi", "DevPR": "DevPR", "RoE": "ROE"}).sort_values(['Harga','Level'])
     scr1
