@@ -222,7 +222,7 @@ def screener():
         stocks = pd.read_csv('50p.csv')
     #Kode	Saham	Min	Mak	Current	P	P0	P5	P10	P15	...	Marcap(M)	VolAvg	Vol	Share(Juta)	CHG%	CHG	KD	DevPR	OpMargin	RoE
     #scr1 = pd.DataFrame(stocks, columns = ['Kode','Current','P','OpMargin','DevPR','RoE'])
-    scr1 = pd.DataFrame(stocks, columns = ['kode','harga','p','om','dev','roe'])
+    scr1 = pd.DataFrame(stocks, columns = ['kode','skg','p','om','dev','roe'])
     #scr1['p'] = roundup((scr1['p'],0)
     #scr1['om'] = round(scr1['om'],2)*100
     #scr1['dev'] = round(scr1['dev'],2)*100
