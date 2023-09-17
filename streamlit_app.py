@@ -209,10 +209,10 @@ def model_engine(model, num):
 
 #Screener Grafik Kuadran
 def screener():
-    sektor = pd.read_excel('PersentilN.xlsx').sort_values('Industri')
-    sektor = sektor['Industri'].unique()
+    #sektor = pd.read_excel('PersentilN.xlsx').sort_values('Industri')
+    #sektor = sektor['Industri'].unique()
     screenlevel = st.selectbox('Pilih Level Saham:', ['Saham25Persen','Saham35Persen'])
-    screensektor = st.selectbox('Pilih Sektor:', sektor)
+    #screensektor = st.selectbox('Pilih Sektor:', sektor)
     st.subheader('Tabular Hasil Screener')
     if screenlevel == 'Saham35Persen':
         st.write('Screener Saham Harga Kurang Dari 5000')
