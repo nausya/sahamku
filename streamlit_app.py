@@ -209,7 +209,9 @@ def model_engine(model, num):
 
 #Screener Grafik Kuadran
 def screener():
+    sektor = pd.read_excel('PersentilN.xlsx').sort_values('Industri')
     screenlevel = st.selectbox('Pilih Level Saham:', ['Saham25Persen','Saham35Persen'])
+    screensektor = st.selectbox('Pilih Sektor:', sektor['Industri'])
     st.subheader('Tabular Hasil Screener')
     if screenlevel == 'Saham35Persen':
         st.write('Screener Saham Harga Kurang Dari 5000')
@@ -217,10 +219,8 @@ def screener():
     else:
         st.write('Screener Saham Harga 50-200')
         stocks = pd.read_csv('50p.csv')
-    #stocks = stocks.to_string(index=False)
-    #stocks['p'] = (stocks['skg'] - stocks['lo'])/((stocks['hi'] - stocks['lo'])/100)
-    #scr1 = stocks.copy()
-    scr1 = pd.DataFrame(stocks, columns = ['kode','skg','p','om','dev','roe'])
+    #Kode	Saham	Min	Mak	Current	P	P0	P5	P10	P15	...	Marcap(M)	VolAvg	Vol	Share(Juta)	CHG%	CHG	KD	DevPR	OpMargin	RoE
+    scr1 = pd.DataFrame(stocks, columns = ['Kode','Current','P','OpMargin','DevPR','RoE'])
     #scr1['p'] = roundup((scr1['p'],0)
     #scr1['om'] = round(scr1['om'],2)*100
     #scr1['dev'] = round(scr1['dev'],2)*100
