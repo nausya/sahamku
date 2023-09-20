@@ -71,16 +71,31 @@ def ceknon(x):
        st.error('This is an error', icon="🚨")
         
 #Display Persentil
-detil = yf.Ticker(option)
-L52 = detil.info['fiftyTwoWeekLow']
-H52 = detil.info['fiftyTwoWeekHigh']
-C = detil.info['currentPrice']
+#saham = option
+screensaham = []
+for stock in option:
+        info = yf.Ticker(stock).info
+        kode = stock.replace('.JK','')
+        skg = info.get('currentPrice')
+        lo  = info.get('fiftyTwoWeekLow')
+        hi  = info.get('fiftyTwoWeekHigh')
+        om  = info.get('operatingMargins')
+        dev = info.get('payoutRatio')
+        roe =  info.get('returnOnEquity')
+        jb  = info.get('recommendationKey')
+        screensaham.append({'kode':kode,'skg':skg,'lo':lo,'hi':hi,'om':om,'dev':dev,'roe':roe,'jb':jb})
+df = pd.DataFrame(screensaham)
+df = df.fillna(0)
+#detil = yf.Ticker(option)
+L52 = df['lo']#detil.info['fiftyTwoWeekLow']
+H52 = df['hi']#detil.info['fiftyTwoWeekHigh']
+C = df['skg']#detil.info['currentPrice']
 D = (H52-L52)/100 #format(1234, "8.,1f") 
 P = (C - L52)/D
 st.subheader(f"Harga terkini Rp{format(int(C),',d')}.- berada pada level {int(P)} dari skala 100", divider="rainbow")
-om  = detil.info['operatingMargins']
-dev = detil.info['payoutRatio']
-roe = detil.info['returnOnEquity']
+om  = df['om']#detil.info['operatingMargins']
+dev = df['dev']#detil.info['payoutRatio']
+roe = df['roe']#detil.info['returnOnEquity']
 
 st.subheader(f"MarginOps : {ceknon(om)}%, DevPR : {ceknon(dev)}%, ROE : {ceknon(roe)}%", divider="rainbow")
 st.info('Untuk jangka panjang perlu diperhatikan kisaran level harga kurang dari 10')
