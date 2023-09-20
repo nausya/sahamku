@@ -86,6 +86,7 @@ for stock in saham:
         screensaham.append({'kode':kode,'skg':skg,'lo':lo,'hi':hi,'om':om,'dev':dev,'roe':roe,'jb':jb})
 df = pd.DataFrame(screensaham)
 df = df.fillna(0)
+st.write(df)
 #detil = yf.Ticker(option)
 L52 = df['lo']#detil.info['fiftyTwoWeekLow']
 H52 = df['hi']#detil.info['fiftyTwoWeekHigh']
