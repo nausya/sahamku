@@ -45,10 +45,10 @@ def download_data(op, start_date, end_date):
 #AMBIL KODE EMITEN DARI CSV
 
 ## Load the data
-dataemiten = pd.read_csv('kodesaham.csv').sort_values('Kode')
+dataemiten = pd.read_csv('PersentilN.csv').sort_values('Kode')
  
 ## Get the list of countries
-emiten = dataemiten['Kode'] + ' | ' + dataemiten['Nama Perusahaan']
+emiten = dataemiten['Kode'] + ' | ' + dataemiten['Saham']
 
  
 ## Create the select box
@@ -72,7 +72,6 @@ def ceknon(x):
         
 #Display Persentil
 saham = [option]
-st.write(saham)
 screensaham = []
 for stock in saham:
         info = yf.Ticker(stock).info
@@ -87,17 +86,15 @@ for stock in saham:
         screensaham.append({'kode':kode,'skg':skg,'lo':lo,'hi':hi,'om':om,'dev':dev,'roe':roe,'jb':jb})
 df = pd.DataFrame(screensaham)
 df = df.fillna(0)
-st.write(df)
-#detil = yf.Ticker(option)
-L52 = df['lo']#detil.info['fiftyTwoWeekLow']
-H52 = df['hi']#detil.info['fiftyTwoWeekHigh']
-C = df['skg']#detil.info['currentPrice']
-D = (H52-L52)/100 #format(1234, "8.,1f") 
+L52 = df['lo']
+H52 = df['hi']
+C = df['skg']
+D = (H52-L52)/100 
 P = (C - L52)/D
 st.subheader(f"Harga terkini Rp{format(int(C),',d')}.- berada pada level {int(P)} dari skala 100", divider="rainbow")
-om  = df['om']#detil.info['operatingMargins']
-dev = df['dev']#detil.info['payoutRatio']
-roe = df['roe']#detil.info['returnOnEquity']
+om  = df['om']
+dev = df['dev']
+roe = df['roe']
 
 st.subheader(f"MarginOps : {ceknon(om)}%, DevPR : {ceknon(dev)}%, ROE : {ceknon(roe)}%", divider="rainbow")
 st.info('Untuk jangka panjang perlu diperhatikan kisaran level harga kurang dari 10')
