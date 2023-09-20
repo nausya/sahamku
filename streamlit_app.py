@@ -71,7 +71,7 @@ def ceknon(x):
        st.error('This is an error', icon="🚨")
         
 #Display Persentil
-saham = option
+saham = ['MARI.JK']
 st.write(saham)
 screensaham = []
 for stock in saham:
