@@ -71,7 +71,7 @@ def ceknon(x):
        st.error('This is an error', icon="🚨")
         
 #Display Persentil
-saham = ['MARI.JK']
+saham = [option]
 st.write(saham)
 screensaham = []
 for stock in saham:
@@ -86,7 +86,7 @@ for stock in saham:
         jb  = info.get('recommendationKey')
         screensaham.append({'kode':kode,'skg':skg,'lo':lo,'hi':hi,'om':om,'dev':dev,'roe':roe,'jb':jb})
 df = pd.DataFrame(screensaham)
-#df = df.fillna(0)
+df = df.fillna(0)
 st.write(df)
 #detil = yf.Ticker(option)
 L52 = df['lo']#detil.info['fiftyTwoWeekLow']
