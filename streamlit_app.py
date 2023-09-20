@@ -72,6 +72,7 @@ def ceknon(x):
         
 #Display Persentil
 saham = option
+st.write(saham)
 screensaham = []
 for stock in saham:
         info = yf.Ticker(stock).info
