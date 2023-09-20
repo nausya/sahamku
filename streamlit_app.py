@@ -71,9 +71,9 @@ def ceknon(x):
        st.error('This is an error', icon="🚨")
         
 #Display Persentil
-#saham = option
+saham = option
 screensaham = []
-for stock in option:
+for stock in saham:
         info = yf.Ticker(stock).info
         kode = stock.replace('.JK','')
         skg = info.get('currentPrice')
