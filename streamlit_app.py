@@ -269,8 +269,8 @@ def screener():
     colors = np.random.rand(N)
     area = (30 * np.random.rand(N))**2  # 0 to 15 point radii
 
-    plt.scatter(x, y, s=area, c=colors, alpha=0.5)
-    plt.show()
+    st.plt.scatter(x, y, s=area, c=colors, alpha=0.5)
+    st.plt.show()
 
     
     #scr2 = pd.read_csv('PersentilN.csv', usecols=["Kode","Current","P","Industri","Marcap(M)","VolAvg","Vol","Share(Juta)","CHG%"],index_col=[0])
