@@ -221,6 +221,19 @@ def model_engine(model, num):
         st.text(f'Hari ke-{day}: {round(i)}')
         day += 1
 
+def skater(df):
+    x = df['P']
+    y = df['OpMargin']
+    kd = df['Kode']
+    dev = df['DevPR']
+    df.plot.scatter(x='P',y='OpMargin',xlabel='<< Rendah <<  Posisi Harga  >> Tinggi >>', ylabel='Margin Operasi(%)',title='Hasil Screener',
+    marker=">")
+    for a,b,c,d in zip(x,y,kd,dev):
+        b = int(b)
+        d = int(d)
+        label = f"{c} {b}%-Dev:{d}%"
+        plt.annotate(label,(a,b), textcoords="offset points", xytext=(4,-2),ha='left')
+        
 #Screener Grafik Kuadran
 def screener():
 
