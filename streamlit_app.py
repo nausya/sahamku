@@ -255,13 +255,11 @@ def screener():
     scr1['DevPR'] = (scr1['DevPR']*100).map('{:,.0f}%'.format)
     scr1['OpMargin'] = (scr1['OpMargin']*100).map('{:,.0f}%'.format)
     scr1['RoE'] = (scr1['RoE']*100).map('{:,.0f}%'.format)
-    s = scr1
+    s = scr1.sort_values('OpMargin')
     scr1 = scr1.rename(columns = {"Emiten":"Kode","Current": "Harga", "P": "Level", "OpMargin": "Margin Operasi", "DevPR": "DevPR", "RoE": "ROE"}).sort_values(['Harga','Level'])
     st.dataframe(scr1.style.highlight_max(axis=0))
-    st.bar_chart(s.OpMargin)
 
-    #penguins = sns.load_dataset("penguins")
-    #st.dataframe(penguins[["species", "flipper_length_mm"]].sample(6))
+    st.subheader('Grafik')
     fig, ax = plt.subplots()
     sns.scatterplot(s, x=s['P'], y=s['OpMargin'], ax=ax)
     st.pyplot(fig)
