@@ -263,6 +263,14 @@ def screener():
     fig, ax = plt.subplots()
     sns.scatterplot(s, x=s['P'], y=s['OpMargin'], ax=ax, marker='>')
     st.pyplot(fig)
+
+    ax = sns.countplot(x=s['RoE'],order=df['RoE'].value_counts(ascending=False).index);
+        
+    abs_values = s['RoE'].value_counts(ascending=False)
+    rel_values = s['RoE'].value_counts(ascending=False, normalize=True).values * 100
+    lbls = [f'{p[0]} ({p[1]:.0f}%)' for p in zip(abs_values, rel_values)]
+
+    ax.bar_label(container=ax.containers[0], labels=lbls)
     
     #scr2 = pd.read_csv('PersentilN.csv', usecols=["Kode","Current","P","Industri","Marcap(M)","VolAvg","Vol","Share(Juta)","CHG%"],index_col=[0])
     #sektor = scr2['Industri'].unique()
