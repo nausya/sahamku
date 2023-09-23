@@ -249,14 +249,7 @@ def screener():
     st.subheader('Grafik')
     fig, ax = plt.subplots()
     sns.scatterplot(s, x=s['P'], y=s['OpMargin'], ax=ax, marker='>')
-    x = s['P']
-    y = s['OpMargin']
-    kd = s['Kode']
-    dev = s['DevPR']
-    for a,b,c,d in zip(x,y,kd,dev):
-        label = f"{c} {b}%-Dev:{d}%"
-        sns.annotate(label,(a,b), textcoords="offset points", xytext=(4,-2),ha='left')
-        st.pyplot(fig)
+    st.pyplot(fig)
     
     #scr2 = pd.read_csv('PersentilN.csv', usecols=["Kode","Current","P","Industri","Marcap(M)","VolAvg","Vol","Share(Juta)","CHG%"],index_col=[0])
     #sektor = scr2['Industri'].unique()
