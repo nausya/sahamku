@@ -258,10 +258,9 @@ def screener():
     scr1['RoE'] = (scr1['RoE']*100).map('{:,.0f}%'.format)
     skatersaham = scr1
     scr1 = scr1.rename(columns = {"Emiten":"Kode","Current": "Harga", "P": "Level", "OpMargin": "Margin Operasi", "DevPR": "DevPR", "RoE": "ROE"}).sort_values(['Harga','Level'])
-    scr1
-    #skater(skatersaham)
-    chart_data = pd.DataFrame(np.random.randn(20, 3), columns=["a", "b", "c"])
-    st.scatter_chart(chart_data)
+    st.dataframe(scr1.style.highlight_max(axis=0))
+   
+
     
     #scr2 = pd.read_csv('PersentilN.csv', usecols=["Kode","Current","P","Industri","Marcap(M)","VolAvg","Vol","Share(Juta)","CHG%"],index_col=[0])
     #sektor = scr2['Industri'].unique()
