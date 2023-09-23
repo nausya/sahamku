@@ -260,10 +260,10 @@ def screener():
     st.dataframe(scr1.style.highlight_max(axis=0))
     st.bar_chart(s.OpMargin)
 
-    penguins = sns.load_dataset("penguins")
-    st.dataframe(penguins[["species", "flipper_length_mm"]].sample(6))
+    #penguins = sns.load_dataset("penguins")
+    #st.dataframe(penguins[["species", "flipper_length_mm"]].sample(6))
     fig, ax = plt.subplots()
-    sns.scatterplot(data=penguins, x="flipper_length_mm", y="bill_length_mm", ax=ax)
+    sns.scatterplot(s, x=s['P'], y=s.['OpMargin'], ax=ax)
     st.pyplot(fig)
     
     #scr2 = pd.read_csv('PersentilN.csv', usecols=["Kode","Current","P","Industri","Marcap(M)","VolAvg","Vol","Share(Juta)","CHG%"],index_col=[0])
