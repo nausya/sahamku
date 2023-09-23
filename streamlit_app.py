@@ -248,17 +248,12 @@ def screener():
 
     st.subheader('Grafik')
     fig, ax = plt.subplots()
-    sns.scatterplot(s, x=s['P'], y=s['OpMargin'], ax=ax, marker='>')
+    x=s['P']
+    y=s['OpMargin']
+    sns.scatterplot(s, x=x, y=y, ax=ax, marker='>')
+    ax.annotate('your_lable', (x,y)) 
     st.pyplot(fig)
 
-    import seaborn.objects as so
-    (
-    so.Plot(s, x=s['P'], y=s['OpMargin'])
-        .add(so.Dot())
-        .add(so.Text(halign="left"))
-        .label(title="Grafik", x="Level Harga", y="Margin Operasi")
-        .layout(size=(10, 10))
-    )
 
     #scr2 = pd.read_csv('PersentilN.csv', usecols=["Kode","Current","P","Industri","Marcap(M)","VolAvg","Vol","Share(Juta)","CHG%"],index_col=[0])
     #sektor = scr2['Industri'].unique()
