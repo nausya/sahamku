@@ -232,7 +232,7 @@ def skater(df):
         #b = int(b)
         #d = int(d)
         label = f"{c} {b}%-Dev:{d}%"
-        plt.annotate(label,(a,b), textcoords="offset points", xytext=(4,-2),ha='left')
+        st.plt.annotate(label,(a,b), textcoords="offset points", xytext=(4,-2),ha='left')
         
 #Screener Grafik Kuadran
 def screener():
