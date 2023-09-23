@@ -253,7 +253,7 @@ def screener():
 
     import seaborn.objects as so
     (
-    so.Plot(s, x=s['P'], y=s['OpMargin'], ax=ax, marker='>')
+    so.Plot(s, x=s['P'], y=s['OpMargin'])
         .add(so.Dot())
         .add(so.Text(halign="left"))
         .label(title="Grafik", x="Level Harga", y="Margin Operasi")
