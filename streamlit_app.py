@@ -264,7 +264,7 @@ def screener():
     sns.scatterplot(s, x=s['P'], y=s['OpMargin'], ax=ax, marker='>')
     st.pyplot(fig)
 
-    ax = sns.countplot(x=s['RoE'],order=df['RoE'].value_counts(ascending=False).index);
+    fig, ax = plt.countplot(x=s['RoE'],order=df['RoE'].value_counts(ascending=False).index);
         
     abs_values = s['RoE'].value_counts(ascending=False)
     rel_values = s['RoE'].value_counts(ascending=False, normalize=True).values * 100
