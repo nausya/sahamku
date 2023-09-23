@@ -224,7 +224,7 @@ def model_engine(model, num):
 def skater(df):
     x = df['P']
     y = df['OpMargin']
-    kd = df['Kode']
+    kd = df[0]
     dev = df['DevPR']
     df.plot.scatter(x='P',y='OpMargin',xlabel='<< Rendah <<  Posisi Harga  >> Tinggi >>', ylabel='Margin Operasi(%)',title='Hasil Screener',
     marker=">")
