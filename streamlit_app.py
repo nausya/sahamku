@@ -229,8 +229,8 @@ def skater(df):
     df.plot.scatter(x='P',y='OpMargin',xlabel='<< Rendah <<  Posisi Harga  >> Tinggi >>', ylabel='Margin Operasi(%)',title='Hasil Screener',
     marker=">")
     for a,b,c,d in zip(x,y,kd,dev):
-        b = int(b)
-        d = int(d)
+        #b = int(b)
+        #d = int(d)
         label = f"{c} {b}%-Dev:{d}%"
         plt.annotate(label,(a,b), textcoords="offset points", xytext=(4,-2),ha='left')
         
