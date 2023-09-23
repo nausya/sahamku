@@ -213,8 +213,6 @@ def model_engine(model, num):
     model.fit(x_train, y_train)
     preds = model.predict(x_test)
     st.text(f'AKURASI {ceknon(r2_score(y_test, preds))}%')
-    #st.text(f'AKURASI {round(r2_score(y_test, preds)*100)}%')
-            #\nMAE: {round(mean_absolute_error(y_test, preds))}%')
     # predicting stock price based on the number of days
     forecast_pred = model.predict(x_forecast)
     day = 1
