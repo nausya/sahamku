@@ -259,7 +259,8 @@ def screener():
     s = scr1
     scr1 = scr1.rename(columns = {"Emiten":"Kode","Current": "Harga", "P": "Level", "OpMargin": "Margin Operasi", "DevPR": "DevPR", "RoE": "ROE"}).sort_values(['Harga','Level'])
     st.dataframe(scr1.style.highlight_max(axis=0))
-    st.scatter_chart(data=s, x='P', y='OpMargin', color=None, size=None, width=0, height=0, use_container_width=True)
+    chart_data = pd.DataFrame(s), columns=["Kode","Current","P","OpMargin","DevPR","RoE"])
+    st.line_chart(chart_data)
 
     
     #scr2 = pd.read_csv('PersentilN.csv', usecols=["Kode","Current","P","Industri","Marcap(M)","VolAvg","Vol","Share(Juta)","CHG%"],index_col=[0])
