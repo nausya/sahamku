@@ -261,7 +261,7 @@ def screener():
 
     st.subheader('Grafik')
     fig, ax = plt.subplots()
-    sns.scatterplot(s, x=s['P'], y=s['OpMargin'], ax=ax, marker='>')
+    sns.scatterplot(s, x=s['P'], y=s['OpMargin'], ax=ax, marker='>',xlabel='<< Rendah <<  Posisi Harga  >> Tinggi >>', ylabel='Margin Operasi(%)',title='Hasil Screener')
     st.pyplot(fig)
     
     #scr2 = pd.read_csv('PersentilN.csv', usecols=["Kode","Current","P","Industri","Marcap(M)","VolAvg","Vol","Share(Juta)","CHG%"],index_col=[0])
