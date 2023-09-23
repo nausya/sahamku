@@ -259,7 +259,7 @@ def screener():
     scr1 = scr1.rename(columns = {"Emiten":"Kode","Current": "Harga", "P": "Level", "OpMargin": "Margin Operasi", "DevPR": "DevPR", "RoE": "ROE"}).sort_values(['Harga','Level'])
     st.dataframe(scr1.style.highlight_max(axis=0))
 
-    st.subheader(<p style='text-align: center;'>Grafik</p>)
+    st.subheader("<p style='text-align: center;'>Grafik</p>")
     fig, ax = plt.subplots()
     sns.scatterplot(s, x=s['P'], y=s['OpMargin'], ax=ax, marker='>')
     st.pyplot(fig)
