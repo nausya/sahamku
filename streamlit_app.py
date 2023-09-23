@@ -258,19 +258,7 @@ def screener():
     s = scr1
     scr1 = scr1.rename(columns = {"Emiten":"Kode","Current": "Harga", "P": "Level", "OpMargin": "Margin Operasi", "DevPR": "DevPR", "RoE": "ROE"}).sort_values(['Harga','Level'])
     st.dataframe(scr1.style.highlight_max(axis=0))
-
-    # Fixing random state for reproducibility
-    np.random.seed(19680801)
-
-
-    N = 50
-    x = np.random.rand(N)
-    y = np.random.rand(N)
-    colors = np.random.rand(N)
-    area = (30 * np.random.rand(N))**2  # 0 to 15 point radii
-
-    st.scatter(x, y, s=area, c=colors, alpha=0.5)
-    plt.show()
+    st.bar_chart(s.OpMargin)
 
     
     #scr2 = pd.read_csv('PersentilN.csv', usecols=["Kode","Current","P","Industri","Marcap(M)","VolAvg","Vol","Share(Juta)","CHG%"],index_col=[0])
