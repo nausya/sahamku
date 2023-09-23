@@ -260,7 +260,12 @@ def screener():
     scr1 = scr1.rename(columns = {"Emiten":"Kode","Current": "Harga", "P": "Level", "OpMargin": "Margin Operasi", "DevPR": "DevPR", "RoE": "ROE"}).sort_values(['Harga','Level'])
     scr1
     #skater(skatersaham)
-    st.scatter_chart(skatersaham)
+    st.scatter_chart(
+    skatersaham,
+    x=skatersaham['P'],
+    y='skatersaham['OpMargin']',
+    size='10',
+    )
     
     #scr2 = pd.read_csv('PersentilN.csv', usecols=["Kode","Current","P","Industri","Marcap(M)","VolAvg","Vol","Share(Juta)","CHG%"],index_col=[0])
     #sektor = scr2['Industri'].unique()
