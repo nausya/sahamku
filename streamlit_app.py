@@ -224,7 +224,7 @@ def model_engine(model, num):
 def skater(df):
     x = df['P']
     y = df['OpMargin']
-    kd = df[0]
+    kd = df['Kode']
     dev = df['DevPR']
     df.plot.scatter(x='P',y='OpMargin',xlabel='<< Rendah <<  Posisi Harga  >> Tinggi >>', ylabel='Margin Operasi(%)',title='Hasil Screener',
     marker=">")
@@ -259,7 +259,7 @@ def screener():
     skatersaham = scr1
     scr1 = scr1.rename(columns = {"Emiten":"Kode","Current": "Harga", "P": "Level", "OpMargin": "Margin Operasi", "DevPR": "DevPR", "RoE": "ROE"}).sort_values(['Harga','Level'])
     scr1
-    skater(skatersaham)
+    #skater(skatersaham)
     
     #scr2 = pd.read_csv('PersentilN.csv', usecols=["Kode","Current","P","Industri","Marcap(M)","VolAvg","Vol","Share(Juta)","CHG%"],index_col=[0])
     #sektor = scr2['Industri'].unique()
