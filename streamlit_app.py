@@ -259,7 +259,7 @@ def screener():
     s = scr1
     scr1 = scr1.rename(columns = {"Emiten":"Kode","Current": "Harga", "P": "Level", "OpMargin": "Margin Operasi", "DevPR": "DevPR", "RoE": "ROE"}).sort_values(['Harga','Level'])
     st.dataframe(scr1.style.highlight_max(axis=0))
-    chart_data = pd.DataFrame(s), columns=["Kode","Current","P","OpMargin","DevPR","RoE"])
+    chart_data = s, columns=["Kode","Current","P","OpMargin","DevPR","RoE"])
     st.line_chart(chart_data)
 
     
