@@ -68,7 +68,7 @@ def ceknon(x):
        x = int(x)
        return x
     elif x == 0:
-       return x
+       return 0
     else:
        st.error('This is an error', icon="🚨")
 
@@ -101,8 +101,11 @@ st.dataframe(df)
 L52 = df['lo']
 H52 = df['hi']
 C = df['skg']
-D = (H52-L52)/100 
-P = (C - L52)/D
+D = (H52-L52)/100
+if D == 0:
+  P = 0
+else:
+  P = (C - L52)/D
 st.subheader(f"Harga terkini Rp{int(C)}.- berada pada level {int(P)} dari skala 100", divider="rainbow")
 om  = df['om']
 dev = df['dev']
