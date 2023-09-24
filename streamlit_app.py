@@ -102,13 +102,12 @@ L52 = df['lo']
 H52 = df['hi']
 C = df['skg']
 D = (H52-L52)/100
-st.write(f"Nilai L52:{L52}")
-if L52 == H52:
-   P = 0
+if D == 0:
+  P = 0
 else:
-   P = (C - L52)/D
-st.write(f"Nilai H52:{H52}")
-st.subheader(f"Harga terkini Rp{int(C)}.- berada pada level {int(P)} dari skala 100", divider="rainbow")
+  P = (C - L52)/D
+  P = int(P)
+st.subheader(f"Harga terkini Rp{int(C)}.- berada pada level {P} dari skala 100", divider="rainbow")
 om  = df['om']
 dev = df['dev']
 roe = df['roe']
