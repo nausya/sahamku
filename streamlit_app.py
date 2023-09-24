@@ -107,7 +107,7 @@ roe = df['roe']
 
 st.subheader(f"MarginOps : {ceknon(om)}%, DevPR : {ceknon(dev)}%, ROE : {ceknon(roe)}%", divider="rainbow")
 kode = selected_emiten.split(' | ')[0]
-st.dataframe(n['Keterangan Notasi'])
+st.dataframe(n)
 #st.text(kode)
 #st.markdown('notasi(kode)') # see *
 st.info('Untuk jangka panjang perlu diperhatikan kisaran level harga kurang dari 10')
