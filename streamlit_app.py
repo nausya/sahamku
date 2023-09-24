@@ -77,7 +77,10 @@ def notasi(kode):
    if n.isna().empty:
     return st.text("")
    else:   
-    return n['Keterangan Notasi'].values[0]
+    n = n['Keterangan Notasi'].values[0]
+    n = n.split("|")
+    for y in n:
+      return st.text(y)
        
 #Display Persentil
 saham = [option]
@@ -108,9 +111,7 @@ roe = df['roe']
 st.subheader(f"MarginOps : {ceknon(om)}%, DevPR : {ceknon(dev)}%, ROE : {ceknon(roe)}%", divider="rainbow")
 kode = selected_emiten.split(' | ')[0]
 n = notasi(kode)
-n = n.split("|")
-for y in n:
- st.text(y)
+
 #st.markdown('notasi(kode)') # see *
 st.info('Untuk jangka panjang perlu diperhatikan kisaran level harga kurang dari 10')
 
