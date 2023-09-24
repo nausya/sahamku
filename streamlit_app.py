@@ -103,7 +103,10 @@ H52 = df['hi']
 C = df['skg']
 D = (H52-L52)/100
 st.write(f"Nilai D:{D}")
-P = D and P = (C - L52)/D
+try:
+    P = (C - L52)/D
+except ZeroDivisionError:
+    P = 0 
 st.write(f"Nilai P:{P}")
 st.subheader(f"Harga terkini Rp{int(C)}.- berada pada level {int(P)} dari skala 100", divider="rainbow")
 om  = df['om']
