@@ -75,9 +75,9 @@ def notasi(kode):
    n = pd.read_csv('notasi.csv')
    n = n[(n['Kode'] == kode)]
    if n.isna().empty:
-    return print("")
+    return st.text("")
    else:   
-    return n['Keterangan Notasi']
+    return st.text(n['Keterangan Notasi'])
        
 #Display Persentil
 saham = [option]
@@ -108,7 +108,6 @@ roe = df['roe']
 st.subheader(f"MarginOps : {ceknon(om)}%, DevPR : {ceknon(dev)}%, ROE : {ceknon(roe)}%", divider="rainbow")
 kode = selected_emiten.split(' | ')[0]
 notasi(kode)
-#st.text(kode)
 #st.markdown('notasi(kode)') # see *
 st.info('Untuk jangka panjang perlu diperhatikan kisaran level harga kurang dari 10')
 
