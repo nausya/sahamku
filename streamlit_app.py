@@ -69,6 +69,15 @@ def ceknon(x):
        return x
     else:
        st.error('This is an error', icon="🚨")
+        
+def ndol(x):
+    if x == 0:
+       return x
+    elif x > 0:
+       x = int(x)
+       return x
+    else:
+       return 0
 
 #Notasi Emiten
 def notasi(kode):
@@ -100,7 +109,7 @@ H52 = df['hi']
 C = df['skg']
 D = (H52-L52)/100 
 P = (C - L52)/D
-st.subheader(f"Harga terkini Rp{format(int(C),',d')}.- berada pada level {int(P)} dari skala 100", divider="rainbow")
+st.subheader(f"Harga terkini Rp{format(ndol(C),',d')}.- berada pada level {ndol(P)} dari skala 100", divider="rainbow")
 om  = df['om']
 dev = df['dev']
 roe = df['roe']
