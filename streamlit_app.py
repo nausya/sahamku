@@ -79,16 +79,7 @@ def notasi(kode):
    if n.isna().empty:
     return st.text("")
    else:  
-    return st.warning(n['Keterangan Notasi'].values[0])
-       
-st.balloons()
-st.snow()
-st.toast('Warming up...')
-st.error('Error message')
-st.warning('Warning message')
-st.info('Info message')
-st.success('Success message')
-st.exception(e)
+    return st.error(n['Keterangan Notasi'].values[0])
 
 #Display Persentil
 saham = [option]
