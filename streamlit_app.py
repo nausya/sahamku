@@ -95,6 +95,7 @@ for stock in saham:
         screensaham.append({'kode':kode,'skg':skg,'lo':lo,'hi':hi,'om':om,'dev':dev,'roe':roe,'jb':jb})
 df = pd.DataFrame(screensaham)
 df = df.fillna(0)
+st.dataframe(df)
 L52 = df['lo']
 H52 = df['hi']
 C = df['skg']
