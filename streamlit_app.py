@@ -67,6 +67,8 @@ def ceknon(x):
        x = round(x,2)*100
        x = int(x)
        return x
+     elif x == 0:
+       return x
     else:
        st.error('This is an error', icon="🚨")
 
