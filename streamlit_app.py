@@ -104,7 +104,7 @@ C = df['skg']
 D = (H52-L52)/100
 st.write(f"Nilai D:{D}")
 P = (C - L52)/D
-if P == float(nan):
+if P is None:
    P = 0
 else:
    P = (C - L52)/D
