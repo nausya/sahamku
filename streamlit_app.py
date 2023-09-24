@@ -78,8 +78,9 @@ def notasi(kode):
    n = n[(n['Kode'] == kode)]
    if n.isna().empty:
     return st.text("")
-   else:   
-    return st.text(f"\033[n['Keterangan Notasi'].values[0]")
+   else:
+    st.text("\033[1;32m This text is Bright Green  \n")   
+    return st.text(n['Keterangan Notasi'].values[0])
        
 #Display Persentil
 saham = [option]
