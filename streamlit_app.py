@@ -81,6 +81,15 @@ def notasi(kode):
    else:  
     return st.warning(n['Keterangan Notasi'].values[0])
        
+st.balloons()
+st.snow()
+st.toast('Warming up...')
+st.error('Error message')
+st.warning('Warning message')
+st.info('Info message')
+st.success('Success message')
+st.exception(e)
+
 #Display Persentil
 saham = [option]
 screensaham = []
