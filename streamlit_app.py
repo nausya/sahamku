@@ -79,7 +79,7 @@ def notasi(kode):
    if n.isna().empty:
     return st.text("")
    else:
-    st.text("\033[1;32m This text is Bright Green  \n")   
+    print("\033[1;32m This text is Bright Green  \n")   
     return st.text(n['Keterangan Notasi'].values[0])
        
 #Display Persentil
