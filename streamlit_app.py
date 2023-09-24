@@ -80,7 +80,7 @@ def notasi(kode):
     return st.text("")
    else:
     print("\033[1;32m This text is Bright Green  \n")   
-    return st.text(\033[1;32m n['Keterangan Notasi'].values[0])
+    return st.text(n['Keterangan Notasi'].values[0])
        
 #Display Persentil
 saham = [option]
