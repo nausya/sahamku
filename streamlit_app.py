@@ -81,8 +81,7 @@ def notasi(kode):
    else:  
     n = n['Keterangan Notasi'].str.split('|', expand=False)#n['Keterangan Notasi'].values[0]
     n = n.values[0]
-    for y in n:
-      return st.error(n)
+    return st.error(n[0:])
 
 #Display Persentil
 saham = [option]
