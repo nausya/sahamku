@@ -79,7 +79,7 @@ def notasi(kode):
    if n.isna().empty:
     return st.text("")
    else:  
-    n = n['Keterangan Notasi'].str.split('|', expand=False)#n['Keterangan Notasi'].values[0]
+    n = n['Keterangan Notasi'].values[0].str.split('|', expand=False)#n['Keterangan Notasi'].values[0]
     return st.error(n)
 
 #Display Persentil
