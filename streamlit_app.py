@@ -80,7 +80,7 @@ def notasi(kode):
     return st.text("")
    else:  
     n = n['Keterangan Notasi'].str.split('|', expand=False)
-    return st.code('for i in n[1]: print(i)')
+    return st.error(n)
 
 #Display Persentil
 saham = [option]
