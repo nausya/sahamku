@@ -79,8 +79,8 @@ def notasi(kode):
    if n.isna().empty:
     return st.text("")
    else:  
-    n = n['Keterangan Notasi'].values[0]
-    return st.markdown('n', unsafe_allow_html=True)
+    n = n['Keterangan Notasi'].str.split('|', expand=False)
+    return st.code('for i in n[1]: print(i)')
 
 #Display Persentil
 saham = [option]
