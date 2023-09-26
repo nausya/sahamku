@@ -80,6 +80,7 @@ def notasi(kode):
     return st.text("")
    else:  
     n = n['Keterangan Notasi'].str.split('|', expand=False)
+    n = n.values[1]
     return st.error(n)
 
 #Display Persentil
