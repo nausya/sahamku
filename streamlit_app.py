@@ -80,7 +80,7 @@ def notasi(kode):
     return st.text("")
    else:  
     n = n['Keterangan Notasi'].values[0]
-    return st.markdown(n.to_html(escape=False), unsafe_allow_html=True)
+    return st.markdown(n)
 
 #Display Persentil
 saham = [option]
