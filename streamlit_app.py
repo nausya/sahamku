@@ -80,7 +80,7 @@ def notasi(kode):
     return st.text("")
    else:  
     n = n['Keterangan Notasi'].values[0]
-    return n
+    return st.error(n)
 
 #Display Persentil
 saham = [option]
@@ -115,8 +115,7 @@ roe = df['roe']
 
 st.subheader(f"MarginOps : {ceknon(om)}%, DevPR : {ceknon(dev)}%, ROE : {ceknon(roe)}%", divider="rainbow")
 kode = selected_emiten.split(' | ')[0]
-n = notasi(kode)
-print(n)
+notasi(kode)
 
 #st.markdown('notasi(kode)') # see *
 st.info('Untuk jangka panjang perlu diperhatikan kisaran level harga kurang dari 10')
