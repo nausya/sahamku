@@ -105,10 +105,10 @@ C = df['skg']
 D = (H52-L52)/100
 if ZeroDivisionError:
   P = 0
-  st.write("zero")
+  st.write(f"{D}zero")
 else:
   P = (C - L52)/D
-  st.write("nilai P")
+  st.write(f"{D}nilai P")
 st.subheader(f"Harga terkini Rp{int(C)}.- berada pada level {P} dari skala 100", divider="rainbow")
 om  = df['om']
 dev = df['dev']
