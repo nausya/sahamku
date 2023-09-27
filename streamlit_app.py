@@ -107,7 +107,6 @@ if ZeroDivisionError:
   P = 0
 else:
   P = (C - L52)/D
-  P = int(P)
 st.subheader(f"Harga terkini Rp{int(C)}.- berada pada level {P} dari skala 100", divider="rainbow")
 om  = df['om']
 dev = df['dev']
