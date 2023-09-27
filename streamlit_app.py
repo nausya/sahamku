@@ -109,7 +109,7 @@ n = pd.read_csv('notasi.csv')
 n = n[(n['Kode'] == kode)]
 st.dataframe(n)
 if n.isna().empty:
-   return st.text("")
+   st.text("")
 else:  
    n = n['Keterangan Notasi'].values[0]
    st.error(n)
