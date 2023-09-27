@@ -109,7 +109,7 @@ if float(D) == 0:
 else:
   P = (C - L52)/D
   #st.write(f"{D}nilai P")
-st.subheader(f"Harga terkini Rp{int(C)}.- berada pada level {P} dari skala 100", divider="rainbow")
+st.subheader(f"Harga terkini Rp{int(C)}.- berada pada level {int(P)} dari skala 100", divider="rainbow")
 om  = df['om']
 dev = df['dev']
 roe = df['roe']
