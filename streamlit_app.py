@@ -110,7 +110,7 @@ kode = selected_emiten.split(' | ')[0]
 n = pd.read_csv('notasi.csv')
 n = n[(n['Kode'] == kode)]
 if n.isna().empty:
-  return
+  return none
 else:  
   n = n['Keterangan Notasi'].values[0]
   st.error(n)
