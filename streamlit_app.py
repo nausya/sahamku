@@ -73,14 +73,14 @@ def ceknon(x):
        st.error('This is an error', icon="🚨")
 
 #Notasi Emiten
-def notasi(kode):
-   n = pd.read_csv('notasi.csv')
-   n = n[(n['Kode'] == kode)]
-   if n.isna().empty:
-    return st.text("")
-   else:  
-    n = n['Keterangan Notasi'].values[0]
-    return st.error(n)
+#def notasi(kode):
+#   n = pd.read_csv('notasi.csv')
+ #  n = n[(n['Kode'] == kode)]
+#   if n.isna().empty:
+ #   return st.text("")
+#   else:  
+#    n = n['Keterangan Notasi'].values[0]
+ #   return st.error(n)
 
 #Display Persentil
 saham = [option]
@@ -116,7 +116,13 @@ roe = df['roe']
 
 st.subheader(f"MarginOps : {ceknon(om)}%, DevPR : {ceknon(dev)}%, ROE : {ceknon(roe)}%", divider="rainbow")
 kode = selected_emiten.split(' | ')[0]
-notasi(kode)
+n = pd.read_csv('notasi.csv')
+n = n[(n['Kode'] == kode)]
+if n.isna().empty:
+  st.text("")
+else:  
+  n = n['Keterangan Notasi'].values[0]
+  st.error(n)
 
 #st.markdown('notasi(kode)') # see *
 st.info('Untuk jangka panjang perlu diperhatikan kisaran level harga kurang dari 10')
