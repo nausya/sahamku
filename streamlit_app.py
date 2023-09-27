@@ -88,17 +88,15 @@ for stock in saham:
         screensaham.append({'kode':kode,'skg':skg,'lo':lo,'hi':hi,'om':om,'dev':dev,'roe':roe,'jb':jb})
 df = pd.DataFrame(screensaham)
 df = df.fillna(0)
-#st.dataframe(df)
+
 L52 = df['lo']
 H52 = df['hi']
 C = df['skg']
 D = (H52-L52)/100
 if float(D) == 0:
   P = 0
-  #st.write(f"{float(D)}zero")
 else:
   P = (C - L52)/D
-  #st.write(f"{D}nilai P")
 st.subheader(f"Harga terkini Rp{int(C)}.- berada pada level {int(P)} dari skala 100", divider="rainbow")
 om  = df['om']
 dev = df['dev']
@@ -109,6 +107,7 @@ st.subheader(f"MarginOps : {ceknon(om)}%, DevPR : {ceknon(dev)}%, ROE : {ceknon(
 kode = selected_emiten.split(' | ')[0]
 n = pd.read_csv('notasi.csv')
 n = n[(n['Kode'] == kode)]
+st.dataframe(n)
 if n.isna().empty:
    return st.text("")
 else:  
