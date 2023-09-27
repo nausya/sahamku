@@ -110,10 +110,10 @@ n = n[(n['Kode'] == kode)]
 if n.isna().empty:
    st.text("")
 else:  
-   #n = n['Keterangan Notasi'].values[0]
    n = n['Keterangan Notasi'].str.split('|', expand=False)
-   for y in n[1]:
-    st.error(y)
+   for y in n:
+    for x in y:
+     st.error(x)
 
 #st.markdown('notasi(kode)') # see *
 st.info('Untuk jangka panjang perlu diperhatikan kisaran level harga kurang dari 10')
