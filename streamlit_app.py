@@ -103,7 +103,7 @@ L52 = df['lo']
 H52 = df['hi']
 C = df['skg']
 D = (H52-L52)/100
-if ZeroDivisionError:
+if D in ZeroDivisionError:
   P = 0
   st.write("zero")
 else:
