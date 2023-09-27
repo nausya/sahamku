@@ -105,7 +105,7 @@ C = df['skg']
 D = (H52-L52)/100
 if ZeroDivisionError:
   P = 0
-  st.write(f"{D}zero")
+  st.write(f"{float(D)}zero")
 else:
   P = (C - L52)/D
   st.write(f"{D}nilai P")
