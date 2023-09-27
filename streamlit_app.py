@@ -110,10 +110,10 @@ kode = selected_emiten.split(' | ')[0]
 n = pd.read_csv('notasi.csv')
 n = n[(n['Kode'] == kode)]
 if n.isna().empty:
-  return st.text("")
+   return st.text("")
 else:  
-  n = n['Keterangan Notasi'].values[0]
-  st.error(n)
+   n = n['Keterangan Notasi'].values[0]
+   st.error(n)
 
 #st.markdown('notasi(kode)') # see *
 st.info('Untuk jangka panjang perlu diperhatikan kisaran level harga kurang dari 10')
