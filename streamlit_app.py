@@ -72,16 +72,6 @@ def ceknon(x):
     else:
        st.error('This is an error', icon="🚨")
 
-#Notasi Emiten
-#def notasi(kode):
-#   n = pd.read_csv('notasi.csv')
- #  n = n[(n['Kode'] == kode)]
-#   if n.isna().empty:
- #   return st.text("")
-#   else:  
-#    n = n['Keterangan Notasi'].values[0]
- #   return st.error(n)
-
 #Display Persentil
 saham = [option]
 screensaham = []
@@ -115,11 +105,12 @@ dev = df['dev']
 roe = df['roe']
 
 st.subheader(f"MarginOps : {ceknon(om)}%, DevPR : {ceknon(dev)}%, ROE : {ceknon(roe)}%", divider="rainbow")
+#Notasi Saham
 kode = selected_emiten.split(' | ')[0]
 n = pd.read_csv('notasi.csv')
 n = n[(n['Kode'] == kode)]
 if n.isna().empty:
-  st.text("")
+  return
 else:  
   n = n['Keterangan Notasi'].values[0]
   st.error(n)
