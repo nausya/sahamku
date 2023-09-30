@@ -269,12 +269,18 @@ def screener():
     fig, ax = plt.subplots()
     x=s['P']
     y=s['OpMargin']
-    sns.scatterplot(s, x="Level Harga", y="Margin Operasi", ax=ax, marker='>')
+    sns.scatterplot(s, x=x, y=y, ax=ax, marker='>')
     plt.xlabel("Average Pulse")
     plt.ylabel("Calorie Burnage")
 
     st.pyplot(fig)
 
+    (
+    so.Plot(glue, x="SST-2", y="MRPC", color="Encoder", text="Model")
+    .add(so.Dot())
+    .add(so.Text(valign="bottom"))
+
+    )
 
     #scr2 = pd.read_csv('PersentilN.csv', usecols=["Kode","Current","P","Industri","Marcap(M)","VolAvg","Vol","Share(Juta)","CHG%"],index_col=[0])
     #sektor = scr2['Industri'].unique()
