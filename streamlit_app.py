@@ -269,7 +269,7 @@ def screener():
     fig, ax = plt.subplots()
     x=s['P']
     y=s['OpMargin']
-    sns.scatterplot(s, x=x, y=y, ax=ax, marker='>')
+    sns.scatterplot(s, x="Level Harga", y="Margin Operasi", ax=ax, marker='>')
     plt.xlabel("Average Pulse")
     plt.ylabel("Calorie Burnage")
 
