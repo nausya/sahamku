@@ -281,9 +281,9 @@ def screener():
     y=s['OpMargin']
     #z=s['Kode']
     (
-    so.Plot(s, x=x, y=y)
-    .add(so.Dot())
-    .add(so.Text(halign="left"))
+    st.so.Plot(s, x=x, y=y)
+    .add(st.so.Dot())
+    .add(st.so.Text(halign="left"))
 
     )
     
