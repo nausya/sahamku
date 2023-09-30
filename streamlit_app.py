@@ -279,7 +279,7 @@ def screener():
     for a,b,d in zip(x,y,z):
         #b = b.map('{:,.0f}'.format)
         #d = int(d)
-        label = f"{b}%-Dev:{d}%"
+        label = f"{int(b)}%-Dev:{d}%"
         ax.annotate(label,(a,b), xytext=(3, -3),textcoords='offset points')
     st.pyplot(fig)
     
