@@ -270,16 +270,19 @@ def screener():
     fig, ax = plt.subplots()
     x=s['P']
     y=s['OpMargin']
+    z=s['Kode']
     sns.scatterplot(s, x=x, y=y, ax=ax, marker='>')
     plt.xlabel("Level Harga")
     plt.ylabel("Margin Operasi")
 
     st.pyplot(fig)
 
+
     (
-    so.Plot(s, x="SST-2", y="MRPC", color="Encoder", text="Model")
+    so.Plot(n, x=x, y=y, text=z)
     .add(so.Dot())
-    .add(so.Text(valign="bottom"))
+    .add(so.Text(halign="left"))
+
     )
     
 
