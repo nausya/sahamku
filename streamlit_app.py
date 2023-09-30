@@ -271,7 +271,7 @@ def screener():
     x=s['P']
     y=s['OpMargin']
     z=s['Kode']
-    sns.scatterplot(s, x=x, y=y, text=z, ax=ax, marker='>')
+    sns.scatterplot(s, x=x, y=y, label=z, ax=ax, marker='>')
     plt.xlabel("Level Harga")
     plt.ylabel("Margin Operasi")
 
