@@ -272,7 +272,7 @@ def screener():
     y = s['OpMargin']*100
     z = (s['DevPR']*100).map('{:,.0f}%'.format)
     st.write (z)
-    sns.scatterplot(s, x=x, y=y, ax=ax, marker='>')
+    sns.scatterplot(s, x=x, y=y, z=z, ax=ax, marker='>')
     plt.xlabel("Level Harga")
     plt.ylabel("Margin Operasi (%)")
     for xi, yi, text in zip(x, y, z):
