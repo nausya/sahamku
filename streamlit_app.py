@@ -273,7 +273,7 @@ def screener():
     sns.scatterplot(s, x=x, y=y, ax=ax, marker='>')
     plt.xlabel("Level Harga")
     plt.ylabel("Margin Operasi (%)")
-    th2 = ax.text(*l2, 'text', fontsize=16,rotation=angle, rotation_mode='anchor',transform_rotates_text=True)
+    ax.text(*l2, 'text', fontsize=16,rotation=angle, rotation_mode='anchor',transform_rotates_text=True)
     st.pyplot(fig)
 
     
