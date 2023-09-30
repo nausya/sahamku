@@ -267,19 +267,21 @@ def screener():
     st.dataframe(scr1.style.highlight_max(axis=0))
 
     st.subheader('Grafik')
-    fig, ax = plt.subplots()
+   # fig, ax = plt.subplots()
+    #x=s['P']
+    #y=s['OpMargin']
+    #z=s['Kode']
+    #sns.scatterplot(s, x=x, y=y, ax=ax, marker='>')
+    #plt.xlabel("Level Harga")
+    #plt.ylabel("Margin Operasi")
+
+    #st.pyplot(fig)
+
     x=s['P']
     y=s['OpMargin']
     z=s['Kode']
-    sns.scatterplot(s, x=x, y=y, ax=ax, marker='>')
-    plt.xlabel("Level Harga")
-    plt.ylabel("Margin Operasi")
-
-    st.pyplot(fig)
-
-
     (
-    so.Plot(n, x=x, y=y, text=z)
+    so.Plot(s, x=x, y=y, text=z)
     .add(so.Dot())
     .add(so.Text(halign="left"))
 
