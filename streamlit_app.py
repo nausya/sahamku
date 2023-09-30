@@ -275,10 +275,10 @@ def screener():
     sns.scatterplot(x=x, y=y, marker='>')
     plt.xlabel("Level Harga")
     plt.ylabel("Margin Operasi (%)")
-    for xi, yi, text in zip(x, y, z):
-        ax.annotate(text,xy=(xi, yi), xytext=(3, -3),textcoords='offset points')
+    for a,b,c,d in zip(x,y,kd,dev):
+        label = f"{c} {b}%-Dev:{d}%"
+        ax.annotate(label,(a,b), xytext=(3, -3),textcoords='offset points')
     st.pyplot(fig)
-
     
 
     #scr2 = pd.read_csv('PersentilN.csv', usecols=["Kode","Current","P","Industri","Marcap(M)","VolAvg","Vol","Share(Juta)","CHG%"],index_col=[0])
