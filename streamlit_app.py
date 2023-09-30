@@ -246,7 +246,6 @@ def screener():
     screenlevel = st.selectbox('Pilih Level Saham:', ['Saham35Persen','Saham25Persen','Saham20Persen'])
     st.subheader('Tabular Hasil Screener')
     scr1 = pd.read_csv('PersentilN.csv', usecols=["Kode","Current","P","OpMargin","DevPR","RoE"])
-    scr1.reset_index(level=0)
     scr1 = scr1.fillna(0)
     if screenlevel == 'Saham20Persen':
        st.write('Screener Saham Harga Lebih Dari 5000')
