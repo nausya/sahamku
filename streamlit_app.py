@@ -276,7 +276,7 @@ def screener():
     plt.xlabel("Level Harga")
     plt.ylabel("Margin Operasi (%)")
     for xi, yi, text in zip(x, y, z):
-        ax.annotate(text,xy=(xi, yi), xycoords='data', xytext=(1.5, 1.5), textcoords='offset pixels')
+        ax.annotate(text,xy=(xi, yi), xytext=(0, 2))
     st.pyplot(fig)
 
     
