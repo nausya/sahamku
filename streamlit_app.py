@@ -277,14 +277,11 @@ def screener():
 
     #st.pyplot(fig)
 
-    x=s['P']
-    y=s['OpMargin']
-    #z=s['Kode']
-    (
-    st.so.Plot(s, x=x, y=y)
-    .add(st.so.Dot())
-    .add(st.so.Text(halign="left"))
-
+    st.scatter_chart(
+    s,
+    x=x,
+    y=y,
+    color=['#FF0000', '#0000FF'],  # Optional
     )
     
 
