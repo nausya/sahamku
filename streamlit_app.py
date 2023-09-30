@@ -281,7 +281,7 @@ def screener():
     s,
     x=x,
     y=y,
-    color=['#FF0000', '#0000FF'],  # Optional
+    color=['#FF0000', '#0000FF']  # Optional
     )
     
 
