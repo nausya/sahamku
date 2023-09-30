@@ -270,7 +270,6 @@ def screener():
     fig, ax = plt.subplots()
     x=s['P']
     y=s['OpMargin']
-    z=s['Kode']
     sns.scatterplot(s, x=x, y=y, ax=ax, marker='>')
     plt.label("Kode")
     plt.xlabel("Level Harga")
