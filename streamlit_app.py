@@ -272,7 +272,7 @@ def screener():
     y=s['OpMargin']*100
     sns.scatterplot(s, x=x, y=y, ax=ax, marker='>')
     plt.xlabel("Level Harga")
-    plt.ylabel("Margin Operasi")
+    plt.ylabel("Margin Operasi (%)")
 
     st.pyplot(fig)
 
