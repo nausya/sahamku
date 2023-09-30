@@ -270,13 +270,13 @@ def screener():
     fig, ax = plt.subplots()
     x = s['P']
     y = s['OpMargin']*100
-    kd = s['Kode']
+    #kd = s['Kode']
     z = (s['DevPR']*100).map('{:,.0f}%'.format)
     #st.write ([x,y,z])
     sns.scatterplot(x=x, y=y, marker='>')
     plt.xlabel("Level Harga")
     plt.ylabel("Margin Operasi (%)")
-    for a,b,c,d in zip(x,y,kd,z):
+    for a,b,d in zip(x,y,z):
         label = f"{c} {b}%-Dev:{d}%"
         ax.annotate(label,(a,b), xytext=(3, -3),textcoords='offset points')
     st.pyplot(fig)
