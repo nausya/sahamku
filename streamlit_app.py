@@ -272,7 +272,7 @@ def screener():
     y = s['OpMargin']*100
     #kd = s['Kode']
     z = (s['DevPR']*100).map('{:,.0f}'.format)
-    #st.write ([x,y,z])
+    st.write (x)
     sns.scatterplot(x=x, y=y, marker='>')
     plt.xlabel("Level Harga")
     plt.ylabel("Margin Operasi (%)")
