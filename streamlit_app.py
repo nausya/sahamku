@@ -270,7 +270,7 @@ def screener():
     fig, ax = plt.subplots()
     x = s['P']
     y = s['OpMargin']*100
-    z = s['Kode']
+    #z = s['Kode']
     st.write (x)
     sns.scatterplot(s, x=x, y=y, ax=ax, marker='>')
     plt.xlabel("Level Harga")
