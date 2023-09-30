@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
+import seaborn.objects as so
 import yfinance as yf
 import numpy as np
 import plotly.figure_factory as ff
@@ -275,11 +276,11 @@ def screener():
 
     st.pyplot(fig)
 
-    
-    st.Plot(glue, x="SST-2", y="MRPC", color="Encoder", text="Model")
-    .add(st.Dot())
-    .add(st.Text(valign="bottom"))
-
+    (
+    so.Plot(s, x="SST-2", y="MRPC", color="Encoder", text="Model")
+    .add(so.Dot())
+    .add(so.Text(valign="bottom"))
+    )
     
 
     #scr2 = pd.read_csv('PersentilN.csv', usecols=["Kode","Current","P","Industri","Marcap(M)","VolAvg","Vol","Share(Juta)","CHG%"],index_col=[0])
