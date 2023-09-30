@@ -258,7 +258,6 @@ def screener():
        scr1=scr1.query("Current > 50 and Current <= 200 and P<=10 and OpMargin >= 0.1")
 
     s = scr1.copy()
-    st.dataframe(s)
     scr1['Current'] = scr1['Current'].astype(int)
     scr1['P'] = scr1['P'].astype(int)
     scr1['DevPR'] = (scr1['DevPR']*100).map('{:,.0f}%'.format)
@@ -270,7 +269,7 @@ def screener():
     st.subheader('Grafik')
     fig, ax = plt.subplots()
     x=s['P']
-    y=s['OpMargin']
+    y=s['OpMargin']*100
     sns.scatterplot(s, x=x, y=y, ax=ax, marker='>')
     plt.xlabel("Level Harga")
     plt.ylabel("Margin Operasi")
