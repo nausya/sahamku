@@ -269,7 +269,7 @@ def screener():
     st.subheader('Grafik')
     fig, ax = plt.subplots()
     x = s['P']
-    y = (s['OpMargin']*100.map('{:,.0f}'.format)
+    y = (s['OpMargin']*100).map('{:,.0f}'.format)
     #kd = s['Kode']
     z = (s['DevPR']*100).map('{:,.0f}'.format)
     #st.write ([x,y,z])
