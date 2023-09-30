@@ -270,7 +270,9 @@ def screener():
     x=s['P']
     y=s['OpMargin']
     sns.scatterplot(s, x=x, y=y, ax=ax, marker='>')
-    #ax.annotate('your_lable', (x,y)) 
+    plt.xlabel("Average Pulse")
+    plt.ylabel("Calorie Burnage")
+
     st.pyplot(fig)
 
 
