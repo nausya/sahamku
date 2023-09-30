@@ -275,8 +275,8 @@ def screener():
     z = (s['DevPR']*100).map('{:,.0f}'.format)
     #st.write (x)
     sns.scatterplot(x=x, y=y, marker='>')
-    plt.xlabel("Level Harga")
-    plt.ylabel("Margin Operasi (%)")
+    ax.xlabel("Level Harga")
+    ax.ylabel("Margin Operasi (%)")
     for a,b,c,d in zip(x,y,kd,z):
         label = f"{c} {int(b)}% - Dev:{d}%"
         ax.annotate(label,(a,b), xytext=(3, -3),textcoords='offset points')
