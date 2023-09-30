@@ -252,7 +252,7 @@ def screener():
        scr1=scr1.query("Current > 200 and Current <= 5000 and P<=10 and OpMargin >= 0.1 and RoE >= 0.1")
     else:
        st.write('Screener Saham Harga Lebih Dari 5000')
-       scr1=scr1.query("Current > 5000 and P<=10 and OpMargin >= 0.1)
+       scr1=scr1.query("Current > 5000 and P<=10 and OpMargin >= 0.1")
 
     s = scr1.copy()
     scr1['Current'] = scr1['Current'].astype(int)
