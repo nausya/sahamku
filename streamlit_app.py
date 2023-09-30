@@ -267,10 +267,9 @@ def screener():
     scr1 = scr1.rename(columns = {"Emiten":"Kode","Current": "Harga", "P": "Level", "OpMargin": "Margin Operasi", "DevPR": "DevPR", "RoE": "ROE"}).sort_values(['Harga','Level'])
     st.dataframe(scr1.style.highlight_max(axis=0))
     st.subheader('Grafik')
-    fig, ax = plt.subplots()
+    fig, ax = plt.subplots(2,2)
     x=s['P']
     y=s['OpMargin']*100
-    ax.annotate('0.25 on data', (x,y), textcoords='data', size=20)
     sns.scatterplot(s, x=x, y=y, ax=ax, marker='>')
     plt.xlabel("Level Harga")
     plt.ylabel("Margin Operasi (%)")
