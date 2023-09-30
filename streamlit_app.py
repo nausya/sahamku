@@ -246,10 +246,10 @@ def screener():
     scr1 = scr1.fillna(0)
     if screenlevel == 'Saham35Persen':
        st.write('Screener Saham Harga Rentang 50-200')
-       scr1=scr1.query("Current > 50 and Current <= 200 and P<=10 and OpMargin >= 0.1 and ROE >= 0.1)
+       scr1=scr1.query("Current > 50 and Current <= 200 and P<=10 and OpMargin >= 0.1 and RoE >= 0.1)
     elif screenlevel == 'Saham25Persen':
        st.write('Screener Saham Harga Kurang Dari 5000')
-       scr1=scr1.query("Current > 200 and Current <= 5000 and P<=10 and OpMargin >= 0.1 and ROE >= 0.1)
+       scr1=scr1.query("Current > 200 and Current <= 5000 and P<=10 and OpMargin >= 0.1 and RoE >= 0.1)
     else:
        st.write('Screener Saham Harga Lebih Dari 5000')
        scr1=scr1.query("Current > 5000 and P<=10 and OpMargin >= 0.1)
