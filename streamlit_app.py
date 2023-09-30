@@ -256,13 +256,15 @@ def screener():
     else:
        st.write('Screener Saham Harga Rentang 50-200')
        scr1=scr1.query("Current > 50 and Current <= 200 and P<=10 and OpMargin >= 0.1")
-    
+
+    s = scr1
+    st.dataframe(s)
     scr1['Current'] = scr1['Current'].astype(int)
     scr1['P'] = scr1['P'].astype(int)
     scr1['DevPR'] = (scr1['DevPR']*100).map('{:,.0f}%'.format)
     scr1['OpMargin'] = (scr1['OpMargin']*100).map('{:,.0f}%'.format)
     scr1['RoE'] = (scr1['RoE']*100).map('{:,.0f}%'.format)
-    s = scr1
+   
     scr1 = scr1.rename(columns = {"Emiten":"Kode","Current": "Harga", "P": "Level", "OpMargin": "Margin Operasi", "DevPR": "DevPR", "RoE": "ROE"}).sort_values(['Harga','Level'])
     st.dataframe(scr1.style.highlight_max(axis=0))
     st.subheader('Grafik')
