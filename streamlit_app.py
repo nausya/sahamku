@@ -30,7 +30,6 @@ def main():
     if selected2 == 'Data Emiten':
          dataframe()
     elif selected2 == 'Screener':
-         #st.write('Penyaringan Saham (Tahap Pengembangan)')
          screener()
     elif selected2 == 'Prediksi':
          predict()
@@ -133,9 +132,6 @@ if st.sidebar.button('Proses'):
         download_data(option, start_date, end_date)
     else:
         st.sidebar.error('Terdapat Kesalahan: Tanggal akhir harus ditulis setelah tanggal awal')
-
-
-
 
 data = download_data(option, start_date, end_date)
 scaler = StandardScaler()
@@ -243,7 +239,7 @@ def model_engine(model, num):
 #Screener Grafik Kuadran
 def screener():
 
-    screenlevel = st.selectbox('Pilih Level Saham:', ['Saham35Persen','Saham25Persen','Saham20Persen'])
+    screenlevel = st.selectbox('Pilih Level Saham:', ['Saham20Persen','Saham25Persen','Saham35Persen'])
     st.subheader('Tabular Hasil Screener')
     scr1 = pd.read_csv('PersentilN.csv', usecols=["Kode","Current","P","MarCap","OpMargin","DevPR","RoE"])
     scr1.index.names = [' Id']
