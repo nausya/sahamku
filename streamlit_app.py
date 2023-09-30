@@ -267,22 +267,16 @@ def screener():
     st.dataframe(scr1.style.highlight_max(axis=0))
 
     st.subheader('Grafik')
-   # fig, ax = plt.subplots()
-    #x=s['P']
-    #y=s['OpMargin']
-    #z=s['Kode']
-    #sns.scatterplot(s, x=x, y=y, ax=ax, marker='>')
-    #plt.xlabel("Level Harga")
-    #plt.ylabel("Margin Operasi")
+    fig, ax = plt.subplots()
+    x=s['P']
+    y=s['OpMargin']
+    z=s['Kode']
+    sns.scatterplot(s, x=x, y=y, text=z, ax=ax, marker='>')
+    plt.xlabel("Level Harga")
+    plt.ylabel("Margin Operasi")
 
-    #st.pyplot(fig)
+    st.pyplot(fig)
 
-    st.scatter_chart(
-    s,
-    x=x,
-    y=y,
-    color=['#FF0000', '#0000FF']  # Optional
-    )
     
 
     #scr2 = pd.read_csv('PersentilN.csv', usecols=["Kode","Current","P","Industri","Marcap(M)","VolAvg","Vol","Share(Juta)","CHG%"],index_col=[0])
