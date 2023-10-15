@@ -270,8 +270,8 @@ def screener():
     kd = s['Kode']
     #st.write (x)
     sns.scatterplot(s,x=x, y=y, marker='>')
-    plt.xlabel("Level Harga")
-    plt.ylabel("Margin Operasi (%)")
+    #plt.xlabel("Level Harga")
+    #plt.ylabel("Margin Operasi (%)")
     for a,b,c in zip(x,y,kd):
         label = f"{c} {int(b)}%"
         ax.annotate(label,(a,b), xytext=(3, -3),textcoords='offset points',fontsize='6')
