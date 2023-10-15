@@ -269,7 +269,7 @@ def screener():
     y = s['OpMargin']*100
     kd = s['Kode']
     #st.write (x)
-    sns.set( rc = {'figure.figsize' : (20,20)})  
+    sns.set( rc = {'figure.figsize' : (0.2,0.2)})  
     sns.scatterplot(s,x=x, y=y, marker='>')
     plt.rcParams['figure.figsize'] = [2, 2]
     plt.xlabel("Level Harga")
