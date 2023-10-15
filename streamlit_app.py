@@ -270,6 +270,7 @@ def screener():
     kd = s['Kode']
     #st.write (x)
     sns.scatterplot(s,x=x, y=y, marker='>')
+    sns.so.Plot.config.display["scaling"] = 0.7
     #plt.xlabel("Level Harga")
     #plt.ylabel("Margin Operasi (%)")
     for a,b,c in zip(x,y,kd):
