@@ -265,6 +265,7 @@ def screener():
     st.dataframe(scr1.style.highlight_max(axis=0))
     st.subheader('Grafik')
     fig, ax = plt.subplots()
+    sns.scatterplot(s,x=x, y=y, marker='>')
     x = s['P']
     y = s['OpMargin']*100
     kd = s['Kode']
@@ -275,7 +276,7 @@ def screener():
     for a,b,c in zip(x,y,kd):
         label = f"{c} {int(b)}%"
         ax.annotate(label,(a,b), xytext=(3, -3),textcoords='offset points',fontsize='2')
-    sns.scatterplot(s,x=x, y=y, marker='>')
+    
     st.pyplot(fig)
     
     
