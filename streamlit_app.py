@@ -271,7 +271,6 @@ def screener():
     #st.write (x)
     sns.set( rc = {'figure.figsize' : (0.2,0.2)})  
     sns.scatterplot(s,x=x, y=y, marker='>')
-    plt.rcParams['figure.figsize'] = [2, 2]
     plt.xlabel("Level Harga")
     plt.ylabel("Margin Operasi (%)")
     for a,b,c in zip(x,y,kd):
