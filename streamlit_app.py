@@ -270,7 +270,7 @@ def screener():
     y = s['OpMargin']*100
     kd = s['Kode']
     #st.write (x)
-    sns.reset_defaults()
+    #sns.reset_defaults()
     sns.scatterplot(s,x=x, y=y, marker='>', sizes=(0.2, 0.2))
     plt.xlabel("Level Harga")
     plt.ylabel("Margin Operasi (%)")
