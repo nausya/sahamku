@@ -271,7 +271,7 @@ def screener():
     kd = s['Kode']
     #st.write (x)
     sns.reset_defaults()
-    sns.scatterplot(s,x=x, y=y, marker='>')
+    sns.scatterplot(s,x=x, y=y, marker='>', sizes=(100, 100))
     plt.xlabel("Level Harga")
     plt.ylabel("Margin Operasi (%)")
     for a,b,c in zip(x,y,kd):
