@@ -272,7 +272,7 @@ def screener():
     #st.write (x)
     sns.set_theme()
     sns.reset_defaults()
-    sns.scatterplot(s,x=x, y=y, marker='>', sizes=(10, 10))
+    sns.scatterplot(s,x=x, y=y, marker='>', sizes=(2, 2))
     plt.xlabel("Level Harga")
     plt.ylabel("Margin Operasi (%)")
     for a,b,c in zip(x,y,kd):
