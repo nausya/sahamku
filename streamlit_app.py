@@ -264,13 +264,12 @@ def screener():
     scr1 = scr1.rename(columns = {"Emiten":"Kode","Current": "Harga", "P": "Level", "OpMargin": "Margin Operasi", "DevPR": "DevPR", "RoE": "ROE"}).sort_values(['Harga','Level'])
     st.dataframe(scr1.style.highlight_max(axis=0))
     st.subheader('Grafik')
-    fig, ax = plt.subplots()
+    fig, ax = plt.subplots((figsize=(3, 3)))
     
     x = s['P']
     y = s['OpMargin']*100
     kd = s['Kode']
     #st.write (x)
-    sns.set_theme()
     sns.reset_defaults()
     sns.scatterplot(s,x=x, y=y, marker='>', sizes=(2, 2))
     plt.xlabel("Level Harga")
