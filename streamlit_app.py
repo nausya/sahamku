@@ -264,7 +264,7 @@ def screener():
     scr1 = scr1.rename(columns = {"Emiten":"Kode","Current": "Harga", "P": "Level", "OpMargin": "Margin Operasi", "DevPR": "DevPR", "RoE": "ROE"}).sort_values(['Harga','Level'])
     st.dataframe(scr1.style.highlight_max(axis=0))
     st.subheader('Grafik')
-    fig, ax = plt.subplots((figsize=(3, 3)))
+    fig, ax = plt.subplots(figsize=(2, 2))
     
     x = s['P']
     y = s['OpMargin']*100
