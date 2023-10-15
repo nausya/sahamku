@@ -269,13 +269,13 @@ def screener():
     y = s['OpMargin']*100
     kd = s['Kode']
     #st.write (x)
-    sns.scatterplot(s,x=x, y=y, marker='>')
-    sns.so.Plot.config.display["scaling"] = 0.7
+    
     #plt.xlabel("Level Harga")
     #plt.ylabel("Margin Operasi (%)")
     for a,b,c in zip(x,y,kd):
         label = f"{c} {int(b)}%"
         ax.annotate(label,(a,b), xytext=(3, -3),textcoords='offset points',fontsize='2')
+    sns.scatterplot(s,x=x, y=y, marker='>')
     st.pyplot(fig)
     
     
