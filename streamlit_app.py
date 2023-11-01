@@ -76,16 +76,15 @@ def ceknon(x):
 saham = [option]
 screensaham = []
 for stock in saham:
-        info = yf.Ticker('stock').info
+        info = dataemiten.copy()#yf.Ticker('stock').info
         kode = stock.replace('.JK','')
-        skg = info.get('currentPrice')
-        lo  = info.get('fiftyTwoWeekLow')
-        hi  = info.get('fiftyTwoWeekHigh')
-        om  = info.get('operatingMargins')
-        dev = info.get('payoutRatio')
-        roe =  info.get('returnOnEquity')
-        jb  = info.get('recommendationKey')
-        screensaham.append({'kode':kode,'skg':skg,'lo':lo,'hi':hi,'om':om,'dev':dev,'roe':roe,'jb':jb})
+        skg = info.get('Current')
+        lo  = info.get('Min')
+        hi  = info.get('Mak')
+        om  = info.get('OpMargin')
+        dev = info.get('DevPR')
+        roe =  info.get('RoE')
+        screensaham.append({'kode':kode,'skg':skg,'lo':lo,'hi':hi,'om':om,'dev':dev,'roe':roe})
 df = pd.DataFrame(screensaham)
 df = df.fillna(0)
 
