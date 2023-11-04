@@ -3,7 +3,7 @@ streamlit>=0.78.0
 streamlit-option-menu
 yfinance
 pandas
-pandas_datareader
+pandas_datareader >= 0.4.0
 plotly-express
 matplotlib
 ta
