@@ -6,7 +6,7 @@ import seaborn.objects as so
 import yfinance as yf
 import numpy as np
 import plotly.figure_factory as ff
-from pandas_datareader import data as pdr
+#from pandas_datareader import data as pdr
 from matplotlib import markers
 from streamlit_option_menu import option_menu
 from ta.volatility import BollingerBands
