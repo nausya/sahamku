@@ -80,7 +80,7 @@ def ceknon(x):
 saham = [option]
 screensaham = []
 for stock in saham:
-        info = dataemiten.copy()#yf.Ticker('stock').info
+        info = yf.Ticker('stock').info
         kode = stock.replace('.JK','')
         skg = info.get('Current')
         lo  = info.get('Min')
