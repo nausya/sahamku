@@ -42,8 +42,8 @@ yf.pdr_override()
 #Halaman Utama
 @st.cache_resource
 def download_data(op, start_date, end_date):
-    #df = yf.download(op, start=start_date, end=end_date, progress=False)
-    df = pdr.get_data_yahoo(op, start=start_date, end=end_date)
+    df = yf.download(op, start=start_date, end=end_date, progress=False)
+    #df = pdr.get_data_yahoo(op, start=start_date, end=end_date)
     return df
 
 #AMBIL KODE EMITEN DARI CSV
