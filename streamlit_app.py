@@ -6,6 +6,7 @@ import seaborn.objects as so
 import yfinance as yf
 import numpy as np
 import plotly.figure_factory as ff
+from pandas_datareader import data as pdr
 from matplotlib import markers
 from streamlit_option_menu import option_menu
 from ta.volatility import BollingerBands
@@ -36,10 +37,13 @@ def main():
     else:
          tech_indicators()
 
+yf.pdr_override()
+
 #Halaman Utama
 @st.cache_resource
 def download_data(op, start_date, end_date):
-    df = yf.download(op, start=start_date, end=end_date, progress=False)
+    #df = yf.download(op, start=start_date, end=end_date, progress=False)
+    df = pdr.get_data_yahoo(op, start=start_date, end=end_date, progress=False)
     return df
 
 #AMBIL KODE EMITEN DARI CSV
