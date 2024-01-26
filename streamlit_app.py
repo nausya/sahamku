@@ -49,7 +49,7 @@ def download_data(op, start_date, end_date):
 dataemiten = pd.read_csv('kodesaham.csv').sort_values('Kode')
  
 ## Get the list of countries
-emiten = dataemiten['Kode'] + ' | ' + dataemiten['Saham']
+emiten = dataemiten['Kode'] + ' | ' + dataemiten['Nama Perusahaan']
 
  
 ## Create the select box
