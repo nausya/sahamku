@@ -46,7 +46,7 @@ def download_data(op, start_date, end_date):
 #AMBIL KODE EMITEN DARI CSV
 
 ## Load the data
-dataemiten = pd.read_csv('PersentilN.csv').sort_values('Kode')
+dataemiten = pd.read_csv('kodesaham.csv').sort_values('Kode')
  
 ## Get the list of countries
 emiten = dataemiten['Kode'] + ' | ' + dataemiten['Saham']
@@ -77,14 +77,14 @@ def ceknon(x):
 saham = [option]
 screensaham = []
 for stock in saham:
-        info = yf.Ticker('stock').info
+        info = yf.Ticker(stock).info
         kode = stock.replace('.JK','')
-        skg = info.get('Current')
-        lo  = info.get('Min')
-        hi  = info.get('Mak')
-        om  = info.get('OpMargin')
-        dev = info.get('DevPR')
-        roe =  info.get('RoE')
+        skg = info.get('currentPrice')
+        lo  = info.get('fiftyTwoWeekLow')
+        hi  = info.get('fiftyTwoWeekHigh')
+        om  = info.get('operatingMargins')
+        dev = info.get('payoutRatio')
+        roe =  info.get('returnOnEquity')
         screensaham.append({'kode':kode,'skg':skg,'lo':lo,'hi':hi,'om':om,'dev':dev,'roe':roe})
 df = pd.DataFrame(screensaham)
 df = df.fillna(0)
