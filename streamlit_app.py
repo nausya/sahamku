@@ -97,7 +97,7 @@ try:
     P = (C - L52)/D 
 except ZeroDivisionError:
     P = 0
-st.subheader(f"Harga terkini Rp {C} berada pada level {P} dari skala 100", divider="rainbow")
+st.subheader(f"Harga terkini Rp {int(C)} berada pada level {int(P)} dari skala 100", divider="rainbow")
 om  = df['om']
 dev = df['dev']
 roe = df['roe']
