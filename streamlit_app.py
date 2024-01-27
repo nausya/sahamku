@@ -262,7 +262,7 @@ def screener():
     scr1['RoE'] = scr1['RoE'].astype(str)+ "%"
    
     scr1 = scr1.rename(columns = {"Emiten":"Kode","Current": "Harga", "P": "Level", "OpMargin": "Margin Operasi", "DevPR": "DevPR", "RoE": "ROE"}).sort_values(['Harga','Level'])
-    st.dataframe(scr1.style.highlight_max(axis=0))
+    st.dataframe(scr1.style.highlight_max(axis=0),scr1.style.hide_index())
     st.subheader('Grafik')
     fig, ax = plt.subplots()
     
