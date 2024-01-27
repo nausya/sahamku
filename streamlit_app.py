@@ -242,7 +242,7 @@ def screener():
     screenlevel = st.selectbox('Pilih Level Saham:', ['Saham20Persen','Saham25Persen','Saham35Persen'])
     st.subheader('Tabular Hasil Screener')
     scr1 = pd.read_csv('PersentilN.csv', usecols=["Kode","Current","P","OpMargin","DevPR","RoE"])
-    scr1.index.names = [' Id']
+    #scr1.index.names = [' Id']
     scr1 = scr1.fillna(0)
     if screenlevel == 'Saham35Persen':
        st.write('Screener Saham Harga Rentang 50-200')
@@ -262,7 +262,7 @@ def screener():
     scr1['RoE'] = scr1['RoE'].astype(str)+ "%"
    
     scr1 = scr1.rename(columns = {"P": "Level","Emiten":"Kode","Current": "Harga", "OpMargin": "Margin Operasi", "DevPR": "DevPR", "RoE": "ROE"}).sort_values(['Harga','Level'])
-    st.dataframe(scr1.style.highlight_max(axis=0),hide_index=True)
+    st.dataframe(scr1.style.highlight_max(axis=0))
     st.subheader('Grafik')
     fig, ax = plt.subplots()
     
