@@ -255,11 +255,11 @@ def screener():
        scr1=scr1.query("Current > 5000 and P<=10 and OpMargin >= 0.1")
 
     s = scr1.copy()
-    scr1['Current'] = scr1['Current'].astype(int)
-    scr1['P'] = scr1['P'].astype(int)
-    scr1['DevPR'] = (scr1['DevPR']*100).map('{:,.0f}%'.format)
-    scr1['OpMargin'] = (scr1['OpMargin']*100).map('{:,.0f}%'.format)
-    scr1['RoE'] = (scr1['RoE']*100).map('{:,.0f}%'.format)
+    #scr1['Current'] = scr1['Current'].astype(int)
+    #scr1['P'] = scr1['P'].astype(int)
+    #scr1['DevPR'] = (scr1['DevPR']*100).map('{:,.0f}%'.format)
+    #scr1['OpMargin'] = (scr1['OpMargin']*100).map('{:,.0f}%'.format)
+    #scr1['RoE'] = (scr1['RoE']*100).map('{:,.0f}%'.format)
    
     scr1 = scr1.rename(columns = {"Emiten":"Kode","Current": "Harga", "P": "Level", "OpMargin": "Margin Operasi", "DevPR": "DevPR", "RoE": "ROE"}).sort_values(['Harga','Level'])
     st.dataframe(scr1.style.highlight_max(axis=0))
@@ -267,7 +267,7 @@ def screener():
     fig, ax = plt.subplots()
     
     x = s['P']
-    y = s['OpMargin']*100
+    y = s['OpMargin']
     kd = s['Kode']
     #st.write (x)
     #sns.reset_defaults()
