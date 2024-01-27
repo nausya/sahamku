@@ -257,11 +257,11 @@ def screener():
     s = scr1.copy()
     #scr1['Current'] = scr1['Current'].astype(int)
     #scr1['P'] = scr1['P'].astype(int)
-    scr1['DevPR'] = scr1['DevPR'].astype(int)+ "%"
-    scr1['OpMargin'] = scr1['OpMargin'].astype(int)+ "%"
-    scr1['RoE'] = scr1['RoE'].astype(int)+ "%"
+    #scr1['DevPR'] = scr1['DevPR'].astype(int)+ "%"
+    #scr1['OpMargin'] = scr1['OpMargin'].astype(int)+ "%"
+    #scr1['RoE'] = scr1['RoE'].astype(int)+ "%"
    
-    scr1 = scr1.rename(columns = {"P": "Level","Emiten":"Kode","Current": "Harga", "OpMargin": "Margin Operasi", "DevPR": "DevPR", "RoE": "ROE"}).sort_values(['Harga','Level'])
+    scr1 = scr1.rename(columns = {"P": "Level","Emiten":"Kode","Current": "Harga", "OpMargin": "Margin Operasi(%)", "Deviden PR(%)": "DevPR", "RoE(%)": "ROE"}).sort_values(['Harga','Level'])
     st.dataframe(scr1.style.highlight_max(axis=0),hide_index=True)
     st.subheader('Grafik')
     fig, ax = plt.subplots()
