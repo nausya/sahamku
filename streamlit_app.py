@@ -256,10 +256,10 @@ def screener():
 
     s = scr1.copy()
     #scr1['Current'] = scr1['Current'].astype(int)
-    #scr1['P'] = scr1['P'].astype(int)+ "%"
-    scr1['DevPR'] = scr1['DevPR'].astype(int)+ "%"
-    scr1['OpMargin'] = scr1['OpMargin'].astype(int)+ "%"
-    scr1['RoE'] = scr1['RoE'].astype(int)+ "%"
+    #scr1['P'] = scr1['P'].astype(int)
+    scr1['DevPR'] = scr1['DevPR'].astype(str)+ "%"
+    scr1['OpMargin'] = scr1['OpMargin'].astype(str)+ "%"
+    scr1['RoE'] = scr1['RoE'].astype(str)+ "%"
    
     scr1 = scr1.rename(columns = {"Emiten":"Kode","Current": "Harga", "P": "Level", "OpMargin": "Margin Operasi", "DevPR": "DevPR", "RoE": "ROE"}).sort_values(['Harga','Level'])
     st.dataframe(scr1.style.highlight_max(axis=0))
