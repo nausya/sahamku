@@ -238,16 +238,16 @@ def model_engine(model, num):
         
 #Screener Grafik Kuadran
 def screener():
-    screenlevel = option_menu('Pilih Level Saham:', ['>Rp5rb','<Rp5rb','<Rp200','DevidenHunter'], icons=['house', 'file-earmark-text', 'sliders2-vertical', 'graph-up-arrow'], menu_icon="cast", default_index=0, orientation="horizontal")
+    screenlevel = option_menu(None, ['>Rp5rb','<Rp5rb','<Rp200','DevidenHunter'], icons=['house', 'file-earmark-text', 'sliders2-vertical', 'graph-up-arrow'], menu_icon="cast", default_index=0, orientation="horizontal")
     #screenlevel = st.selectbox('Pilih Level Saham:', ['Saham20Persen','Saham25Persen','Saham35Persen','DevidenHunter'])
     st.subheader('Tabular Hasil Screener')
     scr1 = pd.read_csv('PersentilN.csv', usecols=["Kode","Current","P","OpMargin","DevPR","RoE"])
     #scr1.index.names = [' Id']
     scr1 = scr1.fillna(0)
-    if screenlevel == 'Saham35Persen':
+    if screenlevel == '<Rp200':
        st.write('Screener Saham Harga Rentang 50-200')
        scr1=scr1.query("Current > 50 and Current <= 200 and P<=10 and OpMargin >= 0.1 and RoE >= 0.1")
-    elif screenlevel == 'Saham25Persen':
+    elif screenlevel == '<Rp5rb':
        st.write('Screener Saham Harga Kurang Dari 5000')
        scr1=scr1.query("Current > 200 and Current <= 5000 and P<=10 and OpMargin >= 0.1 and RoE >= 0.1")
     elif screenlevel == 'DevidenHunter':
