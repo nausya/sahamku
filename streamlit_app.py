@@ -238,8 +238,8 @@ def model_engine(model, num):
         
 #Screener Grafik Kuadran
 def screener():
-
-    screenlevel = st.selectbox('Pilih Level Saham:', ['Saham20Persen','Saham25Persen','Saham35Persen','DevidenHunter'])
+    screenlevel = option_menu('Pilih Level Saham:', ['Saham20Persen','Saham25Persen','Saham35Persen','DevidenHunter'], icons=['house', 'file-earmark-text', 'sliders2-vertical', 'graph-up-arrow'], menu_icon="cast", default_index=0, orientation="horizontal")
+    #screenlevel = st.selectbox('Pilih Level Saham:', ['Saham20Persen','Saham25Persen','Saham35Persen','DevidenHunter'])
     st.subheader('Tabular Hasil Screener')
     scr1 = pd.read_csv('PersentilN.csv', usecols=["Kode","Current","P","OpMargin","DevPR","RoE"])
     #scr1.index.names = [' Id']
