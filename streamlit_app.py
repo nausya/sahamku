@@ -238,7 +238,7 @@ def model_engine(model, num):
         
 #Screener Grafik Kuadran
 def screener():
-    screenlevel = option_menu(None, ['>Rp5rb','<Rp5rb','<Rp200','DevidenHunter'], icons=['arrow-up-square', 'arrow-down-square', 'arrow-down-square-fill', 'bullseye'], menu_icon="cast", default_index=0, orientation="horizontal")
+    screenlevel = option_menu(None, ['>Rp5rb','<Rp5rb','<Rp200','BagiDeviden'], icons=['arrow-up-square', 'arrow-down-square', 'arrow-down-square-fill', 'bullseye'], menu_icon="cast", default_index=0, orientation="horizontal")
     #screenlevel = st.selectbox('Pilih Level Saham:', ['Saham20Persen','Saham25Persen','Saham35Persen','DevidenHunter'])
     st.subheader('Tabular Hasil Screener')
     scr1 = pd.read_csv('PersentilN.csv', usecols=["Kode","Current","P","OpMargin","DevPR","RoE"])
@@ -250,7 +250,7 @@ def screener():
     elif screenlevel == '<Rp5rb':
        st.write('Screener Saham Harga Kurang Dari 5000')
        scr1=scr1.query("Current > 200 and Current <= 5000 and P<=10 and OpMargin >= 0.1 and RoE >= 0.1")
-    elif screenlevel == 'DevidenHunter':
+    elif screenlevel == 'BagiDeviden':
         st.write('Screener Rutin Bagi Deviden di atas 5%')
         dev = pd.read_csv('devhunter.csv')
         dev = dev.values.tolist()
