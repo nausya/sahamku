@@ -250,6 +250,12 @@ def screener():
     elif screenlevel == 'Saham25Persen':
        st.write('Screener Saham Harga Kurang Dari 5000')
        scr1=scr1.query("Current > 200 and Current <= 5000 and P<=10 and OpMargin >= 0.1 and RoE >= 0.1")
+    elif screenlevel == 'DevidenHunter':
+        st.write('Screener Rutin Bagi Deviden di atas 5%')
+        dev = pd.read_csv('devhunter.csv')
+        dev = dev.values.tolist()
+        dev = [item for sublist in dev for item in sublist]
+        scr1=scr1.query("Kode == @dev")
     else:
        st.write('Screener Saham Harga Lebih Dari 5000')
        scr1=scr1.query("Current > 5000 and P<=10 and OpMargin >= 0.1")
