@@ -239,10 +239,10 @@ def model_engine(model, num):
 #Screener Grafik Kuadran
 def screener():
     screenlevel = option_menu(None, ['>Rp5rb','<Rp5rb','<Rp200','BagiDeviden'], icons=['arrow-up-square', 'arrow-down-square', 'arrow-down-square-fill', 'bullseye'], menu_icon="cast", default_index=0, orientation="horizontal")
-    #screenlevel = st.selectbox('Pilih Level Saham:', ['Saham20Persen','Saham25Persen','Saham35Persen','DevidenHunter'])
+   
     st.subheader('Tabular Hasil Screener')
     scr1 = pd.read_csv('PersentilN.csv', usecols=["Kode","Current","P","OpMargin","DevPR","RoE"])
-    #scr1.index.names = [' Id']
+    
     scr1 = scr1.fillna(0)
     if screenlevel == '<Rp200':
        st.write('Screener Saham Harga Rentang 50-200')
@@ -252,21 +252,17 @@ def screener():
        scr1=scr1.query("Current > 200 and Current <= 5000 and P<=10 and OpMargin >= 0.1 and RoE >= 0.1")
     elif screenlevel == 'BagiDeviden':
         st.write('Screener Rutin Bagi Deviden di atas 5%')
-        dev = pd.read_csv('devhunter.csv')
-        dev = dev.values.tolist()
-        dev = [item for sublist in dev for item in sublist]
-        scr1=scr1.query("Kode == @dev")
+        dev = pd.read_csv('funda.csv')
+        #dev = dev.values.tolist()
+        #dev = [item for sublist in dev for item in sublist]
+        st.dataframe(dev.style.highlight_max(axis=0),hide_index=True)
+        scr1 = dev[['p','kode','now','opm','dev','roe']].copy()
     else:
        st.write('Screener Saham Harga Lebih Dari 5000')
        scr1=scr1.query("Current > 5000 and P<=10 and OpMargin >= 0.1")
 
     s = scr1.copy()
-    #scr1['Current'] = scr1['Current'].astype(int)
-    #scr1['P'] = scr1['P'].astype(int)
-    #scr1['DevPR'] = scr1['DevPR'].astype(int)+ "%"
-    #scr1['OpMargin'] = scr1['OpMargin'].astype(int)+ "%"
-    #scr1['RoE'] = scr1['RoE'].astype(int)+ "%"
-   
+
     scr1 = scr1.rename(columns = {"P": "Level","Emiten":"Kode","Current":"Harga", "OpMargin":"Margin Operasi(%)", "DevPR":"Deviden PR(%)", "RoE": "ROE(%)"}).sort_values(['Harga','Level'])
     st.dataframe(scr1.style.highlight_max(axis=0),hide_index=True)
     st.subheader('Grafik')
@@ -275,8 +271,6 @@ def screener():
     x = s['P']
     y = s['OpMargin']
     kd = s['Kode']
-    #st.write (x)
-    #sns.reset_defaults()
     sns.scatterplot(s,x=x, y=y, marker='>')
     plt.xlabel("Level Harga")
     plt.ylabel("Margin Operasi (%)")
