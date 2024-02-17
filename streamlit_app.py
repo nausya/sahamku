@@ -241,7 +241,6 @@ def screener():
     screenlevel = option_menu(None, ['>Rp5rb','<Rp5rb','<Rp200','BagiDeviden'], icons=['arrow-up-square', 'arrow-down-square', 'arrow-down-square-fill', 'bullseye'], menu_icon="cast", default_index=0, orientation="horizontal")
    
     st.subheader('Tabular Hasil Screener')
-    #scr1 = pd.read_csv('PersentilN.csv', usecols=["Kode","Current","P","OpMargin","DevPR","RoE"])
     scr1 = pd.read_csv('porto.csv')
     
     scr1 = scr1.fillna(0)
@@ -264,7 +263,7 @@ def screener():
        scr1=scr1.query("now > 5000 and p<=10 and opm >= 0.1")
 
     s = scr1.copy()
-    scr1 = scr1.rename(columns = {"p": "Level","kode":"Kode","now":"Harga", "opm":"Margin Operasi(%)", "dev":"Deviden PR(%)", "roe": "ROE(%)"}).sort_values(['Harga','Level'])
+    scr1 = scr1.rename(columns = {"p": "Level","kode":"Kode","now":"Harga","l":"1YMin","h":"1YMax","hr":"2M","bl":"6M", "opm":"Margin Operasi(%)", "dev":"Deviden PR(%)", "roe": "ROE(%)"}).sort_values(['Harga','Level'])
     st.dataframe(scr1.style.highlight_max(axis=0),hide_index=True)
     st.subheader('Grafik')
     fig, ax = plt.subplots()
