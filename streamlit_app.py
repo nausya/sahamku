@@ -263,11 +263,11 @@ def screener():
        scr1=scr1.query("Current > 5000 and P<=10 and OpMargin >= 0.1")
 
     s = scr1.copy()
-
-    scr1 = scr1.rename(columns = {"P": "Level","Emiten":"Kode","Current":"Harga", "OpMargin":"Margin Operasi(%)", "DevPR":"Deviden PR(%)", "RoE": "ROE(%)"}).sort_values(['Harga','Level'])
-    st.dataframe(scr1.style.highlight_max(axis=0),hide_index=True)
-    st.subheader('Grafik')
-    fig, ax = plt.subplots()
+    if screenlevel != 'BagiDeviden':
+       scr1 = scr1.rename(columns = {"P": "Level","Emiten":"Kode","Current":"Harga", "OpMargin":"Margin Operasi(%)", "DevPR":"Deviden PR(%)", "RoE": "ROE(%)"}).sort_values(['Harga','Level'])
+       st.dataframe(scr1.style.highlight_max(axis=0),hide_index=True)
+       st.subheader('Grafik')
+       fig, ax = plt.subplots()
     
     x = s['P']
     y = s['OpMargin']
