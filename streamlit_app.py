@@ -267,9 +267,9 @@ def screener():
     st.subheader('Grafik')
     fig, ax = plt.subplots()
     
-    x = s['P']
-    y = s['OpMargin']
-    kd = s['Kode']
+    x = s['p']
+    y = s['opm']
+    kd = s['kode']
     sns.scatterplot(s,x=x, y=y, marker='>')
     plt.xlabel("Level Harga")
     plt.ylabel("Margin Operasi (%)")
