@@ -265,7 +265,6 @@ def screener():
     
     if screenlevel == 'BagiDeviden':
        s = scr1.copy()
-       return
     else:
        s = scr1.copy()
        scr1 = scr1.rename(columns = {"P": "Level","Emiten":"Kode","Current":"Harga", "OpMargin":"Margin Operasi(%)", "DevPR":"Deviden PR(%)", "RoE": "ROE(%)"}).sort_values(['Harga','Level'])
