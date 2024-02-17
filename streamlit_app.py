@@ -264,7 +264,8 @@ def screener():
 
     s = scr1.copy()
     scr1 = scr1.rename(columns = {"p": "Level","kode":"Kode","now":"Harga","l":"1YMin","h":"1YMax","hr":"2M","bl":"6M", 
-                                  "opm":"Margin Operasi(%)", "dev":"Deviden PR(%)", "roe": "ROE(%)", "rekom": "Saran"}).sort_values(['Harga','Level'])
+                                  "opm":"Margin Operasi(%)", "dev":"Deviden PR(%)", "roe": "ROE(%)", "rekom": "Saran",
+                                  "pbv": "Nilai Buku","dte": "Rasio UM","eg4": "PhGrow","etr": "Pendapatan"}).sort_values(['Harga','Level'])
     st.dataframe(scr1.style.highlight_max(axis=0),hide_index=True)
     st.subheader('Grafik')
     fig, ax = plt.subplots()
