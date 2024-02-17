@@ -254,9 +254,11 @@ def screener():
     elif screenlevel == 'BagiDeviden':
         st.write('Screener Rutin Bagi Deviden di atas 5%')
         dev = pd.read_csv('devhunter.csv')
-        dev = saham.values.tolist()
-        dev = [item for sublist in saham for item in sublist]
-        scr1=scr1.query("kode in @dev")
+        dev = dev.values.tolist()
+        dev = [item for sublist in dev for item in sublist]
+        #porto = pd.read_csv('porto.csv')
+        #porto = porto.query("kode in @dev")
+        scr1 = scr1.query("kode in @dev")
     else:
        st.write('Screener Saham Harga Lebih Dari 5000')
        scr1=scr1.query("now > 5000 and p<=10 and opm >= 0.1")
