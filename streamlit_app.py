@@ -263,8 +263,8 @@ def screener():
        scr1=scr1.query("now > 5000 and p<=10 and opm >= 0.1")
 
     s = scr1.copy()
-    scr1 = scr1.rename(columns = {"p": "Level","kode":"Kode","now":"Harga","l":"1YMin","h":"1YMax","hr":"2M","bl":"6M", 
-                                  "opm":"Margin Operasi(%)", "dev":"Deviden PR(%)", "roe": "ROE(%)", "rekom": "Saran",
+    scr1 = scr1.rename(columns = {"p": "Level","kode":"Kode","rekom": "Saran","now":"Harga","l":"1YMin","h":"1YMax","hr":"2M","bl":"6M", 
+                                  "opm":"Margin Operasi(%)", "dev":"Deviden PR(%)","adev":"Deviden 5Y","roe": "ROE(%)",
                                   "pbv": "Nilai Buku","dte": "Rasio UM","eg4": "PhGrow","etr": "Pendapatan","rg":"RevGrow",
                                   "pm":"Profit Margin", "tcs": "Kas Per Saham", "avol": "AVolume"}).sort_values(['Harga','Level'])
     st.dataframe(scr1.style.highlight_max(axis=0),hide_index=True)
