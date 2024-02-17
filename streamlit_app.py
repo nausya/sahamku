@@ -241,29 +241,28 @@ def screener():
     screenlevel = option_menu(None, ['>Rp5rb','<Rp5rb','<Rp200','BagiDeviden'], icons=['arrow-up-square', 'arrow-down-square', 'arrow-down-square-fill', 'bullseye'], menu_icon="cast", default_index=0, orientation="horizontal")
    
     st.subheader('Tabular Hasil Screener')
-    scr1 = pd.read_csv('PersentilN.csv', usecols=["Kode","Current","P","OpMargin","DevPR","RoE"])
+    #scr1 = pd.read_csv('PersentilN.csv', usecols=["Kode","Current","P","OpMargin","DevPR","RoE"])
+    scr1 = pd.read_csv('porto.csv')
     
     scr1 = scr1.fillna(0)
     if screenlevel == '<Rp200':
        st.write('Screener Saham Harga Rentang 50-200')
-       scr1=scr1.query("Current > 50 and Current <= 200 and P<=10 and OpMargin >= 0.1 and RoE >= 0.1")
+       scr1=scr1.query("now > 50 and now <= 200 and p<=10 and opm >= 0.1 and roe >= 0.1")
     elif screenlevel == '<Rp5rb':
        st.write('Screener Saham Harga Kurang Dari 5000')
-       scr1=scr1.query("Current > 200 and Current <= 5000 and P<=10 and OpMargin >= 0.1 and RoE >= 0.1")
+       scr1=scr1.query("now > 200 and now <= 5000 and p<=10 and opm >= 0.1 and roe >= 0.1")
     elif screenlevel == 'BagiDeviden':
         st.write('Screener Rutin Bagi Deviden di atas 5%')
-        dev = pd.read_csv('funda.csv')
-        #dev = dev.values.tolist()
-        #dev = [item for sublist in dev for item in sublist]
-        st.dataframe(dev.style.highlight_max(axis=0),hide_index=True)
-        scr1 = dev[['p','kode','now','opm','dev','roe']].copy()
-        scr1 = scr1.rename(columns = {"p": "P","kode":"Kode","now":"Current", "opm":"OpMargin", "dev":"DevPR", "roe": "RoE"})
+        dev = pd.read_csv('devhunter.csv')
+        dev = saham.values.tolist()
+        dev = [item for sublist in saham for item in sublist]
+        scr1=scr1.query("kode in @dev")
     else:
        st.write('Screener Saham Harga Lebih Dari 5000')
-       scr1=scr1.query("Current > 5000 and P<=10 and OpMargin >= 0.1")
+       scr1=scr1.query("now > 5000 and p<=10 and opm >= 0.1")
 
     s = scr1.copy()
-    scr1 = scr1.rename(columns = {"P": "Level","Emiten":"Kode","Current":"Harga", "OpMargin":"Margin Operasi(%)", "DevPR":"Deviden PR(%)", "RoE": "ROE(%)"}).sort_values(['Harga','Level'])
+    scr1 = scr1.rename(columns = {"p": "Level","kode":"Kode","now":"Harga", "opm":"Margin Operasi(%)", "dev":"Deviden PR(%)", "roe": "ROE(%)"}).sort_values(['Harga','Level'])
     st.dataframe(scr1.style.highlight_max(axis=0),hide_index=True)
     st.subheader('Grafik')
     fig, ax = plt.subplots()
