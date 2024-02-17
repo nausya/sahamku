@@ -257,7 +257,7 @@ def screener():
         #dev = [item for sublist in dev for item in sublist]
         st.dataframe(dev.style.highlight_max(axis=0),hide_index=True)
         scr1 = dev[['p','kode','now','opm','dev','roe']].copy()
-        scr1 = scr1.rename(columns = {"p": "P","kode":"Emiten","now":"Current", "opm":"OpMargin", "dev":"DevPR", "roe": "RoE"})
+        scr1 = scr1.rename(columns = {"p": "P","kode":"Kode","now":"Current", "opm":"OpMargin", "dev":"DevPR", "roe": "RoE"})
     else:
        st.write('Screener Saham Harga Lebih Dari 5000')
        scr1=scr1.query("Current > 5000 and P<=10 and OpMargin >= 0.1")
