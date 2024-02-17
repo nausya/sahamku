@@ -262,10 +262,12 @@ def screener():
        st.write('Screener Saham Harga Lebih Dari 5000')
        scr1=scr1.query("Current > 5000 and P<=10 and OpMargin >= 0.1")
 
-    s = scr1.copy()
+    
     if screenlevel == 'BagiDeviden':
+       s = scr1.copy()
        return
     else:
+       s = scr1.copy()
        scr1 = scr1.rename(columns = {"P": "Level","Emiten":"Kode","Current":"Harga", "OpMargin":"Margin Operasi(%)", "DevPR":"Deviden PR(%)", "RoE": "ROE(%)"}).sort_values(['Harga','Level'])
        st.dataframe(scr1.style.highlight_max(axis=0),hide_index=True)
        st.subheader('Grafik')
