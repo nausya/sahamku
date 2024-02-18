@@ -185,7 +185,7 @@ def dataframe():
        st.dataframe(data.tail(10))
     else:
        st.header('Filter Data')
-       filterdata = pd.read_csv('porto.csv')
+       filterdata = pd.read_csv('porto.csv', index=False))
        filterdata = filterdata.rename(columns = {"p": "Level","kode":"Kode","rekom": "Saran","now":"Harga","l":"1YMin","h":"1YMax","hr":"2M","bl":"6M", 
        "opm":"Margin Operasi(%)", "dev":"Deviden PR(%)","adev":"Deviden 5Y","roe": "ROE(%)",
        "pbv": "Nilai Buku","dte": "Rasio UM","eg4": "PhGrow","etr": "Pendapatan","rg":"RevGrow",
