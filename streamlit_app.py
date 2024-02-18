@@ -249,8 +249,8 @@ def screener():
     screenlevel = option_menu(None, ['>Rp5rb','<Rp5rb','<Rp200','BagiDeviden'], icons=['arrow-up-square', 'arrow-down-square', 'arrow-down-square-fill', 'bullseye'], menu_icon="cast", default_index=0, orientation="horizontal")
    
     st.subheader('Tabular Hasil Screener')
-    #pd.options.display.float_format = "{:,.2f}".format
-    scr1 = pd.read_csv('porto.csv')
+
+    scr1 = pd.read_csv('porto.csv', index_col=[0])
     scr1 = scr1.fillna(0)
     if screenlevel == '<Rp200':
        st.write('Screener Saham Harga Rentang 50-200')
@@ -263,8 +263,6 @@ def screener():
         dev = pd.read_csv('devhunter.csv')
         dev = dev.values.tolist()
         dev = [item for sublist in dev for item in sublist]
-        #porto = pd.read_csv('porto.csv')
-        #porto = porto.query("kode in @dev")
         scr1 = scr1.query("kode in @dev")
     else:
        st.write('Screener Saham Harga Lebih Dari 5000')
