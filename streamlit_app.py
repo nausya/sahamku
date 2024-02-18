@@ -26,8 +26,8 @@ st.sidebar.info('SELAMAT DATANG (Versi Beta)')
 st.title('ANALITIK SAHAM INDONESIA') 
 
 def main():
-    selected2 = option_menu(None, ["Home", "Data Emiten", "Screener", 'Prediksi'], icons=['house', 'file-earmark-text', 'sliders2-vertical', 'graph-up-arrow'], menu_icon="cast", default_index=0, orientation="horizontal")
-    if selected2 == 'Data Emiten':
+    selected2 = option_menu(None, ["Home", "Cari Data", "Screener", 'Prediksi'], icons=['house', 'file-earmark-text', 'sliders2-vertical', 'graph-up-arrow'], menu_icon="cast", default_index=0, orientation="horizontal")
+    if selected2 == 'Cari Data':
          dataframe()
     elif selected2 == 'Screener':
          screener()
@@ -177,11 +177,14 @@ def tech_indicators():
     
     st.bar_chart(data.Volume)
 
-
+#Pencarian Data
 def dataframe():
-    st.header('10 Data Terkini')
-    st.dataframe(data.tail(10))
-
+    caridata = option_menu(None, ['10 Data','Filter'], icons=['arrow-up-square', 'arrow-down-square'], menu_icon="cast", default_index=0, orientation="horizontal")
+    if caridata == '10 Data':
+       st.header('10 Data Terkini')
+       st.dataframe(data.tail(10))
+    else:
+       st.write('Filter Data')
 
 
 def predict():
