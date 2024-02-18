@@ -249,8 +249,8 @@ def screener():
     screenlevel = option_menu(None, ['>Rp5rb','<Rp5rb','<Rp200','BagiDeviden'], icons=['arrow-up-square', 'arrow-down-square', 'arrow-down-square-fill', 'bullseye'], menu_icon="cast", default_index=0, orientation="horizontal")
    
     st.subheader('Tabular Hasil Screener')
-    
-    scr1 = pd.read_csv('porto.csv', index_col=[0])
+    scr1 = pd.read_csv('porto.csv')
+    #scr1 = pd.read_csv('porto.csv', index_col=[0])
     scr1 = scr1.fillna(0)
     if screenlevel == '<Rp200':
        st.write('Screener Saham Harga Rentang 50-200')
@@ -269,7 +269,7 @@ def screener():
        scr1=scr1.query("now > 5000 and p<=10 and opm >= 0.1")
 
     s = scr1.copy()
-    s = s.reset_index(inplace = True)
+    #s = s.reset_index(inplace = True)
     scr1 = scr1.rename(columns = {"p": "Level","kode":"Kode","rekom": "Saran","now":"Harga","l":"1YMin","h":"1YMax","hr":"2M","bl":"6M", 
                                   "opm":"Margin Operasi(%)", "dev":"Deviden PR(%)","adev":"Deviden 5Y","roe": "ROE(%)",
                                   "pbv": "Nilai Buku","dte": "Rasio UM","eg4": "PhGrow","etr": "Pendapatan","rg":"RevGrow",
