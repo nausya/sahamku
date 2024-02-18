@@ -249,7 +249,7 @@ def screener():
     screenlevel = option_menu(None, ['>Rp5rb','<Rp5rb','<Rp200','BagiDeviden'], icons=['arrow-up-square', 'arrow-down-square', 'arrow-down-square-fill', 'bullseye'], menu_icon="cast", default_index=0, orientation="horizontal")
    
     st.subheader('Tabular Hasil Screener')
-    pd.options.display.float_format = "{:,.2f}".format
+    #pd.options.display.float_format = "{:,.2f}".format
     scr1 = pd.read_csv('porto.csv')
     scr1 = scr1.fillna(0)
     if screenlevel == '<Rp200':
@@ -275,7 +275,8 @@ def screener():
                                   "opm":"Margin Operasi(%)", "dev":"Deviden PR(%)","adev":"Deviden 5Y","roe": "ROE(%)",
                                   "pbv": "Nilai Buku","dte": "Rasio UM","eg4": "PhGrow","etr": "Pendapatan","rg":"RevGrow",
                                   "pm":"Profit Margin", "tcs": "Kas Per Saham", "avol": "AVolume"}).sort_values(['Harga','Level'])
-    st.dataframe(scr1.style.highlight_max(axis=0),hide_index=True)
+    #st.dataframe(scr1.style.highlight_max(axis=0),hide_index=True)
+    st.dataframe(scr1)
     st.subheader('Grafik')
     fig, ax = plt.subplots()
     
