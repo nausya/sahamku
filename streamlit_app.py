@@ -185,8 +185,9 @@ def dataframe():
        st.dataframe(data.tail(10))
     else:
        st.write('Filter Data')
-
-
+       filterdata = pd.read_csv('porto.csv')
+       st.dataframe(filterdata.tail(10))
+        
 def predict():
     model = st.radio('Pilih Model Komputasi', ['LinearRegression', 'RandomForestRegressor', 'ExtraTreesRegressor', 'KNeighborsRegressor', 'XGBoostRegressor'])
     num = st.number_input('Prediksi harga saham beberapa hari ke depan?', value=5)
