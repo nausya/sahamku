@@ -184,8 +184,12 @@ def dataframe():
        st.header('10 Data Terkini')
        st.dataframe(data.tail(10))
     else:
-       st.write('Filter Data')
+       st.header('Filter Data')
        filterdata = pd.read_csv('porto.csv')
+       filterdata = filterdata.rename(columns = {"p": "Level","kode":"Kode","rekom": "Saran","now":"Harga","l":"1YMin","h":"1YMax","hr":"2M","bl":"6M", 
+       "opm":"Margin Operasi(%)", "dev":"Deviden PR(%)","adev":"Deviden 5Y","roe": "ROE(%)",
+       "pbv": "Nilai Buku","dte": "Rasio UM","eg4": "PhGrow","etr": "Pendapatan","rg":"RevGrow",
+       "pm":"Profit Margin", "tcs": "Kas Per Saham", "avol": "AVolume"}).sort_values(['Harga','Level'])
        st.dataframe(filterdata.tail(10))
         
 def predict():
