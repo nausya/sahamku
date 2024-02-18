@@ -97,7 +97,7 @@ try:
     P = (C - L52)/D 
 except ZeroDivisionError:
     P = 0
-st.subheader(f"Harga terkini Rp {int(C)} berada pada level {int(P)} dari skala 100", divider="rainbow")
+st.subheader(f"Harga terkini Rp {int(C)} berada pada posisi {int(P)} dari skala 100", divider="rainbow")
 om  = df['om']
 dev = df['dev']
 roe = df['roe']
@@ -116,7 +116,7 @@ else:
      st.error(x)
 
 #st.markdown('notasi(kode)') # see *
-st.info('Untuk jangka panjang perlu diperhatikan kisaran level harga kurang dari 10')
+st.info('Untuk jangka panjang perlu diperhatikan kisaran posisi harga kurang dari 10')
 
 
 #Proses sidebar data
@@ -186,10 +186,10 @@ def dataframe():
     else:
        st.header('Filter Data')
        filterdata = pd.read_csv('porto.csv', index_col=[0])
-       filterdata = filterdata.rename(columns = {"p": "Level","kode":"Kode","rekom": "Saran","now":"Harga","l":"1YMin","h":"1YMax","hr":"2M","bl":"6M", 
+       filterdata = filterdata.rename(columns = {"p": "Posisi","kode":"Kode","rekom": "Saran","now":"Harga","l":"1YMin","h":"1YMax","hr":"2M","bl":"6M", 
        "opm":"Margin Operasi(%)", "dev":"Deviden PR(%)","adev":"Deviden 5Y","roe": "ROE(%)",
        "pbv": "Nilai Buku","dte": "Rasio UM","eg4": "PhGrow","etr": "Pendapatan","rg":"RevGrow",
-       "pm":"Profit Margin", "tcs": "Kas Per Saham", "avol": "AVolume"}).sort_values(['Harga','Level'])
+       "pm":"Profit Margin", "tcs": "Kas Per Saham", "avol": "AVolume"}).sort_values(['Harga','Posisi'])
        st.dataframe(filterdata)
         
 def predict():
@@ -270,10 +270,10 @@ def screener():
 
     s = scr1.copy()
     #s = s.reset_index(inplace = True)
-    scr1 = scr1.rename(columns = {"p": "Level","kode":"Kode","rekom": "Saran","now":"Harga","l":"1YMin","h":"1YMax","hr":"2M","bl":"6M", 
+    scr1 = scr1.rename(columns = {"p": "Posisi","kode":"Kode","rekom": "Saran","now":"Harga","l":"1YMin","h":"1YMax","hr":"2M","bl":"6M", 
                                   "opm":"Margin Operasi(%)", "dev":"Deviden PR(%)","adev":"Deviden 5Y","roe": "ROE(%)",
                                   "pbv": "Nilai Buku","dte": "Rasio UM","eg4": "PhGrow","etr": "Pendapatan","rg":"RevGrow",
-                                  "pm":"Profit Margin", "tcs": "Kas Per Saham", "avol": "AVolume"}).sort_values(['Harga','Level'])
+                                  "pm":"Profit Margin", "tcs": "Kas Per Saham", "avol": "AVolume"}).sort_values(['Harga','Posisi'])
     #st.dataframe(scr1.style.highlight_max(axis=0),hide_index=True)
     st.dataframe(scr1)
     st.subheader('Grafik')
@@ -283,7 +283,7 @@ def screener():
     y = s['opm']
     kd = s['kode']
     sns.scatterplot(s,x=x, y=y, marker='>')
-    plt.xlabel("Level Harga")
+    plt.xlabel("Posisi Harga")
     plt.ylabel("Margin Operasi (%)")
     for a,b,c in zip(x,y,kd):
         label = f"{c} {int(b)}%"
