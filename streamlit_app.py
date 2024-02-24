@@ -106,7 +106,7 @@ st.subheader(f"MarginOps : {ceknon(om)}%, DevPR : {ceknon(dev)}%, ROE : {ceknon(
 
 ##########Notasi Saham################
 kode = selected_emiten.split(' | ')[0]
-n = pd.read_csv('notasi.csv')
+n = pd.read_csv('notasi.csv', sep=';')
 n = n[(n['Kode'] == kode)]
 if n.isna().empty:
    st.text("")
