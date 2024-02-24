@@ -181,10 +181,12 @@ def tech_indicators():
 
 #Pencarian Data
 def dataframe():
-    caridata = option_menu(None, ['10 Data','Filter'], icons=['arrow-up-square', 'arrow-down-square'], menu_icon="cast", default_index=0, orientation="horizontal")
+    caridata = option_menu(None, ['10 Data','Fundamental','Deviden'], icons=['arrow-up-square', 'arrow-down-square'], menu_icon="cast", default_index=0, orientation="horizontal")
     if caridata == '10 Data':
        st.header('10 Data Terkini')
        st.dataframe(data.tail(10))
+    elif caridata == 'Deviden':
+         st.write("Data Deviden")
     else:
        st.header('Filter Data')
        filterdata = pd.read_csv('porto.csv', index_col=[0])
