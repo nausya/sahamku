@@ -95,7 +95,7 @@ C = df['skg']
 D = (H52-L52)/100
 st.subheader(f"Terendah : {L52}, Tertinggi : {H52}, Terkini : {C}, Delta : {D}")
 #try:
-if D > 0 :
+if int(D) > 0 :
     P = (C - L52)/D 
 #except ZeroDivisionError:
 else : 
