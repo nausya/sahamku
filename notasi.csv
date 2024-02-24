@@ -1,228 +1,228 @@
-Kode;Keterangan Notasi
-KPAL;B : Adanya permohonan Pernyataan Pailit, permohonan pembatalan perdamaian, atau dalam kondisi pailit| L : Perusahaan Tercatat terakhir menyampaikan laporan keuangan 2020 Kuartal III| Y : Perusahaan Tercatat yang belum menyelenggarakan Rapat Umum Pemegang Saham Tahunan (RUPST) sampai dengan 6 (enam) bulan setelah tahun buku berakhir| X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-KREN;X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-DUCK;L : Perusahaan Tercatat terakhir menyampaikan laporan keuangan 2020 Kuartal III| Y : Perusahaan Tercatat yang belum menyelenggarakan Rapat Umum Pemegang Saham Tahunan (RUPST) sampai dengan 6 (enam) bulan setelah tahun buku berakhir| X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-CPRI;L : Perusahaan Tercatat terakhir menyampaikan laporan keuangan 2022 Kuartal III| Y : Perusahaan Tercatat yang belum menyelenggarakan Rapat Umum Pemegang Saham Tahunan (RUPST) sampai dengan 6 (enam) bulan setelah tahun buku berakhir| X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-ENVY;E : Laporan keuangan terakhir menunjukkan ekuitas negatif berdasarkan laporan keuangan 2023 Kuartal III| S : Laporan keuangan terakhir menunjukkan tidak ada pendapatan usaha berdasarkan laporan keuangan 2023 Kuartal III| Y : Perusahaan Tercatat yang belum menyelenggarakan Rapat Umum Pemegang Saham Tahunan (RUPST) sampai dengan 6 (enam) bulan setelah tahun buku berakhir| X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-MAGP;L : Perusahaan Tercatat terakhir menyampaikan laporan keuangan 2022 Kuartal I| Y : Perusahaan Tercatat yang belum menyelenggarakan Rapat Umum Pemegang Saham Tahunan (RUPST) sampai dengan 6 (enam) bulan setelah tahun buku berakhir| X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-MASA;X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-POLA;X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-COWL;B : Adanya permohonan Pernyataan Pailit, permohonan pembatalan perdamaian, atau dalam kondisi pailit| E : Laporan keuangan terakhir menunjukkan ekuitas negatif berdasarkan laporan keuangan 2019 Tahunan| D : Adanya Opini “Tidak Menyatakan Pendapat (Disclaimer)” dari Akuntan Publik| L : Perusahaan Tercatat terakhir menyampaikan laporan keuangan 2019 Tahunan| Y : Perusahaan Tercatat yang belum menyelenggarakan Rapat Umum Pemegang Saham Tahunan (RUPST) sampai dengan 6 (enam) bulan setelah tahun buku berakhir| X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-CNTX;E : Laporan keuangan terakhir menunjukkan ekuitas negatif berdasarkan laporan keuangan 2023 Kuartal III| X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-ARTI;E : Laporan keuangan terakhir menunjukkan ekuitas negatif berdasarkan laporan keuangan 2023 Kuartal III| D : Adanya Opini “Tidak Menyatakan Pendapat (Disclaimer)” dari Akuntan Publik| X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-KBAG;X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-PBRX;M : Adanya permohonan Penundaan Kewajiban Pembayaran Utang (PKPU)| X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-ASRM;X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-MYTX;E : Laporan keuangan terakhir menunjukkan ekuitas negatif berdasarkan laporan keuangan 2023 Kuartal II| X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-FASW;X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-TARA;X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-DEFI;X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-DIGI;E : Laporan keuangan terakhir menunjukkan ekuitas negatif berdasarkan laporan keuangan 2023 Kuartal II| X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-LION;X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-SUGI;L : Perusahaan Tercatat terakhir menyampaikan laporan keuangan 2018 Tahunan| Y : Perusahaan Tercatat yang belum menyelenggarakan Rapat Umum Pemegang Saham Tahunan (RUPST) sampai dengan 6 (enam) bulan setelah tahun buku berakhir| X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-ESIP;X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-PUDP;X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-LCKM;X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-FORZ;B : Adanya permohonan Pernyataan Pailit, permohonan pembatalan perdamaian, atau dalam kondisi pailit| L : Perusahaan Tercatat terakhir menyampaikan laporan keuangan 2020 Kuartal III| Y : Perusahaan Tercatat yang belum menyelenggarakan Rapat Umum Pemegang Saham Tahunan (RUPST) sampai dengan 6 (enam) bulan setelah tahun buku berakhir| X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-JKSW;E : Laporan keuangan terakhir menunjukkan ekuitas negatif berdasarkan laporan keuangan 2023 Kuartal II| S : Laporan keuangan terakhir menunjukkan tidak ada pendapatan usaha berdasarkan laporan keuangan 2023 Kuartal II| X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-GDST;X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-ARTA;X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-INPP;X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-BAPI;X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-MTSM;X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-SURE;X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-PSKT;X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-MDRN;E : Laporan keuangan terakhir menunjukkan ekuitas negatif berdasarkan laporan keuangan 2023 Kuartal III| Y : Perusahaan Tercatat yang belum menyelenggarakan Rapat Umum Pemegang Saham Tahunan (RUPST) sampai dengan 6 (enam) bulan setelah tahun buku berakhir| X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-ANDI;X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-EPAC;X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-PLAS;L : Perusahaan Tercatat terakhir menyampaikan laporan keuangan 2020 Kuartal II| Y : Perusahaan Tercatat yang belum menyelenggarakan Rapat Umum Pemegang Saham Tahunan (RUPST) sampai dengan 6 (enam) bulan setelah tahun buku berakhir| X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-MDIA;M : Adanya permohonan Penundaan Kewajiban Pembayaran Utang (PKPU)| X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-PGUN;X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-KPAS;B : Adanya permohonan Pernyataan Pailit, permohonan pembatalan perdamaian, atau dalam kondisi pailit| L : Perusahaan Tercatat terakhir menyampaikan laporan keuangan 2021 Kuartal III| Y : Perusahaan Tercatat yang belum menyelenggarakan Rapat Umum Pemegang Saham Tahunan (RUPST) sampai dengan 6 (enam) bulan setelah tahun buku berakhir| X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-HDTX;E : Laporan keuangan terakhir menunjukkan ekuitas negatif berdasarkan laporan keuangan 2023 Kuartal III| X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-YPAS;X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-LMPI;X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-HOPE;X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-EPMT;X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-ALMI;X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-GAMA;L : Perusahaan Tercatat terakhir menyampaikan laporan keuangan 2022 Kuartal III| Y : Perusahaan Tercatat yang belum menyelenggarakan Rapat Umum Pemegang Saham Tahunan (RUPST) sampai dengan 6 (enam) bulan setelah tahun buku berakhir| X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-MYRX;B : Adanya permohonan Pernyataan Pailit, permohonan pembatalan perdamaian, atau dalam kondisi pailit| L : Perusahaan Tercatat terakhir menyampaikan laporan keuangan 2019 Kuartal III| Y : Perusahaan Tercatat yang belum menyelenggarakan Rapat Umum Pemegang Saham Tahunan (RUPST) sampai dengan 6 (enam) bulan setelah tahun buku berakhir| X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-ZATA;X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-TRIO;E : Laporan keuangan terakhir menunjukkan ekuitas negatif berdasarkan laporan keuangan 2023 Kuartal II| X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-LCGP;L : Perusahaan Tercatat terakhir menyampaikan laporan keuangan 2021 Kuartal III| Y : Perusahaan Tercatat yang belum menyelenggarakan Rapat Umum Pemegang Saham Tahunan (RUPST) sampai dengan 6 (enam) bulan setelah tahun buku berakhir| X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-SCPI;X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-TIRT;E : Laporan keuangan terakhir menunjukkan ekuitas negatif berdasarkan laporan keuangan 2023 Kuartal III| S : Laporan keuangan terakhir menunjukkan tidak ada pendapatan usaha berdasarkan laporan keuangan 2023 Kuartal III| X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-BAUT;X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-BKSL;X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-GOLL;B : Adanya permohonan Pernyataan Pailit, permohonan pembatalan perdamaian, atau dalam kondisi pailit| L : Perusahaan Tercatat terakhir menyampaikan laporan keuangan 2021 Kuartal III| Y : Perusahaan Tercatat yang belum menyelenggarakan Rapat Umum Pemegang Saham Tahunan (RUPST) sampai dengan 6 (enam) bulan setelah tahun buku berakhir| X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-SIMA;E : Laporan keuangan terakhir menunjukkan ekuitas negatif berdasarkan laporan keuangan 2019 Kuartal III| L : Perusahaan Tercatat terakhir menyampaikan laporan keuangan 2019 Kuartal III| Y : Perusahaan Tercatat yang belum menyelenggarakan Rapat Umum Pemegang Saham Tahunan (RUPST) sampai dengan 6 (enam) bulan setelah tahun buku berakhir| X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-PADI;X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-VIVA;M : Adanya permohonan Penundaan Kewajiban Pembayaran Utang (PKPU)| E : Laporan keuangan terakhir menunjukkan ekuitas negatif berdasarkan laporan keuangan 2023 Kuartal III| X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-KDSI;X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-AGRS;X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-PURA;X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-ARKA;X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-UNIT;L : Perusahaan Tercatat terakhir menyampaikan laporan keuangan 2020 Kuartal II| Y : Perusahaan Tercatat yang belum menyelenggarakan Rapat Umum Pemegang Saham Tahunan (RUPST) sampai dengan 6 (enam) bulan setelah tahun buku berakhir| X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-ABDA;X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-RSGK;X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-CANI;E : Laporan keuangan terakhir menunjukkan ekuitas negatif berdasarkan laporan keuangan 2023 Kuartal II| X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-HELI;X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-PURE;L : Perusahaan Tercatat terakhir menyampaikan laporan keuangan 2021 Kuartal III| Y : Perusahaan Tercatat yang belum menyelenggarakan Rapat Umum Pemegang Saham Tahunan (RUPST) sampai dengan 6 (enam) bulan setelah tahun buku berakhir| X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-BIPP;X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-OCAP;E : Laporan keuangan terakhir menunjukkan ekuitas negatif berdasarkan laporan keuangan 2023 Kuartal II| D : Adanya Opini “Tidak Menyatakan Pendapat (Disclaimer)” dari Akuntan Publik| S : Laporan keuangan terakhir menunjukkan tidak ada pendapatan usaha berdasarkan laporan keuangan 2023 Kuartal II| X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-BTEK;X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-KIAS;X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-KMTR;X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-WINR;X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-TAXI;X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-POOL;L : Perusahaan Tercatat terakhir menyampaikan laporan keuangan 2022 Kuartal III| Y : Perusahaan Tercatat yang belum menyelenggarakan Rapat Umum Pemegang Saham Tahunan (RUPST) sampai dengan 6 (enam) bulan setelah tahun buku berakhir| X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-ABBA;E : Laporan keuangan terakhir menunjukkan ekuitas negatif berdasarkan laporan keuangan 2023 Kuartal III| X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-CBRE;X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-SMCB;X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-BIKA;E : Laporan keuangan terakhir menunjukkan ekuitas negatif berdasarkan laporan keuangan 2023 Kuartal II| X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-KBLV;E : Laporan keuangan terakhir menunjukkan ekuitas negatif berdasarkan laporan keuangan 2023 Kuartal II| X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-POLY;E : Laporan keuangan terakhir menunjukkan ekuitas negatif berdasarkan laporan keuangan 2023 Kuartal II| X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-MTPS;S : Laporan keuangan terakhir menunjukkan tidak ada pendapatan usaha berdasarkan laporan keuangan 2023 Kuartal II| X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-TOYS;M : Adanya permohonan Penundaan Kewajiban Pembayaran Utang (PKPU)
-ETWA;B : Adanya permohonan Pernyataan Pailit, permohonan pembatalan perdamaian, atau dalam kondisi pailit| E : Laporan keuangan terakhir menunjukkan ekuitas negatif berdasarkan laporan keuangan 2023 Kuartal III| X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-SBAT;M : Adanya permohonan Penundaan Kewajiban Pembayaran Utang (PKPU)| S : Laporan keuangan terakhir menunjukkan tidak ada pendapatan usaha berdasarkan laporan keuangan 2023 Kuartal III| X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-JSKY;M : Adanya permohonan Penundaan Kewajiban Pembayaran Utang (PKPU)| L : Perusahaan Tercatat terakhir menyampaikan laporan keuangan 2021 Tahunan| Y : Perusahaan Tercatat yang belum menyelenggarakan Rapat Umum Pemegang Saham Tahunan (RUPST) sampai dengan 6 (enam) bulan setelah tahun buku berakhir| X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-KOIN;E : Laporan keuangan terakhir menunjukkan ekuitas negatif berdasarkan laporan keuangan 2023 Kuartal II| X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-LMAS;E : Laporan keuangan terakhir menunjukkan ekuitas negatif berdasarkan laporan keuangan 2021 Tahunan| D : Adanya Opini “Tidak Menyatakan Pendapat (Disclaimer)” dari Akuntan Publik| L : Perusahaan Tercatat terakhir menyampaikan laporan keuangan 2021 Tahunan| Y : Perusahaan Tercatat yang belum menyelenggarakan Rapat Umum Pemegang Saham Tahunan (RUPST) sampai dengan 6 (enam) bulan setelah tahun buku berakhir| X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-KBRI;L : Perusahaan Tercatat terakhir menyampaikan laporan keuangan 2019 Kuartal III| S : Laporan keuangan terakhir menunjukkan tidak ada pendapatan usaha berdasarkan laporan keuangan 2019 Kuartal III| Y : Perusahaan Tercatat yang belum menyelenggarakan Rapat Umum Pemegang Saham Tahunan (RUPST) sampai dengan 6 (enam) bulan setelah tahun buku berakhir| X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-MKNT;E : Laporan keuangan terakhir menunjukkan ekuitas negatif berdasarkan laporan keuangan 2023 Kuartal I| X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-HOME;A : Adanya Opini Tidak Wajar (Adverse) dari Akuntan Publik berdasarkan laporan keuangan 2020 Kuartal III| L : Perusahaan Tercatat terakhir menyampaikan laporan keuangan 2020 Kuartal III| Y : Perusahaan Tercatat yang belum menyelenggarakan Rapat Umum Pemegang Saham Tahunan (RUPST) sampai dengan 6 (enam) bulan setelah tahun buku berakhir| X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-PNSE;X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-TRIL;L : Perusahaan Tercatat terakhir menyampaikan laporan keuangan 2021 Kuartal III| Y : Perusahaan Tercatat yang belum menyelenggarakan Rapat Umum Pemegang Saham Tahunan (RUPST) sampai dengan 6 (enam) bulan setelah tahun buku berakhir| X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-BUKA;I : Perusahaan Tercatat yang tidak menerapkan Saham Dengan Hak Suara Multipel dan tercatat di Papan Ekonomi Baru
-JGLE;X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-GOTO;K : Perusahaan Tercatat yang menerapkan Saham Dengan Hak Suara Multipel dan tercatat di Papan Ekonomi Baru
-TIFA;X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-MAMI;B : Adanya permohonan Pernyataan Pailit, permohonan pembatalan perdamaian, atau dalam kondisi pailit| L : Perusahaan Tercatat terakhir menyampaikan laporan keuangan 2021 Kuartal III| Y : Perusahaan Tercatat yang belum menyelenggarakan Rapat Umum Pemegang Saham Tahunan (RUPST) sampai dengan 6 (enam) bulan setelah tahun buku berakhir| X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-FLMC;X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-SDMU;X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-MGNA;X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-MFMI;X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-SKLT;X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-NUSA;L : Perusahaan Tercatat terakhir menyampaikan laporan keuangan 2019 Kuartal III| Y : Perusahaan Tercatat yang belum menyelenggarakan Rapat Umum Pemegang Saham Tahunan (RUPST) sampai dengan 6 (enam) bulan setelah tahun buku berakhir| X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-DEAL;M : Adanya permohonan Penundaan Kewajiban Pembayaran Utang (PKPU)| E : Laporan keuangan terakhir menunjukkan ekuitas negatif berdasarkan laporan keuangan 2023 Kuartal III| X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-SKYB;L : Perusahaan Tercatat terakhir menyampaikan laporan keuangan 2019 Kuartal III| Y : Perusahaan Tercatat yang belum menyelenggarakan Rapat Umum Pemegang Saham Tahunan (RUPST) sampai dengan 6 (enam) bulan setelah tahun buku berakhir| X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-IIKP;X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-MYRX;B : Adanya permohonan Pernyataan Pailit, permohonan pembatalan perdamaian, atau dalam kondisi pailit| L : Perusahaan Tercatat terakhir menyampaikan laporan keuangan 2019 Kuartal III| Y : Perusahaan Tercatat yang belum menyelenggarakan Rapat Umum Pemegang Saham Tahunan (RUPST) sampai dengan 6 (enam) bulan setelah tahun buku berakhir| X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-REAL;X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-INTA;E : Laporan keuangan terakhir menunjukkan ekuitas negatif berdasarkan laporan keuangan 2023 Kuartal II| X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-BSWD;X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-DPUM;X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-TAMA;X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-ENZO;X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-GLOB;E : Laporan keuangan terakhir menunjukkan ekuitas negatif berdasarkan laporan keuangan 2023 Kuartal II| X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-FORU;X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-MTFN;E : Laporan keuangan terakhir menunjukkan ekuitas negatif berdasarkan laporan keuangan 2022 Kuartal III| L : Perusahaan Tercatat terakhir menyampaikan laporan keuangan 2022 Kuartal III| Y : Perusahaan Tercatat yang belum menyelenggarakan Rapat Umum Pemegang Saham Tahunan (RUPST) sampai dengan 6 (enam) bulan setelah tahun buku berakhir| X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-CTBN;X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-CNTB;E : Laporan keuangan terakhir menunjukkan ekuitas negatif berdasarkan laporan keuangan 2022 Kuartal III| X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-KARW;E : Laporan keuangan terakhir menunjukkan ekuitas negatif berdasarkan laporan keuangan 2023 Kuartal II| X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-SUPR;X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-DMND;X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-WMPP;X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-CNKO;E : Laporan keuangan terakhir menunjukkan ekuitas negatif berdasarkan laporan keuangan 2023 Kuartal II| X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-GMTD;X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-BTEL;E : Laporan keuangan terakhir menunjukkan ekuitas negatif berdasarkan laporan keuangan 2023 Kuartal III| X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-JECC;X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-RBMS;X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-TGRA;S : Laporan keuangan terakhir menunjukkan tidak ada pendapatan usaha berdasarkan laporan keuangan 2023 Kuartal III| X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-YULE;X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-IFSH;X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-RODA;X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-YELO;X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-ZINC;X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-TOTO;X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-POSA;E : Laporan keuangan terakhir menunjukkan ekuitas negatif berdasarkan laporan keuangan 2023 Kuartal II| X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-SKBM;X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-SSTM;X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-JAWA;X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-NETV;E : Laporan keuangan terakhir menunjukkan ekuitas negatif berdasarkan laporan keuangan 2023 Kuartal II| X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-INCF;X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-PPRO;X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-LAND;X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-IBST;X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-WICO;X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-MABA;D : Adanya Opini “Tidak Menyatakan Pendapat (Disclaimer)” dari Akuntan Publik| L : Perusahaan Tercatat terakhir menyampaikan laporan keuangan 2019 Tahunan| Y : Perusahaan Tercatat yang belum menyelenggarakan Rapat Umum Pemegang Saham Tahunan (RUPST) sampai dengan 6 (enam) bulan setelah tahun buku berakhir| X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-HKMU;B : Adanya permohonan Pernyataan Pailit, permohonan pembatalan perdamaian, atau dalam kondisi pailit| E : Laporan keuangan terakhir menunjukkan ekuitas negatif berdasarkan laporan keuangan 2023 Kuartal I| D : Adanya Opini “Tidak Menyatakan Pendapat (Disclaimer)” dari Akuntan Publik| L : Perusahaan Tercatat terakhir menyampaikan laporan keuangan 2023 Kuartal I| X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-CTTH;X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-LMSH;X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-BLTA;X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-BOSS;B : Adanya permohonan Pernyataan Pailit, permohonan pembatalan perdamaian, atau dalam kondisi pailit| E : Laporan keuangan terakhir menunjukkan ekuitas negatif berdasarkan laporan keuangan 2023 Kuartal III| X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-ROCK;X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-TIRA;X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-CITA;X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-IPPE;X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-ADES;X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-DADA;X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-CMPP;E : Laporan keuangan terakhir menunjukkan ekuitas negatif berdasarkan laporan keuangan 2023 Kuartal II| X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-TAMU;X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-TECH;L : Perusahaan Tercatat terakhir menyampaikan laporan keuangan 2023 Kuartal II| X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-LIFE;X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-BSBK;X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-IKAI;X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-CLAY;X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-ASMI;X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-TDPM;L : Perusahaan Tercatat terakhir menyampaikan laporan keuangan 2021 Tahunan| X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-CBMF;L : Perusahaan Tercatat terakhir menyampaikan laporan keuangan 2023 Kuartal I| X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-AIMS;S : Laporan keuangan terakhir menunjukkan tidak ada pendapatan usaha berdasarkan laporan keuangan 2023 Kuartal III| X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-ELTY;X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-SCNP;X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-WMUU;X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-MAMI;B : Adanya permohonan Pernyataan Pailit, permohonan pembatalan perdamaian, atau dalam kondisi pailit| L : Perusahaan Tercatat terakhir menyampaikan laporan keuangan 2022 Kuartal III| Y : Perusahaan Tercatat yang belum menyelenggarakan Rapat Umum Pemegang Saham Tahunan (RUPST) sampai dengan 6 (enam) bulan setelah tahun buku berakhir| X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-TOPS;X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-SAFE;E : Laporan keuangan terakhir menunjukkan ekuitas negatif berdasarkan laporan keuangan 2023 Kuartal III| X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-SRIL;M : Adanya permohonan Penundaan Kewajiban Pembayaran Utang (PKPU)| E : Laporan keuangan terakhir menunjukkan ekuitas negatif berdasarkan laporan keuangan 2023 Kuartal III| X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-ESTI;X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-BEKS;X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-SINI;E : Laporan keuangan terakhir menunjukkan ekuitas negatif berdasarkan laporan keuangan 2023 Kuartal III| X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-MINA;X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-BRNA;X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-NASA;X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-WSKT;M : Adanya permohonan Penundaan Kewajiban Pembayaran Utang (PKPU)| X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-AGAR;X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-HDIT;X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-KRAH;B : Adanya permohonan Pernyataan Pailit, permohonan pembatalan perdamaian, atau dalam kondisi pailit| L : Perusahaan Tercatat terakhir menyampaikan laporan keuangan 2019 Kuartal III| Y : Perusahaan Tercatat yang belum menyelenggarakan Rapat Umum Pemegang Saham Tahunan (RUPST) sampai dengan 6 (enam) bulan setelah tahun buku berakhir| X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-SOHO;X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-BKSW;X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-KOTA;X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-ARGO;X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-CENT;E : Laporan keuangan terakhir menunjukkan ekuitas negatif berdasarkan laporan keuangan 2023 Kuartal III| X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-TRAM;L : Perusahaan Tercatat terakhir menyampaikan laporan keuangan 2020 Tahunan| Y : Perusahaan Tercatat yang belum menyelenggarakan Rapat Umum Pemegang Saham Tahunan (RUPST) sampai dengan 6 (enam) bulan setelah tahun buku berakhir| X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-FISH;X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-ALTO;X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-TFCO;X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-SMRU;X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-MTRA;E : Laporan keuangan terakhir menunjukkan ekuitas negatif berdasarkan laporan keuangan 2022 Kuartal III| D : Adanya Opini “Tidak Menyatakan Pendapat (Disclaimer)” dari Akuntan Publik| L : Perusahaan Tercatat terakhir menyampaikan laporan keuangan 2022 Kuartal III| Y : Perusahaan Tercatat yang belum menyelenggarakan Rapat Umum Pemegang Saham Tahunan (RUPST) sampai dengan 6 (enam) bulan setelah tahun buku berakhir| X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-UNSP;E : Laporan keuangan terakhir menunjukkan ekuitas negatif berdasarkan laporan keuangan 2023 Kuartal III| X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-BELI;I : Perusahaan Tercatat yang tidak menerapkan Saham Dengan Hak Suara Multipel dan tercatat di Papan Ekonomi Baru
-TELE;E : Laporan keuangan terakhir menunjukkan ekuitas negatif berdasarkan laporan keuangan 2023 Kuartal III| X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-TRUE;X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-PLIN;X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-GDYR;X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-IBFN;E : Laporan keuangan terakhir menunjukkan ekuitas negatif berdasarkan laporan keuangan 2023 Kuartal II| X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-HADE;X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-RIMO;L : Perusahaan Tercatat terakhir menyampaikan laporan keuangan 2019 Kuartal III| Y : Perusahaan Tercatat yang belum menyelenggarakan Rapat Umum Pemegang Saham Tahunan (RUPST) sampai dengan 6 (enam) bulan setelah tahun buku berakhir| X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-HRME;X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-PTDU;X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-WOWS;X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-GMFI;E : Laporan keuangan terakhir menunjukkan ekuitas negatif berdasarkan laporan keuangan 2023 Kuartal II| X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-BPII;X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-WIKA;M : Adanya permohonan Penundaan Kewajiban Pembayaran Utang (PKPU)
-GGRP;X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-LAPD;X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-PRAS;M : Adanya permohonan Penundaan Kewajiban Pembayaran Utang (PKPU)| X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-ARMY;L : Perusahaan Tercatat terakhir menyampaikan laporan keuangan 2021 Kuartal III| Y : Perusahaan Tercatat yang belum menyelenggarakan Rapat Umum Pemegang Saham Tahunan (RUPST) sampai dengan 6 (enam) bulan setelah tahun buku berakhir| X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-MIRA;X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-SHID;X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-HOTL;M : Adanya permohonan Penundaan Kewajiban Pembayaran Utang (PKPU)| L : Perusahaan Tercatat terakhir menyampaikan laporan keuangan 2021 Kuartal III| Y : Perusahaan Tercatat yang belum menyelenggarakan Rapat Umum Pemegang Saham Tahunan (RUPST) sampai dengan 6 (enam) bulan setelah tahun buku berakhir| X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-NIPS;B : Adanya permohonan Pernyataan Pailit, permohonan pembatalan perdamaian, atau dalam kondisi pailit| L : Perusahaan Tercatat terakhir menyampaikan laporan keuangan 2018 Tahunan| Y : Perusahaan Tercatat yang belum menyelenggarakan Rapat Umum Pemegang Saham Tahunan (RUPST) sampai dengan 6 (enam) bulan setelah tahun buku berakhir| X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-CSMI;X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-WSBP;E : Laporan keuangan terakhir menunjukkan ekuitas negatif berdasarkan laporan keuangan 2023 Kuartal III| X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-AKKU;X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-INAF;M : Adanya permohonan Penundaan Kewajiban Pembayaran Utang (PKPU)| E : Laporan keuangan terakhir menunjukkan ekuitas negatif berdasarkan laporan keuangan 2023 Kuartal II| X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-SCCO;X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
-GIAA;E : Laporan keuangan terakhir menunjukkan ekuitas negatif berdasarkan laporan keuangan 2023 Kuartal I| X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+Kode,Keterangan Notasi
+KPAL,B : Adanya permohonan Pernyataan Pailit, permohonan pembatalan perdamaian, atau dalam kondisi pailit| L : Perusahaan Tercatat terakhir menyampaikan laporan keuangan 2020 Kuartal III| Y : Perusahaan Tercatat yang belum menyelenggarakan Rapat Umum Pemegang Saham Tahunan (RUPST) sampai dengan 6 (enam) bulan setelah tahun buku berakhir| X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+KREN,X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+DUCK,L : Perusahaan Tercatat terakhir menyampaikan laporan keuangan 2020 Kuartal III| Y : Perusahaan Tercatat yang belum menyelenggarakan Rapat Umum Pemegang Saham Tahunan (RUPST) sampai dengan 6 (enam) bulan setelah tahun buku berakhir| X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+CPRI,L : Perusahaan Tercatat terakhir menyampaikan laporan keuangan 2022 Kuartal III| Y : Perusahaan Tercatat yang belum menyelenggarakan Rapat Umum Pemegang Saham Tahunan (RUPST) sampai dengan 6 (enam) bulan setelah tahun buku berakhir| X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+ENVY,E : Laporan keuangan terakhir menunjukkan ekuitas negatif berdasarkan laporan keuangan 2023 Kuartal III| S : Laporan keuangan terakhir menunjukkan tidak ada pendapatan usaha berdasarkan laporan keuangan 2023 Kuartal III| Y : Perusahaan Tercatat yang belum menyelenggarakan Rapat Umum Pemegang Saham Tahunan (RUPST) sampai dengan 6 (enam) bulan setelah tahun buku berakhir| X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+MAGP,L : Perusahaan Tercatat terakhir menyampaikan laporan keuangan 2022 Kuartal I| Y : Perusahaan Tercatat yang belum menyelenggarakan Rapat Umum Pemegang Saham Tahunan (RUPST) sampai dengan 6 (enam) bulan setelah tahun buku berakhir| X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+MASA,X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+POLA,X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+COWL,B : Adanya permohonan Pernyataan Pailit, permohonan pembatalan perdamaian, atau dalam kondisi pailit| E : Laporan keuangan terakhir menunjukkan ekuitas negatif berdasarkan laporan keuangan 2019 Tahunan| D : Adanya Opini “Tidak Menyatakan Pendapat (Disclaimer)” dari Akuntan Publik| L : Perusahaan Tercatat terakhir menyampaikan laporan keuangan 2019 Tahunan| Y : Perusahaan Tercatat yang belum menyelenggarakan Rapat Umum Pemegang Saham Tahunan (RUPST) sampai dengan 6 (enam) bulan setelah tahun buku berakhir| X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+CNTX,E : Laporan keuangan terakhir menunjukkan ekuitas negatif berdasarkan laporan keuangan 2023 Kuartal III| X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+ARTI,E : Laporan keuangan terakhir menunjukkan ekuitas negatif berdasarkan laporan keuangan 2023 Kuartal III| D : Adanya Opini “Tidak Menyatakan Pendapat (Disclaimer)” dari Akuntan Publik| X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+KBAG,X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+PBRX,M : Adanya permohonan Penundaan Kewajiban Pembayaran Utang (PKPU)| X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+ASRM,X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+MYTX,E : Laporan keuangan terakhir menunjukkan ekuitas negatif berdasarkan laporan keuangan 2023 Kuartal II| X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+FASW,X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+TARA,X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+DEFI,X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+DIGI,E : Laporan keuangan terakhir menunjukkan ekuitas negatif berdasarkan laporan keuangan 2023 Kuartal II| X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+LION,X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+SUGI,L : Perusahaan Tercatat terakhir menyampaikan laporan keuangan 2018 Tahunan| Y : Perusahaan Tercatat yang belum menyelenggarakan Rapat Umum Pemegang Saham Tahunan (RUPST) sampai dengan 6 (enam) bulan setelah tahun buku berakhir| X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+ESIP,X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+PUDP,X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+LCKM,X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+FORZ,B : Adanya permohonan Pernyataan Pailit, permohonan pembatalan perdamaian, atau dalam kondisi pailit| L : Perusahaan Tercatat terakhir menyampaikan laporan keuangan 2020 Kuartal III| Y : Perusahaan Tercatat yang belum menyelenggarakan Rapat Umum Pemegang Saham Tahunan (RUPST) sampai dengan 6 (enam) bulan setelah tahun buku berakhir| X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+JKSW,E : Laporan keuangan terakhir menunjukkan ekuitas negatif berdasarkan laporan keuangan 2023 Kuartal II| S : Laporan keuangan terakhir menunjukkan tidak ada pendapatan usaha berdasarkan laporan keuangan 2023 Kuartal II| X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+GDST,X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+ARTA,X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+INPP,X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+BAPI,X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+MTSM,X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+SURE,X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+PSKT,X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+MDRN,E : Laporan keuangan terakhir menunjukkan ekuitas negatif berdasarkan laporan keuangan 2023 Kuartal III| Y : Perusahaan Tercatat yang belum menyelenggarakan Rapat Umum Pemegang Saham Tahunan (RUPST) sampai dengan 6 (enam) bulan setelah tahun buku berakhir| X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+ANDI,X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+EPAC,X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+PLAS,L : Perusahaan Tercatat terakhir menyampaikan laporan keuangan 2020 Kuartal II| Y : Perusahaan Tercatat yang belum menyelenggarakan Rapat Umum Pemegang Saham Tahunan (RUPST) sampai dengan 6 (enam) bulan setelah tahun buku berakhir| X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+MDIA,M : Adanya permohonan Penundaan Kewajiban Pembayaran Utang (PKPU)| X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+PGUN,X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+KPAS,B : Adanya permohonan Pernyataan Pailit, permohonan pembatalan perdamaian, atau dalam kondisi pailit| L : Perusahaan Tercatat terakhir menyampaikan laporan keuangan 2021 Kuartal III| Y : Perusahaan Tercatat yang belum menyelenggarakan Rapat Umum Pemegang Saham Tahunan (RUPST) sampai dengan 6 (enam) bulan setelah tahun buku berakhir| X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+HDTX,E : Laporan keuangan terakhir menunjukkan ekuitas negatif berdasarkan laporan keuangan 2023 Kuartal III| X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+YPAS,X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+LMPI,X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+HOPE,X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+EPMT,X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+ALMI,X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+GAMA,L : Perusahaan Tercatat terakhir menyampaikan laporan keuangan 2022 Kuartal III| Y : Perusahaan Tercatat yang belum menyelenggarakan Rapat Umum Pemegang Saham Tahunan (RUPST) sampai dengan 6 (enam) bulan setelah tahun buku berakhir| X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+MYRX,B : Adanya permohonan Pernyataan Pailit, permohonan pembatalan perdamaian, atau dalam kondisi pailit| L : Perusahaan Tercatat terakhir menyampaikan laporan keuangan 2019 Kuartal III| Y : Perusahaan Tercatat yang belum menyelenggarakan Rapat Umum Pemegang Saham Tahunan (RUPST) sampai dengan 6 (enam) bulan setelah tahun buku berakhir| X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+ZATA,X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+TRIO,E : Laporan keuangan terakhir menunjukkan ekuitas negatif berdasarkan laporan keuangan 2023 Kuartal II| X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+LCGP,L : Perusahaan Tercatat terakhir menyampaikan laporan keuangan 2021 Kuartal III| Y : Perusahaan Tercatat yang belum menyelenggarakan Rapat Umum Pemegang Saham Tahunan (RUPST) sampai dengan 6 (enam) bulan setelah tahun buku berakhir| X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+SCPI,X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+TIRT,E : Laporan keuangan terakhir menunjukkan ekuitas negatif berdasarkan laporan keuangan 2023 Kuartal III| S : Laporan keuangan terakhir menunjukkan tidak ada pendapatan usaha berdasarkan laporan keuangan 2023 Kuartal III| X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+BAUT,X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+BKSL,X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+GOLL,B : Adanya permohonan Pernyataan Pailit, permohonan pembatalan perdamaian, atau dalam kondisi pailit| L : Perusahaan Tercatat terakhir menyampaikan laporan keuangan 2021 Kuartal III| Y : Perusahaan Tercatat yang belum menyelenggarakan Rapat Umum Pemegang Saham Tahunan (RUPST) sampai dengan 6 (enam) bulan setelah tahun buku berakhir| X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+SIMA,E : Laporan keuangan terakhir menunjukkan ekuitas negatif berdasarkan laporan keuangan 2019 Kuartal III| L : Perusahaan Tercatat terakhir menyampaikan laporan keuangan 2019 Kuartal III| Y : Perusahaan Tercatat yang belum menyelenggarakan Rapat Umum Pemegang Saham Tahunan (RUPST) sampai dengan 6 (enam) bulan setelah tahun buku berakhir| X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+PADI,X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+VIVA,M : Adanya permohonan Penundaan Kewajiban Pembayaran Utang (PKPU)| E : Laporan keuangan terakhir menunjukkan ekuitas negatif berdasarkan laporan keuangan 2023 Kuartal III| X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+KDSI,X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+AGRS,X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+PURA,X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+ARKA,X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+UNIT,L : Perusahaan Tercatat terakhir menyampaikan laporan keuangan 2020 Kuartal II| Y : Perusahaan Tercatat yang belum menyelenggarakan Rapat Umum Pemegang Saham Tahunan (RUPST) sampai dengan 6 (enam) bulan setelah tahun buku berakhir| X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+ABDA,X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+RSGK,X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+CANI,E : Laporan keuangan terakhir menunjukkan ekuitas negatif berdasarkan laporan keuangan 2023 Kuartal II| X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+HELI,X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+PURE,L : Perusahaan Tercatat terakhir menyampaikan laporan keuangan 2021 Kuartal III| Y : Perusahaan Tercatat yang belum menyelenggarakan Rapat Umum Pemegang Saham Tahunan (RUPST) sampai dengan 6 (enam) bulan setelah tahun buku berakhir| X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+BIPP,X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+OCAP,E : Laporan keuangan terakhir menunjukkan ekuitas negatif berdasarkan laporan keuangan 2023 Kuartal II| D : Adanya Opini “Tidak Menyatakan Pendapat (Disclaimer)” dari Akuntan Publik| S : Laporan keuangan terakhir menunjukkan tidak ada pendapatan usaha berdasarkan laporan keuangan 2023 Kuartal II| X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+BTEK,X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+KIAS,X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+KMTR,X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+WINR,X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+TAXI,X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+POOL,L : Perusahaan Tercatat terakhir menyampaikan laporan keuangan 2022 Kuartal III| Y : Perusahaan Tercatat yang belum menyelenggarakan Rapat Umum Pemegang Saham Tahunan (RUPST) sampai dengan 6 (enam) bulan setelah tahun buku berakhir| X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+ABBA,E : Laporan keuangan terakhir menunjukkan ekuitas negatif berdasarkan laporan keuangan 2023 Kuartal III| X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+CBRE,X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+SMCB,X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+BIKA,E : Laporan keuangan terakhir menunjukkan ekuitas negatif berdasarkan laporan keuangan 2023 Kuartal II| X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+KBLV,E : Laporan keuangan terakhir menunjukkan ekuitas negatif berdasarkan laporan keuangan 2023 Kuartal II| X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+POLY,E : Laporan keuangan terakhir menunjukkan ekuitas negatif berdasarkan laporan keuangan 2023 Kuartal II| X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+MTPS,S : Laporan keuangan terakhir menunjukkan tidak ada pendapatan usaha berdasarkan laporan keuangan 2023 Kuartal II| X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+TOYS,M : Adanya permohonan Penundaan Kewajiban Pembayaran Utang (PKPU)
+ETWA,B : Adanya permohonan Pernyataan Pailit, permohonan pembatalan perdamaian, atau dalam kondisi pailit| E : Laporan keuangan terakhir menunjukkan ekuitas negatif berdasarkan laporan keuangan 2023 Kuartal III| X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+SBAT,M : Adanya permohonan Penundaan Kewajiban Pembayaran Utang (PKPU)| S : Laporan keuangan terakhir menunjukkan tidak ada pendapatan usaha berdasarkan laporan keuangan 2023 Kuartal III| X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+JSKY,M : Adanya permohonan Penundaan Kewajiban Pembayaran Utang (PKPU)| L : Perusahaan Tercatat terakhir menyampaikan laporan keuangan 2021 Tahunan| Y : Perusahaan Tercatat yang belum menyelenggarakan Rapat Umum Pemegang Saham Tahunan (RUPST) sampai dengan 6 (enam) bulan setelah tahun buku berakhir| X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+KOIN,E : Laporan keuangan terakhir menunjukkan ekuitas negatif berdasarkan laporan keuangan 2023 Kuartal II| X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+LMAS,E : Laporan keuangan terakhir menunjukkan ekuitas negatif berdasarkan laporan keuangan 2021 Tahunan| D : Adanya Opini “Tidak Menyatakan Pendapat (Disclaimer)” dari Akuntan Publik| L : Perusahaan Tercatat terakhir menyampaikan laporan keuangan 2021 Tahunan| Y : Perusahaan Tercatat yang belum menyelenggarakan Rapat Umum Pemegang Saham Tahunan (RUPST) sampai dengan 6 (enam) bulan setelah tahun buku berakhir| X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+KBRI,L : Perusahaan Tercatat terakhir menyampaikan laporan keuangan 2019 Kuartal III| S : Laporan keuangan terakhir menunjukkan tidak ada pendapatan usaha berdasarkan laporan keuangan 2019 Kuartal III| Y : Perusahaan Tercatat yang belum menyelenggarakan Rapat Umum Pemegang Saham Tahunan (RUPST) sampai dengan 6 (enam) bulan setelah tahun buku berakhir| X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+MKNT,E : Laporan keuangan terakhir menunjukkan ekuitas negatif berdasarkan laporan keuangan 2023 Kuartal I| X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+HOME,A : Adanya Opini Tidak Wajar (Adverse) dari Akuntan Publik berdasarkan laporan keuangan 2020 Kuartal III| L : Perusahaan Tercatat terakhir menyampaikan laporan keuangan 2020 Kuartal III| Y : Perusahaan Tercatat yang belum menyelenggarakan Rapat Umum Pemegang Saham Tahunan (RUPST) sampai dengan 6 (enam) bulan setelah tahun buku berakhir| X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+PNSE,X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+TRIL,L : Perusahaan Tercatat terakhir menyampaikan laporan keuangan 2021 Kuartal III| Y : Perusahaan Tercatat yang belum menyelenggarakan Rapat Umum Pemegang Saham Tahunan (RUPST) sampai dengan 6 (enam) bulan setelah tahun buku berakhir| X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+BUKA,I : Perusahaan Tercatat yang tidak menerapkan Saham Dengan Hak Suara Multipel dan tercatat di Papan Ekonomi Baru
+JGLE,X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+GOTO,K : Perusahaan Tercatat yang menerapkan Saham Dengan Hak Suara Multipel dan tercatat di Papan Ekonomi Baru
+TIFA,X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+MAMI,B : Adanya permohonan Pernyataan Pailit, permohonan pembatalan perdamaian, atau dalam kondisi pailit| L : Perusahaan Tercatat terakhir menyampaikan laporan keuangan 2021 Kuartal III| Y : Perusahaan Tercatat yang belum menyelenggarakan Rapat Umum Pemegang Saham Tahunan (RUPST) sampai dengan 6 (enam) bulan setelah tahun buku berakhir| X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+FLMC,X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+SDMU,X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+MGNA,X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+MFMI,X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+SKLT,X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+NUSA,L : Perusahaan Tercatat terakhir menyampaikan laporan keuangan 2019 Kuartal III| Y : Perusahaan Tercatat yang belum menyelenggarakan Rapat Umum Pemegang Saham Tahunan (RUPST) sampai dengan 6 (enam) bulan setelah tahun buku berakhir| X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+DEAL,M : Adanya permohonan Penundaan Kewajiban Pembayaran Utang (PKPU)| E : Laporan keuangan terakhir menunjukkan ekuitas negatif berdasarkan laporan keuangan 2023 Kuartal III| X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+SKYB,L : Perusahaan Tercatat terakhir menyampaikan laporan keuangan 2019 Kuartal III| Y : Perusahaan Tercatat yang belum menyelenggarakan Rapat Umum Pemegang Saham Tahunan (RUPST) sampai dengan 6 (enam) bulan setelah tahun buku berakhir| X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+IIKP,X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+MYRX,B : Adanya permohonan Pernyataan Pailit, permohonan pembatalan perdamaian, atau dalam kondisi pailit| L : Perusahaan Tercatat terakhir menyampaikan laporan keuangan 2019 Kuartal III| Y : Perusahaan Tercatat yang belum menyelenggarakan Rapat Umum Pemegang Saham Tahunan (RUPST) sampai dengan 6 (enam) bulan setelah tahun buku berakhir| X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+REAL,X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+INTA,E : Laporan keuangan terakhir menunjukkan ekuitas negatif berdasarkan laporan keuangan 2023 Kuartal II| X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+BSWD,X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+DPUM,X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+TAMA,X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+ENZO,X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+GLOB,E : Laporan keuangan terakhir menunjukkan ekuitas negatif berdasarkan laporan keuangan 2023 Kuartal II| X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+FORU,X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+MTFN,E : Laporan keuangan terakhir menunjukkan ekuitas negatif berdasarkan laporan keuangan 2022 Kuartal III| L : Perusahaan Tercatat terakhir menyampaikan laporan keuangan 2022 Kuartal III| Y : Perusahaan Tercatat yang belum menyelenggarakan Rapat Umum Pemegang Saham Tahunan (RUPST) sampai dengan 6 (enam) bulan setelah tahun buku berakhir| X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+CTBN,X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+CNTB,E : Laporan keuangan terakhir menunjukkan ekuitas negatif berdasarkan laporan keuangan 2022 Kuartal III| X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+KARW,E : Laporan keuangan terakhir menunjukkan ekuitas negatif berdasarkan laporan keuangan 2023 Kuartal II| X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+SUPR,X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+DMND,X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+WMPP,X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+CNKO,E : Laporan keuangan terakhir menunjukkan ekuitas negatif berdasarkan laporan keuangan 2023 Kuartal II| X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+GMTD,X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+BTEL,E : Laporan keuangan terakhir menunjukkan ekuitas negatif berdasarkan laporan keuangan 2023 Kuartal III| X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+JECC,X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+RBMS,X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+TGRA,S : Laporan keuangan terakhir menunjukkan tidak ada pendapatan usaha berdasarkan laporan keuangan 2023 Kuartal III| X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+YULE,X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+IFSH,X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+RODA,X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+YELO,X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+ZINC,X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+TOTO,X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+POSA,E : Laporan keuangan terakhir menunjukkan ekuitas negatif berdasarkan laporan keuangan 2023 Kuartal II| X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+SKBM,X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+SSTM,X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+JAWA,X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+NETV,E : Laporan keuangan terakhir menunjukkan ekuitas negatif berdasarkan laporan keuangan 2023 Kuartal II| X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+INCF,X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+PPRO,X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+LAND,X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+IBST,X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+WICO,X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+MABA,D : Adanya Opini “Tidak Menyatakan Pendapat (Disclaimer)” dari Akuntan Publik| L : Perusahaan Tercatat terakhir menyampaikan laporan keuangan 2019 Tahunan| Y : Perusahaan Tercatat yang belum menyelenggarakan Rapat Umum Pemegang Saham Tahunan (RUPST) sampai dengan 6 (enam) bulan setelah tahun buku berakhir| X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+HKMU,B : Adanya permohonan Pernyataan Pailit, permohonan pembatalan perdamaian, atau dalam kondisi pailit| E : Laporan keuangan terakhir menunjukkan ekuitas negatif berdasarkan laporan keuangan 2023 Kuartal I| D : Adanya Opini “Tidak Menyatakan Pendapat (Disclaimer)” dari Akuntan Publik| L : Perusahaan Tercatat terakhir menyampaikan laporan keuangan 2023 Kuartal I| X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+CTTH,X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+LMSH,X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+BLTA,X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+BOSS,B : Adanya permohonan Pernyataan Pailit, permohonan pembatalan perdamaian, atau dalam kondisi pailit| E : Laporan keuangan terakhir menunjukkan ekuitas negatif berdasarkan laporan keuangan 2023 Kuartal III| X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+ROCK,X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+TIRA,X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+CITA,X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+IPPE,X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+ADES,X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+DADA,X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+CMPP,E : Laporan keuangan terakhir menunjukkan ekuitas negatif berdasarkan laporan keuangan 2023 Kuartal II| X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+TAMU,X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+TECH,L : Perusahaan Tercatat terakhir menyampaikan laporan keuangan 2023 Kuartal II| X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+LIFE,X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+BSBK,X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+IKAI,X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+CLAY,X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+ASMI,X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+TDPM,L : Perusahaan Tercatat terakhir menyampaikan laporan keuangan 2021 Tahunan| X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+CBMF,L : Perusahaan Tercatat terakhir menyampaikan laporan keuangan 2023 Kuartal I| X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+AIMS,S : Laporan keuangan terakhir menunjukkan tidak ada pendapatan usaha berdasarkan laporan keuangan 2023 Kuartal III| X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+ELTY,X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+SCNP,X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+WMUU,X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+MAMI,B : Adanya permohonan Pernyataan Pailit, permohonan pembatalan perdamaian, atau dalam kondisi pailit| L : Perusahaan Tercatat terakhir menyampaikan laporan keuangan 2022 Kuartal III| Y : Perusahaan Tercatat yang belum menyelenggarakan Rapat Umum Pemegang Saham Tahunan (RUPST) sampai dengan 6 (enam) bulan setelah tahun buku berakhir| X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+TOPS,X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+SAFE,E : Laporan keuangan terakhir menunjukkan ekuitas negatif berdasarkan laporan keuangan 2023 Kuartal III| X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+SRIL,M : Adanya permohonan Penundaan Kewajiban Pembayaran Utang (PKPU)| E : Laporan keuangan terakhir menunjukkan ekuitas negatif berdasarkan laporan keuangan 2023 Kuartal III| X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+ESTI,X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+BEKS,X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+SINI,E : Laporan keuangan terakhir menunjukkan ekuitas negatif berdasarkan laporan keuangan 2023 Kuartal III| X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+MINA,X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+BRNA,X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+NASA,X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+WSKT,M : Adanya permohonan Penundaan Kewajiban Pembayaran Utang (PKPU)| X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+AGAR,X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+HDIT,X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+KRAH,B : Adanya permohonan Pernyataan Pailit, permohonan pembatalan perdamaian, atau dalam kondisi pailit| L : Perusahaan Tercatat terakhir menyampaikan laporan keuangan 2019 Kuartal III| Y : Perusahaan Tercatat yang belum menyelenggarakan Rapat Umum Pemegang Saham Tahunan (RUPST) sampai dengan 6 (enam) bulan setelah tahun buku berakhir| X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+SOHO,X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+BKSW,X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+KOTA,X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+ARGO,X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+CENT,E : Laporan keuangan terakhir menunjukkan ekuitas negatif berdasarkan laporan keuangan 2023 Kuartal III| X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+TRAM,L : Perusahaan Tercatat terakhir menyampaikan laporan keuangan 2020 Tahunan| Y : Perusahaan Tercatat yang belum menyelenggarakan Rapat Umum Pemegang Saham Tahunan (RUPST) sampai dengan 6 (enam) bulan setelah tahun buku berakhir| X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+FISH,X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+ALTO,X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+TFCO,X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+SMRU,X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+MTRA,E : Laporan keuangan terakhir menunjukkan ekuitas negatif berdasarkan laporan keuangan 2022 Kuartal III| D : Adanya Opini “Tidak Menyatakan Pendapat (Disclaimer)” dari Akuntan Publik| L : Perusahaan Tercatat terakhir menyampaikan laporan keuangan 2022 Kuartal III| Y : Perusahaan Tercatat yang belum menyelenggarakan Rapat Umum Pemegang Saham Tahunan (RUPST) sampai dengan 6 (enam) bulan setelah tahun buku berakhir| X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+UNSP,E : Laporan keuangan terakhir menunjukkan ekuitas negatif berdasarkan laporan keuangan 2023 Kuartal III| X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+BELI,I : Perusahaan Tercatat yang tidak menerapkan Saham Dengan Hak Suara Multipel dan tercatat di Papan Ekonomi Baru
+TELE,E : Laporan keuangan terakhir menunjukkan ekuitas negatif berdasarkan laporan keuangan 2023 Kuartal III| X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+TRUE,X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+PLIN,X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+GDYR,X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+IBFN,E : Laporan keuangan terakhir menunjukkan ekuitas negatif berdasarkan laporan keuangan 2023 Kuartal II| X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+HADE,X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+RIMO,L : Perusahaan Tercatat terakhir menyampaikan laporan keuangan 2019 Kuartal III| Y : Perusahaan Tercatat yang belum menyelenggarakan Rapat Umum Pemegang Saham Tahunan (RUPST) sampai dengan 6 (enam) bulan setelah tahun buku berakhir| X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+HRME,X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+PTDU,X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+WOWS,X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+GMFI,E : Laporan keuangan terakhir menunjukkan ekuitas negatif berdasarkan laporan keuangan 2023 Kuartal II| X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+BPII,X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+WIKA,M : Adanya permohonan Penundaan Kewajiban Pembayaran Utang (PKPU)
+GGRP,X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+LAPD,X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+PRAS,M : Adanya permohonan Penundaan Kewajiban Pembayaran Utang (PKPU)| X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+ARMY,L : Perusahaan Tercatat terakhir menyampaikan laporan keuangan 2021 Kuartal III| Y : Perusahaan Tercatat yang belum menyelenggarakan Rapat Umum Pemegang Saham Tahunan (RUPST) sampai dengan 6 (enam) bulan setelah tahun buku berakhir| X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+MIRA,X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+SHID,X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+HOTL,M : Adanya permohonan Penundaan Kewajiban Pembayaran Utang (PKPU)| L : Perusahaan Tercatat terakhir menyampaikan laporan keuangan 2021 Kuartal III| Y : Perusahaan Tercatat yang belum menyelenggarakan Rapat Umum Pemegang Saham Tahunan (RUPST) sampai dengan 6 (enam) bulan setelah tahun buku berakhir| X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+NIPS,B : Adanya permohonan Pernyataan Pailit, permohonan pembatalan perdamaian, atau dalam kondisi pailit| L : Perusahaan Tercatat terakhir menyampaikan laporan keuangan 2018 Tahunan| Y : Perusahaan Tercatat yang belum menyelenggarakan Rapat Umum Pemegang Saham Tahunan (RUPST) sampai dengan 6 (enam) bulan setelah tahun buku berakhir| X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+CSMI,X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+WSBP,E : Laporan keuangan terakhir menunjukkan ekuitas negatif berdasarkan laporan keuangan 2023 Kuartal III| X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+AKKU,X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+INAF,M : Adanya permohonan Penundaan Kewajiban Pembayaran Utang (PKPU)| E : Laporan keuangan terakhir menunjukkan ekuitas negatif berdasarkan laporan keuangan 2023 Kuartal II| X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+SCCO,X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
+GIAA,E : Laporan keuangan terakhir menunjukkan ekuitas negatif berdasarkan laporan keuangan 2023 Kuartal I| X : Perusahaan Tercatat dicatatkan di Papan Pemantauan Khusus 
