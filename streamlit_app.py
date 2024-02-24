@@ -195,6 +195,12 @@ def dataframe():
         st.dataframe(indsektor)
     elif caridata == 'Finansial':
         st.slider("Isikan Dengan Angka", 0, 100)
+        for i in range(int(st.number_input("Num:"))):
+            foo()
+        if st.sidebar.selectbox("I:",["f"]) == "f":
+            b()
+            my_slider_val = st.slider("Quinn Mallory", 1, 88)
+        st.write(slider_val)
         st.header("Finansial (Milyar Rupiah)")
         keu = pd.read_csv('Finansial.csv', index_col=[0], sep=';')
         st.dataframe(keu)
