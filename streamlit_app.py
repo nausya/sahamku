@@ -186,7 +186,7 @@ def dataframe():
        st.header('10 Data Terkini')
        st.dataframe(data.tail(10))
     elif caridata == 'Deviden':
-         st.write("Data Deviden")
+         st.header("Data Deviden")
     else:
        st.header('Filter Data')
        filterdata = pd.read_csv('porto.csv', index_col=[0])
