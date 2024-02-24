@@ -264,7 +264,7 @@ def screener():
     screenlevel = option_menu(None, ['>Rp5rb','<Rp5rb','<Rp200','BagiDeviden'], icons=['arrow-up-square', 'arrow-down-square', 'arrow-down-square-fill', 'bullseye'], menu_icon="cast", default_index=0, orientation="horizontal")
    
     st.subheader('Tabular Hasil Screener')
-    scr1 = pd.read_csv('porto.csv', sep=';')
+    scr1 = pd.read_csv('porto.csv', index_col = [0], sep=';')
     #scr1 = pd.read_csv('porto.csv', index_col = [0], sep=';')
     scr1 = scr1.fillna(0)
     if screenlevel == '<Rp200':
