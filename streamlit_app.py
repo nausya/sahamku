@@ -93,7 +93,7 @@ L52 = df['lo']
 H52 = df['hi']
 C = df['skg']
 D = (H52-L52)/100
-st.header(f"Terendah : {L52}, Tertinggi : {H52}, Terkini : {C}, Delta : {D}")
+st.subheader(f"Terendah : {L52}, Tertinggi : {H52}, Terkini : {C}, Delta : {D}")
 try:
     P = (C - L52)/D 
 except ZeroDivisionError:
