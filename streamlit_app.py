@@ -197,8 +197,6 @@ def dataframe():
         st.header("Finansial (Milyar Rupiah)")
         keu = pd.read_csv('Finansial.csv', index_col=[0], sep=';')
         st.dataframe(keu)
-
-        st.line_chart(keu)
    
     else:
        st.header('Filter Data')
