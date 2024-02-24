@@ -103,7 +103,8 @@ dev = df['dev']
 roe = df['roe']
 
 st.subheader(f"MarginOps : {ceknon(om)}%, DevPR : {ceknon(dev)}%, ROE : {ceknon(roe)}%", divider="rainbow")
-#Notasi Saham
+
+##########Notasi Saham################
 kode = selected_emiten.split(' | ')[0]
 n = pd.read_csv('notasi.csv')
 n = n[(n['Kode'] == kode)]
@@ -114,8 +115,8 @@ else:
    for y in n:
     for x in y:
      st.error(x)
+##########End of Notasi Saham################
 
-#st.markdown('notasi(kode)') # see *
 st.info('Untuk jangka panjang perlu diperhatikan kisaran posisi harga kurang dari 10')
 
 
