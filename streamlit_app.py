@@ -97,6 +97,7 @@ st.header(f"Terendah : {L52}, Tertinggi : {H52}, Terkini : {C}, Delta : {D}")
 try:
     P = (C - L52)/D 
 except ZeroDivisionError:
+    D = 0
     P = 0
 st.subheader(f"Harga terkini Rp {int(C)} berada pada posisi ke-{int(P)} dari ketinggian 100", divider="rainbow")
 om  = df['om']
