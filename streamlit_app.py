@@ -93,7 +93,7 @@ L52 = df['lo']
 H52 = df['hi']
 C = df['skg']
 D = (H52-L52)/100
-st.write(f'lo:{(L52)},high:{H52},current:{C},delta:{(D)}')
+st.write(f"lo:{L52},high:{H52},current:{C},delta:{D}")
 try:
     P = (C - L52)/D 
 except ZeroDivisionError:
