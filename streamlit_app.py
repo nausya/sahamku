@@ -95,11 +95,10 @@ C = df['skg']
 D = (H52-L52)/100
 st.subheader(f"Terendah : {L52}, Tertinggi : {H52}, Terkini : {C}, Delta : {D}")
 #try:
-if D>0 :
+if D > 0 :
     P = (C - L52)/D 
 #except ZeroDivisionError:
 else : 
-    D = 0
     P = 0
 st.subheader(f"Harga terkini Rp {int(C)} berada pada posisi ke-{int(P)} dari ketinggian 100", divider="rainbow")
 om  = df['om']
