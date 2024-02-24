@@ -192,7 +192,7 @@ def dataframe():
         indsektor = pd.read_csv('IndexSektor.csv', index_col=[0], sep=';')
         st.dataframe(indsektor)
     elif caridata == 'Finansial':
-        st.header("Finansial")
+        st.header("Finansial (Milyar Rupiah)")
         keu = pd.read_csv('Finansial.csv', index_col=[0], sep=';')
         st.dataframe(keu)
     else:
