@@ -187,6 +187,8 @@ def dataframe():
        st.dataframe(data.tail(10))
     elif caridata == 'Deviden':
         st.header("Data Deviden")
+        devcum = pd.read_csv('devcumdate.csv', index_col=[0], sep=';')
+        st.dataframe(devcum)
     elif caridata == 'Index Per Sektor':
         st.header("Index Per Sektor")
         indsektor = pd.read_csv('IndexSektor.csv', index_col=[0], sep=';')
