@@ -197,12 +197,9 @@ def dataframe():
         st.header("Finansial (Milyar Rupiah)")
         keu = pd.read_csv('Finansial.csv', index_col=[0], sep=';')
         st.dataframe(keu)
-        df = keu.copy()
-        st.area_chart(df)
-        st.bar_chart(df)
-        st.line_chart(df)
-        st.map(df)
-        st.scatter_chart(df)
+
+        st.line_chart(keu)
+   
     else:
        st.header('Filter Data')
        filterdata = pd.read_csv('porto.csv', index_col=[0])
