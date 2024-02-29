@@ -104,6 +104,8 @@ dev = df['dev']
 roe = df['roe']
 
 st.subheader(f"MarginOps : {ceknon(om)}%, DevPR : {ceknon(dev)}%, ROE : {ceknon(roe)}%", divider="rainbow")
+st.subheader(f"EPS(RP) : {EPS(RP)}, BV(RP) : {BV(RP)}, PER : {PER}", PBV : {PBV}",divider="rainbow")
+
 
 ##########Notasi Saham################
 kode = selected_emiten.split(' | ')[0]
