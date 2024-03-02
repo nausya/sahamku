@@ -115,8 +115,8 @@ eps = fin['EPSRP']
 bv = fin['BVRP']
 pbv = fin['PBV']
 per = fin['PER']
-fin.dtypes
-st.subheader (f"EPS : {eps} | BV : {bv} | PBV : {pbv} | PER : {per}", divider="rainbow")
+#fin.dtypes
+st.header (f"EPS : {eps} | BV : {bv} | PBV : {pbv} | PER : {per}", divider="rainbow")
 
 
 
