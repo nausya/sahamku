@@ -116,7 +116,7 @@ f = f[['EPSRP','BVRP','PER','PBV']]
 f = f.fillna(0)
 f.dtypes
 eps = f['EPSRP'].astype(float)
-bv = f['BVRP']).astype(float)
+bv = f['BVRP'].astype(float)
 pbv = f['PBV'].astype(float)
 per = f['PER'].astype(float)
 
