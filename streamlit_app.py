@@ -110,6 +110,7 @@ kodef = selected_emiten.split(' | ')[0]
 fin = pd.read_csv('Finansial.csv', sep=";")
 fin = fin.query("Kode==@kodef")
 fin = fin[['EPSRP','BVRP','PER','PBV']]
+fin = fin.astype(float)/100
 
 eps = fin['EPSRP']
 bv = fin['BVRP']
