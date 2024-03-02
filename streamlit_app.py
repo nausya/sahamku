@@ -110,7 +110,7 @@ EPS = 0
 BV = 0
 PER = 0
 PBV = 0
-st.subheader (f"MarginOps : {ceknon(om)}%, DevPR : {ceknon(dev)}%, ROE : {ceknon(roe)}%", divider="rainbow")
+st.subheader (f"EPS : {ceknon(om)}%, BV : {ceknon(dev)}%, PBV : {ceknon(roe)}%, PER : {ceknon(roe)}%", divider="rainbow")
 #("EPS : EPS, BV : BV, PER : PER", PBV : PBV",divider="rainbow")
 
 
