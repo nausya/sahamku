@@ -88,6 +88,7 @@ for stock in saham:
         roe =  info.get('returnOnEquity')
         screensaham.append({'kode':kode,'skg':skg,'lo':lo,'hi':hi,'om':om,'dev':dev,'roe':roe})
 df = pd.DataFrame(screensaham)
+df.dtypes
 df = df.fillna(0)
 
 L52 = df['lo']
@@ -112,6 +113,7 @@ f = pd.read_csv('Finansial.csv', sep=";")
 f = f.query("Kode==@kodef")
 f = f[['Kode','EPSRP','BVRP','PER','PBV']]#astype(float).astype(int)
 f = f.fillna(0)
+f.dtypes
 eps = f['EPSRP']
 bv = f['BVRP']
 pbv = f['PBV']
