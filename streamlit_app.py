@@ -121,7 +121,7 @@ else:
    per = fin[2]
    sek = fin[4]
    ind = fin[5][:2]
-   st.subheader(f"EPS : Rp.{eps} | BV : Rp.{bv} | PBV : {pbv} | PER : {per} | Sektor : {sek}", divider="rainbow")
+   st.subheader(f"EPS : Rp.{ceknon(eps)} | BV : Rp.{ceknon(bv)} | PBV : {ceknon(pbv)} | PER : {ceknon(per)} | Sektor : {sek}", divider="rainbow")
 
    #BENCHMARK
    kodebm = ind
