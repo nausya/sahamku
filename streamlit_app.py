@@ -91,6 +91,7 @@ df = pd.DataFrame(screensaham)
 df = df.fillna(0)
 
 L52 = df['lo']
+L52
 H52 = df['hi']
 C = df['skg']
 D = (H52-L52)/100
