@@ -1,4 +1,4 @@
-Kode;Sektor;KodeInd;SubIndustri;Nama Emiten;Sharia;Tanggal;Tahun Buku;Tipe Lap;Opini;Aset;Utang;Modal;Penjual;EBT(RP);Proft;ProftOwner;EPS(RP);BV(RP);PER;PBV;DER;ROA(%);ROE(%);NPM(%)
+Kode;Sektor;KodeInd;SubIndustri;Nama Emiten;Sharia;Tanggal;Tahun Buku;Tipe Lap;Opini;Aset;Utang;Modal;Penjual;EBT(RP);Proft;ProftOwner;EPSRP;BVRP;PER;PBV;DER;ROA(%);ROE(%);NPM(%)
 ADMR;Energy;A121;Coal Production;Adaro Minerals Indonesia Tbk;S;09/30/2023;Dec;U;;23508,87;10405,03;13103,83;11160,37;4996,66;3894,87;3879,54;115,69;320,53;12,75;4,6;0,79;20;36;42
 ADRO;Energy;A121;Coal Production;Adaro Energy Indonesia Tbk;S;09/30/2023;Dec;U;;160979,03;46211,01;114768,02;77142,23;26485,34;21338,52;18877,07;899,04;3588,07;2,67;0,67;0,4;18;25;37
 AIMS;Energy;A121;Coal Production;Akbar Indo Makmur Stimec Tbk;S;09/30/2023;Dec;U;;18,77;3,4;15,36;9,76;-0,22;-0,22;-0,22;-18,19;69,83;-40,95;10,67;0,22;-21;-26;-41
