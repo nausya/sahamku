@@ -112,7 +112,7 @@ kodef = selected_emiten.split(' | ')[0]
 f = pd.read_csv('Finansial.csv', sep=";")
 f = f.query("Kode==@kodef")
 f = f[['EPSRP','BVRP','PER','PBV']]
-f = f.astype(float)
+#f = f.astype(float)
 f = f.fillna(0)
 f.dtypes
 eps = f['EPSRP']
