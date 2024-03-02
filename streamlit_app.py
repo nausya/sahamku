@@ -88,7 +88,6 @@ for stock in saham:
         roe =  info.get('returnOnEquity')
         screensaham.append({'kode':kode,'skg':skg,'lo':lo,'hi':hi,'om':om,'dev':dev,'roe':roe})
 df = pd.DataFrame(screensaham)
-df.dtypes
 df = df.fillna(0)
 
 L52 = df['lo']
@@ -104,23 +103,19 @@ st.subheader(f"Harga terkini Rp {int(C)} berada pada posisi ke-{int(P)} dari ket
 om  = df['om']
 dev = df['dev']
 roe = df['roe']
-
 st.subheader(f"MarginOps : {ceknon(om)}% | DevPR : {ceknon(dev)}% | ROE : {ceknon(roe)}%", divider="rainbow")
 
 #FINANSIAL
 kodef = selected_emiten.split(' | ')[0]
 fin = pd.read_csv('Finansial.csv', sep=";")
 fin = fin.query("Kode==@kodef")
-fin = fin[['EPSRP','BVRP','PER','PBV']]
-#f = fin.astype(float)
-fin = fin.fillna(0)
+fin[['EPSRP','BVRP','PER','PBV']] = fin[['EPSRP','BVRP','PER','PBV']].astype(float)
 
 eps = fin['EPSRP']
 bv = fin['BVRP']
 pbv = fin['PBV']
 per = fin['PER']
 fin.dtypes
-fin
 st.subheader (f"EPS : {eps} | BV : {bv} | PBV : {pbv} | PER : {per}", divider="rainbow")
 
 
