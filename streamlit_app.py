@@ -120,7 +120,7 @@ bv = f['BVRP']
 pbv = f['PBV']
 per = f['PER']
 
-st.subheader (f"EPS : {eps} | BV : {bv} | PBV : {pbv} | PER : {per}", divider="rainbow")
+st.subheader ("EPS : {eps} | BV : {bv} | PBV : {pbv} | PER : {per}", divider="rainbow")
 
 
 
