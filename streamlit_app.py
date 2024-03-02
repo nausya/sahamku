@@ -117,7 +117,7 @@ bv = fin['BVRP']
 pbv = fin['PBV']
 per = fin['PER']
 #fin.dtypes
-st.subheader (f"EPS : {eps} | BV : {float(bv)} | PBV : {pbv} | PER : {per}", divider="rainbow")
+st.subheader (f"EPS : {eps} | BV : {(bv)} | PBV : {pbv} | PER : {per}", divider="rainbow")
 
 
 
