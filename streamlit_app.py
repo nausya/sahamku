@@ -107,13 +107,16 @@ st.subheader(f"MarginOps : {ceknon(om)}% | DevPR : {ceknon(dev)}% | ROE : {cekno
 
 #FINANSIAL
 kodef = selected_emiten.split(' | ')[0]
-fin = pd.read_csv('Finansial.csv', sep=";",usecols=['Kode','EPSRP','BVRP','PER','PBV'])
+fin = pd.read_csv('Finansial.csv', sep=";")
 fin = fin.query("Kode==@kodef")
-#fin = fin[['EPSRP','BVRP','PER','PBV']]
-eps = fin['EPSRP']
-bv = fin['BVRP']
-pbv = fin['PBV']
-per = fin['PER']
+fin = fin[['EPSRP','BVRP','PER','PBV']]
+fin = fin.values.tolist()
+fin = [item for sublist in fin for item in sublist]
+fin
+#eps = fin['EPSRP']
+#bv = fin['BVRP']
+#pbv = fin['PBV']
+#per = fin['PER']
 #fin.dtypes
 st.subheader(f"EPS : {eps} | BV : {bv} | PBV : {pbv} | PER : {per}", divider="rainbow")
 
