@@ -111,14 +111,11 @@ kodef = selected_emiten.split(' | ')[0]
 f = pd.read_csv('Finansial.csv', sep=";")
 f = f[['Kode','EPSRP','BVRP','PER','PBV']]#.astype(str).astype(int)
 f = f.query("Kode==@kodef")
-
 EPS = f['EPSRP']
 BV = f['BVRP']
 PBV = f['PBV']
 PER = f['PER']
-PER[1]
-PBV
-BV
+
 st.subheader (f"EPS : {EPS} | BV : {BV} | PBV : {PBV} | PER : {PER}", divider="rainbow")
 
 
