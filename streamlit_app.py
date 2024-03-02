@@ -119,9 +119,22 @@ pbv = fin[3]
 per = fin[2]
 sek = fin[4]
 ind = fin[5]
-st.subheader(f"EPS : Rp.{eps} | BV : Rp.{bv} | PBV : {pbv} | PER : {per,sek,ind}", divider="rainbow")
+st.subheader(f"EPS : Rp.{eps} | BV : Rp.{bv} | PBV : {pbv} | PER : {per} Sektor : {sek} Industri : {ind}", divider="rainbow")
 
-
+#BENCHMARK
+kodebm = sek
+bm = pd.read_csv('IndexSektor.csv', sep=";")
+fin = fin.query("Sektor==@kodebm")
+#Sektor;EPS(Rp);BV(Rp);PER;PBV;DER;Kode
+bm = bm[['Sektor','EPS(Rp)','BV(Rp)','PER','PBV']]
+bm = bm.values.tolist()
+bm = [item for sublist in bm for item in sublist]
+bmeps = bm[1]
+bmbv = bm[2]
+bmpbv = bm[4]
+bmper = bm[3]
+bmsek = bm[0]
+st.subheader(f"EPS : Rp.{eps} | BV : Rp.{bv} | PBV : {pbv} | PER : {per} Sektor : {sek}", divider="rainbow")
 
 ##########Notasi Saham################
 kode = selected_emiten.split(' | ')[0]
