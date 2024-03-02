@@ -116,11 +116,16 @@ else:
    fin = fin.values.tolist()
    fin = [item for sublist in fin for item in sublist]
    eps = (fin[0])
+   
    bv = fin[1]
    pbv = fin[3]
    per = fin[2]
    sek = fin[4]
    ind = fin[5][:2]
+    eps
+    bv
+    pbv
+    per
    st.subheader(f"EPS : Rp.{ceknon(eps)} | BV : Rp.{ceknon(bv)} | PBV : {ceknon(pbv)} | PER : {ceknon(per)} | Sektor : {sek}", divider="rainbow")
 
    #BENCHMARK
