@@ -75,7 +75,7 @@ def ceknon(x):
 
 #Display Persentil
 saham = [option]
-st.dataframe(saham)
+
 screensaham = []
 for stock in saham:
         info = yf.Ticker(stock).info
@@ -89,7 +89,7 @@ for stock in saham:
         screensaham.append({'kode':kode,'skg':skg,'lo':lo,'hi':hi,'om':om,'dev':dev,'roe':roe})
 df = pd.DataFrame(screensaham)
 df = df.fillna(0)
-st.dataframe(df)
+
 L52 = df['lo']
 H52 = df['hi']
 C = df['skg']
@@ -111,13 +111,14 @@ kodef = selected_emiten.split(' | ')[0]
 f = pd.read_csv('Finansial.csv', sep=";")
 f = f[['Kode','EPSRP','BVRP','PER','PBV']]#.astype(str).astype(int)
 f = f.query("Kode==@kodef")
-st.dataframe(f)
+
 EPS = f['EPSRP']
 BV = f['BVRP']
 PBV = f['PBV']
 PER = f['PER']
 PER
-st.dataframe(PER)
+PBV
+BV
 st.subheader (f"EPS : {EPS} | BV : {BV} | PBV : {PBV} | PER : {PER}", divider="rainbow")
 
 
