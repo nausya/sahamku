@@ -117,7 +117,7 @@ BV = f['BVRP']
 PBV = f['PBV']
 PER = f['PER']
 st.dataframe(PER)
-st.subheader (f"EPS : {ceknon(EPS)} | BV : {ceknon(BV)} | PBV : {ceknon(PBV)} | PER : {ceknon(PER)}", divider="rainbow")
+st.subheader (f"EPS : {(EPS)} | BV : {(BV)} | PBV : {(PBV)} | PER : {(PER)}", divider="rainbow")
 
 
 
