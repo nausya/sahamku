@@ -111,7 +111,7 @@ fin = pd.read_csv('Finansial.csv', sep=";")
 fin = fin.query("Kode==@kodef")
 fin = fin[['EPSRP','BVRP','PER','PBV','Sektor','KodeInd']]
 if fin.empty:
-   st.subheader ("Kategori Perusahaan Baru IPO", divider="rainbow")
+   st.error ("Kategori Perusahaan Baru IPO", divider="rainbow")
 else:
    fin = fin.values.tolist()
    fin = [item for sublist in fin for item in sublist]
