@@ -136,10 +136,10 @@ else:
    bmper = bm[3]
    bmsek = bm[0]
    st.subheader(f"STANDAR KINERJA EMITEN SEJENIS \n EPS : Rp.{bmeps} | BV : Rp.{bmbv} | PBV : {bmpbv} | PER : {bmper} | SubSektor : {bmsek}", divider="rainbow")
-   deps = eps - bmeps
-   dbv = bv - bmbv
-   dpbv = pbv/bmpbv
-   dper = "Idealnya PER < 15"
+   #deps = eps - bmeps
+   #dbv = bv - bmbv
+   #dpbv = pbv/bmpbv
+   #dper = "Idealnya PER < 15"
    st.subheader(f"RINGKASAN PORTOFOLIO :  EPS : Rp.{deps} | BV : Rp.{dbv} | PBV : {dpbv} | PER : {dper}", divider="rainbow")
 ##########Notasi Saham################
 kode = selected_emiten.split(' | ')[0]
