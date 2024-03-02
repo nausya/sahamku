@@ -122,7 +122,7 @@ else:
    per = fin[2]
    sek = fin[4]
    ind = fin[5][:2]
-    eps
+    
    st.subheader(f"EPS : Rp.{eps} | BV : Rp.{bv} | PBV : {pbv} | PER : per} | Sektor : {sek}", divider="rainbow")
 
    #BENCHMARK
