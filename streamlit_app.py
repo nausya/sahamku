@@ -122,10 +122,10 @@ ind = fin[5]
 st.subheader(f"EPS : Rp.{eps} | BV : Rp.{bv} | PBV : {pbv} | PER : {per} Sektor : {sek} | Industri : {ind}", divider="rainbow")
 
 #BENCHMARK
-kodebm = sek
+kodebm = ind.str[:2]
 kodebm
 bm = pd.read_csv('IndexSektor.csv', sep=";")
-bm = bm.query("Sektor==@kodebm")
+bm = bm.query("Kode==@kodebm")
 bm
 #Sektor;EPS(Rp);BV(Rp);PER;PBV;DER;Kode
 bm = bm[['Sektor','EPSRp','BVRp','PER','PBV']]
