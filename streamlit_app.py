@@ -103,14 +103,14 @@ om  = df['om']
 dev = df['dev']
 roe = df['roe']
 
-st.subheader(f"MarginOps : {ceknon(om)}%| DevPR : {ceknon(dev)}%| ROE : {ceknon(roe)}%", divider="rainbow")
+st.subheader(f"MarginOps : {ceknon(om)}% | DevPR : {ceknon(dev)}% | ROE : {ceknon(roe)}%", divider="rainbow")
 
 #FINANCIAL
 EPS = 0
 BV = 0
 PER = 0
 PBV = 0
-st.subheader (f"EPS : {EPS}| BV : {BV}| PBV : {PBV}| PER : {PER}", divider="rainbow")
+st.subheader (f"EPS : {EPS} | BV : {BV} | PBV : {PBV} | PER : {PER}", divider="rainbow")
 
 
 
