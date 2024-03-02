@@ -121,7 +121,7 @@ else:
    per = fin[2]
    sek = fin[4]
    ind = fin[5][:2]
-   st.subheader(f"EPS : Rp.{eps} | BV : Rp.{bv} | PBV : {pbv} | PER : {per} Sektor : {sek}", divider="rainbow")
+   st.subheader(f"EPS : Rp.{eps} | BV : Rp.{bv} | PBV : {pbv} | PER : {per} | Sektor : {sek}", divider="rainbow")
 
    #BENCHMARK
    kodebm = ind
@@ -135,8 +135,8 @@ else:
    bmpbv = bm[4]
    bmper = bm[3]
    bmsek = bm[0]
-   st.subheader(f"EPS : Rp.{bmeps} | BV : Rp.{bmbv} | PBV : {bmpbv} | PER : {bmper} | SubSektor : {bmsek}", divider="rainbow")
-
+   st.subheader(f"STANDAR KINERJA EMITEN SEJENIS \nEPS : Rp.{bmeps} | BV : Rp.{bmbv} | PBV : {bmpbv} | PER : {bmper} | SubSektor : {bmsek}", divider="rainbow")
+st.subheader("RINGKASAN PORTOFOLIO", divider="rainbow")
 ##########Notasi Saham################
 kode = selected_emiten.split(' | ')[0]
 n = pd.read_csv('notasi.csv', sep=';')
