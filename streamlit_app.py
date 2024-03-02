@@ -126,7 +126,7 @@ kodebm = sek
 bm = pd.read_csv('IndexSektor.csv', sep=";")
 bm = bm.query("Sektor==@kodebm")
 #Sektor;EPS(Rp);BV(Rp);PER;PBV;DER;Kode
-bm = bm[['Sektor','EPS(Rp)','BV(Rp)','PER','PBV']]
+bm = bm[['Sektor','EPSRp','BVRp','PER','PBV']]
 bm = bm.values.tolist()
 bm = [item for sublist in bm for item in sublist]
 bmeps = bm[1]
