@@ -111,8 +111,8 @@ fin = pd.read_csv('Finansial.csv', sep=";")
 fin = fin.query("Kode==@kodef")
 fin = fin[['EPSRP','BVRP','PER','PBV','Sektor','KodeInd']]
 if fin.empty:
-   x = print("Perusahaan Kategori Baru")
-   return x
+   x = ("apple", "banana", "cherry")
+   return print(x)
 fin = fin.values.tolist()
 fin = [item for sublist in fin for item in sublist]
 eps = (fin[0])
