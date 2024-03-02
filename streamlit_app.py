@@ -110,7 +110,7 @@ f = pd.read_csv('Finansial.csv', sep=";")
 f = f[['Kode','EPS(RP)','BV(RP)','PER','PBV']]
 st.subheader (f"{selected_emiten.split(' | ')[0]}")
 kode = selected_emiten.split(' | ')[0]
-f = f.query("Kode == 'kode'")
+f = f.query("Kode == 'ADMR'")
 EPS = f['EPS(RP)']
 BV = f['BV(RP)']
 PER = f['PER']
