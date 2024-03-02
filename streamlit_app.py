@@ -112,7 +112,7 @@ fin = fin.query("Kode==@kodef")
 fin = fin[['EPSRP','BVRP','PER','PBV','Sektor','KodeInd']]
 if fin.empty:
    print("Perusahaan Kategori Baru")
-   return 
+   return fin
 fin = fin.values.tolist()
 fin = [item for sublist in fin for item in sublist]
 eps = (fin[0])
