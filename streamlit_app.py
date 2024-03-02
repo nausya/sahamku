@@ -137,7 +137,6 @@ else:
    bmsek = bm[0]
    st.subheader(f"STANDAR KINERJA EMITEN SEJENIS \n EPS : Rp.{bmeps} | BV : Rp.{bmbv} | PBV : {bmpbv} | PER : {bmper} | SubSektor : {bmsek}", divider="rainbow")
    deps = eps - bmeps
-   deps
    dbv = bv - bmbv
    dpbv = pbv/bmpbv
    dper = "Idealnya PER < 15"
