@@ -116,7 +116,8 @@ EPS = f['EPSRP']
 BV = f['BVRP']
 PBV = f['PBV']
 PER = f['PER']
-st.dataframe(PER[0])
+PER
+st.dataframe(PER)
 st.subheader (f"EPS : {EPS} | BV : {BV} | PBV : {PBV} | PER : {PER}", divider="rainbow")
 
 
