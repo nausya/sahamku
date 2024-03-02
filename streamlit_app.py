@@ -140,7 +140,7 @@ else:
    #dbv = bv - bmbv
    #dpbv = pbv/bmpbv
    #dper = "Idealnya PER < 15"
-   st.subheader(f"RINGKASAN PORTOFOLIO :  EPS : Rp.{deps} | BV : Rp.{dbv} | PBV : {dpbv} | PER : {dper}", divider="rainbow")
+   #st.subheader(f"RINGKASAN PORTOFOLIO :  EPS : Rp.{deps} | BV : Rp.{dbv} | PBV : {dpbv} | PER : {dper}", divider="rainbow")
 ##########Notasi Saham################
 kode = selected_emiten.split(' | ')[0]
 n = pd.read_csv('notasi.csv', sep=';')
