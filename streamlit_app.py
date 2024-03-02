@@ -106,11 +106,10 @@ roe = df['roe']
 st.subheader(f"MarginOps : {ceknon(om)}% | DevPR : {ceknon(dev)}% | ROE : {ceknon(roe)}%", divider="rainbow")
 
 #FINANSIAL
+kodef = selected_emiten.split(' | ')[0]
 f = pd.read_csv('Finansial.csv', sep=";")
 f = f[['Kode','EPS(RP)','BV(RP)','PER','PBV']]
-st.subheader (f"{selected_emiten.split(' | ')[0]}")
-kode = selected_emiten.split(' | ')[0]
-f = f.query("Kode == 'ADMR'")
+f = f.query("Kode=kodef")
 EPS = f['EPS(RP)']
 BV = f['BV(RP)']
 PER = f['PER']
