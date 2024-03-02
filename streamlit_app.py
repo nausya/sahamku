@@ -123,6 +123,7 @@ st.subheader(f"EPS : Rp.{eps} | BV : Rp.{bv} | PBV : {pbv} | PER : {per} Sektor 
 
 #BENCHMARK
 kodebm = sek
+kodebm
 bm = pd.read_csv('IndexSektor.csv', sep=";")
 bm = bm.query("Sektor==@kodebm")
 #Sektor;EPS(Rp);BV(Rp);PER;PBV;DER;Kode
