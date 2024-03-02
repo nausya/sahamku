@@ -115,12 +115,12 @@ f = f[['EPSRP','BVRP','PER','PBV']]
 #f = f.astype(float)
 f = f.fillna(0)
 f.dtypes
-eps = f['EPSRP']
-bv = f['BVRP']
+eps = float(f['EPSRP'])
+bv = float(f['BVRP'])
 pbv = f['PBV']
 per = f['PER']
 
-st.subheader ("EPS : {eps} | BV : {bv} | PBV : {pbv} | PER : {per}", divider="rainbow")
+st.subheader (f"EPS : {eps} | BV : {bv} | PBV : {pbv} | PER : {per}", divider="rainbow")
 
 
 
