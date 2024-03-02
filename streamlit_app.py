@@ -91,7 +91,6 @@ df = pd.DataFrame(screensaham)
 df = df.fillna(0)
 
 L52 = df['lo']
-L52
 H52 = df['hi']
 C = df['skg']
 D = (H52-L52)/100
@@ -110,8 +109,9 @@ st.subheader(f"MarginOps : {ceknon(om)}% | DevPR : {ceknon(dev)}% | ROE : {cekno
 #FINANSIAL
 kodef = selected_emiten.split(' | ')[0]
 f = pd.read_csv('Finansial.csv', sep=";")
-f = f[['Kode','EPSRP','BVRP','PER','PBV']].astype(float).astype(int)
 f = f.query("Kode==@kodef")
+f = f[['Kode','EPSRP','BVRP','PER','PBV']].astype(float).astype(int)
+f = f.fillna(0)
 eps = f['EPSRP']
 bv = f['BVRP']
 pbv = f['PBV']
