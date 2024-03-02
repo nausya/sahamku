@@ -114,12 +114,12 @@ f = f.query("Kode==@kodef")
 f = f[['EPSRP','BVRP','PER','PBV']]
 #f = f.astype(float)
 f = f.fillna(0)
-f.dtypes
-eps = f['EPSRP']
-bv = f['BVRP']
-pbv = f['PBV']
-per = f['PER']
 
+eps = f['EPSRP'].astype(int)
+f['BVRP'] = f['BVRP'].astype(int)
+f['PBV'] = f['PBV'].astype(int)
+per = f['PER']
+f.dtypes
 st.subheader (f"EPS : {eps} | BV : {bv} | PBV : {pbv} | PER : {per}", divider="rainbow")
 
 
