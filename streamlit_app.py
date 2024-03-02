@@ -110,7 +110,7 @@ EPS = 0
 BV = 0
 PER = 0
 PBV = 0
-st.subheader(f"EPS : EPS, BV : BV, PER : PER", PBV : PBV",divider="rainbow")
+st.subheader("EPS : EPS, BV : BV, PER : PER", PBV : PBV",divider="rainbow")
 
 
 ##########Notasi Saham################
