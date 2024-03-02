@@ -108,8 +108,8 @@ st.subheader(f"MarginOps : {ceknon(om)}% | DevPR : {ceknon(dev)}% | ROE : {cekno
 #FINANSIAL
 f = pd.read_csv('Finansial.csv', sep=";")
 f = f[['Kode','EPS(RP)','BV(RP)','PER','PBV']]
-st.subheader (f"{option}")
-f = f.query("Kode == 'option'")
+st.subheader (f"{selected_emiten.split(' | ')[0]}")
+f = f.query("Kode == 'kode'")
 EPS = f['EPS(RP)']
 BV = f['BV(RP)']
 PER = f['PER']
