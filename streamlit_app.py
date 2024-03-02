@@ -112,12 +112,10 @@ fin = fin.query("Kode==@kodef")
 fin = fin[['EPSRP','BVRP','PER','PBV']]
 fin = fin.values.tolist()
 fin = [item for sublist in fin for item in sublist]
-fin
-#eps = fin['EPSRP']
-#bv = fin['BVRP']
-#pbv = fin['PBV']
-#per = fin['PER']
-#fin.dtypes
+eps = fin[0]
+bv = fin[1]
+pbv = fin[2]
+per = fin[3]
 st.subheader(f"EPS : {eps} | BV : {bv} | PBV : {pbv} | PER : {per}", divider="rainbow")
 
 
