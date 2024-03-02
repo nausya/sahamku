@@ -114,7 +114,7 @@ EPS = f['EPS(RP)']
 BV = f['BV(RP)']
 PER = f['PER']
 PBV = f['PBV']
-st.subheader (f"EPS : {EPS} | BV : {BV} | PBV : {PBV} | PER : {PER}", divider="rainbow")
+st.subheader (f"EPS : {EPS(RP)} | BV : {BV(RP)} | PBV : {PBV} | PER : {PER}", divider="rainbow")
 
 
 
