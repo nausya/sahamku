@@ -110,7 +110,7 @@ EPS = 0
 BV = 0
 PER = 0
 PBV = 0
-st.subheader (f"EPS : {EPS}, BV : {dev}, PBV : {roe}, PER : {roe}", divider="rainbow")
+st.subheader (f"EPS : {EPS}, BV : {BV}, PBV : {PBV}, PER : {PER}", divider="rainbow")
 
 
 
