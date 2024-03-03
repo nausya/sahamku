@@ -146,7 +146,7 @@ else:
 
    #RINGKASAN
    #st.subheader(f"RINGKASAN PORTOFOLIO", divider="rainbow")
-   P = 5#P.values[0]
+   P = ['5']#P.values[0]
    P
    dfringkas = []
    dfringkas.append({'kode':kode,'skg':skg,'lo':lo,'hi':hi,'om':om,'dev':dev,'roe':roe,'pos':P,'eps':eps,'bv':bv,'pbv':pbv,'per':per})
