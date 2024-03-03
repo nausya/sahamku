@@ -99,7 +99,7 @@ for stock in saham:
         aksiy = info.get('recommendationKey')
         vol = info.get('averageDailyVolume10Day')
         m = info.get('twoHundredDayAverage')
-        cash = info.get('freeCashflow')
+        cash = info.get('totalCash')
         opcash = info.get('operatingCashflow')
         screensaham.append({'kode':kode,'skg':skg,'lo':lo,'hi':hi,'om':om,'dev':dev,'roe':roe})
 df = pd.DataFrame(screensaham)
