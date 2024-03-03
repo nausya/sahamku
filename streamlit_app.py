@@ -121,8 +121,7 @@ if fin.empty:
 else:
    fin = fin.values.tolist()
    fin = [item for sublist in fin for item in sublist]
-   eps = (fin[0])
-   
+   eps = fin[0]
    bv = fin[1]
    pbv = fin[3]
    per = fin[2]
