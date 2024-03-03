@@ -104,6 +104,7 @@ om  = df['om']
 dev = df['dev']
 roe = df['roe']
 st.subheader(f"MarginOps : {ceknon(om)}% | DevPR : {ceknon(dev)}% | ROE : {ceknon(roe)}%", divider="rainbow")
+P = df['P'].values[0]
 P
 #FINANSIAL
 kodef = selected_emiten.split(' | ')[0]
