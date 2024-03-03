@@ -157,7 +157,8 @@ else:
 
    #RINGKASAN
    #st.subheader(f"RINGKASAN PORTOFOLIO", divider="rainbow")
-   date = datetime.datetime.now(indonesia_timezone) 
+   date = datetime.datetime.now(indonesia_timezone)
+   date = date.strftime('%Y-%m-%d %H:%M:%S'))
    aksik = 0
    hostname = socket.gethostname()
    ip_address = socket.gethostbyname(hostname)
