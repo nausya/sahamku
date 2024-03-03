@@ -151,8 +151,6 @@ else:
    #RINGKASAN
    #st.subheader(f"RINGKASAN PORTOFOLIO", divider="rainbow")
    date = datetime.datetime.now() 
-   vol = 0 
-   aksiy = 0
    aksik = 0
    hostname = socket.gethostname()
    ip_address = socket.gethostbyname(hostname)
