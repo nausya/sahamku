@@ -146,7 +146,11 @@ else:
 
    #RINGKASAN
    #st.subheader(f"RINGKASAN PORTOFOLIO", divider="rainbow")
-   #date;vol;aksiy;aksik;id
+   date = 0 
+   vol = 0 
+   aksiy = 0
+   aksik = 0
+   id = 0
    dfringkas = {'date':date,'kode':kode,'skg':skg,'lo':lo,'hi':hi,'om':om,'dev':dev,'roe':roe,'pos':P,'eps':eps,'bv':bv,'pbv':pbv,'per':per,'vol':vol,'aksiy':aksiy,'aksik':aksik,'id':id}
    dfringkas = pd.DataFrame(dfringkas)
    dfringkas = dfringkas.fillna(0)
