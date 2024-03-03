@@ -121,15 +121,16 @@ if fin.empty:
 else:
    fin = fin.values.tolist()
    fin = [item for sublist in fin for item in sublist]
+   fin
    eps = (fin[0])
    
-   bv = round(fin[1])
+   bv = fin[1]
    pbv = fin[3]
    per = fin[2]
    sek = fin[4]
    ind = fin[5][:2]
     
-   st.subheader(f"EPS : Rp.{int(eps)} | BV : Rp.{bv} | PBV : {pbv} | PER : {per} | Sektor : {sek}", divider="rainbow")
+   st.subheader(f"EPS : Rp.{eps} | BV : Rp.{bv} | PBV : {pbv} | PER : {per} | Sektor : {sek}", divider="rainbow")
 
    #BENCHMARK
    kodebm = ind
