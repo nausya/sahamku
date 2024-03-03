@@ -121,8 +121,6 @@ if fin.empty:
 else:
    fin = fin.values.tolist()
    fin = [item for sublist in fin for item in sublist]
-   #fin = [int(float(x)) for x in fin]
-   fin
    eps = (fin[0])
    
    bv = fin[1]
