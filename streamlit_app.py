@@ -144,12 +144,13 @@ else:
    #dper = "Idealnya PER < 15"
 
    #RINGKASAN
+   #st.subheader(f"RINGKASAN PORTOFOLIO", divider="rainbow")
    dfringkas = []
-   dfringkas.append({'kode':kode,'skg':skg,'lo':lo,'hi':hi,'om':om,'dev':dev,'roe':roe})
+   dfringkas.append({'kode':kode,'skg':skg,'lo':lo,'hi':hi,'om':om,'dev':dev,'roe':roe,'pos':P,'eps':eps,'bv':bv,'pbv':pbv,'per':per})
    dfringkas = pd.DataFrame(screensaham)
    dfringkas = dfringkas.fillna(0)
    st.dataframe(dfringkas)
-   #st.subheader(f"RINGKASAN PORTOFOLIO :  EPS : Rp.{deps} | BV : Rp.{dbv} | PBV : {dpbv} | PER : {dper}", divider="rainbow")
+   
 ##########Notasi Saham################
 kode = selected_emiten.split(' | ')[0]
 n = pd.read_csv('notasi.csv', sep=';')
