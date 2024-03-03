@@ -12,6 +12,7 @@ from ta.volatility import BollingerBands
 from ta.trend import MACD, EMAIndicator, SMAIndicator
 from ta.momentum import RSIIndicator
 import datetime
+import pytz
 from datetime import date
 import socket
 from csv import writer
@@ -23,6 +24,12 @@ from xgboost import XGBRegressor
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.ensemble import ExtraTreesRegressor
 from sklearn.metrics import r2_score, mean_absolute_error
+
+# Tentukan zona waktu Indonesia
+indonesia_timezone = pytz.timezone('Asia/Jakarta')
+
+# Dapatkan waktu saat ini
+datetime.now(indonesia_timezone)
 
 st.sidebar.info('SELAMAT DATANG (Versi Beta)')
 st.title('ANALITIK SAHAM INDONESIA') 
