@@ -98,6 +98,7 @@ for stock in saham:
         pbv = info.get('priceToBook')
         aksiy = info.get('recommendationKey')
         vol = info.get('averageDailyVolume10Day')
+        6m = info.get('twoHundredDayAverage')
         screensaham.append({'kode':kode,'skg':skg,'lo':lo,'hi':hi,'om':om,'dev':dev,'roe':roe})
 df = pd.DataFrame(screensaham)
 df = df.fillna(0)
@@ -163,7 +164,7 @@ else:
    hostname = socket.gethostname()
    ip_address = socket.gethostbyname(hostname)
    id = hostname+"-"+ip_address
-   dfringkas = {'date':date,'kode':kode,'skg':skg,'1ylo':lo,'1yhi':hi,'om':om,'dev':dev,'roe':roe,'pos':P,'eps':eps,'bv':bv,'pbv':pbv,'per':per,'vol':vol,'aksiy':aksiy,'aksik':aksik,'user':id}
+   dfringkas = {'date':date,'kode':kode,'skg':skg,'1ylo':lo,'6m':6m,'1yhi':hi,'om':om,'dev':dev,'roe':roe,'pos':P,'eps':eps,'bv':bv,'pbv':pbv,'per':per,'vol':vol,'aksiy':aksiy,'aksik':aksik,'user':id}
    with open('aksi.csv', 'a') as f_object:
         writer_object = writer(f_object)
         writer_object.writerow(dfringkas)
