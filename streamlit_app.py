@@ -147,7 +147,7 @@ else:
    #RINGKASAN
    #st.subheader(f"RINGKASAN PORTOFOLIO", divider="rainbow")
    dfringkas = []
-   dfringkas.append({'kode':kode,'skg':skg,'lo':lo,'hi':hi,'om':om,'dev':dev,'roe':roe,'pos':P.values[0],'eps':eps.values[0],'bv':bv.values[0],'pbv':pbv.values[0],'per':per.values[0]})
+   dfringkas.append({'kode':kode,'skg':skg,'lo':lo,'hi':hi,'om':om,'dev':dev,'roe':roe,'pos':P.values[0],'eps':eps,'bv':bv,'pbv':pbv,'per':per})
    dfringkas = pd.DataFrame(screensaham)
    dfringkas = dfringkas.fillna(0)
    st.dataframe(dfringkas)
