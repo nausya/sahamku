@@ -168,7 +168,7 @@ else:
    id = hostname+"-"+ip_address
    cash = cash/1000000000
    opcash = opcash/1000000000
-   dfringkas = {'date':date,'kode':kode,'skg':skg,'1ylo':lo,'6m':int(m),'1yhi':hi,'om':om,'cash(M)':int(cash),'opcash(M)':int(opcash),'dev':dev,'roe':roe,'pos':P,'eps':eps,'bv':int(bv),'pbv':pbv,'per':per,'vol':vol,'aksiy':aksiy,'aksik':aksik,'user':id}
+   dfringkas = {'date':date,'kode':kode,'skg':skg,'1ylo':lo,'6m':int(m),'1yhi':hi,'om':om,'cash(M)':int(cash),'opcash(M)':int(opcash),'dev':dev,'roe':roe,'pos':P,'eps':eps,'bv':bv,'pbv':pbv,'per':per,'vol':vol,'aksiy':aksiy,'aksik':aksik,'user':id}
    with open('aksi.csv', 'a') as f_object:
         writer_object = writer(f_object)
         writer_object.writerow(dfringkas)
