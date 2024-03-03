@@ -149,7 +149,7 @@ else:
    P = ['5']#P.values[0]
    P
    dfringkas = []
-   dfringkas.append({'kode':kode,'skg':skg,'lo':lo,'hi':hi,'om':om,'dev':dev,'roe':roe,'pos':P,'eps':eps,'bv':bv,'pbv':pbv,'per':per})
+   dfringkas.append({'kode':kode,'skg':skg,'lo':lo,'hi':hi,'om':om,'dev':dev,'roe':roe,'pos':P[0],'eps':eps,'bv':bv,'pbv':pbv,'per':per})
    dfringkas = pd.DataFrame(screensaham)
    dfringkas = dfringkas.fillna(0)
    st.dataframe(dfringkas)
