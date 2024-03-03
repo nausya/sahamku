@@ -14,6 +14,7 @@ from ta.momentum import RSIIndicator
 import datetime
 from datetime import date
 import socket
+from csv import writer
 from sklearn.preprocessing import StandardScaler
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LinearRegression
@@ -156,6 +157,13 @@ else:
    ip_address = socket.gethostbyname(hostname)
    id = hostname+"-"+ip_address
    dfringkas = {'date':date,'kode':kode,'skg':skg,'lo':lo,'hi':hi,'om':om,'dev':dev,'roe':roe,'pos':P,'eps':eps,'bv':bv,'pbv':pbv,'per':per,'vol':vol,'aksiy':aksiy,'aksik':aksik,'user':id}
+   with open('aksi.csv', 'a') as f_object:
+   writer_object = writer(f_object)
+   writer_object.writerow(dfringkas)
+   f_object.close()
+
+    
+
    dfringkas = pd.DataFrame(dfringkas)
    #df.to_csv("ringkas.csv", index=False)
    #dfringkas = dfringkas.fillna(0)
