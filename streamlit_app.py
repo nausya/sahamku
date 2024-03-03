@@ -104,8 +104,8 @@ om  = df['om']
 dev = df['dev']
 roe = df['roe']
 st.subheader(f"MarginOps : {ceknon(om)}% | DevPR : {ceknon(dev)}% | ROE : {ceknon(roe)}%", divider="rainbow")
-P = P.values[0]
-P
+ 
+
 #FINANSIAL
 kodef = selected_emiten.split(' | ')[0]
 fin = pd.read_csv('Finansial.csv', sep=";")
@@ -147,7 +147,7 @@ else:
    #RINGKASAN
    #st.subheader(f"RINGKASAN PORTOFOLIO", divider="rainbow")
    dfringkas = []
-   dfringkas.append({'kode':kode,'skg':skg,'lo':lo,'hi':hi,'om':om,'dev':dev,'roe':roe,'pos':P,'eps':eps,'bv':bv,'pbv':pbv,'per':per})
+   dfringkas.append({'kode':kode,'skg':skg,'lo':lo,'hi':hi,'om':om,'dev':dev,'roe':roe,'pos':P.values[0],'eps':eps.values[0],'bv':bv.values[0],'pbv':pbv.values[0],'per':per.values[0]})
    dfringkas = pd.DataFrame(screensaham)
    dfringkas = dfringkas.fillna(0)
    st.dataframe(dfringkas)
