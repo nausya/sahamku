@@ -173,7 +173,7 @@ else:
 
    dfringkas = pd.DataFrame(dfringkas)
    #df.to_csv("ringkas.csv", index=False)
-   #dfringkas = dfringkas.fillna(0)
+   dfringkas = dfringkas.fillna(0)
    st.dataframe(dfringkas)
    
 ##########Notasi Saham################
