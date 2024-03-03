@@ -156,7 +156,7 @@ else:
    ip_address = socket.gethostbyname(hostname)
    id = hostname+"-"+ip_address
    dfringkas = {'date':date,'kode':kode,'skg':skg,'lo':lo,'hi':hi,'om':om,'dev':dev,'roe':roe,'pos':P,'eps':eps,'bv':bv,'pbv':pbv,'per':per,'vol':vol,'aksiy':aksiy,'aksik':aksik,'user':id}
-   dfringkas = pd.DataFrame(dfringkas)
+   dfringkas = pd.DataFrame(dfringkas, index_col=[0])
    dfringkas = dfringkas.fillna(0)
    st.dataframe(dfringkas)
    
