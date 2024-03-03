@@ -129,7 +129,7 @@ else:
    sek = fin[4]
    ind = fin[5][:2]
     
-   st.subheader(f"EPS : Rp.{round(eps,2)*100} | BV : Rp.{bv} | PBV : {pbv} | PER : {per} | Sektor : {sek}", divider="rainbow")
+   st.subheader(f"EPS : Rp.{int(eps)} | BV : Rp.{bv} | PBV : {pbv} | PER : {per} | Sektor : {sek}", divider="rainbow")
 
    #BENCHMARK
    kodebm = ind
