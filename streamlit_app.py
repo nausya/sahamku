@@ -13,6 +13,7 @@ from ta.trend import MACD, EMAIndicator, SMAIndicator
 from ta.momentum import RSIIndicator
 import datetime
 from datetime import date
+import socket
 from sklearn.preprocessing import StandardScaler
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LinearRegression
@@ -146,11 +147,13 @@ else:
 
    #RINGKASAN
    #st.subheader(f"RINGKASAN PORTOFOLIO", divider="rainbow")
-   date = 0 
+   date = datetime.datetime.now() 
    vol = 0 
    aksiy = 0
    aksik = 0
-   id = 0
+   hostname = socket.gethostname()
+   ip_address = socket.gethostbyname(hostname)
+   id = hostname+"-"+ip_address
    dfringkas = {'date':date,'kode':kode,'skg':skg,'lo':lo,'hi':hi,'om':om,'dev':dev,'roe':roe,'pos':P,'eps':eps,'bv':bv,'pbv':pbv,'per':per,'vol':vol,'aksiy':aksiy,'aksik':aksik,'id':id}
    dfringkas = pd.DataFrame(dfringkas)
    dfringkas = dfringkas.fillna(0)
