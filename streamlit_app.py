@@ -380,4 +380,4 @@ def screener():
 if __name__ == '__main__':
     main()
     
-st.sidebar.info("Desain Jonaben & modifikasi oleh DwiA")
+#st.sidebar.info("@2024")
