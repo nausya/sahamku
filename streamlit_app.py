@@ -29,7 +29,7 @@ from sklearn.metrics import r2_score, mean_absolute_error
 indonesia_timezone = pytz.timezone('Asia/Jakarta')
 
 # Dapatkan waktu saat ini
-datetime.now(indonesia_timezone)
+# datetime.now(indonesia_timezone)
 
 st.sidebar.info('SELAMAT DATANG (Versi Beta)')
 st.title('ANALITIK SAHAM INDONESIA') 
@@ -157,7 +157,7 @@ else:
 
    #RINGKASAN
    #st.subheader(f"RINGKASAN PORTOFOLIO", divider="rainbow")
-   date = datetime.datetime.now() 
+   date = datetime.datetime.now(indonesia_timezone) 
    aksik = 0
    hostname = socket.gethostname()
    ip_address = socket.gethostbyname(hostname)
