@@ -80,7 +80,7 @@ def ceknon(x):
     elif x == 0:
        return 0
     else:
-       st.error('This is an error', icon="🚨")
+       return 0 #st.error('This is an error', icon="🚨")
 
 #Display Persentil
 saham = [option]
