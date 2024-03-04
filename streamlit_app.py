@@ -80,7 +80,8 @@ def ceknon(x):
     elif x == 0:
        return 0
     else:
-       return 0 #st.error('This is an error', icon="🚨")
+       return 0 
+        #st.error('This is an error', icon="🚨")
 
 #Display Persentil
 saham = [option]
@@ -93,8 +94,8 @@ for stock in saham:
         lo  = info.get('fiftyTwoWeekLow')
         hi  = info.get('fiftyTwoWeekHigh')
         om  = ceknon(info.get('operatingMargins'))
-        dev = info.get('payoutRatio')
-        roe =  info.get('returnOnEquity')
+        dev = ceknon(info.get('payoutRatio'))
+        roe =  ceknon(info.get('returnOnEquity'))
         pery = ceknon(info.get('forwardPE'))
         epsy = info.get('trailingEps')
         pbvy = info.get('priceToBook')
@@ -175,7 +176,7 @@ else:
    vol = vol/1000000
 
    dfringkas = {'date':date,'kode':kode,'skg':skg,'1ylo':lo,'6m':int(m),'1yhi':hi,'om(%)':om,
-                'dev(%)':int(round(dev,2)*100),'roe(%)':int(round(roe,2)*100),'pos':round(P,0),'cash(M)':int(cash),
+                'dev(%)':dev,'roe(%)':roe,'pos':round(P,0),'cash(M)':int(cash),
                 'opcash(M)':int(opcash),'cash/saham(Rp)':int(tcs),'eps(Rp)':int(epsy),'bv(Rp)':int(bvy),'pbv':round(pbvy,2),
                 'per':int(pery),'vol(Juta)':round(vol,0),'aksiy':aksiy,'aksik':aksik,'user':id}
    with open('aksi.csv', 'a') as f_object:
