@@ -175,7 +175,7 @@ else:
                 'dev(%)':dev,'roe(%)':roe,'pos':round(P,0),'cash(M)':int(cash),
                 'opcash(M)':int(opcash),'cash/saham(Rp)':int(tcs),'eps(Rp)':int(epsy),'bv(Rp)':int(bvy),'pbv':round(pbvy,2),
                 'per':pery,'vol(Juta)':round(vol,0),'aksiy':aksiy,'aksik':aksik,'user':id}
-   dfringkas.fillna(0)
+   
    with open('aksi.csv', 'a') as f_object:
         writer_object = writer(f_object)
         writer_object.writerow(dfringkas)
