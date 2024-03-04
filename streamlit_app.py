@@ -95,7 +95,8 @@ for stock in saham:
         om  = info.get('operatingMargins')
         dev = info.get('payoutRatio')
         roe =  info.get('returnOnEquity')
-        pbv = info.get('priceToBook')
+        pbvy = info.get('priceToBook')
+        bvy = info.get('bookValue')
         aksiy = info.get('recommendationKey')
         vol = info.get('averageDailyVolume10Day')
         m = info.get('twoHundredDayAverage')
@@ -170,7 +171,7 @@ else:
    cash = cash/1000000000
    opcash = opcash/1000000000
    vol = vol/1000000
-   dfringkas = {'date':date,'kode':kode,'skg':skg,'1ylo':lo,'6m':int(m),'1yhi':hi,'om(%)':int(round(om,2)*100),'dev(%)':int(round(dev,2)*100),'roe(%)':int(round(roe,2)*100),'pos':round(P,0),'cash(M)':int(cash),'opcash(M)':int(opcash),'cash/saham(Rp)':int(tcs),'eps(Rp)':eps,'bv(Rp)':bv,'pbv':pbv,'per':per,'vol(Juta)':round(vol,0),'aksiy':aksiy,'aksik':aksik,'user':id}
+   dfringkas = {'date':date,'kode':kode,'skg':skg,'1ylo':lo,'6m':int(m),'1yhi':hi,'om(%)':int(round(om,2)*100),'dev(%)':int(round(dev,2)*100),'roe(%)':int(round(roe,2)*100),'pos':round(P,0),'cash(M)':int(cash),'opcash(M)':int(opcash),'cash/saham(Rp)':int(tcs),'eps(Rp)':eps,'bv(Rp)':int(bvy),'pbv':pbvy,'per':per,'vol(Juta)':round(vol,0),'aksiy':aksiy,'aksik':aksik,'user':id}
    with open('aksi.csv', 'a') as f_object:
         writer_object = writer(f_object)
         writer_object.writerow(dfringkas)
