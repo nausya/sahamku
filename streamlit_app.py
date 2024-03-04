@@ -173,7 +173,7 @@ else:
    cash = cash/1000000000
    opcash = opcash/1000000000
    vol = vol/1000000
-   dfringkas = {'date':date,'kode':kode,'skg':skg,'1ylo':lo,'6m':int(m),'1yhi':hi,'om(%)':int(round(om,2)*100),'dev(%)':int(round(dev,2)*100),'roe(%)':int(round(roe,2)*100),'pos':round(P,0),'cash(M)':int(cash),'opcash(M)':int(opcash),'cash/saham(Rp)':int(tcs),'eps(Rp)':int(epsy),'bv(Rp)':int(bvy),'pbv':round(pbvy,2),'per':per,'vol(Juta)':round(vol,0),'aksiy':aksiy,'aksik':aksik,'user':id}
+   dfringkas = {'date':date,'kode':kode,'skg':skg,'1ylo':lo,'6m':int(m),'1yhi':hi,'om(%)':int(round(om,2)*100),'dev(%)':int(round(dev,2)*100),'roe(%)':int(round(roe,2)*100),'pos':round(P,0),'cash(M)':int(cash),'opcash(M)':int(opcash),'cash/saham(Rp)':int(tcs),'eps(Rp)':int(epsy),'bv(Rp)':int(bvy),'pbv':round(pbvy,2),'per':round(pery),'vol(Juta)':round(vol,0),'aksiy':aksiy,'aksik':aksik,'user':id}
    with open('aksi.csv', 'a') as f_object:
         writer_object = writer(f_object)
         writer_object.writerow(dfringkas)
