@@ -120,9 +120,6 @@ if int(D) > 0 :
 else : 
     P = 0
 st.subheader(f"Harga terkini Rp {int(C)} berada pada posisi ke-{int(P)} dari ketinggian 100", divider="rainbow")
-#om  = df['om']
-#dev = df['dev']
-#roe = df['roe']
 st.subheader(f"MarginOps : {om}% | DevPR : {dev}% | ROE : {roe}%", divider="rainbow")
  
 
@@ -155,7 +152,7 @@ else:
    bmeps = bm[1]
    bmbv = bm[2]
    bmpbv = bm[4]
-   bmper = bm[3]
+   bmper = float(bm[3])
    bmsek = bm[0]
    st.subheader(f"STANDAR KINERJA EMITEN SEJENIS \n EPS : Rp.{bmeps} | BV : Rp.{bmbv} | PBV : {bmpbv} | PER : {bmper} | SubSektor : {bmsek}", divider="rainbow")
    #deps = eps - bmeps
