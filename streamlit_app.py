@@ -138,10 +138,10 @@ else:
    per = fin[2]
    sek = fin[4]
    ind = fin[5][:2]
-   pery = int(pery) if pery !=None else 0
-   bvy = int(bvy) if bvy !=None else 0
-   pbvy = int(pbvy) if pbvy !=None else 0
-   vol = int(vol) if vol !=None else 0
+   #pery = int(pery) if pery !=None else 0
+   #bvy = int(bvy) if bvy !=None else 0
+   #pbvy = int(pbvy) if pbvy !=None else 0
+   #vol = int(vol) if vol !=None else 0
    st.subheader(f"EPS : Rp.{epsy} | BV : Rp.{bvy} | PBV : {pbvy} | PER : {pery} | Sektor : {sek}", divider="rainbow")
 
    #BENCHMARK
