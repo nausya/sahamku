@@ -85,7 +85,7 @@ def ceknon(x):
 
 #Display Persentil
 saham = [option]
-
+saham
 screensaham = []
 for stock in saham:
         info = yf.Ticker(stock).info
@@ -97,7 +97,7 @@ for stock in saham:
         dev = ceknon(info.get('payoutRatio'))
         roe =  ceknon(info.get('returnOnEquity'))
         pery = ceknon(info.get('forwardPE'))
-        epsy = info.get('trailingEps')
+        epsy = info.get('forwardEps')
         pbvy = info.get('priceToBook')
         bvy = info.get('bookValue')
         aksiy = info.get('recommendationKey')
