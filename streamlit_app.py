@@ -120,10 +120,10 @@ if int(D) > 0 :
 else : 
     P = 0
 st.subheader(f"Harga terkini Rp {int(C)} berada pada posisi ke-{int(P)} dari ketinggian 100", divider="rainbow")
-om  = df['om']
-dev = df['dev']
-roe = df['roe']
-st.subheader(f"MarginOps : {ceknon(om)}% | DevPR : {ceknon(dev)}% | ROE : {ceknon(roe)}%", divider="rainbow")
+#om  = df['om']
+#dev = df['dev']
+#roe = df['roe']
+st.subheader(f"MarginOps : {om}% | DevPR : {dev}% | ROE : {roe}%", divider="rainbow")
  
 
 #FINANSIAL
