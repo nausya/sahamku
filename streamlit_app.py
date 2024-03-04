@@ -174,7 +174,7 @@ else:
 
    dfringkas = {'date':date,'kode':kode,'skg':skg,'1ylo':lo,'6m':int(m),'1yhi':hi,'om(%)':om,
                 'dev(%)':dev,'roe(%)':roe,'pos':round(P,0),'cash(M)':int(cash),
-                'opcash(M)':int(opcash),'cash/saham(Rp)':int(tcs),'eps(Rp)':int(epsy),'bv(Rp)':int(bvy),'pbv':round(pbvy,2),
+                'opcash(M)':int(opcash),'cash/saham(Rp)':int(tcs),'eps(Rp)':epsy,'bv(Rp)':int(bvy),'pbv':round(pbvy,2),
                 'per':pery,'vol(Juta)':round(vol,0),'aksiy':aksiy,'aksik':aksik,'user':id}
    
    with open('aksi.csv', 'a') as f_object:
