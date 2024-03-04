@@ -96,7 +96,7 @@ for stock in saham:
     om  = ceknon(info.get('operatingMargins'))
     dev = ceknon(info.get('payoutRatio'))
     roe =  ceknon(info.get('returnOnEquity'))
-    pery = round(info.get('forwardPE'),0)
+    pery = float(info.get('forwardPE'))
     epsy = info.get('forwardEps')
     pbvy = info.get('priceToBook')
     bvy = info.get('bookValue')
