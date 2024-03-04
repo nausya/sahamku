@@ -141,6 +141,7 @@ else:
    pery = int(pery) if pery !=None else 0
    bvy = int(bvy) if bvy !=None else 0
    pbvy = int(pbvy) if pbvy !=None else 0
+   vol = int(vol) if vol !=None else 0
    st.subheader(f"EPS : Rp.{epsy} | BV : Rp.{bvy} | PBV : {pbvy} | PER : {pery} | Sektor : {sek}", divider="rainbow")
 
    #BENCHMARK
@@ -171,7 +172,6 @@ else:
    id = hostname+"-"+ip_address
    cash = cash/1000000000
    opcash = opcash/1000000000
-   vol 
    vol = vol/1000000
 
    dfringkas = {'date':date,'kode':kode,'skg':skg,'1ylo':lo,'6m':int(m),'1yhi':hi,'om(%)':om,
