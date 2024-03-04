@@ -85,9 +85,9 @@ def ceknon(x):
 
 #Display Persentil
 saham = [option]
-saham[0]
-screensaham = []
-for stock in saham:
+stock = saham[0]
+#screensaham = []
+#for stock in saham:
         info = yf.Ticker(stock).info
         kode = stock.replace('.JK','')
         skg = info.get('currentPrice')
@@ -106,7 +106,7 @@ for stock in saham:
         cash = info.get('totalCash')
         opcash = info.get('operatingCashflow')
         tcs = info.get('totalCashPerShare')
-        screensaham.append({'kode':kode,'skg':skg,'lo':lo,'hi':hi,'om':om,'dev':dev,'roe':roe})
+        screensaham = {'kode':kode,'skg':skg,'lo':lo,'hi':hi,'om':om,'dev':dev,'roe':roe}
 df = pd.DataFrame(screensaham)
 df = df.fillna(0)
 
