@@ -139,7 +139,7 @@ else:
    sek = fin[4]
    ind = fin[5][:2]
    pery if pery !=None else 0
-   st.subheader(f"EPS : Rp.{int(epsy)} | BV : Rp.{int(bvy)} | PBV : {int(pbvy)} | PER : {float(pery)} | Sektor : {sek}", divider="rainbow")
+   st.subheader(f"EPS : Rp.{int(epsy)} | BV : Rp.{int(bvy)} | PBV : {int(pbvy)} | PER : {pery} | Sektor : {sek}", divider="rainbow")
 
    #BENCHMARK
    kodebm = ind
