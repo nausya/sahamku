@@ -171,7 +171,7 @@ else:
    cash = cash/1000000000
    opcash = opcash/1000000000
    vol = vol/1000000
-
+   pery
    dfringkas = {'date':date,'kode':kode,'skg':skg,'1ylo':lo,'6m':int(m),'1yhi':hi,'om(%)':om,
                 'dev(%)':dev,'roe(%)':roe,'pos':round(P,0),'cash(M)':int(cash),
                 'opcash(M)':int(opcash),'cash/saham(Rp)':int(tcs),'eps(Rp)':int(epsy),'bv(Rp)':int(bvy),'pbv':round(pbvy,2),
