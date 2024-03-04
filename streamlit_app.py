@@ -109,7 +109,6 @@ for stock in saham:
     screensaham.append({'kode':kode,'skg':skg,'lo':lo,'hi':hi,'om':om,'dev':dev,'roe':roe})
 df = pd.DataFrame(screensaham)
 df = df.fillna(0)
-pery
 L52 = df['lo']
 H52 = df['hi']
 C = df['skg']
@@ -171,11 +170,11 @@ else:
    cash = cash/1000000000
    opcash = opcash/1000000000
    vol = vol/1000000
-   pery
+
    dfringkas = {'date':date,'kode':kode,'skg':skg,'1ylo':lo,'6m':int(m),'1yhi':hi,'om(%)':om,
                 'dev(%)':dev,'roe(%)':roe,'pos':round(P,0),'cash(M)':int(cash),
                 'opcash(M)':int(opcash),'cash/saham(Rp)':int(tcs),'eps(Rp)':int(epsy),'bv(Rp)':int(bvy),'pbv':round(pbvy,2),
-                'per':int(pery),'vol(Juta)':round(vol,0),'aksiy':aksiy,'aksik':aksik,'user':id}
+                'per':pery,'vol(Juta)':round(vol,0),'aksiy':aksiy,'aksik':aksik,'user':id}
    dfringkas.fillna(0)
    with open('aksi.csv', 'a') as f_object:
         writer_object = writer(f_object)
