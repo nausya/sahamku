@@ -85,7 +85,7 @@ def ceknon(x):
 
 #Display Persentil
 saham = [option]
-saham
+saham[0]
 screensaham = []
 for stock in saham:
         info = yf.Ticker(stock).info
