@@ -152,9 +152,9 @@ else:
    bmeps = bm[1]
    bmbv = bm[2]
    bmpbv = bm[4]
-   bmper = int(bm[3])
+   bmper = bm[3]
    bmsek = bm[0]
-   st.subheader(f"STANDAR KINERJA EMITEN SEJENIS \n EPS : Rp.{bmeps} | BV : Rp.{bmbv} | PBV : {bmpbv} | PER : {bmper} | SubSektor : {bmsek}", divider="rainbow")
+   st.subheader(f"STANDAR KINERJA EMITEN SEJENIS \n EPS : Rp.{bmeps} | BV : Rp.{bmbv} | PBV : {bmpbv} | PER : {int(bmper)} | SubSektor : {bmsek}", divider="rainbow")
    #deps = eps - bmeps
    #dbv = bv - bmbv
    #dpbv = pbv/bmpbv
