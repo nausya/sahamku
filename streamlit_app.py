@@ -85,28 +85,28 @@ def ceknon(x):
 
 #Display Persentil
 saham = [option]
-stock = saham[0]
-#screensaham = []
-#for stock in saham:
-info = yf.Ticker(stock).info
-kode = stock.replace('.JK','')
-skg = info.get('currentPrice')
-lo  = info.get('fiftyTwoWeekLow')
-hi  = info.get('fiftyTwoWeekHigh')
-om  = ceknon(info.get('operatingMargins'))
-dev = ceknon(info.get('payoutRatio'))
-roe =  ceknon(info.get('returnOnEquity'))
-pery = ceknon(info.get('forwardPE'))
-epsy = info.get('forwardEps')
-pbvy = info.get('priceToBook')
-bvy = info.get('bookValue')
-aksiy = info.get('recommendationKey')
-vol = info.get('averageDailyVolume10Day')
-m = info.get('twoHundredDayAverage')
-cash = info.get('totalCash')
-opcash = info.get('operatingCashflow')
-tcs = info.get('totalCashPerShare')
-screensaham = {'kode':kode,'skg':skg,'lo':lo,'hi':hi,'om':om,'dev':dev,'roe':roe}
+
+screensaham = []
+for stock in saham:
+    info = yf.Ticker(stock).info
+    kode = stock.replace('.JK','')
+    skg = info.get('currentPrice')
+    lo  = info.get('fiftyTwoWeekLow')
+    hi  = info.get('fiftyTwoWeekHigh')
+    om  = ceknon(info.get('operatingMargins'))
+    dev = ceknon(info.get('payoutRatio'))
+    roe =  ceknon(info.get('returnOnEquity'))
+    pery = ceknon(info.get('forwardPE'))
+    epsy = info.get('forwardEps')
+    pbvy = info.get('priceToBook')
+    bvy = info.get('bookValue')
+    aksiy = info.get('recommendationKey')
+    vol = info.get('averageDailyVolume10Day')
+    m = info.get('twoHundredDayAverage')
+    cash = info.get('totalCash')
+    opcash = info.get('operatingCashflow')
+    tcs = info.get('totalCashPerShare')
+    screensaham.append({'kode':kode,'skg':skg,'lo':lo,'hi':hi,'om':om,'dev':dev,'roe':roe})
 df = pd.DataFrame(screensaham)
 df = df.fillna(0)
 
