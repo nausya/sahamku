@@ -139,7 +139,6 @@ else:
    sek = fin[4]
    ind = fin[5][:2]
    pery = int(pery) if pery !=None else 0
-   pery
    st.subheader(f"EPS : Rp.{epsy} | BV : Rp.{int(bvy)} | PBV : {int(pbvy)} | PER : {pery} | Sektor : {sek}", divider="rainbow")
 
    #BENCHMARK
