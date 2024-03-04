@@ -171,6 +171,7 @@ else:
    id = hostname+"-"+ip_address
    cash = cash/1000000000
    opcash = opcash/1000000000
+   vol 
    vol = vol/1000000
 
    dfringkas = {'date':date,'kode':kode,'skg':skg,'1ylo':lo,'6m':int(m),'1yhi':hi,'om(%)':om,
