@@ -109,7 +109,7 @@ for stock in saham:
     screensaham.append({'kode':kode,'skg':skg,'lo':lo,'hi':hi,'om':om,'dev':dev,'roe':roe})
 df = pd.DataFrame(screensaham)
 df = df.fillna(0)
-
+pery
 L52 = df['lo']
 H52 = df['hi']
 C = df['skg']
@@ -139,7 +139,7 @@ else:
    per = fin[2]
    sek = fin[4]
    ind = fin[5][:2]
-    
+   pery 
    st.subheader(f"EPS : Rp.{int(epsy)} | BV : Rp.{int(bvy)} | PBV : {int(pbvy)} | PER : {pery} | Sektor : {sek}", divider="rainbow")
 
    #BENCHMARK
