@@ -143,7 +143,7 @@ else:
    sek = fin[4]
    ind = fin[5][:2]
     
-   st.subheader(f"EPS : Rp.{ceknon(epsy)} | BV : Rp.{ceknon(bvy)} | PBV : {ceknon(pbvy)} | PER : {ceknon(pery)} | Sektor : {sek}", divider="rainbow")
+   st.subheader(f"EPS : Rp.{int(epsy)} | BV : Rp.{int(bvy)} | PBV : {int(pbvy)} | PER : {int(pery)} | Sektor : {sek}", divider="rainbow")
 
    #BENCHMARK
    kodebm = ind
