@@ -108,7 +108,7 @@ for stock in saham:
     tcs = info.get('totalCashPerShare')
     screensaham.append({'kode':kode,'skg':skg,'lo':lo,'hi':hi,'om':om,'dev':dev,'roe':roe,
                        'pery':pery,'epsy':epsy,'pbvy':pbvy,'bvy':bvy,'aksiy':aksiy,'vol':vol,
-                       'm':m,'cash':cash,'opcash':opcash,'tcs':tcs,})
+                       'm':m,'cash':cash,'opcash':opcash,'tcs':tcs})
 df = pd.DataFrame(screensaham)
 df = df.fillna(0)
 L52 = df['lo']
@@ -189,8 +189,6 @@ else:
     
 
    dfringkas = pd.DataFrame(dfringkas)
-   #df.to_csv("ringkas.csv", index=False)
-   dfringkas = dfringkas.fillna(0)
    st.dataframe(dfringkas)
    
 ##########Notasi Saham################
