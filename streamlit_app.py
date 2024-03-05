@@ -106,7 +106,9 @@ for stock in saham:
     cash = info.get('totalCash')
     opcash = info.get('operatingCashflow')
     tcs = info.get('totalCashPerShare')
-    screensaham.append({'kode':kode,'skg':skg,'lo':lo,'hi':hi,'om':om,'dev':dev,'roe':roe})
+    screensaham.append({'kode':kode,'skg':skg,'lo':lo,'hi':hi,'om':om,'dev':dev,'roe':roe,
+                       'pery':pery,'epsy':epsy,'pbvy':pbvy,'bvy':bvy,'aksiy':aksiy,'vol':vol,
+                       'm':m,'cash':cash,'opcash':opcash,'tcs':tcs,})
 df = pd.DataFrame(screensaham)
 df = df.fillna(0)
 L52 = df['lo']
