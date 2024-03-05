@@ -35,7 +35,9 @@ st.sidebar.info('SELAMAT DATANG (Versi Beta)')
 st.title('ANALITIK SAHAM INDONESIA') 
 
 def main():
-    selected2 = option_menu(None, ["Home", "Cari Data", "Screener", 'Prediksi'], icons=['house', 'file-earmark-text', 'sliders2-vertical', 'graph-up-arrow'], menu_icon="cast", default_index=0, orientation="horizontal")
+    selected2 = option_menu(None, ["Home", "Cari Data", "Screener", 'Prediksi'], 
+                            icons=['house', 'file-earmark-text', 
+                            'sliders2-vertical', 'graph-up-arrow'], menu_icon="cast", default_index=0, orientation="horizontal")
     if selected2 == 'Cari Data':
          dataframe()
     elif selected2 == 'Screener':
@@ -105,10 +107,12 @@ for stock in saham:
     m = info.get('twoHundredDayAverage')
     cash = info.get('totalCash')
     opcash = info.get('operatingCashflow')
+    ph = info.get('totalRevenue')
+    ut = info.get(totalDebt')
     tcs = info.get('totalCashPerShare')
     screensaham.append({'kode':kode,'skg':skg,'lo':lo,'hi':hi,'om':om,'dev':dev,'roe':roe,
                        'pery':pery,'epsy':epsy,'pbvy':pbvy,'bvy':bvy,'aksiy':aksiy,'vol':vol,
-                       'm':m,'cash':cash,'opcash':opcash,'tcs':tcs})
+                       'm':m,'cash':cash,'opcash':opcash,'ph':ph,'ut':ut,'tcs':tcs})
 df = pd.DataFrame(screensaham)
 df = df.fillna(0)
 L52 = df['lo']
@@ -138,6 +142,8 @@ else:
    bv = df['bvy'].values[0]
    pbv = df['pbvy'].values[0]
    per = df['pery'].values[0]
+   ph = df['ph'].values[0]
+   ut = df['ut'].values[0]
    sek = fin[4]
    ind = fin[5][:2]
    vol = int(vol) if vol !=None else 0
@@ -170,11 +176,13 @@ else:
    ip_address = socket.gethostbyname(hostname)
    id = hostname+"-"+ip_address
    cash = cash/1000000000
+   ph = ph/1000000000
+   ut = ut/1000000000
    opcash = opcash/1000000000
    vol = vol/1000000
 
    dfringkas = {'date':date,'kode':kode,'skg':skg,'1ylo':lo,'6m':int(m),'1yhi':hi,'om(%)':om,
-                'dev(%)':dev,'roe(%)':roe,'pos':round(P,0),'cash(M)':int(cash),
+                'dev(%)':dev,'roe(%)':roe,'pos':round(P,0),'cash(M)':int(cash),'ph(M)':int(ph),'utang(M)':int(ut),
                 'opcash(M)':int(opcash),'cash/saham(Rp)':int(tcs),'eps(Rp)':epsy,'bv(Rp)':bvy,'pbv':pbvy,
                 'per':pery,'vol(Juta)':round(vol,0),'aksiy':aksiy,'aksik':aksik,'user':id}
    
