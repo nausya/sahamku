@@ -183,8 +183,8 @@ else:
 
    dfringkas = {'date':date,'kode':kode,'skg':skg,'1ylo':lo,'6m':int(m),'1yhi':hi,'om(%)':om,
                 'dev(%)':dev,'roe(%)':roe,'pos':round(P,0),'cash(M)':int(cash),'opcash(M)':int(opcash),'ph(M)':int(ph),
-                'utang(M)':int(ut),'cash/saham(Rp)':int(tcs),'eps(Rp)':epsy,'bv(Rp)':bvy,'pbv':pbvy,
-                'per':pery,'vol(Juta)':round(vol,0),'aksiy':aksiy,'aksik':aksik,'user':id}
+                'utang(M)':int(ut),'cash/saham(Rp)':int(tcs),'eps(Rp)':eps,'bv(Rp)':bv,'pbv':pbv,
+                'per':per,'vol(Juta)':round(vol,0),'aksiy':aksiy,'aksik':aksik,'user':id}
    
    with open('aksi.csv', 'a') as f_object:
         writer_object = writer(f_object)
