@@ -108,7 +108,7 @@ for stock in saham:
     cash = info.get('totalCash')
     opcash = info.get('operatingCashflow')
     ph = info.get('totalRevenue')
-    ut = info.get(totalDebt')
+    ut = info.get('totalDebt')
     tcs = info.get('totalCashPerShare')
     screensaham.append({'kode':kode,'skg':skg,'lo':lo,'hi':hi,'om':om,'dev':dev,'roe':roe,
                        'pery':pery,'epsy':epsy,'pbvy':pbvy,'bvy':bvy,'aksiy':aksiy,'vol':vol,
