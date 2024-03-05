@@ -141,6 +141,7 @@ else:
    skg = df['skg'].values[0]
    lo = df['lo'].values[0]
    eps = df['epsy'].values[0]
+   tcs = df['tcs'].values[0]
    bv = df['bvy'].values[0]
    pbv = df['pbvy'].values[0]
    per = df['pery'].values[0]
