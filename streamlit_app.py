@@ -134,7 +134,7 @@ if fin.empty:
 else:
    fin = fin.values.tolist()
    fin = [item for sublist in fin for item in sublist]
-   eps = df['epsy']
+   eps = df['epsy'].values[0]
    bv = fin[1]
    pbv = fin[3]
    per = fin[2]
