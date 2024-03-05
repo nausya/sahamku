@@ -142,7 +142,7 @@ else:
    ind = fin[5][:2]
    vol = int(vol) if vol !=None else 0
    st.subheader(f"EPS : Rp.{eps} | BV : Rp.{bvy} | PBV : {pbvy} | PER : {pery} | Sektor : {sek}", divider="rainbow")
-
+eps
    #BENCHMARK
    kodebm = ind
    bm = pd.read_csv('IndexSektor.csv', sep=";")
