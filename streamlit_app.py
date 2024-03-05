@@ -135,14 +135,14 @@ else:
    fin = fin.values.tolist()
    fin = [item for sublist in fin for item in sublist]
    eps = df['epsy'].values[0]
-   bv = fin[1]
-   pbv = fin[3]
-   per = fin[2]
+   bv = df['bvy'].values[0]
+   pbv = df['pbvy'].values[0]
+   per = df['pery'].values[0]
    sek = fin[4]
    ind = fin[5][:2]
    vol = int(vol) if vol !=None else 0
-   st.subheader(f"EPS : Rp.{eps} | BV : Rp.{bvy} | PBV : {pbvy} | PER : {pery} | Sektor : {sek}", divider="rainbow")
-   eps
+   st.subheader(f"EPS : Rp.{eps} | BV : Rp.{bv} | PBV : {pbv} | PER : {per} | Sektor : {sek}", divider="rainbow")
+   
    #BENCHMARK
    kodebm = ind
    bm = pd.read_csv('IndexSektor.csv', sep=";")
