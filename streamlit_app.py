@@ -197,7 +197,7 @@ else:
 
     
 
-   dfringkas = pd.DataFrame(dfringkas,hide_index=True)
+   dfringkas = pd.DataFrame(dfringkas,index = np.arange(1) )
    st.dataframe(dfringkas)
    
 ##########Notasi Saham################
