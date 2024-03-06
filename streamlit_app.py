@@ -211,6 +211,7 @@ else:
 
    dfringkas = pd.DataFrame(dfringkas, index = np.arange(1))
    dfringkas = dfringkas.set_index('kode')
+   dfringkas = dfringkas['Value'].str.replace('[A-Za-z]', '').str.replace(',', '.').astype(float)
    #dfringkas = pd.DataFrame({"key": dfringkas.keys(), "value": dfringkas.values()})
    #dfringkas = dfringkas.transpose()
    st.dataframe(dfringkas)
