@@ -95,9 +95,9 @@ for stock in saham:
     skg = info.get('currentPrice')
     lo  = info.get('fiftyTwoWeekLow')
     hi  = info.get('fiftyTwoWeekHigh')
-    om  = round(info.get('operatingMargins')*100)
-    dev = round(info.get('payoutRatio')*100)
-    roe = round(info.get('returnOnEquity')*100)
+    om  = info.get('operatingMargins')
+    dev = info.get('payoutRatio')
+    roe = info.get('returnOnEquity')
     pery = info.get('forwardPE')
     epsy = info.get('forwardEps')
     pbvy = info.get('priceToBook')
@@ -115,9 +115,7 @@ for stock in saham:
                       'm':m,'cash':cash,'opcash':opcash,'ph':ph,'ut':ut,'tcs':tcs})
 df = pd.DataFrame(screensaham)
 df = df.fillna(0)
-#df.dtypes
-#df = df.loc[:, df.columns != 'kode'].astype(int)
-#st.dataframe(df)
+
 L52 = df['lo']
 H52 = df['hi']
 C = df['skg']
@@ -128,7 +126,7 @@ if int(D) > 0 :
 else : 
     P = 0
 st.subheader(f"Harga terkini Rp {int(C)} berada pada posisi ke-{int(P)} dari ketinggian 100", divider="rainbow")
-st.subheader(f"MarginOps : {om}% | DevPR : {dev}% | ROE : {roe}%", divider="rainbow")
+st.subheader(f"MarginOps : {ceknon(om)}% | DevPR : {ceknon(dev)}% | ROE : {ceknon(roe)}%", divider="rainbow")
  
 
 #FINANSIAL
