@@ -115,7 +115,7 @@ for stock in saham:
                        'm':m,'cash':cash,'opcash':opcash,'ph':ph,'ut':ut,'tcs':tcs})
 df = pd.DataFrame(screensaham)
 df = df.fillna(0)
-df = df.loc[:, df.columns != 'kode'].astype(float)
+df = df.loc[:, df.columns != 'kode'].astype(int)
 L52 = df['lo']
 H52 = df['hi']
 C = df['skg']
