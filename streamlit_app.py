@@ -95,9 +95,9 @@ for stock in saham:
     skg = info.get('currentPrice')
     lo  = info.get('fiftyTwoWeekLow')
     hi  = info.get('fiftyTwoWeekHigh')
-    om  = info.get('operatingMargins')
-    dev = info.get('payoutRatio')
-    roe = info.get('returnOnEquity')
+    om  = round(info.get('operatingMargins')*100)
+    dev = round(info.get('payoutRatio')*100)
+    roe = round(info.get('returnOnEquity')*100)
     pery = info.get('forwardPE')
     epsy = info.get('forwardEps')
     pbvy = info.get('priceToBook')
@@ -110,7 +110,7 @@ for stock in saham:
     ph = info.get('totalRevenue')
     ut = info.get('totalDebt')
     tcs = info.get('totalCashPerShare')
-    screensaham.append({'kode':kode,'skg':skg,'lo':lo,'hi':hi,'om':round(om*100),'dev':round(dev*100),'roe':round(roe*100),
+    screensaham.append({'kode':kode,'skg':skg,'lo':lo,'hi':hi,'om':om,'dev':dev,'roe':roe,
                        'pery':pery,'epsy':epsy,'pbvy':pbvy,'bvy':bvy,'aksiy':aksiy,'vol':vol,
                        'm':m,'cash':cash,'opcash':opcash,'ph':ph,'ut':ut,'tcs':tcs})
 df = pd.DataFrame(screensaham)
