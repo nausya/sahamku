@@ -150,7 +150,7 @@ else:
    sek = fin[4]
    ind = fin[5][:2]
    vol = int(vol) if vol !=None else 0
-   st.subheader(f"EPS : Rp.{eps} | BV : Rp.{round(bv)} | PBV : {round(pbv,1)} | PER : {round(per)} | Sektor : {sek}", divider="rainbow")
+   st.subheader(f"EPS : Rp.{round(eps)} | BV : Rp.{round(bv)} | PBV : {round(pbv,1)} | PER : {round(per)} | Sektor : {sek}", divider="rainbow")
    
    #BENCHMARK
    kodebm = ind
