@@ -198,7 +198,8 @@ else:
 
     
 
-   dfringkas = pd.DataFrame(dfringkas, index = np.arange(1), index=[0])
+   dfringkas = pd.DataFrame(dfringkas, index = np.arange(1))
+   dfringkas = dfringkas.set_index('kode')
    #dfringkas = pd.DataFrame({"key": dfringkas.keys(), "value": dfringkas.values()})
    #dfringkas = dfringkas.transpose()
    st.dataframe(dfringkas)
