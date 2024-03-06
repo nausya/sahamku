@@ -190,10 +190,10 @@ else:
                 'utang(M)':ut,'cash/saham(Rp)':tcs,'eps(Rp)':eps,'bv(Rp)':bv,'pbv':pbv,
                 'per':per,'vol(Juta)':round(vol,0),'aksiy':aksiy,'aksik':aksik,'user':id}
    
-   with open('aksi.csv', 'a') as f_object:
-        writer_object = writer(f_object)
-        writer_object.writerow(dfringkas)
-        f_object.close()
+  # with open('aksi.csv', 'a') as f_object:
+   #     writer_object = writer(f_object)
+    #    writer_object.writerow(dfringkas)
+     #   f_object.close()
 
     
 
