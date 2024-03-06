@@ -185,7 +185,7 @@ else:
    opcash = opcash/1000000000
    vol = vol/1000000
 
-   dfringkas = {'date':date,'kode':kode,'skg':skg,'1ylo':lo,'6m':int(m),'1yhi':hi,'om(%)':om,
+   dfringkas = {'kode':kode,'date':date,'skg':skg,'1ylo':lo,'6m':int(m),'1yhi':hi,'om(%)':om,
                 'dev(%)':dev,'roe(%)':roe,'pos':round(P,0),'cash(M)':round(cash),'opcash(M)':int(opcash),'ph(M)':int(ph),
                 'utang(M)':ut,'cash/saham(Rp)':tcs,'eps(Rp)':eps,'bv(Rp)':bv,'pbv':pbv,
                 'per':per,'vol(Juta)':round(vol,0),'aksiy':aksiy,'aksik':aksik,'user':id}
@@ -197,7 +197,7 @@ else:
 
     
 
-   dfringkas = pd.DataFrame(dfringkas,index = np.arange(1) )
+   dfringkas = pd.DataFrame(dfringkas,index = np.arange(0) )
    st.dataframe(dfringkas)
    
 ##########Notasi Saham################
