@@ -111,7 +111,7 @@ for stock in saham:
     ut = info.get('totalDebt')
     tcs = info.get('totalCashPerShare')
     screensaham.append({'kode':kode,'skg':skg,'lo':lo,'hi':hi,'om':om,'dev':dev,'roe':roe,
-                       'pery':pery,'epsy':epsy,'pbvy':pbvy,'bvy':bvy,'aksiy':aksiy,'vol':vol,
+                       'pery':pery,'epsy':round(epsy),'pbvy':pbvy,'bvy':bvy,'aksiy':aksiy,'vol':vol,
                        'm':m,'cash':cash,'opcash':opcash,'ph':ph,'ut':ut,'tcs':tcs})
 df = pd.DataFrame(screensaham)
 df = df.fillna(0)
