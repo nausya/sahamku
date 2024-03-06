@@ -69,9 +69,20 @@ selected_emiten = st.sidebar.selectbox('Pilih Emiten:', emiten)
  
 ## Display the filtered data
 st.header(selected_emiten.split(' | ')[1])
-
 option = selected_emiten.split(' | ')[0] + ".JK"
 
+##########Notasi Saham################
+kode = selected_emiten.split(' | ')[0]
+n = pd.read_csv('notasi.csv', sep=';')
+n = n[(n['Kode'] == kode)]
+if n.isna().empty:
+   st.text("")
+else:  
+   n = n['Keterangan Notasi'].str.split('|', expand=False)
+   for y in n:
+    for x in y:
+     st.error(x)
+##########End of Notasi Saham################
 
 #ganti value None
 def ceknon(x):
@@ -173,7 +184,7 @@ else:
    #dper = "Idealnya PER < 15"
 
    #RINGKASAN
-   #st.subheader(f"RINGKASAN PORTOFOLIO", divider="rainbow")
+   st.subheader(f"RINGKASAN PORTOFOLIO", divider="rainbow")
    date = datetime.datetime.now(indonesia_timezone)
    date = date.strftime('%Y-%m-%d %H:%M:%S')
    aksik = 0
@@ -203,19 +214,6 @@ else:
    #dfringkas = pd.DataFrame({"key": dfringkas.keys(), "value": dfringkas.values()})
    #dfringkas = dfringkas.transpose()
    st.dataframe(dfringkas)
-   
-##########Notasi Saham################
-kode = selected_emiten.split(' | ')[0]
-n = pd.read_csv('notasi.csv', sep=';')
-n = n[(n['Kode'] == kode)]
-if n.isna().empty:
-   st.text("")
-else:  
-   n = n['Keterangan Notasi'].str.split('|', expand=False)
-   for y in n:
-    for x in y:
-     st.error(x)
-##########End of Notasi Saham################
 
 st.info('Untuk jangka panjang perlu diperhatikan kisaran posisi harga kurang dari 10')
 
