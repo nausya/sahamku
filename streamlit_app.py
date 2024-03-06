@@ -116,9 +116,9 @@ for stock in saham:
 df = pd.DataFrame(screensaham)
 df = df.fillna(0)
 
-L52 = df['lo']
-H52 = df['hi']
-C = df['skg']
+L52 = df['lo'].values[0]
+H52 = df['hi'].values[0]
+C = df['skg'].values[0]
 D = (H52-L52)/100
 
 if int(D) > 0 :
