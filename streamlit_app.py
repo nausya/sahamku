@@ -197,8 +197,8 @@ else:
 
     
 
-   #dfringkas = pd.DataFrame(dfringkas,index = np.arange(1))
-   dfringkas = pd.DataFrame({"key": dfringkas.keys(), "value": dfringkas.values()})
+   dfringkas = pd.DataFrame(dfringkas,index = np.arange(1))
+   $dfringkas = pd.DataFrame({"key": dfringkas.keys(), "value": dfringkas.values()})
    st.dataframe(dfringkas)
    
 ##########Notasi Saham################
