@@ -198,6 +198,7 @@ else:
     
 
    dfringkas = pd.DataFrame(dfringkas)
+   dfringkas = dfringkas.fillna(0)
    st.dataframe(dfringkas)
    
 ##########Notasi Saham################
