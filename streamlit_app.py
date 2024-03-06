@@ -197,7 +197,7 @@ else:
 
     
 
-   dfringkas = pd.DataFrame(dfringkas)
+   dfringkas = pd.DataFrame(dfringkas,orient = 'index')
   
    st.dataframe(dfringkas)
    
