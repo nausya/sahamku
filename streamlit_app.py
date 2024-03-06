@@ -198,9 +198,9 @@ else:
 
     
 
-   #dfringkas = pd.DataFrame(dfringkas,index = 'Kode')
-   dfringkas = pd.DataFrame({"key": dfringkas.keys(), "value": dfringkas.values()})
-   dfringkas = dfringkas.transpose()
+   dfringkas = pd.DataFrame(dfringkas,np.arrange(1))
+   #dfringkas = pd.DataFrame({"key": dfringkas.keys(), "value": dfringkas.values()})
+   #dfringkas = dfringkas.transpose()
    st.dataframe(dfringkas)
    
 ##########Notasi Saham################
