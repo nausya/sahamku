@@ -113,8 +113,11 @@ for stock in saham:
     screensaham.append({'kode':kode,'skg':skg,'lo':lo,'hi':hi,'om':om,'dev':dev,'roe':roe,
                        'pery':pery,'epsy':epsy,'pbvy':pbvy,'bvy':bvy,'aksiy':aksiy,'vol':vol,
                        'm':m,'cash':cash,'opcash':opcash,'ph':ph,'ut':ut,'tcs':tcs})
-df = pd.DataFrame(screensaham)
-df = df.fillna(0)
+if df.empty:
+   st.write("ada eror")#st.error ("KATEGORI PERUSAHAAN BARU MASUK IPO")
+else:
+   df = pd.DataFrame(screensaham)
+   df = df.fillna(0)
 #df.dtypes
 #df = df.loc[:, df.columns != 'kode'].astype(int)
 #st.dataframe(df)
