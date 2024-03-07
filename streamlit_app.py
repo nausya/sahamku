@@ -164,11 +164,8 @@ else:
    ut = df['ut'].values[0]
    sek = fin[4]
    ind = fin[5][:2]
-   mcap
    vol = int(vol) if vol !=None else 0
-   dev
    dev = int(dev) if dev !=None else 0
-   dev
    mcap = int(mcap) if mcap !=None else 0
    st.subheader(f"EPS : Rp.{eps} | BV : Rp.{round(bv)} | PBV : {round(pbv,1)} | PER : {round(per)} | Sektor : {sek}", divider="rainbow")
    
@@ -203,9 +200,7 @@ else:
    ut = ut/1000000000
    opcash = opcash/1000000000
    vol = vol/1000000
-   mcap
    mcap = mcap/1000000000
-   mcap
    totshm = totshm/1000000000
 
    dfringkas = {'kode':kode,'date':date,'skg':skg,'1ylo':lo,'2m':int(bl),'6m':int(m),'1yhi':hi,'om(%)':ceknon(om),
@@ -222,7 +217,8 @@ else:
 
    dfringkas = pd.DataFrame(dfringkas, index = np.arange(1))
    dfringkas = dfringkas.set_index('kode')
-   dfringkas = dfringkas.apply(lambda x: x.str.replace(',', '.'))
+   dfringkas.dtypes
+   #dfringkas = dfringkas.apply(lambda x: x.str.replace(',', '.'))
    st.dataframe(dfringkas)
 
 st.info('Untuk jangka panjang perlu diperhatikan kisaran posisi harga kurang dari 10')
