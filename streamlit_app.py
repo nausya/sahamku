@@ -199,9 +199,9 @@ else:
    ut = ut/1000000000
    opcash = opcash/1000000000
    vol = vol/1000000
-    mcap
+   mcap
    mcap = mcap/1000000000
-mcap
+   mcap
    totshm = totshm/1000000000
 
    dfringkas = {'kode':kode,'date':date,'skg':skg,'1ylo':lo,'2m':int(bl),'6m':int(m),'1yhi':hi,'om(%)':ceknon(om),
