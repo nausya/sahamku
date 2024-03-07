@@ -216,6 +216,7 @@ else:
 
    dfringkas = pd.DataFrame(dfringkas, index = np.arange(1))
    dfringkas = dfringkas.set_index('kode')
+   dfringkas = dfringkas.apply(lambda x: x.str.replace('.', ','))
    st.dataframe(dfringkas)
 
 st.info('Untuk jangka panjang perlu diperhatikan kisaran posisi harga kurang dari 10')
