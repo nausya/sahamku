@@ -166,7 +166,9 @@ else:
    ind = fin[5][:2]
    mcap
    vol = int(vol) if vol !=None else 0
+   dev
    dev = int(dev) if dev !=None else 0
+   dev
    mcap = int(mcap) if dev !=None else 0
    st.subheader(f"EPS : Rp.{eps} | BV : Rp.{round(bv)} | PBV : {round(pbv,1)} | PER : {round(per)} | Sektor : {sek}", divider="rainbow")
    
