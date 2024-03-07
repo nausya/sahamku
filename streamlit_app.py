@@ -169,7 +169,7 @@ else:
    dev
    dev = int(dev) if dev !=None else 0
    dev
-   mcap = int(mcap) if dev !=None else 0
+   mcap = int(mcap) if mcap !=None else 0
    st.subheader(f"EPS : Rp.{eps} | BV : Rp.{round(bv)} | PBV : {round(pbv,1)} | PER : {round(per)} | Sektor : {sek}", divider="rainbow")
    
    #BENCHMARK
