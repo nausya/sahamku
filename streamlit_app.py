@@ -164,6 +164,7 @@ else:
    ut = df['ut'].values[0]
    sek = fin[4]
    ind = fin[5][:2]
+   mcap
    vol = int(vol) if vol !=None else 0
    dev = int(dev) if dev !=None else 0
    mcap = int(mcap) if dev !=None else 0
