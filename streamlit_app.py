@@ -115,6 +115,7 @@ for stock in saham:
     bvy = info.get('bookValue')
     aksiy = info.get('recommendationKey')
     vol = info.get('averageDailyVolume10Day')
+    mcap = info.get('marketCap')
     m = info.get('twoHundredDayAverage')
     cash = info.get('totalCash')
     opcash = info.get('operatingCashflow')
@@ -123,7 +124,7 @@ for stock in saham:
     tcs = info.get('totalCashPerShare')
     screensaham.append({'kode':kode,'skg':skg,'lo':lo,'hi':hi,'om':om,'dev':dev,'roe':roe,
                        'pery':pery,'epsy':epsy,'pbvy':pbvy,'bvy':bvy,'aksiy':aksiy,'vol':vol,
-                      'm':m,'cash':cash,'opcash':opcash,'ph':ph,'ut':ut,'tcs':tcs})
+                      'm':m,'mcap':mcap,'cash':cash,'opcash':opcash,'ph':ph,'ut':ut,'tcs':tcs})
 df = pd.DataFrame(screensaham)
 df = df.fillna(0)
 
@@ -196,11 +197,12 @@ else:
    ut = ut/1000000000
    opcash = opcash/1000000000
    vol = vol/1000000
+   mcap = mcap/1000000000
 
    dfringkas = {'kode':kode,'date':date,'skg':skg,'1ylo':lo,'6m':int(m),'1yhi':hi,'om(%)':ceknon(om),
                 'dev(%)':ceknon(dev),'roe(%)':ceknon(roe),'pos':round(P,0),'cash(M)':round(cash),'opcash(M)':int(opcash),'ph(M)':int(ph),
                 'utang(M)':round(ut),'cash/saham(Rp)':round(tcs),'eps(Rp)':eps,'bv(Rp)':round(bv),'pbv':round(pbv,1),
-                'per':round(per),'vol(Juta)':round(vol,0),'aksiy':aksiy,'aksik':aksik,'user':id}
+                'per':round(per),'vol(Juta)':round(vol,0),'Omzet(M)':round(mcap,0),'aksiy':aksiy,'aksik':aksik,'user':id}
    
   # with open('aksi.csv', 'a') as f_object:
    #     writer_object = writer(f_object)
