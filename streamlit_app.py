@@ -142,7 +142,10 @@ else :
 st.subheader(f"Harga terkini Rp {int(C)} berada pada posisi ke-{int(P)} dari ketinggian 100", divider="rainbow")
 st.subheader(f"MarginOps : {ceknon(om)}% | DevPR : {ceknon(dev)}% | ROE : {ceknon(roe)}%", divider="rainbow")
  
-
+def mil(x):
+    x = x/1000000000
+    return x
+    
 #FINANSIAL
 kodef = selected_emiten.split(' | ')[0]
 fin = pd.read_csv('Finansial.csv', sep=";")
@@ -195,9 +198,6 @@ else:
    hostname = socket.gethostname()
    ip_address = socket.gethostbyname(hostname)
    id = hostname+"-"+ip_address
-def mil(x):
-    x = x/1000000000
-    return x
    cash = cash/1000000000
    ph = ph/1000000000
    ut = ut/1000000000
