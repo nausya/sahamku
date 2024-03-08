@@ -306,7 +306,7 @@ def dataframe():
     else:
        st.header('Filter Data')
        filterdata = pd.read_csv('porto.csv', index_col=[0], sep=';')
-       tgl = filterdata['date'].dt.date.values[0]
+       tgl = filterdata['date'].values[0]
        tgl = tgl[8:10] + "/" + tgl[5:7]+ "/" + tgl[0:4]
        "Last Update : " + tgl
        filterdata = filterdata.rename(columns = {"p": "Posisi","kode":"Kode","aksiy": "Saran","skg":"Harga","lo":"1YMin","hi":"1YMax","bl":"2M","m":"6M", 
