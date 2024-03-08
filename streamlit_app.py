@@ -306,7 +306,7 @@ def dataframe():
     else:
        st.header('Filter Data')
        filterdata = pd.read_csv('porto.csv', index_col=[0], sep=';')
-       tanggal = filterdata['date'].values[0].dt.strftime('%d/%m/%Y')
+       tanggal = filterdata['date'].values[0].strftime('%d/%m/%Y')
        "Last Update :" + tanggal
        filterdata = filterdata.rename(columns = {"p": "Posisi","kode":"Kode","aksiy": "Saran","skg":"Harga","lo":"1YMin","hi":"1YMax","bl":"2M","m":"6M", 
        "opm":"Margin Operasi(%)", "dev":"Deviden PR(%)","epsy":"Laba Per Saham","roe": "ROE(%)","pery": "PER(%)",
