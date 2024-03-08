@@ -304,7 +304,7 @@ def dataframe():
        st.header('Filter Data')
        filterdata = pd.read_csv('porto.csv', index_col=[0], sep=';')
        #filterdata[date].unique()
-       filterdata = filterdata.rename(columns = {"p": "Posisi","kode":"Kode","rekom": "Saran","now":"Harga","l":"1YMin","h":"1YMax","bl":"2M","m":"6M", 
+       filterdata = filterdata.rename(columns = {"p": "Posisi","kode":"Kode","aksiy": "Saran","skg":"Harga","lo":"1YMin","hi":"1YMax","bl":"2M","m":"6M", 
        "opm":"Margin Operasi(%)", "dev":"Deviden PR(%)","epsy":"Laba Per Saham","roe": "ROE(%)","pery": "PER(%)",
        "pbvy": "Nilai Buku","bvy": "Harga Dasar","dte": "Rasio UM","eg4": "PhGrow","ph": "Pendapatan","ut":"Utang",
        "pm":"Profit Margin", "cash": "Jumlah Kas", "opcash": "Kas Operasional","tcs": "Kas Per Saham", "totshm": "Saham Beredar","mcap": "Omzet","vol": "Volume"}).sort_values(['Harga','Posisi'])
