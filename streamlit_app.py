@@ -373,7 +373,7 @@ def screener():
    
     st.subheader('Tabular Hasil Screener')
     scr1 = pd.read_csv('porto.csv', sep=';')
-    scr1['om'] = ceknon(scr1['om'].values[0])
+    scr1['p'] = scr1['p'].astype(int)
     scr1 = scr1.fillna(0)
     if screenlevel == '<Rp200':
        st.write('Screener Saham Harga Rentang 50-200')
