@@ -206,10 +206,10 @@ else:
    mcap = mcap/1000000000
    totshm = totshm/1000000000
 
-   dfringkas = {'kode':kode,'date':date,'skg':skg,'1ylo':lo,'2m':int(bl),'6m':int(m),'1yhi':hi,'om(%)':ceknon(om),
-                'dev(%)':ceknon(dev),'roe(%)':ceknon(roe),'pos':round(P,0),'cash(M)':round(cash),'opcash(M)':int(opcash),'ph(M)':int(ph),
-                'utang(M)':round(ut),'cash/saham(Rp)':round(tcs),'eps(Rp)':eps,'bv(Rp)':round(bv),'pbv':round(pbv,1),
-                'per':round(per),'vol(Juta)':round(vol,0),'TotalSaham(M)':round(totshm),'Omzet(M)':round(mcap),'aksiy':aksiy,'aksik':aksik,'user':id}
+   dfringkas = {'Kode':kode,'Tanggal':date,'Harga':skg,'1YMin':lo,'2Mon':int(bl),'6Mon':int(m),'1YMax':hi,'Margin Operasi(%)':ceknon(om),
+                'Deviden(%)':ceknon(dev),'ROE(%)':ceknon(roe),'Posisi':round(P,0),'Uang Tunai(M)':round(cash),'Kas Operasional(M)':int(opcash),'Pendapatan(M)':int(ph),
+                'Utang(M)':round(ut),'Kas Per Saham(Rp)':round(tcs),'EPS(Rp)':eps,'Harga Buku(Rp)':round(bv),'Nilai Buku':round(pbv,1),
+                'PER':round(per),'Volume(Juta)':round(vol,0),'TotalSaham(M)':round(totshm),'Omzet(M)':round(mcap),'Saran':aksiy,'Aksi':aksik,'User':id}
    
   # with open('aksi.csv', 'a') as f_object:
    #     writer_object = writer(f_object)
