@@ -392,6 +392,7 @@ def screener():
     s = scr1.copy()
     scr1 = scr1.set_index('kode')
     #kode;p;aksiy;skg;lo;bl;m;hi;om;dev;roe;pery;epsy;pbvy;bvy;vol;totshm;mcap;cash;opcash;ph;ut;tcs;date
+    scr1['om'] = ceknon(scr1['om'])
     scr1 = scr1.rename(columns = {"p": "Posisi","kode":"Kode","aksiy": "Saran","skg":"Harga","lo":"1YMin","hi":"1YMax","bl":"2M","m":"6M", 
                                   "om":"Margin Operasi(%)", "dev":"Deviden PR(%)","roe": "ROE(%)","pery": "PER(%)",
                                   "pbvy": "Nilai Buku","bvy": "Harga Dasar","ph": "Pendapatan","totshm": "Total Saham","mcap": "Omzet","epsy": "Laba Per Saham","opcash": "Kas Operasional",
