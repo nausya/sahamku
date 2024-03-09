@@ -380,6 +380,7 @@ def screener():
     
     scr1['om'] = (scr1['om'].round(2))*100
     scr1['pbvy'] = scr1['pbvy'].round(1)
+    scr1['bvy'] = scr1['bvy'].round()
     scr1['dev'] = (scr1['dev'].round(2))*100
     scr1['roe'] = (scr1['roe'].round(2))*100
     scr1['pery'] = scr1['pery'].round(0)
