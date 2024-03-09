@@ -397,6 +397,7 @@ def screener():
                                   "pbvy": "Nilai Buku","bvy": "Harga Dasar","ph": "Pendapatan","totshm": "Total Saham","mcap": "Omzet","epsy": "Laba Per Saham","opcash": "Kas Operasional",
                                   "ut": "Utang","cash": "Nilai Kas","tcs": "Kas Per Saham", "vol": "Volume","date": "Tanggal"}).sort_values(['Harga','Posisi'])
     #st.dataframe(scr1.style.highlight_max(axis=0),hide_index=True)
+    scr1.dtypes
     st.dataframe(scr1)
     st.subheader('Grafik')
     fig, ax = plt.subplots()
