@@ -389,14 +389,14 @@ def screener():
     else:
        st.write('Screener Saham Harga Lebih Dari 5000')
        scr1=scr1.query("skg > 5000 and p<=10 and om >= 0.1")
-   
+    scr1 = scr1.set_index('kode')
     #kode;p;aksiy;skg;lo;bl;m;hi;om;dev;roe;pery;epsy;pbvy;bvy;vol;totshm;mcap;cash;opcash;ph;ut;tcs;date
     scr1 = scr1.rename(columns = {"p": "Posisi","kode":"Kode","aksiy": "Saran","skg":"Harga","lo":"1YMin","hi":"1YMax","bl":"2M","m":"6M", 
                                   "om":"Margin Operasi(%)", "dev":"Deviden PR(%)","roe": "ROE(%)","pery": "PER(%)",
                                   "pbvy": "Nilai Buku","ph": "Pendapatan","totshm": "Total Saham","mcap": "Omzet","epsy": "Laba Per Saham","opcash": "Kas Operasional",
                                   "ut": "Utang","cash": "Nilai Kas","tcs": "Kas Per Saham", "vol": "Volume","date": "Tanggal"}).sort_values(['Harga','Posisi'])
     #st.dataframe(scr1.style.highlight_max(axis=0),hide_index=True)
-    scr1 = scr1.set_index('kode')
+    
     st.dataframe(scr1)
     scr1 = scr1.reset_index()
     s = scr1.copy()
