@@ -421,7 +421,7 @@ def screener():
     scr1 = scr1.rename(columns = {"p": "Posisi","kode":"Kode","aksiy": "Saran","skg":"Harga","lo":"1YMin","hi":"1YMax","bl":"2M","m":"6M", 
                                   "om":"Margin Operasi(%)", "dev":"Deviden PR(%)","roe": "ROE(%)","pery": "PER(%)",
                                   "pbvy": "Nilai Buku","bvy": "Harga Dasar","ph": "Pendapatan(M)","totshm": "Total Saham(M)","mcap": "Omzet(T)","epsy": "Laba Per Saham","opcash": "Kas Operasional(M)",
-                                  "ut": "Utang(M)","cash": "Nilai Kas(M)","tcs": "Kas Per Saham", "vol": "Volume(J)","date": "Tanggal"}).sort_values(['Kode'])
+                                  "ut": "Utang(M)","cash": "Nilai Kas(M)","tcs": "Kas Per Saham", "vol": "Volume(J)","date": "Tanggal"}).sort_values(['kode'])
     #st.dataframe(scr1.style.highlight_max(axis=0),hide_index=True)
     "Last Update : " + tgl
     st.dataframe(scr1)
