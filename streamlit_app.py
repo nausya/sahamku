@@ -385,6 +385,7 @@ def screener():
     scr1['roe'] = (scr1['roe'].round(2))*100
     scr1['pery'] = scr1['pery'].round(0)
     scr1['epsy'] = scr1['epsy'].round()
+    scr1['vol'] = (scr1['vol'])/1000000
     scr1 = scr1.fillna(0)
     if screenlevel == '<Rp200':
        st.write('Screener Saham Harga Rentang 50-200')
@@ -408,7 +409,7 @@ def screener():
     scr1 = scr1.rename(columns = {"p": "Posisi","kode":"Kode","aksiy": "Saran","skg":"Harga","lo":"1YMin","hi":"1YMax","bl":"2M","m":"6M", 
                                   "om":"Margin Operasi(%)", "dev":"Deviden PR(%)","roe": "ROE(%)","pery": "PER(%)",
                                   "pbvy": "Nilai Buku","bvy": "Harga Dasar","ph": "Pendapatan","totshm": "Total Saham","mcap": "Omzet","epsy": "Laba Per Saham","opcash": "Kas Operasional",
-                                  "ut": "Utang","cash": "Nilai Kas","tcs": "Kas Per Saham", "vol": "Volume","date": "Tanggal"}).sort_values(['Harga','Posisi'])
+                                  "ut": "Utang","cash": "Nilai Kas","tcs": "Kas Per Saham", "vol": "Volume(J)","date": "Tanggal"}).sort_values(['Harga','Posisi'])
     #st.dataframe(scr1.style.highlight_max(axis=0),hide_index=True)
     scr1.dtypes
     st.dataframe(scr1)
