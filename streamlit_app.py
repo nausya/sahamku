@@ -373,6 +373,7 @@ def screener():
    
     st.subheader('Tabular Hasil Screener')
     scr1 = pd.read_csv('porto.csv', sep=';')
+    scr1 = scr1.set_index('kode')
    
     scr1 = scr1.fillna(0)
     if screenlevel == '<Rp200':
