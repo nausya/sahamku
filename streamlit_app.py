@@ -398,7 +398,7 @@ def screener():
     #st.dataframe(scr1.style.highlight_max(axis=0),hide_index=True)
     
     st.dataframe(scr1)
-    scr1 = scr1.reset_index()
+    scr1.reset_index()
     s = scr1.copy()
     st.subheader('Grafik')
     fig, ax = plt.subplots()
