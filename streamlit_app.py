@@ -385,6 +385,7 @@ def screener():
     scr1['roe'] = (scr1['roe'].round(2))*100
     scr1['pery'] = scr1['pery'].round(0)
     scr1['epsy'] = scr1['epsy'].round()
+    scr1['tcs'] = scr1['tcs'].round()
     scr1['vol'] = ((scr1['vol'].round(1))/1000000).round(1)
     scr1['totshm'] = ((scr1['totshm'].round(1))/1000000000).round(1)
     scr1['mcap'] = ((scr1['mcap'].round(1))/1000000000000).round(1)
