@@ -373,8 +373,6 @@ def screener():
    
     st.subheader('Tabular Hasil Screener')
     scr1 = pd.read_csv('porto.csv', sep=';')
-    scr1 = scr1.set_index('kode')
-   
     scr1 = scr1.fillna(0)
     if screenlevel == '<Rp200':
        st.write('Screener Saham Harga Rentang 50-200')
@@ -399,6 +397,7 @@ def screener():
                                   "pbvy": "Nilai Buku","ph": "Pendapatan","totshm": "Total Saham","mcap": "Omzet","epsy": "Laba Per Saham","opcash": "Kas Operasional",
                                   "ut": "Utang","cash": "Nilai Kas","tcs": "Kas Per Saham", "vol": "Volume","date": "Tanggal"}).sort_values(['Harga','Posisi'])
     #st.dataframe(scr1.style.highlight_max(axis=0),hide_index=True)
+    scr1 = scr1.set_index('kode')
     st.dataframe(scr1)
     st.subheader('Grafik')
     fig, ax = plt.subplots()
