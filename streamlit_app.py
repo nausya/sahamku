@@ -385,7 +385,7 @@ def screener():
     scr1['roe'] = (scr1['roe'].round(2))*100
     scr1['pery'] = scr1['pery'].round(0)
     scr1['epsy'] = scr1['epsy'].round()
-    scr1['vol'] = ((scr1['vol'].round(1))/1000000).astype(int)
+    scr1['vol'] = ((scr1['vol'].round(1))/1000000).round(1)
     scr1 = scr1.fillna(0)
     if screenlevel == '<Rp200':
        st.write('Screener Saham Harga Rentang 50-200')
