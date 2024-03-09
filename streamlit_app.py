@@ -388,6 +388,10 @@ def screener():
     scr1['vol'] = ((scr1['vol'].round(1))/1000000).round(1)
     scr1['totshm'] = ((scr1['totshm'].round(1))/1000000000).round(1)
     scr1['mcap'] = ((scr1['mcap'].round(1))/1000000000000).round(1)
+    scr1['opcash'] = ((scr1['opcash'].round(1))/1000000000).round(1)
+    scr1['cash'] = ((scr1['cash'].round(1))/1000000000).round(1)
+    scr1['ut'] = ((scr1['ut'].round(1))/1000000000).round(1)
+    scr1['ph'] = ((scr1['ph'].round(1))/1000000000).round(1)
     scr1 = scr1.fillna(0)
     if screenlevel == '<Rp200':
        st.write('Screener Saham Harga Rentang 50-200')
@@ -410,8 +414,8 @@ def screener():
    
     scr1 = scr1.rename(columns = {"p": "Posisi","kode":"Kode","aksiy": "Saran","skg":"Harga","lo":"1YMin","hi":"1YMax","bl":"2M","m":"6M", 
                                   "om":"Margin Operasi(%)", "dev":"Deviden PR(%)","roe": "ROE(%)","pery": "PER(%)",
-                                  "pbvy": "Nilai Buku","bvy": "Harga Dasar","ph": "Pendapatan","totshm": "Total Saham(M)","mcap": "Omzet(T)","epsy": "Laba Per Saham","opcash": "Kas Operasional",
-                                  "ut": "Utang","cash": "Nilai Kas","tcs": "Kas Per Saham", "vol": "Volume(J)","date": "Tanggal"}).sort_values(['Harga','Posisi'])
+                                  "pbvy": "Nilai Buku","bvy": "Harga Dasar","ph": "Pendapatan(M)","totshm": "Total Saham(M)","mcap": "Omzet(T)","epsy": "Laba Per Saham","opcash": "Kas Operasional(M)",
+                                  "ut": "Utang(M)","cash": "Nilai Kas(M)","tcs": "Kas Per Saham", "vol": "Volume(J)","date": "Tanggal"}).sort_values(['Harga','Posisi'])
     #st.dataframe(scr1.style.highlight_max(axis=0),hide_index=True)
     scr1.dtypes
     st.dataframe(scr1)
