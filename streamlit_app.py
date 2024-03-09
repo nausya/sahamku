@@ -393,6 +393,9 @@ def screener():
     scr1['cash'] = ((scr1['cash'].round(1))/1000000000).round(1)
     scr1['ut'] = ((scr1['ut'].round(1))/1000000000).round(1)
     scr1['ph'] = ((scr1['ph'].round(1))/1000000000).round(1)
+    tgl = scr1['date'].values[0]
+    tgl = tgl[8:10] + "/" + tgl[5:7]+ "/" + tgl[0:4]
+    "Last Update : " + tgl
     scr1 = scr1.fillna(0)
     if screenlevel == '<Rp200':
        st.write('Screener Saham Harga Rentang 50-200')
