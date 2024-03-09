@@ -392,17 +392,18 @@ def screener():
        scr1=scr1.query("now > 5000 and p<=10 and opm >= 0.1")
     #scr1 = scr1.reset_index()
     s = scr1.copy()
-    scr1 = scr1.rename(columns = {"p": "Posisi","kode":"Kode","rekom": "Saran","now":"Harga","l":"1YMin","h":"1YMax","hr":"2M","bl":"6M", 
-                                  "opm":"Margin Operasi(%)", "dev":"Deviden PR(%)","adev":"Deviden 5Y","roe": "ROE(%)",
-                                  "pbv": "Nilai Buku","dte": "Rasio UM","eg4": "PhGrow","etr": "Pendapatan","rg":"RevGrow",
-                                  "pm":"Profit Margin", "tcs": "Kas Per Saham", "avol": "AVolume"}).sort_values(['Harga','Posisi'])
+    #kode;p;aksiy;skg;lo;bl;m;hi;om;dev;roe;pery;epsy;pbvy;bvy;vol;totshm;mcap;cash;opcash;ph;ut;tcs;date
+    scr1 = scr1.rename(columns = {"p": "Posisi","kode":"Kode","aksiy": "Saran","skg":"Harga","lo":"1YMin","hi":"1YMax","bl":"2M","m":"6M", 
+                                  "om":"Margin Operasi(%)", "dev":"Deviden PR(%)","roe": "ROE(%)","pery": "PER(%)",
+                                  "pbvy": "Nilai Buku","ph": "Pendapatan","totshm": "Total Saham","mcap": "Omzet","opcash": "Kas Operasional",
+                                  "ut": "Utang","cash": "Nilai Kas","tcs": "Kas Per Saham", "vol": "Volume"}).sort_values(['Harga','Posisi'])
     #st.dataframe(scr1.style.highlight_max(axis=0),hide_index=True)
     st.dataframe(scr1)
     st.subheader('Grafik')
     fig, ax = plt.subplots()
     
     x = s['p']
-    y = s['opm']
+    y = s['om']
     kd = s['kode']
     sns.scatterplot(s,x=x, y=y, marker='>')
     plt.xlabel("Posisi Harga")
