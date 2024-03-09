@@ -220,7 +220,7 @@ else:
 
    dfringkas = pd.DataFrame(dfringkas, index = np.arange(1))
    dfringkas = dfringkas.set_index('Kode')
-   dfringkas['date'] = pd.to_datetime(dfringkas['date'], format='%Y-%m-%d %H:%M:%S')
+   dfringkas['Tanggal'] = pd.to_datetime(dfringkas['Tanggal'], format='%Y-%m-%d %H:%M:%S')
    st.dataframe(dfringkas)
 
 st.info('Untuk jangka panjang perlu diperhatikan kisaran posisi harga kurang dari 10')
