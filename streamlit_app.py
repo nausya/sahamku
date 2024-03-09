@@ -393,7 +393,8 @@ def screener():
     scr1['cash'] = ((scr1['cash'].round(1))/1000000000).round(1)
     scr1['ut'] = ((scr1['ut'].round(1))/1000000000).round(1)
     scr1['ph'] = ((scr1['ph'].round(1))/1000000000).round(1)
-    scr1['date'] = scr1['date'].dt.strftime('%m/%d/%Y')
+    scr1['date'] = pd.to_datetime(scr1['date'], format='%d/%m/%Y')
+    
     tgl = scr1['date'].values[0]
     tgl = tgl[8:10] + "/" + tgl[5:7]+ "/" + tgl[0:4]
     
