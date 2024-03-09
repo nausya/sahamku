@@ -395,7 +395,7 @@ def screener():
     scr1['ph'] = ((scr1['ph'].round(1))/1000000000).round(1)
     tgl = scr1['date'].values[0]
     tgl = tgl[8:10] + "/" + tgl[5:7]+ "/" + tgl[0:4]
-    "Last Update : " + tgl
+    
     scr1 = scr1.fillna(0)
     if screenlevel == '<Rp200':
        st.write('Screener Saham Harga Rentang 50-200')
@@ -421,6 +421,7 @@ def screener():
                                   "pbvy": "Nilai Buku","bvy": "Harga Dasar","ph": "Pendapatan(M)","totshm": "Total Saham(M)","mcap": "Omzet(T)","epsy": "Laba Per Saham","opcash": "Kas Operasional(M)",
                                   "ut": "Utang(M)","cash": "Nilai Kas(M)","tcs": "Kas Per Saham", "vol": "Volume(J)","date": "Tanggal"}).sort_values(['Harga','Posisi'])
     #st.dataframe(scr1.style.highlight_max(axis=0),hide_index=True)
+    "Last Update : " + tgl
     st.dataframe(scr1)
     st.subheader('Grafik')
     fig, ax = plt.subplots()
