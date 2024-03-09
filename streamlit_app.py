@@ -377,7 +377,7 @@ def screener():
     scr1['p'] = scr1['p'].astype(int)
     scr1['bl'] = scr1['bl'].astype(int)
     scr1['m'] = scr1['m'].astype(int)
-    scr1['om'] = scr1['om'].round(2)
+    scr1['om'] = (scr1['om'].round(2))*100
     scr1['dev'] = scr1['dev'].round(2)
     scr1['roe'] = scr1['roe'].round(2)
     scr1['pery'] = scr1['pery'].round(2)
