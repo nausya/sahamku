@@ -24,6 +24,7 @@ from xgboost import XGBRegressor
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.ensemble import ExtraTreesRegressor
 from sklearn.metrics import r2_score, mean_absolute_error
+pd.set_option('float_format', '{:.2f}'.format)
 
 # Tentukan zona waktu Indonesia
 indonesia_timezone = pytz.timezone('Asia/Jakarta')
