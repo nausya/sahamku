@@ -373,7 +373,9 @@ def screener():
     screenlevel = option_menu(None, ['>Rp5rb','<Rp5rb','<Rp200','BagiDeviden'], icons=['arrow-up-square', 'arrow-down-square', 'arrow-down-square-fill', 'bullseye'], menu_icon="cast", default_index=0, orientation="horizontal")
    
     st.subheader('Tabular Hasil Screener')
-    scr1 = pd.read_csv('porto.csv', sep=';')
+    scr1 = pd.read_csv('porto.csv', sep=';',
+                       usecols=['kode','p','aksiy','skg','lo','bl','m','hi','om','dev','roe','pery',
+                       'epsy','pbvy','bvy','vol','totshm','mcap','cash','opcash','ph','ut','tcs'])
     scr1['p'] = scr1['p'].astype(int)
     scr1['bl'] = scr1['bl'].astype(int)
     scr1['m'] = scr1['m'].astype(int)
