@@ -125,9 +125,10 @@ for stock in saham:
     ph = info.get('totalRevenue')
     ut = info.get('totalDebt')
     tcs = info.get('totalCashPerShare')
+    der = info.get('debtToEquity')
     screensaham.append({'kode':kode,'skg':skg,'lo':lo,'hi':hi,'om':om,'dev':dev,'roe':roe,
                        'pery':pery,'epsy':epsy,'pbvy':pbvy,'bvy':bvy,'aksiy':aksiy,'vol':vol,'totshm':totshm,
-                      'm':m,'bl':bl,'mcap':mcap,'cash':cash,'opcash':opcash,'ph':ph,'ut':ut,'tcs':tcs})
+                      'm':m,'bl':bl,'mcap':mcap,'cash':cash,'opcash':opcash,'ph':ph,'ut':ut,'tcs':tcs,'der':der})
 df = pd.DataFrame(screensaham)
 df = df.fillna(0)
 
@@ -171,7 +172,7 @@ else:
    vol = int(vol) if vol !=None else 0
    dev = dev if dev !=None else 0
    mcap = int(mcap) if mcap !=None else 0
-   st.subheader(f"EPS : Rp.{eps} | BV : Rp.{round(bv)} | PBV : {round(pbv,1)} | PER : {round(per)} | Sektor : {sek}", divider="rainbow")
+   st.subheader(f"EPS : Rp.{eps} | BV : Rp.{round(bv)} | PBV : {round(pbv,1)} | PER : {round(per)} | DER : {round(der)} |Sektor : {sek}", divider="rainbow")
    
    #BENCHMARK
    kodebm = ind
