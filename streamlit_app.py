@@ -172,7 +172,7 @@ else:
    vol = int(vol) if vol !=None else 0
    dev = dev if dev !=None else 0
    mcap = int(mcap) if mcap !=None else 0
-   st.subheader(f"EPS : Rp.{eps} | BV : Rp.{round(bv)} | PBV : {round(pbv,1)} | PER : {round(per)}} |Sektor : {sek}", divider="rainbow")
+   st.subheader(f"EPS : Rp.{eps} | BV : Rp.{round(bv)} | PBV : {round(pbv,1)} | PER : {round(per)} |Sektor : {sek}", divider="rainbow")
    
    #BENCHMARK
    kodebm = ind
