@@ -177,15 +177,16 @@ else:
    kodebm = ind
    bm = pd.read_csv('IndexSektor.csv', sep=";")
    bm = bm.query("Kode==@kodebm")
-   bm = bm[['Sektor','EPSRp','BVRp','PER','PBV']]
+   bm = bm[['Sektor','EPSRp','BVRp','PER','PBV','DER']]
    bm = bm.values.tolist()
    bm = [item for sublist in bm for item in sublist]
    bmeps = bm[1]
    bmbv = bm[2]
    bmpbv = bm[4]
    bmper = bm[3]
+   bmder = bm[5]
    bmsek = bm[0]
-   st.subheader(f"STANDAR KINERJA EMITEN SEJENIS \n EPS : Rp.{bmeps} | BV : Rp.{bmbv} | PBV : {bmpbv} | PER : {bmper} | SubSektor : {bmsek}", divider="rainbow")
+   st.subheader(f"STANDAR KINERJA EMITEN SEJENIS \n EPS : Rp.{bmeps} | BV : Rp.{bmbv} | PBV : {bmpbv} | PER : {bmper} | DER : {bmder} | SubSektor : {bmsek}", divider="rainbow")
    #deps = eps - bmeps
    #dbv = bv - bmbv
    #dpbv = pbv/bmpbv
