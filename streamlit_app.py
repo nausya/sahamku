@@ -125,7 +125,7 @@ for stock in saham:
     ph = info.get('totalRevenue')
     ut = info.get('totalDebt')
     tcs = info.get('totalCashPerShare')
-    der = info.get('debtToEquity')
+    #der = info.get('debtToEquity')
     screensaham.append({'kode':kode,'skg':skg,'lo':lo,'hi':hi,'om':om,'dev':dev,'roe':roe,
                        'pery':pery,'epsy':epsy,'pbvy':pbvy,'bvy':bvy,'aksiy':aksiy,'vol':vol,'totshm':totshm,
                       'm':m,'bl':bl,'mcap':mcap,'cash':cash,'opcash':opcash,'ph':ph,'ut':ut,'tcs':tcs,'der':der})
