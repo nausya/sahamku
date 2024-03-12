@@ -178,7 +178,8 @@ else:
    dev = dev if dev !=None else 0
    mcap = int(mcap) if mcap !=None else 0
    #st.subheader(f"EPS : Rp.{eps} | BV : Rp.{round(bv)} | PBV : {round(pbv,1)} | PER : {round(per)} |Sektor : {sek}", divider="rainbow")
-   deps = 4 dbv = -3
+   deps = 4 
+   dbv = -3
    # metric1 
    col1, col2, col3, col4, col5 = st.columns(5)
    col1.metric("Laba Per Saham", eps, deps)
