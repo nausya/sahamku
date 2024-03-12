@@ -186,8 +186,6 @@ else:
    ddev = -100
    dom = -3
    dnpm = -19
-   C
-   tcs
    dtcs = str(dpros(tcs, C)) + "%"
    droe = 44
    # metric1 
@@ -196,7 +194,7 @@ else:
    col2.metric("Harga Buku", round(bv), dbv)
    col3.metric("Nilai Buku", "86%", dpbv)
    col4.metric("PER", "86%", dper)
-   col5.metric("Tunai Per Saham", round(tcs), int(dtcs))
+   col5.metric("Tunai Per Saham", round(tcs), dtcs)
    col6, col7, col8, col9, col10 = st.columns(5)
    col6.metric("Deviden", ceknon(dev), ddev)
    col7.metric("Margin Operasi", ceknon(om), dom)
