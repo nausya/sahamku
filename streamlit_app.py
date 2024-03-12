@@ -177,7 +177,7 @@ else:
    #st.metric(label="Temperature", value="70 °F", delta="1.2 °F")
    col1, col2, col3, col4, col5 = st.columns(5)
    col1.metric("Laba Per Saham", {eps}, "1.2 °F")
-   col2.metric("Harga Buku", {round(bv}, "-8%")
+   col2.metric("Harga Buku", {round(bv)}, "-8%")
    col3.metric("Nilai Buku", "86%", "4%")
    col4.metric("PER", "86%", "4%")
    col5.metric("DER", "86%", "4%")
