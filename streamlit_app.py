@@ -189,19 +189,19 @@ else:
    dtcs = dpros(C,tcs)
    droe = 44
    # metric1 
-   col1, col2, col3, col4, col5 = st.columns(5)
+   col1, col2, col3 = st.columns(3)
    col1.metric("Laba Per Saham", eps, deps)
    col2.metric("Harga Buku", round(bv), dbv)
    col3.metric("Nilai Buku", "86%", dpbv)
+   col4, col5, col6 = st.columns(3)
    col4.metric("PER", "86%", dper)
    col5.metric("Tunai Per Saham", round(tcs), dtcs)
-   # metric2
-   col6, col7, col8, col9, col10 = st.columns(5)
    col6.metric("Deviden", ceknon(dev), ddev)
+   col7, col8, col9 = st.columns(3)
    col7.metric("Margin Operasi", ceknon(om), dom)
    col8.metric("Net Profit Margin", "4%", dnpm)
    col9.metric("DER", "4%", dder)
-   col10.metric("ROE", ceknon(roe), droe)
+   #col10.metric("ROE", ceknon(roe), droe)
    st.subheader("", divider="rainbow")
    #BENCHMARK
    kodebm = ind
