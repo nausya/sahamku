@@ -152,7 +152,7 @@ if int(D) > 0 :
     P = (C - L52)/D 
 else : 
     P = 0
-st.subheader(f"Harga terkini Rp {int(C)} berada pada posisi ke-{int(P)} dari ketinggian 100", divider="rainbow")
+st.subheader(f"Harga terkini Rp{int(C)} berada pada posisi ke-{int(P)} dari ketinggian 100", divider="rainbow")
 #st.subheader(f"MarginOps : {ceknon(om)}% | DevPR : {ceknon(dev)}% | ROE : {ceknon(roe)}%", divider="rainbow")
 
     
@@ -188,7 +188,7 @@ else:
    bm = bm[['Sektor','EPSRp','BVRp','PER','PBV','DER']]
    bm = bm.values.tolist()
    bm = [item for sublist in bm for item in sublist]
-
+   bmeps = bm[1]
    bmbv = bm[2]
    bmpbv = bm[4]
    bmper = bm[3]
