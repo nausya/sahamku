@@ -210,7 +210,7 @@ else:
    col1.metric("Laba Per Saham(Rp)", int(eps), deps)
    col2.metric("Harga Buku(Rp)", round(bv), dbv)
    col3.metric("Nilai Buku", round(pbv,1), dpbv)
-   col4.metric("PER", int(per), dper)
+   col4.metric("PER(X)", int(per), dper)
    col5.metric("Tunai Per Saham(Rp)", round(tcs), dtcs)
    col6, col7, col8, col9, col10 = st.columns(5)
    col6.metric("Deviden", str(ceknon(dev)) + "%", ddev)
