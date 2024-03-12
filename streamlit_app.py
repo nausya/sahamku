@@ -101,6 +101,9 @@ def d(a, b):
     return abs(a - b)
 def dpros(a, b):
     return ((b - a) / abs(a)) * 100
+def mil(x):
+    x = x/1000000000
+    return x
 #################################
 #Display Persentil
 saham = [option]
@@ -148,10 +151,7 @@ else :
     P = 0
 st.subheader(f"Harga terkini Rp {int(C)} berada pada posisi ke-{int(P)} dari ketinggian 100", divider="rainbow")
 #st.subheader(f"MarginOps : {ceknon(om)}% | DevPR : {ceknon(dev)}% | ROE : {ceknon(roe)}%", divider="rainbow")
- 
-def mil(x):
-    x = x/1000000000
-    return x
+
     
 #FINANSIAL
 kodef = selected_emiten.split(' | ')[0]
@@ -186,7 +186,7 @@ else:
    ddev = -100
    dom = -3
    dnpm = -19
-   dtcs = 1560
+   dtcs = dpros(tcs, C)
    droe = 44
    # metric1 
    col1, col2, col3, col4, col5 = st.columns(5)
@@ -194,7 +194,7 @@ else:
    col2.metric("Harga Buku", round(bv), dbv)
    col3.metric("Nilai Buku", "86%", dpbv)
    col4.metric("PER", "86%", dper)
-   col5.metric("Tunai Per Saham", tcs, dtcs)
+   col5.metric("Tunai Per Saham", round(tcs), dtcs)
    # metric2
    col6, col7, col8, col9, col10 = st.columns(5)
    col6.metric("Deviden", ceknon(dev), ddev)
