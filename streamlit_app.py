@@ -188,7 +188,7 @@ else:
    dnpm = -19
    C
    tcs
-   dtcs = dpros(tcs, C)
+   dtcs = str(dpros(tcs, C)) + "%"
    droe = 44
    # metric1 
    col1, col2, col3, col4, col5 = st.columns(5)
