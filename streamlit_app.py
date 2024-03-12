@@ -186,7 +186,7 @@ else:
    ddev = -100
    dom = -3
    dnpm = -19
-   droa = -10
+   dtcs = 1560
    droe = 44
    # metric1 
    col1, col2, col3, col4, col5 = st.columns(5)
@@ -194,13 +194,13 @@ else:
    col2.metric("Harga Buku", round(bv), dbv)
    col3.metric("Nilai Buku", "86%", dpbv)
    col4.metric("PER", "86%", dper)
-   col5.metric("DER", "86%", dder)
+   col5.metric("Tunai Per Saham", tcs, dtcs)
    # metric2
    col6, col7, col8, col9, col10 = st.columns(5)
    col6.metric("Deviden", ceknon(dev), ddev)
    col7.metric("Margin Operasi", ceknon(om), dom)
    col8.metric("Net Profit Margin", "4%", dnpm)
-   col9.metric("ROA", "4%", droa)
+   col9.metric("DER", "4%", dder)
    col10.metric("ROE", ceknon(roe), droe)
    st.subheader("", divider="rainbow")
    #BENCHMARK
