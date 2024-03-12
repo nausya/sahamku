@@ -104,6 +104,9 @@ def dpros(a, b):
 def mil(x):
     x = x/1000000000
     return x
+def tril(x):
+    x = x/1000000000000
+    return x
 #################################
 #Display Persentil
 saham = [option]
@@ -201,7 +204,7 @@ else:
    dnpm = -19
    dtcs = str(int(dpros(tcs, C))) + "%"
    droe = 44
-   tunai = str(int(mil(cash))) + "Milyar"
+   tunai = str(int(tril(cash))) + "T"
    # metric1 
    col1, col2, col3, col4, col5 = st.columns(5)
    col1.metric("Laba Per Saham", int(eps), deps)
