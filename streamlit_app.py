@@ -100,7 +100,7 @@ def ceknon(x):
 def d(a, b):
     return abs(a - b)
 def dpros(a, b):
-    return (abs(a / b) * 100)
+    return abs(a / b)
 def mil(x):
     x = x/1000000000
     return x
