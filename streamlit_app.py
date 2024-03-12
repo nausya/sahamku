@@ -225,9 +225,9 @@ else:
    dfringkas = dfringkas.set_index('Kode')
    dfringkas['Tanggal'] = pd.to_datetime(dfringkas['Tanggal'], format='%Y-%m-%d %H:%M:%S')
    # metric
-   st.subheader("Ringkasan Portofolio")
+   #st.subheader("Ringkasan Portofolio")
 
-   st.metric(label="Temperature", value="70 °F", delta="1.2 °F")
+   #st.metric(label="Temperature", value="70 °F", delta="1.2 °F")
 
    col1, col2, col3 = st.columns(3)
    col1.metric("Temperature", "70 °F", "1.2 °F")
