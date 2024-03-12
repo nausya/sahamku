@@ -191,11 +191,11 @@ else:
    bmper = bm[3]
    bmder = bm[5]
    bmsek = bm[0]
-   deps = d(epsy, bmeps) 
-   dbv = d(bvy, bmbv)
-   dpbv = d(pbvy, bmpbv)
-   dper = d(pery, bmper)
-   dder = d(dery, bmder)
+   deps = d(eps, bmeps) 
+   dbv = d(bv, bmbv)
+   dpbv = d(pbv, bmpbv)
+   dper = d(per, bmper)
+   dder = d(der, bmder)
    ddev = -190
    dom = -3
    dnpm = -19
