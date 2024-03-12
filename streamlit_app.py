@@ -100,7 +100,7 @@ def ceknon(x):
 def d(a, b):
     return abs(a - b)
 def dpros(a, b):
-    return (a / b)
+    return (a / b) * 100
 def mil(x):
     x = x/1000000000
     return x
@@ -188,7 +188,7 @@ else:
    dnpm = -19
    C
    tcs
-   dtcs = dpros(C,tcs)
+   dtcs = dpros(tcs, C)
    droe = 44
    # metric1 
    col1, col2, col3, col4, col5 = st.columns(5)
