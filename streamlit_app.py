@@ -224,6 +224,15 @@ else:
    dfringkas = pd.DataFrame(dfringkas, index = np.arange(1))
    dfringkas = dfringkas.set_index('Kode')
    dfringkas['Tanggal'] = pd.to_datetime(dfringkas['Tanggal'], format='%Y-%m-%d %H:%M:%S')
+   # metric
+   st.subheader("Ringkasan Portofolio")
+
+   st.metric(label="Temperature", value="70 °F", delta="1.2 °F")
+
+   col1, col2, col3 = st.columns(3)
+   col1.metric("Temperature", "70 °F", "1.2 °F")
+   col2.metric("Wind", "9 mph", "-8%")
+   col3.metric("Humidity", "86%", "4%")
    st.dataframe(dfringkas)
 
 st.info('Untuk jangka panjang perlu diperhatikan kisaran posisi harga kurang dari 10')
