@@ -187,6 +187,7 @@ else:
    col8.metric("Net Profit Margin", "4%", "4%")
    col9.metric("ROA", "4%", "4%")
    col10.metric("ROE", ceknon(roe), "4%")
+   st.subheader("", divider="rainbow")
    #BENCHMARK
    kodebm = ind
    bm = pd.read_csv('IndexSektor.csv', sep=";")
