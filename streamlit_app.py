@@ -182,7 +182,7 @@ else:
    col5.metric("DER", "86%", "4%")
    # metric2
    col6, col7, col8, col9, col10 = st.columns(5)
-   col6.metric("Deviden", {ceknon(dev)}%, "1.2 °F")
+   col6.metric("Deviden", ceknon(dev), "1.2 °F")
    col7.metric("Margin Operasi", ceknon(om), "-8%")
    col8.metric("Net Profit Margin", "4%", "4%")
    col9.metric("ROA", "4%", "4%")
