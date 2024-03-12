@@ -186,7 +186,7 @@ else:
    ddev = -100
    dom = -3
    dnpm = -19
-   dtcs = dpros(tcs, C)
+   dtcs = dpros(C,tcs) + "%"
    droe = 44
    # metric1 
    col1, col2, col3, col4, col5 = st.columns(5)
