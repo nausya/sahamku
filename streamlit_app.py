@@ -178,12 +178,25 @@ else:
    dev = dev if dev !=None else 0
    mcap = int(mcap) if mcap !=None else 0
    #st.subheader(f"EPS : Rp.{eps} | BV : Rp.{round(bv)} | PBV : {round(pbv,1)} | PER : {round(per)} |Sektor : {sek}", divider="rainbow")
-   deps = 4 
-   dbv = -3
-   dpbv = -19
-   dper = -10
-   dder = 44
-   ddev = -100
+   #BENCHMARK
+   kodebm = ind
+   bm = pd.read_csv('IndexSektor.csv', sep=";")
+   bm = bm.query("Kode==@kodebm")
+   bm = bm[['Sektor','EPSRp','BVRp','PER','PBV','DER']]
+   bm = bm.values.tolist()
+   bm = [item for sublist in bm for item in sublist]
+   bmeps = bm[1]
+   bmbv = bm[2]
+   bmpbv = bm[4]
+   bmper = bm[3]
+   bmder = bm[5]
+   bmsek = bm[0]
+   deps = d(epsy, bmeps) 
+   dbv = d(bvy, bmbv)
+   dpbv = d(pbvy, bmpbv)
+   dper = d(pery, bmper)
+   dder = d(dery, bmder)
+   ddev = -190
    dom = -3
    dnpm = -19
    dtcs = str(int(dpros(tcs, C))) + "%"
@@ -202,19 +215,7 @@ else:
    col9.metric("DER", "4%", dder)
    col10.metric("ROE", ceknon(roe), droe)
    st.subheader("", divider="rainbow")
-   #BENCHMARK
-   kodebm = ind
-   bm = pd.read_csv('IndexSektor.csv', sep=";")
-   bm = bm.query("Kode==@kodebm")
-   bm = bm[['Sektor','EPSRp','BVRp','PER','PBV','DER']]
-   bm = bm.values.tolist()
-   bm = [item for sublist in bm for item in sublist]
-   bmeps = bm[1]
-   bmbv = bm[2]
-   bmpbv = bm[4]
-   bmper = bm[3]
-   bmder = bm[5]
-   bmsek = bm[0]
+
    st.subheader(f"STANDAR KINERJA EMITEN SEJENIS \n EPS : Rp.{bmeps} | BV : Rp.{bmbv} | PBV : {bmpbv} | PER : {bmper} | DER : {bmder} | SubSektor : {bmsek}", divider="rainbow")
    #deps = eps - bmeps
    #dbv = bv - bmbv
