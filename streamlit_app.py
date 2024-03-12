@@ -189,7 +189,7 @@ else:
    bm = bm.values.tolist()
    bm = [item for sublist in bm for item in sublist]
    bmeps = bm[1]
-   int(bmeps)
+   str(bmeps)
 
    bmbv = bm[2]
    bmpbv = bm[4]
