@@ -191,8 +191,7 @@ else:
    bmper = bm[3]
    bmder = bm[5]
    bmsek = bm[0]
-   eps - bmeps
-   deps = d(eps, bmeps) 
+   deps = 4#d(eps, bmeps) 
    dbv = d(bv, bmbv)
    dpbv = d(pbv, bmpbv)
    dper = d(per, bmper)
