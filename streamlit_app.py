@@ -188,8 +188,8 @@ else:
    bm = bm[['Sektor','EPSRp','BVRp','PER','PBV','DER']]
    bm = bm.values.tolist()
    bm = [item for sublist in bm for item in sublist]
-   bmeps = int(bm[1])
-   bmbv = int(bm[2])
+   bmeps = round(bm[1])
+   bmbv = round(bm[2])
    bmpbv = bm[4]
    bmper = bm[3]
    bmder = bm[5]
