@@ -214,7 +214,7 @@ else:
    col5.metric("Tunai Per Saham", round(tcs), dtcs)
    col6, col7, col8, col9, col10 = st.columns(5)
    col6.metric("Deviden", ceknon(dev), ddev)
-   col7.metric("Margin Operasi", ceknon(om), dom)
+   col7.metric("Margin Operasi", str(ceknon(om)) + "%", dom)
    col8.metric("Uang Tunai", tunai, dnpm)
    col9.metric("DER", "8", dder)
    col10.metric("ROE", ceknon(roe), droe)
