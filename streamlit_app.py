@@ -142,7 +142,7 @@ if int(D) > 0 :
 else : 
     P = 0
 st.subheader(f"Harga terkini Rp {int(C)} berada pada posisi ke-{int(P)} dari ketinggian 100", divider="rainbow")
-st.subheader(f"MarginOps : {ceknon(om)}% | DevPR : {ceknon(dev)}% | ROE : {ceknon(roe)}%", divider="rainbow")
+#st.subheader(f"MarginOps : {ceknon(om)}% | DevPR : {ceknon(dev)}% | ROE : {ceknon(roe)}%", divider="rainbow")
  
 def mil(x):
     x = x/1000000000
@@ -173,14 +173,20 @@ else:
    dev = dev if dev !=None else 0
    mcap = int(mcap) if mcap !=None else 0
    #st.subheader(f"EPS : Rp.{eps} | BV : Rp.{round(bv)} | PBV : {round(pbv,1)} | PER : {round(per)} |Sektor : {sek}", divider="rainbow")
-   # metric
-   #st.metric(label="Temperature", value="70 °F", delta="1.2 °F")
+   # metric1
    col1, col2, col3, col4, col5 = st.columns(5)
    col1.metric("Laba Per Saham", eps, "1.2 °F")
    col2.metric("Harga Buku", round(bv), "-8%")
    col3.metric("Nilai Buku", "86%", "4%")
    col4.metric("PER", "86%", "4%")
    col5.metric("DER", "86%", "4%")
+   # metric2
+   col6, col7, col8, col9, col10 = st.columns(5)
+   col6.metric("Deviden", ceknon(dev), "1.2 °F")
+   col7.metric("Margin Operasi", ceknon(om), "-8%")
+   col8.metric("Net Profit Margin", ceknon(npm), "4%")
+   col9.metric("ROA", ceknon(roa), "4%")
+   col10.metric("ROE", ceknon(roe), "4%")
    #BENCHMARK
    kodebm = ind
    bm = pd.read_csv('IndexSektor.csv', sep=";")
