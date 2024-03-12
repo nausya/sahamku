@@ -203,16 +203,16 @@ else:
    droe = 44
    # metric1 
    col1, col2, col3, col4, col5 = st.columns(5)
-   col1.metric("Laba Per Saham", eps, deps)
+   col1.metric("Laba Per Saham", int(eps), deps)
    col2.metric("Harga Buku", round(bv), dbv)
-   col3.metric("Nilai Buku", "86%", dpbv)
-   col4.metric("PER", "86%", dper)
+   col3.metric("Nilai Buku", pbv, dpbv)
+   col4.metric("PER", per, dper)
    col5.metric("Tunai Per Saham", round(tcs), dtcs)
    col6, col7, col8, col9, col10 = st.columns(5)
    col6.metric("Deviden", ceknon(dev), ddev)
    col7.metric("Margin Operasi", ceknon(om), dom)
-   col8.metric("Net Profit Margin", "4%", dnpm)
-   col9.metric("DER", "4%", dder)
+   col8.metric("Uang Tunai", cash, dnpm)
+   col9.metric("DER", der, dder)
    col10.metric("ROE", ceknon(roe), droe)
    st.subheader("", divider="rainbow")
 
