@@ -190,6 +190,7 @@ else:
    bm = [item for sublist in bm for item in sublist]
    bmeps = bm[1]
    bmeps
+   type(bmeps)
    bmbv = bm[2]
    bmpbv = bm[4]
    bmper = bm[3]
