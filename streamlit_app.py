@@ -172,8 +172,15 @@ else:
    vol = int(vol) if vol !=None else 0
    dev = dev if dev !=None else 0
    mcap = int(mcap) if mcap !=None else 0
-   st.subheader(f"EPS : Rp.{eps} | BV : Rp.{round(bv)} | PBV : {round(pbv,1)} | PER : {round(per)} |Sektor : {sek}", divider="rainbow")
-   
+   #st.subheader(f"EPS : Rp.{eps} | BV : Rp.{round(bv)} | PBV : {round(pbv,1)} | PER : {round(per)} |Sektor : {sek}", divider="rainbow")
+   # metric
+   #st.metric(label="Temperature", value="70 °F", delta="1.2 °F")
+   col1, col2, col3, col4, col5 = st.columns(5)
+   col1.metric("Laba Per Saham", {eps}, "1.2 °F")
+   col2.metric("Harga Buku", {round(bv}, "-8%")
+   col3.metric("Nilai Buku", "86%", "4%")
+   col4.metric("PER", "86%", "4%")
+   col5.metric("DER", "86%", "4%")
    #BENCHMARK
    kodebm = ind
    bm = pd.read_csv('IndexSektor.csv', sep=";")
@@ -224,15 +231,7 @@ else:
    dfringkas = pd.DataFrame(dfringkas, index = np.arange(1))
    dfringkas = dfringkas.set_index('Kode')
    dfringkas['Tanggal'] = pd.to_datetime(dfringkas['Tanggal'], format='%Y-%m-%d %H:%M:%S')
-   # metric
-   #st.subheader("Ringkasan Portofolio")
 
-   #st.metric(label="Temperature", value="70 °F", delta="1.2 °F")
-
-   col1, col2, col3 = st.columns(3)
-   col1.metric("Temperature", "70 °F", "1.2 °F")
-   col2.metric("Wind", "9 mph", "-8%")
-   col3.metric("Humidity", "86%", "4%")
    st.dataframe(dfringkas)
 
 st.info('Untuk jangka panjang perlu diperhatikan kisaran posisi harga kurang dari 10')
