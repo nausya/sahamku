@@ -84,7 +84,7 @@ else:
     for x in y:
      st.error(x)
 ##########End of Notasi Saham################
-
+############# KUMPULAN FUNGSI ######
 #ganti value None
 def ceknon(x):
     if x is not None:
@@ -96,7 +96,12 @@ def ceknon(x):
     else:
        return 0 
         #st.error('This is an error', icon="🚨")
-
+############# fungsi delta ######
+def d(a, b):
+    return abs(a - b)
+def dpros(a, b):
+    return ((b - a) / abs(a)) * 100
+#################################
 #Display Persentil
 saham = [option]
 
@@ -173,10 +178,11 @@ else:
    dev = dev if dev !=None else 0
    mcap = int(mcap) if mcap !=None else 0
    #st.subheader(f"EPS : Rp.{eps} | BV : Rp.{round(bv)} | PBV : {round(pbv,1)} | PER : {round(per)} |Sektor : {sek}", divider="rainbow")
-   # metric1
+   deps = 4 dbv = -3
+   # metric1 
    col1, col2, col3, col4, col5 = st.columns(5)
-   col1.metric("Laba Per Saham", eps, "1")
-   col2.metric("Harga Buku", round(bv), "-8%")
+   col1.metric("Laba Per Saham", eps, deps)
+   col2.metric("Harga Buku", round(bv), dbv)
    col3.metric("Nilai Buku", "86%", "4%")
    col4.metric("PER", "86%", "4%")
    col5.metric("DER", "86%", "4%")
