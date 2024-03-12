@@ -175,14 +175,14 @@ else:
    #st.subheader(f"EPS : Rp.{eps} | BV : Rp.{round(bv)} | PBV : {round(pbv,1)} | PER : {round(per)} |Sektor : {sek}", divider="rainbow")
    # metric1
    col1, col2, col3, col4, col5 = st.columns(5)
-   col1.metric("Laba Per Saham", eps, "1.2 °F")
+   col1.metric("Laba Per Saham", eps, "1")
    col2.metric("Harga Buku", round(bv), "-8%")
    col3.metric("Nilai Buku", "86%", "4%")
    col4.metric("PER", "86%", "4%")
    col5.metric("DER", "86%", "4%")
    # metric2
    col6, col7, col8, col9, col10 = st.columns(5)
-   col6.metric("Deviden", ceknon(dev), "1.2 °F")
+   col6.metric("Deviden", ceknon(dev), "1")
    col7.metric("Margin Operasi", ceknon(om), "-8%")
    col8.metric("Net Profit Margin", "4%", "4%")
    col9.metric("ROA", "4%", "4%")
