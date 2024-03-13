@@ -134,7 +134,7 @@ for stock in saham:
     pbvy = info.get('priceToBook')
     bvy = info.get('bookValue')
     aksiy = info.get('recommendationKey')
-    vole = info.get('Volume')
+    vole = info.get('volume')
     vol = info.get('averageDailyVolume10Day')
     mcap = info.get('marketCap')
     totshm = info.get('sharesOutstanding')
@@ -186,8 +186,6 @@ else:
    ut = df['ut'].values[0]
    sek = fin[4]
    ind = fin[5][:2]
-   vol
-   vole
    vol = int(vol) if vol !=None else 0
    vole = int(vole) if vole !=None else 0
    dev = dev if dev !=None else 0
