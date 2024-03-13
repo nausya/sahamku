@@ -203,7 +203,7 @@ else:
    bmder = bm[5]
    bmsek = bm[0]
    tipe_data = type(bmeps)
-   st.write("Tipe data dari my_list adalah:", tipe_data)
+   print("Tipe data dari my_list adalah:", tipe_data)
    deps = 4#d(eps, bmeps) 
    dbv = 4#d(bv, bmbv)
    dpbv = 4#d(pbv, bmpbv)
