@@ -208,7 +208,7 @@ else:
    dpbv = round(d(bmpbv, pbv))
    dper = round(d(per, bmper))
    dvol = str(round(dpros(vol, vole)) + "%"
-   ddev = 190
+   #ddev = 190
    dom = -3
    dnpm = -19
    dtcs = str(round(dpros(tcs, C))) + "%"
@@ -223,7 +223,7 @@ else:
    col4.metric("Rata2 Vol Saham", volshm, dvol)
    col5.metric("Tunai Per Saham(Rp)", round(tcs), dtcs)
    col6, col7, col8, col9, col10 = st.columns(5)
-   col6.metric("Deviden", str(ceknon(dev)) + "%", ddev)
+   col6.metric("Deviden", str(ceknon(dev)) + "%", 1)
    col7.metric("Margin Operasi", str(ceknon(om)) + "%", dom)
    col8.metric("Uang Tunai(Rp)", tunai, dnpm)
    col9.metric("PER(Kali)", round(per), dper)
