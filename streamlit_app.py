@@ -104,9 +104,15 @@ def dpros(a, b):
 def mil(x):
     x = x/1000000000
     return x
-def tril(x):
-    x = x/1000000000000
-    return x
+def uang(angka):
+    if angka >= 10**12:
+        return f"{angka / 10**12:.1f} T"
+    elif angka >= 10**9:
+        return f"{angka / 10**9:.1f} M"
+    elif angka >= 10**6:
+        return f"{angka / 10**6:.1f} Jt"
+    else:
+        return str(angka)
 #################################
 #Display Persentil
 saham = [option]
@@ -205,7 +211,7 @@ else:
    dtcs = str(round(dpros(tcs, C))) + "%"
    droe = 44
    len(cash)
-   tunai = cash#str(int(tril(cash))) + "T"
+   tunai = uang(cash)#str(int(tril(cash))) + "T"
    # metric1 
    col1, col2, col3, col4, col5 = st.columns(5)
    col1.metric("Laba Per Saham(Rp)", int(eps), deps)
