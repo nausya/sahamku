@@ -109,7 +109,7 @@ def uang(angka):
         return f"{angka / 10**12:.0f} T"
     elif angka >= 10**9:
         return f"{angka / 10**9:.0f} M"
-    elif angka <= 10**6:
+    elif angka >= 10**6:
         return f"{angka / 10**6:.0f} Jt"
     elif angka >= 10**3:
         return f"{angka / 10**3:.0f} Rb"
