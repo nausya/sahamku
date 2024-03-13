@@ -195,7 +195,7 @@ else:
    sek = fin[4]
    ind = fin[5][:2]
    per
-   per = int(per) if per !=None else 0
+   per = abs(per) if per !=None else 0
    vol = int(vol) if vol !=None else 0
    vole = int(vole) if vole !=None else 0
    dev = dev if dev !=None else 0
