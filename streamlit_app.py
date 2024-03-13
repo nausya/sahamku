@@ -111,6 +111,8 @@ def uang(angka):
         return f"{angka / 10**9:.0f} M"
     elif angka >= 10**6:
         return f"{angka / 10**6:.0f} Jt"
+    elif angka >= 10**3:
+        return f"{angka / 10**3:.0f} Rb"
     else:
         return str(angka)
 #################################
@@ -204,13 +206,14 @@ else:
    dbv = 4#d(bv, bmbv)
    dpbv = 4#d(pbv, bmpbv)
    dper = 4#d(per, bmper)
-   dder = 4#d(der, bmder)
+   dvol = 4#d(der, bmder)
    ddev = -190
    dom = -3
    dnpm = -19
    dtcs = str(round(dpros(tcs, C))) + "%"
    droe = 44
    tunai = uang(cash)
+   volshm = uang(vol)
    # metric1 
    col1, col2, col3, col4, col5 = st.columns(5)
    col1.metric("Laba Per Saham(Rp)", eps, deps)
@@ -222,7 +225,7 @@ else:
    col6.metric("Deviden", str(ceknon(dev)) + "%", ddev)
    col7.metric("Margin Operasi", str(ceknon(om)) + "%", dom)
    col8.metric("Uang Tunai(Rp)", tunai, dnpm)
-   col9.metric("DER", "8", dder)
+   col9.metric("Volume Saham", volshm, dvol)
    col10.metric("ROE", str(ceknon(roe)) + "%", droe)
    st.subheader("", divider="rainbow")
 
