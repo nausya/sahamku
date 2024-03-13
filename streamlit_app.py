@@ -106,19 +106,19 @@ def mil(x):
     return x
 def digit(angka):
     if angka >= 10**12:
-        return f"{angka / 10**12:.0f} T"
+        return f"{angka / 10**12:.1f} T"
     elif angka >= 10**9:
-        return f"{angka / 10**9:.0f} M"
+        return f"{angka / 10**9:.1f} M"
     elif angka >= 10**6:
-        return f"{angka / 10**6:.0f} Jt"
+        return f"{angka / 10**6:.1f} Jt"
     elif angka >= 10**3:
         return f"{angka / 10**3:.0f} Rb"
     elif angka <= -10**12:
-        return f"{angka / 10**12:.0f} T"
+        return f"{angka / 10**12:.1f} T"
     elif angka <= -10**9:
-        return f"{angka / 10**9:.0f} M"
+        return f"{angka / 10**9:.1f} M"
     elif angka <= -10**6:
-        return f"{angka / 10**6:.0f} Jt"
+        return f"{angka / 10**6:.1f} Jt"
     elif angka <= -10**3:
         return f"{angka / 10**3:.0f} Rb"
     else:
