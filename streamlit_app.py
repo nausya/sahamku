@@ -98,7 +98,7 @@ def ceknon(x):
         #st.error('This is an error', icon="🚨")
 ############# fungsi delta ######
 def d(a, b):
-    return abs(a - b)
+    return (a - b)
 def dpros(a, b):
     return (a / b) * 100
 def mil(x):
