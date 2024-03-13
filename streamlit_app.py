@@ -113,7 +113,7 @@ def uang(angka):
         return f"{angka / 10**6:.0f} Jt"
     elif angka >= 10**3:
         return f"{angka / 10**3:.0f} Rb"
-    elif angka >= 10**12:
+    elif angka <= -10**12:
         return f"{angka / 10**12:.0f} T"
     elif angka <= -10**9:
         return f"{angka / 10**9:.0f} M"
@@ -216,7 +216,7 @@ else:
    dbv = round(d(bv, bmbv))
    dpbv = round(d(bmpbv, pbv))
    dper = round(d(bmper, per))
-   dvol = d(vol, vole)
+   dvol = round(d(vol, vole))
    ddev = 190
    dom = -3
    dnpm = -19
