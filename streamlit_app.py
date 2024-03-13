@@ -233,7 +233,7 @@ else:
    col4.metric("Rata2 Vol Saham", volshm, digit(dvol))
    col5.metric("Tunai Per Saham(Rp)", round(tcs), dtcs)
    col6, col7, col8, col9, col10 = st.columns(5)
-   col6.metric("Deviden", str(ceknon(dev)) + "%", 1)
+   col6.metric("Deviden", str(ceknon(dev)) + "%", 0)
    col7.metric("Kas Operasional", digit(opcash), dom)
    col8.metric("Uang Tunai(Rp)", tunai, utun)
    col9.metric("PER(Kali)", round(per), dper)
