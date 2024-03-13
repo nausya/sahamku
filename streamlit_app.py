@@ -106,11 +106,11 @@ def mil(x):
     return x
 def uang(angka):
     if angka >= 10**12:
-        return f"{angka / 10**12:.1f} T"
+        return f"{angka / 10**12:.0f} T"
     elif angka >= 10**9:
-        return f"{angka / 10**9:.1f} M"
+        return f"{angka / 10**9:.0f} M"
     elif angka >= 10**6:
-        return f"{angka / 10**6:.1f} Jt"
+        return f"{angka / 10**6:.0f} Jt"
     else:
         return str(angka)
 #################################
@@ -210,7 +210,7 @@ else:
    dnpm = -19
    dtcs = str(round(dpros(tcs, C))) + "%"
    droe = 44
-   tunai = uang(round(cash))
+   tunai = uang(cash)
    # metric1 
    col1, col2, col3, col4, col5 = st.columns(5)
    col1.metric("Laba Per Saham(Rp)", eps, deps)
