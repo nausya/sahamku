@@ -223,7 +223,6 @@ else:
    dnpm = -19
    dtcs = str(round(dpros(tcs, C))) + "%"
    droe = 44
-   pbv = digit(pbv)
    tunai = digit(cash)
    volshm = digit(vol)
    # metric1 
