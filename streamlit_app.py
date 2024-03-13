@@ -197,15 +197,11 @@ else:
    bm = bm.values.tolist()
    bm = [item for sublist in bm for item in sublist]
    bmeps = bm[1]
-   cc = type(bm[1])
-   cc
    bmbv = bm[2]
    bmpbv = bm[4]
    bmper = bm[3]
    bmder = bm[5]
    bmsek = bm[0]
-   tipe_data = type(bmeps)
-   print("Tipe data dari my_list adalah:", tipe_data)
    deps = 4#d(eps, bmeps) 
    dbv = 4#d(bv, bmbv)
    dpbv = 4#d(pbv, bmpbv)
