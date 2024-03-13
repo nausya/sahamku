@@ -194,7 +194,6 @@ else:
    ut = df['ut'].values[0]
    sek = fin[4]
    ind = fin[5][:2]
-   per
    per = per if per !='Infinity' else 0
    vol = int(vol) if vol !=None else 0
    vole = int(vole) if vole !=None else 0
@@ -224,6 +223,7 @@ else:
    dnpm = -19
    dtcs = str(round(dpros(tcs, C))) + "%"
    droe = 44
+   pbv = digit(pbv)
    tunai = digit(cash)
    volshm = digit(vol)
    # metric1 
