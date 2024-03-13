@@ -242,9 +242,9 @@ else:
 
    st.subheader(f"STANDAR KINERJA EMITEN SEJENIS \n EPS : Rp.{bmeps} | BV : Rp.{round(bmbv)} | PBV : {bmpbv} | PER : {round(bmper)} | DER : {bmder} | SubSektor : {bmsek}", divider="rainbow")
    #BENCHMARK2
-   bm2 = pd.read_csv('minmax-perder.csv', sep=";")
-   bm2 = bm2.query("Kode like '@kodebm%'")
-   st.dataframe(bm2)
+   #bm2 = pd.read_csv('minmax-perder.csv', sep=";")
+   #bm2 = bm2.query("Kode like '@kodebm%'")
+   #st.dataframe(bm2)
    #RINGKASAN
    st.subheader(f"RINGKASAN PORTOFOLIO", divider="rainbow")
    date = datetime.datetime.now(indonesia_timezone)
