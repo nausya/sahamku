@@ -207,7 +207,7 @@ else:
    dbv = round(d(bv, bmbv))
    dpbv = round(d(bmpbv, pbv))
    dper = round(d(per, bmper))
-   dvol = str(round(dpros(vol, vole))) + "%"
+   dvol = dpros(vol, vole)
    ddev = 190
    dom = -3
    dnpm = -19
