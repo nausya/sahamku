@@ -210,7 +210,6 @@ else:
    dnpm = -19
    dtcs = str(round(dpros(tcs, C))) + "%"
    droe = 44
-   len(cash)
    tunai = uang(cash)#str(int(tril(cash))) + "T"
    # metric1 
    col1, col2, col3, col4, col5 = st.columns(5)
