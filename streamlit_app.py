@@ -210,7 +210,7 @@ else:
    dnpm = -19
    dtcs = str(round(dpros(tcs, C))) + "%"
    droe = 44
-   tunai = uang(cash)#str(int(tril(cash))) + "T"
+   tunai = round(uang(cash))
    # metric1 
    col1, col2, col3, col4, col5 = st.columns(5)
    col1.metric("Laba Per Saham(Rp)", eps, deps)
@@ -221,7 +221,7 @@ else:
    col6, col7, col8, col9, col10 = st.columns(5)
    col6.metric("Deviden", str(ceknon(dev)) + "%", ddev)
    col7.metric("Margin Operasi", str(ceknon(om)) + "%", dom)
-   col8.metric("Uang Tunai(Rp)", round(tunai), dnpm)
+   col8.metric("Uang Tunai(Rp)", tunai, dnpm)
    col9.metric("DER", "8", dder)
    col10.metric("ROE", str(ceknon(roe)) + "%", droe)
    st.subheader("", divider="rainbow")
