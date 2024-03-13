@@ -104,7 +104,7 @@ def dpros(a, b):
 def mil(x):
     x = x/1000000000
     return x
-def uang(angka):
+def digit(angka):
     if angka >= 10**12:
         return f"{angka / 10**12:.0f} T"
     elif angka >= 10**9:
@@ -222,8 +222,8 @@ else:
    dnpm = -19
    dtcs = str(round(dpros(tcs, C))) + "%"
    droe = 44
-   tunai = uang(cash)
-   volshm = uang(vol)
+   tunai = digit(cash)
+   volshm = digit(vol)
    # metric1 
    col1, col2, col3, col4, col5 = st.columns(5)
    col1.metric("Laba Per Saham(Rp)", round(eps), deps)
