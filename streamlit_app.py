@@ -194,6 +194,7 @@ else:
    ut = df['ut'].values[0]
    sek = fin[4]
    ind = fin[5][:2]
+   per
    per = int(per) if per !=None else 0
    vol = int(vol) if vol !=None else 0
    vole = int(vole) if vole !=None else 0
