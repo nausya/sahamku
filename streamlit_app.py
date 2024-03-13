@@ -206,7 +206,7 @@ else:
    dbv = round(d(bv, bmbv))
    dpbv = round(d(pbv, bmpbv))
    dper = round(d(per, bmper))
-   dvol = round(d(der, bmder))
+   dvol = d(vol, bmder)
    ddev = -190
    dom = -3
    dnpm = -19
