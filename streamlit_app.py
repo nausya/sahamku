@@ -216,7 +216,7 @@ else:
    dbv = round(d(bv, bmbv))
    dpbv = round(d(bmpbv, pbv))
    dper = round(d(bmper, per))
-   dvol = d(vol, vole)
+   dvol = round(d(vol, vole))
    ddev = 190
    dom = -3
    dnpm = -19
@@ -229,7 +229,7 @@ else:
    col1.metric("Laba Per Saham(Rp)", round(eps), deps)
    col2.metric("Harga Buku(Rp)", round(bv), dbv)
    col3.metric("Nilai Buku", round(pbv,1), dpbv)
-   col4.metric("Rata2 Vol Saham", volshm, dvol)
+   col4.metric("Rata2 Vol Saham", volshm, digit(dvol))
    col5.metric("Tunai Per Saham(Rp)", round(tcs), dtcs)
    col6, col7, col8, col9, col10 = st.columns(5)
    col6.metric("Deviden", str(ceknon(dev)) + "%", 1)
