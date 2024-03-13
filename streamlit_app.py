@@ -220,9 +220,9 @@ else:
    dvol = round(d(vol, vole))
    ddev = 0
    dom = 0
-   dnpm = 0
+   utun = digit(cash + opcash - ut)
    dtcs = str(round(dpros(tcs, C))) + "%"
-   droe = 0
+   dut = digit(mcap)
    tunai = digit(cash)
    volshm = digit(vol)
    # metric1 
@@ -235,9 +235,9 @@ else:
    col6, col7, col8, col9, col10 = st.columns(5)
    col6.metric("Deviden", str(ceknon(dev)) + "%", 1)
    col7.metric("Kas Operasional", digit(opcash), dom)
-   col8.metric("Uang Tunai(Rp)", tunai, dnpm)
+   col8.metric("Uang Tunai(Rp)", tunai, utun)
    col9.metric("PER(Kali)", round(per), dper)
-   col10.metric("Utang", digit(ut), droe)
+   col10.metric("Utang", digit(ut), dut)
    st.subheader("", divider="rainbow")
 
    st.subheader(f"STANDAR KINERJA EMITEN SEJENIS \n EPS : Rp.{bmeps} | BV : Rp.{round(bmbv)} | PBV : {bmpbv} | PER : {round(bmper)} | DER : {bmder} | SubSektor : {bmsek}", divider="rainbow")
