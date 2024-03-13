@@ -231,7 +231,7 @@ else:
    col10.metric("ROE", str(ceknon(roe)) + "%", droe)
    st.subheader("", divider="rainbow")
 
-   st.subheader(f"STANDAR KINERJA EMITEN SEJENIS \n EPS : Rp.{round(float(bmeps))} | BV : Rp.{bmbv} | PBV : {bmpbv} | PER : {bmper} | DER : {bmder} | SubSektor : {bmsek}", divider="rainbow")
+   st.subheader(f"STANDAR KINERJA EMITEN SEJENIS \n EPS : Rp.{bmeps} | BV : Rp.{bmbv} | PBV : {bmpbv} | PER : {bmper} | DER : {bmder} | SubSektor : {bmsek}", divider="rainbow")
 
    #RINGKASAN
    st.subheader(f"RINGKASAN PORTOFOLIO", divider="rainbow")
