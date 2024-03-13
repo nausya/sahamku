@@ -194,6 +194,7 @@ else:
    ut = df['ut'].values[0]
    sek = fin[4]
    ind = fin[5][:2]
+   per = int(per) if per !=None else 0
    vol = int(vol) if vol !=None else 0
    vole = int(vole) if vole !=None else 0
    dev = dev if dev !=None else 0
@@ -272,7 +273,6 @@ else:
    dfringkas = pd.DataFrame(dfringkas, index = np.arange(1))
    dfringkas = dfringkas.set_index('Kode')
    dfringkas['Tanggal'] = pd.to_datetime(dfringkas['Tanggal'], format='%Y-%m-%d %H:%M:%S')
-
    st.dataframe(dfringkas)
 
 st.info('Untuk jangka panjang perlu diperhatikan kisaran posisi harga kurang dari 10')
