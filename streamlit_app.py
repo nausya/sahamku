@@ -134,6 +134,7 @@ for stock in saham:
     pbvy = info.get('priceToBook')
     bvy = info.get('bookValue')
     aksiy = info.get('recommendationKey')
+    vole = info.get('Volume')
     vol = info.get('averageDailyVolume10Day')
     mcap = info.get('marketCap')
     totshm = info.get('sharesOutstanding')
@@ -204,9 +205,9 @@ else:
    bmsek = bm[0]
    deps = round(d(eps, bmeps)) 
    dbv = round(d(bv, bmbv))
-   dpbv = round(d(pbv, bmpbv))
+   dpbv = round(d(bmpbv, pbv))
    dper = round(d(per, bmper))
-   dvol = d(vol, bmder)
+   dvol = str(round(dpros(vol, vole)) + "%"
    ddev = -190
    dom = -3
    dnpm = -19
