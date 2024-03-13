@@ -202,7 +202,7 @@ else:
    ddev = -190
    dom = -3
    dnpm = -19
-   dtcs = str(int(dpros(tcs, C))) + "%"
+   dtcs = dpros(tcs, C)# str(int(dpros(tcs, C))) + "%"
    droe = 44
    tunai = str(int(tril(cash))) + "T"
    # metric1 
