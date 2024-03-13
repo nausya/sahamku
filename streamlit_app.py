@@ -202,11 +202,11 @@ else:
    bmper = bm[3]
    bmder = bm[5]
    bmsek = bm[0]
-   deps = d(eps, bmeps) 
-   dbv = 4#d(bv, bmbv)
-   dpbv = 4#d(pbv, bmpbv)
-   dper = 4#d(per, bmper)
-   dvol = 4#d(der, bmder)
+   deps = round(d(eps, bmeps)) 
+   dbv = round(d(bv, bmbv))
+   dpbv = round(d(pbv, bmpbv))
+   dper = round(d(per, bmper))
+   dvol = round(d(der, bmder))
    ddev = -190
    dom = -3
    dnpm = -19
