@@ -196,7 +196,7 @@ else:
    bm = bm[['Sektor','EPSRp','BVRp','PER','PBV','DER']]
    bm = bm.values.tolist()
    bm = [item for sublist in bm for item in sublist]
-   bmeps = round(bm[1].values[0])
+   bmeps = bm[1]
    bmbv = bm[2]
    bmpbv = bm[4]
    bmper = bm[3]
@@ -231,11 +231,7 @@ else:
    col10.metric("ROE", str(ceknon(roe)) + "%", droe)
    st.subheader("", divider="rainbow")
 
-   st.subheader(f"STANDAR KINERJA EMITEN SEJENIS \n EPS : Rp.{bmeps} | BV : Rp.{bmbv} | PBV : {bmpbv} | PER : {bmper} | DER : {bmder} | SubSektor : {bmsek}", divider="rainbow")
-   #deps = eps - bmeps
-   #dbv = bv - bmbv
-   #dpbv = pbv/bmpbv
-   #dper = "Idealnya PER < 15"
+   st.subheader(f"STANDAR KINERJA EMITEN SEJENIS \n EPS : Rp.{round(bmeps)} | BV : Rp.{bmbv} | PBV : {bmpbv} | PER : {bmper} | DER : {bmder} | SubSektor : {bmsek}", divider="rainbow")
 
    #RINGKASAN
    st.subheader(f"RINGKASAN PORTOFOLIO", divider="rainbow")
