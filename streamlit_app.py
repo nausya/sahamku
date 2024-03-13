@@ -210,7 +210,7 @@ else:
    dnpm = -19
    dtcs = str(round(dpros(tcs, C))) + "%"
    droe = 44
-   tunai = round(uang(cash))
+   tunai = uang(round(cash))
    # metric1 
    col1, col2, col3, col4, col5 = st.columns(5)
    col1.metric("Laba Per Saham(Rp)", eps, deps)
