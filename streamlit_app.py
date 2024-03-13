@@ -216,7 +216,7 @@ else:
    volshm = uang(vol)
    # metric1 
    col1, col2, col3, col4, col5 = st.columns(5)
-   col1.metric("Laba Per Saham(Rp)", eps, deps)
+   col1.metric("Laba Per Saham(Rp)", round(eps), deps)
    col2.metric("Harga Buku(Rp)", round(bv), dbv)
    col3.metric("Nilai Buku", round(pbv,1), dpbv)
    col4.metric("Volume Saham", volshm, dvol)
