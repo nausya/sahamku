@@ -88,8 +88,8 @@ if st.sidebar.button('Proses'):
 
 data = download_data(option, start_date, end_date)
 scaler = StandardScaler()
-y = data.tail[1]
-y
+
+
 ########End Proses sidebar data
 
 
@@ -205,8 +205,8 @@ fin = fin[['EPSRP','BVRP','PER','PBV','Sektor','KodeInd']]
 if fin.empty:
    st.error ("KATEGORI PERUSAHAAN BARU MASUK IPO")
 elif C == 0:
-   C = st.dataframe(data.tail(1))
-   C = C['Adj Close'].values[0]
+   #C = st.dataframe(data.tail(1))
+   #C = C['Adj Close'].values[0]
    C = 1
    st.error ("Data Bursa Belum Tersedia")
 else:
