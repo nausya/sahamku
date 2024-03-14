@@ -54,6 +54,7 @@ def download_data(op, start_date, end_date):
     df = yf.download(op, start=start_date, end=end_date, progress=False)
     return df
 ######End of Halaman Utama
+
 #######AMBIL KODE EMITEN DARI CSV
 
 ## Load the data
@@ -87,6 +88,7 @@ if st.sidebar.button('Proses'):
 
 data = download_data(option, start_date, end_date)
 scaler = StandardScaler()
+data
 ########End Proses sidebar data
 
 
@@ -350,9 +352,6 @@ def dataframe():
     if caridata == '10 Data':
        st.header('10 Data Terkini')
        st.dataframe(data.tail(10))
-       cl = data.tail(1)
-       cl = cl['Adj Close'].values[0]
-       cl
     elif caridata == 'Deviden':
         st.header("Data Deviden")
         devcum = pd.read_csv('devcumdate.csv', index_col=[0], sep=';')
