@@ -85,6 +85,11 @@ else:
      st.error(x)
 ##########End of Notasi Saham################
 ############# KUMPULAN FUNGSI ######
+#Percentil
+def pentil(min,max,c):
+    p = np.interp(c, [min, max], [0, 100])
+    return round(p)
+    
 #ganti value None
 def ceknon(x):
     if x is not None:
@@ -163,13 +168,14 @@ df = df.fillna(0)
 L52 = df['lo'].values[0]
 H52 = df['hi'].values[0]
 C = df['skg'].values[0]
-D = (H52-L52)/100
+#D = (H52-L52)/100
 
-if int(D) > 0 :
-    P = (C - L52)/D 
-else : 
-    P = 0
-st.subheader(f"Harga terkini Rp{int(C)} berada pada posisi ke-{int(P)} dari ketinggian 100", divider="rainbow")
+#if int(D) > 0 :
+ #   P = (C - L52)/D 
+#else : 
+#    P = 0
+P = pentil(L52,H52,C)
+st.subheader(f"Harga terkini Rp{int(C)} berada pada posisi ke-{P} dari ketinggian 100", divider="rainbow")
 #st.subheader(f"MarginOps : {ceknon(om)}% | DevPR : {ceknon(dev)}% | ROE : {ceknon(roe)}%", divider="rainbow")
 
     
