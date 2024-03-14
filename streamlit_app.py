@@ -198,8 +198,8 @@ st.subheader(f"Harga terkini Rp{int(C)} berada pada posisi ke-{P} dari ketinggia
 kodef = selected_emiten.split(' | ')[0]
 fin = pd.read_csv('Finansial.csv', sep=";")
 fin = fin.query("Kode==@kodef")
-fin
-fin = fin[['EPSRP','BVRP','PER','PBV','Sektor','KodeInd']]
+#fin
+fin = fin[['EPSRP','BVRP','PER','PBV','Sektor','KodeInd','Utang']]
 if fin.empty:
    st.error ("KATEGORI PERUSAHAAN BARU MASUK IPO")
 else:
@@ -214,6 +214,8 @@ else:
    per = df['pery'].values[0]
    ph = df['ph'].values[0]
    ut = df['ut'].values[0]
+   utlap = fin[6]
+   digit(utlap)
    sek = fin[4]
    ind = fin[5][:2]
    per = per if per !='Infinity' else 0
