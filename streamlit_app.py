@@ -180,6 +180,8 @@ fin = fin.query("Kode==@kodef")
 fin = fin[['EPSRP','BVRP','PER','PBV','Sektor','KodeInd']]
 if fin.empty:
    st.error ("KATEGORI PERUSAHAAN BARU MASUK IPO")
+elif skg == 0:
+   st.error ("Data Bursa Belum Tersedia")
 else:
    fin = fin.values.tolist()
    fin = [item for sublist in fin for item in sublist]
