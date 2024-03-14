@@ -240,6 +240,9 @@ else:
    dbv = round(d(bv, bmbv))
    dpbv = round(d(bmpbv, pbv))
    dper = round(d(bmper, per))
+   Volrata = data.tail(1)
+   Volrata = Volrata['Volume'].mean()
+   Volrata
    dvol = round(d(vol, vole))
    ddev = 0
    dom = 0
