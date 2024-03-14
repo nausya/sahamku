@@ -202,7 +202,7 @@ fin = fin[['EPSRP','BVRP','PER','PBV','Sektor','KodeInd']]
 if fin.empty:
    st.error ("KATEGORI PERUSAHAAN BARU MASUK IPO")
 elif C == 0:
-   C = pd.dataframe(data.tail(1))
+   C = st.dataframe(data.tail(1))
    C = C['Adj Close'].values[0]
    C = 1
    st.error ("Data Bursa Belum Tersedia")
