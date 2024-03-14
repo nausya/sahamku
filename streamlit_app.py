@@ -88,12 +88,8 @@ if st.sidebar.button('Proses'):
 
 data = download_data(option, start_date, end_date)
 scaler = StandardScaler()
-
-
-########End Proses sidebar data
-
-
-
+######## End Proses sidebar data
+data
 
 ##########Notasi Saham################
 kode = selected_emiten.split(' | ')[0]
@@ -107,6 +103,7 @@ else:
     for x in y:
      st.error(x)
 ##########End of Notasi Saham################
+
 ############# KUMPULAN FUNGSI ######
 #Percentil
 def pentil(min,max,c):
