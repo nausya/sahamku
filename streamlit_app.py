@@ -48,31 +48,7 @@ def main():
     else:
          tech_indicators()
 
-
-#Proses sidebar data
-option = option.upper()
-today = datetime.date.today()
-duration = st.sidebar.number_input('Durasi Hari', value=1000)
-before = today - datetime.timedelta(days=duration)
-start_date = st.sidebar.date_input('Tanggal Awal', value=before)
-end_date = st.sidebar.date_input('Tanggal Akhir', today)
-if st.sidebar.button('Proses'):
-    if start_date < end_date:
-        st.sidebar.success('Tanggal Awal: `%s`\n\nTanggal Akhir: `%s`' %(start_date, end_date))
-        download_data(option, start_date, end_date)
-    else:
-        st.sidebar.error('Terdapat Kesalahan: Tanggal akhir harus ditulis setelah tanggal awal')
-
-data = download_data(option, start_date, end_date)
-scaler = StandardScaler()
-
-#Halaman Utama
-@st.cache_resource
-def download_data(op, start_date, end_date):
-    df = yf.download(op, start=start_date, end=end_date, progress=False)
-    return df
-
-#AMBIL KODE EMITEN DARI CSV
+#######AMBIL KODE EMITEN DARI CSV
 
 ## Load the data
 dataemiten = pd.read_csv('kodesaham.csv').sort_values('Kode')
@@ -88,6 +64,32 @@ selected_emiten = st.sidebar.selectbox('Pilih Emiten:', emiten)
 ## Display the filtered data
 st.header(selected_emiten.split(' | ')[1])
 option = selected_emiten.split(' | ')[0] + ".JK"
+
+########Proses sidebar data
+option = option.upper()
+today = datetime.date.today()
+duration = st.sidebar.number_input('Durasi Hari', value=1000)
+before = today - datetime.timedelta(days=duration)
+start_date = st.sidebar.date_input('Tanggal Awal', value=before)
+end_date = st.sidebar.date_input('Tanggal Akhir', today)
+if st.sidebar.button('Proses'):
+    if start_date < end_date:
+        st.sidebar.success('Tanggal Awal: `%s`\n\nTanggal Akhir: `%s`' %(start_date, end_date))
+        download_data(option, start_date, end_date)
+    else:
+        st.sidebar.error('Terdapat Kesalahan: Tanggal akhir harus ditulis setelah tanggal awal')
+
+data = download_data(option, start_date, end_date)
+scaler = StandardScaler()
+########End Proses sidebar data
+
+#Halaman Utama
+@st.cache_resource
+def download_data(op, start_date, end_date):
+    df = yf.download(op, start=start_date, end=end_date, progress=False)
+    return df
+
+
 
 ##########Notasi Saham################
 kode = selected_emiten.split(' | ')[0]
