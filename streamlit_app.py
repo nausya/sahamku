@@ -88,7 +88,7 @@ if st.sidebar.button('Proses'):
 
 data = download_data(option, start_date, end_date)
 scaler = StandardScaler()
-data
+data.tail[1]
 ########End Proses sidebar data
 
 
