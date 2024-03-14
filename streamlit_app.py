@@ -189,10 +189,10 @@ L52 = df['lo'].values[0]
 H52 = df['hi'].values[0]
 C = df['skg'].values[0]
 if C == 0:
-   C = data.tail(1)
-   C = C['Adj Close'].values[0]
+    C = data.tail(1)
+    C = C['Adj Close'].values[0]
 else:
-   return C
+    return C
 P = pentil(L52,H52,C)
 st.subheader(f"Harga terkini Rp{int(C)} berada pada posisi ke-{P} dari ketinggian 100", divider="rainbow")
     
