@@ -49,6 +49,23 @@ def main():
          tech_indicators()
 
 
+#Proses sidebar data
+option = option.upper()
+today = datetime.date.today()
+duration = st.sidebar.number_input('Durasi Hari', value=1000)
+before = today - datetime.timedelta(days=duration)
+start_date = st.sidebar.date_input('Tanggal Awal', value=before)
+end_date = st.sidebar.date_input('Tanggal Akhir', today)
+if st.sidebar.button('Proses'):
+    if start_date < end_date:
+        st.sidebar.success('Tanggal Awal: `%s`\n\nTanggal Akhir: `%s`' %(start_date, end_date))
+        download_data(option, start_date, end_date)
+    else:
+        st.sidebar.error('Terdapat Kesalahan: Tanggal akhir harus ditulis setelah tanggal awal')
+
+data = download_data(option, start_date, end_date)
+scaler = StandardScaler()
+
 #Halaman Utama
 @st.cache_resource
 def download_data(op, start_date, end_date):
@@ -182,6 +199,10 @@ fin = fin[['EPSRP','BVRP','PER','PBV','Sektor','KodeInd']]
 if fin.empty:
    st.error ("KATEGORI PERUSAHAAN BARU MASUK IPO")
 elif C == 0:
+   st.dataframe(data.tail(10))
+       cl = data.tail(1)
+       cl = cl['Adj Close'].values[0]
+       cl
    C = 1
    st.error ("Data Bursa Belum Tersedia")
 else:
@@ -277,23 +298,9 @@ else:
 
 st.info('Untuk jangka panjang perlu diperhatikan kisaran posisi harga kurang dari 10')
 
+#####sidebar
+###sideend
 
-#Proses sidebar data
-option = option.upper()
-today = datetime.date.today()
-duration = st.sidebar.number_input('Durasi Hari', value=1000)
-before = today - datetime.timedelta(days=duration)
-start_date = st.sidebar.date_input('Tanggal Awal', value=before)
-end_date = st.sidebar.date_input('Tanggal Akhir', today)
-if st.sidebar.button('Proses'):
-    if start_date < end_date:
-        st.sidebar.success('Tanggal Awal: `%s`\n\nTanggal Akhir: `%s`' %(start_date, end_date))
-        download_data(option, start_date, end_date)
-    else:
-        st.sidebar.error('Terdapat Kesalahan: Tanggal akhir harus ditulis setelah tanggal awal')
-
-data = download_data(option, start_date, end_date)
-scaler = StandardScaler()
 
 def tech_indicators():
     st.header('Teknikal Indikator')
