@@ -168,12 +168,7 @@ df = df.fillna(0)
 L52 = df['lo'].values[0]
 H52 = df['hi'].values[0]
 C = df['skg'].values[0]
-#D = (H52-L52)/100
 
-#if int(D) > 0 :
- #   P = (C - L52)/D 
-#else : 
-#    P = 0
 P = pentil(L52,H52,C)
 st.subheader(f"Harga terkini Rp{int(C)} berada pada posisi ke-{P} dari ketinggian 100", divider="rainbow")
 #st.subheader(f"MarginOps : {ceknon(om)}% | DevPR : {ceknon(dev)}% | ROE : {ceknon(roe)}%", divider="rainbow")
@@ -273,14 +268,7 @@ else:
    dfringkas = {'Kode':kode,'Tanggal':date,'Harga':skg,'1YMin':lo,'2Mon':int(bl),'6Mon':int(m),'1YMax':hi,'Margin Operasi(%)':ceknon(om),
                 'Deviden(%)':ceknon(dev),'ROE(%)':ceknon(roe),'Posisi':round(P,0),'Uang Tunai(M)':round(cash),'Kas Operasional(M)':int(opcash),'Pendapatan(M)':int(ph),
                 'Utang(M)':round(ut),'Kas Per Saham(Rp)':round(tcs),'EPS(Rp)':eps,'Harga Buku(Rp)':round(bv),'Nilai Buku':round(pbv,1),
-                'PER':round(per),'Volume(Juta)':round(vol,0),'TotalSaham(M)':round(totshm),'Omzet(M)':round(mcap),'Saran':aksiy,'Aksi':aksik,'User':id}
-   
-  # with open('aksi.csv', 'a') as f_object:
-   #     writer_object = writer(f_object)
-    #    writer_object.writerow(dfringkas)
-     #   f_object.close()
-
-    
+                'PER':round(per),'Volume(Juta)':round(vol,0),'TotalSaham(M)':round(totshm),'Omzet(M)':round(mcap),'Saran':aksiy,'Aksi':aksik,'User':id}    
 
    dfringkas = pd.DataFrame(dfringkas, index = np.arange(1))
    dfringkas = dfringkas.set_index('Kode')
@@ -354,6 +342,8 @@ def dataframe():
     if caridata == '10 Data':
        st.header('10 Data Terkini')
        st.dataframe(data.tail(10))
+       cl = data.tail(1)
+       cl
     elif caridata == 'Deviden':
         st.header("Data Deviden")
         devcum = pd.read_csv('devcumdate.csv', index_col=[0], sep=';')
