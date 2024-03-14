@@ -242,7 +242,7 @@ else:
    dper = round(d(bmper, per))
    Volrata = data.tail(1)
    Volrata = Volrata['Volume'].mean()
-   Volrata = Volrata.values[0]
+   Volrata = round(Volrata)
    Volrata
    #dvol = digit(Volrata)
    dvol = round(d(vol, vole))
