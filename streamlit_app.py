@@ -204,6 +204,7 @@ if fin.empty:
 elif C == 0:
    C = data.tail(1)
    C = C['Adj Close'].values[0]
+   C
    #st.error ("Data Bursa Belum Tersedia")
 else:
    fin = fin.values.tolist()
