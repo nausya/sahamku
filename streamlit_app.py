@@ -214,8 +214,7 @@ else:
    per = df['pery'].values[0]
    ph = df['ph'].values[0]
    ut = df['ut'].values[0]
-   utlap = fin[6]
-   utlap
+   utlap = fin[6] * 1000000000
    sek = fin[4]
    ind = fin[5][:2]
    per = per if per !='Infinity' else 0
