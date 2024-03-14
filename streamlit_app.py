@@ -198,6 +198,7 @@ st.subheader(f"Harga terkini Rp{int(C)} berada pada posisi ke-{P} dari ketinggia
 kodef = selected_emiten.split(' | ')[0]
 fin = pd.read_csv('Finansial.csv', sep=";")
 fin = fin.query("Kode==@kodef")
+fin
 fin = fin[['EPSRP','BVRP','PER','PBV','Sektor','KodeInd']]
 if fin.empty:
    st.error ("KATEGORI PERUSAHAAN BARU MASUK IPO")
