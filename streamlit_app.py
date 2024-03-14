@@ -89,7 +89,8 @@ if st.sidebar.button('Proses'):
 data = download_data(option, start_date, end_date)
 scaler = StandardScaler()
 ######## End Proses sidebar data
-data.tail(1)
+lihat = data.tail(1)
+lihat
 
 ##########Notasi Saham################
 kode = selected_emiten.split(' | ')[0]
