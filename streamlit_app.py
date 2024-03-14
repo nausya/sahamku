@@ -188,9 +188,13 @@ df = df.fillna(0)
 L52 = df['lo'].values[0]
 H52 = df['hi'].values[0]
 C = df['skg'].values[0]
-
+if C == 0:
+   C = data.tail(1)
+   C = C['Adj Close'].values[0]
+else:
+   return C
 P = pentil(L52,H52,C)
-
+st.subheader(f"Harga terkini Rp{int(C)} berada pada posisi ke-{P} dari ketinggian 100", divider="rainbow")
     
 #FINANSIAL
 kodef = selected_emiten.split(' | ')[0]
@@ -199,11 +203,6 @@ fin = fin.query("Kode==@kodef")
 fin = fin[['EPSRP','BVRP','PER','PBV','Sektor','KodeInd']]
 if fin.empty:
    st.error ("KATEGORI PERUSAHAAN BARU MASUK IPO")
-elif C == 0:
-   C = data.tail(1)
-   C = C['Adj Close'].values[0]
-   C
-   #st.error ("Data Bursa Belum Tersedia")
 else:
    fin = fin.values.tolist()
    fin = [item for sublist in fin for item in sublist]
@@ -223,8 +222,6 @@ else:
    vole = int(vole) if vole !=None else 0
    dev = dev if dev !=None else 0
    mcap = int(mcap) if mcap !=None else 0
-    
-   st.subheader(f"Harga terkini Rp{int(C)} berada pada posisi ke-{P} dari ketinggian 100", divider="rainbow")
 
    #BENCHMARK
    kodebm = ind
