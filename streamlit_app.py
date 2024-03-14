@@ -224,7 +224,7 @@ else:
    dev = dev if dev !=None else 0
    mcap = int(mcap) if mcap !=None else 0
     
-st.subheader(f"Harga terkini Rp{int(C)} berada pada posisi ke-{P} dari ketinggian 100", divider="rainbow")
+   st.subheader(f"Harga terkini Rp{int(C)} berada pada posisi ke-{P} dari ketinggian 100", divider="rainbow")
 
    #BENCHMARK
    kodebm = ind
