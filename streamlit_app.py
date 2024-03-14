@@ -343,7 +343,7 @@ def dataframe():
        st.header('10 Data Terkini')
        st.dataframe(data.tail(10))
        cl = data.tail(1)
-       cl = cl['Adj Close']
+       cl = cl['Adj Close'].values[0]
        cl
     elif caridata == 'Deviden':
         st.header("Data Deviden")
