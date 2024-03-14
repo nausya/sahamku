@@ -190,8 +190,6 @@ H52 = df['hi'].values[0]
 C = df['skg'].values[0]
 
 P = pentil(L52,H52,C)
-st.subheader(f"Harga terkini Rp{int(C)} berada pada posisi ke-{P} dari ketinggian 100", divider="rainbow")
-#st.subheader(f"MarginOps : {ceknon(om)}% | DevPR : {ceknon(dev)}% | ROE : {ceknon(roe)}%", divider="rainbow")
 
     
 #FINANSIAL
@@ -225,7 +223,9 @@ else:
    vole = int(vole) if vole !=None else 0
    dev = dev if dev !=None else 0
    mcap = int(mcap) if mcap !=None else 0
-   #st.subheader(f"EPS : Rp.{eps} | BV : Rp.{round(bv)} | PBV : {round(pbv,1)} | PER : {round(per)} |Sektor : {sek}", divider="rainbow")
+    
+st.subheader(f"Harga terkini Rp{int(C)} berada pada posisi ke-{P} dari ketinggian 100", divider="rainbow")
+
    #BENCHMARK
    kodebm = ind
    bm = pd.read_csv('IndexSektor.csv', sep=";")
