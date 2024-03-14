@@ -180,7 +180,7 @@ fin = fin.query("Kode==@kodef")
 fin = fin[['EPSRP','BVRP','PER','PBV','Sektor','KodeInd']]
 if fin.empty:
    st.error ("KATEGORI PERUSAHAAN BARU MASUK IPO")
-elif C = 0:
+elif C == 0:
    C = 1
    st.error ("Data Bursa Belum Tersedia")
 else:
