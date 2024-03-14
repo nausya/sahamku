@@ -244,8 +244,8 @@ else:
    Volrata = Volrata['Volume'].mean()
    Volrata = round(Volrata)
    Volrata
-   #dvol = digit(Volrata)
-   dvol = round(d(vol, vole))
+   dvol = digit(Volrata)
+   #dvol = round(d(vol, vole))
    ddev = 0
    dom = 0
    utun = digit(cash + opcash - ut)
