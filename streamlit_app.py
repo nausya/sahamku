@@ -215,7 +215,6 @@ else:
    ph = df['ph'].values[0]
    ut = df['ut'].values[0]
    utlap = fin[6]
-   digit(utlap)
    sek = fin[4]
    ind = fin[5][:2]
    per = per if per !='Infinity' else 0
@@ -261,7 +260,7 @@ else:
    col7.metric("Kas Operasional", digit(opcash), dom)
    col8.metric("Uang Tunai(Rp)", tunai, utun)
    col9.metric("PER(Kali)", round(per), dper)
-   col10.metric("Utang", digit(ut), dut)
+   col10.metric("Utang", digit(ut), digit(utlap))
    st.subheader("", divider="rainbow")
 
    st.subheader(f"STANDAR KINERJA EMITEN SEJENIS \n EPS : Rp.{bmeps} | BV : Rp.{round(bmbv)} | PBV : {bmpbv} | PER : {round(bmper)} | DER : {bmder} | SubSektor : {bmsek}", divider="rainbow")
