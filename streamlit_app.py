@@ -47,7 +47,13 @@ def main():
          predict()
     else:
          tech_indicators()
-
+        
+######Halaman Utama
+@st.cache_resource
+def download_data(op, start_date, end_date):
+    df = yf.download(op, start=start_date, end=end_date, progress=False)
+    return df
+######End of Halaman Utama
 #######AMBIL KODE EMITEN DARI CSV
 
 ## Load the data
@@ -83,11 +89,6 @@ data = download_data(option, start_date, end_date)
 scaler = StandardScaler()
 ########End Proses sidebar data
 
-#Halaman Utama
-@st.cache_resource
-def download_data(op, start_date, end_date):
-    df = yf.download(op, start=start_date, end=end_date, progress=False)
-    return df
 
 
 
