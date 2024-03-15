@@ -197,7 +197,7 @@ if C == 0:
 P1 = pentil(L52,BL,C)
 P2 = pentil(L52,M,C)
 P3 = pentil(L52,H52,C)
-st.subheader(f"Harga terkini Rp{int(C)} berada pada posisi ke-{P3} dari ketinggian 100", divider="rainbow")
+st.subheader(f"Harga terkini Rp{int(C)} dimana setahun terakhir tingkat harga berada pada posisi ke-{P3} dari ketinggian 100", divider="rainbow")
 
 ######CHART
 plot_bgcolor = "#fff"
@@ -237,7 +237,7 @@ fig1 = go.Figure(
                 showarrow=False,
             ),
             go.layout.Annotation(
-                text=f"<b>Jangka Pendek</b>",
+                text=f"<b>Jangka Pendek <br>(Gorengan)</b>",
                 x=0.5, xanchor="center", xref="paper",
                 y=0.4, yanchor="bottom", yref="paper",
                 showarrow=False)
@@ -298,7 +298,7 @@ fig2 = go.Figure(
                 showarrow=False,
             ),
             go.layout.Annotation(
-                text=f"<b>Jangka Menengah</b>",
+                text=f"<b>Jangka Menengah <br>(Cemilan)</b>",
                 x=0.5, xanchor="center", xref="paper",
                 y=0.4, yanchor="bottom", yref="paper",
                 showarrow=False)
@@ -359,7 +359,7 @@ fig3 = go.Figure(
                 showarrow=False,
             ),
             go.layout.Annotation(
-                text=f"<b>Jangka Panjang</b>",
+                text=f"<b>Jangka Panjang <br>(Investasi)</b>",
                 x=0.5, xanchor="center", xref="paper",
                 y=0.4, yanchor="bottom", yref="paper",
                 showarrow=False)
