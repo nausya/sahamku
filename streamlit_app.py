@@ -217,7 +217,7 @@ fig1 = go.Figure(
     data=[
         go.Pie(
             values=[0.5] + (np.ones(n_quadrants) / 2 / n_quadrants).tolist(),
-            rotation=90,
+            rotation=180,
             hole=0.5,
             marker_colors=quadrant_colors,
             text=quadrant_text,
