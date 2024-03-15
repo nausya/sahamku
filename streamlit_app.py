@@ -28,7 +28,7 @@ from sklearn.metrics import r2_score, mean_absolute_error
 
 
 
-        fig.add_trace(go.Indicator(
+fig.add_trace(go.Indicator(
             mode="gauge+number+delta",
             title = {'text': "price"},
             delta = {'reference': ask_price, 'relative': False, 'increasing': {'color': "RebeccaPurple"}, 'decreasing': {'color': "RoyalBlue"}},
