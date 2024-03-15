@@ -28,6 +28,20 @@ from sklearn.metrics import r2_score, mean_absolute_error
 ######Halaman Utama
 st.header('ANALITIK SAHAM INDONESIA')
 @st.cache_resource
+###### FUNGSI MENU #############
+def main():
+    selected2 = option_menu(None, ["Home", "Cari Data", "Screener", 'Prediksi'], 
+                            icons=['house', 'file-earmark-text', 
+                            'sliders2-vertical', 'graph-up-arrow'], menu_icon="cast", default_index=0, orientation="horizontal")
+    if selected2 == 'Cari Data':
+         dataframe()
+    elif selected2 == 'Screener':
+         screener()
+    elif selected2 == 'Prediksi':
+         predict()
+    else:
+         tech_indicators()
+###### END OF FUNGSI MENU #############
 ######End of Halaman Utama
 ############# KUMPULAN FUNGSI ######
 #Percentil
@@ -74,20 +88,7 @@ def digit(angka):
     else:
         return str(angka)
 ######### END of FUngsi DELTA ########################
-###### FUNGSI MENU #############
-def main():
-    selected2 = option_menu(None, ["Home", "Cari Data", "Screener", 'Prediksi'], 
-                            icons=['house', 'file-earmark-text', 
-                            'sliders2-vertical', 'graph-up-arrow'], menu_icon="cast", default_index=0, orientation="horizontal")
-    if selected2 == 'Cari Data':
-         dataframe()
-    elif selected2 == 'Screener':
-         screener()
-    elif selected2 == 'Prediksi':
-         predict()
-    else:
-         tech_indicators()
-###### END OF FUNGSI MENU #############
+
 ####### FUNGSI AMBIL DATA SAHAM ############
 def download_data(op, start_date, end_date):
     df = yf.download(op, start=start_date, end=end_date, progress=False)
@@ -102,21 +103,12 @@ indonesia_timezone = pytz.timezone('Asia/Jakarta')
 st.sidebar.info('SELAMAT DATANG (Versi Beta)')
 #######AMBIL KODE EMITEN DARI CSV
 
-## Load the data
+######## PILIH DATA EMITEN PADA MENU SEBELAH KIRI
 dataemiten = pd.read_csv('kodesaham.csv').sort_values('Kode')
- 
-## Get the list of countries
 emiten = dataemiten['Kode'] + ' | ' + dataemiten['Nama Perusahaan']
-
- 
-## Create the select box
 selected_emiten = st.sidebar.selectbox('Pilih Emiten:', emiten)
-
- 
-## Display the filtered data
 st.header(selected_emiten.split(' | ')[1])
 option = selected_emiten.split(' | ')[0] + ".JK"
-
 ########Proses sidebar data
 option = option.upper()
 today = datetime.date.today()
@@ -130,11 +122,9 @@ if st.sidebar.button('Proses'):
         download_data(option, start_date, end_date)
     else:
         st.sidebar.error('Terdapat Kesalahan: Tanggal akhir harus ditulis setelah tanggal awal')
-
 data = download_data(option, start_date, end_date)
 scaler = StandardScaler()
 ######## End Proses sidebar data
-
 
 ##########Notasi Saham################
 kode = selected_emiten.split(' | ')[0]
@@ -148,7 +138,6 @@ else:
     for x in y:
      st.error(x)
 ##########End of Notasi Saham################
-
 
 #Display Persentil
 saham = [option]
@@ -396,10 +385,10 @@ with col2:
 # Place the text in the third column
 with col3:
     fig3
-#####END OF CHART
+##################################### END OF CHART GAUGE
 P = P3
 
-#FINANSIAL
+#####################  FINANSIAL
 kodef = selected_emiten.split(' | ')[0]
 fin = pd.read_csv('Finansial.csv', sep=";")
 fin = fin.query("Kode==@kodef")
@@ -506,10 +495,6 @@ else:
 
 st.info('Untuk jangka panjang perlu diperhatikan kisaran posisi harga kurang dari 10')
 
-#####sidebar
-###sideend
-
-
 def tech_indicators():
     st.header('Teknikal Indikator')
     option = st.radio('Pilih Teknikal Indikator', ['Close', 'BB', 'MACD', 'RSI', 'EMA'])
@@ -602,7 +587,6 @@ def predict():
         else:
             engine = XGBRegressor()
             model_engine(engine, num)
-
 
 def model_engine(model, num):
     # getting only the closing price
