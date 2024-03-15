@@ -25,18 +25,52 @@ from xgboost import XGBRegressor
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.ensemble import ExtraTreesRegressor
 from sklearn.metrics import r2_score, mean_absolute_error
-
-
-
-
-
-# Tentukan zona waktu Indonesia
-indonesia_timezone = pytz.timezone('Asia/Jakarta')
-
-# Dapatkan waktu saat ini
-# datetime.now(indonesia_timezone)
-st.header('ANALITIK SAHAM INDONESIA') 
-st.sidebar.info('SELAMAT DATANG (Versi Beta)')
+############# KUMPULAN FUNGSI ######
+#Percentil
+def pentil(min,max,c):
+    p = np.interp(c, [min, max], [0, 100])
+    return round(p)
+    
+#ganti value None
+def ceknon(x):
+    if x is not None:
+       x = round(x,2)*100
+       x = int(x)
+       return x
+    elif x == 0:
+       return 0
+    else:
+       return 0 
+        #st.error('This is an error', icon="🚨")
+############# fungsi delta ######
+def d(a, b):
+    return (a - b)
+def dpros(a, b):
+    return (a / b) * 100
+def mil(x):
+    x = x/1000000000
+    return x
+def digit(angka):
+    if angka >= 10**12:
+        return f"{angka / 10**12:.1f} T"
+    elif angka >= 10**9:
+        return f"{angka / 10**9:.1f} M"
+    elif angka >= 10**6:
+        return f"{angka / 10**6:.1f} Jt"
+    elif angka >= 10**3:
+        return f"{angka / 10**3:.0f} Rb"
+    elif angka <= -10**12:
+        return f"{angka / 10**12:.1f} T"
+    elif angka <= -10**9:
+        return f"{angka / 10**9:.1f} M"
+    elif angka <= -10**6:
+        return f"{angka / 10**6:.1f} Jt"
+    elif angka <= -10**3:
+        return f"{angka / 10**3:.0f} Rb"
+    else:
+        return str(angka)
+######### END of FUngsi DELTA ########################
+###### FUNGSI MENU #############
 def main():
     selected2 = option_menu(None, ["Home", "Cari Data", "Screener", 'Prediksi'], 
                             icons=['house', 'file-earmark-text', 
@@ -49,12 +83,23 @@ def main():
          predict()
     else:
          tech_indicators()
-        
-######Halaman Utama
-@st.cache_resource
+###### END OF FUNGSI MENU #############
+####### FUNGSI AMBIL DATA SAHAM ############
 def download_data(op, start_date, end_date):
     df = yf.download(op, start=start_date, end=end_date, progress=False)
     return df
+####### END OF FUNGSI AMBIL DATA SAHAM ############
+######################## Tentukan zona waktu Indonesia
+indonesia_timezone = pytz.timezone('Asia/Jakarta')
+
+# Dapatkan waktu saat ini
+# datetime.now(indonesia_timezone)
+ 
+st.sidebar.info('SELAMAT DATANG (Versi Beta)')
+        
+######Halaman Utama
+@st.cache_resource
+st.header('ANALITIK SAHAM INDONESIA')
 ######End of Halaman Utama
 
 #######AMBIL KODE EMITEN DARI CSV
@@ -106,51 +151,7 @@ else:
      st.error(x)
 ##########End of Notasi Saham################
 
-############# KUMPULAN FUNGSI ######
-#Percentil
-def pentil(min,max,c):
-    p = np.interp(c, [min, max], [0, 100])
-    return round(p)
-    
-#ganti value None
-def ceknon(x):
-    if x is not None:
-       x = round(x,2)*100
-       x = int(x)
-       return x
-    elif x == 0:
-       return 0
-    else:
-       return 0 
-        #st.error('This is an error', icon="🚨")
-############# fungsi delta ######
-def d(a, b):
-    return (a - b)
-def dpros(a, b):
-    return (a / b) * 100
-def mil(x):
-    x = x/1000000000
-    return x
-def digit(angka):
-    if angka >= 10**12:
-        return f"{angka / 10**12:.1f} T"
-    elif angka >= 10**9:
-        return f"{angka / 10**9:.1f} M"
-    elif angka >= 10**6:
-        return f"{angka / 10**6:.1f} Jt"
-    elif angka >= 10**3:
-        return f"{angka / 10**3:.0f} Rb"
-    elif angka <= -10**12:
-        return f"{angka / 10**12:.1f} T"
-    elif angka <= -10**9:
-        return f"{angka / 10**9:.1f} M"
-    elif angka <= -10**6:
-        return f"{angka / 10**6:.1f} Jt"
-    elif angka <= -10**3:
-        return f"{angka / 10**3:.0f} Rb"
-    else:
-        return str(angka)
-#################################
+
 #Display Persentil
 saham = [option]
 
