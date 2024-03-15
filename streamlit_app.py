@@ -209,7 +209,7 @@ min_value = 0
 max_value = 100
 hand_length = np.sqrt(2) / 4
 hand_angle = np.pi * (1 - (max(min_value, min(max_value, current_value)) - min_value) / (max_value - min_value))
-
+fig, ax = plt.subplots()
 fig = go.Figure(
     data=[
         go.Pie(
@@ -258,8 +258,8 @@ fig = go.Figure(
         ]
     )
 )
-
-fig.show()
+st.pyplot(fig)
+#fig.show()
 #####END OF CHART
 #FINANSIAL
 kodef = selected_emiten.split(' | ')[0]
