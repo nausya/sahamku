@@ -224,9 +224,9 @@ fig = go.Figure(
     ],
     layout=go.Layout(
         showlegend=False,
-        margin=dict(b=10,t=10,l=10,r=10),
-        width=450,
-        height=450,
+        margin=dict(b=0,t=10,l=10,r=10),
+        width=275,
+        height=275,
         paper_bgcolor=plot_bgcolor,
         annotations=[
             go.layout.Annotation(
