@@ -26,7 +26,6 @@ from sklearn.ensemble import RandomForestRegressor
 from sklearn.ensemble import ExtraTreesRegressor
 from sklearn.metrics import r2_score, mean_absolute_error
 ######Halaman Utama
-@st.cache_resource
 st.header('ANALITIK SAHAM INDONESIA')
 ######End of Halaman Utama
 ###### FUNGSI MENU #############
@@ -43,7 +42,7 @@ def main():
     else:
          tech_indicators()
 ###### END OF FUNGSI MENU #############
-
+@st.cache_resource
 ############# KUMPULAN FUNGSI ######
 #Percentil
 def pentil(min,max,c):
