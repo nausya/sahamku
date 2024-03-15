@@ -188,15 +188,18 @@ for stock in saham:
                       'm':m,'bl':bl,'mcap':mcap,'cash':cash,'opcash':opcash,'ph':ph,'ut':ut,'tcs':tcs})
 df = pd.DataFrame(screensaham)
 df = df.fillna(0)
-
+BL = df['bl'].values[0]
+M = df['m'].values[0]
 L52 = df['lo'].values[0]
 H52 = df['hi'].values[0]
 C = df['skg'].values[0]
 if C == 0:
     C = data.tail(1)
     C = C['Adj Close'].values[0]
-P = pentil(L52,H52,C)
-st.subheader(f"Harga terkini Rp{int(C)} berada pada posisi ke-{P} dari ketinggian 100", divider="rainbow")
+P1 = pentil(L52,BL,C)
+P2 = pentil(L52,M,C)
+P3 = pentil(L52,H52,C)
+st.subheader(f"Harga terkini Rp{int(C)} berada pada posisi ke-{P3} dari ketinggian 100", divider="rainbow")
 
 ######CHART
 plot_bgcolor = "#fff"
@@ -204,7 +207,7 @@ quadrant_colors = [plot_bgcolor, "red", "#f2a529", "#eff229", "#85e043", "#2bad4
 quadrant_text = ["", "<b>Kuat Jual</b>", "<b>Jual</b>", "<b>Netral</b>", "<b>Beli</b>", "<b>Kuat Beli</b>"]
 n_quadrants = len(quadrant_colors) - 1
 
-current_value = P
+current_value = P1
 min_value = 0
 max_value = 100
 hand_length = np.sqrt(2) / 4
@@ -236,7 +239,7 @@ fig1 = go.Figure(
                 showarrow=False,
             ),
             go.layout.Annotation(
-                text=f"<b>Jangka Panjang</b>",
+                text=f"<b>Jangka Pendek</b>",
                 x=0.5, xanchor="center", xref="paper",
                 y=0.4, yanchor="bottom", yref="paper",
                 showarrow=False)
@@ -265,7 +268,7 @@ quadrant_colors = [plot_bgcolor, "red", "#f2a529", "#eff229", "#85e043", "#2bad4
 quadrant_text = ["", "<b>Kuat Jual</b>", "<b>Jual</b>", "<b>Netral</b>", "<b>Beli</b>", "<b>Kuat Beli</b>"]
 n_quadrants = len(quadrant_colors) - 1
 
-current_value = P
+current_value = P2
 min_value = 0
 max_value = 100
 hand_length = np.sqrt(2) / 4
@@ -297,7 +300,7 @@ fig2 = go.Figure(
                 showarrow=False,
             ),
             go.layout.Annotation(
-                text=f"<b>Jangka Panjang</b>",
+                text=f"<b>Jangka Menengah</b>",
                 x=0.5, xanchor="center", xref="paper",
                 y=0.4, yanchor="bottom", yref="paper",
                 showarrow=False)
@@ -326,7 +329,7 @@ quadrant_colors = [plot_bgcolor, "red", "#f2a529", "#eff229", "#85e043", "#2bad4
 quadrant_text = ["", "<b>Kuat Jual</b>", "<b>Jual</b>", "<b>Netral</b>", "<b>Beli</b>", "<b>Kuat Beli</b>"]
 n_quadrants = len(quadrant_colors) - 1
 
-current_value = P
+current_value = P3
 min_value = 0
 max_value = 100
 hand_length = np.sqrt(2) / 4
@@ -386,7 +389,6 @@ col1, col2, col3 = st.columns(3)
 
 # Place the chart in the first column
 with col1:
-    #fig = gauge_chart(value, max_value, title
     fig1
 # Place the text in the second column
 with col2:
