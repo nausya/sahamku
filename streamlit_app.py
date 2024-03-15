@@ -47,13 +47,6 @@ fig = go.Figure(go.Indicator(
 fig.show()
 
 
-# Adjust the width and height of the gauge
-#fig.update_layout(height=500, width=800)
-with fig_placeholder:
-    #st.plotly_chart(fig, theme="streamlit", use_container_width=True)
-    st.plotly_chart(fig, use_container_width=True)
-    #st.plotly_chart(fig)
-
 # Tentukan zona waktu Indonesia
 indonesia_timezone = pytz.timezone('Asia/Jakarta')
 
