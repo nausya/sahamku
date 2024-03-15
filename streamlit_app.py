@@ -25,7 +25,10 @@ from xgboost import XGBRegressor
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.ensemble import ExtraTreesRegressor
 from sklearn.metrics import r2_score, mean_absolute_error
-
+######Halaman Utama
+st.header('ANALITIK SAHAM INDONESIA')
+@st.cache_resource
+######End of Halaman Utama
 ############# KUMPULAN FUNGSI ######
 #Percentil
 def pentil(min,max,c):
@@ -95,10 +98,7 @@ indonesia_timezone = pytz.timezone('Asia/Jakarta')
 
 # Dapatkan waktu saat ini
 # datetime.now(indonesia_timezone)
-######Halaman Utama
-st.header('ANALITIK SAHAM INDONESIA')
-@st.cache_resource
-######End of Halaman Utama
+
 st.sidebar.info('SELAMAT DATANG (Versi Beta)')
 #######AMBIL KODE EMITEN DARI CSV
 
