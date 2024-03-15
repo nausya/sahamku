@@ -42,6 +42,8 @@ def main():
          tech_indicators()
 ###### END OF FUNGSI MENU #############
 @st.cache_resource
+if __name__ == '__main__':
+    main()
 ######End of Halaman Utama
 ############# KUMPULAN FUNGSI ######
 #Percentil
@@ -690,8 +692,6 @@ def screener():
     
     st.pyplot(fig)
     
-    
-if __name__ == '__main__':
-    main()
+
     
 #st.sidebar.info("@2024")
