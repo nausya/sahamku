@@ -35,7 +35,7 @@ indonesia_timezone = pytz.timezone('Asia/Jakarta')
 
 # Dapatkan waktu saat ini
 # datetime.now(indonesia_timezone)
-
+st.header('ANALITIK SAHAM INDONESIA') 
 st.sidebar.info('SELAMAT DATANG (Versi Beta)')
 def main():
     selected2 = option_menu(None, ["Home", "Cari Data", "Screener", 'Prediksi'], 
@@ -198,7 +198,7 @@ P1 = pentil(L52,BL,C)
 P2 = pentil(L52,M,C)
 P3 = pentil(L52,H52,C)
 st.subheader(f"Harga terkini Rp{int(C)} berada pada posisi ke-{P3} dari ketinggian 100", divider="rainbow")
-st.header('ANALITIK SAHAM INDONESIA') 
+
 ######CHART
 plot_bgcolor = "#fff"
 quadrant_colors = [plot_bgcolor, "red", "#f2a529", "#eff229", "#85e043", "#2bad4e"] 
