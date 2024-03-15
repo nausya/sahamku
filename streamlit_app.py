@@ -397,6 +397,7 @@ with col2:
 with col3:
     fig3
 #####END OF CHART
+P = P3
 
 #FINANSIAL
 kodef = selected_emiten.split(' | ')[0]
