@@ -37,7 +37,7 @@ indonesia_timezone = pytz.timezone('Asia/Jakarta')
 # datetime.now(indonesia_timezone)
 
 st.sidebar.info('SELAMAT DATANG (Versi Beta)')
-st.title('ANALITIK SAHAM INDONESIA') 
+st.header('ANALITIK SAHAM INDONESIA') 
 
 def main():
     selected2 = option_menu(None, ["Home", "Cari Data", "Screener", 'Prediksi'], 
