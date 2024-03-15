@@ -265,7 +265,7 @@ col1, col2 = st.columns([3, 1])
 # Place the chart in the first column
 with col1:
     #fig = gauge_chart(value, max_value, title)
-    fig
+    fig1
 
 # Place the text in the second column
 with col2:
