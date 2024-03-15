@@ -300,7 +300,7 @@ fig2 = go.Figure(
             go.layout.Annotation(
                 text=f"<b>Jangka Menengah <br>(Cemilan)</b>",
                 x=0.5, xanchor="center", xref="paper",
-                y=0.4, yanchor="bottom", yref="paper",
+                y=0.3, yanchor="bottom", yref="paper",
                 showarrow=False)
         ],
         shapes=[
@@ -361,7 +361,7 @@ fig3 = go.Figure(
             go.layout.Annotation(
                 text=f"<b>Jangka Panjang <br>(Investasi)</b>",
                 x=0.5, xanchor="center", xref="paper",
-                y=0.4, yanchor="bottom", yref="paper",
+                y=0.3, yanchor="bottom", yref="paper",
                 showarrow=False)
         ],
         shapes=[
