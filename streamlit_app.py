@@ -41,9 +41,10 @@ def main():
     else:
          tech_indicators()
 ###### END OF FUNGSI MENU #############
-@st.cache_resource
+
 if __name__ == '__main__':
     main()
+@st.cache_resource
 ######End of Halaman Utama
 ############# KUMPULAN FUNGSI ######
 #Percentil
