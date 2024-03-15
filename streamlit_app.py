@@ -204,7 +204,7 @@ quadrant_colors = [plot_bgcolor, "red", "#f2a529", "#eff229", "#85e043", "#2bad4
 quadrant_text = ["", "<b>Kuat Jual</b>", "<b>Jual</b>", "<b>Netral</b>", "<b>Beli</b>", "<b>Kuat Beli</b>"]
 n_quadrants = len(quadrant_colors) - 1
 
-current_value = 28
+current_value = P
 min_value = 0
 max_value = 100
 hand_length = np.sqrt(2) / 4
