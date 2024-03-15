@@ -212,7 +212,7 @@ n_quadrants = len(quadrant_colors) - 1
 current_value = P1
 min_value = 0
 max_value = 100
-hand_length = np.sqrt(2) / 4
+hand_length = np.sqrt(2) / 3
 hand_angle = np.pi * (1 - (max(min_value, min(max_value, current_value)) - min_value) / (max_value - min_value))
 
 fig1 = go.Figure(
