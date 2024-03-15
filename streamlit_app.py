@@ -385,8 +385,7 @@ fig3 = go.Figure(
 )
 #fig3
 # Create a column layout
-col1, col2, col3 = st.columns(3)
-
+col1, col2, col3 = st.columns([2, 2, 2])
 # Place the chart in the first column
 with col1:
     fig1
