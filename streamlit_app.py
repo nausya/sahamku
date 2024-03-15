@@ -239,7 +239,7 @@ fig1 = go.Figure(
             go.layout.Annotation(
                 text=f"<b>Jangka Pendek <br>(Gorengan)</b>",
                 x=0.5, xanchor="center", xref="paper",
-                y=0.5, yanchor="bottom", yref="paper",
+                y=0.3, yanchor="bottom", yref="paper",
                 showarrow=False)
         ],
         shapes=[
