@@ -259,7 +259,7 @@ fig = go.Figure(
     )
 )
 
-st.pyplot(fig)#fig.show()
+fig.show()
 #####END OF CHART
 #FINANSIAL
 kodef = selected_emiten.split(' | ')[0]
