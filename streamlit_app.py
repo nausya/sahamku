@@ -98,8 +98,8 @@ indonesia_timezone = pytz.timezone('Asia/Jakarta')
 st.sidebar.info('SELAMAT DATANG (Versi Beta)')
         
 ######Halaman Utama
-@st.cache_resource
 st.header('ANALITIK SAHAM INDONESIA')
+@st.cache_resource
 ######End of Halaman Utama
 
 #######AMBIL KODE EMITEN DARI CSV
