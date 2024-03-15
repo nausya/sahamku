@@ -363,7 +363,7 @@ fig3 = go.Figure(
                 showarrow=False,
             ),
             go.layout.Annotation(
-                text=f"<b>Jangka Panjang <br>(Investasi)</b>",
+                text=f"<b>Jangka Panjang <br>(Tanam Jati)</b>",
                 x=0.5, xanchor="center", xref="paper",
                 y=0.3, yanchor="bottom", yref="paper",
                 showarrow=False)
