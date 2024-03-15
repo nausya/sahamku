@@ -236,7 +236,7 @@ fig1 = go.Figure(
                 text=f"<b>Posisi : </b>{current_value}",
                 x=0.5, xanchor="center", xref="paper",
                 y=0.6, yanchor="bottom", yref="paper",
-                showarrow=False,fontsize="17",
+                showarrow=False,
             ),
             go.layout.Annotation(
                 text=f"<b>Jangka Pendek</b>",
