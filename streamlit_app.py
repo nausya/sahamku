@@ -41,9 +41,6 @@ def main():
     else:
          tech_indicators()
 ###### END OF FUNGSI MENU #############
-
-if __name__ == '__main__':
-    main()
 @st.cache_resource
 ######End of Halaman Utama
 ############# KUMPULAN FUNGSI ######
@@ -694,5 +691,7 @@ def screener():
     st.pyplot(fig)
     
 
+if __name__ == '__main__':
+    main()
     
 #st.sidebar.info("@2024")
