@@ -26,8 +26,8 @@ from sklearn.ensemble import RandomForestRegressor
 from sklearn.ensemble import ExtraTreesRegressor
 from sklearn.metrics import r2_score, mean_absolute_error
 ######Halaman Utama
-st.header('ANALITIK SAHAM INDONESIA')
 @st.cache_resource
+st.header('ANALITIK SAHAM INDONESIA')
 ######End of Halaman Utama
 ###### FUNGSI MENU #############
 def main():
@@ -691,7 +691,6 @@ def screener():
     
     st.pyplot(fig)
     
-
 if __name__ == '__main__':
     main()
     
