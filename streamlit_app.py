@@ -26,6 +26,7 @@ from sklearn.ensemble import RandomForestRegressor
 from sklearn.ensemble import ExtraTreesRegressor
 from sklearn.metrics import r2_score, mean_absolute_error
 ######Halaman Utama
+@st.cache_resource
 st.header('ANALITIK SAHAM INDONESIA')
 ###### FUNGSI MENU #############
 def main():
@@ -41,7 +42,7 @@ def main():
     else:
          tech_indicators()
 ###### END OF FUNGSI MENU #############
-@st.cache_resource
+
 ######End of Halaman Utama
 ############# KUMPULAN FUNGSI ######
 #Percentil
