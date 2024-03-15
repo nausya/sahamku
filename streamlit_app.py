@@ -251,14 +251,14 @@ fig1 = go.Figure(
                 type="circle",
                 x0=0.48, x1=0.52,
                 y0=0.48, y1=0.52,
-                fillcolor="#333",
-                line_color="#333",
+                fillcolor="grey",
+                line_color="grey",
             ),
             go.layout.Shape(
                 type="line",
                 x0=0.5, x1=0.5 + hand_length * np.cos(hand_angle),
                 y0=0.5, y1=0.5 + hand_length * np.sin(hand_angle),
-                line=dict(color="#333", width=4)
+                line=dict(color="grey", width=4)
             )
         ]
     )
@@ -312,8 +312,8 @@ fig2 = go.Figure(
                 type="circle",
                 x0=0.48, x1=0.52,
                 y0=0.48, y1=0.52,
-                fillcolor="#333",
-                line_color="#333",
+                fillcolor="grey",
+                line_color="grey",
             ),
             go.layout.Shape(
                 type="line",
@@ -373,14 +373,14 @@ fig3 = go.Figure(
                 type="circle",
                 x0=0.48, x1=0.52,
                 y0=0.48, y1=0.52,
-                fillcolor="#333",
-                line_color="#333",
+                fillcolor="grey",
+                line_color="grey",
             ),
             go.layout.Shape(
                 type="line",
                 x0=0.5, x1=0.5 + hand_length * np.cos(hand_angle),
                 y0=0.5, y1=0.5 + hand_length * np.sin(hand_angle),
-                line=dict(color="#333", width=4)
+                line=dict(color="grey", width=4)
             )
         ]
     )
