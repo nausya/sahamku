@@ -323,8 +323,8 @@ fig2 = go.Figure(
 #fig2
 #####END OF CHART
 col1, col2 = st.columns(2)
-col1.metric(fig1)
-col2.metric(fig2)
+col1.metric("",fig1,"")
+col2.metric("",fig2,"")
 #FINANSIAL
 kodef = selected_emiten.split(' | ')[0]
 fin = pd.read_csv('Finansial.csv', sep=";")
