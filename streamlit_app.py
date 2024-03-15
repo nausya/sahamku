@@ -27,7 +27,6 @@ from sklearn.ensemble import ExtraTreesRegressor
 from sklearn.metrics import r2_score, mean_absolute_error
 ######Halaman Utama
 st.header('ANALITIK SAHAM INDONESIA')
-@st.cache_resource
 ###### FUNGSI MENU #############
 def main():
     selected2 = option_menu(None, ["Home", "Cari Data", "Screener", 'Prediksi'], 
@@ -42,7 +41,7 @@ def main():
     else:
          tech_indicators()
 ###### END OF FUNGSI MENU #############
-
+@st.cache_resource
 ######End of Halaman Utama
 ############# KUMPULAN FUNGSI ######
 #Percentil
