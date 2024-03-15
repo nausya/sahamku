@@ -194,9 +194,14 @@ C = df['skg'].values[0]
 if C == 0:
     C = data.tail(1)
     C = C['Adj Close'].values[0]
-P1 = pentil(L52,BL,C)
-P2 = pentil(L52,M,C)
-P3 = pentil(L52,H52,C)
+if C <=50 and P3 = 0:
+  P1 = 50
+  P2 = 50
+  P3 = 50
+else:
+  P1 = pentil(L52,BL,C)
+  P2 = pentil(L52,M,C)
+  P3 = pentil(L52,H52,C)
 st.subheader(f"Harga terkini Rp{int(C)} dimana setahun terakhir tingkat harga berada pada posisi ke-{P3} dari ketinggian 100", divider="rainbow")
 
 ######CHART
