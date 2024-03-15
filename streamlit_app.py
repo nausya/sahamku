@@ -43,6 +43,15 @@ fig = go.Figure(go.Indicator(
                  {'range': [4, 5], 'color': "lightcyan"}],
              'threshold' : {'line': {'color': "brown", 'width': 4}, 'thickness': 0.75, 'value': 4.8}}))
 
+fig.update_traces(
+    gauge={
+        "axis": {
+            "tickmode": "array",
+            "tickvals": list(range(6)),
+            "ticktext": ["0 - low" if i == 0 else "5 - high" if i==5 else i for i in range(6)],
+        }
+    }
+)
 
 fig.show()
 
