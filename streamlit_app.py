@@ -197,7 +197,7 @@ if C == 0:
 P1 = pentil(L52,BL,C)
 P2 = pentil(L52,M,C)
 P3 = pentil(L52,H52,C)
-if C <=50 and P3 == 0:
+if C <=50:
   P1 = 50
   P2 = 50
   P3 = 50
