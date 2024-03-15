@@ -27,33 +27,7 @@ from sklearn.ensemble import ExtraTreesRegressor
 from sklearn.metrics import r2_score, mean_absolute_error
 
 
-fig = go.Figure(go.Indicator(
-    domain = {'x': [0, 1], 'y': [0, 1]},
-    value = 4.3,
-    mode = "gauge+number+delta",
-    title = {'text': "General satisfaction"},
-    delta = {'reference': 2.5},
-    gauge = {'axis': {'range': [None, 5], 'tickwidth': 1,'tickcolor': "black"},
-        'bar': {'color': "MidnightBlue"},
-             'steps' : [
-                 {'range': [0, 1], 'color': "DarkTurquoise"},
-                 {'range': [1, 2], 'color': "MediumTurquoise"},
-                 {'range': [2, 3], 'color': "Turquoise"},
-                 {'range': [3, 4], 'color': "PaleTurquoise"},
-                 {'range': [4, 5], 'color': "lightcyan"}],
-             'threshold' : {'line': {'color': "brown", 'width': 4}, 'thickness': 0.75, 'value': 4.8}}))
 
-fig.update_traces(
-    gauge={
-        "axis": {
-            "tickmode": "array",
-            "tickvals": list(range(6)),
-            "ticktext": ["0 - low" if i == 0 else "5 - high" if i==5 else i for i in range(6)],
-        }
-    }
-)
-
-fig.show()
 
 
 # Tentukan zona waktu Indonesia
@@ -223,7 +197,70 @@ if C == 0:
     C = C['Adj Close'].values[0]
 P = pentil(L52,H52,C)
 st.subheader(f"Harga terkini Rp{int(C)} berada pada posisi ke-{P} dari ketinggian 100", divider="rainbow")
-    
+
+######CHART
+plot_bgcolor = "#fff"
+quadrant_colors = [plot_bgcolor, "red", "#f2a529", "#eff229", "#85e043", "#2bad4e"] 
+quadrant_text = ["", "<b>Kuat Jual</b>", "<b>Jual</b>", "<b>Netral</b>", "<b>Beli</b>", "<b>Kuat Beli</b>"]
+n_quadrants = len(quadrant_colors) - 1
+
+current_value = 28
+min_value = 0
+max_value = 100
+hand_length = np.sqrt(2) / 4
+hand_angle = np.pi * (1 - (max(min_value, min(max_value, current_value)) - min_value) / (max_value - min_value))
+
+fig = go.Figure(
+    data=[
+        go.Pie(
+            values=[0.5] + (np.ones(n_quadrants) / 2 / n_quadrants).tolist(),
+            rotation=90,
+            hole=0.5,
+            marker_colors=quadrant_colors,
+            text=quadrant_text,
+            textinfo="text",
+            hoverinfo="skip",
+        ),
+    ],
+    layout=go.Layout(
+        showlegend=False,
+        margin=dict(b=10,t=10,l=10,r=10),
+        width=450,
+        height=450,
+        paper_bgcolor=plot_bgcolor,
+        annotations=[
+            go.layout.Annotation(
+                text=f"<b>Posisi : </b>{current_value}",
+                x=0.5, xanchor="center", xref="paper",
+                y=0.6, yanchor="bottom", yref="paper",
+                showarrow=False,
+            ),
+            go.layout.Annotation(
+                text=f"<b>Jangka Panjang</b>",
+                x=0.5, xanchor="center", xref="paper",
+                y=0.4, yanchor="bottom", yref="paper",
+                showarrow=False)
+        ],
+        shapes=[
+            go.layout.Shape(
+                type="circle",
+                x0=0.48, x1=0.52,
+                y0=0.48, y1=0.52,
+                fillcolor="#333",
+                line_color="#333",
+            ),
+            go.layout.Shape(
+                type="line",
+                x0=0.5, x1=0.5 + hand_length * np.cos(hand_angle),
+                y0=0.5, y1=0.5 + hand_length * np.sin(hand_angle),
+                line=dict(color="#333", width=4)
+            )
+        ]
+    )
+)
+
+st.pyplot(fig)#fig.show()
+#####END OF CHART
 #FINANSIAL
 kodef = selected_emiten.split(' | ')[0]
 fin = pd.read_csv('Finansial.csv', sep=";")
