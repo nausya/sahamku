@@ -258,7 +258,18 @@ fig1 = go.Figure(
         ]
     )
 )
-fig1
+#fig1
+# Create a column layout
+col1, col2 = st.columns([3, 1])
+
+# Place the chart in the first column
+with col1:
+    #fig = gauge_chart(value, max_value, title)
+    fig
+
+# Place the text in the second column
+with col2:
+    st.write("Your text goes here...")
 #####END OF CHART
 
 #FINANSIAL
