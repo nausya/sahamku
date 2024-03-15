@@ -210,7 +210,7 @@ max_value = 100
 hand_length = np.sqrt(2) / 4
 hand_angle = np.pi * (1 - (max(min_value, min(max_value, current_value)) - min_value) / (max_value - min_value))
 
-fig = go.Figure(
+fig1 = go.Figure(
     data=[
         go.Pie(
             values=[0.5] + (np.ones(n_quadrants) / 2 / n_quadrants).tolist(),
@@ -258,8 +258,7 @@ fig = go.Figure(
         ]
     )
 )
-
-fig
+fig1
 #####END OF CHART
 #FINANSIAL
 kodef = selected_emiten.split(' | ')[0]
