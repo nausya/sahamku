@@ -178,20 +178,27 @@ if C <=50:
   P2 = 50
   P3 = 50
 #st.subheader(f"Harga terkini Rp{int(C)} dimana setahun terakhir tingkat harga berada pada posisi ke-{P3} dari ketinggian 100", divider="rainbow")
-col1, col2 = st.columns([1, 1])
 ################# TAMPILKAN NAMA EMITEN
+dmarg = 
+col1, col2 = st.columns([1, 1])
 with col1:
     st.header(namatampil)
 
 with col2:
     if C <= L52:
        C
-       st.slider("Harga Terkini", 0, round(L52), round(C),  disabled=False, step=5)
+       hg = st.slider("Harga Terkini", 0, round(L52), round(C),  disabled=False, step=5)
+       marg = (hg - C)/hg
+       st.write("Margin", marg, '%')
     elif L52 < BL:
        C
-       st.slider("Harga Terkini", round(L52), round(BL), round(C),  disabled=False, step=5)
+       hg = st.slider("Harga Terkini", round(L52), round(BL), round(C),  disabled=False, step=5)
+       marg = (hg - C)/hg
+       st.write("Margin", marg, '%')
     else:
-        st.slider("Harga Terkini", round(L52), round(H52), round(C),  disabled=False, step=5)
+       hg = st.slider("Harga Terkini", round(L52), round(H52), round(C),  disabled=False, step=5)
+       marg = (hg - C)/hg
+       st.write("Margin", marg, '%')
 ################# END OF TAMPILKAN NAMA EMITEN
 ##########Notasi Saham################
 kode = selected_emiten.split(' | ')[0]
