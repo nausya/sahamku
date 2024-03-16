@@ -190,8 +190,8 @@ if C <=50:
   P1 = 50
   P2 = 50
   P3 = 50
-st.subheader(f"Harga terkini Rp{int(C)} dimana setahun terakhir tingkat harga berada pada posisi ke-{P3} dari ketinggian 100", divider="rainbow")
-
+#st.subheader(f"Harga terkini Rp{int(C)} dimana setahun terakhir tingkat harga berada pada posisi ke-{P3} dari ketinggian 100", divider="rainbow")
+hargakini = st.slider('Harga Terkini', L52, H52, C)
 ###### CHART GAUGE
 plot_bgcolor = "lightcyan"
 quadrant_colors = [plot_bgcolor, "red", "#f2a529", "#eff229", "#85e043", "#2bad4e"] 
