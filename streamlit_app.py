@@ -267,6 +267,7 @@ for variable in variables:
     )
     figs.append(fig)
 figs = st.columns([2, 2, 1])
+figs
 ##################################### END OF CHART GAUGE
 P = P3
 #####################  FINANSIAL
