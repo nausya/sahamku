@@ -228,8 +228,7 @@ fig1 = go.Figure(
                 x=0.5, xanchor="center", xref="paper",
                 y=0.6, yanchor="bottom", yref="paper",
                 showarrow=False,
-                font=dict(
-                    size=20  # Change font size here
+                font=dict(size=20) # Ubah ukuran font di sini
             ),
             go.layout.Annotation(
                 text=f"<b>Jangka Pendek <br>(Gorengan)</b>",
