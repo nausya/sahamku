@@ -184,27 +184,26 @@ with col1:
     st.header(namatampil)
 
 with col2:
-    st.markdown("""
-    <style>
+
+    if C <= L52:
+        st.markdown("""
+        <style>
         .css-1k9cb2z {
             font-size: 30px !important;
         }
-    </style>
-    """, unsafe_allow_html=True)
-
-    if C <= L52:
+        </style>
+       """, unsafe_allow_html=True)
        hg = st.slider('Harga Terkini', 0, round(L52), round(C),  disabled=False, step=5)
        marg = (hg - C)/hg * 100
        marg = round(marg,1)
-       st.write('<span style="font-size: 30px;">Margin', marg, '%</span>', unsafe_allow_html=True)
-        #st.write('<span style="font-size: 20px;">Text with custom font size</span>', unsafe_allow_html=True)
-
+       st.write('Margin<span style="font-size: 30px;">', marg, '%</span>', unsafe_allow_html=True)
+        
     else:
        hg = st.slider('Harga Terkini', round(L52), round(H52), round(C),  disabled=False, step=5)
        marg = (hg - C)/hg * 100
        marg = round(marg,1)
        #st.write("Margin", marg, '%')
-       st.write('<span style="font-size: 30px;">Margin', marg, '%</span>', unsafe_allow_html=True)
+       st.write('Margin<span style="font-size: 30px;">', marg, '%</span>', unsafe_allow_html=True)
 ################# END OF TAMPILKAN NAMA EMITEN
 ##########Notasi Saham################
 kode = selected_emiten.split(' | ')[0]
