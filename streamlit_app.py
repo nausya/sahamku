@@ -187,17 +187,17 @@ with col2:
     if C <= L52:
        C
        hg = st.slider("Harga Terkini", 0, round(L52), round(C),  disabled=False, step=5)
-       marg = (hg - C)/hg
-       st.write("Margin", round(marg,1), '%')
+       marg = (hg - C)/hg * 100
+       st.write("Margin", marg, '%')
     elif L52 < BL:
        C
        hg = st.slider("Harga Terkini", round(L52), round(BL), round(C),  disabled=False, step=5)
-       marg = (hg - C)/hg
-       st.write("Margin", round(marg,1), '%')
+       marg = (hg - C)/hg * 100
+       st.write("Margin", marg, '%')
     else:
        hg = st.slider("Harga Terkini", round(L52), round(H52), round(C),  disabled=False, step=5)
-       marg = (hg - C)/hg
-       st.write("Margin", round(marg,1), '%')
+       marg = (hg - C)/hg * 100
+       st.write("Margin", marg, '%')
 ################# END OF TAMPILKAN NAMA EMITEN
 ##########Notasi Saham################
 kode = selected_emiten.split(' | ')[0]
