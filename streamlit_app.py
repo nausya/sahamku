@@ -184,7 +184,7 @@ with col1:
     st.header(namatampil)
 
 with col2:
-    if L52 == BL:
+    if L52 = BL:
        st.slider("Harga Terkini", round(L52), round(H52), round(C),  disabled=False, step=5)
     else:
         st.slider("Harga Terkini", round(L52), round(BL), round(C),  disabled=False, step=5)
