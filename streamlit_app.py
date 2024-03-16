@@ -108,7 +108,7 @@ st.sidebar.info('SELAMAT DATANG (Versi Beta)')
 dataemiten = pd.read_csv('kodesaham.csv').sort_values('Kode')
 emiten = dataemiten['Kode'] + ' | ' + dataemiten['Nama Perusahaan']
 selected_emiten = st.sidebar.selectbox('Pilih Emiten:', emiten)
-st.header(selected_emiten.split(' | ')[1])
+
 option = selected_emiten.split(' | ')[0] + ".JK"
 ########Proses sidebar data
 option = option.upper()
@@ -191,7 +191,13 @@ if C <=50:
   P2 = 50
   P3 = 50
 #st.subheader(f"Harga terkini Rp{int(C)} dimana setahun terakhir tingkat harga berada pada posisi ke-{P3} dari ketinggian 100", divider="rainbow")
-hargakini = st.slider('Harga Terkini', L52, H52, C)
+col1, col2 = st.columns([1, 2])
+# Menampilkan chart ke dalam masing-masing kolom
+with col1:
+    st.header(selected_emiten.split(' | ')[1])
+
+with col2:
+    st.slider('Harga Terkini', L52, H52, C,  disabled=True)
 ###### CHART GAUGE
 plot_bgcolor = "lightcyan"
 quadrant_colors = [plot_bgcolor, "red", "#f2a529", "#eff229", "#85e043", "#2bad4e"] 
