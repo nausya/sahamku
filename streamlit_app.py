@@ -184,9 +184,9 @@ with col1:
     st.header(namatampil)
     ##### Tombol Simulasi ############
     if st.button('Simulasi Beli', help="Silakan klik tombol"):
-        st.write('Simulasi Berhasil Disimpan')
+       st.write('Simulasi Berhasil Disimpan')
     else:
-        st.write('------ Tekun dan Teliti adalah Kunci ------  ')
+       st.write('------ Tekun dan Teliti adalah Kunci ------  ')
 ######End of Halaman Utama
 with col2:
 
