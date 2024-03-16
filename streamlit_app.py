@@ -184,7 +184,10 @@ with col1:
     st.header(namatampil)
     ##### Tombol Simulasi ############
     if st.button('Simulasi Beli', help="Silakan klik tombol"):
-       st.write('Simulasi Berhasil Disimpan')
+       volbeli = 10000
+       hgbeli = C
+       total = C * volbeli
+       st.write('Simulasi pembelian saham {namatampil} pada tanggal {today} sebanyak 1000 lembar berhasil disimpan. Total transaksi adalah Rp. {total},-')
     else:
        st.write('------ Tekun dan Teliti adalah Kunci ------  ')
 ######End of Halaman Utama
