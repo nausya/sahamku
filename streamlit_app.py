@@ -127,19 +127,6 @@ data = download_data(option, start_date, end_date)
 scaler = StandardScaler()
 ######## End Proses sidebar data
 
-##########Notasi Saham################
-kode = selected_emiten.split(' | ')[0]
-n = pd.read_csv('notasi.csv', sep=';')
-n = n[(n['Kode'] == kode)]
-if n.isna().empty:
-   st.text("")
-else:  
-   n = n['Keterangan Notasi'].str.split('|', expand=False)
-   for y in n:
-    for x in y:
-     st.error(x)
-##########End of Notasi Saham################
-
 #Display Persentil
 saham = [option]
 
@@ -192,12 +179,25 @@ if C <=50:
   P3 = 50
 #st.subheader(f"Harga terkini Rp{int(C)} dimana setahun terakhir tingkat harga berada pada posisi ke-{P3} dari ketinggian 100", divider="rainbow")
 col1, col2 = st.columns([1, 1])
-# Menampilkan chart ke dalam masing-masing kolom
+################# TAMPILKAN NAMA EMITEN
 with col1:
     st.header(namatampil)
 
 with col2:
     st.slider('Harga Terkini', L52, H52, C,  disabled=True)
+################# END OF TAMPILKAN NAMA EMITEN
+##########Notasi Saham################
+kode = selected_emiten.split(' | ')[0]
+n = pd.read_csv('notasi.csv', sep=';')
+n = n[(n['Kode'] == kode)]
+if n.isna().empty:
+   st.text("")
+else:  
+   n = n['Keterangan Notasi'].str.split('|', expand=False)
+   for y in n:
+    for x in y:
+     st.error(x)
+##########End of Notasi Saham################
 ###### CHART GAUGE
 plot_bgcolor = "lightcyan"
 quadrant_colors = [plot_bgcolor, "red", "#f2a529", "#eff229", "#85e043", "#2bad4e"] 
