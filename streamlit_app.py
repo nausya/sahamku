@@ -267,7 +267,7 @@ for variable in variables:
     )
     figs.append(fig)
 # Membagi layout menjadi tiga kolom
-col1, col2, col3 = st.columns([2, 2, 1])
+col1, col2, col3 = st.columns([1, 1, 1])
 
 # Menampilkan chart ke dalam masing-masing kolom
 with col1:
