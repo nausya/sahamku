@@ -185,7 +185,6 @@ with col1:
 
 with col2:
     if C <= L52:
-       C
        hg = st.slider("Harga Terkini", 0, round(L52), round(C),  disabled=False, step=5)
        marg = (hg - C)/hg * 100
        marg = round(marg,1)
