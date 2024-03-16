@@ -191,10 +191,10 @@ if C <=50:
   P2 = 50
   P3 = 50
 #st.subheader(f"Harga terkini Rp{int(C)} dimana setahun terakhir tingkat harga berada pada posisi ke-{P3} dari ketinggian 100", divider="rainbow")
-col1, col2 = st.columns([1, 2])
+col1, col2 = st.columns([1, 1])
 # Menampilkan chart ke dalam masing-masing kolom
 with col1:
-    st.header("namatampil")
+    st.header(namatampil)
 
 with col2:
     st.slider('Harga Terkini', L52, H52, C,  disabled=True)
