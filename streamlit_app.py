@@ -224,7 +224,7 @@ fig1 = go.Figure(
         paper_bgcolor=plot_bgcolor,
         annotations=[
             go.layout.Annotation(
-                text=f"<b>Posisi : </b>{current_value}",
+                text=f"Posisi : <br><b>{current_value}</b>",
                 x=0.5, xanchor="center", xref="paper",
                 y=0.6, yanchor="bottom", yref="paper",
                 showarrow=False,
