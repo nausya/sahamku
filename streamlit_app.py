@@ -192,207 +192,84 @@ if C <=50:
   P3 = 50
 st.subheader(f"Harga terkini Rp{int(C)} dimana setahun terakhir tingkat harga berada pada posisi ke-{P3} dari ketinggian 100", divider="rainbow")
 
-######CHART
+###### CHART GAUGE
 plot_bgcolor = "lightcyan"
 quadrant_colors = [plot_bgcolor, "red", "#f2a529", "#eff229", "#85e043", "#2bad4e"] 
 quadrant_text = ["", "<b>Kuat Jual</b>", "<b>Jual</b>", "<b>Netral</b>", "<b>Beli</b>", "<b>Kuat Beli</b>"]
 n_quadrants = len(quadrant_colors) - 1
 
-current_value = P1
-min_value = 0
-max_value = 100
-hand_length = np.sqrt(2) / 4.5
-hand_angle = np.pi * (1 - (max(min_value, min(max_value, current_value)) - min_value) / (max_value - min_value))
+# Data untuk 3 variabel
+variables = [
+    {"current_value": P1, "jangka": 'Pendek', "jenis": 'Gorengan'},
+    {"current_value": P2, "jangka": 'Menengah', "jenis": 'Cemilan'},
+    {"current_value": P3, "jangka": 'Panjang', "jenis": 'Tanam Jati'}
+]
 
-fig1 = go.Figure(
-    data=[
-        go.Pie(
-            values=[0.5] + (np.ones(n_quadrants) / 2 / n_quadrants).tolist(),
-            rotation=90,
-            hole=0.5,
-            marker_colors=quadrant_colors,
-            text=quadrant_text,
-            textinfo="text",
-            hoverinfo="skip",
-        ),
-    ],
-    layout=go.Layout(
-        #title = "Posisi Harga 2 Bulan Terakhir",
-        showlegend=False,
-        margin=dict(b=10,t=10,l=10,r=10),
-        width=275,
-        height=275,
-        paper_bgcolor=plot_bgcolor,
-        annotations=[
-            go.layout.Annotation(
-                text=f"<b>{current_value}</b>",
-                x=0.5, xanchor="center", xref="paper",
-                y=0.6, yanchor="bottom", yref="paper",
-                showarrow=False,
-                font=dict(size=20) # Ubah ukuran font di sini
-            ),
-            go.layout.Annotation(
-                text=f"<b>Jangka Pendek <br>(Gorengan)</b>",
+# Looping untuk membuat 3 chart gauge
+figs = []
+for variable in variables:
+    current_value = variable["current_value"]
+    jangka = variable["jangka"]
+    jenis = variable["jenis"]
+    min_value = 0
+    max_value = 100
+    hand_length = np.sqrt(2) / 4.5
+    hand_angle = np.pi * (1 - (max(min_value, min(max_value, current_value)) - min_value) / (max_value - min_value))
+
+    fig = go.Figure(
+         data=[
+             go.Pie(
+                  values=[0.5] + (np.ones(n_quadrants) / 2 / n_quadrants).tolist(),
+                  rotation=90,
+                  hole=0.5,
+                  marker_colors=quadrant_colors,
+                  text=quadrant_text,
+                  textinfo="text",
+                  hoverinfo="skip",
+              ),
+          ],
+          layout=go.Layout(
+              showlegend=False,
+              margin=dict(b=0,t=10,l=10,r=10),
+              width=300,
+              height=300,
+              paper_bgcolor=plot_bgcolor,
+              annotations=[
+                  go.layout.Annotation(
+                      text=f"<b>{current_value}</b>",
+                      x=0.5, xanchor="center", xref="paper",
+                      y=0.6, yanchor="bottom", yref="paper",
+                      showarrow=False,
+                      font=dict(size=20) # Ubah ukuran font di sini
+                  ),
+              go.layout.Annotation(
+                text=f"<b>Jangka {jangka} <br>({jenis})</b>",
                 x=0.5, xanchor="center", xref="paper",
                 y=0.3, yanchor="bottom", yref="paper",
                 showarrow=False)
-        ],
-        shapes=[
-            go.layout.Shape(
-                type="circle",
-                x0=0.48, x1=0.52,
-                y0=0.48, y1=0.52,
-                fillcolor="grey",
-                line_color="grey",
-            ),
-            go.layout.Shape(
-                type="line",
-                x0=0.5, x1=0.5 + hand_length * np.cos(hand_angle),
-                y0=0.5, y1=0.5 + hand_length * np.sin(hand_angle),
-                line=dict(color="grey", width=2)
-            )
-        ]
+           ],
+           shapes=[
+               go.layout.Shape(
+                   type="circle",
+                   x0=0.48, x1=0.52,
+                   y0=0.48, y1=0.52,
+                   fillcolor="grey",
+                   line_color="grey",
+               ),
+               go.layout.Shape(
+                   type="line",
+                   x0=0.5, x1=0.5 + hand_length * np.cos(hand_angle),
+                   y0=0.5, y1=0.5 + hand_length * np.sin(hand_angle),
+                   line=dict(color="grey", width=2)
+               )
+            ]
+        )
     )
-)
-#fig1
-######CHART
-plot_bgcolor = "lightcyan"
-quadrant_colors = [plot_bgcolor, "red", "#f2a529", "#eff229", "#85e043", "#2bad4e"] 
-quadrant_text = ["", "<b>Kuat Jual</b>", "<b>Jual</b>", "<b>Netral</b>", "<b>Beli</b>", "<b>Kuat Beli</b>"]
-n_quadrants = len(quadrant_colors) - 1
-
-current_value = P2
-min_value = 0
-max_value = 100
-hand_length = np.sqrt(2) / 4.5
-hand_angle = np.pi * (1 - (max(min_value, min(max_value, current_value)) - min_value) / (max_value - min_value))
-
-fig2 = go.Figure(
-    data=[
-        go.Pie(
-            values=[0.5] + (np.ones(n_quadrants) / 2 / n_quadrants).tolist(),
-            rotation=90,
-            hole=0.5,
-            marker_colors=quadrant_colors,
-            text=quadrant_text,
-            textinfo="text",
-            hoverinfo="skip",
-        ),
-    ],
-    layout=go.Layout(
-        showlegend=False,
-        margin=dict(b=0,t=10,l=10,r=10),
-        width=275,
-        height=275,
-        paper_bgcolor=plot_bgcolor,
-        annotations=[
-            go.layout.Annotation(
-                text=f"<b>{current_value}</b>",
-                x=0.5, xanchor="center", xref="paper",
-                y=0.6, yanchor="bottom", yref="paper",
-                showarrow=False,
-                font=dict(size=20) # Ubah ukuran font di sini
-            ),
-            go.layout.Annotation(
-                text=f"<b>Jangka Menengah <br>(Cemilan)</b>",
-                x=0.5, xanchor="center", xref="paper",
-                y=0.3, yanchor="bottom", yref="paper",
-                showarrow=False)
-        ],
-        shapes=[
-            go.layout.Shape(
-                type="circle",
-                x0=0.48, x1=0.52,
-                y0=0.48, y1=0.52,
-                fillcolor="grey",
-                line_color="grey",
-            ),
-            go.layout.Shape(
-                type="line",
-                x0=0.5, x1=0.5 + hand_length * np.cos(hand_angle),
-                y0=0.5, y1=0.5 + hand_length * np.sin(hand_angle),
-                line=dict(color="grey", width=2)
-            )
-        ]
-    )
-)
-#fig2
-######CHART
-plot_bgcolor = "lightcyan"
-quadrant_colors = [plot_bgcolor, "red", "#f2a529", "#eff229", "#85e043", "#2bad4e"] 
-quadrant_text = ["", "<b>Kuat Jual</b>", "<b>Jual</b>", "<b>Netral</b>", "<b>Beli</b>", "<b>Kuat Beli</b>"]
-n_quadrants = len(quadrant_colors) - 1
-
-current_value = P3
-min_value = 0
-max_value = 100
-hand_length = np.sqrt(2) / 4.5
-hand_angle = np.pi * (1 - (max(min_value, min(max_value, current_value)) - min_value) / (max_value - min_value))
-
-fig3 = go.Figure(
-    data=[
-        go.Pie(
-            values=[0.5] + (np.ones(n_quadrants) / 2 / n_quadrants).tolist(),
-            rotation=90,
-            hole=0.5,
-            marker_colors=quadrant_colors,
-            text=quadrant_text,
-            textinfo="text",
-            hoverinfo="skip",
-        ),
-    ],
-    layout=go.Layout(
-        showlegend=False,
-        margin=dict(b=0,t=10,l=10,r=10),
-        width=275,
-        height=275,
-        paper_bgcolor=plot_bgcolor,
-        annotations=[
-            go.layout.Annotation(
-                text=f"<b>{current_value}</b>",
-                x=0.5, xanchor="center", xref="paper",
-                y=0.6, yanchor="bottom", yref="paper",
-                showarrow=False,
-                font=dict(size=20) # Ubah ukuran font di sini
-            ),
-            go.layout.Annotation(
-                text=f"<b>Jangka Panjang <br>(Tanam Jati)</b>",
-                x=0.5, xanchor="center", xref="paper",
-                y=0.3, yanchor="bottom", yref="paper",
-                showarrow=False)
-        ],
-        shapes=[
-            go.layout.Shape(
-                type="circle",
-                x0=0.48, x1=0.52,
-                y0=0.48, y1=0.52,
-                fillcolor="grey",
-                line_color="grey",
-            ),
-            go.layout.Shape(
-                type="line",
-                x0=0.5, x1=0.5 + hand_length * np.cos(hand_angle),
-                y0=0.5, y1=0.5 + hand_length * np.sin(hand_angle),
-                line=dict(color="grey", width=2)
-            )
-        ]
-    )
-)
-#fig3
-# Create a column layout
-col1, col2, col3 = st.columns([2, 2, 1])
-# Place the chart in the first column
-with col1:
-    fig1
-# Place the text in the second column
-with col2:
-    fig2
-# Place the text in the third column
-with col3:
-    fig3
+    figs.append(fig)
+for fig in figs:
+    fig
 ##################################### END OF CHART GAUGE
 P = P3
-
 #####################  FINANSIAL
 kodef = selected_emiten.split(' | ')[0]
 fin = pd.read_csv('Finansial.csv', sep=";")
