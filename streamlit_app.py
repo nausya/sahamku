@@ -184,7 +184,7 @@ with col1:
     st.header(namatampil)
 
 with col2:
-    st.slider("Harga Terkini", round(L52), round(BL), round(C),  disabled=False, step=50)
+    st.slider("Harga Terkini", round(L52), round(BL), round(C),  disabled=False, step=5)
 ################# END OF TAMPILKAN NAMA EMITEN
 ##########Notasi Saham################
 kode = selected_emiten.split(' | ')[0]
