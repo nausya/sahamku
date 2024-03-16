@@ -184,10 +184,12 @@ with col1:
     st.header(namatampil)
     ##### Tombol Simulasi ############
     if st.button('Simulasi Beli', help="Silakan klik tombol"):
+       #date;kode;skg;pos;vol;aksiy;aksik;user
        volbeli = 10000
        hgbeli = C
        total = C * volbeli
        st.write(f'Simulasi pembelian saham {namatampil} pada tanggal {today} sebanyak 1000 lembar berhasil disimpan. Total transaksi adalah Rp. {digit(round(total))},-')
+       #simpanaksi()
     else:
        st.write('------ Tekun dan Teliti adalah Kunci ------  ')
 ######End of Halaman Utama
@@ -607,7 +609,28 @@ def screener():
         ax.annotate(label,(a,b), xytext=(3, -3),textcoords='offset points',fontsize='7')
     
     st.pyplot(fig)
-    
+
+def simpan():                                                                      
+    # File CSV yang sudah ada                                                       
+    existing_csv_file = 'aksi.csv'                                         
+                                                                                
+    # Baca file CSV ke dalam DataFrame                                              
+    try:                                                                            
+        df = pd.read_csv(existing_csv_file)                                                                                                        
+    except FileNotFoundError:                                                       
+        st.write('No existing data found. Please upload a CSV file.')               
+                                                                                    
+    # Tambahkan formulir input data baru                                            
+    #date;kode;skg;pos;vol;aksiy;aksik;user
+    vol = volbeli
+    skg = hgbeli
+    total = C * volbeli                                                                           
+    # Tambahkan data baru ke DataFrame                                          
+    new_data = pd.DataFrame({'date': [date], 'kode': [kode], 'skg': [skg], 'pos': [pos], 'vol': [vol], 'aksiy': [aksiy], 'aksik': [aksik], 'user': [user]}) 
+    df = df.append(new_data, ignore_index=True)                                                                            
+    df.to_csv(existing_csv_file, index=False)                                                             
+
+
 if __name__ == '__main__':
     main()
     
