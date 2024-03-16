@@ -266,8 +266,18 @@ for variable in variables:
         )
     )
     figs.append(fig)
-for fig in figs:
-    fig
+# Membagi layout menjadi tiga kolom
+col1, col2, col3 = st.columns(3)
+
+# Menampilkan chart ke dalam masing-masing kolom
+with col1:
+    st.pyplot(figs[0])
+
+with col2:
+    st.pyplot(figs[1])
+
+with col3:
+    st.pyplot(figs[2])
 ##################################### END OF CHART GAUGE
 P = P3
 #####################  FINANSIAL
