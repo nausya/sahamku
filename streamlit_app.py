@@ -243,7 +243,7 @@ for variable in variables:
                       font=dict(size=20) # Ubah ukuran font di sini
                   ),
               go.layout.Annotation(
-                text=f"<b>Indikator Harga <br>Jangka {jangka} <br>{jenis}</b>",
+                text=f"<b>Indikator Harga Jangka {jangka} <br>{jenis}</b>",
                 x=0.5, xanchor="center", xref="paper",
                 y=0.3, yanchor="bottom", yref="paper",
                 showarrow=False)
