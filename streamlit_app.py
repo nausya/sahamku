@@ -185,8 +185,8 @@ with col1:
 
 with col2:
 
-    if C <= L52:
-       hg = st.slider('Harga Terkini', 0, round(L52), round(C),  disabled=False, step=5)
+    if C <= 50 or L52 <=50:
+       hg = st.slider('Harga Terkini', 0, round(H52), round(C),  disabled=False, step=5)
        marg = (hg - C)/hg * 100
        marg = round(marg,1)
        st.write('Margin<span style="font-size: 30px;">', marg, '</span>%', unsafe_allow_html=True)
@@ -297,7 +297,7 @@ with col2:
 with col3:
     figs[2]
 ##################################### END OF CHART GAUGE
-P = P3
+#P = P3
 #####################  FINANSIAL
 kodef = selected_emiten.split(' | ')[0]
 fin = pd.read_csv('Finansial.csv', sep=";")
