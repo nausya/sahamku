@@ -266,8 +266,16 @@ for variable in variables:
         )
     )
     figs.append(fig)
-figs = st.columns([2, 2, 1])
-figs.values[0]
+col1, col2, col3 = st.columns([2, 2, 1])
+# Place the chart in the first column
+with col1:
+    figs.values[0]
+# Place the text in the second column
+with col2:
+    figs.values[1]
+# Place the text in the third column
+with col3:
+    figs.values[2]
 ##################################### END OF CHART GAUGE
 P = P3
 #####################  FINANSIAL
