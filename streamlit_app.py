@@ -179,7 +179,6 @@ if C <=50:
   P3 = 50
 #st.subheader(f"Harga terkini Rp{int(C)} dimana setahun terakhir tingkat harga berada pada posisi ke-{P3} dari ketinggian 100", divider="rainbow")
 ################# TAMPILKAN NAMA EMITEN
-dmarg = 
 col1, col2 = st.columns([1, 1])
 with col1:
     st.header(namatampil)
