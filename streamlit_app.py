@@ -200,9 +200,9 @@ n_quadrants = len(quadrant_colors) - 1
 
 # Data untuk 3 variabel
 variables = [
-    {"current_value": P1, "jangka": 'Pendek (<2Bulan)', "jenis": '- Gorengan -'},
-    {"current_value": P2, "jangka": 'Menengah (2-12Bulan)', "jenis": '- Cemilan -'},
-    {"current_value": P3, "jangka": 'Panjang (>1Tahun)', "jenis": '- Tanam Jati -'}
+    {"current_value": P1, "jangka": '<2Bulan', "jenis": '- Gorengan -'},
+    {"current_value": P2, "jangka": '2-12Bulan', "jenis": '- Cemilan -'},
+    {"current_value": P3, "jangka": '>1Tahun', "jenis": '- Tanam Jati -'}
 ]
 
 # Looping untuk membuat 3 chart gauge
@@ -243,7 +243,7 @@ for variable in variables:
                       font=dict(size=20) # Ubah ukuran font di sini
                   ),
               go.layout.Annotation(
-                text=f"<b>Indikator Harga Jangka {jangka} <br>{jenis}</b>",
+                text=f"<b>Indikator Harga{jangka} <br>{jenis}</b>",
                 x=0.5, xanchor="center", xref="paper",
                 y=0.3, yanchor="bottom", yref="paper",
                 showarrow=False)
