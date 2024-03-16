@@ -217,9 +217,10 @@ fig1 = go.Figure(
         ),
     ],
     layout=go.Layout(
+        title = "Posisi Harga 2 Bulan Terakhir",
         showlegend=False,
         margin=dict(b=0,t=10,l=10,r=10),
-        autosize= True,#width=275,
+        width=275,
         height=275,
         paper_bgcolor=plot_bgcolor,
         annotations=[
