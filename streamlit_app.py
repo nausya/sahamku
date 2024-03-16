@@ -190,12 +190,12 @@ with col2:
        marg = (hg - C)/hg * 100
        marg = round(marg,1)
        st.write("Margin", marg, '%')
-    elif L52 < BL:
-       C
-       hg = st.slider("Harga Terkini", round(L52), round(BL), round(C),  disabled=False, step=5)
-       marg = (hg - C)/hg * 100
-       marg = round(marg,1)
-       st.write("Margin", marg, '%')
+   # elif L52 < BL:
+    #   C
+     #  hg = st.slider("Harga Terkini", round(L52), round(BL), round(C),  disabled=False, step=5)
+      # marg = (hg - C)/hg * 100
+       #marg = round(marg,1)
+       #st.write("Margin", marg, '%')
     else:
        hg = st.slider("Harga Terkini", round(L52), round(H52), round(C),  disabled=False, step=5)
        marg = (hg - C)/hg * 100
