@@ -200,9 +200,9 @@ n_quadrants = len(quadrant_colors) - 1
 
 # Data untuk 3 variabel
 variables = [
-    {"current_value": P1, "jangka": 'Pendek', "jenis": 'Gorengan'},
-    {"current_value": P2, "jangka": 'Menengah', "jenis": 'Cemilan'},
-    {"current_value": P3, "jangka": 'Panjang', "jenis": 'Tanam Jati'}
+    {"current_value": P1, "jangka": 'Pendek (<1Bulan)', "jenis": 'Gorengan'},
+    {"current_value": P2, "jangka": 'Menengah (2-6Bulan)', "jenis": 'Cemilan'},
+    {"current_value": P3, "jangka": 'Panjang (>1Tahun)', "jenis": 'Tanam Jati'}
 ]
 
 # Looping untuk membuat 3 chart gauge
