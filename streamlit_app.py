@@ -184,12 +184,12 @@ with col1:
     st.header(namatampil)
 
 with col2:
-    if L52 < H52:
-       st.slider("Harga Terkini", round(L52), round(H52), round(C),  disabled=False, step=5)
-    elif L52 < M:
-       st.slider("Harga Terkini", round(L52), round(M), round(C),  disabled=False, step=5)
+    if C <= L52:
+       st.slider("Harga Terkini", round(C), round(L52), round(C),  disabled=False, step=5)
+    elif L52 < BL:
+       st.slider("Harga Terkini", round(L52), round(BL), round(C),  disabled=False, step=5)
     else:
-        st.slider("Harga Terkini", round(L52), round(BL), round(C),  disabled=False, step=5)
+        st.slider("Harga Terkini", round(L52), round(H52), round(C),  disabled=False, step=5)
 ################# END OF TAMPILKAN NAMA EMITEN
 ##########Notasi Saham################
 kode = selected_emiten.split(' | ')[0]
