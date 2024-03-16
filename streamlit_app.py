@@ -185,8 +185,10 @@ with col1:
 
 with col2:
     if C <= L52:
+       C
        st.slider("Harga Terkini", 0, round(L52), round(C),  disabled=False, step=5)
     elif L52 < BL:
+       C
        st.slider("Harga Terkini", round(L52), round(BL), round(C),  disabled=False, step=5)
     else:
         st.slider("Harga Terkini", round(L52), round(H52), round(C),  disabled=False, step=5)
