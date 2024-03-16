@@ -220,7 +220,7 @@ fig1 = go.Figure(
         showlegend=False,
         margin=dict(b=0,t=10,l=10,r=10),
         width=275,
-        height=275,
+        height=137,
         paper_bgcolor=plot_bgcolor,
         annotations=[
             go.layout.Annotation(
