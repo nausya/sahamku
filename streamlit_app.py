@@ -188,12 +188,15 @@ with col2:
        hg = st.slider("Harga Terkini", 0, round(L52), round(C),  disabled=False, step=5)
        marg = (hg - C)/hg * 100
        marg = round(marg,1)
-       st.write("Margin", marg, '%')
+       st.write('<span style="font-size: 20px;">Margin</span>', marg, '%', unsafe_allow_html=True)
+        #st.write('<span style="font-size: 20px;">Text with custom font size</span>', unsafe_allow_html=True)
+
     else:
        hg = st.slider("Harga Terkini", round(L52), round(H52), round(C),  disabled=False, step=5)
        marg = (hg - C)/hg * 100
        marg = round(marg,1)
-       st.write("Margin", marg, '%')
+       #st.write("Margin", marg, '%')
+       st.write('<span style="font-size: 20px;">Margin</span>', marg, '%', unsafe_allow_html=True)
 ################# END OF TAMPILKAN NAMA EMITEN
 ##########Notasi Saham################
 kode = selected_emiten.split(' | ')[0]
