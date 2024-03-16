@@ -185,18 +185,18 @@ with col1:
 
 with col2:
     if C <= L52:
-       hg = st.slider("Harga Terkini", 0, round(L52), round(C),  disabled=False, step=5)
+       hg = st.slider('<span style="font-size: 30px;">Harga Terkini', 0, round(L52), round(C),  disabled=False, step=5, '</span>', unsafe_allow_html=True)
        marg = (hg - C)/hg * 100
        marg = round(marg,1)
-       st.write('<span style="font-size: 20px;">Margin', marg, '%</span>', unsafe_allow_html=True)
+       st.write('<span style="font-size: 30px;">Margin', marg, '%</span>', unsafe_allow_html=True)
         #st.write('<span style="font-size: 20px;">Text with custom font size</span>', unsafe_allow_html=True)
 
     else:
-       hg = st.slider("Harga Terkini", round(L52), round(H52), round(C),  disabled=False, step=5)
+       hg = st.slider('<span style="font-size: 30px;">Harga Terkini', round(L52), round(H52), round(C),  disabled=False, step=5, '</span>', unsafe_allow_html=True)
        marg = (hg - C)/hg * 100
        marg = round(marg,1)
        #st.write("Margin", marg, '%')
-       st.write('<span style="font-size: 20px;">Margin', marg, '%</span>', unsafe_allow_html=True)
+       st.write('<span style="font-size: 30px;">Margin', marg, '%</span>', unsafe_allow_html=True)
 ################# END OF TAMPILKAN NAMA EMITEN
 ##########Notasi Saham################
 kode = selected_emiten.split(' | ')[0]
