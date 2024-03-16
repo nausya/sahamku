@@ -297,7 +297,7 @@ with col2:
 with col3:
     figs[2]
 ##################################### END OF CHART GAUGE
-#P = P3
+P = P3
 #####################  FINANSIAL
 kodef = selected_emiten.split(' | ')[0]
 fin = pd.read_csv('Finansial.csv', sep=";")
