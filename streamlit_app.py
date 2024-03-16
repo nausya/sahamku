@@ -108,7 +108,7 @@ st.sidebar.info('SELAMAT DATANG (Versi Beta)')
 dataemiten = pd.read_csv('kodesaham.csv').sort_values('Kode')
 emiten = dataemiten['Kode'] + ' | ' + dataemiten['Nama Perusahaan']
 selected_emiten = st.sidebar.selectbox('Pilih Emiten:', emiten)
-
+namatampil = selected_emiten.split(' | ')[1]
 option = selected_emiten.split(' | ')[0] + ".JK"
 ########Proses sidebar data
 option = option.upper()
@@ -194,7 +194,7 @@ if C <=50:
 col1, col2 = st.columns([1, 2])
 # Menampilkan chart ke dalam masing-masing kolom
 with col1:
-    st.header(selected_emiten.split(' | ')[1])
+    st.header("namatampil")
 
 with col2:
     st.slider('Harga Terkini', L52, H52, C,  disabled=True)
