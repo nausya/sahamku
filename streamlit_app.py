@@ -217,7 +217,7 @@ fig1 = go.Figure(
         ),
     ],
     layout=go.Layout(
-        title = "Posisi Harga 2 Bulan Terakhir",
+        #title = "Posisi Harga 2 Bulan Terakhir",
         showlegend=False,
         margin=dict(b=10,t=10,l=10,r=10),
         width=275,
