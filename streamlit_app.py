@@ -187,7 +187,7 @@ with col1:
        volbeli = 10000
        hgbeli = C
        total = C * volbeli
-       st.write('Simulasi pembelian saham {namatampil} pada tanggal {today} sebanyak 1000 lembar berhasil disimpan. Total transaksi adalah Rp. {total},-')
+       st.write(f'Simulasi pembelian saham {namatampil} pada tanggal {today} sebanyak 1000 lembar berhasil disimpan. Total transaksi adalah Rp. {total},-')
     else:
        st.write('------ Tekun dan Teliti adalah Kunci ------  ')
 ######End of Halaman Utama
