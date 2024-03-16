@@ -28,6 +28,11 @@ from sklearn.metrics import r2_score, mean_absolute_error
 ######Halaman Utama
 st.set_page_config(layout="wide")
 st.header('ANALITIK SAHAM INDONESIA')
+##### Tombol Simulasi ############
+if st.button('Simulasi Beli', help="Silakan klik tombol"):
+    st.write('Pembelian Berhasil')
+else:
+    st.write('Hi there!')
 ######End of Halaman Utama
 ###### FUNGSI MENU #############
 def main():
