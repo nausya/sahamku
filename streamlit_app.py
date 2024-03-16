@@ -186,13 +186,6 @@ with col1:
 with col2:
 
     if C <= L52:
-        st.markdown("""
-        <style>
-        .css-1k9cb2z {
-            font-size: 30px !important;
-        }
-        </style>
-       """, unsafe_allow_html=True)
        hg = st.slider('Harga Terkini', 0, round(L52), round(C),  disabled=False, step=5)
        marg = (hg - C)/hg * 100
        marg = round(marg,1)
