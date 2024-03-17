@@ -174,7 +174,7 @@ C = df['skg'].values[0]
 HgPor = pd.read_csv('porto.csv', index_col=[0], sep=';')
 #option
 
-HgPor = HgPor.query("kode ==kodesaja")
+HgPor = HgPor.query("kode ==@'kodesaja'")
 HgPor
 HPS = HgPor['skg'].values[0]
 HPL = HgPor['lo'].values[0]
