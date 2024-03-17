@@ -593,23 +593,26 @@ def screener():
     "Last Update : " + tgl
     
     with tab1:
-         
          st.write('Screener Saham Harga Lebih Dari 5000')
          scr1=scr1.query("skg > 5000 and p<=10 and om >= 0.1")
+         st.dataframe(scr1)
     with tab2:
          #st.dataframe(scr1)
          st.write('Screener Saham Harga Kurang Dari 5000')
          scr1=scr1.query("skg > 200 and skg <= 5000 and p<=10 and om >= 0.1 and roe >= 0.1")
+         st.dataframe(scr1)
     with tab3:
          st.write('Screener Saham Harga Rentang 50-200')
          scr1=scr1.query("skg > 50 and skg<= 200 and p<=10 and om >= 0.1 and roe >= 0.1")
+         st.dataframe(scr1)
     with tab4:
          st.write('Screener Rutin Bagi Deviden di atas 5%')
          dev = pd.read_csv('devhunter.csv')
          dev = dev.values.tolist()
          dev = [item for sublist in dev for item in sublist]
          scr1 = scr1.query("kode in @dev")
-    st.dataframe(scr1)
+         st.dataframe(scr1)
+    
     st.subheader('Grafik')
     fig, ax = plt.subplots()
     
