@@ -182,6 +182,7 @@ if C <=50:
 col1, col2 = st.columns([1, 1])
 with col1:
     st.title(f'_:blue[{namatampil}]_')
+    with st.expander("Klik Untuk Simulasi Jual Beli Saham"):
     ###### KONTAINER TABS SIMULASI #############
     tab1, tab2 = st.tabs(['Simulasi Beli','Simulasi Jual'])
     with tab1:
