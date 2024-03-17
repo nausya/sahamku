@@ -513,8 +513,7 @@ def dataframe():
     else:
         ###### KONTAINER TABS #############
         simul = pd.read_csv('aksi.csv', index_col=[0], sep=';')
-        simul = simul.rename(columns = {"date": "Tanggal", "p1": "Pendek", "p2": "Menengah", "p3": "Panjang", "vol": "Volume", "aksiy": "Saran", "aksik": "Aksi",
-                                        "total": "Jumlah Rupiah", "user": "Pengguna", "kode": "Emiten", "skg": "Harga Beli"})
+        simul = simul.rename(columns = {"date": "Tanggal", "p1": "Pendek", "p2": "Menengah", "p3": "Panjang", "vol": "Volume", "aksiy": "Saran", "aksik": "Aksi", "total": "Jumlah Rupiah", "user": "Pengguna", "kode": "Emiten", "skg": "Harga Beli"})
         tab1, tab2 = st.tabs(["Beli", "Jual"])
         with tab1:
             st.write("Simulasi Beli")
@@ -630,7 +629,7 @@ def screener():
                                   "om":"Margin Operasi(%)", "dev":"Deviden PR(%)","roe": "ROE(%)","pery": "PER(%)",
                                   "pbvy": "Nilai Buku","bvy": "Harga Dasar","ph": "Pendapatan(M)","totshm": "Total Saham(M)","mcap": "Omzet(T)","epsy": "Laba Per Saham","opcash": "Kas Operasional(M)",
                                   "ut": "Utang(M)","cash": "Nilai Kas(M)","tcs": "Kas Per Saham", "vol": "Volume(J)","date": "Tanggal"}).sort_values(['kode'])
-    #st.dataframe(scr1.style.highlight_max(axis=0),hide_index=True)
+    
     "Last Update : " + tgl
     st.dataframe(scr1)
     st.subheader('Grafik')
