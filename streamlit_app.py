@@ -467,7 +467,7 @@ def dataframe():
         ###### KONTAINER TABS #############
         tab1, tab2, tab3 = st.tabs(['Portofolio','Deviden','Finansial'])
         with tab1:
-           tab1.write('Filter Data')
+           st.write('Filter Data')
            filterdata = pd.read_csv('porto.csv', index_col=[0], sep=';')
            tgl = filterdata['date'].values[0]
            tgl = tgl[8:10] + "/" + tgl[5:7]+ "/" + tgl[0:4]
@@ -560,7 +560,6 @@ def model_engine(model, num):
 def screener():
     #screenlevel = option_menu(None, ['>Rp5rb','<Rp5rb','<Rp200','BagiDeviden'], icons=['arrow-up-square', 'arrow-down-square', 'arrow-down-square-fill', 'bullseye'], menu_icon="cast", default_index=0, orientation="horizontal")
     ###### KONTAINER TABS #############
-    
     scr1 = pd.read_csv('porto.csv', sep=';')
     scr1['p'] = scr1['p'].astype(int)
     scr1['bl'] = scr1['bl'].astype(int)
