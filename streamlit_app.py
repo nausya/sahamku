@@ -182,7 +182,17 @@ if C <=50:
 col1, col2 = st.columns([1, 1])
 with col1:
     st.header(namatampil)
-
+    ##### Tombol Simulasi ############
+    if st.button('Simulasi Beli', help="Silakan klik tombol"):
+       #date;kode;skg;pos;vol;aksiy;aksik;user
+       volbeli = 10000
+       hgbeli = C
+       total = C * volbeli
+       st.write(f'Simulasi pembelian saham {namatampil} pada tanggal {today} sebanyak 1000 lembar berhasil disimpan. Total transaksi adalah Rp. {digit(round(total))},-')
+       #simpanaksi()
+    else:
+       st.write('------ Tekun dan Teliti adalah Kunci ------  ')
+######End of Halaman Utama
 with col2:
 
     if C <= 50 or L52 <=50:
