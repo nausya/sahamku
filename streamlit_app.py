@@ -590,9 +590,8 @@ def screener():
                                   "om":"Margin Operasi(%)", "dev":"Deviden PR(%)","roe": "ROE(%)","pery": "PER(%)",
                                   "pbvy": "Nilai Buku","bvy": "Harga Dasar","ph": "Pendapatan(M)","totshm": "Total Saham(M)","mcap": "Omzet(T)","epsy": "Laba Per Saham","opcash": "Kas Operasional(M)",
                                   "ut": "Utang(M)","cash": "Nilai Kas(M)","tcs": "Kas Per Saham", "vol": "Volume(J)","date": "Tanggal"}).sort_values(['kode'])
+    tab1, tab2, tab3, tab4 = st.tabs(['Lebih Dari Rp5rb','Kurang Dari Rp5rb','Kurang Dari Rp200','BagiDeviden'])
     "Last Update : " + tgl
-    
-    tab1, tab2, tab3, tab4 = st.tabs([' Lebih Dari Rp5rb','Kurang Dari Rp5rb','Kurang Dari Rp200','BagiDeviden'])
     st.dataframe(scr1)
     with tab1:
          st.write('Screener Saham Harga Lebih Dari 5000')
