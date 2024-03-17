@@ -162,7 +162,7 @@ for stock in saham:
     screensaham.append({'kode':kode,'skg':skg,'lo':lo,'hi':hi,'om':om,'dev':dev,'roe':roe,
                        'pery':pery,'epsy':epsy,'pbvy':pbvy,'bvy':bvy,'aksiy':aksiy,'vol':vol,'totshm':totshm,
                       'm':m,'bl':bl,'mcap':mcap,'cash':cash,'opcash':opcash,'ph':ph,'ut':ut,'tcs':tcs})
-kodek = df['kode'].values[0]
+#kodek = df['kode'].values[0]
 df = pd.DataFrame(screensaham)
 df = df.fillna(0)
 BL = df['bl'].values[0]
@@ -175,7 +175,7 @@ HgPor = pd.read_csv('porto.csv', index_col=[0], sep=';')
 kodek
 option
 kodesaja
-HgPor = HgPor.query("kode =='kodesaja'")
+HgPor = HgPor.query("kode =='GOTO'")
 HgPor
 HPS = HgPor['skg'].values[0]
 HPL = HgPor['lo'].values[0]
