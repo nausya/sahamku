@@ -96,7 +96,7 @@ def download_data(op, start_date, end_date):
     return df
 ####### END OF FUNGSI AMBIL DATA SAHAM ############
 ###### FUNGSI MENAMBAH DATA
-def addrow('namafile',):
+def addrow('namafile','data'):
     namafile = 'namafile' + '.csv'
     df = pd.read_csv(namafile)
     new_row = {'Column1': 'Nilai1', 'Column2': 'Nilai2', 'Column3': 'Nilai3'}
