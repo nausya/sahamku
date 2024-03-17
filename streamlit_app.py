@@ -398,6 +398,7 @@ else:
    st.subheader(f"RINGKASAN PORTOFOLIO", divider="rainbow")
    date = datetime.datetime.now(indonesia_timezone)
    date = date.strftime('%Y-%m-%d')# %H:%M:%S
+   date
    aksik = 0
    hostname = socket.gethostname()
    ip_address = socket.gethostbyname(hostname)
@@ -418,6 +419,7 @@ else:
    dfringkas = pd.DataFrame(dfringkas, index = np.arange(1))
    dfringkas = dfringkas.set_index('Kode')
    dfringkas['Tanggal'] = pd.to_datetime(dfringkas['Tanggal'], format='%Y-%m-%d %H:%M:%S')
+   dfringkas['Tanggal'].values[0]
    st.dataframe(dfringkas)
 
 st.info('Untuk jangka panjang perlu diperhatikan kisaran posisi harga kurang dari 10')
