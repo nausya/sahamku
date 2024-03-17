@@ -446,36 +446,51 @@ def tech_indicators():
     
     st.bar_chart(data.Volume)
 
-#Pencarian Data
+#################### CARI DATA ###############
 def dataframe():
-    caridata = option_menu(None, ['10 Data','Portofolio','Deviden','Index Per Sektor','Finansial'], icons=['arrow-up-square', 'arrow-down-square'], menu_icon="cast", default_index=0, orientation="horizontal")
+    caridata = option_menu(None, ['10 Data','Fundamental','Simulasi','Index Per Sektor'], icons=['arrow-up-square', 'arrow-down-square'], menu_icon="cast", default_index=0, orientation="horizontal")
     if caridata == '10 Data':
        st.header('10 Data Terkini')
        st.dataframe(data.tail(10))
-    elif caridata == 'Deviden':
-        st.header("Data Deviden")
-        devcum = pd.read_csv('devcumdate.csv', index_col=[0], sep=';')
-        st.dataframe(devcum)
+    elif caridata == 'Fundamental':
+        ###### KONTAINER TABS #############
+        tab1, tab2, tab3 = st.tabs(['Portofolio','Deviden','Finansial'])
+        with tab1:
+           st.write('Filter Data')
+           filterdata = pd.read_csv('porto.csv', index_col=[0], sep=';')
+           tgl = filterdata['date'].values[0]
+           tgl = tgl[8:10] + "/" + tgl[5:7]+ "/" + tgl[0:4]
+           "Last Update : " + tgl
+           filterdata = filterdata.rename(columns = {"date": "Tanggal", "p": "Posisi","kode":"Kode","aksiy": "Saran","skg":"Harga","lo":"1YMin","hi":"1YMax","bl":"2M","m":"6M", 
+           "om":"Margin Operasi", "dev":"Deviden PR","epsy":"Laba Per Saham","roe": "ROE","pery": "PER",
+           "pbvy": "Nilai Buku","bvy": "Harga Dasar","ph": "Pendapatan","ut":"Utang",
+           "pm":"Profit Margin", "cash": "Jumlah Kas", "opcash": "Kas Operasional","tcs": "Kas Per Saham", "totshm": "Saham Beredar","mcap": "Omzet","vol": "Volume"})
+           st.dataframe(filterdata)
+        with tab2:
+            st.write("Data Deviden")
+            devcum = pd.read_csv('devcumdate.csv', index_col=[0], sep=';')
+            st.dataframe(devcum)
+        with tab3:
+            st.write("Finansial (Milyar Rupiah)")
+            keu = pd.read_csv('Finansial.csv', index_col=[0], sep=';')
+            st.dataframe(keu)
+
     elif caridata == 'Index Per Sektor':
         st.header("Index Per Sektor")
         indsektor = pd.read_csv('IndexSektor.csv', index_col=[0], sep=';')
         st.dataframe(indsektor)
-    elif caridata == 'Finansial':
-        st.header("Finansial (Milyar Rupiah)")
-        keu = pd.read_csv('Finansial.csv', index_col=[0], sep=';')
-        st.dataframe(keu)
-   #date
     else:
-       st.header('Filter Data')
-       filterdata = pd.read_csv('porto.csv', index_col=[0], sep=';')
-       tgl = filterdata['date'].values[0]
-       tgl = tgl[8:10] + "/" + tgl[5:7]+ "/" + tgl[0:4]
-       "Last Update : " + tgl
-       filterdata = filterdata.rename(columns = {"date": "Tanggal", "p": "Posisi","kode":"Kode","aksiy": "Saran","skg":"Harga","lo":"1YMin","hi":"1YMax","bl":"2M","m":"6M", 
-       "om":"Margin Operasi", "dev":"Deviden PR","epsy":"Laba Per Saham","roe": "ROE","pery": "PER",
-       "pbvy": "Nilai Buku","bvy": "Harga Dasar","ph": "Pendapatan","ut":"Utang",
-       "pm":"Profit Margin", "cash": "Jumlah Kas", "opcash": "Kas Operasional","tcs": "Kas Per Saham", "totshm": "Saham Beredar","mcap": "Omzet","vol": "Volume"})
-       st.dataframe(filterdata)
+        ###### KONTAINER TABS #############
+        simul = pd.read_csv('aksi.csv', index_col=[0], sep=';')
+        tab1, tab2 = st.tabs(["Beli", "Jual"])
+        with tab1:
+            st.write("Simulasi Beli")
+            simulb = simul.query("aksik=='buy'")
+            st.dataframe(simulb)
+        with tab2:
+            st.write("Simulasi Jual")
+            simulj = simul.query("aksik=='sell'")
+            st.dataframe(simulj)
         
 def predict():
     model = st.radio('Pilih Model Komputasi', ['LinearRegression', 'RandomForestRegressor', 'ExtraTreesRegressor', 'KNeighborsRegressor', 'XGBoostRegressor'])
