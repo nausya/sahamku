@@ -182,8 +182,9 @@ if C <=50:
 col1, col2 = st.columns([1, 1])
 with col1:
     st.header(namatampil)
-    ##### Tombol Simulasi ############
-    if st.button('Simulasi Beli', help="Silakan klik tombol"):
+    ###### KONTAINER TABS SIMULASI #############
+    tab1, tab2 = st.tabs(['Simulasi Beli','Simulasi Jual'])
+    with tab1:
        #date;kode;skg;pos;vol;aksiy;aksik;user
        volbeli = st.number_input('Banyaknya saham :', value=100, step=100)
        st.write('Jumlah pembelian : ', volbeli, 'lembar saham')
@@ -192,11 +193,9 @@ with col1:
        total = C * volbeli
        if st.button('simpan'):
           st.write(f'Simulasi pembelian saham {namatampil} pada tanggal {today} sebanyak {volbeli} lembar berhasil disimpan. Total transaksi adalah Rp. {digit(round(total))},-')
-       else:
-          st.write('cek kebali jumlah')
         #simpanaksi()
-    else:
-       st.write('------ Tekun dan Teliti adalah Kunci ------  ')
+    with tab2:
+       st.write('Simulasi Jual')
 ######End of Halaman Utama
 with col2:
 
