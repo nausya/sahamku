@@ -492,7 +492,9 @@ def dataframe():
         indsektor = pd.read_csv('IndexSektor.csv', index_col=[0], sep=';')
         st.dataframe(indsektor)
     else:
-        st.write("Simulasi Jual-Beli")
+        st.header("Data Simulasi")
+        simul = pd.read_csv('aksi.csv', index_col=[0], sep=';')
+        st.dataframe(simul)
 
         
 def predict():
