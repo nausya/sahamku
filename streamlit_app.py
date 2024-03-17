@@ -591,11 +591,13 @@ def screener():
                                   "ut": "Utang(M)","cash": "Nilai Kas(M)","tcs": "Kas Per Saham", "vol": "Volume(J)","date": "Tanggal"}).sort_values(['kode'])
     tab1, tab2, tab3, tab4 = st.tabs(['Lebih Dari Rp5rb','Kurang Dari Rp5rb','Kurang Dari Rp200','BagiDeviden'])
     "Last Update : " + tgl
-    st.dataframe(scr1)
+    
     with tab1:
+         
          st.write('Screener Saham Harga Lebih Dari 5000')
          scr1=scr1.query("skg > 5000 and p<=10 and om >= 0.1")
     with tab2:
+         #st.dataframe(scr1)
          st.write('Screener Saham Harga Kurang Dari 5000')
          scr1=scr1.query("skg > 200 and skg <= 5000 and p<=10 and om >= 0.1 and roe >= 0.1")
     with tab3:
@@ -607,7 +609,7 @@ def screener():
          dev = dev.values.tolist()
          dev = [item for sublist in dev for item in sublist]
          scr1 = scr1.query("kode in @dev")
-
+    st.dataframe(scr1)
     st.subheader('Grafik')
     fig, ax = plt.subplots()
     
