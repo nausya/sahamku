@@ -35,7 +35,7 @@ def main():
                             icons=['house', 'file-earmark-text', 
                             'sliders2-vertical', 'graph-up-arrow'], menu_icon="cast", default_index=0, orientation="horizontal")
     if selected2 == 'Cari Data':
-         dataframe()
+        dataframe()
     elif selected2 == 'Screener':
         scr1 = pd.read_csv('porto.csv', sep=';')
         scr1['p'] = scr1['p'].astype(int)
@@ -66,9 +66,8 @@ def main():
                                       "om":"Margin Operasi(%)", "dev":"Deviden PR(%)","roe": "ROE(%)","pery": "PER(%)",
                                       "pbvy": "Nilai Buku","bvy": "Harga Dasar","ph": "Pendapatan(M)","totshm": "Total Saham(M)","mcap": "Omzet(T)","epsy": "Laba Per Saham","opcash": "Kas Operasional(M)",
                                       "ut": "Utang(M)","cash": "Nilai Kas(M)","tcs": "Kas Per Saham", "vol": "Volume(J)","date": "Tanggal"}).sort_values(['kode'])
-        tab1, tab2, tab3, tab4 = st.tabs(['Lebih Dari Rp5rb','Kurang Dari Rp5rb','Kurang Dari Rp200','BagiDeviden'])
-        "Last Update : " + tgl
-        
+        tab1, tab2, tab3, tab4 = st.tabs(['Lebih Dari Rp5rb','Kurang Dari Rp5rb','Kurang Dari Rp200','Bagi Deviden'])
+        #"Last Update : " + tgl
         with tab1:
              st.write('Screener Saham Harga Lebih Dari 5000')
              scr1=scr1.query("skg > 5000 and p<=10 and om >= 0.1")
