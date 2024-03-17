@@ -621,10 +621,6 @@ def model_engine(model, num):
         st.text(f'Hari ke-{day}: {round(i)}')
         day += 1
         
-#Screener Grafik Kuadran
-def screener():
-    #screenlevel = option_menu(None, ['>Rp5rb','<Rp5rb','<Rp200','BagiDeviden'], icons=['arrow-up-square', 'arrow-down-square', 'arrow-down-square-fill', 'bullseye'], menu_icon="cast", default_index=0, orientation="horizontal")
-    ###### KONTAINER TABS #############
 
 def simpan():                                                                      
     # File CSV yang sudah ada                                                       
