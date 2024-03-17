@@ -560,9 +560,8 @@ def model_engine(model, num):
 def screener():
     #screenlevel = option_menu(None, ['>Rp5rb','<Rp5rb','<Rp200','BagiDeviden'], icons=['arrow-up-square', 'arrow-down-square', 'arrow-down-square-fill', 'bullseye'], menu_icon="cast", default_index=0, orientation="horizontal")
     ###### KONTAINER TABS #############
-    tab1, tab2, tab3, tab4 = st.tabs([' Lebih Dari Rp5rb','Kurang Dari Rp5rb','Kurang Dari Rp200','BagiDeviden'])
-    scr1 = pd.read_csv('porto.csv', sep=';')
     
+    scr1 = pd.read_csv('porto.csv', sep=';')
     scr1['p'] = scr1['p'].astype(int)
     scr1['bl'] = scr1['bl'].astype(int)
     scr1['m'] = scr1['m'].astype(int) 
@@ -593,6 +592,7 @@ def screener():
                                   "ut": "Utang(M)","cash": "Nilai Kas(M)","tcs": "Kas Per Saham", "vol": "Volume(J)","date": "Tanggal"}).sort_values(['kode'])
     "Last Update : " + tgl
     st.dataframe(scr1)
+    tab1, tab2, tab3, tab4 = st.tabs([' Lebih Dari Rp5rb','Kurang Dari Rp5rb','Kurang Dari Rp200','BagiDeviden'])
     with tab1:
         st.write('Screener Saham Harga Lebih Dari 5000')
         scr1=scr1.query("skg > 5000 and p<=10 and om >= 0.1")
