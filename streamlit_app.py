@@ -513,7 +513,7 @@ def dataframe():
     else:
         ###### KONTAINER TABS #############
         simul = pd.read_csv('aksi.csv', index_col=[0], sep=';')
-        simul = simul.rename(columns = {"date": "Tanggal", "p1": "Pendek", "p2": "Menengah", "p3": "Panjang", "vol": "Volume", "aksiy": "Saran", "aksik": "Aksi", "total": "Jumlah Rupiah", "user": "Pengguna", "kode": "Emiten", "skg": "Harga Beli"})
+        #simul = simul.rename(columns = {"date": "Tanggal", "p1": "Pendek", "p2": "Menengah", "p3": "Panjang", "vol": "Volume", "aksiy": "Saran", "aksik": "Aksi", "total": "Jumlah Rupiah", "user": "Pengguna", "kode": "Emiten", "skg": "Harga Beli"})
         tab1, tab2 = st.tabs(["Beli", "Jual"])
         with tab1:
             st.write("Simulasi Beli")
