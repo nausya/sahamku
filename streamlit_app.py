@@ -584,7 +584,7 @@ def screener():
     tgl = tgl[8:10] + "/" + tgl[5:7]+ "/" + tgl[0:4]    
     scr1 = scr1.fillna(0)
     s = scr1.copy()
-    #scr1 = scr1.set_index('kode')
+    scr1 = scr1.set_index('kode')
     scr1 = scr1.rename(columns = {"p": "Posisi","kode":"Kode","aksiy": "Saran","skg":"Harga","lo":"1YMin","hi":"1YMax","bl":"2M","m":"6M", 
                                   "om":"Margin Operasi(%)", "dev":"Deviden PR(%)","roe": "ROE(%)","pery": "PER(%)",
                                   "pbvy": "Nilai Buku","bvy": "Harga Dasar","ph": "Pendapatan(M)","totshm": "Total Saham(M)","mcap": "Omzet(T)","epsy": "Laba Per Saham","opcash": "Kas Operasional(M)",
@@ -595,27 +595,25 @@ def screener():
     with tab1:
          st.write('Screener Saham Harga Lebih Dari 5000')
          scr1=scr1.query("skg > 5000 and p<=10 and om >= 0.1")
-         st.dataframe(scr1)
-    with tab2:
          #st.dataframe(scr1)
+    with tab2:
          st.write('Screener Saham Harga Kurang Dari 5000')
          scr1=scr1.query("skg > 200 and skg <= 5000 and p<=10 and om >= 0.1 and roe >= 0.1")
-         st.dataframe(scr1)
+         #st.dataframe(scr1)
     with tab3:
          st.write('Screener Saham Harga Rentang 50-200')
          scr1=scr1.query("skg > 50 and skg<= 200 and p<=10 and om >= 0.1 and roe >= 0.1")
-         st.dataframe(scr1)
+         #st.dataframe(scr1)
     with tab4:
          st.write('Screener Rutin Bagi Deviden di atas 5%')
          dev = pd.read_csv('devhunter.csv')
          dev = dev.values.tolist()
          dev = [item for sublist in dev for item in sublist]
          scr1 = scr1.query("kode in @dev")
-         st.dataframe(scr1)
-    
+         #st.dataframe(scr1)
+    st.dataframe(scr1)
     st.subheader('Grafik')
     fig, ax = plt.subplots()
-    
     x = s['p']
     y = s['om']
     kd = s['kode']
