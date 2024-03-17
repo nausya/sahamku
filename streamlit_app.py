@@ -169,9 +169,21 @@ M = df['m'].values[0]
 L52 = df['lo'].values[0]
 H52 = df['hi'].values[0]
 C = df['skg'].values[0]
-if C == 0:
+##### BILA DATA LIVE BELUM TERSEDIA skg;lo;bl;m;hi
+HgPor = pd.read_csv('porto.csv', index_col=[0], sep=';')
+HPS = HgPor['skg'].values[0]
+HPL = HgPor['lo'].values[0]
+HPB = HgPor['bl'].values[0]
+HPM = HgPor['m'].values[0]
+HPH = HgPor['hi'].values[0]
+##################### END OF BILA DATA LIVE BELUM TERSEDIA
+if C == 0 or L52==0 or H52==0 or BL==0 or M==0:
     C = data.tail(1)
     C = C['Adj Close'].values[0]
+    L52 = HPL
+    H52 = HPH
+    BL = HPB
+    M = HPM
 P1 = pentil(L52,BL,C)
 P2 = pentil(L52,M,C)
 P3 = pentil(L52,H52,C)
@@ -426,7 +438,7 @@ else:
    mcap = mcap/1000000000
    totshm = totshm/1000000000
 
-   dfringkas = {'Kode':kode,'Tanggal':date,'Harga':skg,'1YMin':lo,'2Mon':int(bl),'6Mon':int(m),'1YMax':hi,'Margin Operasi(%)':ceknon(om),
+   dfringkas = {'Kode':kode,'Tanggal':date,'Harga':C,'1YMin':L52,'2Mon':int(BL),'6Mon':int(M),'1YMax':H52,'Margin Operasi(%)':ceknon(om),
                 'Deviden(%)':ceknon(dev),'ROE(%)':ceknon(roe),'Posisi':round(P,0),'Uang Tunai(M)':round(cash),'Kas Operasional(M)':int(opcash),'Pendapatan(M)':int(ph),
                 'Utang(M)':round(ut),'Kas Per Saham(Rp)':round(tcs),'EPS(Rp)':eps,'Harga Buku(Rp)':round(bv),'Nilai Buku':round(pbv,1),
                 'PER':round(per),'Volume(Juta)':round(vol,0),'TotalSaham(M)':round(totshm),'Omzet(M)':round(mcap),'Saran':aksiy,'Aksi':aksik,'User':id}    
