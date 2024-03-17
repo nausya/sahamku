@@ -500,7 +500,7 @@ def dataframe():
             simulb = simul.query("aksik=='buy'")
             st.dataframe(simulb)
         else:
-            tab2.write("Simulasi Jual")
+            st.write("Simulasi Jual")
             simul = pd.read_csv('aksi.csv', index_col=[0], sep=';')
             simulj = simul.query("aksik=='sell'")
             st.dataframe(simulj)
