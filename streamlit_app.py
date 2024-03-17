@@ -95,6 +95,15 @@ def download_data(op, start_date, end_date):
     df = yf.download(op, start=start_date, end=end_date, progress=False)
     return df
 ####### END OF FUNGSI AMBIL DATA SAHAM ############
+###### FUNGSI MENAMBAH DATA
+def addrow('namafile',):
+    namafile = 'namafile' + '.csv'
+    df = pd.read_csv(namafile)
+    new_row = {'Column1': 'Nilai1', 'Column2': 'Nilai2', 'Column3': 'Nilai3'}
+    df = df.append(new_row, ignore_index=True)
+    df.to_csv(namafile, index=False)
+###### END FUNGSI MENAMBAH DATA
+
 ######################## Tentukan zona waktu Indonesia
 indonesia_timezone = pytz.timezone('Asia/Jakarta')
 
