@@ -496,11 +496,11 @@ def dataframe():
         tab1, tab2 = st.tabs(["Beli", "Jual"])
         if tab1:
             tab1.write("Simulasi Beli")
-            simulb = simul.query("aksik=='beli'")
+            simulb = simul.query("aksik==beli")
             st.dataframe(simulb)
         else:
             tab2.write("Simulasi Jual")
-            simulj = simul.query("aksik=='jual'")
+            simulj = simul.query("aksik==jual")
             st.dataframe(simulj)
 
 
