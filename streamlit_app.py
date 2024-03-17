@@ -492,16 +492,18 @@ def dataframe():
         st.dataframe(indsektor)
     else:
         ###### KONTAINER TABS #############
-        simul = pd.read_csv('aksi.csv', index_col=[0], sep=';')
+        
         tab1, tab2 = st.tabs(["Beli", "Jual"])
         if tab1:
             tab1.write("Simulasi Beli")
+            simul = pd.read_csv('aksi.csv', index_col=[0], sep=';')
             simulb = simul.query("aksik=='buy'")
-            tab1.dataframe(simulb)
+            st.dataframe(simulb)
         else:
             tab2.write("Simulasi Jual")
+            simul = pd.read_csv('aksi.csv', index_col=[0], sep=';')
             simulj = simul.query("aksik=='sell'")
-            tab2.dataframe(simulj)
+            st.dataframe(simulj)
 
 
         
