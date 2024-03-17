@@ -584,7 +584,7 @@ def screener():
     tgl = scr1['date'].values[0]
     tgl = tgl[8:10] + "/" + tgl[5:7]+ "/" + tgl[0:4]    
     scr1 = scr1.fillna(0)
-    tab1, tab2, tab3, tab4 = st.tabs(['>Rp5rb','<Rp5rb','<Rp200','BagiDeviden'])
+    tab1, tab2, tab3, tab4 = st.tabs([' Lebih Dari Rp5rb','Kurang Dari Rp5rb','Kurang Dari Rp200','BagiDeviden'])
     with tab1:
         st.write('Screener Saham Harga Lebih Dari 5000')
         scr1=scr1.query("skg > 5000 and p<=10 and om >= 0.1")
