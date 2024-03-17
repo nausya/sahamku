@@ -481,7 +481,7 @@ def tech_indicators():
 
 #################### CARI DATA ###############
 def dataframe():
-    caridata = option_menu(None, ['10 Data','Fundamental','Simulasi','Index Per Sektor'], icons=['arrow-up-square', 'arrow-down-square'], menu_icon="cast", default_index=0, orientation="horizontal")
+    caridata = option_menu(None, ['Simulasi','10 Data','Fundamental','Index Per Sektor'], icons=['arrow-up-square', 'arrow-down-square'], menu_icon="cast", default_index=0, orientation="horizontal")
     if caridata == 'Simulasi':
         simul = pd.read_csv('aksi.csv', index_col=[0], sep=';')
         #simul = simul.rename(columns = {"date": "Tanggal", "p1": "Pendek", "p2": "Menengah", "p3": "Panjang", "vol": "Volume", "aksiy": "Saran", "aksik": "Aksi", "total": "Jumlah Rupiah", "user": "Pengguna", "kode": "Emiten", "skg": "Harga Beli"})
