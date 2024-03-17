@@ -28,80 +28,16 @@ from sklearn.metrics import r2_score, mean_absolute_error
 ######Halaman Utama
 st.set_page_config(layout="wide")
 st.header('ANALITIK SAHAM INDONESIA')
-
+######End of Halaman Utama
 ###### FUNGSI MENU #############
 def main():
     selected2 = option_menu(None, ["Home", "Cari Data", "Screener", 'Prediksi'], 
                             icons=['house', 'file-earmark-text', 
                             'sliders2-vertical', 'graph-up-arrow'], menu_icon="cast", default_index=0, orientation="horizontal")
     if selected2 == 'Cari Data':
-        dataframe()
+         dataframe()
     elif selected2 == 'Screener':
-        scr1 = pd.read_csv('porto.csv', sep=';')
-        scr1['p'] = scr1['p'].astype(int)
-        scr1['bl'] = scr1['bl'].astype(int)
-        scr1['m'] = scr1['m'].astype(int) 
-        scr1['om'] = (scr1['om'].round(2))*100
-        scr1['pbvy'] = scr1['pbvy'].round(1)
-        scr1['bvy'] = scr1['bvy'].round()
-        scr1['dev'] = (scr1['dev'].round(2))*100
-        scr1['roe'] = (scr1['roe'].round(2))*100
-        scr1['pery'] = scr1['pery'].round(0)
-        scr1['epsy'] = scr1['epsy'].round()
-        scr1['tcs'] = scr1['tcs'].round()
-        scr1['vol'] = ((scr1['vol'].round(1))/1000000).round(1)
-        scr1['totshm'] = ((scr1['totshm'].round(1))/1000000000).round(1)
-        scr1['mcap'] = ((scr1['mcap'].round(1))/1000000000000).round(1)
-        scr1['opcash'] = ((scr1['opcash'].round(1))/1000000000).round(1)
-        scr1['cash'] = ((scr1['cash'].round(1))/1000000000).round(1)
-        scr1['ut'] = ((scr1['ut'].round(1))/1000000000).round(1)
-        scr1['ph'] = ((scr1['ph'].round(1))/1000000000).round(1)
-        #scr1['date'] = scr1['date'].strftime("%Y-%m-%d-%H:%M:%S")    
-        tgl = scr1['date'].values[0]
-        tgl = tgl[8:10] + "/" + tgl[5:7]+ "/" + tgl[0:4]    
-        scr1 = scr1.fillna(0)
-        s = scr1.copy()
-        scr1 = scr1.set_index('kode')
-        scr1 = scr1.rename(columns = {"p": "Posisi","kode":"Kode","aksiy": "Saran","skg":"Harga","lo":"1YMin","hi":"1YMax","bl":"2M","m":"6M", 
-                                      "om":"Margin Operasi(%)", "dev":"Deviden PR(%)","roe": "ROE(%)","pery": "PER(%)",
-                                      "pbvy": "Nilai Buku","bvy": "Harga Dasar","ph": "Pendapatan(M)","totshm": "Total Saham(M)","mcap": "Omzet(T)","epsy": "Laba Per Saham","opcash": "Kas Operasional(M)",
-                                      "ut": "Utang(M)","cash": "Nilai Kas(M)","tcs": "Kas Per Saham", "vol": "Volume(J)","date": "Tanggal"}).sort_values(['kode'])
-        tab1, tab2, tab3, tab4 = st.tabs(['Lebih Dari Rp5rb','Kurang Dari Rp5rb','Kurang Dari Rp200','Bagi Deviden'])
-        #"Last Update : " + tgl
-        with tab1:
-             st.write('Screener Saham Harga Lebih Dari 5000')
-             scr1=scr1.query("skg > 5000 and p<=10 and om >= 0.1")
-             #st.dataframe(scr1)
-        with tab2:
-             st.write('Screener Saham Harga Kurang Dari 5000')
-             scr1=scr1.query("skg > 200 and skg <= 5000 and p<=10 and om >= 0.1 and roe >= 0.1")
-             #st.dataframe(scr1)
-        with tab3:
-             st.write('Screener Saham Harga Rentang 50-200')
-             scr1=scr1.query("skg > 50 and skg<= 200 and p<=10 and om >= 0.1 and roe >= 0.1")
-             #st.dataframe(scr1)
-        with tab4:
-             st.write('Screener Rutin Bagi Deviden di atas 5%')
-             dev = pd.read_csv('devhunter.csv')
-             dev = dev.values.tolist()
-             dev = [item for sublist in dev for item in sublist]
-             scr1 = scr1.query("kode in @dev")
-             #st.dataframe(scr1)
-        st.dataframe(scr1)
-        st.subheader('Grafik')
-        fig, ax = plt.subplots()
-        x = s['p']
-        y = s['om']
-        kd = s['kode']
-        sns.scatterplot(s,x=x, y=y, marker='>')
-        plt.xlabel("Posisi Harga")
-        plt.ylabel("Margin Operasi (%)")
-        for a,b,c in zip(x,y,kd):
-            label = f"{c} {int(b)}%"
-            ax.annotate(label,(a,b), xytext=(3, -3),textcoords='offset points',fontsize='7')
-        
-        st.pyplot(fig)
-
+         screener()
     elif selected2 == 'Prediksi':
          predict()
     else:
@@ -246,17 +182,7 @@ if C <=50:
 col1, col2 = st.columns([1, 1])
 with col1:
     st.header(namatampil)
-    ##### Tombol Simulasi ############
-    if st.button('Simulasi Beli', help="Silakan klik tombol"):
-       #date;kode;skg;pos;vol;aksiy;aksik;user
-       volbeli = 10000
-       hgbeli = C
-       total = C * volbeli
-       st.write(f'Simulasi pembelian saham {namatampil} pada tanggal {today} sebanyak 1000 lembar berhasil disimpan. Total transaksi adalah Rp. {digit(round(total))},-')
-       #simpanaksi()
-    else:
-       st.write('------ Tekun dan Teliti adalah Kunci ------  ')
-######End of Halaman Utama
+
 with col2:
 
     if C <= 50 or L52 <=50:
@@ -520,54 +446,36 @@ def tech_indicators():
     
     st.bar_chart(data.Volume)
 
-        
-#################### CARI DATA ###############
+#Pencarian Data
 def dataframe():
-    caridata = option_menu(None, ['10 Data','Fundamental','Simulasi','Index Per Sektor'], icons=['arrow-up-square', 'arrow-down-square'], menu_icon="cast", default_index=0, orientation="horizontal")
+    caridata = option_menu(None, ['10 Data','Portofolio','Deviden','Index Per Sektor','Finansial'], icons=['arrow-up-square', 'arrow-down-square'], menu_icon="cast", default_index=0, orientation="horizontal")
     if caridata == '10 Data':
        st.header('10 Data Terkini')
        st.dataframe(data.tail(10))
-    elif caridata == 'Fundamental':
-        ###### KONTAINER TABS #############
-        tab1, tab2, tab3 = st.tabs(['Portofolio','Deviden','Finansial'])
-        with tab1:
-           st.write('Filter Data')
-           filterdata = pd.read_csv('porto.csv', index_col=[0], sep=';')
-           tgl = filterdata['date'].values[0]
-           tgl = tgl[8:10] + "/" + tgl[5:7]+ "/" + tgl[0:4]
-           "Last Update : " + tgl
-           filterdata = filterdata.rename(columns = {"date": "Tanggal", "p": "Posisi","kode":"Kode","aksiy": "Saran","skg":"Harga","lo":"1YMin","hi":"1YMax","bl":"2M","m":"6M", 
-           "om":"Margin Operasi", "dev":"Deviden PR","epsy":"Laba Per Saham","roe": "ROE","pery": "PER",
-           "pbvy": "Nilai Buku","bvy": "Harga Dasar","ph": "Pendapatan","ut":"Utang",
-           "pm":"Profit Margin", "cash": "Jumlah Kas", "opcash": "Kas Operasional","tcs": "Kas Per Saham", "totshm": "Saham Beredar","mcap": "Omzet","vol": "Volume"})
-           st.dataframe(filterdata)
-        with tab2:
-            st.write("Data Deviden")
-            devcum = pd.read_csv('devcumdate.csv', index_col=[0], sep=';')
-            st.dataframe(devcum)
-        with tab3:
-            st.write("Finansial (Milyar Rupiah)")
-            keu = pd.read_csv('Finansial.csv', index_col=[0], sep=';')
-            st.dataframe(keu)
-
+    elif caridata == 'Deviden':
+        st.header("Data Deviden")
+        devcum = pd.read_csv('devcumdate.csv', index_col=[0], sep=';')
+        st.dataframe(devcum)
     elif caridata == 'Index Per Sektor':
         st.header("Index Per Sektor")
         indsektor = pd.read_csv('IndexSektor.csv', index_col=[0], sep=';')
         st.dataframe(indsektor)
+    elif caridata == 'Finansial':
+        st.header("Finansial (Milyar Rupiah)")
+        keu = pd.read_csv('Finansial.csv', index_col=[0], sep=';')
+        st.dataframe(keu)
+   #date
     else:
-        ###### KONTAINER TABS #############
-        simul = pd.read_csv('aksi.csv', index_col=[0], sep=';')
-        tab1, tab2 = st.tabs(["Beli", "Jual"])
-        with tab1:
-            st.write("Simulasi Beli")
-            simulb = simul.query("aksik=='buy'")
-            st.dataframe(simulb)
-        with tab2:
-            st.write("Simulasi Jual")
-            simulj = simul.query("aksik=='sell'")
-            st.dataframe(simulj)
-
-
+       st.header('Filter Data')
+       filterdata = pd.read_csv('porto.csv', index_col=[0], sep=';')
+       tgl = filterdata['date'].values[0]
+       tgl = tgl[8:10] + "/" + tgl[5:7]+ "/" + tgl[0:4]
+       "Last Update : " + tgl
+       filterdata = filterdata.rename(columns = {"date": "Tanggal", "p": "Posisi","kode":"Kode","aksiy": "Saran","skg":"Harga","lo":"1YMin","hi":"1YMax","bl":"2M","m":"6M", 
+       "om":"Margin Operasi", "dev":"Deviden PR","epsy":"Laba Per Saham","roe": "ROE","pery": "PER",
+       "pbvy": "Nilai Buku","bvy": "Harga Dasar","ph": "Pendapatan","ut":"Utang",
+       "pm":"Profit Margin", "cash": "Jumlah Kas", "opcash": "Kas Operasional","tcs": "Kas Per Saham", "totshm": "Saham Beredar","mcap": "Omzet","vol": "Volume"})
+       st.dataframe(filterdata)
         
 def predict():
     model = st.radio('Pilih Model Komputasi', ['LinearRegression', 'RandomForestRegressor', 'ExtraTreesRegressor', 'KNeighborsRegressor', 'XGBoostRegressor'])
@@ -620,28 +528,78 @@ def model_engine(model, num):
         st.text(f'Hari ke-{day}: {round(i)}')
         day += 1
         
-
-def simpan():                                                                      
-    # File CSV yang sudah ada                                                       
-    existing_csv_file = 'aksi.csv'                                         
-                                                                                
-    # Baca file CSV ke dalam DataFrame                                              
-    try:                                                                            
-        df = pd.read_csv(existing_csv_file)                                                                                                        
-    except FileNotFoundError:                                                       
-        st.write('No existing data found. Please upload a CSV file.')               
-                                                                                    
-    # Tambahkan formulir input data baru                                            
-    #date;kode;skg;pos;vol;aksiy;aksik;user
-    vol = volbeli
-    skg = hgbeli
-    total = C * volbeli                                                                           
-    # Tambahkan data baru ke DataFrame                                          
-    new_data = pd.DataFrame({'date': [date], 'kode': [kode], 'skg': [skg], 'pos': [pos], 'vol': [vol], 'aksiy': [aksiy], 'aksik': [aksik], 'user': [user]}) 
-    df = df.append(new_data, ignore_index=True)                                                                            
-    df.to_csv(existing_csv_file, index=False)                                                             
-
-
+#Screener Grafik Kuadran
+def screener():
+    screenlevel = option_menu(None, ['>Rp5rb','<Rp5rb','<Rp200','BagiDeviden'], icons=['arrow-up-square', 'arrow-down-square', 'arrow-down-square-fill', 'bullseye'], menu_icon="cast", default_index=0, orientation="horizontal")
+   
+    st.subheader('Tabular Hasil Screener')
+    scr1 = pd.read_csv('porto.csv', sep=';')
+    scr1['p'] = scr1['p'].astype(int)
+    scr1['bl'] = scr1['bl'].astype(int)
+    scr1['m'] = scr1['m'].astype(int)
+    
+    scr1['om'] = (scr1['om'].round(2))*100
+    scr1['pbvy'] = scr1['pbvy'].round(1)
+    scr1['bvy'] = scr1['bvy'].round()
+    scr1['dev'] = (scr1['dev'].round(2))*100
+    scr1['roe'] = (scr1['roe'].round(2))*100
+    scr1['pery'] = scr1['pery'].round(0)
+    scr1['epsy'] = scr1['epsy'].round()
+    scr1['tcs'] = scr1['tcs'].round()
+    scr1['vol'] = ((scr1['vol'].round(1))/1000000).round(1)
+    scr1['totshm'] = ((scr1['totshm'].round(1))/1000000000).round(1)
+    scr1['mcap'] = ((scr1['mcap'].round(1))/1000000000000).round(1)
+    scr1['opcash'] = ((scr1['opcash'].round(1))/1000000000).round(1)
+    scr1['cash'] = ((scr1['cash'].round(1))/1000000000).round(1)
+    scr1['ut'] = ((scr1['ut'].round(1))/1000000000).round(1)
+    scr1['ph'] = ((scr1['ph'].round(1))/1000000000).round(1)
+    #scr1['date'] = scr1['date'].strftime("%Y-%m-%d-%H:%M:%S")
+    
+    tgl = scr1['date'].values[0]
+    tgl = tgl[8:10] + "/" + tgl[5:7]+ "/" + tgl[0:4]
+    
+    scr1 = scr1.fillna(0)
+    if screenlevel == '<Rp200':
+       st.write('Screener Saham Harga Rentang 50-200')
+       scr1=scr1.query("skg > 50 and skg<= 200 and p<=10 and om >= 0.1 and roe >= 0.1")
+    elif screenlevel == '<Rp5rb':
+       st.write('Screener Saham Harga Kurang Dari 5000')
+       scr1=scr1.query("skg > 200 and skg <= 5000 and p<=10 and om >= 0.1 and roe >= 0.1")
+    elif screenlevel == 'BagiDeviden':
+        st.write('Screener Rutin Bagi Deviden di atas 5%')
+        dev = pd.read_csv('devhunter.csv')
+        dev = dev.values.tolist()
+        dev = [item for sublist in dev for item in sublist]
+        scr1 = scr1.query("kode in @dev")
+    else:
+       st.write('Screener Saham Harga Lebih Dari 5000')
+       scr1=scr1.query("skg > 5000 and p<=10 and om >= 0.1")
+    s = scr1.copy()
+    scr1 = scr1.set_index('kode')
+    #kode;p;aksiy;skg;lo;bl;m;hi;om;dev;roe;pery;epsy;pbvy;bvy;vol;totshm;mcap;cash;opcash;ph;ut;tcs;date
+   
+    scr1 = scr1.rename(columns = {"p": "Posisi","kode":"Kode","aksiy": "Saran","skg":"Harga","lo":"1YMin","hi":"1YMax","bl":"2M","m":"6M", 
+                                  "om":"Margin Operasi(%)", "dev":"Deviden PR(%)","roe": "ROE(%)","pery": "PER(%)",
+                                  "pbvy": "Nilai Buku","bvy": "Harga Dasar","ph": "Pendapatan(M)","totshm": "Total Saham(M)","mcap": "Omzet(T)","epsy": "Laba Per Saham","opcash": "Kas Operasional(M)",
+                                  "ut": "Utang(M)","cash": "Nilai Kas(M)","tcs": "Kas Per Saham", "vol": "Volume(J)","date": "Tanggal"}).sort_values(['kode'])
+    #st.dataframe(scr1.style.highlight_max(axis=0),hide_index=True)
+    "Last Update : " + tgl
+    st.dataframe(scr1)
+    st.subheader('Grafik')
+    fig, ax = plt.subplots()
+    
+    x = s['p']
+    y = s['om']
+    kd = s['kode']
+    sns.scatterplot(s,x=x, y=y, marker='>')
+    plt.xlabel("Posisi Harga")
+    plt.ylabel("Margin Operasi (%)")
+    for a,b,c in zip(x,y,kd):
+        label = f"{c} {int(b)}%"
+        ax.annotate(label,(a,b), xytext=(3, -3),textcoords='offset points',fontsize='7')
+    
+    st.pyplot(fig)
+    
 if __name__ == '__main__':
     main()
     
