@@ -186,7 +186,7 @@ with col1:
     tab1, tab2 = st.tabs(['Simulasi Beli','Simulasi Jual'])
     with tab1:
        #date;kode;skg;pos;vol;aksiy;aksik;user
-       volbeli = st.number_input('Banyaknya saham :', value=100, step=100)
+       volbeli = st.number_input('Banyaknya saham :', value=1000, step=100)
        st.write('Jumlah pembelian : ', volbeli, 'lembar saham')
        volbeli = int(volbeli)
        hgbeli = C
