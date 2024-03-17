@@ -482,7 +482,19 @@ def tech_indicators():
 #################### CARI DATA ###############
 def dataframe():
     caridata = option_menu(None, ['10 Data','Fundamental','Simulasi','Index Per Sektor'], icons=['arrow-up-square', 'arrow-down-square'], menu_icon="cast", default_index=0, orientation="horizontal")
-    if caridata == '10 Data':
+    if caridata == 'Simulasi':
+        simul = pd.read_csv('aksi.csv', index_col=[0], sep=';')
+        #simul = simul.rename(columns = {"date": "Tanggal", "p1": "Pendek", "p2": "Menengah", "p3": "Panjang", "vol": "Volume", "aksiy": "Saran", "aksik": "Aksi", "total": "Jumlah Rupiah", "user": "Pengguna", "kode": "Emiten", "skg": "Harga Beli"})
+        tab1, tab2 = st.tabs(["Beli", "Jual"])
+        with tab1:
+            st.write("Simulasi Beli")
+            simulb = simul.query("aksik=='buy'")
+            st.dataframe(simulb)
+        with tab2:
+            st.write("Simulasi Jual")
+            simulj = simul.query("aksik=='sell'")
+            st.dataframe(simulj)
+    elif caridata == '10 Data':
        st.header('10 Data Terkini')
        st.dataframe(data.tail(10))
     elif caridata == 'Fundamental':
@@ -508,24 +520,13 @@ def dataframe():
             keu = pd.read_csv('Finansial.csv', index_col=[0], sep=';')
             st.dataframe(keu)
 
-    elif caridata == 'Index Per Sektor':
+    else:
         st.header("Index Per Sektor")
         indsektor = pd.read_csv('IndexSektor.csv', index_col=[0], sep=';')
         st.dataframe(indsektor)
-    else:
+  
         ###### KONTAINER TABS #############
-        simul = pd.read_csv('aksi.csv', index_col=[0], sep=';')
-        #simul = simul.rename(columns = {"date": "Tanggal", "p1": "Pendek", "p2": "Menengah", "p3": "Panjang", "vol": "Volume", "aksiy": "Saran", "aksik": "Aksi", "total": "Jumlah Rupiah", "user": "Pengguna", "kode": "Emiten", "skg": "Harga Beli"})
-        tab1, tab2 = st.tabs(["Beli", "Jual"])
-        with tab1:
-            st.write("Simulasi Beli")
-            simulb = simul.query("aksik=='buy'")
-            st.dataframe(simulb)
-        with tab2:
-            st.write("Simulasi Jual")
-            simulj = simul.query("aksik=='sell'")
-            st.dataframe(simulj)
-        
+      
 def predict():
     model = st.radio('Pilih Model Komputasi', ['LinearRegression', 'RandomForestRegressor', 'ExtraTreesRegressor', 'KNeighborsRegressor', 'XGBoostRegressor'])
     num = st.number_input('Prediksi harga saham beberapa hari ke depan?', value=5)
