@@ -584,7 +584,7 @@ def screener():
     tgl = tgl[8:10] + "/" + tgl[5:7]+ "/" + tgl[0:4]    
     scr1 = scr1.fillna(0)
     s = scr1.copy()
-    scr1 = scr1.set_index('kode')
+    #scr1 = scr1.set_index('kode')
     scr1 = scr1.rename(columns = {"p": "Posisi","kode":"Kode","aksiy": "Saran","skg":"Harga","lo":"1YMin","hi":"1YMax","bl":"2M","m":"6M", 
                                   "om":"Margin Operasi(%)", "dev":"Deviden PR(%)","roe": "ROE(%)","pery": "PER(%)",
                                   "pbvy": "Nilai Buku","bvy": "Harga Dasar","ph": "Pendapatan(M)","totshm": "Total Saham(M)","mcap": "Omzet(T)","epsy": "Laba Per Saham","opcash": "Kas Operasional(M)",
