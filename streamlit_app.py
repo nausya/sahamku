@@ -558,14 +558,13 @@ def model_engine(model, num):
         
 #Screener Grafik Kuadran
 def screener():
-    screenlevel = option_menu(None, ['>Rp5rb','<Rp5rb','<Rp200','BagiDeviden'], icons=['arrow-up-square', 'arrow-down-square', 'arrow-down-square-fill', 'bullseye'], menu_icon="cast", default_index=0, orientation="horizontal")
-   
+    #screenlevel = option_menu(None, ['>Rp5rb','<Rp5rb','<Rp200','BagiDeviden'], icons=['arrow-up-square', 'arrow-down-square', 'arrow-down-square-fill', 'bullseye'], menu_icon="cast", default_index=0, orientation="horizontal")
+    ###### KONTAINER TABS #############
     st.subheader('Tabular Hasil Screener')
     scr1 = pd.read_csv('porto.csv', sep=';')
     scr1['p'] = scr1['p'].astype(int)
     scr1['bl'] = scr1['bl'].astype(int)
-    scr1['m'] = scr1['m'].astype(int)
-    
+    scr1['m'] = scr1['m'].astype(int) 
     scr1['om'] = (scr1['om'].round(2))*100
     scr1['pbvy'] = scr1['pbvy'].round(1)
     scr1['bvy'] = scr1['bvy'].round()
@@ -581,36 +580,32 @@ def screener():
     scr1['cash'] = ((scr1['cash'].round(1))/1000000000).round(1)
     scr1['ut'] = ((scr1['ut'].round(1))/1000000000).round(1)
     scr1['ph'] = ((scr1['ph'].round(1))/1000000000).round(1)
-    #scr1['date'] = scr1['date'].strftime("%Y-%m-%d-%H:%M:%S")
-    
+    #scr1['date'] = scr1['date'].strftime("%Y-%m-%d-%H:%M:%S")    
     tgl = scr1['date'].values[0]
-    tgl = tgl[8:10] + "/" + tgl[5:7]+ "/" + tgl[0:4]
-    
+    tgl = tgl[8:10] + "/" + tgl[5:7]+ "/" + tgl[0:4]    
     scr1 = scr1.fillna(0)
-    if screenlevel == '<Rp200':
-       st.write('Screener Saham Harga Rentang 50-200')
-       scr1=scr1.query("skg > 50 and skg<= 200 and p<=10 and om >= 0.1 and roe >= 0.1")
-    elif screenlevel == '<Rp5rb':
-       st.write('Screener Saham Harga Kurang Dari 5000')
-       scr1=scr1.query("skg > 200 and skg <= 5000 and p<=10 and om >= 0.1 and roe >= 0.1")
-    elif screenlevel == 'BagiDeviden':
+    tab1, tab2, tab3, tab4 = st.tabs(['>Rp5rb','<Rp5rb','<Rp200','BagiDeviden'])
+    with tab1:
+        st.write('Screener Saham Harga Lebih Dari 5000')
+        scr1=scr1.query("skg > 5000 and p<=10 and om >= 0.1")
+    with tab2:
+        st.write('Screener Saham Harga Kurang Dari 5000')
+        scr1=scr1.query("skg > 200 and skg <= 5000 and p<=10 and om >= 0.1 and roe >= 0.1")
+    with tab3:
+        st.write('Screener Saham Harga Rentang 50-200')
+        scr1=scr1.query("skg > 50 and skg<= 200 and p<=10 and om >= 0.1 and roe >= 0.1")
+    with tab4:
         st.write('Screener Rutin Bagi Deviden di atas 5%')
         dev = pd.read_csv('devhunter.csv')
         dev = dev.values.tolist()
         dev = [item for sublist in dev for item in sublist]
         scr1 = scr1.query("kode in @dev")
-    else:
-       st.write('Screener Saham Harga Lebih Dari 5000')
-       scr1=scr1.query("skg > 5000 and p<=10 and om >= 0.1")
     s = scr1.copy()
     scr1 = scr1.set_index('kode')
-    #kode;p;aksiy;skg;lo;bl;m;hi;om;dev;roe;pery;epsy;pbvy;bvy;vol;totshm;mcap;cash;opcash;ph;ut;tcs;date
-   
     scr1 = scr1.rename(columns = {"p": "Posisi","kode":"Kode","aksiy": "Saran","skg":"Harga","lo":"1YMin","hi":"1YMax","bl":"2M","m":"6M", 
                                   "om":"Margin Operasi(%)", "dev":"Deviden PR(%)","roe": "ROE(%)","pery": "PER(%)",
                                   "pbvy": "Nilai Buku","bvy": "Harga Dasar","ph": "Pendapatan(M)","totshm": "Total Saham(M)","mcap": "Omzet(T)","epsy": "Laba Per Saham","opcash": "Kas Operasional(M)",
                                   "ut": "Utang(M)","cash": "Nilai Kas(M)","tcs": "Kas Per Saham", "vol": "Volume(J)","date": "Tanggal"}).sort_values(['kode'])
-    #st.dataframe(scr1.style.highlight_max(axis=0),hide_index=True)
     "Last Update : " + tgl
     st.dataframe(scr1)
     st.subheader('Grafik')
