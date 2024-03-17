@@ -185,7 +185,8 @@ with col1:
     ##### Tombol Simulasi ############
     if st.button('Simulasi Beli', help="Silakan klik tombol"):
        #date;kode;skg;pos;vol;aksiy;aksik;user
-       volbeli = st.number_input('Prediksi harga saham beberapa hari ke depan?', value=100)
+       volbeli = st.number_input('Banyaknya saham :', value=100, step=100)
+       st.write('Jumlah pembelian : ', volbeli, 'lembar saham')
        volbeli = int(volbeli)
        hgbeli = C
        total = C * volbeli
