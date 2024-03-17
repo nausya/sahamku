@@ -562,6 +562,7 @@ def screener():
     ###### KONTAINER TABS #############
     tab1, tab2, tab3, tab4 = st.tabs([' Lebih Dari Rp5rb','Kurang Dari Rp5rb','Kurang Dari Rp200','BagiDeviden'])
     scr1 = pd.read_csv('porto.csv', sep=';')
+    st.dataframe(scr1)
     scr1['p'] = scr1['p'].astype(int)
     scr1['bl'] = scr1['bl'].astype(int)
     scr1['m'] = scr1['m'].astype(int) 
