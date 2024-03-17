@@ -492,9 +492,16 @@ def dataframe():
         indsektor = pd.read_csv('IndexSektor.csv', index_col=[0], sep=';')
         st.dataframe(indsektor)
     else:
-        st.header("Data Simulasi")
+        # Insert containers separated into tabs:
         simul = pd.read_csv('aksi.csv', index_col=[0], sep=';')
-        st.dataframe(simul)
+        tab1, tab2 = st.tabs(["Tab 1", "Tab2"])
+        tab1.write("Simulasi Beli")
+        simulb = simul.query("aksik=='beli'")
+        st.dataframe(simulb)
+        tab2.write("Simulasi Jual")
+        simulj = simul.query("aksik=='jual'")
+        st.dataframe(simulj)
+
 
         
 def predict():
