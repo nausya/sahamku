@@ -591,8 +591,9 @@ def screener():
                                   "pbvy": "Nilai Buku","bvy": "Harga Dasar","ph": "Pendapatan(M)","totshm": "Total Saham(M)","mcap": "Omzet(T)","epsy": "Laba Per Saham","opcash": "Kas Operasional(M)",
                                   "ut": "Utang(M)","cash": "Nilai Kas(M)","tcs": "Kas Per Saham", "vol": "Volume(J)","date": "Tanggal"}).sort_values(['kode'])
     "Last Update : " + tgl
-    st.dataframe(scr1)
+    
     tab1, tab2, tab3, tab4 = st.tabs([' Lebih Dari Rp5rb','Kurang Dari Rp5rb','Kurang Dari Rp200','BagiDeviden'])
+    st.dataframe(scr1)
     with tab1:
         st.write('Screener Saham Harga Lebih Dari 5000')
         scr1=scr1.query("skg > 5000 and p<=10 and om >= 0.1")
