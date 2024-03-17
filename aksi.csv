@@ -1,6 +1,6 @@
 date;kode;skg;pos;vol;aksiy;aksik;total;user
-2024-02-16;AALI;6000;7;1000;sell;beli;6800000;localhost 127.0.0.1
-2024-02-16;AALI;6500;7;500;sell;jual;6800000;localhost 127.0.0.1
-2024-02-16;AALI;6800;7;200;sell;jual;6800000;localhost 127.0.0.1
-2024-02-16;AALI;6800;7;300;sell;jual;6800000;localhost 127.0.0.1
+2024-02-16;AALI;6000;7;1000;sell;buy;6800000;localhost 127.0.0.1
+2024-02-16;AALI;6500;7;500;sell;sell;6800000;localhost 127.0.0.1
+2024-02-16;AALI;6800;7;200;sell;sell;6800000;localhost 127.0.0.1
+2024-02-16;AALI;6800;7;300;sell;sell;6800000;localhost 127.0.0.1
 
