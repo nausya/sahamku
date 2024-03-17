@@ -189,7 +189,7 @@ with col1:
        volbeli = int(volbeli)
        hgbeli = C
        total = C * volbeli
-       if volbeli > 0
+       if volbeli > 0:
           st.write(f'Simulasi pembelian saham {namatampil} pada tanggal {today} sebanyak {volbeli} lembar berhasil disimpan. Total transaksi adalah Rp. {digit(round(total))},-')
        #simpanaksi()
     else:
