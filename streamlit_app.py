@@ -456,25 +456,17 @@ def tech_indicators():
     
     st.bar_chart(data.Volume)
 
-#Pencarian Data
-def dataframe():
-    caridata = option_menu(None, ['10 Data','Portofolio','Deviden','Index Per Sektor','Finansial'], icons=['arrow-up-square', 'arrow-down-square'], menu_icon="cast", default_index=0, orientation="horizontal")
-    if caridata == '10 Data':
-       st.header('10 Data Terkini')
-       st.dataframe(data.tail(10))
-    elif caridata == 'Deviden':
-        st.header("Data Deviden")
-        devcum = pd.read_csv('devcumdate.csv', index_col=[0], sep=';')
-        st.dataframe(devcum)
-    elif caridata == 'Index Per Sektor':
-        st.header("Index Per Sektor")
-        indsektor = pd.read_csv('IndexSektor.csv', index_col=[0], sep=';')
-        st.dataframe(indsektor)
-    elif caridata == 'Finansial':
+###### FUNDAMENTAL ############
+def fundamental():
+    funda = option_menu(None, ['Portofolio','Deviden','Finansial'], icons=['arrow-up-square', 'arrow-down-square'], menu_icon="cast", default_index=0, orientation="horizontal")
+    if funda == 'Finansial':
         st.header("Finansial (Milyar Rupiah)")
         keu = pd.read_csv('Finansial.csv', index_col=[0], sep=';')
         st.dataframe(keu)
-   #date
+    elif funda == 'Deviden':
+        st.header("Data Deviden")
+        devcum = pd.read_csv('devcumdate.csv', index_col=[0], sep=';')
+        st.dataframe(devcum)
     else:
        st.header('Filter Data')
        filterdata = pd.read_csv('porto.csv', index_col=[0], sep=';')
@@ -486,6 +478,22 @@ def dataframe():
        "pbvy": "Nilai Buku","bvy": "Harga Dasar","ph": "Pendapatan","ut":"Utang",
        "pm":"Profit Margin", "cash": "Jumlah Kas", "opcash": "Kas Operasional","tcs": "Kas Per Saham", "totshm": "Saham Beredar","mcap": "Omzet","vol": "Volume"})
        st.dataframe(filterdata)
+        
+#Pencarian Data
+def dataframe():
+    caridata = option_menu(None, ['10 Data','Fundamental','Simulasi','Index Per Sektor'], icons=['arrow-up-square', 'arrow-down-square'], menu_icon="cast", default_index=0, orientation="horizontal")
+    if caridata == '10 Data':
+       st.header('10 Data Terkini')
+       st.dataframe(data.tail(10))
+    elif caridata == 'Fundamental':
+        fundamental()
+    elif caridata == 'Index Per Sektor':
+        st.header("Index Per Sektor")
+        indsektor = pd.read_csv('IndexSektor.csv', index_col=[0], sep=';')
+        st.dataframe(indsektor)
+    else:
+        st.write("Simulasi Jual-Beli")
+
         
 def predict():
     model = st.radio('Pilih Model Komputasi', ['LinearRegression', 'RandomForestRegressor', 'ExtraTreesRegressor', 'KNeighborsRegressor', 'XGBoostRegressor'])
