@@ -2,7 +2,7 @@ date;kode;skg;p1;p2;p3;vol;aksiy;aksik;total;user
 2024-02-16;AALI;6000;7;7;7;1000;sell;buy;6800000;localhost 127.0.0.1
 2024-03-17;AALI;6700;41;21;8;1000;underperform;buy;6700000;localhost-127.0.0.1
 2024-03-17;APLN;117;12;4;2;10000;none;buy;1170000;localhost-127.0.0.1
-2024-03-17;AMAN;115;80;44;2;5000;none;buy;575000;localhost-127.0.0.1
 2024-03-17;AMAN;115;80;44;2;50000;none;buy;5750000;localhost-127.0.0.1
+2024-03-17;AMAN;115;80;44;2;5000;none;sell;575000;localhost-127.0.0.1
 2024-03-17;PGUN;408;58;22;3;50000;none;buy;20400000;localhost-127.0.0.1
 2024-03-17;MLBI;6975;0;0;0;50000;buy;buy;348750000;localhost-127.0.0.1
