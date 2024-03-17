@@ -494,13 +494,15 @@ def dataframe():
     else:
         # Insert containers separated into tabs:
         simul = pd.read_csv('aksi.csv', index_col=[0], sep=';')
-        tab1, tab2 = st.tabs(["Tab 1", "Tab2"])
-        tab1.write("Simulasi Beli")
-        simulb = simul.query("aksik=='beli'")
-        st.dataframe(simulb)
-        tab2.write("Simulasi Jual")
-        simulj = simul.query("aksik=='jual'")
-        st.dataframe(simulj)
+        tab1, tab2 = st.tabs(["Beli", "Jual"])
+        if tab1:
+            tab1.write("Simulasi Beli")
+            simulb = simul.query("aksik=='beli'")
+            st.dataframe(simulb)
+        if tab2:
+            tab2.write("Simulasi Jual")
+            simulj = simul.query("aksik=='jual'")
+            st.dataframe(simulj)
 
 
         
