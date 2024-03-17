@@ -172,16 +172,12 @@ H52 = df['hi'].values[0]
 C = df['skg'].values[0]
 ##### BILA DATA LIVE BELUM TERSEDIA skg;lo;bl;m;hi
 HgPor = pd.read_csv('porto.csv', index_col=[0], sep=';')
-#option
-
 HgPor = HgPor.query("kode ==@kodesaja")
-HgPor
 HPS = HgPor['skg'].values[0]
 HPL = HgPor['lo'].values[0]
 HPB = HgPor['bl'].values[0]
 HPM = HgPor['m'].values[0]
 HPH = HgPor['hi'].values[0]
-HPH
 ##################### END OF BILA DATA LIVE BELUM TERSEDIA
 if C == 0 or L52==0 or H52==0 or BL==0 or M==0:
     C = data.tail(1)
