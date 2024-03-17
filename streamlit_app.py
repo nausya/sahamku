@@ -172,7 +172,6 @@ H52 = df['hi'].values[0]
 C = df['skg'].values[0]
 ##### BILA DATA LIVE BELUM TERSEDIA skg;lo;bl;m;hi
 HgPor = pd.read_csv('porto.csv', index_col=[0], sep=';')
-kodek
 option
 kodesaja
 HgPor = HgPor.query("kode =='GOTO'")
