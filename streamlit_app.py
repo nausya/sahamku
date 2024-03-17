@@ -187,11 +187,10 @@ with col1:
        #date;kode;skg;pos;vol;aksiy;aksik;user
        volbeli = st.number_input('Banyaknya saham :', value=100, step=100)
        st.write('Jumlah pembelian : ', volbeli, 'lembar saham')
-       agree = st.checkbox('lanjutkan')
        volbeli = int(volbeli)
        hgbeli = C
        total = C * volbeli
-       if agree == 'lanjutkan':
+       if st.button('simpan'):
           st.write(f'Simulasi pembelian saham {namatampil} pada tanggal {today} sebanyak {volbeli} lembar berhasil disimpan. Total transaksi adalah Rp. {digit(round(total))},-')
        else:
           st.write('cek kebali jumlah')
