@@ -171,9 +171,8 @@ H52 = df['hi'].values[0]
 C = df['skg'].values[0]
 ##### BILA DATA LIVE BELUM TERSEDIA skg;lo;bl;m;hi
 HgPor = pd.read_csv('porto.csv', index_col=[0], sep=';')
-kode
+HgPor
 HgPor = HgPor.query("kode =='kode'")
-kode
 HgPor
 HPS = HgPor['skg'].values[0]
 HPL = HgPor['lo'].values[0]
