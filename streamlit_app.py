@@ -467,7 +467,7 @@ def dataframe():
         ###### KONTAINER TABS #############
         tab1, tab2, tab3 = st.tabs(['Portofolio','Deviden','Finansial'])
         if tab1:
-           st.header('Filter Data')
+           tab1.write('Filter Data')
            filterdata = pd.read_csv('porto.csv', index_col=[0], sep=';')
            tgl = filterdata['date'].values[0]
            tgl = tgl[8:10] + "/" + tgl[5:7]+ "/" + tgl[0:4]
@@ -477,12 +477,12 @@ def dataframe():
            "pbvy": "Nilai Buku","bvy": "Harga Dasar","ph": "Pendapatan","ut":"Utang",
            "pm":"Profit Margin", "cash": "Jumlah Kas", "opcash": "Kas Operasional","tcs": "Kas Per Saham", "totshm": "Saham Beredar","mcap": "Omzet","vol": "Volume"})
            st.dataframe(filterdata)
-        if tab2:
-            st.header("Data Deviden")
+        elif tab2:
+            tab2.write("Data Deviden")
             devcum = pd.read_csv('devcumdate.csv', index_col=[0], sep=';')
             st.dataframe(devcum)
         else:
-            st.header("Finansial (Milyar Rupiah)")
+            tab3.write("Finansial (Milyar Rupiah)")
             keu = pd.read_csv('Finansial.csv', index_col=[0], sep=';')
             st.dataframe(keu)
 
