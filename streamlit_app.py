@@ -234,9 +234,9 @@ with col1:
         dfjual = dfjual.query("kode == @kodesaja and aksik=='buy'")
         dfjual
         vj = dfjual['vol'].values[0]
-        vj = int(vj/100)
-        mj = digit((C - skg) * vj)
-        st.metric(f"Margin : Rp{mj}", vj, "-6%")
+        tj = dfjual['total'].values[0]
+        mj = digit(tj - (C * vj))
+        st.metric(f"Margin : Rp{mj}", vj/100, "-6%")
 
                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
 
