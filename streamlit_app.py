@@ -236,7 +236,7 @@ with col1:
         vj = dfjual['vol'].values[0]
         tj = dfjual['total'].values[0]
         mj = round(tj - (C * vj))
-        st.metric(f"Margin : -6%", vj/100, digit(mj))
+        st.metric(f"Margin : -6%", round(vj/100), digit(round(mj)))
 
                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
 
