@@ -311,7 +311,7 @@ for variable in variables:
                       font=dict(size=20) # Ubah ukuran font di sini
                   ),
                   go.layout.Annotation(
-                      text=f"<b>{kode}</b>",
+                      text=f"<b>{@kode}</b>",
                       x=0.5, xanchor="center", xref="paper",
                       y=0.4, yanchor="bottom", yref="paper",
                       showarrow=False,
