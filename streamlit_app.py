@@ -230,6 +230,7 @@ with col1:
        else:
            st.error('Jumlah Minimal Beli 1 Lot Saham')
     with tab3:                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
+        #dfjual = pd.read_csv('aksi.csv', sep=";", use_cols=['date','kode','skg'])
         st.write('Simulasi Jual')                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
 
 ######End of Halaman Utama
