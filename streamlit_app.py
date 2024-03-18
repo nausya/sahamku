@@ -232,7 +232,7 @@ with col1:
     with tab3:                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
         dfjual = pd.read_csv('aksi.csv', sep=";", usecols=['kode','skg','vol','aksik','total'])
         dfjual = dfjual.query("kode == @kodesaja and aksik=='buy'")
-        dfjual
+        #dfjual
         if dfjual.empty:
            st.write("Belum Terdapat Simulasi Penjualan Saham Ini")
         else:
