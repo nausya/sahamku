@@ -231,7 +231,7 @@ with col1:
            st.error('Jumlah Minimal Beli 1 Lot Saham')
     with tab3:                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
         #dfjual = pd.read_csv('aksi.csv', sep=";", use_cols=['date','kode','skg'])
-        st.metric("Margin : Rp800Rb", "Jumlah Saham : 10 Lot", "-6%")
+        st.metric("Margin : Rp 800Rb", "Saham : 10 Lot", "-6%")
 
                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
 
