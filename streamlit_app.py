@@ -236,8 +236,8 @@ with col1:
            st.write("Belum Terdapat Simulasi Penjualan Saham Ini")
         else:
             vj = dfjual['vol'].values[0]
-            tj = dfjual['total'].values[0]
-            tb = C * vj
+            tb = dfjual['total'].values[0]
+            tj = C * vj
             prosj = dpros(tj,tb) - 100
             mj = round(tj - tb)
             lj = round(vj/100)
