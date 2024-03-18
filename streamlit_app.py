@@ -231,8 +231,7 @@ with col1:
            st.error('Jumlah Minimal Beli 1 Lot Saham')
     with tab3:                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
         #dfjual = pd.read_csv('aksi.csv', sep=";", use_cols=['date','kode','skg'])
-        col1 = st.columns(1)
-        col1.metric("Rp800Rb", 10, -6)
+
         #st.write('Simulasi Jual')                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
 
 ######End of Halaman Utama
@@ -251,6 +250,8 @@ with col2:
        #st.write("Margin", marg, '%')
        st.write('Margin<span style="font-size: 30px;">', marg, '</span>%', unsafe_allow_html=True)
 ################# END OF TAMPILKAN NAMA EMITEN
+col1 = st.columns(1)
+col1.metric("Rp800Rb", 10, -6)
 ##########Notasi Saham################
 kode = selected_emiten.split(' | ')[0]
 n = pd.read_csv('notasi.csv', sep=';')
