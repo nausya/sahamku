@@ -232,9 +232,10 @@ with col1:
     with tab3:                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
         dfjual = pd.read_csv('aksi.csv', sep=";", usecols=['kode','skg','vol','total'])
         dfjual = df.query("kode == @kodesaja")
+        dfjual
         vj = dfjual['vol'].values[0]
         vj = int(vj/100)
-        mj = digit((C - skg) * vol)
+        mj = digit((C - skg) * vj)
         st.metric(f"Margin : Rp{mj}", vj, "-6%")
 
                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
