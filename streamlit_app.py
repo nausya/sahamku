@@ -241,7 +241,7 @@ with col1:
             prosj = dpros(tj,tb) - 100
             mj = round(tj - tb)
             lj = round(vj/100)
-            st.metric(f"Margin Simulasi Penjualan Saham {kodesaja} : {prosj}%", f"{lj} Lot", digit(mj))
+            st.metric(f"Margin Simulasi Penjualan Saham {kodesaja} : {round(prosj,1)}%", f"{lj} Lot", digit(mj))
 
                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
 
