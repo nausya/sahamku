@@ -237,9 +237,11 @@ with col1:
         else:
             vj = dfjual['vol'].values[0]
             tj = dfjual['total'].values[0]
-            mj = round(tj - (C * vj))
+            tb = C * vj
+            prosj = dpros(tj,tb) - 100
+            mj = round(tj - tb)
             lj = round(vj/100)
-            st.metric(f"Margin Simulasi Penjualan Saham {kodesaja} : -6%", f"{lj} Lot", digit(mj))
+            st.metric(f"Margin Simulasi Penjualan Saham {kodesaja} : {prosj}%", f"{lj} Lot", digit(mj))
 
                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
 
