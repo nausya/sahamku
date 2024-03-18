@@ -250,8 +250,6 @@ with col2:
        #st.write("Margin", marg, '%')
        st.write('Margin<span style="font-size: 30px;">', marg, '</span>%', unsafe_allow_html=True)
 ################# END OF TAMPILKAN NAMA EMITEN
-col = st.columns()
-col.metric("Rp800Rb", 10, -6)
 ##########Notasi Saham################
 kode = selected_emiten.split(' | ')[0]
 n = pd.read_csv('notasi.csv', sep=';')
