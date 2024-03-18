@@ -265,6 +265,7 @@ plot_bgcolor = "lightcyan"
 quadrant_colors = [plot_bgcolor, "red", "#f2a529", "#eff229", "#85e043", "#2bad4e"] 
 quadrant_text = ["", "<b>Kuat Jual</b>", "<b>Jual</b>", "<b>Netral</b>", "<b>Beli</b>", "<b>Kuat Beli</b>"]
 n_quadrants = len(quadrant_colors) - 1
+kodechart = kodesaja
 
 # Data untuk 3 variabel
 variables = [
@@ -311,7 +312,7 @@ for variable in variables:
                       font=dict(size=20) # Ubah ukuran font di sini
                   ),
                   go.layout.Annotation(
-                      text=f"<b>{'GOTO'}</b>",
+                      text=f"<b>{kodechart}</b>",
                       x=0.5, xanchor="center", xref="paper",
                       y=0.05, yanchor="bottom", yref="paper",
                       showarrow=False,
