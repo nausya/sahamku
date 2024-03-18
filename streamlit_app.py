@@ -77,7 +77,7 @@ def digit(angka):
     elif angka >= 10**6:
         return f"{angka / 10**6:.1f} Jt"
     elif angka >= 10**3:
-        return f"{angka / 10**3:.0f} Rb"
+        return f"{angka / 10**3:.1f} Rb"
     elif angka <= -10**12:
         return f"{angka / 10**12:.1f} T"
     elif angka <= -10**9:
@@ -85,7 +85,7 @@ def digit(angka):
     elif angka <= -10**6:
         return f"{angka / 10**6:.1f} Jt"
     elif angka <= -10**3:
-        return f"{angka / 10**3:.0f} Rb"
+        return f"{angka / 10**3:.1f} Rb"
     else:
         return str(angka)
 ######### END of FUngsi DELTA ########################
