@@ -310,6 +310,13 @@ for variable in variables:
                       showarrow=False,
                       font=dict(size=20) # Ubah ukuran font di sini
                   ),
+                  go.layout.Annotation(
+                      text=f"<b>{kodesaja}</b>",
+                      x=0.5, xanchor="center", xref="paper",
+                      y=1.6, yanchor="bottom", yref="paper",
+                      showarrow=False,
+                      font=dict(size=40) # Ubah ukuran font di sini
+                  ),
               go.layout.Annotation(
                 text=f"<b>Indikator Harga {jangka} <br>{jenis}</b>",
                 x=0.5, xanchor="center", xref="paper",
