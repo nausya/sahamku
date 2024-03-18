@@ -231,7 +231,7 @@ with col1:
            st.error('Jumlah Minimal Beli 1 Lot Saham')
     with tab3:                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
         dfjual = pd.read_csv('aksi.csv', sep=";", usecols=['kode','skg','vol','total'])
-        dfjual = dfjual.query("kode == @kodesaja")
+        dfjual = dfjual.query("kode == @kodesaja and aksik=='buy'")
         dfjual
         vj = dfjual['vol'].values[0]
         vj = int(vj/100)
