@@ -236,7 +236,7 @@ with col1:
         tj = dfjual['total'].values[0]
         mj = round(tj - (C * vj))
         lj = round(vj/100)
-        if dfjual.isna().empty:
+        if dfjual.empty:
            st.write("Belum Terdapat Simulasi Penjualan Saham Ini")
         else:
            st.metric(f"Margin Simulasi Penjualan Saham {kodesaja} : -6%", f"{lj} Lot", digit(mj))
