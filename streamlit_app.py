@@ -12,7 +12,7 @@ from streamlit_option_menu import option_menu
 from ta.volatility import BollingerBands
 from ta.trend import MACD, EMAIndicator, SMAIndicator
 from ta.momentum import RSIIndicator
-import datetime
+import datetimes
 import pytz
 from datetime import date
 import socket
@@ -250,8 +250,8 @@ with col2:
        #st.write("Margin", marg, '%')
        st.write('Margin<span style="font-size: 30px;">', marg, '</span>%', unsafe_allow_html=True)
 ################# END OF TAMPILKAN NAMA EMITEN
-col1 = st.columns(1)
-col1.metric("Rp800Rb", 10, -6)
+col = st.columns()
+col.metric("Rp800Rb", 10, -6)
 ##########Notasi Saham################
 kode = selected_emiten.split(' | ')[0]
 n = pd.read_csv('notasi.csv', sep=';')
