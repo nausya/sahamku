@@ -315,7 +315,7 @@ for variable in variables:
                   go.layout.Annotation(
                       text=f"<b>{kodechart}</b>",
                       x=0.5, xanchor="center", xref="paper",
-                      y=0.09, yanchor="bottom", yref="paper",
+                      y=0.08, yanchor="bottom", yref="paper",
                       showarrow=False,
                       font=dict(size=35) # Ubah ukuran font di sini
                   ),
