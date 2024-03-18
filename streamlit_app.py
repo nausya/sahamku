@@ -231,9 +231,11 @@ with col1:
            st.error('Jumlah Minimal Beli 1 Lot Saham')
     with tab3:                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
         #dfjual = pd.read_csv('aksi.csv', sep=";", use_cols=['date','kode','skg'])
-        col1, col2 = st.metric(2)
-        st.metric("Rp800Rb", "10 Lot", "-6%")
-        st.metric("Rp800Rb", "10 Lot", "-6%")
+        col1, col2 = st.columns(2)
+        with col1:
+            st.metric("Rp800Rb", "10 Lot", "-6%")
+        with col2:
+            st.metric("Rp800Rb", "10 Lot", "-6%")
                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
 
 ######End of Halaman Utama
