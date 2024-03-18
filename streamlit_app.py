@@ -232,7 +232,7 @@ with col1:
     with tab3:                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
         #dfjual = pd.read_csv('aksi.csv', sep=";", use_cols=['date','kode','skg'])
         col1 = st.columns(1)
-        col1.metric('Rp800Rb', 10 + 'LOT', -6%)
+        col1.metric('Rp800Rb', 10 + 'LOT', -6 + '%')
         #st.write('Simulasi Jual')                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
 
 ######End of Halaman Utama
