@@ -313,7 +313,7 @@ for variable in variables:
                   go.layout.Annotation(
                       text=f"<b>{'GOTO'}</b>",
                       x=0.5, xanchor="center", xref="paper",
-                      y=0.4, yanchor="bottom", yref="paper",
+                      y=1.6, yanchor="bottom", yref="paper",
                       showarrow=False,
                       font=dict(size=40) # Ubah ukuran font di sini
                   ),
