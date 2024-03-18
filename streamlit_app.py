@@ -236,8 +236,8 @@ with col1:
         if dfjual.empty:
            st.write("Belum Terdapat Simulasi Penjualan Saham Ini")
         else:
-            vj = dfjual['vol'].values[0].sum()
-            tb = dfjual['total'].values[0].sum()
+            vj = dfjual['vol'].sum().values[0]
+            tb = dfjual['total'].sum().values[0]
             tj = C * vj
             prosj = dpros(tj,tb) - 100
             mj = int(tj - tb)
