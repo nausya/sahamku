@@ -232,12 +232,14 @@ with col1:
     with tab3:                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
         dfjual = pd.read_csv('aksi.csv', sep=";", usecols=['kode','skg','vol','aksik','total'])
         dfjual = dfjual.query("kode == @kodesaja and aksik=='buy'")
-        dfjual
         vj = dfjual['vol'].values[0]
         tj = dfjual['total'].values[0]
         mj = round(tj - (C * vj))
         lj = round(vj/100)
-        st.metric(f"Simulasi Jual Saham {kodesaja} Margin : -6%", f"{lj} Lot", digit(mj))
+        if dfjual.isna().empty:
+           st.write("Belum Terdapat Simulasi Penjualan Saham Ini")
+        else:
+           st.metric(f"Margin Simulasi Penjualan Saham {kodesaja} : -6%", f"{lj} Lot", digit(mj))
 
                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
 
