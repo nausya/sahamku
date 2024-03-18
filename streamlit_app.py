@@ -199,8 +199,8 @@ user = hostname+"-"+ip_address
 #st.subheader(f"Harga terkini Rp{int(C)} dimana setahun terakhir tingkat harga berada pada posisi ke-{P3} dari ketinggian 100", divider="rainbow")
 ################# TAMPILKAN NAMA EMITEN
 col1, col2 = st.columns(1,1)
-col1.metric("Rp800Rb", 0, -6)
-col2.metric("Rp800Rb", 10, 7)
+    col1.metric("Rp800Rb", 0, -6)
+    col2.metric("Rp800Rb", 10, 7)
 col1, col2 = st.columns([1, 1])
 with col1:
     st.title(f'_:blue[{namatampil}]_')
