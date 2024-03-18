@@ -12,7 +12,7 @@ from streamlit_option_menu import option_menu
 from ta.volatility import BollingerBands
 from ta.trend import MACD, EMAIndicator, SMAIndicator
 from ta.momentum import RSIIndicator
-import datetimes
+import datetime
 import pytz
 from datetime import date
 import socket
@@ -231,7 +231,6 @@ with col1:
            st.error('Jumlah Minimal Beli 1 Lot Saham')
     with tab3:                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
         #dfjual = pd.read_csv('aksi.csv', sep=";", use_cols=['date','kode','skg'])
-
         st.write('Simulasi Jual')                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
 
 ######End of Halaman Utama
