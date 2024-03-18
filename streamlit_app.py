@@ -237,7 +237,7 @@ with col1:
         tj = dfjual['total'].values[0]
         mj = round(tj - (C * vj))
         lj = round(vj/100)
-        st.metric(f"Margin : -6%", "{lj} Lot", digit(mj))
+        st.metric(f"Margin : -6%", "(lj) Lot", digit(mj))
 
                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
 
