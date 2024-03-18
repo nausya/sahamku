@@ -1,5 +1,6 @@
 date;kode;skg;p1;p2;p3;vol;aksiy;aksik;total;user
 2024-02-16;AALI;6000;7;7;7;1000;sell;buy;6000000;localhost 127.0.0.1
+2024-03-17;AALI;6700;41;21;8;1000;underperform;buy;6700000;localhost-127.0.0.1
 2024-03-17;AALI;6700;41;21;8;1000;underperform;sell;6700000;localhost-127.0.0.1
 2024-03-17;APLN;117;12;4;2;10000;none;buy;1170000;localhost-127.0.0.1
 2024-03-17;AMAN;115;80;44;2;50000;none;buy;5750000;localhost-127.0.0.1
