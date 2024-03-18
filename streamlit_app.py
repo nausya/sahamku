@@ -230,9 +230,12 @@ with col1:
        else:
            st.error('Jumlah Minimal Beli 1 Lot Saham')
     with tab3:                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
-        dfjual = pd.read_csv('aksi.csv', sep=";", usecols=['kode','skg',vol,total])
-        dfjual
-        st.metric("Margin : Rp 800Rb", "10 Lot", "-6%")
+        dfjual = pd.read_csv('aksi.csv', sep=";", usecols=['kode','skg','vol','total'])
+        dfjual = df.query("kode == @kodesaja")
+        vj = dfjual['vol'].values[0]
+        vj = int(vj/100) + "Lot"
+        mj = digit((C - skg) * vol)
+        st.metric(f"Margin : Rp{mj}", vj, "-6%")
 
                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
 
