@@ -525,7 +525,6 @@ def dataframe():
         #simul = simul.rename(columns = {"date": "Tanggal", "p1": "Pendek", "p2": "Menengah", "p3": "Panjang", "vol": "Volume", "aksiy": "Saran", "aksik": "Aksi", "total": "Jumlah Rupiah", "user": "Pengguna", "kode": "Emiten", "skg": "Harga Beli"})
         tab1, tab2 = st.tabs(["Beli", "Jual"])
         with tab1:
-            st.experimental_set_query_params(page=1)
             st.write("Simulasi Beli")
             simulb = simul.query("aksik=='buy'")
             st.dataframe(simulb)
