@@ -1,7 +1,6 @@
 date;kode;skg;p1;p2;p3;vol;aksiy;aksik;total;user
 2024-02-16;AALI;6000;7;7;7;1000;sell;buy;6000000;localhost 127.0.0.1
 2024-03-17;AALI;6700;41;21;8;1000;underperform;buy;6700000;localhost-127.0.0.1
-2024-03-17;AALI;6700;41;21;8;1000;underperform;sell;6700000;localhost-127.0.0.1
 2024-03-17;APLN;117;12;4;2;10000;none;buy;1170000;localhost-127.0.0.1
 2024-03-17;AMAN;115;80;44;2;50000;none;buy;5750000;localhost-127.0.0.1
 2024-03-17;PGUN;408;58;22;3;50000;none;buy;20400000;localhost-127.0.0.1
@@ -9,3 +8,14 @@ date;kode;skg;p1;p2;p3;vol;aksiy;aksik;total;user
 2024-03-17;VKTR;151;100;100;33;10000;none;buy;1510000;localhost-127.0.0.1
 2024-03-17;BNBR;50;50;50;50;100000;none;buy;5000000;localhost-127.0.0.1
 2024-03-17;HEAL;1230;25;17;9;100000;buy;buy;123000000;localhost-127.0.0.1
+2024-03-17;AALI;6850;82;41;16;100000;underperform;buy;685000000;localhost-127.0.0.1
+2024-03-17;HEAL;1240;33;22;12;10000;buy;buy;12400000;localhost-127.0.0.1
+2024-03-17;HEAL;1240;33;22;12;100000;buy;buy;124000000;localhost-127.0.0.1
+2024-03-17;KLBF;1430;0;0;0;100000;hold;buy;143000000;localhost-127.0.0.1
+2024-03-17;MTEL;610;15;12;6;1000000;buy;buy;610000000;localhost-127.0.0.1
+2024-03-17;ELSA;390;92;98;58;100000;none;buy;39000000;localhost-127.0.0.1
+2024-03-17;ELSA;390;92;98;58;100000;none;buy;39000000;localhost-127.0.0.1
+2024-03-17;ELSA;390;92;98;58;10000;none;buy;3900000;localhost-127.0.0.1
+2024-03-17;ELSA;390;92;98;58;100000;none;buy;39000000;localhost-127.0.0.1
+2024-03-17;ENRG;222;100;76;27;100000;none;buy;22200000;localhost-127.0.0.1
+2024-03-17;DOID;428;100;100;52;100000;strong_buy;buy;42800000;localhost-127.0.0.1
