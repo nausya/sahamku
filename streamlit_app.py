@@ -252,7 +252,7 @@ with col1:
             lj = round(vj/100)
             st.metric(f"Margin Simulasi Penjualan Saham {kodesaja} : {round(prosj,1)}%", f"{lj} Lot", digit(mj)) 
     with tab4:
-        mm = yf.Ticker(kodesaja).history(period="max")                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
+        mm = yf.Ticker(@kodesaja).history(period="max")                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
         mm = mm.describe()
         st.dataframe(mm)
         
