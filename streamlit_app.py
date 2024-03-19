@@ -225,7 +225,7 @@ with col1:
             n = pd.DataFrame(brs) 
             # Convert DataFrame to CSV string
             dfaksi = pd.concat([dfaksi, n], ignore_index=True)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
-            csv_string = = dfaksi.to_csv('aksi.csv', sep=";", index=False) 
+            csv_string = dfaksi.to_csv('aksi.csv', sep=";", index=False) 
            
             # GitHub username and password/token (for authentication)
             username = 'nausya'
