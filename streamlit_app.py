@@ -98,8 +98,7 @@ def download_data(op, start_date, end_date):
 
 ######################## Tentukan zona waktu Indonesia
 indonesia_timezone = pytz.timezone('Asia/Jakarta')
-date = datetime.datetime.now(indonesia_timezone)
-date = date.strftime('%Y-%m-%d')# %H:%M:%S
+
 # Dapatkan waktu saat ini
 # datetime.now(indonesia_timezone)
 
@@ -216,20 +215,20 @@ with col1:
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   
        if st.button('simpan') and volbeli >= 100:
             dfaksi = pd.read_csv('aksi.csv', sep=";")
-            date = date
+            date = '2024-03-17'
             brs = []                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
             aksik = 'buy'                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       
             total = C * volbeli                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
             brs.append({'date': date, 'kode': kodesaja, 'skg': C, 'p1': P1, 'p2': P2, 'p3': P3, 'vol': volbeli, 'aksiy': aksiy,                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
                         'aksik': aksik, 'total': total, 'user': user})                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
-            n = pd.DataFrame(brs) 
-            # Convert DataFrame to CSV string
+            n = pd.DataFrame(brs)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
             dfaksi = pd.concat([dfaksi, n], ignore_index=True)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
-            dfaksi.to_csv('aksi.csv', sep=";", index=False)                                                                                                                                                                                                                                                                                                                                                                                                       
+            dfaksi.to_csv('aksi.csv', sep=";", index=False)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
+            #df                                                                                                                                                                                                                                                                                                                                                                                                                                         
             st.write(f'Simulasi pembelian saham {namatampil} pada tanggal {date} sebanyak {digit(volbeli)} lembar berhasil disimpan. Total transaksi adalah Rp. {digit(round(total))},-')                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
-        else:
-                st.error('Jumlah Minimal Beli 1 Lot Saham')
+       else:
+           st.error('Jumlah Minimal Beli 1 Lot Saham')
     with tab3:                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
         dfjual = pd.read_csv('aksi.csv', sep=";", usecols=['kode','skg','vol','aksik','total'])
         dfjual = dfjual.query("kode == @kodesaja and aksik=='buy'")
@@ -452,7 +451,8 @@ else:
    #st.dataframe(bm2)
    #RINGKASAN
    st.subheader(f"RINGKASAN PORTOFOLIO", divider="rainbow")
-
+   date = datetime.datetime.now(indonesia_timezone)
+   date = date.strftime('%Y-%m-%d')# %H:%M:%S
    #date
    aksik = 0
    
@@ -693,17 +693,3 @@ if __name__ == '__main__':
     main()
     
 #st.sidebar.info("@2024")
-
-# GitHub username and password/token (for authentication)
-            #username = 'nausya'
-            #password = 'Rayana456'
-            
-            # URL to the CSV file in the repository
-            #github_csv_write_url = 'https://github.com/nausya/sahamku/blob/main/aksi.csv'
-            
-            # Write CSV data to the GitHub repository
-            #response = requests.put(github_csv_write_url, auth=(username, password), data=csv_string)
-            
-            # Check if the write operation was successful
-            #if response.status_code == 200:
-                #st.success("CSV file successfully written to GitHub.")  
