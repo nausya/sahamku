@@ -254,6 +254,7 @@ with col1:
     with tab4:
         mm = yf.Ticker(option).history(period="max")                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
         mm = mm.describe()
+        mm = mm.astype(int)
         st.dataframe(mm)
         
 ######End of Halaman Utama
