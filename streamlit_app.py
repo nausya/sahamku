@@ -240,7 +240,7 @@ with col1:
             tb = dfjual['total'].sum()
             tj = C * vj
             prosj = dpros(tj,tb) - 100
-            mj = tj - tb
+            mj = round(tj - tb)
             lj = round(vj/100)
             st.metric(f"Margin Simulasi Penjualan Saham {kodesaja} : {round(prosj,1)}%", f"{lj} Lot", digit(mj)) #f"Rp. 
 
