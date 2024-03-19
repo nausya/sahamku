@@ -98,7 +98,8 @@ def download_data(op, start_date, end_date):
 
 ######################## Tentukan zona waktu Indonesia
 indonesia_timezone = pytz.timezone('Asia/Jakarta')
-
+date = datetime.datetime.now(indonesia_timezone)
+date = date.strftime('%Y-%m-%d')# %H:%M:%S
 # Dapatkan waktu saat ini
 # datetime.now(indonesia_timezone)
 
@@ -215,7 +216,7 @@ with col1:
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   
        if st.button('simpan') and volbeli >= 100:
             dfaksi = pd.read_csv('aksi.csv', sep=";")
-            date = '2024-03-17'
+            date = date
             brs = []                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
             aksik = 'buy'                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       
             total = C * volbeli                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
@@ -466,8 +467,7 @@ else:
    #st.dataframe(bm2)
    #RINGKASAN
    st.subheader(f"RINGKASAN PORTOFOLIO", divider="rainbow")
-   date = datetime.datetime.now(indonesia_timezone)
-   date = date.strftime('%Y-%m-%d')# %H:%M:%S
+
    #date
    aksik = 0
    
