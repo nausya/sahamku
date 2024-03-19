@@ -28,7 +28,6 @@ from sklearn.metrics import r2_score, mean_absolute_error
 import os
 
 ####### TOKEN GITHUB
-export GITHUB_TOKEN=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
 # Dapatkan token GitHub dari variabel lingkungan
 github_token = os.environ.get('GITHUB_TOKEN')
 
