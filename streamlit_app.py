@@ -209,7 +209,7 @@ col1, col2 = st.columns([1, 1])
 with col1:
     st.title(f'_:blue[{namatampil}]_')
     ###### KONTAINER TABS SIMULASI #############
-    tab1, tab2, tab3 = st.tabs(['Halaman Simulasi','Simulasi Beli','Simulasi Jual'])                                                                                                                                                                                                                                                                                                                                                                                                                                                         
+    tab1, tab2, tab3, tab4 = st.tabs(['Halaman Simulasi','Simulasi Beli','Simulasi Jual','MinMax'])                                                                                                                                                                                                                                                                                                                                                                                                                                                         
     with tab1:                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
        st.write('Selamat Datang di Halaman Simulasi')
     with tab2:                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
@@ -251,9 +251,11 @@ with col1:
             mj = tj - tb
             lj = round(vj/100)
             st.metric(f"Margin Simulasi Penjualan Saham {kodesaja} : {round(prosj,1)}%", f"{lj} Lot", digit(mj)) 
-
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
-
+    with tab4:
+        mm = yf.Ticker(kodesaja).history(period="max")                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
+        mm = mm.describe()
+        st.dataframe(mm)
+        
 ######End of Halaman Utama
 with col2:
 
