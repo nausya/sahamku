@@ -98,7 +98,9 @@ def download_data(op, start_date, end_date):
 
 ######################## Tentukan zona waktu Indonesia
 indonesia_timezone = pytz.timezone('Asia/Jakarta')
-
+date = datetime.datetime.now(indonesia_timezone)
+date = date.strftime('%Y-%m-%d')# %H:%M:%S
+date
 # Dapatkan waktu saat ini
 # datetime.now(indonesia_timezone)
 
@@ -451,9 +453,7 @@ else:
    #st.dataframe(bm2)
    #RINGKASAN
    st.subheader(f"RINGKASAN PORTOFOLIO", divider="rainbow")
-   date = datetime.datetime.now(indonesia_timezone)
-   date = date.strftime('%Y-%m-%d')# %H:%M:%S
-   #date
+
    aksik = 0
    
    cash = cash/1000000000
