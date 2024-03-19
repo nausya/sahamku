@@ -226,24 +226,9 @@ with col1:
             n = pd.DataFrame(brs) 
             # Convert DataFrame to CSV string
             dfaksi = pd.concat([dfaksi, n], ignore_index=True)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
-            dfaksi.to_csv('aksi.csv', sep=";", index=False) 
-           
-            # GitHub username and password/token (for authentication)
-            #username = 'nausya'
-            #password = 'Rayana456'
-            
-            # URL to the CSV file in the repository
-            #github_csv_write_url = 'https://github.com/nausya/sahamku/blob/main/aksi.csv'
-            
-            # Write CSV data to the GitHub repository
-            #response = requests.put(github_csv_write_url, auth=(username, password), data=csv_string)
-            
-            # Check if the write operation was successful
-            #if response.status_code == 200:
-                #st.success("CSV file successfully written to GitHub.")                                                                                                                                                                                                                                                                                                                                                                                                         
+            dfaksi.to_csv('aksi.csv', sep=";", index=False)                                                                                                                                                                                                                                                                                                                                                                                                       
             st.write(f'Simulasi pembelian saham {namatampil} pada tanggal {date} sebanyak {digit(volbeli)} lembar berhasil disimpan. Total transaksi adalah Rp. {digit(round(total))},-')                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
         else:
-           #st.error("Failed to write CSV file to GitHub.")
             st.error('Jumlah Minimal Beli 1 Lot Saham')
     with tab3:                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
         dfjual = pd.read_csv('aksi.csv', sep=";", usecols=['kode','skg','vol','aksik','total'])
@@ -708,3 +693,17 @@ if __name__ == '__main__':
     main()
     
 #st.sidebar.info("@2024")
+
+# GitHub username and password/token (for authentication)
+            #username = 'nausya'
+            #password = 'Rayana456'
+            
+            # URL to the CSV file in the repository
+            #github_csv_write_url = 'https://github.com/nausya/sahamku/blob/main/aksi.csv'
+            
+            # Write CSV data to the GitHub repository
+            #response = requests.put(github_csv_write_url, auth=(username, password), data=csv_string)
+            
+            # Check if the write operation was successful
+            #if response.status_code == 200:
+                #st.success("CSV file successfully written to GitHub.")  
