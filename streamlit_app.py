@@ -244,7 +244,7 @@ with col1:
             st.write(f'Simulasi pembelian saham {namatampil} pada tanggal {date} sebanyak {digit(volbeli)} lembar berhasil disimpan. Total transaksi adalah Rp. {digit(round(total))},-')                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
         else:
            #st.error("Failed to write CSV file to GitHub.")
-           st.error('Jumlah Minimal Beli 1 Lot Saham')
+            st.error('Jumlah Minimal Beli 1 Lot Saham')
     with tab3:                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
         dfjual = pd.read_csv('aksi.csv', sep=";", usecols=['kode','skg','vol','aksik','total'])
         dfjual = dfjual.query("kode == @kodesaja and aksik=='buy'")
