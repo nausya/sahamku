@@ -51,11 +51,6 @@ def main():
 ###### END OF FUNGSI MENU #############
 @st.cache_resource
 ############# KUMPULAN FUNGSI ######
-def min_max(a, b, c):
-    min = min(a, b, c)
-    max = max(a, b, c)
-    return min, max
-
 #Percentil
 def pentil(min,max,c):
     p = np.interp(c, [min, max], [0, 100])
@@ -261,7 +256,6 @@ with col1:
         mm = mm.describe()
         mm = mm.astype(int)
         st.dataframe(mm)
-        volmean = mm['Volume']['mean']
         
 ######End of Halaman Utama
 with col2:
@@ -278,17 +272,6 @@ with col2:
        marg = round(marg,1)
        #st.write("Margin", marg, '%')
        st.write('Margin<span style="font-size: 30px;">', marg, '</span>%', unsafe_allow_html=True)
-    vol = int(vol) if vol !=None else 0
-    vole = int(vole) if vole !=None else 0
-    min_max(vol, vole, volmean)
-    min
-    max
-    volkini = st.slider('Volume Saham', min, max, vole,  disabled=False)
-    volban = volkini/max * 100
-    st.write('Rasio Volumen : <span style="font-size: 30px;">', volban, '</span>%', unsafe_allow_html=True)
-    st.write(f'Volume Saham : {digit(vole)} Lembar')
-    st.write(f'Volume Saham Rata2 10 Hari : {digit(vol)} Lembar')
-    st.write(f'Total Saham Beredar : {digit(totshm)} Lembar')
 ################# END OF TAMPILKAN NAMA EMITEN
 ##########Notasi Saham################
 kode = selected_emiten.split(' | ')[0]
