@@ -281,6 +281,8 @@ with col2:
     vol = int(vol) if vol !=None else 0
     vole = int(vole) if vole !=None else 0
     min_max(vol, vole, volmean)
+    min
+    max
     volkini = st.slider('Volume Saham', min, max, vole,  disabled=False)
     volban = volkini/max * 100
     st.write('Rasio Volumen : <span style="font-size: 30px;">', volban, '</span>%', unsafe_allow_html=True)
