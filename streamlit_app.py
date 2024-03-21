@@ -272,7 +272,9 @@ with col2:
        marg = round(marg,1)
        #st.write("Margin", marg, '%')
        st.write('Margin<span style="font-size: 30px;">', marg, '</span>%', unsafe_allow_html=True)
-    st.write(f'Volume Saham : {vole} Lembar')
+    vol = int(vol) if vol !=None else 0
+    vole = int(vole) if vole !=None else 0
+    st.write(f'Volume Saham : {digit(vole)} Lembar')
     st.write(f'Volume Saham Rata2 10 Hari : {digit(vol)} Lembar')
     st.write(f'Total Saham Beredar : {digit(totshm)} Lembar')
 ################# END OF TAMPILKAN NAMA EMITEN
