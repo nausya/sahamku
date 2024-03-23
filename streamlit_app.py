@@ -38,16 +38,6 @@ st.set_page_config(page_title="Sahamku", layout="wide")
 st.header('ANALITIK SAHAM INDONESIA')
 ######End of Halaman Utama
 
-# Menampilkan file uploader
-uploaded_file = st.file_uploader("Unggah file Anda di sini")
-
-# Jika pengguna mengunggah file
-if uploaded_file is not None:
-    # Baca konten file
-    file_contents = uploaded_file.read()
-    # Tampilkan konten file
-    st.write("Konten file:")
-    st.write(file_contents)
 ###### FUNGSI MENU #############
 def main():
     selected2 = option_menu(None, ["Home", "Cari Data", "Screener", 'Prediksi'], 
