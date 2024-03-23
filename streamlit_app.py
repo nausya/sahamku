@@ -37,6 +37,18 @@ github_token = os.environ.get('GITHUB_TOKEN')
 st.set_page_config(page_title="Sahamku", layout="wide")
 st.header('ANALITIK SAHAM INDONESIA')
 ######End of Halaman Utama
+import streamlit as st
+
+# Menambahkan teks dengan format Markdown
+st.markdown('# Ini adalah judul Markdown')
+
+st.markdown('## Ini adalah subjudul Markdown')
+
+st.markdown('**Teks tebal** dan *teks miring*')
+
+st.markdown('[Ini adalah tautan](https://www.example.com)')
+
+st.markdown('![Ini adalah gambar](https://www.example.com/image.png)')
 
 ###### FUNGSI MENU #############
 def main():
