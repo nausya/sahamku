@@ -190,7 +190,7 @@ HPL = HgPor['lo'].values[0]
 HPB = HgPor['bl'].values[0]
 HPM = HgPor['m'].values[0]
 HPH = HgPor['hi'].values[0]
-Sahamedar = HgPor['Saham Beredar'].values[0]
+Sahamedar = HgPor['totshm'].values[0]
 ##################### END OF BILA DATA LIVE BELUM TERSEDIA
 if C == 0 or L52==0 or H52==0 or BL==0 or M==0:
     C = data.tail(1)
