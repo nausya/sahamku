@@ -26,7 +26,14 @@ from sklearn.ensemble import RandomForestRegressor
 from sklearn.ensemble import ExtraTreesRegressor
 from sklearn.metrics import r2_score, mean_absolute_error
 import os
-
+#### ICON #####
+st.set_page_config(
+   page_title="Sahamku",
+   page_icon="🧊",
+   layout="wide",
+   initial_sidebar_state="expanded",
+)
+######## END OF ICON #####
 ####### TOKEN GITHUB
 # Dapatkan token GitHub dari variabel lingkungan
 github_token = os.environ.get('GITHUB_TOKEN')
