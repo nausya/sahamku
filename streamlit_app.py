@@ -28,6 +28,16 @@ from sklearn.metrics import r2_score, mean_absolute_error
 import os
 
 
+
+####### TOKEN GITHUB
+# Dapatkan token GitHub dari variabel lingkungan
+github_token = os.environ.get('GITHUB_TOKEN')
+
+######Halaman Utama
+st.set_page_config(page_title="Sahamku", layout="wide")
+st.header('ANALITIK SAHAM INDONESIA')
+######End of Halaman Utama
+
 # Menampilkan file uploader
 uploaded_file = st.file_uploader("Unggah file Anda di sini")
 
@@ -38,15 +48,6 @@ if uploaded_file is not None:
     # Tampilkan konten file
     st.write("Konten file:")
     st.write(file_contents)
-
-####### TOKEN GITHUB
-# Dapatkan token GitHub dari variabel lingkungan
-github_token = os.environ.get('GITHUB_TOKEN')
-
-######Halaman Utama
-st.set_page_config(page_title="Sahamku", layout="wide")
-st.header('ANALITIK SAHAM INDONESIA')
-######End of Halaman Utama
 ###### FUNGSI MENU #############
 def main():
     selected2 = option_menu(None, ["Home", "Cari Data", "Screener", 'Prediksi'], 
