@@ -1,82 +1,82 @@
 Kode;Kriteria
-GOLL;1|2|7|9
-OCAP;2|3|5|7
-POLL;9
-PICO;8
-BINA;10
-GMFI;5
-DCII;10
-BOLA;10
-PEGE;10
-BCIC;10
-FITT;10
-TMAS;10
-BPTR;10
-MSIN;10
-ADMR;10
-BKDP;10
-KONI;10
-BCAP;10
-SMMT;10
-ASPI;3
-KJEN;10
-LCKM;7
-MTFN;1|5|7
-SMRU;1|7
-SRIL;5|7
-TRIL;1|7
+GOLL;1 : Harga rata-rata saham selama 6 bulan terakhir di Pasar Reguler dan/atau Pasar Reguler Periodic Call Auction kurang dari Rp51,00.| 2 : Laporan Keuangan Auditan terakhir mendapatkan opini tidak menyatakan pendapat (disclaimer).|7 : Memiliki likuiditas rendah dengan kriteria nilai transaksi rata-rata harian saham kurang dari Rp5.000.000,00 (lima juta rupiah) dan volume transaksi rata-rata harian saham kurang dari 10.000 (sepuluh ribu) saham selama 6 (enam) bulan terakhir di Pasar Reguler dan/atau Pasar Reguler Periodic Call Auction.|9 : Anak perusahaan yang kontribusi pendapatannya material terhadap Perusahaan Tercatat, dalam kondisi dimohonkan PKPU, pailit, atau pembatalan perdamaian.
+OCAP;2 : Laporan Keuangan Auditan terakhir mendapatkan opini tidak menyatakan pendapat (disclaimer).|3 : Tidak membukukan pendapatan atau tidak terdapat perubahan pendapatan pada Laporan Keuangan Auditan dan/atau Laporan Keuangan Interim terakhir dibandingkan dengan laporan keuangan yang disampaikan sebelumnya.|5 : Memiliki ekuitas negatif pada laporan Keuangan terakhir.|7 : Memiliki likuiditas rendah dengan kriteria nilai transaksi rata-rata harian saham kurang dari Rp5.000.000,00 (lima juta rupiah) dan volume transaksi rata-rata harian saham kurang dari 10.000 (sepuluh ribu) saham selama 6 (enam) bulan terakhir di Pasar Reguler dan/atau Pasar Reguler Periodic Call Auction.
+POLL;9 : Anak perusahaan yang kontribusi pendapatannya material terhadap Perusahaan Tercatat, dalam kondisi dimohonkan PKPU, pailit, atau pembatalan perdamaian.
+PICO;8 : Perusahaan Tercatat dalam kondisi dimohonkan PKPU, pailit, atau pembatalan perdamaian.
+BINA;10 : Dikenakan penghentian sementara perdagangan Efek selama lebih dari 1 (satu) hari bursa yang disebabkan oleh aktivitas perdagangan.
+GMFI;5 : Memiliki ekuitas negatif pada laporan Keuangan terakhir.
+DCII;10 : Dikenakan penghentian sementara perdagangan Efek selama lebih dari 1 (satu) hari bursa yang disebabkan oleh aktivitas perdagangan.
+BOLA;10 : Dikenakan penghentian sementara perdagangan Efek selama lebih dari 1 (satu) hari bursa yang disebabkan oleh aktivitas perdagangan.
+PEGE;10 : Dikenakan penghentian sementara perdagangan Efek selama lebih dari 1 (satu) hari bursa yang disebabkan oleh aktivitas perdagangan.
+BCIC;10 : Dikenakan penghentian sementara perdagangan Efek selama lebih dari 1 (satu) hari bursa yang disebabkan oleh aktivitas perdagangan.
+FITT;10 : Dikenakan penghentian sementara perdagangan Efek selama lebih dari 1 (satu) hari bursa yang disebabkan oleh aktivitas perdagangan.
+TMAS;10 : Dikenakan penghentian sementara perdagangan Efek selama lebih dari 1 (satu) hari bursa yang disebabkan oleh aktivitas perdagangan.
+BPTR;10 : Dikenakan penghentian sementara perdagangan Efek selama lebih dari 1 (satu) hari bursa yang disebabkan oleh aktivitas perdagangan.
+MSIN;10 : Dikenakan penghentian sementara perdagangan Efek selama lebih dari 1 (satu) hari bursa yang disebabkan oleh aktivitas perdagangan.
+ADMR;10 : Dikenakan penghentian sementara perdagangan Efek selama lebih dari 1 (satu) hari bursa yang disebabkan oleh aktivitas perdagangan.
+BKDP;10 : Dikenakan penghentian sementara perdagangan Efek selama lebih dari 1 (satu) hari bursa yang disebabkan oleh aktivitas perdagangan.
+KONI;10 : Dikenakan penghentian sementara perdagangan Efek selama lebih dari 1 (satu) hari bursa yang disebabkan oleh aktivitas perdagangan.
+BCAP;10 : Dikenakan penghentian sementara perdagangan Efek selama lebih dari 1 (satu) hari bursa yang disebabkan oleh aktivitas perdagangan.
+SMMT;10 : Dikenakan penghentian sementara perdagangan Efek selama lebih dari 1 (satu) hari bursa yang disebabkan oleh aktivitas perdagangan.
+ASPI;3 : Tidak membukukan pendapatan atau tidak terdapat perubahan pendapatan pada Laporan Keuangan Auditan dan/atau Laporan Keuangan Interim terakhir dibandingkan dengan laporan keuangan yang disampaikan sebelumnya.
+KJEN;10 : Dikenakan penghentian sementara perdagangan Efek selama lebih dari 1 (satu) hari bursa yang disebabkan oleh aktivitas perdagangan.
+LCKM;7 : Memiliki likuiditas rendah dengan kriteria nilai transaksi rata-rata harian saham kurang dari Rp5.000.000,00 (lima juta rupiah) dan volume transaksi rata-rata harian saham kurang dari 10.000 (sepuluh ribu) saham selama 6 (enam) bulan terakhir di Pasar Reguler dan/atau Pasar Reguler Periodic Call Auction.
+MTFN;1 : Harga rata-rata saham selama 6 bulan terakhir di Pasar Reguler dan/atau Pasar Reguler Periodic Call Auction kurang dari Rp51,00.| 5 : Memiliki ekuitas negatif pada laporan Keuangan terakhir.|7 : Memiliki likuiditas rendah dengan kriteria nilai transaksi rata-rata harian saham kurang dari Rp5.000.000,00 (lima juta rupiah) dan volume transaksi rata-rata harian saham kurang dari 10.000 (sepuluh ribu) saham selama 6 (enam) bulan terakhir di Pasar Reguler dan/atau Pasar Reguler Periodic Call Auction.
+SMRU;1 : Harga rata-rata saham selama 6 bulan terakhir di Pasar Reguler dan/atau Pasar Reguler Periodic Call Auction kurang dari Rp51,00.| 7 : Memiliki likuiditas rendah dengan kriteria nilai transaksi rata-rata harian saham kurang dari Rp5.000.000,00 (lima juta rupiah) dan volume transaksi rata-rata harian saham kurang dari 10.000 (sepuluh ribu) saham selama 6 (enam) bulan terakhir di Pasar Reguler dan/atau Pasar Reguler Periodic Call Auction.
+SRIL;5 : Memiliki ekuitas negatif pada laporan Keuangan terakhir.|7 : Memiliki likuiditas rendah dengan kriteria nilai transaksi rata-rata harian saham kurang dari Rp5.000.000,00 (lima juta rupiah) dan volume transaksi rata-rata harian saham kurang dari 10.000 (sepuluh ribu) saham selama 6 (enam) bulan terakhir di Pasar Reguler dan/atau Pasar Reguler Periodic Call Auction.
+TRIL;1 : Harga rata-rata saham selama 6 bulan terakhir di Pasar Reguler dan/atau Pasar Reguler Periodic Call Auction kurang dari Rp51,00.| 7 : Memiliki likuiditas rendah dengan kriteria nilai transaksi rata-rata harian saham kurang dari Rp5.000.000,00 (lima juta rupiah) dan volume transaksi rata-rata harian saham kurang dari 10.000 (sepuluh ribu) saham selama 6 (enam) bulan terakhir di Pasar Reguler dan/atau Pasar Reguler Periodic Call Auction.
 TAXI;1
-TDPM;7
-TELE;1|5
-POOL;1|7
-POSA;1|5|7
-ROCK;7
-SCPI;7
-BIKA;5
+TDPM;7 : Memiliki likuiditas rendah dengan kriteria nilai transaksi rata-rata harian saham kurang dari Rp5.000.000,00 (lima juta rupiah) dan volume transaksi rata-rata harian saham kurang dari 10.000 (sepuluh ribu) saham selama 6 (enam) bulan terakhir di Pasar Reguler dan/atau Pasar Reguler Periodic Call Auction.
+TELE;1 : Harga rata-rata saham selama 6 bulan terakhir di Pasar Reguler dan/atau Pasar Reguler Periodic Call Auction kurang dari Rp51,00.| 5 : Memiliki ekuitas negatif pada laporan Keuangan terakhir.
+POOL;1 : Harga rata-rata saham selama 6 bulan terakhir di Pasar Reguler dan/atau Pasar Reguler Periodic Call Auction kurang dari Rp51,00.| 7 : Memiliki likuiditas rendah dengan kriteria nilai transaksi rata-rata harian saham kurang dari Rp5.000.000,00 (lima juta rupiah) dan volume transaksi rata-rata harian saham kurang dari 10.000 (sepuluh ribu) saham selama 6 (enam) bulan terakhir di Pasar Reguler dan/atau Pasar Reguler Periodic Call Auction.
+POSA;1 : Harga rata-rata saham selama 6 bulan terakhir di Pasar Reguler dan/atau Pasar Reguler Periodic Call Auction kurang dari Rp51,00.| 5 : Memiliki ekuitas negatif pada laporan Keuangan terakhir.|7 : Memiliki likuiditas rendah dengan kriteria nilai transaksi rata-rata harian saham kurang dari Rp5.000.000,00 (lima juta rupiah) dan volume transaksi rata-rata harian saham kurang dari 10.000 (sepuluh ribu) saham selama 6 (enam) bulan terakhir di Pasar Reguler dan/atau Pasar Reguler Periodic Call Auction.
+ROCK;7 : Memiliki likuiditas rendah dengan kriteria nilai transaksi rata-rata harian saham kurang dari Rp5.000.000,00 (lima juta rupiah) dan volume transaksi rata-rata harian saham kurang dari 10.000 (sepuluh ribu) saham selama 6 (enam) bulan terakhir di Pasar Reguler dan/atau Pasar Reguler Periodic Call Auction.
+SCPI;7 : Memiliki likuiditas rendah dengan kriteria nilai transaksi rata-rata harian saham kurang dari Rp5.000.000,00 (lima juta rupiah) dan volume transaksi rata-rata harian saham kurang dari 10.000 (sepuluh ribu) saham selama 6 (enam) bulan terakhir di Pasar Reguler dan/atau Pasar Reguler Periodic Call Auction.
+BIKA;5 : Memiliki ekuitas negatif pada laporan Keuangan terakhir.
 AKKU;1
 ANDI;1
-ARMY;1|7
+ARMY;1 : Harga rata-rata saham selama 6 bulan terakhir di Pasar Reguler dan/atau Pasar Reguler Periodic Call Auction kurang dari Rp51,00.| 7 : Memiliki likuiditas rendah dengan kriteria nilai transaksi rata-rata harian saham kurang dari Rp5.000.000,00 (lima juta rupiah) dan volume transaksi rata-rata harian saham kurang dari 10.000 (sepuluh ribu) saham selama 6 (enam) bulan terakhir di Pasar Reguler dan/atau Pasar Reguler Periodic Call Auction.
 BLTA;1
-BSWD;7
+BSWD;7 : Memiliki likuiditas rendah dengan kriteria nilai transaksi rata-rata harian saham kurang dari Rp5.000.000,00 (lima juta rupiah) dan volume transaksi rata-rata harian saham kurang dari 10.000 (sepuluh ribu) saham selama 6 (enam) bulan terakhir di Pasar Reguler dan/atau Pasar Reguler Periodic Call Auction.
 BTEK;1
-BTEL;1|5|7
-CANI;5
-CMPP;5
-CNKO;1|5
-DEFI;7
-CTBN;7
+BTEL;1 : Harga rata-rata saham selama 6 bulan terakhir di Pasar Reguler dan/atau Pasar Reguler Periodic Call Auction kurang dari Rp51,00.| 5 : Memiliki ekuitas negatif pada laporan Keuangan terakhir.|7 : Memiliki likuiditas rendah dengan kriteria nilai transaksi rata-rata harian saham kurang dari Rp5.000.000,00 (lima juta rupiah) dan volume transaksi rata-rata harian saham kurang dari 10.000 (sepuluh ribu) saham selama 6 (enam) bulan terakhir di Pasar Reguler dan/atau Pasar Reguler Periodic Call Auction.
+CANI;5 : Memiliki ekuitas negatif pada laporan Keuangan terakhir.
+CMPP;5 : Memiliki ekuitas negatif pada laporan Keuangan terakhir.
+CNKO;1 : Harga rata-rata saham selama 6 bulan terakhir di Pasar Reguler dan/atau Pasar Reguler Periodic Call Auction kurang dari Rp51,00.| 5 : Memiliki ekuitas negatif pada laporan Keuangan terakhir.
+DEFI;7 : Memiliki likuiditas rendah dengan kriteria nilai transaksi rata-rata harian saham kurang dari Rp5.000.000,00 (lima juta rupiah) dan volume transaksi rata-rata harian saham kurang dari 10.000 (sepuluh ribu) saham selama 6 (enam) bulan terakhir di Pasar Reguler dan/atau Pasar Reguler Periodic Call Auction.
+CTBN;7 : Memiliki likuiditas rendah dengan kriteria nilai transaksi rata-rata harian saham kurang dari Rp5.000.000,00 (lima juta rupiah) dan volume transaksi rata-rata harian saham kurang dari 10.000 (sepuluh ribu) saham selama 6 (enam) bulan terakhir di Pasar Reguler dan/atau Pasar Reguler Periodic Call Auction.
 ELTY;1
-HOME;1|7
-GLOB;5
-IIKP;1|7
+HOME;1 : Harga rata-rata saham selama 6 bulan terakhir di Pasar Reguler dan/atau Pasar Reguler Periodic Call Auction kurang dari Rp51,00.| 7 : Memiliki likuiditas rendah dengan kriteria nilai transaksi rata-rata harian saham kurang dari Rp5.000.000,00 (lima juta rupiah) dan volume transaksi rata-rata harian saham kurang dari 10.000 (sepuluh ribu) saham selama 6 (enam) bulan terakhir di Pasar Reguler dan/atau Pasar Reguler Periodic Call Auction.
+GLOB;5 : Memiliki ekuitas negatif pada laporan Keuangan terakhir.
+IIKP;1 : Harga rata-rata saham selama 6 bulan terakhir di Pasar Reguler dan/atau Pasar Reguler Periodic Call Auction kurang dari Rp51,00.| 7 : Memiliki likuiditas rendah dengan kriteria nilai transaksi rata-rata harian saham kurang dari Rp5.000.000,00 (lima juta rupiah) dan volume transaksi rata-rata harian saham kurang dari 10.000 (sepuluh ribu) saham selama 6 (enam) bulan terakhir di Pasar Reguler dan/atau Pasar Reguler Periodic Call Auction.
 IKAI;1
 JGLE;1
-UNSP;5
-OKAS;5
-SULI;5
-RELI;7
-MKPI;7
+UNSP;5 : Memiliki ekuitas negatif pada laporan Keuangan terakhir.
+OKAS;5 : Memiliki ekuitas negatif pada laporan Keuangan terakhir.
+SULI;5 : Memiliki ekuitas negatif pada laporan Keuangan terakhir.
+RELI;7 : Memiliki likuiditas rendah dengan kriteria nilai transaksi rata-rata harian saham kurang dari Rp5.000.000,00 (lima juta rupiah) dan volume transaksi rata-rata harian saham kurang dari 10.000 (sepuluh ribu) saham selama 6 (enam) bulan terakhir di Pasar Reguler dan/atau Pasar Reguler Periodic Call Auction.
+MKPI;7 : Memiliki likuiditas rendah dengan kriteria nilai transaksi rata-rata harian saham kurang dari Rp5.000.000,00 (lima juta rupiah) dan volume transaksi rata-rata harian saham kurang dari 10.000 (sepuluh ribu) saham selama 6 (enam) bulan terakhir di Pasar Reguler dan/atau Pasar Reguler Periodic Call Auction.
 CARS;1
 BNBR;1
 BBRM;1
-IATA;5
-BLTZ;7
-JSPT;7
-SONA;7
-BELL;10
-HITS;10
-PALM;3
-BMSR;10
-PANI;10
-PKPK;3
-AYLS;3
-BIMA;5
-SWAT;8
-TAYS;10
-OASA;3
-SRAJ;10
-TIFA;7
-TIRA;7
+IATA;5 : Memiliki ekuitas negatif pada laporan Keuangan terakhir.
+BLTZ;7 : Memiliki likuiditas rendah dengan kriteria nilai transaksi rata-rata harian saham kurang dari Rp5.000.000,00 (lima juta rupiah) dan volume transaksi rata-rata harian saham kurang dari 10.000 (sepuluh ribu) saham selama 6 (enam) bulan terakhir di Pasar Reguler dan/atau Pasar Reguler Periodic Call Auction.
+JSPT;7 : Memiliki likuiditas rendah dengan kriteria nilai transaksi rata-rata harian saham kurang dari Rp5.000.000,00 (lima juta rupiah) dan volume transaksi rata-rata harian saham kurang dari 10.000 (sepuluh ribu) saham selama 6 (enam) bulan terakhir di Pasar Reguler dan/atau Pasar Reguler Periodic Call Auction.
+SONA;7 : Memiliki likuiditas rendah dengan kriteria nilai transaksi rata-rata harian saham kurang dari Rp5.000.000,00 (lima juta rupiah) dan volume transaksi rata-rata harian saham kurang dari 10.000 (sepuluh ribu) saham selama 6 (enam) bulan terakhir di Pasar Reguler dan/atau Pasar Reguler Periodic Call Auction.
+BELL;10 : Dikenakan penghentian sementara perdagangan Efek selama lebih dari 1 (satu) hari bursa yang disebabkan oleh aktivitas perdagangan.
+HITS;10 : Dikenakan penghentian sementara perdagangan Efek selama lebih dari 1 (satu) hari bursa yang disebabkan oleh aktivitas perdagangan.
+PALM;3 : Tidak membukukan pendapatan atau tidak terdapat perubahan pendapatan pada Laporan Keuangan Auditan dan/atau Laporan Keuangan Interim terakhir dibandingkan dengan laporan keuangan yang disampaikan sebelumnya.
+BMSR;10 : Dikenakan penghentian sementara perdagangan Efek selama lebih dari 1 (satu) hari bursa yang disebabkan oleh aktivitas perdagangan.
+PANI;10 : Dikenakan penghentian sementara perdagangan Efek selama lebih dari 1 (satu) hari bursa yang disebabkan oleh aktivitas perdagangan.
+PKPK;3 : Tidak membukukan pendapatan atau tidak terdapat perubahan pendapatan pada Laporan Keuangan Auditan dan/atau Laporan Keuangan Interim terakhir dibandingkan dengan laporan keuangan yang disampaikan sebelumnya.
+AYLS;3 : Tidak membukukan pendapatan atau tidak terdapat perubahan pendapatan pada Laporan Keuangan Auditan dan/atau Laporan Keuangan Interim terakhir dibandingkan dengan laporan keuangan yang disampaikan sebelumnya.
+BIMA;5 : Memiliki ekuitas negatif pada laporan Keuangan terakhir.
+SWAT;8 : Perusahaan Tercatat dalam kondisi dimohonkan PKPU, pailit, atau pembatalan perdamaian.
+TAYS;10 : Dikenakan penghentian sementara perdagangan Efek selama lebih dari 1 (satu) hari bursa yang disebabkan oleh aktivitas perdagangan.
+OASA;3 : Tidak membukukan pendapatan atau tidak terdapat perubahan pendapatan pada Laporan Keuangan Auditan dan/atau Laporan Keuangan Interim terakhir dibandingkan dengan laporan keuangan yang disampaikan sebelumnya.
+SRAJ;10 : Dikenakan penghentian sementara perdagangan Efek selama lebih dari 1 (satu) hari bursa yang disebabkan oleh aktivitas perdagangan.
+TIFA;7 : Memiliki likuiditas rendah dengan kriteria nilai transaksi rata-rata harian saham kurang dari Rp5.000.000,00 (lima juta rupiah) dan volume transaksi rata-rata harian saham kurang dari 10.000 (sepuluh ribu) saham selama 6 (enam) bulan terakhir di Pasar Reguler dan/atau Pasar Reguler Periodic Call Auction.
+TIRA;7 : Memiliki likuiditas rendah dengan kriteria nilai transaksi rata-rata harian saham kurang dari Rp5.000.000,00 (lima juta rupiah) dan volume transaksi rata-rata harian saham kurang dari 10.000 (sepuluh ribu) saham selama 6 (enam) bulan terakhir di Pasar Reguler dan/atau Pasar Reguler Periodic Call Auction.
 PURA;1
 PPRO;1
 KBAG;1
@@ -85,126 +85,126 @@ KREN;1
 BEKS;1
 ARKA;1
 BAUT;1
-AGAR;7
-CBMF;1|7
+AGAR;7 : Memiliki likuiditas rendah dengan kriteria nilai transaksi rata-rata harian saham kurang dari Rp5.000.000,00 (lima juta rupiah) dan volume transaksi rata-rata harian saham kurang dari 10.000 (sepuluh ribu) saham selama 6 (enam) bulan terakhir di Pasar Reguler dan/atau Pasar Reguler Periodic Call Auction.
+CBMF;1 : Harga rata-rata saham selama 6 bulan terakhir di Pasar Reguler dan/atau Pasar Reguler Periodic Call Auction kurang dari Rp51,00.| 7 : Memiliki likuiditas rendah dengan kriteria nilai transaksi rata-rata harian saham kurang dari Rp5.000.000,00 (lima juta rupiah) dan volume transaksi rata-rata harian saham kurang dari 10.000 (sepuluh ribu) saham selama 6 (enam) bulan terakhir di Pasar Reguler dan/atau Pasar Reguler Periodic Call Auction.
 WOWS;1
-BAYU;7
-GEMA;7
+BAYU;7 : Memiliki likuiditas rendah dengan kriteria nilai transaksi rata-rata harian saham kurang dari Rp5.000.000,00 (lima juta rupiah) dan volume transaksi rata-rata harian saham kurang dari 10.000 (sepuluh ribu) saham selama 6 (enam) bulan terakhir di Pasar Reguler dan/atau Pasar Reguler Periodic Call Auction.
+GEMA;7 : Memiliki likuiditas rendah dengan kriteria nilai transaksi rata-rata harian saham kurang dari Rp5.000.000,00 (lima juta rupiah) dan volume transaksi rata-rata harian saham kurang dari 10.000 (sepuluh ribu) saham selama 6 (enam) bulan terakhir di Pasar Reguler dan/atau Pasar Reguler Periodic Call Auction.
 NTBK;1
-TALF;7
-MPRO;10
-KBLV;5
-OMRE;10
-NETV;5
-PTIS;10
-INPS;10
-CHIP;10
-UANG;5
-CENT;5
-DKFT;3
-BEBS;10
-KOIN;5
-FMII;10
-ABBA;5
-ABDA;7
+TALF;7 : Memiliki likuiditas rendah dengan kriteria nilai transaksi rata-rata harian saham kurang dari Rp5.000.000,00 (lima juta rupiah) dan volume transaksi rata-rata harian saham kurang dari 10.000 (sepuluh ribu) saham selama 6 (enam) bulan terakhir di Pasar Reguler dan/atau Pasar Reguler Periodic Call Auction.
+MPRO;10 : Dikenakan penghentian sementara perdagangan Efek selama lebih dari 1 (satu) hari bursa yang disebabkan oleh aktivitas perdagangan.
+KBLV;5 : Memiliki ekuitas negatif pada laporan Keuangan terakhir.
+OMRE;10 : Dikenakan penghentian sementara perdagangan Efek selama lebih dari 1 (satu) hari bursa yang disebabkan oleh aktivitas perdagangan.
+NETV;5 : Memiliki ekuitas negatif pada laporan Keuangan terakhir.
+PTIS;10 : Dikenakan penghentian sementara perdagangan Efek selama lebih dari 1 (satu) hari bursa yang disebabkan oleh aktivitas perdagangan.
+INPS;10 : Dikenakan penghentian sementara perdagangan Efek selama lebih dari 1 (satu) hari bursa yang disebabkan oleh aktivitas perdagangan.
+CHIP;10 : Dikenakan penghentian sementara perdagangan Efek selama lebih dari 1 (satu) hari bursa yang disebabkan oleh aktivitas perdagangan.
+UANG;5 : Memiliki ekuitas negatif pada laporan Keuangan terakhir.
+CENT;5 : Memiliki ekuitas negatif pada laporan Keuangan terakhir.
+DKFT;3 : Tidak membukukan pendapatan atau tidak terdapat perubahan pendapatan pada Laporan Keuangan Auditan dan/atau Laporan Keuangan Interim terakhir dibandingkan dengan laporan keuangan yang disampaikan sebelumnya.
+BEBS;10 : Dikenakan penghentian sementara perdagangan Efek selama lebih dari 1 (satu) hari bursa yang disebabkan oleh aktivitas perdagangan.
+KOIN;5 : Memiliki ekuitas negatif pada laporan Keuangan terakhir.
+FMII;10 : Dikenakan penghentian sementara perdagangan Efek selama lebih dari 1 (satu) hari bursa yang disebabkan oleh aktivitas perdagangan.
+ABBA;5 : Memiliki ekuitas negatif pada laporan Keuangan terakhir.
+ABDA;7 : Memiliki likuiditas rendah dengan kriteria nilai transaksi rata-rata harian saham kurang dari Rp5.000.000,00 (lima juta rupiah) dan volume transaksi rata-rata harian saham kurang dari 10.000 (sepuluh ribu) saham selama 6 (enam) bulan terakhir di Pasar Reguler dan/atau Pasar Reguler Periodic Call Auction.
 BKSL;1
 BIPP;1
-IBST;7
+IBST;7 : Memiliki likuiditas rendah dengan kriteria nilai transaksi rata-rata harian saham kurang dari Rp5.000.000,00 (lima juta rupiah) dan volume transaksi rata-rata harian saham kurang dari 10.000 (sepuluh ribu) saham selama 6 (enam) bulan terakhir di Pasar Reguler dan/atau Pasar Reguler Periodic Call Auction.
 HRME;1
 HOPE;1
-LIFE;7
+LIFE;7 : Memiliki likuiditas rendah dengan kriteria nilai transaksi rata-rata harian saham kurang dari Rp5.000.000,00 (lima juta rupiah) dan volume transaksi rata-rata harian saham kurang dari 10.000 (sepuluh ribu) saham selama 6 (enam) bulan terakhir di Pasar Reguler dan/atau Pasar Reguler Periodic Call Auction.
 RBMS;1
-SOHO;7
-SUPR;7
-SURE;7
+SOHO;7 : Memiliki likuiditas rendah dengan kriteria nilai transaksi rata-rata harian saham kurang dari Rp5.000.000,00 (lima juta rupiah) dan volume transaksi rata-rata harian saham kurang dari 10.000 (sepuluh ribu) saham selama 6 (enam) bulan terakhir di Pasar Reguler dan/atau Pasar Reguler Periodic Call Auction.
+SUPR;7 : Memiliki likuiditas rendah dengan kriteria nilai transaksi rata-rata harian saham kurang dari Rp5.000.000,00 (lima juta rupiah) dan volume transaksi rata-rata harian saham kurang dari 10.000 (sepuluh ribu) saham selama 6 (enam) bulan terakhir di Pasar Reguler dan/atau Pasar Reguler Periodic Call Auction.
+SURE;7 : Memiliki likuiditas rendah dengan kriteria nilai transaksi rata-rata harian saham kurang dari Rp5.000.000,00 (lima juta rupiah) dan volume transaksi rata-rata harian saham kurang dari 10.000 (sepuluh ribu) saham selama 6 (enam) bulan terakhir di Pasar Reguler dan/atau Pasar Reguler Periodic Call Auction.
 TRUE;1
 WINR;1
 ZINC;1
-TRST;7
+TRST;7 : Memiliki likuiditas rendah dengan kriteria nilai transaksi rata-rata harian saham kurang dari Rp5.000.000,00 (lima juta rupiah) dan volume transaksi rata-rata harian saham kurang dari 10.000 (sepuluh ribu) saham selama 6 (enam) bulan terakhir di Pasar Reguler dan/atau Pasar Reguler Periodic Call Auction.
 SRSN;1
-DSSA;7
-BOLT;7
-BATA;7
-BOSS;5|9
-SMKM;10
-LPPF;5
-INAF;5
-BEEF;8
-LAJU;10
-ARTI;1|2|5|7
-UNIQ;10
-RONY;7
-GTBO;10
-DEWI;10
-CSMI;7
-ENVY;1|3|5|7
-DOOH;10
-VIVA;1|5
-WIDI;10
-JKSW;3|5|7
-WSKT;8
-CLAY;7
-BUVA;7
-TGRA;1|3
-SINI;5
-TIRT;1|3|5
-SATU;10
-ARGO;7
-PTSP;10
-REAL;1|7
+DSSA;7 : Memiliki likuiditas rendah dengan kriteria nilai transaksi rata-rata harian saham kurang dari Rp5.000.000,00 (lima juta rupiah) dan volume transaksi rata-rata harian saham kurang dari 10.000 (sepuluh ribu) saham selama 6 (enam) bulan terakhir di Pasar Reguler dan/atau Pasar Reguler Periodic Call Auction.
+BOLT;7 : Memiliki likuiditas rendah dengan kriteria nilai transaksi rata-rata harian saham kurang dari Rp5.000.000,00 (lima juta rupiah) dan volume transaksi rata-rata harian saham kurang dari 10.000 (sepuluh ribu) saham selama 6 (enam) bulan terakhir di Pasar Reguler dan/atau Pasar Reguler Periodic Call Auction.
+BATA;7 : Memiliki likuiditas rendah dengan kriteria nilai transaksi rata-rata harian saham kurang dari Rp5.000.000,00 (lima juta rupiah) dan volume transaksi rata-rata harian saham kurang dari 10.000 (sepuluh ribu) saham selama 6 (enam) bulan terakhir di Pasar Reguler dan/atau Pasar Reguler Periodic Call Auction.
+BOSS;5 : Memiliki ekuitas negatif pada laporan Keuangan terakhir.|9 : Anak perusahaan yang kontribusi pendapatannya material terhadap Perusahaan Tercatat, dalam kondisi dimohonkan PKPU, pailit, atau pembatalan perdamaian.
+SMKM;10 : Dikenakan penghentian sementara perdagangan Efek selama lebih dari 1 (satu) hari bursa yang disebabkan oleh aktivitas perdagangan.
+LPPF;5 : Memiliki ekuitas negatif pada laporan Keuangan terakhir.
+INAF;5 : Memiliki ekuitas negatif pada laporan Keuangan terakhir.
+BEEF;8 : Perusahaan Tercatat dalam kondisi dimohonkan PKPU, pailit, atau pembatalan perdamaian.
+LAJU;10 : Dikenakan penghentian sementara perdagangan Efek selama lebih dari 1 (satu) hari bursa yang disebabkan oleh aktivitas perdagangan.
+ARTI;1 : Harga rata-rata saham selama 6 bulan terakhir di Pasar Reguler dan/atau Pasar Reguler Periodic Call Auction kurang dari Rp51,00.| 2 : Laporan Keuangan Auditan terakhir mendapatkan opini tidak menyatakan pendapat (disclaimer).|5 : Memiliki ekuitas negatif pada laporan Keuangan terakhir.|7 : Memiliki likuiditas rendah dengan kriteria nilai transaksi rata-rata harian saham kurang dari Rp5.000.000,00 (lima juta rupiah) dan volume transaksi rata-rata harian saham kurang dari 10.000 (sepuluh ribu) saham selama 6 (enam) bulan terakhir di Pasar Reguler dan/atau Pasar Reguler Periodic Call Auction.
+UNIQ;10 : Dikenakan penghentian sementara perdagangan Efek selama lebih dari 1 (satu) hari bursa yang disebabkan oleh aktivitas perdagangan.
+RONY;7 : Memiliki likuiditas rendah dengan kriteria nilai transaksi rata-rata harian saham kurang dari Rp5.000.000,00 (lima juta rupiah) dan volume transaksi rata-rata harian saham kurang dari 10.000 (sepuluh ribu) saham selama 6 (enam) bulan terakhir di Pasar Reguler dan/atau Pasar Reguler Periodic Call Auction.
+GTBO;10 : Dikenakan penghentian sementara perdagangan Efek selama lebih dari 1 (satu) hari bursa yang disebabkan oleh aktivitas perdagangan.
+DEWI;10 : Dikenakan penghentian sementara perdagangan Efek selama lebih dari 1 (satu) hari bursa yang disebabkan oleh aktivitas perdagangan.
+CSMI;7 : Memiliki likuiditas rendah dengan kriteria nilai transaksi rata-rata harian saham kurang dari Rp5.000.000,00 (lima juta rupiah) dan volume transaksi rata-rata harian saham kurang dari 10.000 (sepuluh ribu) saham selama 6 (enam) bulan terakhir di Pasar Reguler dan/atau Pasar Reguler Periodic Call Auction.
+ENVY;1 : Harga rata-rata saham selama 6 bulan terakhir di Pasar Reguler dan/atau Pasar Reguler Periodic Call Auction kurang dari Rp51,00.| 3 : Tidak membukukan pendapatan atau tidak terdapat perubahan pendapatan pada Laporan Keuangan Auditan dan/atau Laporan Keuangan Interim terakhir dibandingkan dengan laporan keuangan yang disampaikan sebelumnya.|5 : Memiliki ekuitas negatif pada laporan Keuangan terakhir.|7 : Memiliki likuiditas rendah dengan kriteria nilai transaksi rata-rata harian saham kurang dari Rp5.000.000,00 (lima juta rupiah) dan volume transaksi rata-rata harian saham kurang dari 10.000 (sepuluh ribu) saham selama 6 (enam) bulan terakhir di Pasar Reguler dan/atau Pasar Reguler Periodic Call Auction.
+DOOH;10 : Dikenakan penghentian sementara perdagangan Efek selama lebih dari 1 (satu) hari bursa yang disebabkan oleh aktivitas perdagangan.
+VIVA;1 : Harga rata-rata saham selama 6 bulan terakhir di Pasar Reguler dan/atau Pasar Reguler Periodic Call Auction kurang dari Rp51,00.| 5 : Memiliki ekuitas negatif pada laporan Keuangan terakhir.
+WIDI;10 : Dikenakan penghentian sementara perdagangan Efek selama lebih dari 1 (satu) hari bursa yang disebabkan oleh aktivitas perdagangan.
+JKSW;3 : Tidak membukukan pendapatan atau tidak terdapat perubahan pendapatan pada Laporan Keuangan Auditan dan/atau Laporan Keuangan Interim terakhir dibandingkan dengan laporan keuangan yang disampaikan sebelumnya.|5 : Memiliki ekuitas negatif pada laporan Keuangan terakhir.|7 : Memiliki likuiditas rendah dengan kriteria nilai transaksi rata-rata harian saham kurang dari Rp5.000.000,00 (lima juta rupiah) dan volume transaksi rata-rata harian saham kurang dari 10.000 (sepuluh ribu) saham selama 6 (enam) bulan terakhir di Pasar Reguler dan/atau Pasar Reguler Periodic Call Auction.
+WSKT;8 : Perusahaan Tercatat dalam kondisi dimohonkan PKPU, pailit, atau pembatalan perdamaian.
+CLAY;7 : Memiliki likuiditas rendah dengan kriteria nilai transaksi rata-rata harian saham kurang dari Rp5.000.000,00 (lima juta rupiah) dan volume transaksi rata-rata harian saham kurang dari 10.000 (sepuluh ribu) saham selama 6 (enam) bulan terakhir di Pasar Reguler dan/atau Pasar Reguler Periodic Call Auction.
+BUVA;7 : Memiliki likuiditas rendah dengan kriteria nilai transaksi rata-rata harian saham kurang dari Rp5.000.000,00 (lima juta rupiah) dan volume transaksi rata-rata harian saham kurang dari 10.000 (sepuluh ribu) saham selama 6 (enam) bulan terakhir di Pasar Reguler dan/atau Pasar Reguler Periodic Call Auction.
+TGRA;1 : Harga rata-rata saham selama 6 bulan terakhir di Pasar Reguler dan/atau Pasar Reguler Periodic Call Auction kurang dari Rp51,00.| 3 : Tidak membukukan pendapatan atau tidak terdapat perubahan pendapatan pada Laporan Keuangan Auditan dan/atau Laporan Keuangan Interim terakhir dibandingkan dengan laporan keuangan yang disampaikan sebelumnya.
+SINI;5 : Memiliki ekuitas negatif pada laporan Keuangan terakhir.
+TIRT;1 : Harga rata-rata saham selama 6 bulan terakhir di Pasar Reguler dan/atau Pasar Reguler Periodic Call Auction kurang dari Rp51,00.| 3 : Tidak membukukan pendapatan atau tidak terdapat perubahan pendapatan pada Laporan Keuangan Auditan dan/atau Laporan Keuangan Interim terakhir dibandingkan dengan laporan keuangan yang disampaikan sebelumnya.|5 : Memiliki ekuitas negatif pada laporan Keuangan terakhir.
+SATU;10 : Dikenakan penghentian sementara perdagangan Efek selama lebih dari 1 (satu) hari bursa yang disebabkan oleh aktivitas perdagangan.
+ARGO;7 : Memiliki likuiditas rendah dengan kriteria nilai transaksi rata-rata harian saham kurang dari Rp5.000.000,00 (lima juta rupiah) dan volume transaksi rata-rata harian saham kurang dari 10.000 (sepuluh ribu) saham selama 6 (enam) bulan terakhir di Pasar Reguler dan/atau Pasar Reguler Periodic Call Auction.
+PTSP;10 : Dikenakan penghentian sementara perdagangan Efek selama lebih dari 1 (satu) hari bursa yang disebabkan oleh aktivitas perdagangan.
+REAL;1 : Harga rata-rata saham selama 6 bulan terakhir di Pasar Reguler dan/atau Pasar Reguler Periodic Call Auction kurang dari Rp51,00.| 7 : Memiliki likuiditas rendah dengan kriteria nilai transaksi rata-rata harian saham kurang dari Rp5.000.000,00 (lima juta rupiah) dan volume transaksi rata-rata harian saham kurang dari 10.000 (sepuluh ribu) saham selama 6 (enam) bulan terakhir di Pasar Reguler dan/atau Pasar Reguler Periodic Call Auction.
 PSKT;1
 PTDU;1
-SBAT;1|3|7
+SBAT;1 : Harga rata-rata saham selama 6 bulan terakhir di Pasar Reguler dan/atau Pasar Reguler Periodic Call Auction kurang dari Rp51,00.| 3 : Tidak membukukan pendapatan atau tidak terdapat perubahan pendapatan pada Laporan Keuangan Auditan dan/atau Laporan Keuangan Interim terakhir dibandingkan dengan laporan keuangan yang disampaikan sebelumnya.|7 : Memiliki likuiditas rendah dengan kriteria nilai transaksi rata-rata harian saham kurang dari Rp5.000.000,00 (lima juta rupiah) dan volume transaksi rata-rata harian saham kurang dari 10.000 (sepuluh ribu) saham selama 6 (enam) bulan terakhir di Pasar Reguler dan/atau Pasar Reguler Periodic Call Auction.
 RODA;1
 SDMU;1
-TOPS;1|7
+TOPS;1 : Harga rata-rata saham selama 6 bulan terakhir di Pasar Reguler dan/atau Pasar Reguler Periodic Call Auction kurang dari Rp51,00.| 7 : Memiliki likuiditas rendah dengan kriteria nilai transaksi rata-rata harian saham kurang dari Rp5.000.000,00 (lima juta rupiah) dan volume transaksi rata-rata harian saham kurang dari 10.000 (sepuluh ribu) saham selama 6 (enam) bulan terakhir di Pasar Reguler dan/atau Pasar Reguler Periodic Call Auction.
 TAMA;1
 TAMU;1
 TARA;1
-LAND;1|7
+LAND;1 : Harga rata-rata saham selama 6 bulan terakhir di Pasar Reguler dan/atau Pasar Reguler Periodic Call Auction kurang dari Rp51,00.| 7 : Memiliki likuiditas rendah dengan kriteria nilai transaksi rata-rata harian saham kurang dari Rp5.000.000,00 (lima juta rupiah) dan volume transaksi rata-rata harian saham kurang dari 10.000 (sepuluh ribu) saham selama 6 (enam) bulan terakhir di Pasar Reguler dan/atau Pasar Reguler Periodic Call Auction.
 LAPD;1
 KIAS;1
-MDRN;1|5
-MGNA;1|7
+MDRN;1 : Harga rata-rata saham selama 6 bulan terakhir di Pasar Reguler dan/atau Pasar Reguler Periodic Call Auction kurang dari Rp51,00.| 5 : Memiliki ekuitas negatif pada laporan Keuangan terakhir.
+MGNA;1 : Harga rata-rata saham selama 6 bulan terakhir di Pasar Reguler dan/atau Pasar Reguler Periodic Call Auction kurang dari Rp51,00.| 7 : Memiliki likuiditas rendah dengan kriteria nilai transaksi rata-rata harian saham kurang dari Rp5.000.000,00 (lima juta rupiah) dan volume transaksi rata-rata harian saham kurang dari 10.000 (sepuluh ribu) saham selama 6 (enam) bulan terakhir di Pasar Reguler dan/atau Pasar Reguler Periodic Call Auction.
 MINA;1
 MIRA;1
-MKNT;1|5
+MKNT;1 : Harga rata-rata saham selama 6 bulan terakhir di Pasar Reguler dan/atau Pasar Reguler Periodic Call Auction kurang dari Rp51,00.| 5 : Memiliki ekuitas negatif pada laporan Keuangan terakhir.
 NASA;1
-MTPS;1|3|7
+MTPS;1 : Harga rata-rata saham selama 6 bulan terakhir di Pasar Reguler dan/atau Pasar Reguler Periodic Call Auction kurang dari Rp51,00.| 3 : Tidak membukukan pendapatan atau tidak terdapat perubahan pendapatan pada Laporan Keuangan Auditan dan/atau Laporan Keuangan Interim terakhir dibandingkan dengan laporan keuangan yang disampaikan sebelumnya.|7 : Memiliki likuiditas rendah dengan kriteria nilai transaksi rata-rata harian saham kurang dari Rp5.000.000,00 (lima juta rupiah) dan volume transaksi rata-rata harian saham kurang dari 10.000 (sepuluh ribu) saham selama 6 (enam) bulan terakhir di Pasar Reguler dan/atau Pasar Reguler Periodic Call Auction.
 PADI;1
 PBRX;1
 POLA;1
-POLY;1|5
+POLY;1 : Harga rata-rata saham selama 6 bulan terakhir di Pasar Reguler dan/atau Pasar Reguler Periodic Call Auction kurang dari Rp51,00.| 5 : Memiliki ekuitas negatif pada laporan Keuangan terakhir.
 ALTO;1
 ASMI;1
-BAPI;1|7
-BPII;7
+BAPI;1 : Harga rata-rata saham selama 6 bulan terakhir di Pasar Reguler dan/atau Pasar Reguler Periodic Call Auction kurang dari Rp51,00.| 7 : Memiliki likuiditas rendah dengan kriteria nilai transaksi rata-rata harian saham kurang dari Rp5.000.000,00 (lima juta rupiah) dan volume transaksi rata-rata harian saham kurang dari 10.000 (sepuluh ribu) saham selama 6 (enam) bulan terakhir di Pasar Reguler dan/atau Pasar Reguler Periodic Call Auction.
+BPII;7 : Memiliki likuiditas rendah dengan kriteria nilai transaksi rata-rata harian saham kurang dari Rp5.000.000,00 (lima juta rupiah) dan volume transaksi rata-rata harian saham kurang dari 10.000 (sepuluh ribu) saham selama 6 (enam) bulan terakhir di Pasar Reguler dan/atau Pasar Reguler Periodic Call Auction.
 CBRE;1
 BSBK;1
-CTTH;1|7
-DIGI;1|5|7
-DEAL;1|5|7
+CTTH;1 : Harga rata-rata saham selama 6 bulan terakhir di Pasar Reguler dan/atau Pasar Reguler Periodic Call Auction kurang dari Rp51,00.| 7 : Memiliki likuiditas rendah dengan kriteria nilai transaksi rata-rata harian saham kurang dari Rp5.000.000,00 (lima juta rupiah) dan volume transaksi rata-rata harian saham kurang dari 10.000 (sepuluh ribu) saham selama 6 (enam) bulan terakhir di Pasar Reguler dan/atau Pasar Reguler Periodic Call Auction.
+DIGI;1 : Harga rata-rata saham selama 6 bulan terakhir di Pasar Reguler dan/atau Pasar Reguler Periodic Call Auction kurang dari Rp51,00.| 5 : Memiliki ekuitas negatif pada laporan Keuangan terakhir.|7 : Memiliki likuiditas rendah dengan kriteria nilai transaksi rata-rata harian saham kurang dari Rp5.000.000,00 (lima juta rupiah) dan volume transaksi rata-rata harian saham kurang dari 10.000 (sepuluh ribu) saham selama 6 (enam) bulan terakhir di Pasar Reguler dan/atau Pasar Reguler Periodic Call Auction.
+DEAL;1 : Harga rata-rata saham selama 6 bulan terakhir di Pasar Reguler dan/atau Pasar Reguler Periodic Call Auction kurang dari Rp51,00.| 5 : Memiliki ekuitas negatif pada laporan Keuangan terakhir.|7 : Memiliki likuiditas rendah dengan kriteria nilai transaksi rata-rata harian saham kurang dari Rp5.000.000,00 (lima juta rupiah) dan volume transaksi rata-rata harian saham kurang dari 10.000 (sepuluh ribu) saham selama 6 (enam) bulan terakhir di Pasar Reguler dan/atau Pasar Reguler Periodic Call Auction.
 DPUM;1
 ENZO;1
 EPAC;1
-FLMC;7
+FLMC;7 : Memiliki likuiditas rendah dengan kriteria nilai transaksi rata-rata harian saham kurang dari Rp5.000.000,00 (lima juta rupiah) dan volume transaksi rata-rata harian saham kurang dari 10.000 (sepuluh ribu) saham selama 6 (enam) bulan terakhir di Pasar Reguler dan/atau Pasar Reguler Periodic Call Auction.
 ESIP;1
 ESTI;1
-INTA;1|5
+INTA;1 : Harga rata-rata saham selama 6 bulan terakhir di Pasar Reguler dan/atau Pasar Reguler Periodic Call Auction kurang dari Rp51,00.| 5 : Memiliki ekuitas negatif pada laporan Keuangan terakhir.
 IPPE;1
 INCF;1
-IFSH;7
-IBFN;1|5|7
+IFSH;7 : Memiliki likuiditas rendah dengan kriteria nilai transaksi rata-rata harian saham kurang dari Rp5.000.000,00 (lima juta rupiah) dan volume transaksi rata-rata harian saham kurang dari 10.000 (sepuluh ribu) saham selama 6 (enam) bulan terakhir di Pasar Reguler dan/atau Pasar Reguler Periodic Call Auction.
+IBFN;1 : Harga rata-rata saham selama 6 bulan terakhir di Pasar Reguler dan/atau Pasar Reguler Periodic Call Auction kurang dari Rp51,00.| 5 : Memiliki ekuitas negatif pada laporan Keuangan terakhir.|7 : Memiliki likuiditas rendah dengan kriteria nilai transaksi rata-rata harian saham kurang dari Rp5.000.000,00 (lima juta rupiah) dan volume transaksi rata-rata harian saham kurang dari 10.000 (sepuluh ribu) saham selama 6 (enam) bulan terakhir di Pasar Reguler dan/atau Pasar Reguler Periodic Call Auction.
 HADE;1
-DADA;1|7
+DADA;1 : Harga rata-rata saham selama 6 bulan terakhir di Pasar Reguler dan/atau Pasar Reguler Periodic Call Auction kurang dari Rp51,00.| 7 : Memiliki likuiditas rendah dengan kriteria nilai transaksi rata-rata harian saham kurang dari Rp5.000.000,00 (lima juta rupiah) dan volume transaksi rata-rata harian saham kurang dari 10.000 (sepuluh ribu) saham selama 6 (enam) bulan terakhir di Pasar Reguler dan/atau Pasar Reguler Periodic Call Auction.
 HDIT;1
 YELO;1
-YPAS;7
-YULE;7
+YPAS;7 : Memiliki likuiditas rendah dengan kriteria nilai transaksi rata-rata harian saham kurang dari Rp5.000.000,00 (lima juta rupiah) dan volume transaksi rata-rata harian saham kurang dari 10.000 (sepuluh ribu) saham selama 6 (enam) bulan terakhir di Pasar Reguler dan/atau Pasar Reguler Periodic Call Auction.
+YULE;7 : Memiliki likuiditas rendah dengan kriteria nilai transaksi rata-rata harian saham kurang dari Rp5.000.000,00 (lima juta rupiah) dan volume transaksi rata-rata harian saham kurang dari 10.000 (sepuluh ribu) saham selama 6 (enam) bulan terakhir di Pasar Reguler dan/atau Pasar Reguler Periodic Call Auction.
 ZATA;1
 WMPP;1
 WMUU;1
-WSBP;1|5
+WSBP;1 : Harga rata-rata saham selama 6 bulan terakhir di Pasar Reguler dan/atau Pasar Reguler Periodic Call Auction kurang dari Rp51,00.| 5 : Memiliki ekuitas negatif pada laporan Keuangan terakhir.
 HBAT;1
 ISAP;1
 BMBL;1
@@ -217,97 +217,97 @@ NINE;1
 KLIN;1
 SOFA;1
 SOUL;1
-CITY;10
-SOTS;10
-ETWA;5|8
-POLU;10
-CUAN;10
-GIAA;5
-SHID;10
-SIMA;1|5|6|7
-SKBM;6
-SKLT;6
-SKYB;6|7
-SMCB;6
-RSGK;6
-SAFE;5|6
-SCCO;6
-SCNP;6
-PRAS;6
-RIMO;1|6|7
-PUDP;6
-PURE;6|7
-SSTM;6|7
-SUGI;1|6|7
-TOTO;6
-TRAM;1|6|7
-TRIO;5|6|7
-TFCO;6|7
-TECH;6
-PLAS;1|6|7
-PLIN;6
-PNSE;6|7
-PGUN;6
-NIPS;6|7|8
-NUSA;1|6|7
-MTRA;2|5|6|7
-MTSM;6
-MYRX;1|6|7|8
-MYTX;5|6
-KMTR;6
-KBRI;1|3|6|7
-KDSI;6
-LCGP;6|7
-KPAL;1|6|7
-KPAS;6|7|8
-KRAH;6|7
-MFMI;6|7
-MAMI;1|6|7|8
-MASA;6
-MDIA;1|6
-MABA;1|2|6|7
-LMPI;6
-LMSH;6|7
-LION;6
-HDTX;5|6|7
-HKMU;1|2|5|6|7
-HOTL;1|6|7|8|9
-JAWA;6
-JECC;6|7
-JSKY;6|7|8
-INPP;6
-EPMT;6
-DMND;6
-FASW;6|7
-FISH;6|7
-DUCK;6|7
-GGRP;6
-FORZ;1|6|7|8
-GAMA;1|6|7
-GDST;6
-GDYR;6
-CITA;6
-CNTX;5|6|7
-COWL;1|2|5|6|7|8
-CPRI;1|6
-BKSW;6
-ARTA;6|7
-ADES;6
-ALMI;6
-AGRS;6
-AIMS;3|6
-ASRM;6|7
-WICO;6|7
-BRNA;6
-FORU;10
-HELI;10
-LMAS;1|2|5|7
-KAYU;10
-CGAS;10
-PTPS;10
-MAGP;1|7
-KARW;5|10
-IBOS;10
-GMTD;7
-MPIX;10
-UNIT;7
+CITY;10 : Dikenakan penghentian sementara perdagangan Efek selama lebih dari 1 (satu) hari bursa yang disebabkan oleh aktivitas perdagangan.
+SOTS;10 : Dikenakan penghentian sementara perdagangan Efek selama lebih dari 1 (satu) hari bursa yang disebabkan oleh aktivitas perdagangan.
+ETWA;5 : Memiliki ekuitas negatif pada laporan Keuangan terakhir.|8 : Perusahaan Tercatat dalam kondisi dimohonkan PKPU, pailit, atau pembatalan perdamaian.
+POLU;10 : Dikenakan penghentian sementara perdagangan Efek selama lebih dari 1 (satu) hari bursa yang disebabkan oleh aktivitas perdagangan.
+CUAN;10 : Dikenakan penghentian sementara perdagangan Efek selama lebih dari 1 (satu) hari bursa yang disebabkan oleh aktivitas perdagangan.
+GIAA;5 : Memiliki ekuitas negatif pada laporan Keuangan terakhir.
+SHID;10 : Dikenakan penghentian sementara perdagangan Efek selama lebih dari 1 (satu) hari bursa yang disebabkan oleh aktivitas perdagangan.
+SIMA;1 : Harga rata-rata saham selama 6 bulan terakhir di Pasar Reguler dan/atau Pasar Reguler Periodic Call Auction kurang dari Rp51,00.| 5 : Memiliki ekuitas negatif pada laporan Keuangan terakhir.|6 : Tidak memenuhi persyaratan untuk dapat tetap tercatat di Bursa sebagaimana diatur Peraturan Nomor I-A dan I-V (terkait Saham Free float).|7 : Memiliki likuiditas rendah dengan kriteria nilai transaksi rata-rata harian saham kurang dari Rp5.000.000,00 (lima juta rupiah) dan volume transaksi rata-rata harian saham kurang dari 10.000 (sepuluh ribu) saham selama 6 (enam) bulan terakhir di Pasar Reguler dan/atau Pasar Reguler Periodic Call Auction.
+SKBM;6 : Tidak memenuhi persyaratan untuk dapat tetap tercatat di Bursa sebagaimana diatur Peraturan Nomor I-A dan I-V (terkait Saham Free float).
+SKLT;6 : Tidak memenuhi persyaratan untuk dapat tetap tercatat di Bursa sebagaimana diatur Peraturan Nomor I-A dan I-V (terkait Saham Free float).
+SKYB;6 : Tidak memenuhi persyaratan untuk dapat tetap tercatat di Bursa sebagaimana diatur Peraturan Nomor I-A dan I-V (terkait Saham Free float).|7 : Memiliki likuiditas rendah dengan kriteria nilai transaksi rata-rata harian saham kurang dari Rp5.000.000,00 (lima juta rupiah) dan volume transaksi rata-rata harian saham kurang dari 10.000 (sepuluh ribu) saham selama 6 (enam) bulan terakhir di Pasar Reguler dan/atau Pasar Reguler Periodic Call Auction.
+SMCB;6 : Tidak memenuhi persyaratan untuk dapat tetap tercatat di Bursa sebagaimana diatur Peraturan Nomor I-A dan I-V (terkait Saham Free float).
+RSGK;6 : Tidak memenuhi persyaratan untuk dapat tetap tercatat di Bursa sebagaimana diatur Peraturan Nomor I-A dan I-V (terkait Saham Free float).
+SAFE;5 : Memiliki ekuitas negatif pada laporan Keuangan terakhir.|6 : Tidak memenuhi persyaratan untuk dapat tetap tercatat di Bursa sebagaimana diatur Peraturan Nomor I-A dan I-V (terkait Saham Free float).
+SCCO;6 : Tidak memenuhi persyaratan untuk dapat tetap tercatat di Bursa sebagaimana diatur Peraturan Nomor I-A dan I-V (terkait Saham Free float).
+SCNP;6 : Tidak memenuhi persyaratan untuk dapat tetap tercatat di Bursa sebagaimana diatur Peraturan Nomor I-A dan I-V (terkait Saham Free float).
+PRAS;6 : Tidak memenuhi persyaratan untuk dapat tetap tercatat di Bursa sebagaimana diatur Peraturan Nomor I-A dan I-V (terkait Saham Free float).
+RIMO;1 : Harga rata-rata saham selama 6 bulan terakhir di Pasar Reguler dan/atau Pasar Reguler Periodic Call Auction kurang dari Rp51,00.| 6 : Tidak memenuhi persyaratan untuk dapat tetap tercatat di Bursa sebagaimana diatur Peraturan Nomor I-A dan I-V (terkait Saham Free float).|7 : Memiliki likuiditas rendah dengan kriteria nilai transaksi rata-rata harian saham kurang dari Rp5.000.000,00 (lima juta rupiah) dan volume transaksi rata-rata harian saham kurang dari 10.000 (sepuluh ribu) saham selama 6 (enam) bulan terakhir di Pasar Reguler dan/atau Pasar Reguler Periodic Call Auction.
+PUDP;6 : Tidak memenuhi persyaratan untuk dapat tetap tercatat di Bursa sebagaimana diatur Peraturan Nomor I-A dan I-V (terkait Saham Free float).
+PURE;6 : Tidak memenuhi persyaratan untuk dapat tetap tercatat di Bursa sebagaimana diatur Peraturan Nomor I-A dan I-V (terkait Saham Free float).|7 : Memiliki likuiditas rendah dengan kriteria nilai transaksi rata-rata harian saham kurang dari Rp5.000.000,00 (lima juta rupiah) dan volume transaksi rata-rata harian saham kurang dari 10.000 (sepuluh ribu) saham selama 6 (enam) bulan terakhir di Pasar Reguler dan/atau Pasar Reguler Periodic Call Auction.
+SSTM;6 : Tidak memenuhi persyaratan untuk dapat tetap tercatat di Bursa sebagaimana diatur Peraturan Nomor I-A dan I-V (terkait Saham Free float).|7 : Memiliki likuiditas rendah dengan kriteria nilai transaksi rata-rata harian saham kurang dari Rp5.000.000,00 (lima juta rupiah) dan volume transaksi rata-rata harian saham kurang dari 10.000 (sepuluh ribu) saham selama 6 (enam) bulan terakhir di Pasar Reguler dan/atau Pasar Reguler Periodic Call Auction.
+SUGI;1 : Harga rata-rata saham selama 6 bulan terakhir di Pasar Reguler dan/atau Pasar Reguler Periodic Call Auction kurang dari Rp51,00.| 6 : Tidak memenuhi persyaratan untuk dapat tetap tercatat di Bursa sebagaimana diatur Peraturan Nomor I-A dan I-V (terkait Saham Free float).|7 : Memiliki likuiditas rendah dengan kriteria nilai transaksi rata-rata harian saham kurang dari Rp5.000.000,00 (lima juta rupiah) dan volume transaksi rata-rata harian saham kurang dari 10.000 (sepuluh ribu) saham selama 6 (enam) bulan terakhir di Pasar Reguler dan/atau Pasar Reguler Periodic Call Auction.
+TOTO;6 : Tidak memenuhi persyaratan untuk dapat tetap tercatat di Bursa sebagaimana diatur Peraturan Nomor I-A dan I-V (terkait Saham Free float).
+TRAM;1 : Harga rata-rata saham selama 6 bulan terakhir di Pasar Reguler dan/atau Pasar Reguler Periodic Call Auction kurang dari Rp51,00.| 6 : Tidak memenuhi persyaratan untuk dapat tetap tercatat di Bursa sebagaimana diatur Peraturan Nomor I-A dan I-V (terkait Saham Free float).|7 : Memiliki likuiditas rendah dengan kriteria nilai transaksi rata-rata harian saham kurang dari Rp5.000.000,00 (lima juta rupiah) dan volume transaksi rata-rata harian saham kurang dari 10.000 (sepuluh ribu) saham selama 6 (enam) bulan terakhir di Pasar Reguler dan/atau Pasar Reguler Periodic Call Auction.
+TRIO;5 : Memiliki ekuitas negatif pada laporan Keuangan terakhir.|6 : Tidak memenuhi persyaratan untuk dapat tetap tercatat di Bursa sebagaimana diatur Peraturan Nomor I-A dan I-V (terkait Saham Free float).|7 : Memiliki likuiditas rendah dengan kriteria nilai transaksi rata-rata harian saham kurang dari Rp5.000.000,00 (lima juta rupiah) dan volume transaksi rata-rata harian saham kurang dari 10.000 (sepuluh ribu) saham selama 6 (enam) bulan terakhir di Pasar Reguler dan/atau Pasar Reguler Periodic Call Auction.
+TFCO;6 : Tidak memenuhi persyaratan untuk dapat tetap tercatat di Bursa sebagaimana diatur Peraturan Nomor I-A dan I-V (terkait Saham Free float).|7 : Memiliki likuiditas rendah dengan kriteria nilai transaksi rata-rata harian saham kurang dari Rp5.000.000,00 (lima juta rupiah) dan volume transaksi rata-rata harian saham kurang dari 10.000 (sepuluh ribu) saham selama 6 (enam) bulan terakhir di Pasar Reguler dan/atau Pasar Reguler Periodic Call Auction.
+TECH;6 : Tidak memenuhi persyaratan untuk dapat tetap tercatat di Bursa sebagaimana diatur Peraturan Nomor I-A dan I-V (terkait Saham Free float).
+PLAS;1 : Harga rata-rata saham selama 6 bulan terakhir di Pasar Reguler dan/atau Pasar Reguler Periodic Call Auction kurang dari Rp51,00.| 6 : Tidak memenuhi persyaratan untuk dapat tetap tercatat di Bursa sebagaimana diatur Peraturan Nomor I-A dan I-V (terkait Saham Free float).|7 : Memiliki likuiditas rendah dengan kriteria nilai transaksi rata-rata harian saham kurang dari Rp5.000.000,00 (lima juta rupiah) dan volume transaksi rata-rata harian saham kurang dari 10.000 (sepuluh ribu) saham selama 6 (enam) bulan terakhir di Pasar Reguler dan/atau Pasar Reguler Periodic Call Auction.
+PLIN;6 : Tidak memenuhi persyaratan untuk dapat tetap tercatat di Bursa sebagaimana diatur Peraturan Nomor I-A dan I-V (terkait Saham Free float).
+PNSE;6 : Tidak memenuhi persyaratan untuk dapat tetap tercatat di Bursa sebagaimana diatur Peraturan Nomor I-A dan I-V (terkait Saham Free float).|7 : Memiliki likuiditas rendah dengan kriteria nilai transaksi rata-rata harian saham kurang dari Rp5.000.000,00 (lima juta rupiah) dan volume transaksi rata-rata harian saham kurang dari 10.000 (sepuluh ribu) saham selama 6 (enam) bulan terakhir di Pasar Reguler dan/atau Pasar Reguler Periodic Call Auction.
+PGUN;6 : Tidak memenuhi persyaratan untuk dapat tetap tercatat di Bursa sebagaimana diatur Peraturan Nomor I-A dan I-V (terkait Saham Free float).
+NIPS;6 : Tidak memenuhi persyaratan untuk dapat tetap tercatat di Bursa sebagaimana diatur Peraturan Nomor I-A dan I-V (terkait Saham Free float).|7 : Memiliki likuiditas rendah dengan kriteria nilai transaksi rata-rata harian saham kurang dari Rp5.000.000,00 (lima juta rupiah) dan volume transaksi rata-rata harian saham kurang dari 10.000 (sepuluh ribu) saham selama 6 (enam) bulan terakhir di Pasar Reguler dan/atau Pasar Reguler Periodic Call Auction.|8 : Perusahaan Tercatat dalam kondisi dimohonkan PKPU, pailit, atau pembatalan perdamaian.
+NUSA;1 : Harga rata-rata saham selama 6 bulan terakhir di Pasar Reguler dan/atau Pasar Reguler Periodic Call Auction kurang dari Rp51,00.| 6 : Tidak memenuhi persyaratan untuk dapat tetap tercatat di Bursa sebagaimana diatur Peraturan Nomor I-A dan I-V (terkait Saham Free float).|7 : Memiliki likuiditas rendah dengan kriteria nilai transaksi rata-rata harian saham kurang dari Rp5.000.000,00 (lima juta rupiah) dan volume transaksi rata-rata harian saham kurang dari 10.000 (sepuluh ribu) saham selama 6 (enam) bulan terakhir di Pasar Reguler dan/atau Pasar Reguler Periodic Call Auction.
+MTRA;2 : Laporan Keuangan Auditan terakhir mendapatkan opini tidak menyatakan pendapat (disclaimer).|5 : Memiliki ekuitas negatif pada laporan Keuangan terakhir.|6 : Tidak memenuhi persyaratan untuk dapat tetap tercatat di Bursa sebagaimana diatur Peraturan Nomor I-A dan I-V (terkait Saham Free float).|7 : Memiliki likuiditas rendah dengan kriteria nilai transaksi rata-rata harian saham kurang dari Rp5.000.000,00 (lima juta rupiah) dan volume transaksi rata-rata harian saham kurang dari 10.000 (sepuluh ribu) saham selama 6 (enam) bulan terakhir di Pasar Reguler dan/atau Pasar Reguler Periodic Call Auction.
+MTSM;6 : Tidak memenuhi persyaratan untuk dapat tetap tercatat di Bursa sebagaimana diatur Peraturan Nomor I-A dan I-V (terkait Saham Free float).
+MYRX;1 : Harga rata-rata saham selama 6 bulan terakhir di Pasar Reguler dan/atau Pasar Reguler Periodic Call Auction kurang dari Rp51,00.| 6 : Tidak memenuhi persyaratan untuk dapat tetap tercatat di Bursa sebagaimana diatur Peraturan Nomor I-A dan I-V (terkait Saham Free float).|7 : Memiliki likuiditas rendah dengan kriteria nilai transaksi rata-rata harian saham kurang dari Rp5.000.000,00 (lima juta rupiah) dan volume transaksi rata-rata harian saham kurang dari 10.000 (sepuluh ribu) saham selama 6 (enam) bulan terakhir di Pasar Reguler dan/atau Pasar Reguler Periodic Call Auction.|8 : Perusahaan Tercatat dalam kondisi dimohonkan PKPU, pailit, atau pembatalan perdamaian.
+MYTX;5 : Memiliki ekuitas negatif pada laporan Keuangan terakhir.|6 : Tidak memenuhi persyaratan untuk dapat tetap tercatat di Bursa sebagaimana diatur Peraturan Nomor I-A dan I-V (terkait Saham Free float).
+KMTR;6 : Tidak memenuhi persyaratan untuk dapat tetap tercatat di Bursa sebagaimana diatur Peraturan Nomor I-A dan I-V (terkait Saham Free float).
+KBRI;1 : Harga rata-rata saham selama 6 bulan terakhir di Pasar Reguler dan/atau Pasar Reguler Periodic Call Auction kurang dari Rp51,00.| 3 : Tidak membukukan pendapatan atau tidak terdapat perubahan pendapatan pada Laporan Keuangan Auditan dan/atau Laporan Keuangan Interim terakhir dibandingkan dengan laporan keuangan yang disampaikan sebelumnya.|6 : Tidak memenuhi persyaratan untuk dapat tetap tercatat di Bursa sebagaimana diatur Peraturan Nomor I-A dan I-V (terkait Saham Free float).|7 : Memiliki likuiditas rendah dengan kriteria nilai transaksi rata-rata harian saham kurang dari Rp5.000.000,00 (lima juta rupiah) dan volume transaksi rata-rata harian saham kurang dari 10.000 (sepuluh ribu) saham selama 6 (enam) bulan terakhir di Pasar Reguler dan/atau Pasar Reguler Periodic Call Auction.
+KDSI;6 : Tidak memenuhi persyaratan untuk dapat tetap tercatat di Bursa sebagaimana diatur Peraturan Nomor I-A dan I-V (terkait Saham Free float).
+LCGP;6 : Tidak memenuhi persyaratan untuk dapat tetap tercatat di Bursa sebagaimana diatur Peraturan Nomor I-A dan I-V (terkait Saham Free float).|7 : Memiliki likuiditas rendah dengan kriteria nilai transaksi rata-rata harian saham kurang dari Rp5.000.000,00 (lima juta rupiah) dan volume transaksi rata-rata harian saham kurang dari 10.000 (sepuluh ribu) saham selama 6 (enam) bulan terakhir di Pasar Reguler dan/atau Pasar Reguler Periodic Call Auction.
+KPAL;1 : Harga rata-rata saham selama 6 bulan terakhir di Pasar Reguler dan/atau Pasar Reguler Periodic Call Auction kurang dari Rp51,00.| 6 : Tidak memenuhi persyaratan untuk dapat tetap tercatat di Bursa sebagaimana diatur Peraturan Nomor I-A dan I-V (terkait Saham Free float).|7 : Memiliki likuiditas rendah dengan kriteria nilai transaksi rata-rata harian saham kurang dari Rp5.000.000,00 (lima juta rupiah) dan volume transaksi rata-rata harian saham kurang dari 10.000 (sepuluh ribu) saham selama 6 (enam) bulan terakhir di Pasar Reguler dan/atau Pasar Reguler Periodic Call Auction.
+KPAS;6 : Tidak memenuhi persyaratan untuk dapat tetap tercatat di Bursa sebagaimana diatur Peraturan Nomor I-A dan I-V (terkait Saham Free float).|7 : Memiliki likuiditas rendah dengan kriteria nilai transaksi rata-rata harian saham kurang dari Rp5.000.000,00 (lima juta rupiah) dan volume transaksi rata-rata harian saham kurang dari 10.000 (sepuluh ribu) saham selama 6 (enam) bulan terakhir di Pasar Reguler dan/atau Pasar Reguler Periodic Call Auction.|8 : Perusahaan Tercatat dalam kondisi dimohonkan PKPU, pailit, atau pembatalan perdamaian.
+KRAH;6 : Tidak memenuhi persyaratan untuk dapat tetap tercatat di Bursa sebagaimana diatur Peraturan Nomor I-A dan I-V (terkait Saham Free float).|7 : Memiliki likuiditas rendah dengan kriteria nilai transaksi rata-rata harian saham kurang dari Rp5.000.000,00 (lima juta rupiah) dan volume transaksi rata-rata harian saham kurang dari 10.000 (sepuluh ribu) saham selama 6 (enam) bulan terakhir di Pasar Reguler dan/atau Pasar Reguler Periodic Call Auction.
+MFMI;6 : Tidak memenuhi persyaratan untuk dapat tetap tercatat di Bursa sebagaimana diatur Peraturan Nomor I-A dan I-V (terkait Saham Free float).|7 : Memiliki likuiditas rendah dengan kriteria nilai transaksi rata-rata harian saham kurang dari Rp5.000.000,00 (lima juta rupiah) dan volume transaksi rata-rata harian saham kurang dari 10.000 (sepuluh ribu) saham selama 6 (enam) bulan terakhir di Pasar Reguler dan/atau Pasar Reguler Periodic Call Auction.
+MAMI;1 : Harga rata-rata saham selama 6 bulan terakhir di Pasar Reguler dan/atau Pasar Reguler Periodic Call Auction kurang dari Rp51,00.| 6 : Tidak memenuhi persyaratan untuk dapat tetap tercatat di Bursa sebagaimana diatur Peraturan Nomor I-A dan I-V (terkait Saham Free float).|7 : Memiliki likuiditas rendah dengan kriteria nilai transaksi rata-rata harian saham kurang dari Rp5.000.000,00 (lima juta rupiah) dan volume transaksi rata-rata harian saham kurang dari 10.000 (sepuluh ribu) saham selama 6 (enam) bulan terakhir di Pasar Reguler dan/atau Pasar Reguler Periodic Call Auction.|8 : Perusahaan Tercatat dalam kondisi dimohonkan PKPU, pailit, atau pembatalan perdamaian.
+MASA;6 : Tidak memenuhi persyaratan untuk dapat tetap tercatat di Bursa sebagaimana diatur Peraturan Nomor I-A dan I-V (terkait Saham Free float).
+MDIA;1 : Harga rata-rata saham selama 6 bulan terakhir di Pasar Reguler dan/atau Pasar Reguler Periodic Call Auction kurang dari Rp51,00.| 6 : Tidak memenuhi persyaratan untuk dapat tetap tercatat di Bursa sebagaimana diatur Peraturan Nomor I-A dan I-V (terkait Saham Free float).
+MABA;1 : Harga rata-rata saham selama 6 bulan terakhir di Pasar Reguler dan/atau Pasar Reguler Periodic Call Auction kurang dari Rp51,00.| 2 : Laporan Keuangan Auditan terakhir mendapatkan opini tidak menyatakan pendapat (disclaimer).|6 : Tidak memenuhi persyaratan untuk dapat tetap tercatat di Bursa sebagaimana diatur Peraturan Nomor I-A dan I-V (terkait Saham Free float).|7 : Memiliki likuiditas rendah dengan kriteria nilai transaksi rata-rata harian saham kurang dari Rp5.000.000,00 (lima juta rupiah) dan volume transaksi rata-rata harian saham kurang dari 10.000 (sepuluh ribu) saham selama 6 (enam) bulan terakhir di Pasar Reguler dan/atau Pasar Reguler Periodic Call Auction.
+LMPI;6 : Tidak memenuhi persyaratan untuk dapat tetap tercatat di Bursa sebagaimana diatur Peraturan Nomor I-A dan I-V (terkait Saham Free float).
+LMSH;6 : Tidak memenuhi persyaratan untuk dapat tetap tercatat di Bursa sebagaimana diatur Peraturan Nomor I-A dan I-V (terkait Saham Free float).|7 : Memiliki likuiditas rendah dengan kriteria nilai transaksi rata-rata harian saham kurang dari Rp5.000.000,00 (lima juta rupiah) dan volume transaksi rata-rata harian saham kurang dari 10.000 (sepuluh ribu) saham selama 6 (enam) bulan terakhir di Pasar Reguler dan/atau Pasar Reguler Periodic Call Auction.
+LION;6 : Tidak memenuhi persyaratan untuk dapat tetap tercatat di Bursa sebagaimana diatur Peraturan Nomor I-A dan I-V (terkait Saham Free float).
+HDTX;5 : Memiliki ekuitas negatif pada laporan Keuangan terakhir.|6 : Tidak memenuhi persyaratan untuk dapat tetap tercatat di Bursa sebagaimana diatur Peraturan Nomor I-A dan I-V (terkait Saham Free float).|7 : Memiliki likuiditas rendah dengan kriteria nilai transaksi rata-rata harian saham kurang dari Rp5.000.000,00 (lima juta rupiah) dan volume transaksi rata-rata harian saham kurang dari 10.000 (sepuluh ribu) saham selama 6 (enam) bulan terakhir di Pasar Reguler dan/atau Pasar Reguler Periodic Call Auction.
+HKMU;1 : Harga rata-rata saham selama 6 bulan terakhir di Pasar Reguler dan/atau Pasar Reguler Periodic Call Auction kurang dari Rp51,00.| 2 : Laporan Keuangan Auditan terakhir mendapatkan opini tidak menyatakan pendapat (disclaimer).|5 : Memiliki ekuitas negatif pada laporan Keuangan terakhir.|6 : Tidak memenuhi persyaratan untuk dapat tetap tercatat di Bursa sebagaimana diatur Peraturan Nomor I-A dan I-V (terkait Saham Free float).|7 : Memiliki likuiditas rendah dengan kriteria nilai transaksi rata-rata harian saham kurang dari Rp5.000.000,00 (lima juta rupiah) dan volume transaksi rata-rata harian saham kurang dari 10.000 (sepuluh ribu) saham selama 6 (enam) bulan terakhir di Pasar Reguler dan/atau Pasar Reguler Periodic Call Auction.
+HOTL;1 : Harga rata-rata saham selama 6 bulan terakhir di Pasar Reguler dan/atau Pasar Reguler Periodic Call Auction kurang dari Rp51,00.| 6 : Tidak memenuhi persyaratan untuk dapat tetap tercatat di Bursa sebagaimana diatur Peraturan Nomor I-A dan I-V (terkait Saham Free float).|7 : Memiliki likuiditas rendah dengan kriteria nilai transaksi rata-rata harian saham kurang dari Rp5.000.000,00 (lima juta rupiah) dan volume transaksi rata-rata harian saham kurang dari 10.000 (sepuluh ribu) saham selama 6 (enam) bulan terakhir di Pasar Reguler dan/atau Pasar Reguler Periodic Call Auction.|8 : Perusahaan Tercatat dalam kondisi dimohonkan PKPU, pailit, atau pembatalan perdamaian.|9 : Anak perusahaan yang kontribusi pendapatannya material terhadap Perusahaan Tercatat, dalam kondisi dimohonkan PKPU, pailit, atau pembatalan perdamaian.
+JAWA;6 : Tidak memenuhi persyaratan untuk dapat tetap tercatat di Bursa sebagaimana diatur Peraturan Nomor I-A dan I-V (terkait Saham Free float).
+JECC;6 : Tidak memenuhi persyaratan untuk dapat tetap tercatat di Bursa sebagaimana diatur Peraturan Nomor I-A dan I-V (terkait Saham Free float).|7 : Memiliki likuiditas rendah dengan kriteria nilai transaksi rata-rata harian saham kurang dari Rp5.000.000,00 (lima juta rupiah) dan volume transaksi rata-rata harian saham kurang dari 10.000 (sepuluh ribu) saham selama 6 (enam) bulan terakhir di Pasar Reguler dan/atau Pasar Reguler Periodic Call Auction.
+JSKY;6 : Tidak memenuhi persyaratan untuk dapat tetap tercatat di Bursa sebagaimana diatur Peraturan Nomor I-A dan I-V (terkait Saham Free float).|7 : Memiliki likuiditas rendah dengan kriteria nilai transaksi rata-rata harian saham kurang dari Rp5.000.000,00 (lima juta rupiah) dan volume transaksi rata-rata harian saham kurang dari 10.000 (sepuluh ribu) saham selama 6 (enam) bulan terakhir di Pasar Reguler dan/atau Pasar Reguler Periodic Call Auction.|8 : Perusahaan Tercatat dalam kondisi dimohonkan PKPU, pailit, atau pembatalan perdamaian.
+INPP;6 : Tidak memenuhi persyaratan untuk dapat tetap tercatat di Bursa sebagaimana diatur Peraturan Nomor I-A dan I-V (terkait Saham Free float).
+EPMT;6 : Tidak memenuhi persyaratan untuk dapat tetap tercatat di Bursa sebagaimana diatur Peraturan Nomor I-A dan I-V (terkait Saham Free float).
+DMND;6 : Tidak memenuhi persyaratan untuk dapat tetap tercatat di Bursa sebagaimana diatur Peraturan Nomor I-A dan I-V (terkait Saham Free float).
+FASW;6 : Tidak memenuhi persyaratan untuk dapat tetap tercatat di Bursa sebagaimana diatur Peraturan Nomor I-A dan I-V (terkait Saham Free float).|7 : Memiliki likuiditas rendah dengan kriteria nilai transaksi rata-rata harian saham kurang dari Rp5.000.000,00 (lima juta rupiah) dan volume transaksi rata-rata harian saham kurang dari 10.000 (sepuluh ribu) saham selama 6 (enam) bulan terakhir di Pasar Reguler dan/atau Pasar Reguler Periodic Call Auction.
+FISH;6 : Tidak memenuhi persyaratan untuk dapat tetap tercatat di Bursa sebagaimana diatur Peraturan Nomor I-A dan I-V (terkait Saham Free float).|7 : Memiliki likuiditas rendah dengan kriteria nilai transaksi rata-rata harian saham kurang dari Rp5.000.000,00 (lima juta rupiah) dan volume transaksi rata-rata harian saham kurang dari 10.000 (sepuluh ribu) saham selama 6 (enam) bulan terakhir di Pasar Reguler dan/atau Pasar Reguler Periodic Call Auction.
+DUCK;6 : Tidak memenuhi persyaratan untuk dapat tetap tercatat di Bursa sebagaimana diatur Peraturan Nomor I-A dan I-V (terkait Saham Free float).|7 : Memiliki likuiditas rendah dengan kriteria nilai transaksi rata-rata harian saham kurang dari Rp5.000.000,00 (lima juta rupiah) dan volume transaksi rata-rata harian saham kurang dari 10.000 (sepuluh ribu) saham selama 6 (enam) bulan terakhir di Pasar Reguler dan/atau Pasar Reguler Periodic Call Auction.
+GGRP;6 : Tidak memenuhi persyaratan untuk dapat tetap tercatat di Bursa sebagaimana diatur Peraturan Nomor I-A dan I-V (terkait Saham Free float).
+FORZ;1 : Harga rata-rata saham selama 6 bulan terakhir di Pasar Reguler dan/atau Pasar Reguler Periodic Call Auction kurang dari Rp51,00.| 6 : Tidak memenuhi persyaratan untuk dapat tetap tercatat di Bursa sebagaimana diatur Peraturan Nomor I-A dan I-V (terkait Saham Free float).|7 : Memiliki likuiditas rendah dengan kriteria nilai transaksi rata-rata harian saham kurang dari Rp5.000.000,00 (lima juta rupiah) dan volume transaksi rata-rata harian saham kurang dari 10.000 (sepuluh ribu) saham selama 6 (enam) bulan terakhir di Pasar Reguler dan/atau Pasar Reguler Periodic Call Auction.|8 : Perusahaan Tercatat dalam kondisi dimohonkan PKPU, pailit, atau pembatalan perdamaian.
+GAMA;1 : Harga rata-rata saham selama 6 bulan terakhir di Pasar Reguler dan/atau Pasar Reguler Periodic Call Auction kurang dari Rp51,00.| 6 : Tidak memenuhi persyaratan untuk dapat tetap tercatat di Bursa sebagaimana diatur Peraturan Nomor I-A dan I-V (terkait Saham Free float).|7 : Memiliki likuiditas rendah dengan kriteria nilai transaksi rata-rata harian saham kurang dari Rp5.000.000,00 (lima juta rupiah) dan volume transaksi rata-rata harian saham kurang dari 10.000 (sepuluh ribu) saham selama 6 (enam) bulan terakhir di Pasar Reguler dan/atau Pasar Reguler Periodic Call Auction.
+GDST;6 : Tidak memenuhi persyaratan untuk dapat tetap tercatat di Bursa sebagaimana diatur Peraturan Nomor I-A dan I-V (terkait Saham Free float).
+GDYR;6 : Tidak memenuhi persyaratan untuk dapat tetap tercatat di Bursa sebagaimana diatur Peraturan Nomor I-A dan I-V (terkait Saham Free float).
+CITA;6 : Tidak memenuhi persyaratan untuk dapat tetap tercatat di Bursa sebagaimana diatur Peraturan Nomor I-A dan I-V (terkait Saham Free float).
+CNTX;5 : Memiliki ekuitas negatif pada laporan Keuangan terakhir.|6 : Tidak memenuhi persyaratan untuk dapat tetap tercatat di Bursa sebagaimana diatur Peraturan Nomor I-A dan I-V (terkait Saham Free float).|7 : Memiliki likuiditas rendah dengan kriteria nilai transaksi rata-rata harian saham kurang dari Rp5.000.000,00 (lima juta rupiah) dan volume transaksi rata-rata harian saham kurang dari 10.000 (sepuluh ribu) saham selama 6 (enam) bulan terakhir di Pasar Reguler dan/atau Pasar Reguler Periodic Call Auction.
+COWL;1 : Harga rata-rata saham selama 6 bulan terakhir di Pasar Reguler dan/atau Pasar Reguler Periodic Call Auction kurang dari Rp51,00.| 2 : Laporan Keuangan Auditan terakhir mendapatkan opini tidak menyatakan pendapat (disclaimer).|5 : Memiliki ekuitas negatif pada laporan Keuangan terakhir.|6 : Tidak memenuhi persyaratan untuk dapat tetap tercatat di Bursa sebagaimana diatur Peraturan Nomor I-A dan I-V (terkait Saham Free float).|7 : Memiliki likuiditas rendah dengan kriteria nilai transaksi rata-rata harian saham kurang dari Rp5.000.000,00 (lima juta rupiah) dan volume transaksi rata-rata harian saham kurang dari 10.000 (sepuluh ribu) saham selama 6 (enam) bulan terakhir di Pasar Reguler dan/atau Pasar Reguler Periodic Call Auction.|8 : Perusahaan Tercatat dalam kondisi dimohonkan PKPU, pailit, atau pembatalan perdamaian.
+CPRI;1 : Harga rata-rata saham selama 6 bulan terakhir di Pasar Reguler dan/atau Pasar Reguler Periodic Call Auction kurang dari Rp51,00.| 6 : Tidak memenuhi persyaratan untuk dapat tetap tercatat di Bursa sebagaimana diatur Peraturan Nomor I-A dan I-V (terkait Saham Free float).
+BKSW;6 : Tidak memenuhi persyaratan untuk dapat tetap tercatat di Bursa sebagaimana diatur Peraturan Nomor I-A dan I-V (terkait Saham Free float).
+ARTA;6 : Tidak memenuhi persyaratan untuk dapat tetap tercatat di Bursa sebagaimana diatur Peraturan Nomor I-A dan I-V (terkait Saham Free float).|7 : Memiliki likuiditas rendah dengan kriteria nilai transaksi rata-rata harian saham kurang dari Rp5.000.000,00 (lima juta rupiah) dan volume transaksi rata-rata harian saham kurang dari 10.000 (sepuluh ribu) saham selama 6 (enam) bulan terakhir di Pasar Reguler dan/atau Pasar Reguler Periodic Call Auction.
+ADES;6 : Tidak memenuhi persyaratan untuk dapat tetap tercatat di Bursa sebagaimana diatur Peraturan Nomor I-A dan I-V (terkait Saham Free float).
+ALMI;6 : Tidak memenuhi persyaratan untuk dapat tetap tercatat di Bursa sebagaimana diatur Peraturan Nomor I-A dan I-V (terkait Saham Free float).
+AGRS;6 : Tidak memenuhi persyaratan untuk dapat tetap tercatat di Bursa sebagaimana diatur Peraturan Nomor I-A dan I-V (terkait Saham Free float).
+AIMS;3 : Tidak membukukan pendapatan atau tidak terdapat perubahan pendapatan pada Laporan Keuangan Auditan dan/atau Laporan Keuangan Interim terakhir dibandingkan dengan laporan keuangan yang disampaikan sebelumnya.|6 : Tidak memenuhi persyaratan untuk dapat tetap tercatat di Bursa sebagaimana diatur Peraturan Nomor I-A dan I-V (terkait Saham Free float).
+ASRM;6 : Tidak memenuhi persyaratan untuk dapat tetap tercatat di Bursa sebagaimana diatur Peraturan Nomor I-A dan I-V (terkait Saham Free float).|7 : Memiliki likuiditas rendah dengan kriteria nilai transaksi rata-rata harian saham kurang dari Rp5.000.000,00 (lima juta rupiah) dan volume transaksi rata-rata harian saham kurang dari 10.000 (sepuluh ribu) saham selama 6 (enam) bulan terakhir di Pasar Reguler dan/atau Pasar Reguler Periodic Call Auction.
+WICO;6 : Tidak memenuhi persyaratan untuk dapat tetap tercatat di Bursa sebagaimana diatur Peraturan Nomor I-A dan I-V (terkait Saham Free float).|7 : Memiliki likuiditas rendah dengan kriteria nilai transaksi rata-rata harian saham kurang dari Rp5.000.000,00 (lima juta rupiah) dan volume transaksi rata-rata harian saham kurang dari 10.000 (sepuluh ribu) saham selama 6 (enam) bulan terakhir di Pasar Reguler dan/atau Pasar Reguler Periodic Call Auction.
+BRNA;6 : Tidak memenuhi persyaratan untuk dapat tetap tercatat di Bursa sebagaimana diatur Peraturan Nomor I-A dan I-V (terkait Saham Free float).
+FORU;10 : Dikenakan penghentian sementara perdagangan Efek selama lebih dari 1 (satu) hari bursa yang disebabkan oleh aktivitas perdagangan.
+HELI;10 : Dikenakan penghentian sementara perdagangan Efek selama lebih dari 1 (satu) hari bursa yang disebabkan oleh aktivitas perdagangan.
+LMAS;1 : Harga rata-rata saham selama 6 bulan terakhir di Pasar Reguler dan/atau Pasar Reguler Periodic Call Auction kurang dari Rp51,00.| 2 : Laporan Keuangan Auditan terakhir mendapatkan opini tidak menyatakan pendapat (disclaimer).|5 : Memiliki ekuitas negatif pada laporan Keuangan terakhir.|7 : Memiliki likuiditas rendah dengan kriteria nilai transaksi rata-rata harian saham kurang dari Rp5.000.000,00 (lima juta rupiah) dan volume transaksi rata-rata harian saham kurang dari 10.000 (sepuluh ribu) saham selama 6 (enam) bulan terakhir di Pasar Reguler dan/atau Pasar Reguler Periodic Call Auction.
+KAYU;10 : Dikenakan penghentian sementara perdagangan Efek selama lebih dari 1 (satu) hari bursa yang disebabkan oleh aktivitas perdagangan.
+CGAS;10 : Dikenakan penghentian sementara perdagangan Efek selama lebih dari 1 (satu) hari bursa yang disebabkan oleh aktivitas perdagangan.
+PTPS;10 : Dikenakan penghentian sementara perdagangan Efek selama lebih dari 1 (satu) hari bursa yang disebabkan oleh aktivitas perdagangan.
+MAGP;1 : Harga rata-rata saham selama 6 bulan terakhir di Pasar Reguler dan/atau Pasar Reguler Periodic Call Auction kurang dari Rp51,00.| 7 : Memiliki likuiditas rendah dengan kriteria nilai transaksi rata-rata harian saham kurang dari Rp5.000.000,00 (lima juta rupiah) dan volume transaksi rata-rata harian saham kurang dari 10.000 (sepuluh ribu) saham selama 6 (enam) bulan terakhir di Pasar Reguler dan/atau Pasar Reguler Periodic Call Auction.
+KARW;5 : Memiliki ekuitas negatif pada laporan Keuangan terakhir.|10 : Dikenakan penghentian sementara perdagangan Efek selama lebih dari 1 (satu) hari bursa yang disebabkan oleh aktivitas perdagangan.
+IBOS;10 : Dikenakan penghentian sementara perdagangan Efek selama lebih dari 1 (satu) hari bursa yang disebabkan oleh aktivitas perdagangan.
+GMTD;7 : Memiliki likuiditas rendah dengan kriteria nilai transaksi rata-rata harian saham kurang dari Rp5.000.000,00 (lima juta rupiah) dan volume transaksi rata-rata harian saham kurang dari 10.000 (sepuluh ribu) saham selama 6 (enam) bulan terakhir di Pasar Reguler dan/atau Pasar Reguler Periodic Call Auction.
+MPIX;10 : Dikenakan penghentian sementara perdagangan Efek selama lebih dari 1 (satu) hari bursa yang disebabkan oleh aktivitas perdagangan.
+UNIT;7 : Memiliki likuiditas rendah dengan kriteria nilai transaksi rata-rata harian saham kurang dari Rp5.000.000,00 (lima juta rupiah) dan volume transaksi rata-rata harian saham kurang dari 10.000 (sepuluh ribu) saham selama 6 (enam) bulan terakhir di Pasar Reguler dan/atau Pasar Reguler Periodic Call Auction.
