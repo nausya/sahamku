@@ -393,7 +393,7 @@ kodef = selected_emiten.split(' | ')[0]
 fin = pd.read_csv('Finansial.csv', sep=";")
 fin = fin.query("Kode==@kodef")
 #fin
-fin = fin[['EPSRP','BVRP','PER','PBV','Sektor','KodeInd','Utang']]
+fin = fin[['EPSRP','BVRP','PER','PBV','Sektor','KodeInd','Utang','Proft']]
 if fin.empty:
    st.error ("KATEGORI PERUSAHAAN BARU MASUK IPO")
 else:
@@ -411,6 +411,7 @@ else:
    utlap = fin[6] * 1000000000
    sek = fin[4]
    ind = fin[5][:2]
+   prf = fin[6]
    per = per if per !='Infinity' else 0
    vol = int(vol) if vol !=None else 0
    vole = int(vole) if vole !=None else 0
@@ -458,7 +459,7 @@ else:
    col6.metric("Deviden", str(ceknon(dev)) + "%", 0)
    col7.metric("Kas Operasional", digit(opcash), dom)
    col8.metric("Uang Tunai(Rp)", tunai, utun)
-   col9.metric("PER(Kali)", round(per), dper)
+   col9.metric("Untung", round(prf), 0)
    col10.metric("Utang", digit(ut), digit(utlap))
    st.subheader("", divider="rainbow")
 
