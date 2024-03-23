@@ -411,7 +411,7 @@ else:
    utlap = fin[6] * 1000000000
    sek = fin[4]
    ind = fin[5][:2]
-   prf = fin[7] * 1000
+   prf = fin[7] * 1000000
    per = per if per !='Infinity' else 0
    vol = int(vol) if vol !=None else 0
    vole = int(vole) if vole !=None else 0
