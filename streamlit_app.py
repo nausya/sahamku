@@ -33,7 +33,7 @@ import os
 github_token = os.environ.get('GITHUB_TOKEN')
 
 ######Halaman Utama
-st.set_page_config(page_title="Sahamku", layout="wide")
+st.set_page_config(page_title="Sahamku", layout="wide", page_icon="graph-up-arrow")
 st.header('ANALITIK SAHAM INDONESIA')
 ######End of Halaman Utama
 ###### FUNGSI MENU #############
