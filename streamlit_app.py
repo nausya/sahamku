@@ -26,6 +26,8 @@ from sklearn.ensemble import RandomForestRegressor
 from sklearn.ensemble import ExtraTreesRegressor
 from sklearn.metrics import r2_score, mean_absolute_error
 import os
+#### Judul header
+st.title('Sahamku')
 
 ####### TOKEN GITHUB
 # Dapatkan token GitHub dari variabel lingkungan
