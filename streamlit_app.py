@@ -26,15 +26,14 @@ from sklearn.ensemble import RandomForestRegressor
 from sklearn.ensemble import ExtraTreesRegressor
 from sklearn.metrics import r2_score, mean_absolute_error
 import os
-#### Judul header
-st.title('Sahamku')
+
 
 ####### TOKEN GITHUB
 # Dapatkan token GitHub dari variabel lingkungan
 github_token = os.environ.get('GITHUB_TOKEN')
 
 ######Halaman Utama
-st.set_page_config(layout="wide")
+st.set_page_config(page_title="Sahamku", layout="wide")
 st.header('ANALITIK SAHAM INDONESIA')
 ######End of Halaman Utama
 ###### FUNGSI MENU #############
