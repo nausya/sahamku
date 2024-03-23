@@ -276,6 +276,8 @@ with col2:
 ##########Notasi Saham################
 kode = selected_emiten.split(' | ')[0]
 n = pd.read_csv('notasi.csv', sep=';')
+nk = pd.read_csv('notasi-khusus.csv', sep=';')
+n = pd.concat([n, nk], axis=0)
 n = n[(n['Kode'] == kode)]
 if n.isna().empty:
    st.text("")
