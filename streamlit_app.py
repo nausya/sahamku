@@ -190,6 +190,7 @@ HPL = HgPor['lo'].values[0]
 HPB = HgPor['bl'].values[0]
 HPM = HgPor['m'].values[0]
 HPH = HgPor['hi'].values[0]
+Sahamedar = HgPor['Saham Beredar'].values[0]
 ##################### END OF BILA DATA LIVE BELUM TERSEDIA
 if C == 0 or L52==0 or H52==0 or BL==0 or M==0:
     C = data.tail(1)
@@ -440,6 +441,7 @@ else:
    #Volrata = round(Volrata)
    #Volrata
    #dvol = digit(Volrata)
+   dprf = eps * Sahamedar
    dvol = round(d(vol, vole))
    ddev = 0
    dom = 0
@@ -459,7 +461,7 @@ else:
    col6.metric("Deviden", str(ceknon(dev)) + "%", 0)
    col7.metric("Kas Operasional", digit(opcash), dom)
    col8.metric("Uang Tunai(Rp)", tunai, utun)
-   col9.metric("Untung", digit(round(prf)), 0)
+   col9.metric("Untung", digit(round(prf)), digit(dprf))
    col10.metric("Utang", digit(ut), digit(utlap))
    st.subheader("", divider="rainbow")
 
