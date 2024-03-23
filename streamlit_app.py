@@ -28,6 +28,17 @@ from sklearn.metrics import r2_score, mean_absolute_error
 import os
 
 
+# Menampilkan file uploader
+uploaded_file = st.file_uploader("Unggah file Anda di sini")
+
+# Jika pengguna mengunggah file
+if uploaded_file is not None:
+    # Baca konten file
+    file_contents = uploaded_file.read()
+    # Tampilkan konten file
+    st.write("Konten file:")
+    st.write(file_contents)
+
 ####### TOKEN GITHUB
 # Dapatkan token GitHub dari variabel lingkungan
 github_token = os.environ.get('GITHUB_TOKEN')
