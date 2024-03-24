@@ -459,10 +459,10 @@ else:
    col5.metric("Tunai Per Saham(Rp)", round(tcs), dtcs)
    col6, col7, col8, col9, col10 = st.columns(5)
    col6.metric("Deviden", str(ceknon(dev)) + "%", 0)
-   col7.metric("Kas Operasional", digit(opcash), dom)
+   col7.metric("Kas Operasional(Rp)", digit(opcash), dom)
    col8.metric("Uang Tunai(Rp)", tunai, utun)
-   col9.metric("Untung", digit(round(prf)), digit(dprf))
-   col10.metric("Utang", digit(ut), digit(utlap))
+   col9.metric("Laba(Rp)", digit(round(prf)), digit(dprf))
+   col10.metric("Utang(Rp)", digit(ut), digit(utlap))
    st.subheader("", divider="rainbow")
 
    st.subheader(f"STANDAR KINERJA EMITEN SEJENIS \n EPS : Rp.{bmeps} | BV : Rp.{round(bmbv)} | PBV : {bmpbv} | PER : {round(bmper)} | DER : {bmder} | SubSektor : {bmsek}", divider="rainbow")
