@@ -257,7 +257,7 @@ with col1:
             prosj = dpros(tj,tb) - 100
             mj = tj - tb
             lj = round(vj/100)
-            st.metric(f"Beli di harga Rp{round(hb)}.{\n}Margin Simulasi Penjualan Saham {kodesaja} : {round(prosj,1)}%", f"{lj} Lot", digit(mj)) 
+            st.metric(f"Beli di harga Rp{round(hb)}\nMargin Simulasi Penjualan Saham {kodesaja} : {round(prosj,1)}%", f"{lj} Lot", digit(mj)) 
     with tab4:
         mm = yf.Ticker(option).history(period="max")                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
         mm = mm.describe()
