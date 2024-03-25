@@ -250,13 +250,14 @@ with col1:
         if dfjual.empty:
            st.write("Belum Terdapat Simulasi Penjualan Saham Ini")
         else:
+            hb = dfjual['skg'].sum()
             vj = dfjual['vol'].sum()
             tb = dfjual['total'].sum()
             tj = C * vj
             prosj = dpros(tj,tb) - 100
             mj = tj - tb
             lj = round(vj/100)
-            st.metric(f"Margin Simulasi Penjualan Saham {kodesaja} : {round(prosj,1)}%", f"{lj} Lot", digit(mj)) 
+            st.metric(f"Beli di harga Rp{round(hb)}. Margin Simulasi Penjualan Saham {kodesaja} : {round(prosj,1)}%", f"{lj} Lot", digit(mj)) 
     with tab4:
         mm = yf.Ticker(option).history(period="max")                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
         mm = mm.describe()
