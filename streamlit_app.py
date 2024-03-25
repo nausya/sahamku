@@ -250,7 +250,7 @@ with col1:
         if dfjual.empty:
            st.write("Belum Terdapat Simulasi Penjualan Saham Ini")
         else:
-            hb = dfjual['skg'].sum()
+            hb = dfjual['skg'].mean()
             vj = dfjual['vol'].sum()
             tb = dfjual['total'].sum()
             tj = C * vj
