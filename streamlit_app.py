@@ -562,9 +562,6 @@ def dataframe():
         with tab1:
            st.write('Filter Data')
            filterdata = pd.read_csv('porto.csv', index_col=[0], sep=';')
-           p = filterdata['p'].values[0]
-           p = round(p)
-           p
            tgl = filterdata['date'].values[0]
            tgl = tgl[8:10] + "/" + tgl[5:7]+ "/" + tgl[0:4]
            "Last Update : " + tgl
