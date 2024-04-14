@@ -1,45 +1,45 @@
 Sektor;EPSRp;BVRp;PER;PBV;DER;Kode
-Energy;22,7;272,1;6,0;1,1;0,8;A
-Oil. Gas & Coal;23,8;301,7;6,0;1,1;0,8;A1
-Alternative Energy;-35,8;79,0;-;0,7;0,8;A2
-Basic Materials;18,8;310,3;10,2;1,1;0,8;B
-Basic Materials;18,8;310,3;10,2;1,1;0,8;B1
-Industrials;11,1;210,4;9,6;1,0;0,7;C
-Industrial Goods;10,4;203,0;13,7;1,0;0,8;C1
-Industrial Services;7,6;185,3;14,8;1,3;0,6;C2
-Multi-sector Holdings;23,0;518,5;3,9;0,8;1,5;C3
-Consumer Non-Cyclicals;13,1;187,2;16,0;1,8;0,9;D
-Food & Staples Retailing;14,1;202,7;21,1;4,9;2,0;D1
-Food & Beverage;12,3;181,6;14,4;1,8;0,9;D2
-Tobacco;54,4;387,3;14,2;1,2;0,5;D3
-Nondurable Household Products;0,7;152,5;33,8;0,9;0,8;D4
-Consumer Cyclicals;0,6;173,1;13,0;1,1;0,6;E
-Automobiles & Components;66,1;620,4;9,5;0,8;0,6;E1
-Household Goods;0,2;179,4;14,5;0,7;0,6;E2
-Leisure Goods;-1,5;92,9;12,9;2,3;0,2;E3
-Apparel & Luxury Goods;-1,4;177,6;7,4;0,5;0,7;E4
-Consumer Services;-1,4;100,3;30,8;1,6;0,7;E5
-Media & Entertainment;-0,5;81,0;37,5;0,7;0,3;E6
-Retailing;14,9;181,5;12,0;1,3;0,6;E7
-Healthcare;21,3;301,5;21,0;2,7;0,4;F
-Healthcare Equipment & Providers;10,3;220,5;34,4;2,8;0,4;F1
-Pharmaceuticals & Health Care Research;102,8;1086,0;13,2;1,8;0,7;F2
-Financials;13,9;361,4;14,8;1,1;2,0;G
-Banks;13,3;587,0;15,3;1,1;4,3;G1
-Financing Service;16,8;366,7;13,4;1,0;1,0;G2
-Investment Service;19,7;202,1;15,6;2,2;0,3;G3
-Insurance;64,1;973,1;10,8;1,0;1,6;G4
-Holding & Investment Companies;0,2;184,6;44,0;0,9;0,7;G5
-Properties & Real Estate;1,6;195,3;12,2;0,6;0,5;H
-Properties & Real Estate;1,6;195,3;12,2;0,6;0,5;H1
-Technology;3,2;126,7;34,6;2,6;0,4;I
-Software & IT Services;2,8;120,6;39,7;2,8;0,3;I1
-Technology Hardware & Equipment;19,0;174,3;15,0;1,8;1,1;I2
-Infrastructures;15,2;264,6;12,1;1,1;1,0;J
-Transportation Infrastructure;28,0;301,5;8,0;0,9;0,8;J1
-Heavy Constructions & Civil Engineering;8,6;186,7;11,8;1,0;1,1;J2
-Telecommunication;29,7;282,9;19,6;1,4;1,0;J3
-Utilities;32,7;153,1;10,3;0,9;0,7;J4
-Transportation & Logistic;7,7;126,8;12,8;1,1;0,3;K
-Transportation;16,7;134,7;11,4;0,9;0,3;K1
-Logistics & Deliveries;5,7;124,5;13,8;1,2;0,3;K2
+Energy;21.0;312.0;8.8;1.1;0.9;A
+Oil. Gas & Coal;21.9;319.1;8.8;1.1;0.8;A1
+Alternative Energy;-13.2;95.7;13.3;0.9;1.3;A2
+Basic Materials;7.5;310.1;11.7;1.0;0.7;B
+Basic Materials;7.5;310.1;11.7;1.0;0.7;B1
+Industrials;6.5;156.5;9.8;1.0;0.5;C
+Industrial Goods;5.4;146.1;10.1;0.9;0.5;C1
+Industrial Services;11.1;160.9;9.5;1.2;0.5;C2
+Multi-sector Holdings;1.7;469.7;6.7;1.0;0.9;C3
+Consumer Non-Cyclicals;13.4;155.2;14.5;1.6;0.8;D
+Food & Staples Retailing;17.9;223.8;9.9;2.8;1.6;D1
+Food & Beverage;12.0;133.7;14.8;1.6;0.8;D2
+Tobacco;156.9;626.6;7.0;1.4;0.5;D3
+Nondurable Household Products;1.2;157.9;23.9;0.7;0.6;D4
+Consumer Cyclicals;1.1;131.0;15.5;0.9;0.5;E
+Automobiles & Components;68.3;592.2;8.7;0.8;0.5;E1
+Household Goods;-2.1;169.4;8.2;0.5;0.7;E2
+Leisure Goods;-1.2;91.0;89.6;5.1;0.4;E3
+Apparel & Luxury Goods;-11.8;146.1;15.8;0.5;0.9;E4
+Consumer Services;-0.3;100.3;25.5;1.3;0.5;E5
+Media & Entertainment;-2.4;94.2;58.3;0.6;0.2;E6
+Retailing;12.5;167.4;13.4;0.9;0.5;E7
+Healthcare;12.6;232.3;19.4;1.7;0.4;F
+Healthcare Equipment & Providers;8.4;207.8;35.4;1.9;0.3;F1
+Pharmaceuticals & Health Care Research;26.7;741.7;13.7;1.3;0.5;F2
+Financials;13.1;382.2;16.3;0.9;1.9;G
+Banks;17.8;571.2;15.4;0.9;4.3;G1
+Financing Service;23.8;386.9;11.6;1.0;1.0;G2
+Investment Service;18.1;212.7;21.0;1.6;0.2;G3
+Insurance;31.5;957.4;17.0;0.8;1.6;G4
+Holding & Investment Companies;-0.3;181.1;67.2;0.9;0.6;G5
+Properties & Real Estate;1.8;165.7;13.1;0.5;0.4;H
+Properties & Real Estate;1.8;165.7;13.1;0.5;0.4;H1
+Technology;0.9;104.4;19.4;1.5;0.4;I
+Software & IT Services;0.1;96.6;27.1;1.5;0.3;I1
+Technology Hardware & Equipment;21.3;190.9;10.3;1.4;0.7;I2
+Infrastructures;12.6;231.4;11.5;1.0;0.8;J
+Transportation Infrastructure;34.0;336.4;6.4;1.0;0.7;J1
+Heavy Constructions & Civil Engineering;6.0;161.5;10.1;0.6;0.9;J2
+Telecommunication;20.4;325.2;21.0;1.3;0.7;J3
+Utilities;19.0;150.3;16.3;1.0;0.8;J4
+Transportation & Logistic;9.2;121.0;9.7;1.0;0.4;K
+Transportation;11.7;146.0;9.1;0.7;0.4;K1
+Logistics & Deliveries;5.5;117.9;10.5;1.1;0.4;K2
