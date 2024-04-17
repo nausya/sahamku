@@ -652,7 +652,7 @@ def screener():
    
     st.subheader('Tabular Hasil Screener')
     scr1 = pd.read_csv('porto.csv', sep=';')
-    scr1 = scr1.style.applymap(lambda x: color_cell(x) if x in nota['Kode'].values else '')
+    
     scr1['p'] = scr1['p'].astype(int)
     scr1['bl'] = scr1['bl'].astype(int)
     scr1['m'] = scr1['m'].astype(int)
@@ -701,7 +701,7 @@ def screener():
                                   "om":"Margin Operasi(%)", "dev":"Deviden PR(%)","roe": "ROE(%)","pery": "PER(%)",
                                   "pbvy": "Nilai Buku","bvy": "Harga Dasar","ph": "Pendapatan(M)","totshm": "Total Saham(M)","mcap": "Omzet(T)","epsy": "Laba Per Saham","opcash": "Kas Operasional(M)",
                                   "ut": "Utang(M)","cash": "Nilai Kas(M)","tcs": "Kas Per Saham", "vol": "Volume(J)","date": "Tanggal"}).sort_values(['kode'])
-    
+    scr1 = scr1.style.applymap(lambda x: color_cell(x) if x in nota['Kode'].values else '')
     "Last Update : " + tgl
     ### ditambahkan 17 april 2024 utk notif notasi warna pink
    
