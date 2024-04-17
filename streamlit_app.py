@@ -703,11 +703,12 @@ def screener():
     
     "Last Update : " + tgl
     ### ditambahkan 17 april 2024 utk notif notasi warna pink
-    #nota
+   
     def color_cell(value):
         # Dapatkan warna berdasarkan nilai dari DataFrame 1
         color = 'pink'
         return 'background-color: {}'.format(color)
+    nota
     scr1 = scr1.style.applymap(lambda x: color_cell(x) if x in nota['Kode'].values else '')
     st.dataframe(scr1)
     st.subheader('Grafik')
