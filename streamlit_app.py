@@ -652,6 +652,7 @@ def screener():
    
     st.subheader('Tabular Hasil Screener')
     scr1 = pd.read_csv('porto.csv', sep=';')
+    scr1 = scr1.style.applymap(lambda x: color_cell(x) if x in nota['Kode'].values else '')
     scr1['p'] = scr1['p'].astype(int)
     scr1['bl'] = scr1['bl'].astype(int)
     scr1['m'] = scr1['m'].astype(int)
@@ -704,12 +705,12 @@ def screener():
     "Last Update : " + tgl
     ### ditambahkan 17 april 2024 utk notif notasi warna pink
    
-    def color_cell(value):
+    #def color_cell(value):
         # Dapatkan warna berdasarkan nilai dari DataFrame 1
-        color = 'pink'
-        return 'background-color: {}'.format(color)
-    nota
-    scr1 = scr1.style.applymap(lambda x: color_cell(x) if x in nota['Kode'].values else '')
+     #   color = 'pink'
+      #  return 'background-color: {}'.format(color)
+    #nota
+    
     st.dataframe(scr1)
     st.subheader('Grafik')
     fig, ax = plt.subplots()
