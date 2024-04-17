@@ -114,6 +114,13 @@ date = date.strftime('%Y-%m-%d')# %H:%M:%S
 # Dapatkan waktu saat ini
 # datetime.now(indonesia_timezone)
 
+######################## FUNGSI WARNA NOTASI PORTO
+def color_cell(value):
+    # Dapatkan warna berdasarkan nilai dari DataFrame 1
+    color = 'pink'
+    return 'background-color: {}'.format(color)
+######################## END OF FUNGSI WARNA NOTASI PORTO
+
 st.sidebar.info('SELAMAT DATANG (Versi Beta)')
 #######AMBIL KODE EMITEN DARI CSV
 
@@ -286,6 +293,8 @@ kode = selected_emiten.split(' | ')[0]
 n = pd.read_csv('notasi.csv', sep=';')
 nk = pd.read_csv('notasi-khusus.csv', sep=';')
 n = pd.concat([n, nk], axis=0)
+nota = n.copy()
+nota = nota.drop_duplicates()
 n = n[(n['Kode'] == kode)]
 if n.isna().empty:
    st.text("")
@@ -693,6 +702,8 @@ def screener():
                                   "ut": "Utang(M)","cash": "Nilai Kas(M)","tcs": "Kas Per Saham", "vol": "Volume(J)","date": "Tanggal"}).sort_values(['kode'])
     
     "Last Update : " + tgl
+    ### ditambahkan 17 april 2024 utk notif notasi warna pink
+    scr1 = scr1.style.applymap(lambda x: color_cell(x) if x in nota['Kode'].values else '')
     st.dataframe(scr1)
     st.subheader('Grafik')
     fig, ax = plt.subplots()
