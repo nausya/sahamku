@@ -709,7 +709,7 @@ def screener():
      #   color = 'pink'
       #  return 'background-color: {}'.format(color)
     #nota
-    scr1 = scr1.style.applymap(lambda x: color_cell(x) if x in nota['Kode'].values else '')
+    #scr1 = scr1.style.applymap(lambda x: color_cell(x) if x in nota['Kode'].values else '')
     st.dataframe(scr1)
     st.subheader('Grafik')
     fig, ax = plt.subplots()
