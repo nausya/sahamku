@@ -701,7 +701,6 @@ def screener():
                                   "om":"Margin Operasi(%)", "dev":"Deviden PR(%)","roe": "ROE(%)","pery": "PER(%)",
                                   "pbvy": "Nilai Buku","bvy": "Harga Dasar","ph": "Pendapatan(M)","totshm": "Total Saham(M)","mcap": "Omzet(T)","epsy": "Laba Per Saham","opcash": "Kas Operasional(M)",
                                   "ut": "Utang(M)","cash": "Nilai Kas(M)","tcs": "Kas Per Saham", "vol": "Volume(J)","date": "Tanggal"}).sort_values(['kode'])
-    scr1 = scr1.style.applymap(lambda x: color_cell(x) if x in nota['Kode'].values else '')
     "Last Update : " + tgl
     ### ditambahkan 17 april 2024 utk notif notasi warna pink
    
@@ -710,7 +709,7 @@ def screener():
      #   color = 'pink'
       #  return 'background-color: {}'.format(color)
     #nota
-    
+    scr1 = scr1.style.applymap(lambda x: color_cell(x) if x in nota['Kode'].values else '')
     st.dataframe(scr1)
     st.subheader('Grafik')
     fig, ax = plt.subplots()
