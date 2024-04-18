@@ -116,9 +116,7 @@ date = date.strftime('%Y-%m-%d')# %H:%M:%S
 
 ######################## FUNGSI WARNA NOTASI PORTO
 def color_cell(value):
-    # Dapatkan warna berdasarkan nilai dari DataFrame 1
-    color = 'pink'
-    return 'background-color: {}'.format(color)
+    return 'background-color: yellow'
 ######################## END OF FUNGSI WARNA NOTASI PORTO
 
 st.sidebar.info('SELAMAT DATANG (Versi Beta)')
@@ -703,13 +701,8 @@ def screener():
                                   "ut": "Utang(M)","cash": "Nilai Kas(M)","tcs": "Kas Per Saham", "vol": "Volume(J)","date": "Tanggal"}).sort_values(['kode'])
     "Last Update : " + tgl
     ### ditambahkan 17 april 2024 utk notif notasi warna pink
-   
-    #def color_cell(value):
-        # Dapatkan warna berdasarkan nilai dari DataFrame 1
-        return 'background-color: pink'
-    #nota
     scr1 = scr1.style.applymap(lambda x: color_cell(x) if x in nota['Kode'].values else '')
-    #scr1 = scr1.style.apply(color_cell, axis=1)
+
     st.dataframe(scr1)
     st.subheader('Grafik')
     fig, ax = plt.subplots()
