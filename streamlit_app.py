@@ -706,11 +706,10 @@ def screener():
    
     #def color_cell(value):
         # Dapatkan warna berdasarkan nilai dari DataFrame 1
-     #   color = 'pink'
-      #  return 'background-color: {}'.format(color)
+         return 'background-color: pink'
     #nota
     scr1 = scr1.style.applymap(lambda x: color_cell(x) if x in nota['Kode'].values else '')
-    #scr1 = scr1.style.highlight_min()
+    #scr1 = scr1.style.apply(color_cell, axis=1)
     st.dataframe(scr1)
     st.subheader('Grafik')
     fig, ax = plt.subplots()
