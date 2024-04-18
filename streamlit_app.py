@@ -701,7 +701,7 @@ def screener():
                                   "ut": "Utang(M)","cash": "Nilai Kas(M)","tcs": "Kas Per Saham", "vol": "Volume(J)","date": "Tanggal"}).sort_values(['kode'])
     "Last Update : " + tgl
     ### ditambahkan 17 april 2024 utk notif notasi warna pink
-    scr1 = scr1.style.applymap(lambda x: color_cell(x) if x in nota['Kode'].values else '')
+    #scr1 = scr1.style.applymap(lambda x: color_cell(x) if x in nota['Kode'].values else '')
     st.dataframe(scr1)
     st.subheader('Grafik')
     fig, ax = plt.subplots()
