@@ -695,8 +695,9 @@ def screener():
                                   "pbvy": "Nilai Buku","bvy": "Harga Dasar","ph": "Pendapatan(M)","totshm": "Total Saham(M)","mcap": "Omzet(T)","epsy": "Laba Per Saham","opcash": "Kas Operasional(M)",
                                   "ut": "Utang(M)","cash": "Nilai Kas(M)","tcs": "Kas Per Saham", "vol": "Volume(J)","date": "Tanggal"}).sort_values(['kode'])
     "Last Update : " + tgl
-    scr1 = scr1.style.applymap(lambda x: 'background-color: pink' if x in nota['Kode'].values else '')
-    scr1
+    #scr1 = scr1.style.applymap(lambda x: 'background-color: pink' if x in nota['Kode'].values else '')
+    st.dataframe(scr1.style.applymap(lambda x: 'background-color: pink' if x in nota['Kode'].values else ''))
+    #scr1
     st.subheader('Grafik')
     fig, ax = plt.subplots()
     
