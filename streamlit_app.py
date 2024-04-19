@@ -675,24 +675,29 @@ def screener():
     if screenlevel == '<Rp200':
        st.write('Screener Saham Harga Rentang 50-200')
        scr1=scr1.query("skg > 50 and skg<= 200 and p<=10 and om >= 0.1 and roe >= 0.1")
+       scr2 = scr1.style.applymap(lambda x: 'background-color: pink' if x in nota['Kode'].values else '')
+
     elif screenlevel == '<Rp5rb':
        st.write('Screener Saham Harga Kurang Dari 5000')
        scr1=scr1.query("skg > 200 and skg <= 5000 and p<=10 and om >= 0.1 and roe >= 0.1")
+       scr2 = scr1.style.applymap(lambda x: 'background-color: pink' if x in nota['Kode'].values else '')
+
     elif screenlevel == 'BagiDeviden':
         st.write('Screener Rutin Bagi Deviden di atas 5%')
         dev = pd.read_csv('devhunter.csv')
         dev = dev.values.tolist()
         dev = [item for sublist in dev for item in sublist]
         scr1 = scr1.query("kode in @dev")
+        scr2 = scr1.style.applymap(lambda x: 'background-color: pink' if x in nota['Kode'].values else '')
+
     else:
        st.write('Screener Saham Harga Lebih Dari 5000')
        scr1=scr1.query("skg > 5000 and p<=10 and om >= 0.1")
        scr2 = scr1.style.applymap(lambda x: 'background-color: pink' if x in nota['Kode'].values else '')
-       scr2 = scr2.set_index('kode')
-       scr2
+
     s = scr1.copy()
-    
-    #scr1 = scr1.set_index('kode')
+    scr2
+    scr1 = scr1.set_index('kode')
    
     scr1 = scr1.rename(columns = {"p": "Posisi","kode":"Kode","aksiy": "Saran","skg":"Harga","lo":"1YMin","hi":"1YMax","bl":"2M","m":"6M", 
                                   "om":"Margin Operasi(%)", "dev":"Deviden PR(%)","roe": "ROE(%)","pery": "PER(%)",
