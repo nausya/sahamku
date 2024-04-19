@@ -645,28 +645,7 @@ def screener():
    
     st.subheader('Tabular Hasil Screener (Pink : Notasi Khusus)')
     scr1 = pd.read_csv('porto.csv', sep=';')
-    
-    scr1['p'] = scr1['p'].astype(int)
-    scr1['bl'] = scr1['bl'].astype(int)
-    scr1['m'] = scr1['m'].astype(int)
-    
-    scr1['om'] = (scr1['om'].round(2))*100
-    scr1['pbvy'] = scr1['pbvy'].round(1)
-    scr1['bvy'] = scr1['bvy'].round()
-    scr1['dev'] = (scr1['dev'].round(2))*100
-    scr1['roe'] = (scr1['roe'].round(2))*100
-    scr1['pery'] = scr1['pery'].round(0)
-    scr1['epsy'] = scr1['epsy'].round()
-    scr1['tcs'] = scr1['tcs'].round()
-    scr1['vol'] = ((scr1['vol'].round(1))/1000000).round(1)
-    scr1['totshm'] = ((scr1['totshm'].round(1))/1000000000).round(1)
-    scr1['mcap'] = ((scr1['mcap'].round(1))/1000000000000).round(1)
-    scr1['opcash'] = ((scr1['opcash'].round(1))/1000000000).round(1)
-    scr1['cash'] = ((scr1['cash'].round(1))/1000000000).round(1)
-    scr1['ut'] = ((scr1['ut'].round(1))/1000000000).round(1)
-    scr1['ph'] = ((scr1['ph'].round(1))/1000000000).round(1)
-    #scr1['date'] = scr1['date'].strftime("%Y-%m-%d-%H:%M:%S")
-    
+  
     tgl = scr1['date'].values[0]
     tgl = tgl[8:10] + "/" + tgl[5:7]+ "/" + tgl[0:4]
     
@@ -696,6 +675,27 @@ def screener():
        scr2 = scr1.style.applymap(lambda x: 'background-color: pink' if x in nota['Kode'].values else '')
 
     s = scr1.copy()
+    ######## ubah jd int
+    scr2['p'] = scr2['p'].astype(int)
+    scr2['bl'] = scr2['bl'].astype(int)
+    scr2['m'] = scr2['m'].astype(int)
+    
+    scr2['om'] = (scr2['om'].round(2))*100
+    scr2['pbvy'] = scr2['pbvy'].round(1)
+    scr2['bvy'] = scr2['bvy'].round()
+    scr2['dev'] = (scr2['dev'].round(2))*100
+    scr2['roe'] = (scr2['roe'].round(2))*100
+    scr2['pery'] = scr2['pery'].round(0)
+    scr2['epsy'] = scr2['epsy'].round()
+    scr2['tcs'] = scr2['tcs'].round()
+    scr2['vol'] = ((scr2['vol'].round(1))/1000000).round(1)
+    scr2['totshm'] = ((scr2['totshm'].round(1))/1000000000).round(1)
+    scr2['mcap'] = ((scr2['mcap'].round(1))/1000000000000).round(1)
+    scr2['opcash'] = ((scr2['opcash'].round(1))/1000000000).round(1)
+    scr2['cash'] = ((scr2['cash'].round(1))/1000000000).round(1)
+    scr2['ut'] = ((scr2['ut'].round(1))/1000000000).round(1)
+    scr2['ph'] = ((scr2['ph'].round(1))/1000000000).round(1)
+    ###### end of ubah
     scr2
     #scr1 = scr1.set_index('kode')
    
