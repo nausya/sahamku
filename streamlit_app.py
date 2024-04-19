@@ -703,14 +703,9 @@ def screener():
     
     df = pd.DataFrame(data)
     
-    # Fungsi untuk mewarnai baris berdasarkan kondisi tertentu
-    def highlight_row(s):
-        # Buat variabel warna untuk menyimpan warna yang akan digunakan
-        color = 'pink' if s['Usia'] > 30 else 'white'
-        return ['background-color: {}'.format(color)] * len(s)
     
     # Terapkan fungsi pada DataFrame menggunakan method .style
-    styled_df = df.style.apply(highlight_row, axis=1)
+    styled_df = df.style.apply('background-color:pink' if s['Usia'] > 30 else 'white', axis=1)
     
     # Tampilkan DataFrame yang telah diwarnai
     styled_df
