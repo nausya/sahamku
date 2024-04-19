@@ -688,6 +688,7 @@ def screener():
        st.write('Screener Saham Harga Lebih Dari 5000')
        scr1=scr1.query("skg > 5000 and p<=10 and om >= 0.1")
        scr1 = scr1.style.applymap(lambda x: 'background-color: pink' if x in nota['Kode'].values else '')
+       scr1
     s = scr1.copy()
     
     scr1 = scr1.set_index('kode')
@@ -698,7 +699,7 @@ def screener():
                                   "ut": "Utang(M)","cash": "Nilai Kas(M)","tcs": "Kas Per Saham", "vol": "Volume(J)","date": "Tanggal"}).sort_values(['kode'])
     "Last Update : " + tgl
 
-    scr1
+    #scr1
     st.subheader('Grafik')
     fig, ax = plt.subplots()
     
