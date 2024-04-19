@@ -711,14 +711,8 @@ def screener():
     # Gabungkan kedua DataFrame berdasarkan kolom 'Nama'
     merged_df = pd.merge(df1, df2, on='Nama')
     
-    # Fungsi untuk memberi warna pada sel berdasarkan nilai dari DataFrame 1
-    def color_cell(value):
-        # Dapatkan warna berdasarkan nilai dari DataFrame 1
-        color = merged_df.loc[merged_df['Nama'] == value, 'Warna'].values[0]
-        return 'background-color: {}'.format(color)
-    
     # Terapkan fungsi untuk setiap sel pada DataFrame 2
-    styled_df = df2.style.applymap(lambda x: color_cell(x) if x in merged_df['Nama'].values else '')
+    styled_df = df2.style.applymap(lambda x: 'background-color: pink' if x in merged_df['Nama'].values else '')
     
     # Tampilkan DataFrame yang telah diwarnai
     styled_df
