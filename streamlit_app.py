@@ -645,7 +645,7 @@ def screener():
    
     st.subheader('Tabular Hasil Screener')
     scr1 = pd.read_csv('porto.csv', sep=';')
-    scr1 = scr1.style.applymap(lambda x: 'background-color: pink' if x in nota['Kode'].values else '')
+   
     scr1['p'] = scr1['p'].astype(int)
     scr1['bl'] = scr1['bl'].astype(int)
     scr1['m'] = scr1['m'].astype(int)
@@ -687,6 +687,7 @@ def screener():
        st.write('Screener Saham Harga Lebih Dari 5000')
        scr1=scr1.query("skg > 5000 and p<=10 and om >= 0.1")
     s = scr1.copy()
+    scr1 = scr1.style.applymap(lambda x: 'background-color: pink' if x in nota['Kode'].values else '')
     scr1 = scr1.set_index('kode')
     #kode;p;aksiy;skg;lo;bl;m;hi;om;dev;roe;pery;epsy;pbvy;bvy;vol;totshm;mcap;cash;opcash;ph;ut;tcs;date
    
