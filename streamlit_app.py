@@ -671,6 +671,9 @@ def screener():
     tgl = tgl[8:10] + "/" + tgl[5:7]+ "/" + tgl[0:4]
     
     scr1 = scr1.fillna(0)
+    tes = scr1.copy()
+    tes = tes.style.applymap(lambda x: 'background-color: pink' if x in nota['Kode'].values else '')
+    tes
     if screenlevel == '<Rp200':
        st.write('Screener Saham Harga Rentang 50-200')
        scr1=scr1.query("skg > 50 and skg<= 200 and p<=10 and om >= 0.1 and roe >= 0.1")
@@ -695,9 +698,7 @@ def screener():
                                   "pbvy": "Nilai Buku","bvy": "Harga Dasar","ph": "Pendapatan(M)","totshm": "Total Saham(M)","mcap": "Omzet(T)","epsy": "Laba Per Saham","opcash": "Kas Operasional(M)",
                                   "ut": "Utang(M)","cash": "Nilai Kas(M)","tcs": "Kas Per Saham", "vol": "Volume(J)","date": "Tanggal"}).sort_values(['kode'])
     "Last Update : " + tgl
-    tes = scr1.copy()
-    tes = tes.style.applymap(lambda x: 'background-color: pink' if x in nota['Kode'].values else '')
-    tes
+
     scr1
     st.subheader('Grafik')
     fig, ax = plt.subplots()
