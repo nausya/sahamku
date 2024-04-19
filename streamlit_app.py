@@ -645,9 +645,6 @@ def screener():
    
     st.subheader('Tabular Hasil Screener')
     scr1 = pd.read_csv('porto.csv', sep=';')
-    tes = scr1.copy()
-    tes = tes.style.applymap(lambda x: 'background-color: pink' if x in nota['Kode'].values else '')
-    tes
     
     scr1['p'] = scr1['p'].astype(int)
     scr1['bl'] = scr1['bl'].astype(int)
@@ -698,6 +695,9 @@ def screener():
                                   "pbvy": "Nilai Buku","bvy": "Harga Dasar","ph": "Pendapatan(M)","totshm": "Total Saham(M)","mcap": "Omzet(T)","epsy": "Laba Per Saham","opcash": "Kas Operasional(M)",
                                   "ut": "Utang(M)","cash": "Nilai Kas(M)","tcs": "Kas Per Saham", "vol": "Volume(J)","date": "Tanggal"}).sort_values(['kode'])
     "Last Update : " + tgl
+    tes = scr1.copy()
+    tes = tes.style.applymap(lambda x: 'background-color: pink' if x in nota['Kode'].values else '')
+    tes
     scr1
     st.subheader('Grafik')
     fig, ax = plt.subplots()
