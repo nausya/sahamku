@@ -571,7 +571,8 @@ def dataframe():
            "om":"Margin Operasi", "dev":"Deviden PR","epsy":"Laba Per Saham","roe": "ROE","pery": "PER",
            "pbvy": "Nilai Buku","bvy": "Harga Dasar","ph": "Pendapatan","ut":"Utang",
            "pm":"Profit Margin", "cash": "Jumlah Kas", "opcash": "Kas Operasional","tcs": "Kas Per Saham", "totshm": "Saham Beredar","mcap": "Omzet","vol": "Volume"})
-           st.dataframe(filterdata)
+            st.dataframe(filterdata.style.applymap(lambda x: 'background-color: pink' if x in nota['Kode'].values else ''))
+            #st.dataframe(filterdata)
         with tab2:
             st.write("Data Deviden")
             devcum = pd.read_csv('devcumdate.csv', index_col=[0], sep=';')
@@ -695,7 +696,6 @@ def screener():
                                   "pbvy": "Nilai Buku","bvy": "Harga Dasar","ph": "Pendapatan(M)","totshm": "Total Saham(M)","mcap": "Omzet(T)","epsy": "Laba Per Saham","opcash": "Kas Operasional(M)",
                                   "ut": "Utang(M)","cash": "Nilai Kas(M)","tcs": "Kas Per Saham", "vol": "Volume(J)","date": "Tanggal"}).sort_values(['kode'])
     "Last Update : " + tgl
-    #scr1 = scr1.style.applymap(lambda x: 'background-color: pink' if x in nota['Kode'].values else '')
     st.dataframe(scr1.style.applymap(lambda x: 'background-color: pink' if x in nota['Kode'].values else ''))
     #scr1
     st.subheader('Grafik')
