@@ -571,8 +571,7 @@ def dataframe():
            "om":"Margin Operasi", "dev":"Deviden PR","epsy":"Laba Per Saham","roe": "ROE","pery": "PER",
            "pbvy": "Nilai Buku","bvy": "Harga Dasar","ph": "Pendapatan","ut":"Utang",
            "pm":"Profit Margin", "cash": "Jumlah Kas", "opcash": "Kas Operasional","tcs": "Kas Per Saham", "totshm": "Saham Beredar","mcap": "Omzet","vol": "Volume"})
-           st.dataframe(filterdata.style.applymap(lambda Posisi: 'background-color: pink' if Posisi in nota['Kode'].values else ''))
-            #st.dataframe(filterdata)
+           st.dataframe(filterdata)
         with tab2:
             st.write("Data Deviden")
             devcum = pd.read_csv('devcumdate.csv', index_col=[0], sep=';')
