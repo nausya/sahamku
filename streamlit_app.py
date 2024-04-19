@@ -688,10 +688,11 @@ def screener():
        st.write('Screener Saham Harga Lebih Dari 5000')
        scr1=scr1.query("skg > 5000 and p<=10 and om >= 0.1")
        scr2 = scr1.style.applymap(lambda x: 'background-color: pink' if x in nota['Kode'].values else '')
+       scr2 = scr2.set_index('kode')
        scr2
     s = scr1.copy()
     
-    scr1 = scr1.set_index('kode')
+    #scr1 = scr1.set_index('kode')
    
     scr1 = scr1.rename(columns = {"p": "Posisi","kode":"Kode","aksiy": "Saran","skg":"Harga","lo":"1YMin","hi":"1YMax","bl":"2M","m":"6M", 
                                   "om":"Margin Operasi(%)", "dev":"Deviden PR(%)","roe": "ROE(%)","pery": "PER(%)",
