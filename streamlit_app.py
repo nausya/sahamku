@@ -698,28 +698,6 @@ def screener():
                                   "pbvy": "Nilai Buku","bvy": "Harga Dasar","ph": "Pendapatan(M)","totshm": "Total Saham(M)","mcap": "Omzet(T)","epsy": "Laba Per Saham","opcash": "Kas Operasional(M)",
                                   "ut": "Utang(M)","cash": "Nilai Kas(M)","tcs": "Kas Per Saham", "vol": "Volume(J)","date": "Tanggal"}).sort_values(['kode'])
     "Last Update : " + tgl
-    ########## tes
-    # Buat DataFrame contoh 1
-    data1 = {'Nama': ['Andi', 'Budi', 'Caca', 'Deni'],
-             'Warna': ['red', 'blue', 'green', 'yellow']}
-    
-    df1 = pd.DataFrame(data1)
-    
-    # Buat DataFrame contoh 2
-    data2 = {'Nama': ['Andi', 'Budi', 'Caca', 'Deni'],
-             'Usia': [25, 30, 35, 40]}
-    
-    df2 = pd.DataFrame(data2)
-    
-    # Gabungkan kedua DataFrame berdasarkan kolom 'Nama'
-    merged_df = pd.merge(df1, df2, on='Nama')
-    
-    # Terapkan fungsi untuk setiap sel pada DataFrame 2
-    styled_df = df2.style.applymap(lambda x: 'background-color: pink' if x in merged_df['Nama'].values else '')
-    
-    # Tampilkan DataFrame yang telah diwarnai
-    styled_df
-    ####### end tes
     scr1
     st.subheader('Grafik')
     fig, ax = plt.subplots()
