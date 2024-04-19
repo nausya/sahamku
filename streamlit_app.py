@@ -676,34 +676,33 @@ def screener():
 
     s = scr1.copy()
     ######## ubah jd int
-    scr2['p'] = scr2['p'].astype(int)
-    scr2['bl'] = scr2['bl'].astype(int)
-    scr2['m'] = scr2['m'].astype(int)
-    
-    scr2['om'] = (scr2['om'].round(2))*100
-    scr2['pbvy'] = scr2['pbvy'].round(1)
-    scr2['bvy'] = scr2['bvy'].round()
-    scr2['dev'] = (scr2['dev'].round(2))*100
-    scr2['roe'] = (scr2['roe'].round(2))*100
-    scr2['pery'] = scr2['pery'].round(0)
-    scr2['epsy'] = scr2['epsy'].round()
-    scr2['tcs'] = scr2['tcs'].round()
-    scr2['vol'] = ((scr2['vol'].round(1))/1000000).round(1)
-    scr2['totshm'] = ((scr2['totshm'].round(1))/1000000000).round(1)
-    scr2['mcap'] = ((scr2['mcap'].round(1))/1000000000000).round(1)
-    scr2['opcash'] = ((scr2['opcash'].round(1))/1000000000).round(1)
-    scr2['cash'] = ((scr2['cash'].round(1))/1000000000).round(1)
-    scr2['ut'] = ((scr2['ut'].round(1))/1000000000).round(1)
-    scr2['ph'] = ((scr2['ph'].round(1))/1000000000).round(1)
+    #scr2['p'] = #scr2['p'].astype(int)
+    #scr2['bl'] = #scr2['bl'].astype(int)
+    #scr2['m'] = #scr2['m'].astype(int)
+    #scr2['om'] = (#scr2['om'].round(2))*100
+    #scr2['pbvy'] = #scr2['pbvy'].round(1)
+    #scr2['bvy'] = #scr2['bvy'].round()
+    #scr2['dev'] = (#scr2['dev'].round(2))*100
+    #scr2['roe'] = (#scr2['roe'].round(2))*100
+    #scr2['pery'] = #scr2['pery'].round(0)
+    #scr2['epsy'] = #scr2['epsy'].round()
+    #scr2['tcs'] = #scr2['tcs'].round()
+    #scr2['vol'] = ((#scr2['vol'].round(1))/1000000).round(1)
+    #scr2['totshm'] = ((#scr2['totshm'].round(1))/1000000000).round(1)
+    #scr2['mcap'] = ((#scr2['mcap'].round(1))/1000000000000).round(1)
+    #scr2['opcash'] = ((#scr2['opcash'].round(1))/1000000000).round(1)
+    #scr2['cash'] = ((#scr2['cash'].round(1))/1000000000).round(1)
+    #scr2['ut'] = ((#scr2['ut'].round(1))/1000000000).round(1)
+    #scr2['ph'] = ((#scr2['ph'].round(1))/1000000000).round(1)
     ###### end of ubah
     scr2
     scr2.dtypes
     #scr1 = scr1.set_index('kode')
    
-    #scr1 = scr1.rename(columns = {"p": "Posisi","kode":"Kode","aksiy": "Saran","skg":"Harga","lo":"1YMin","hi":"1YMax","bl":"2M","m":"6M", 
-     #                             "om":"Margin Operasi(%)", "dev":"Deviden PR(%)","roe": "ROE(%)","pery": "PER(%)",
-      #                            "pbvy": "Nilai Buku","bvy": "Harga Dasar","ph": "Pendapatan(M)","totshm": "Total Saham(M)","mcap": "Omzet(T)","epsy": "Laba Per Saham","opcash": "Kas Operasional(M)",
-       #                           "ut": "Utang(M)","cash": "Nilai Kas(M)","tcs": "Kas Per Saham", "vol": "Volume(J)","date": "Tanggal"}).sort_values(['kode'])
+    scr2 = scr1.rename(columns = {"p": "Posisi","kode":"Kode","aksiy": "Saran","skg":"Harga","lo":"1YMin","hi":"1YMax","bl":"2M","m":"6M", 
+                                  "om":"Margin Operasi(%)", "dev":"Deviden PR(%)","roe": "ROE(%)","pery": "PER(%)",
+                                  "pbvy": "Nilai Buku","bvy": "Harga Dasar","ph": "Pendapatan(M)","totshm": "Total Saham(M)","mcap": "Omzet(T)","epsy": "Laba Per Saham","opcash": "Kas Operasional(M)",
+                                  "ut": "Utang(M)","cash": "Nilai Kas(M)","tcs": "Kas Per Saham", "vol": "Volume(J)","date": "Tanggal"}).sort_values(['kode'])
     "Last Update : " + tgl
 
     #scr1
