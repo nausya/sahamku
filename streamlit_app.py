@@ -697,6 +697,7 @@ def screener():
     scr2['ph'] = ((scr2['ph'].round(1))/1000000000).round(1)
     ###### end of ubah
     scr2
+    scr2.dtypes
     #scr1 = scr1.set_index('kode')
    
     #scr1 = scr1.rename(columns = {"p": "Posisi","kode":"Kode","aksiy": "Saran","skg":"Harga","lo":"1YMin","hi":"1YMax","bl":"2M","m":"6M", 
