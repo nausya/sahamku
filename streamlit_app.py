@@ -696,16 +696,29 @@ def screener():
                                   "ut": "Utang(M)","cash": "Nilai Kas(M)","tcs": "Kas Per Saham", "vol": "Volume(J)","date": "Tanggal"}).sort_values(['kode'])
     "Last Update : " + tgl
     ########## tes
-    # Buat DataFrame contoh
-    data = {'Nama': ['Andi', 'Budi', 'Caca', 'Deni'],
-            'Usia': [25, 30, 35, 40],
-            'Pekerjaan': ['Programmer', 'Designer', 'Manager', 'Analyst']}
+    # Buat DataFrame contoh 1
+    data1 = {'Nama': ['Andi', 'Budi', 'Caca', 'Deni'],
+             'Warna': ['red', 'blue', 'green', 'yellow']}
     
-    df = pd.DataFrame(data)
+    df1 = pd.DataFrame(data1)
     
+    # Buat DataFrame contoh 2
+    data2 = {'Nama': ['Andi', 'Budi', 'Caca', 'Deni'],
+             'Usia': [25, 30, 35, 40]}
     
-    # Terapkan fungsi pada DataFrame menggunakan method .style
-    styled_df = df.style.apply('background-color:pink' if s['Usia'] > 30 else 'white', axis=1)
+    df2 = pd.DataFrame(data2)
+    
+    # Gabungkan kedua DataFrame berdasarkan kolom 'Nama'
+    merged_df = pd.merge(df1, df2, on='Nama')
+    
+    # Fungsi untuk memberi warna pada sel berdasarkan nilai dari DataFrame 1
+    def color_cell(value):
+        # Dapatkan warna berdasarkan nilai dari DataFrame 1
+        color = merged_df.loc[merged_df['Nama'] == value, 'Warna'].values[0]
+        return 'background-color: {}'.format(color)
+    
+    # Terapkan fungsi untuk setiap sel pada DataFrame 2
+    styled_df = df2.style.applymap(lambda x: color_cell(x) if x in merged_df['Nama'].values else '')
     
     # Tampilkan DataFrame yang telah diwarnai
     styled_df
