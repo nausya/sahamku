@@ -695,7 +695,26 @@ def screener():
                                   "pbvy": "Nilai Buku","bvy": "Harga Dasar","ph": "Pendapatan(M)","totshm": "Total Saham(M)","mcap": "Omzet(T)","epsy": "Laba Per Saham","opcash": "Kas Operasional(M)",
                                   "ut": "Utang(M)","cash": "Nilai Kas(M)","tcs": "Kas Per Saham", "vol": "Volume(J)","date": "Tanggal"}).sort_values(['kode'])
     "Last Update : " + tgl
+    ########## tes
+    # Buat DataFrame contoh
+    data = {'Nama': ['Andi', 'Budi', 'Caca', 'Deni'],
+            'Usia': [25, 30, 35, 40],
+            'Pekerjaan': ['Programmer', 'Designer', 'Manager', 'Analyst']}
     
+    df = pd.DataFrame(data)
+    
+    # Fungsi untuk mewarnai baris berdasarkan kondisi tertentu
+    def highlight_row(s):
+        # Buat variabel warna untuk menyimpan warna yang akan digunakan
+        color = 'pink' if s['Usia'] > 30 else 'white'
+        return ['background-color: {}'.format(color)] * len(s)
+    
+    # Terapkan fungsi pada DataFrame menggunakan method .style
+    styled_df = df.style.apply(highlight_row, axis=1)
+    
+    # Tampilkan DataFrame yang telah diwarnai
+    styled_df
+    ####### end tes
     scr1
     st.subheader('Grafik')
     fig, ax = plt.subplots()
