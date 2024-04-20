@@ -652,35 +652,34 @@ def screener():
     #tgl = tgl[8:10] + "/" + tgl[5:7]+ "/" + tgl[0:4]
     
     scr1 = scr1.fillna(0)
-    
+    awal, akhir = st.slider('Posisi', min_value=0, max_value=100, value=(0, 100))
     if screenlevel == '<Rp200':
        st.write('Screener Saham Harga Rentang 50-200')
-       scr1=scr1.query("skg > 50 and skg<= 200 and p<=10 and om >= 0.1 and roe >= 0.1")
+       scr1=scr1.query("skg > 50 and skg<= 200 and p>=@awal and p<=@akhir and om >= 0.1 and roe >= 0.1")
 
     elif screenlevel == '<Rp5rb':
        st.write('Screener Saham Harga Kurang Dari 5000')
-       scr1=scr1.query("skg > 200 and skg <= 5000 and p<=10 and om >= 0.1 and roe >= 0.1")
+       scr1=scr1.query("skg > 200 and skg <= 5000 and p>=@awal and p<=@akhir and om >= 0.1 and roe >= 0.1")
 
     elif screenlevel == 'BagiDeviden':
         st.write('Screener Rutin Bagi Deviden di atas 5%')
         dev = pd.read_csv('devhunter.csv')
         dev = dev.values.tolist()
         dev = [item for sublist in dev for item in sublist]
-        scr1 = scr1.query("kode in @dev")
+        scr1 = scr1.query("kode in @dev and p>=@awal and p<=@akhir")
 
     elif screenlevel == 'LQ45':
         st.write('Screener Saham LQ45')
         LQ = pd.read_csv('LQ45.csv')
         LQ = LQ.values.tolist()
         LQ = [item for sublist in LQ for item in sublist]
-        scr1 = scr1.query("kode in @LQ")
+        scr1 = scr1.query("kode in @LQ and p>=@awal and p<=@akhir")
 
     elif screenlevel == 'KOMPAS100':
         st.write('Screener Saham KOMPAS100')
         KOMPAS100 = pd.read_csv('KOMPAS100.csv')
         KOMPAS100 = KOMPAS100.values.tolist()
         KOMPAS100 = [item for sublist in KOMPAS100 for item in sublist]
-        awal, akhir = st.slider('Posisi', min_value=0, max_value=100, value=(0, 100))
         scr1 = scr1.query("kode in @KOMPAS100 and p>=@awal and p<=@akhir")
   
     else:
