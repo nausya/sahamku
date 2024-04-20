@@ -681,7 +681,7 @@ def screener():
         KOMPAS100 = KOMPAS100.values.tolist()
         KOMPAS100 = [item for sublist in KOMPAS100 for item in sublist]
         pos = st.slider('Posisi', 0, 100, 10,  disabled=False, step=2)
-        scr1 = scr1.query("kode in @KOMPAS100")
+        scr1 = scr1.query("kode in @KOMPAS100 and p<=@pos")
   
     else:
        st.write('Screener Saham Harga Lebih Dari 5000')
