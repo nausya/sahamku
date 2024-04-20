@@ -564,9 +564,9 @@ def dataframe():
         with tab1:
            st.write('Filter Data')
            filterdata = pd.read_csv('porto.csv', index_col=[0], sep=';')
-           tgl = filterdata['date'].values[0]
-           tgl = tgl[8:10] + "/" + tgl[5:7]+ "/" + tgl[0:4]
-           "Last Update : " + tgl
+           #tgl = filterdata['date'].values[0]
+           #tgl = tgl[8:10] + "/" + tgl[5:7]+ "/" + tgl[0:4]
+           #"Last Update : " + tgl
            filterdata = filterdata.rename(columns = {"date": "Tanggal", "p": "Posisi","kode":"Kode","aksiy": "Saran","skg":"Harga","lo":"1YMin","hi":"1YMax","bl":"2M","m":"6M", 
            "om":"Margin Operasi", "dev":"Deviden PR","epsy":"Laba Per Saham","roe": "ROE","pery": "PER",
            "pbvy": "Nilai Buku","bvy": "Harga Dasar","ph": "Pendapatan","ut":"Utang",
@@ -646,8 +646,8 @@ def screener():
     st.subheader('Tabular Hasil Screener (Pink : Notasi Khusus)')
     scr1 = pd.read_csv('porto.csv', sep=';')
   
-    tgl = scr1['date'].values[0]
-    tgl = tgl[8:10] + "/" + tgl[5:7]+ "/" + tgl[0:4]
+    #tgl = scr1['date'].values[0]
+    #tgl = tgl[8:10] + "/" + tgl[5:7]+ "/" + tgl[0:4]
     
     scr1 = scr1.fillna(0)
     
@@ -702,7 +702,7 @@ def screener():
     #                              "om":"Margin Operasi(%)", "dev":"Deviden PR(%)","roe": "ROE(%)","pery": "PER(%)",
     #                              "pbvy": "Nilai Buku","bvy": "Harga Dasar","ph": "Pendapatan(M)","totshm": "Total Saham(M)","mcap": "Omzet(T)","epsy": "Laba Per Saham","opcash": "Kas Operasional(M)",
     #                              "ut": "Utang(M)","cash": "Nilai Kas(M)","tcs": "Kas Per Saham", "vol": "Volume(J)","date": "Tanggal"}).sort_values(['kode'])
-    "Last Update : " + tgl
+    #"Last Update : " + tgl
 
     #scr1
     st.subheader('Grafik')
