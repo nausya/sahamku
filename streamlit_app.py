@@ -687,7 +687,7 @@ def screener():
         pilkol = 'scr1[' + '"' + pilkol + '"' + ']'
         pilkol
         scr1 = scr1.query("kode in @KOMPAS100")
-        gas = scr1['p'].describe()
+        gas = pilkol.describe()
         gas = gas.loc[['min', 'max']]
         gas
        #pil = st.slider('Nilai', 0, 100, 40,  disabled=False, step=10)
