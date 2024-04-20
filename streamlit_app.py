@@ -656,7 +656,7 @@ def screener():
     with col1:
         awal, akhir = st.slider('Posisi', min_value=0, max_value=100, value=(0, 100))
     with col2:
-        omawal, omakhir = st.slider('Margin Operasi', min_value=0%, max_value=100%, value=(0%, 100%))
+        omawal, omakhir = st.slider('Margin Operasi', min_value=0, max_value=100, value=(0, 100))
     if screenlevel == '<Rp200':
        st.write('Screener Saham Harga Rentang 50-200')
        scr1=scr1.query("skg > 50 and skg<= 200 and p>=@awal and p<=@akhir and om >= 0.1 and roe >= 0.1")
