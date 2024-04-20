@@ -656,12 +656,10 @@ def screener():
     if screenlevel == '<Rp200':
        st.write('Screener Saham Harga Rentang 50-200')
        scr1=scr1.query("skg > 50 and skg<= 200 and p<=10 and om >= 0.1 and roe >= 0.1")
-       #scr2 = scr1.style.applymap(lambda x: 'background-color: pink' if x in nota['Kode'].values else '') 
 
     elif screenlevel == '<Rp5rb':
        st.write('Screener Saham Harga Kurang Dari 5000')
        scr1=scr1.query("skg > 200 and skg <= 5000 and p<=10 and om >= 0.1 and roe >= 0.1")
-       #scr2 = scr1.style.applymap(lambda x: 'background-color: pink' if x in nota['Kode'].values else '')
 
     elif screenlevel == 'BagiDeviden':
         st.write('Screener Rutin Bagi Deviden di atas 5%')
@@ -669,7 +667,6 @@ def screener():
         dev = dev.values.tolist()
         dev = [item for sublist in dev for item in sublist]
         scr1 = scr1.query("kode in @dev")
-        #scr2 = scr1.style.applymap(lambda x: 'background-color: pink' if x in nota['Kode'].values else '')
 
     else:
        st.write('Screener Saham Harga Lebih Dari 5000')
@@ -685,8 +682,7 @@ def screener():
     #                              "pbvy": "Nilai Buku","bvy": "Harga Dasar","ph": "Pendapatan(M)","totshm": "Total Saham(M)","mcap": "Omzet(T)","epsy": "Laba Per Saham","opcash": "Kas Operasional(M)",
     #                              "ut": "Utang(M)","cash": "Nilai Kas(M)","tcs": "Kas Per Saham", "vol": "Volume(J)","date": "Tanggal"}).sort_values(['kode'])
     #"Last Update : " + tgl
-
-    #scr1
+    
     st.subheader('Grafik')
     fig, ax = plt.subplots()
     
