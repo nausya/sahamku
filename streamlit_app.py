@@ -680,7 +680,9 @@ def screener():
         KOMPAS100 = pd.read_csv('KOMPAS100.csv')
         KOMPAS100 = KOMPAS100.values.tolist()
         KOMPAS100 = [item for sublist in KOMPAS100 for item in sublist]
-        kolom = scr1.columns
+        dfkol = scr1.copy()
+        dfkol = df.drop(columns=['kode','aksiy'])
+        kolom = dfkol.columns
         selected_kolom = st.selectbox('Filter Berdasarkan :', kolom)
        #pil = st.slider('Nilai', 0, 100, 40,  disabled=False, step=10)
         scr1 = scr1.query("kode in @KOMPAS100")
