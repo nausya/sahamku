@@ -561,8 +561,10 @@ def dataframe():
     elif caridata == 'Fundamental':
         ###### KONTAINER TABS #############
         tab1, tab2, tab3 = st.tabs(['Portofolio','Deviden','Finansial'])
+        st.write('Last Update : 19 April 2024')
         with tab1:
            st.write('Filter Data')
+           
            filterdata = pd.read_csv('porto.csv', index_col=[0], sep=';')
            #tgl = filterdata['date'].values[0]
            #tgl = tgl[8:10] + "/" + tgl[5:7]+ "/" + tgl[0:4]
@@ -645,7 +647,7 @@ def screener():
    
     st.subheader('Tabular Hasil Screener (Pink : Notasi Khusus)')
     scr1 = pd.read_csv('porto.csv', sep=';', index_col=False)
-  
+    st.write('Last Update : 19 April 2024')
     #tgl = scr1['date'].values[0]
     #tgl = tgl[8:10] + "/" + tgl[5:7]+ "/" + tgl[0:4]
     
