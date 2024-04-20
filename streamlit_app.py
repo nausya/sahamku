@@ -665,32 +665,32 @@ def screener():
 
     elif screenlevel == '<Rp5rb':
        st.write('Screener Saham Harga Kurang Dari 5000')
-       scr1=scr1.query("skg > 200 and skg <= 5000 and p>=@awal and p<=@akhir and om >= 0.1 and roe >= 0.1")
+       scr1=scr1.query("skg > 200 and skg <= 5000 and p>=@awal and p<=@akhir and om>=@omawal and om<=@omakhir and roe >= 0.1")
 
     elif screenlevel == 'BagiDeviden':
         st.write('Screener Rutin Bagi Deviden di atas 5%')
         dev = pd.read_csv('devhunter.csv')
         dev = dev.values.tolist()
         dev = [item for sublist in dev for item in sublist]
-        scr1 = scr1.query("kode in @dev and p>=@awal and p<=@akhir")
+        scr1 = scr1.query("kode in @dev and p>=@awal and p<=@akhir and om>=@omawal and om<=@omakhir")
 
     elif screenlevel == 'LQ45':
         st.write('Screener Saham LQ45')
         LQ = pd.read_csv('LQ45.csv')
         LQ = LQ.values.tolist()
         LQ = [item for sublist in LQ for item in sublist]
-        scr1 = scr1.query("kode in @LQ and p>=@awal and p<=@akhir")
+        scr1 = scr1.query("kode in @LQ and p>=@awal and p<=@akhir and om>=@omawal and om<=@omakhir")
 
     elif screenlevel == 'KOMPAS100':
         st.write('Screener Saham KOMPAS100')
         KOMPAS100 = pd.read_csv('KOMPAS100.csv')
         KOMPAS100 = KOMPAS100.values.tolist()
         KOMPAS100 = [item for sublist in KOMPAS100 for item in sublist]
-        scr1 = scr1.query("kode in @KOMPAS100 and p>=@awal and p<=@akhir")
+        scr1 = scr1.query("kode in @KOMPAS100 and p>=@awal and p<=@akhir and om>=@omawal and om<=@omakhir")
   
     else:
        st.write('Screener Saham Harga Lebih Dari 5000')
-       scr1=scr1.query("skg > 5000 and p>=@awal and p<=@akhir and om >= 0.1")
+       scr1=scr1.query("skg > 5000 and p>=@awal and p<=@akhir and om>=@omawal and om<=@omakhir")
     scr2 = scr1.style.applymap(lambda x: 'background-color: pink' if x in nota['Kode'].values else '')
     s = scr1.copy()
     #scr2 = scr2.set_index('kode')
