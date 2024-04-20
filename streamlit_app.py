@@ -680,13 +680,13 @@ def screener():
         KOMPAS100 = pd.read_csv('KOMPAS100.csv')
         KOMPAS100 = KOMPAS100.values.tolist()
         KOMPAS100 = [item for sublist in KOMPAS100 for item in sublist]
+        kolom = scr1.columns
+        selected_kolom = st.selectbox('Filter Berdasarkan :', kolom)
+       #pil = st.slider('Nilai', 0, 100, 40,  disabled=False, step=10)
         scr1 = scr1.query("kode in @KOMPAS100")
 
     else:
        st.write('Screener Saham Harga Lebih Dari 5000')
-       kolom = scr1.columns
-       selected_kolom = st.selectbox('Filter Berdasarkan :', kolom)
-       #pil = st.slider('Nilai', 0, 100, 40,  disabled=False, step=10)
        scr1=scr1.query("skg > 5000 and p<=10 and om >= 0.1")
     scr2 = scr1.style.applymap(lambda x: 'background-color: pink' if x in nota['Kode'].values else '')
     s = scr1.copy()
