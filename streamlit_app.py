@@ -685,7 +685,7 @@ def screener():
         kolom = dfkol.columns
         selected_kolom = st.selectbox('Filter Berdasarkan :', kolom)
         scr1 = scr1.query("kode in @KOMPAS100")
-        gas = scr1.describe()
+        gas = scr1['p'].describe()
         gas = gas.loc[['min', 'max']]
         gas
        #pil = st.slider('Nilai', 0, 100, 40,  disabled=False, step=10)
