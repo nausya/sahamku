@@ -683,8 +683,9 @@ def screener():
         dfkol = scr1.copy()
         dfkol = df.drop(columns=['aksiy','kode'])
         kolom = dfkol.columns
-        selected_kolom = st.selectbox('Filter Berdasarkan :', kolom)
-        selected_kolom
+        pilkol = st.selectbox('Filter Berdasarkan :', kolom)
+        pilkol = 'scr1[' + 'pilkol' + ']'
+        pilkol
         scr1 = scr1.query("kode in @KOMPAS100")
         gas = scr1['p'].describe()
         gas = gas.loc[['min', 'max']]
