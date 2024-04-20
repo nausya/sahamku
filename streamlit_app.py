@@ -701,7 +701,7 @@ def screener():
     fig, ax = plt.subplots()
     
     x = s['p']
-    y = s['om']
+    y = s['om']*100
     kd = s['kode']
     sns.scatterplot(s,x=x, y=y, marker='>')
     plt.xlabel("Posisi Harga")
