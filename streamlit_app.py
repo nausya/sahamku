@@ -652,16 +652,24 @@ def screener():
     #tgl = tgl[8:10] + "/" + tgl[5:7]+ "/" + tgl[0:4]
     
     scr1 = scr1.fillna(0)
-    col1, col2 = st.columns([1, 1], gap="large")
+    col1, col2, col3, col4 = st.columns([1,1,1,1], gap="large")
     with col1:
         awal, akhir = st.slider('Posisi', min_value=0, max_value=100, value=(0, 100))
     with col2:
         omawal, omakhir = st.slider('Margin Operasi (%)', min_value=0, max_value=100, value=(0, 100))
         omawal = omawal/100
         omakhir = omakhir/100
+    with col3:
+        devawal, devakhir = st.slider('Deviden (%)', min_value=0, max_value=100, value=(0, 100))
+        devawal = devawal/100
+        devakhir = devakhir/100
+    with col4:
+        roeawal, roeakhir = st.slider('Return on Equity (%)', min_value=0, max_value=100, value=(0, 100))
+        roeawal = roeawal/100
+        roeakhir = roeakhir/100
     if screenlevel == '<Rp200':
        st.write('Screener Saham Harga Rentang 50-200')
-       scr1=scr1.query("skg > 50 and skg<= 200 and p>=@awal and p<=@akhir and om>=@omawal and om<=@omakhir and roe >= 0.1")
+       scr1=scr1.query("skg > 50 and skg<= 200 and p>=@awal and p<=@akhir and om>=@omawal and om<=@omakhir and dev>=@devawal and dev<=@devakhir and roe>=@roeawal and roe<=@roeakhir")
 
     elif screenlevel == '<Rp5rb':
        st.write('Screener Saham Harga Kurang Dari 5000')
