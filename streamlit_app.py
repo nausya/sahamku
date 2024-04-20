@@ -644,7 +644,7 @@ def screener():
     screenlevel = option_menu(None, ['>Rp5rb','<Rp5rb','<Rp200','BagiDeviden'], icons=['arrow-up-square', 'arrow-down-square', 'arrow-down-square-fill', 'bullseye'], menu_icon="cast", default_index=0, orientation="horizontal")
    
     st.subheader('Tabular Hasil Screener (Pink : Notasi Khusus)')
-    scr1 = pd.read_csv('porto.csv', sep=';')
+    scr1 = pd.read_csv('porto.csv', sep=';', index_col=False)
   
     #tgl = scr1['date'].values[0]
     #tgl = tgl[8:10] + "/" + tgl[5:7]+ "/" + tgl[0:4]
@@ -675,7 +675,7 @@ def screener():
        scr2 = scr1.style.applymap(lambda x: 'background-color: pink' if x in nota['Kode'].values else '')
 
     s = scr1.copy()
-    scr2 = scr2.set_index('kode')
+    #scr2 = scr2.set_index('kode')
     scr2
     
    
