@@ -685,7 +685,7 @@ def screener():
     else:
        st.write('Screener Saham Harga Lebih Dari 5000')
        kolom = scr1.columns
-       selected_kolom = st.sidebar.selectbox('Pilih Kolom:', kolom)
+       selected_kolom = st.selectbox('Pilih Kolom:', kolom)
        #pil = st.slider('Nilai', 0, 100, 40,  disabled=False, step=10)
        scr1=scr1.query("skg > 5000 and p<=10 and om >= 0.1")
     scr2 = scr1.style.applymap(lambda x: 'background-color: pink' if x in nota['Kode'].values else '')
