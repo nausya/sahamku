@@ -681,7 +681,7 @@ def screener():
         KOMPAS100 = KOMPAS100.values.tolist()
         KOMPAS100 = [item for sublist in KOMPAS100 for item in sublist]
         dfkol = scr1.copy()
-        dfkol = df.drop(columns=['kode','aksiy'])
+        dfkol = df.drop(columns=['aksiy','kode'])
         kolom = dfkol.columns
         selected_kolom = st.selectbox('Filter Berdasarkan :', kolom)
         selected_kolom
