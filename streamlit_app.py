@@ -654,10 +654,10 @@ def screener():
     scr1 = scr1.fillna(0)
     col1, col2 = st.columns([1, 1])
     with col1:
-        st.set_column_width(150)
+        st.set_column_width(100)
         awal, akhir = st.slider('Posisi', min_value=0, max_value=100, value=(0, 100))
     with col2:
-        st.set_column_width(150)
+        st.set_column_width(100)
         omawal, omakhir = st.slider('Margin Operasi (%)', min_value=0, max_value=100, value=(0, 100))
     if screenlevel == '<Rp200':
        st.write('Screener Saham Harga Rentang 50-200')
