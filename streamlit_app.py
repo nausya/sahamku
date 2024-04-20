@@ -643,7 +643,7 @@ def model_engine(model, num):
         
 #Screener Grafik Kuadran
 def screener():
-    screenlevel = option_menu(None, ['>Rp5rb','<Rp5rb','<Rp200','LQ45','BagiDeviden'], icons=['arrow-up-square', 'arrow-down-square', 'arrow-down-square-fill', 'bullseye'], menu_icon="cast", default_index=0, orientation="horizontal")
+    screenlevel = option_menu(None, ['>Rp5rb','<Rp5rb','<Rp200','LQ45','KOMPAS100','BagiDeviden'], icons=['arrow-up-square', 'arrow-down-square', 'arrow-down-square-fill', 'bullseye'], menu_icon="cast", default_index=0, orientation="horizontal")
    
     st.subheader('Tabular Hasil Screener (Pink : Notasi Khusus)')
     scr1 = pd.read_csv('porto.csv', sep=';', index_col=False)
@@ -674,6 +674,13 @@ def screener():
         LQ = LQ.values.tolist()
         LQ = [item for sublist in LQ for item in sublist]
         scr1 = scr1.query("kode in @LQ")
+
+    elif screenlevel == 'KOMPAS100':
+        st.write('Screener Saham KOMPAS100')
+        KOMPAS100 = pd.read_csv('KOMPAS100.csv')
+        KOMPAS100 = KOMPAS100.values.tolist()
+        KOMPAS100 = [item for sublist in KOMPAS100 for item in sublist]
+        scr1 = scr1.query("kode in @KOMPAS100")
 
     else:
        st.write('Screener Saham Harga Lebih Dari 5000')
