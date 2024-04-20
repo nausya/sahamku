@@ -684,7 +684,7 @@ def screener():
   
     else:
        st.write('Screener Saham Harga Lebih Dari 5000')
-       scr1=scr1.query("skg > 5000 and p<=10 and om >= 0.1")
+       scr1=scr1.query("skg > 5000 and p>=@awal and p<=@akhir and om >= 0.1")
     scr2 = scr1.style.applymap(lambda x: 'background-color: pink' if x in nota['Kode'].values else '')
     s = scr1.copy()
     #scr2 = scr2.set_index('kode')
