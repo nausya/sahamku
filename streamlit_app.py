@@ -680,7 +680,7 @@ def screener():
         KOMPAS100 = pd.read_csv('KOMPAS100.csv')
         KOMPAS100 = KOMPAS100.values.tolist()
         KOMPAS100 = [item for sublist in KOMPAS100 for item in sublist]
-        awal,akhir = st.select_slider('Posisi', value=(0,100))
+        awal, akhir = st.slider('Posisi', min_value=0, max_value=100, value=(0, 100))
         scr1 = scr1.query("kode in @KOMPAS100 and p>=@awal and p<=@akhir")
   
     else:
