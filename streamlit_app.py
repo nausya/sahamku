@@ -657,6 +657,7 @@ def screener():
        st.write('Screener Saham Harga Rentang 50-200')
        scr1=scr1.query("skg > 50 and skg<= 200 and p<=10 and om >= 0.1 and roe >= 0.1")
        scr2 = scr1.style.applymap(lambda x: 'background-color: pink' if x in nota['Kode'].values else '')
+       scr2.map(lambda x: '{:.1f}'.format(x).rstrip('0').rstrip('.') if isinstance(x, float) else x)
 
     elif screenlevel == '<Rp5rb':
        st.write('Screener Saham Harga Kurang Dari 5000')
