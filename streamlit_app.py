@@ -701,7 +701,7 @@ def screener():
     #scr2 = scr2.set_index('kode')
     #scr2['mcap'] = scr1['mcap']/1000000000000
     scr2
-    st.text(f'Kode Emiten Dengan Warna {'background-color: pink'} Pink : Notasi Khusus')
+    st.text('Kode Emiten Dengan Warna 'background-color: pink' Pink : Notasi Khusus')
     st.caption('Last Update : 19 April 2024')
    
     #scr1 = scr1.rename(columns = {"p": "Posisi","kode":"Kode","aksiy": "Saran","skg":"Harga","lo":"1YMin","hi":"1YMax","bl":"2M","m":"6M", 
