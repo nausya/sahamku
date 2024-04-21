@@ -694,11 +694,11 @@ def screener():
   
     else:
        st.subheader('Screener Saham Dengan Fraksi Harga Lebih Dari 5000')
-       scr1=scr1.query("skg > 5000 and p>=@awal and p<=@akhir and om>=@omawal and om<=@omakhir and dev>=@devawal and dev<=@devakhir and roe>=@roeawal and roe<=@roeakhir")
+       scr1 = scr1.query("skg > 5000 and p>=@awal and p<=@akhir and om>=@omawal and om<=@omakhir and dev>=@devawal and dev<=@devakhir and roe>=@roeawal and roe<=@roeakhir")
     scr2 = scr1.style.applymap(lambda x: 'background-color: pink' if x in nota['Kode'].values else '')
     s = scr1.copy()
     #scr2 = scr2.set_index('kode')
-    scr2['mcap'] = scr2['mcap']/1000000000000
+    scr2['mcap'] = scr1['mcap']/1000000000000
     scr2
     st.caption('Kode Emiten Dengan Warna Pink : Notasi Khusus')
     st.caption('Last Update : 19 April 2024')
