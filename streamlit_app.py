@@ -702,6 +702,7 @@ def screener():
     #scr2['mcap'] = scr1['mcap']/1000000000000
     scr2
     st.text('Kode Emiten Dengan Warna 'background-color: pink' Pink : Notasi Khusus')
+    st.markdown('Kode Emiten Dengan Warna <p style="background-color: #ffc0cb; padding: 10px;">Pink</p> : Notasi Khusus', unsafe_allow_html=True)
     st.caption('Last Update : 19 April 2024')
    
     #scr1 = scr1.rename(columns = {"p": "Posisi","kode":"Kode","aksiy": "Saran","skg":"Harga","lo":"1YMin","hi":"1YMax","bl":"2M","m":"6M", 
