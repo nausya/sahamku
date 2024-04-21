@@ -668,11 +668,11 @@ def screener():
         roeawal = roeawal/100
         roeakhir = roeakhir/100
     if screenlevel == '<Rp200':
-       st.subheader('Screener Saham Harga Rentang 50-200')
+       st.subheader('Screener Saham Dengan Fraksi Harga Rentang 50-200')
        scr1=scr1.query("skg > 50 and skg<= 200 and p>=@awal and p<=@akhir and om>=@omawal and om<=@omakhir and dev>=@devawal and dev<=@devakhir and roe>=@roeawal and roe<=@roeakhir")
 
     elif screenlevel == '<Rp5rb':
-       st.subheader('Screener Saham Harga Kurang Dari 5000')
+       st.subheader('Screener Saham Dengan Fraksi Harga Kurang Dari 5000')
        scr1=scr1.query("skg > 200 and skg <= 5000 and p>=@awal and p<=@akhir and om>=@omawal and om<=@omakhir and dev>=@devawal and dev<=@devakhir and roe>=@roeawal and roe<=@roeakhir")
 
     elif screenlevel == 'BagiDeviden':
@@ -697,7 +697,7 @@ def screener():
         scr1 = scr1.query("kode in @KOMPAS100 and p>=@awal and p<=@akhir and om>=@omawal and om<=@omakhir and dev>=@devawal and dev<=@devakhir and roe>=@roeawal and roe<=@roeakhir")
   
     else:
-       st.subheader('Screener Saham Harga Lebih Dari 5000')
+       st.subheader('Screener Saham Dengan Fraksi Harga Lebih Dari 5000')
        scr1=scr1.query("skg > 5000 and p>=@awal and p<=@akhir and om>=@omawal and om<=@omakhir and dev>=@devawal and dev<=@devakhir and roe>=@roeawal and roe<=@roeakhir")
     scr2 = scr1.style.applymap(lambda x: 'background-color: pink' if x in nota['Kode'].values else '')
     s = scr1.copy()
