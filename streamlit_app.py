@@ -699,7 +699,7 @@ def screener():
     s = scr1.copy()
     #scr2 = scr2.set_index('kode')
     #scr2['mcap'] = scr1['mcap']/1000000000000
-    scr2
+    scr1
     st.caption('Kode Emiten Dengan Warna Pink : Notasi Khusus')
     st.caption('Last Update : 19 April 2024')
    
