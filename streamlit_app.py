@@ -645,9 +645,9 @@ def model_engine(model, num):
 def screener():
     screenlevel = option_menu(None, ['>Rp5rb','<Rp5rb','<Rp200','LQ45','KOMPAS100','BagiDeviden'], icons=['arrow-up-square', 'arrow-down-square', 'arrow-down-square-fill', 'bullseye'], menu_icon="cast", default_index=0, orientation="horizontal")
    
-    st.write('Halaman Screener (Kode Emiten Dengan Warna Pink : Notasi Khusus)')
+    st.write('Filter Berdasarkan :')
     scr1 = pd.read_csv('porto.csv', sep=';', index_col=False)
-    st.write('Last Update : 19 April 2024')
+    
     #tgl = scr1['date'].values[0]
     #tgl = tgl[8:10] + "/" + tgl[5:7]+ "/" + tgl[0:4]
     
@@ -703,7 +703,8 @@ def screener():
     s = scr1.copy()
     #scr2 = scr2.set_index('kode')
     scr2
-    
+    st.write('Kode Emiten Dengan Warna Pink : Notasi Khusus')
+    st.write('Last Update : 19 April 2024')
    
     #scr1 = scr1.rename(columns = {"p": "Posisi","kode":"Kode","aksiy": "Saran","skg":"Harga","lo":"1YMin","hi":"1YMax","bl":"2M","m":"6M", 
     #                              "om":"Margin Operasi(%)", "dev":"Deviden PR(%)","roe": "ROE(%)","pery": "PER(%)",
