@@ -712,10 +712,16 @@ def screener():
     #"Last Update : " + tgl
     
     st.subheader('Grafik')
+    pilgra = st.radio('Posisi Harga Terkini Terhadap : ', ['Margin Operasi', 'Deviden', 'RoE'])
     fig, ax = plt.subplots()
     
     x = s['p']
-    y = s['om']*100
+    if pilgra == 'Margin Operasi':
+        y = s['om']*100
+    elif pilgra == 'Deviden':
+        y = s['dev']*100
+    else:
+        y = s['roe']*100
     kd = s['kode']
     sns.scatterplot(s,x=x, y=y, marker='>')
     plt.xlabel("Posisi Harga")
