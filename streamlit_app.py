@@ -406,7 +406,7 @@ else:
    fin = [item for sublist in fin for item in sublist]
    skg = df['skg'].values[0]
    lo = df['lo'].values[0]
-   eps = fin[0]#df['epsy'].values[0]
+   eps = fin[0]
    tcs = df['tcs'].values[0]
    bv = df['bvy'].values[0]
    pbv = df['pbvy'].values[0]
@@ -440,11 +440,7 @@ else:
    dbv = round(d(bv, bmbv))
    dpbv = round(d(bmpbv, pbv))
    dper = round(d(bmper, per))
-   #Volrata = data.tail(1)
-   #Volrata = Volrata['Volume'].mean()
-   #Volrata = round(Volrata)
-   #Volrata
-   #dvol = digit(Volrata)
+
    dprf = eps * Sahamedar
    dvol = round(d(vol, vole))
    ddev = 0
@@ -702,6 +698,7 @@ def screener():
     scr2 = scr1.style.applymap(lambda x: 'background-color: pink' if x in nota['Kode'].values else '')
     s = scr1.copy()
     #scr2 = scr2.set_index('kode')
+    scr2['mcap'] = digit(scr2['mcap'])
     scr2
     st.caption('Kode Emiten Dengan Warna Pink : Notasi Khusus')
     st.caption('Last Update : 19 April 2024')
