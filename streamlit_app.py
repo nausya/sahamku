@@ -704,7 +704,7 @@ def screener():
     #scr2 = scr2.set_index('kode')
     scr2
     st.write('Kode Emiten Dengan Warna Pink : Notasi Khusus')
-    st.write('Last Update : 19 April 2024')
+    st.caption('Last Update : 19 April 2024')
    
     #scr1 = scr1.rename(columns = {"p": "Posisi","kode":"Kode","aksiy": "Saran","skg":"Harga","lo":"1YMin","hi":"1YMax","bl":"2M","m":"6M", 
     #                              "om":"Margin Operasi(%)", "dev":"Deviden PR(%)","roe": "ROE(%)","pery": "PER(%)",
