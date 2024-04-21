@@ -701,7 +701,7 @@ def screener():
     #scr2 = scr2.set_index('kode')
     #scr2['mcap'] = scr1['mcap']/1000000000000
     scr2
-    st.text('Kode Emiten Dengan Warna 'background-color: pink' Pink : Notasi Khusus')
+    st.text('Kode Emiten Dengan Warna Pink : Notasi Khusus')
     st.markdown('Kode Emiten Dengan Warna <p style="background-color: #ffc0cb; padding: 10px;">Pink</p> : Notasi Khusus', unsafe_allow_html=True)
     st.caption('Last Update : 19 April 2024')
    
