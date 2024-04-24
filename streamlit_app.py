@@ -726,7 +726,7 @@ def screener():
         ylabel = 'Margin Operasi'
     elif pilgra == 'Deviden':
         y = s['dev']*100
-        ylabel = 'Deviden='
+        ylabel = 'Deviden'
     elif pilgra == 'TunaiPerSaham':
         y = s['tun']*100
         ylabel = 'Tunai Per Saham'
@@ -736,8 +736,7 @@ def screener():
     kd = s['kode']
     sns.scatterplot(s,x=x, y=y, marker='>')
     plt.xlabel("Posisi Harga")
-    #plt.ylabel("Margin Operasi (%)")
-    plt.ylabel(f"{ylabel}%")
+    plt.ylabel(f"{ylabel} (%)")
     for a,b,c in zip(x,y,kd):
         label = f"{c} {int(b)}%"
         ax.annotate(label,(a,b), xytext=(3, -3),textcoords='offset points',fontsize='7')
