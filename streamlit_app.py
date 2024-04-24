@@ -665,7 +665,7 @@ def screener():
         roeawal = roeawal/100
         roeakhir = roeakhir/100
     with col5:
-        tunawal, tunakhir = st.slider('Tunai Per Saham (X)', min_value=0, max_value=10, value=(0, 10))
+        tunawal, tunakhir = st.slider('Tunai Per Saham (X)', min_value=0, max_value=10, value=(0, 1))
         tunawal = tunawal
         tunakhir = tunakhir
     if screenlevel == '<Rp200':
