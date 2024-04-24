@@ -730,7 +730,7 @@ def screener():
         ylabel = 'Deviden  (%)'
         z = '%'
     elif pilgra == 'TunaiPerSaham':
-        y = s['tcs']/s['skg']
+        y = s['tun']
         ylabel = 'Tunai Per Saham'
         z = 'X'
     else:
