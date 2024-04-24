@@ -732,7 +732,7 @@ def screener():
         ylabel = 'Tunai Per Saham'
     else:
         y = s['roe']*100
-        ylabel = 'Return on Equity  (%)'
+        ylabel = 'Return on Equity'
     kd = s['kode']
     sns.scatterplot(s,x=x, y=y, marker='>')
     plt.xlabel("Posisi Harga")
