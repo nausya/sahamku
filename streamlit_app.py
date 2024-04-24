@@ -743,7 +743,7 @@ def screener():
     #plt.ylabel("Margin Operasi (%)")
     plt.ylabel(f"{ylabel}")
     for a,b,c in zip(x,y,kd):
-        if z == 'x':
+        if z == 'X':
            label = f"{c} {round(b,1)}X"
         else:
            label = f"{c} {round(b,1)}%"
