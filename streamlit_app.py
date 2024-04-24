@@ -648,7 +648,8 @@ def screener():
     #tgl = tgl[8:10] + "/" + tgl[5:7]+ "/" + tgl[0:4]
     
     scr1 = scr1.fillna(0)
-    col1, col2, col3, col4 = st.columns([1,1,1,1], gap="large")
+    scr1['tun'] = scr1['tcs']/scr1['skg']*100
+    col1, col2, col3, col4, col5 = st.columns([1,1,1,1,1], gap="large")
     with col1:
         awal, akhir = st.slider('Posisi', min_value=0, max_value=100, value=(0, 100))
     with col2:
@@ -663,6 +664,10 @@ def screener():
         roeawal, roeakhir = st.slider('Return on Equity (%)', min_value=0, max_value=100, value=(0, 100))
         roeawal = roeawal/100
         roeakhir = roeakhir/100
+    with col5:
+        tunawal, tunakhir = st.slider('Tunai Per Saham (%)', min_value=0, max_value=100, value=(0, 100))
+        tunawal = tunawal/100
+        tunakhir = tunakhir/100
     if screenlevel == '<Rp200':
        st.subheader('Screener Saham Dengan Fraksi Harga Rentang 50-200')
        scr1=scr1.query("skg > 50 and skg<= 200 and p>=@awal and p<=@akhir and om>=@omawal and om<=@omakhir and dev>=@devawal and dev<=@devakhir and roe>=@roeawal and roe<=@roeakhir")
@@ -676,7 +681,7 @@ def screener():
         dev = pd.read_csv('devhunter.csv')
         dev = dev.values.tolist()
         dev = [item for sublist in dev for item in sublist]
-        scr1 = scr1.query("kode in @dev and p>=@awal and p<=@akhir and om>=@omawal and om<=@omakhir and dev>=@devawal and dev<=@devakhir and roe>=@roeawal and roe<=@roeakhir")
+        scr1 = scr1.query("kode in @dev and p>=@awal and p<=@akhir and om>=@omawal and om<=@omakhir and dev>=@devawal and dev<=@devakhir and roe>=@roeawal and roe<=@roeakhir and tun>=@tunawal and tun<=@tunakhir")
 
     elif screenlevel == 'LQ45':
         st.subheader('Screener Saham LQ45')
