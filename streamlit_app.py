@@ -724,22 +724,26 @@ def screener():
     if pilgra == 'Margin Operasi':
         y = s['om']*100
         ylabel = 'Margin Operasi  (%)'
+        d = '%'
     elif pilgra == 'Deviden':
         y = s['dev']*100
         ylabel = 'Deviden  (%)'
+        d = '%'
     elif pilgra == 'TunaiPerSaham':
         y = s['tcs']/s['skg']
         ylabel = 'Tunai Per Saham'
+        d = 'X'
     else:
         y = s['roe']*100
         ylabel = 'Return on Equity  (%)'
+        d = '%'
     kd = s['kode']
     sns.scatterplot(s,x=x, y=y, marker='>')
     plt.xlabel("Posisi Harga")
     #plt.ylabel("Margin Operasi (%)")
     plt.ylabel(f"{ylabel}")
-    for a,b,c in zip(x,y,kd):
-        label = f"{c} {int(b)}%"
+    for a,b,d,c in zip(x,y,z,kd):
+        label = f"{c} {int(b)}{z}"
         ax.annotate(label,(a,b), xytext=(3, -3),textcoords='offset points',fontsize='7')
     
     st.pyplot(fig)
