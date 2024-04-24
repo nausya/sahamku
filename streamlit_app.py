@@ -665,7 +665,7 @@ def screener():
         roeawal = roeawal/100
         roeakhir = roeakhir/100
     with col5:
-        tunawal, tunakhir = st.slider('Tunai Per Saham (X)', min_value=0, max_value=10, value=(0, 10))
+        tunawal, tunakhir = st.slider('Tunai Per Saham (X)', min_value=0, max_value=500, value=(0, 500))
         tunawal = tunawal/100
         tunakhir = tunakhir/100
     if screenlevel == '<Rp200':
@@ -744,7 +744,7 @@ def screener():
     plt.ylabel(f"{ylabel}")
     for a,b,c in zip(x,y,kd):
         if z == 'X':
-           label = f"{c} {round(b,1)}X"
+           label = f"{c} {round(b,1)}%"
         else:
            label = f"{c} {int(b)}%"
         ax.annotate(label,(a,b), xytext=(3, -3),textcoords='offset points',fontsize='7')
