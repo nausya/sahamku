@@ -743,7 +743,7 @@ def screener():
     #plt.ylabel("Margin Operasi (%)")
     plt.ylabel(f"{ylabel}")
     for a,b,c,d in zip(x,y,kd,z):
-        label = f"{c} {int(b)}{d}"
+        label = f"{c} {round(b,1)}{d}"
         ax.annotate(label,(a,b), xytext=(3, -3),textcoords='offset points',fontsize='7')
     
     st.pyplot(fig)
