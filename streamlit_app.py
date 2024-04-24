@@ -742,7 +742,7 @@ def screener():
     plt.xlabel("Posisi Harga")
     #plt.ylabel("Margin Operasi (%)")
     plt.ylabel(f"{ylabel}")
-    for a,b,d,c in zip(x,y,z,kd):
+    for a,b,c,d in zip(x,y,kd,z):
         label = f"{c} {int(b)}{d}"
         ax.annotate(label,(a,b), xytext=(3, -3),textcoords='offset points',fontsize='7')
     
