@@ -731,7 +731,7 @@ def screener():
         z = '%'
     elif pilgra == 'TunaiPerSaham':
         y = s['tun']
-        ylabel = 'Tunai Per Saham'
+        ylabel = 'Tunai Per Saham (X)'
         z = 'X'
     else:
         y = s['roe']*100
@@ -742,8 +742,11 @@ def screener():
     plt.xlabel("Posisi Harga")
     #plt.ylabel("Margin Operasi (%)")
     plt.ylabel(f"{ylabel}")
-    for a,b,c,d in zip(x,y,kd,z):
-        label = f"{c} {round(b,1)}{d}"
+    for a,b,c in zip(x,y,kd):
+        if z == 'x':
+           label = f"{c} {round(b,1)}X"
+        else:
+           label = f"{c} {round(b,1)}%"
         ax.annotate(label,(a,b), xytext=(3, -3),textcoords='offset points',fontsize='7')
     
     st.pyplot(fig)
