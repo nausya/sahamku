@@ -708,11 +708,11 @@ def screener():
     #scr1 = scr1.rename(columns = {"p": "Posisi","kode":"Kode","aksiy": "Saran","skg":"Harga","lo":"1YMin","hi":"1YMax","bl":"2M","m":"6M", 
     #                              "om":"Margin Operasi(%)", "dev":"Deviden PR(%)","roe": "ROE(%)","pery": "PER(%)",
     #                              "pbvy": "Nilai Buku","bvy": "Harga Dasar","ph": "Pendapatan(M)","totshm": "Total Saham(M)","mcap": "Omzet(T)","epsy": "Laba Per Saham","opcash": "Kas Operasional(M)",
-    #                              "ut": "Utang(M)","cash": "Nilai Kas(M)","tcs": "Kas Per Saham", "vol": "Volume(J)","date": "Tanggal"}).sort_values(['kode'])
+    #                              "ut": "Utang(M)","cash": "Nilai Kas(M)","tcs": "Tunai Per Saham", "vol": "Volume(J)","date": "Tanggal"}).sort_values(['kode'])
     #"Last Update : " + tgl
     
     st.subheader('Grafik')
-    pilgra = st.radio('Posisi Harga Terkini Terhadap : ', ['Margin Operasi', 'Deviden', 'RoE'])
+    pilgra = st.radio('Posisi Harga Terkini Terhadap : ', ['Margin Operasi', 'Deviden', 'TunaiPerSaham', 'RoE'])
     fig, ax = plt.subplots()
     
     x = s['p']
@@ -722,6 +722,9 @@ def screener():
     elif pilgra == 'Deviden':
         y = s['dev']*100
         ylabel = 'Deviden'
+    elif pilgra == 'TunaiPerSaham':
+        y = s['tcs']/s['skg']*100
+        ylabel = 'Tunai Per Saham'
     else:
         y = s['roe']*100
         ylabel = 'Return on Equity'
