@@ -746,7 +746,7 @@ def screener():
         if z == 'X':
            label = f"{c} {round(b,1)}X"
         else:
-           label = f"{c} {round(b,1)}%"
+           label = f"{c} {int(b)}%"
         ax.annotate(label,(a,b), xytext=(3, -3),textcoords='offset points',fontsize='7')
     
     st.pyplot(fig)
