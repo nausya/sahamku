@@ -665,16 +665,16 @@ def screener():
         roeawal = roeawal/100
         roeakhir = roeakhir/100
     with col5:
-        tunawal, tunakhir = st.slider('Tunai Per Saham (%)', min_value=0, max_value=1000, value=(0, 1000))
-        tunawal = tunawal/100
-        tunakhir = tunakhir/100
+        tunawal, tunakhir = st.slider('Tunai Per Saham (%)', min_value=0, max_value=10, value=(0, 10))
+        tunawal = tunawal
+        tunakhir = tunakhir
     if screenlevel == '<Rp200':
        st.subheader('Screener Saham Dengan Fraksi Harga Rentang 50-200')
-       scr1=scr1.query("skg > 50 and skg<= 200 and p>=@awal and p<=@akhir and om>=@omawal and om<=@omakhir and dev>=@devawal and dev<=@devakhir and roe>=@roeawal and roe<=@roeakhir")
+       scr1=scr1.query("skg > 50 and skg<= 200 and p>=@awal and p<=@akhir and om>=@omawal and om<=@omakhir and dev>=@devawal and dev<=@devakhir and roe>=@roeawal and roe<=@roeakhir and tun>=@tunawal and tun<=@tunakhir")
 
     elif screenlevel == '<Rp5rb':
        st.subheader('Screener Saham Dengan Fraksi Harga Kurang Dari 5000')
-       scr1=scr1.query("skg > 200 and skg <= 5000 and p>=@awal and p<=@akhir and om>=@omawal and om<=@omakhir and dev>=@devawal and dev<=@devakhir and roe>=@roeawal and roe<=@roeakhir")
+       scr1=scr1.query("skg > 200 and skg <= 5000 and p>=@awal and p<=@akhir and om>=@omawal and om<=@omakhir and dev>=@devawal and dev<=@devakhir and roe>=@roeawal and roe<=@roeakhir and tun>=@tunawal and tun<=@tunakhir")
 
     elif screenlevel == 'BagiDeviden':
         st.subheader('Screener Rutin Bagi Deviden di atas 5%')
@@ -688,14 +688,14 @@ def screener():
         LQ = pd.read_csv('LQ45.csv')
         LQ = LQ.values.tolist()
         LQ = [item for sublist in LQ for item in sublist]
-        scr1 = scr1.query("kode in @LQ and p>=@awal and p<=@akhir and om>=@omawal and om<=@omakhir and dev>=@devawal and dev<=@devakhir and roe>=@roeawal and roe<=@roeakhir")
+        scr1 = scr1.query("kode in @LQ and p>=@awal and p<=@akhir and om>=@omawal and om<=@omakhir and dev>=@devawal and dev<=@devakhir and roe>=@roeawal and roe<=@roeakhir and tun>=@tunawal and tun<=@tunakhir")
 
     elif screenlevel == 'KOMPAS100':
         st.subheader('Screener Saham KOMPAS100')
         KOMPAS100 = pd.read_csv('KOMPAS100.csv')
         KOMPAS100 = KOMPAS100.values.tolist()
         KOMPAS100 = [item for sublist in KOMPAS100 for item in sublist]
-        scr1 = scr1.query("kode in @KOMPAS100 and p>=@awal and p<=@akhir and om>=@omawal and om<=@omakhir and dev>=@devawal and dev<=@devakhir and roe>=@roeawal and roe<=@roeakhir")
+        scr1 = scr1.query("kode in @KOMPAS100 and p>=@awal and p<=@akhir and om>=@omawal and om<=@omakhir and dev>=@devawal and dev<=@devakhir and roe>=@roeawal and roe<=@roeakhir and tun>=@tunawal and tun<=@tunakhir")
   
     else:
        st.subheader('Screener Saham Dengan Fraksi Harga Lebih Dari 5000')
@@ -723,21 +723,21 @@ def screener():
     x = s['p']
     if pilgra == 'Margin Operasi':
         y = s['om']*100
-        ylabel = 'Margin Operasi'
+        ylabel = 'Margin Operasi  (%)'
     elif pilgra == 'Deviden':
         y = s['dev']*100
-        ylabel = 'Deviden'
+        ylabel = 'Deviden  (%)'
     elif pilgra == 'TunaiPerSaham':
-        y = s['tcs']/s['skg']*100
+        y = s['tcs']/s['skg']
         ylabel = 'Tunai Per Saham'
     else:
         y = s['roe']*100
-        ylabel = 'Return on Equity'
+        ylabel = 'Return on Equity  (%)'
     kd = s['kode']
     sns.scatterplot(s,x=x, y=y, marker='>')
     plt.xlabel("Posisi Harga")
     #plt.ylabel("Margin Operasi (%)")
-    plt.ylabel(f"{ylabel} (%)")
+    plt.ylabel(f"{ylabel}")
     for a,b,c in zip(x,y,kd):
         label = f"{c} {int(b)}%"
         ax.annotate(label,(a,b), xytext=(3, -3),textcoords='offset points',fontsize='7')
