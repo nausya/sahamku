@@ -491,8 +491,6 @@ else:
    dfringkas = pd.DataFrame(dfringkas, index = np.arange(1))
    dfringkas = dfringkas.set_index('Kode')
    #dfringkas['Tanggal'] = pd.to_datetime(dfringkas['Tanggal'], format='%Y-%m-%d')
-   nota['Kode'].values
-   dfringkas = dfringkas.style.applymap(lambda x: 'background-color: pink' if x in nota['Kode'].values else '')
    st.dataframe(dfringkas)
 
 st.info('Untuk jangka panjang perlu diperhatikan kisaran posisi harga kurang dari 10')
