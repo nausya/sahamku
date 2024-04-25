@@ -77,6 +77,8 @@ def d(a, b):
     return (a - b)
 def dpros(a, b):
     return (a / b) * 100
+def dx(a, b):
+    return (a / b)
 def mil(x):
     x = x/1000000000
     return x
@@ -446,7 +448,7 @@ else:
    ddev = 0
    dom = 0
    utun = digit(cash + opcash - ut)
-   dtcs = str(round(dpros(tcs, C))) + "X"
+   dtcs = str(round(dx(tcs, C))) + "X"
    dut = digit(mcap)
    tunai = digit(cash)
    volshm = digit(vol)
