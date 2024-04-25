@@ -448,7 +448,7 @@ else:
    ddev = 0
    dom = 0
    utun = digit(cash + opcash - ut)
-   dtcs = str(round(dx(tcs, C))) + "X"
+   dtcs = str(round(dx(tcs, C),1)) + "X"
    dut = digit(mcap)
    tunai = digit(cash)
    volshm = digit(vol)
