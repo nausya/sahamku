@@ -665,7 +665,7 @@ def screener():
         roeawal = roeawal/100
         roeakhir = roeakhir/100
     with col5:
-        tunawal, tunakhir = st.slider('Tunai Per Saham (%)', min_value=0, max_value=1000, value=(0, 1000))
+        tunawal, tunakhir = st.slider('Tunai Per Saham (X)', min_value=0, max_value=1000, value=(0, 1000))
         tunawal = tunawal/100
         tunakhir = tunakhir/100
     if screenlevel == '<Rp200':
@@ -717,28 +717,31 @@ def screener():
     #"Last Update : " + tgl
     
     st.subheader('Grafik')
-    pilgra = st.radio('Posisi Harga Terkini Terhadap : ', ['Margin Operasi', 'Deviden', 'TunaiPerSaham', 'RoE'])
+    pilgra = st.radio('Posisi Harga Terkini Terhadap : ', ['Margin Operasi', 'Deviden', 'TunaiPerSaham', 'Return on Equity'])
     fig, ax = plt.subplots()
     
     x = s['p']
     if pilgra == 'Margin Operasi':
         y = s['om']*100
-        ylabel = 'Margin Operasi'
+        ylabel = 'Margin Operasi (%)'
     elif pilgra == 'Deviden':
         y = s['dev']*100
-        ylabel = 'Deviden'
+        ylabel = 'Deviden (%)'
     elif pilgra == 'TunaiPerSaham':
         y = s['tun']*100
-        ylabel = 'Tunai Per Saham'
+        ylabel = 'Tunai Per Saham (X)'
     else:
         y = s['roe']*100
-        ylabel = 'Return on Equity'
+        ylabel = 'Return on Equity (%)'
     kd = s['kode']
     sns.scatterplot(s,x=x, y=y, marker='>')
     plt.xlabel("Posisi Harga")
-    plt.ylabel(f"{ylabel} (%)")
+    plt.ylabel(f"{ylabel}")
     for a,b,c in zip(x,y,kd):
-        label = f"{c} {int(b)}%"
+        if pilgra == 'TunaiPerSaham':
+            label = f"{c} {int(b)}X"
+        else:
+            label = f"{c} {int(b)}%"
         ax.annotate(label,(a,b), xytext=(3, -3),textcoords='offset points',fontsize='7')
     
     st.pyplot(fig)
