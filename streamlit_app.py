@@ -728,7 +728,7 @@ def screener():
         y = s['dev']*100
         ylabel = 'Deviden (%)'
     elif pilgra == 'TunaiPerSaham':
-        y = s['tun']/10
+        y = s['tun']
         ylabel = 'Tunai Per Saham (X)'
     else:
         y = s['roe']*100
