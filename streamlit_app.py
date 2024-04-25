@@ -645,7 +645,7 @@ def screener():
    
     st.write('Filter Berdasarkan :')
     scr1 = pd.read_csv('porto.csv', sep=';', index_col=False)
-    
+    pd.options.display.float_format = '{:.2f}'.format
     #tgl = scr1['date'].values[0]
     #tgl = tgl[8:10] + "/" + tgl[5:7]+ "/" + tgl[0:4]
     
