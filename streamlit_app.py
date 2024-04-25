@@ -649,6 +649,7 @@ def screener():
     
     scr1 = scr1.fillna(0)
     scr1['tun'] = scr1['tcs']/scr1['skg']
+    scr1['tun'] = round(scr1['tun'],1)
     col1, col2, col3, col4, col5 = st.columns([1,1,1,1,1], gap="large")
     with col1:
         awal, akhir = st.slider('Posisi', min_value=0, max_value=100, value=(0, 100))
