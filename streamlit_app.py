@@ -665,9 +665,9 @@ def screener():
         roeawal = roeawal/100
         roeakhir = roeakhir/100
     with col5:
-        tunawal, tunakhir = st.slider('Tunai Per Saham (X)', min_value=0, max_value=1000, value=(0, 1000))
-        tunawal = tunawal
-        tunakhir = tunakhir
+        tunawal, tunakhir = st.slider('Tunai Per Saham (X)', min_value=0, max_value=100, value=(0, 100))
+        tunawal = tunawal*10
+        tunakhir = tunakhir*10
     if screenlevel == '<Rp200':
        st.subheader('Screener Saham Dengan Fraksi Harga Rentang 50-200')
        scr1=scr1.query("skg > 50 and skg<= 200 and p>=@awal and p<=@akhir and om>=@omawal and om<=@omakhir and dev>=@devawal and dev<=@devakhir and roe>=@roeawal and roe<=@roeakhir and tun>=@tunawal and tun<=@tunakhir")
@@ -728,7 +728,7 @@ def screener():
         y = s['dev']*100
         ylabel = 'Deviden (%)'
     elif pilgra == 'TunaiPerSaham':
-        y = s['tun']
+        y = s['tun']/10
         ylabel = 'Tunai Per Saham (X)'
     else:
         y = s['roe']*100
@@ -739,7 +739,7 @@ def screener():
     plt.ylabel(f"{ylabel}")
     for a,b,c in zip(x,y,kd):
         if pilgra == 'TunaiPerSaham':
-            label = f"{c} {int(b)}X"
+            label = f"{c} {round(b,1)}X"
         else:
             label = f"{c} {int(b)}%"
         ax.annotate(label,(a,b), xytext=(3, -3),textcoords='offset points',fontsize='7')
