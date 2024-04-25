@@ -440,7 +440,7 @@ else:
    bmsek = bm[0]
    deps = round(d(eps, bmeps)) 
    dbv = round(d(bv, bmbv))
-   dpbv = round(dx(bmpbv, pbv),1)
+   dpbv = round(d(bmpbv, pbv))
    dper = round(d(bmper, per))
 
    dprf = eps * Sahamedar
