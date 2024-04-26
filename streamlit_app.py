@@ -701,11 +701,11 @@ def screener():
         scr1 = scr1.query("kode in @KOMPAS100 and p>=@awal and p<=@akhir and om>=@omawal and om<=@omakhir and dev>=@devawal and dev<=@devakhir and roe>=@roeawal and roe<=@roeakhir and tun>=@tunawal and tun<=@tunakhir")
 
     elif screenlevel == 'Industri':
-        ind = pd.read_csv('Finansial.csv', sep=';').sort_values('Kode')
+        ind = pd.read_csv('Finansial.csv', sep=';').sort_values('SubIndustri')
         indus = ind['SubIndustri']
         indus = indus.drop_duplicates()
-        #selected_ind = st.sidebar.selectbox('Pilih Industri :', indus)
-        indus
+        selected_ind = st.sidebar.selectbox('Pilih Industri :', indus)
+        #indus
     else:
        st.subheader('Screener Saham Dengan Fraksi Harga Lebih Dari 5000')
        scr1 = scr1.query("skg > 5000 and p>=@awal and p<=@akhir and om>=@omawal and om<=@omakhir and dev>=@devawal and dev<=@devakhir and roe>=@roeawal and roe<=@roeakhir and tun>=@tunawal and tun<=@tunakhir")
