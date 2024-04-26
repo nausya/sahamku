@@ -705,7 +705,7 @@ def screener():
       #  indus = ind['SubIndustri']
       #  indus = indus.drop_duplicates()
       #  pilihind = st.selectbox('Pilih Industri :', indus)
-        st.write('Industri')#(f'{pilihind}')
+       # st.write('Industri')#(f'{pilihind}')
     else:
        st.subheader('Screener Saham Dengan Fraksi Harga Lebih Dari 5000')
        scr1 = scr1.query("skg > 5000 and p>=@awal and p<=@akhir and om>=@omawal and om<=@omakhir and dev>=@devawal and dev<=@devakhir and roe>=@roeawal and roe<=@roeakhir and tun>=@tunawal and tun<=@tunakhir")
