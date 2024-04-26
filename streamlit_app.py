@@ -641,7 +641,7 @@ def model_engine(model, num):
         
 #Screener Grafik Kuadran
 def screener():
-    screenlevel = option_menu(None, ['>Rp5rb','<Rp5rb','<Rp200','LQ45','KOMPAS100','BagiDeviden','Sektor'], icons=['arrow-up-square', 'arrow-down-square', 'arrow-down-square-fill', 'bullseye'], menu_icon="cast", default_index=0, orientation="horizontal")
+    screenlevel = option_menu(None, ['>Rp5rb','<Rp5rb','<Rp200','LQ45','KOMPAS100','BagiDeviden','Industri'], icons=['arrow-up-square', 'arrow-down-square', 'arrow-down-square-fill', 'bullseye'], menu_icon="cast", default_index=0, orientation="horizontal")
    
     st.write('Filter Berdasarkan :')
     scr1 = pd.read_csv('porto.csv', sep=';', index_col=False)
@@ -700,9 +700,11 @@ def screener():
         KOMPAS100 = [item for sublist in KOMPAS100 for item in sublist]
         scr1 = scr1.query("kode in @KOMPAS100 and p>=@awal and p<=@akhir and om>=@omawal and om<=@omakhir and dev>=@devawal and dev<=@devakhir and roe>=@roeawal and roe<=@roeakhir and tun>=@tunawal and tun<=@tunakhir")
 
-    elif screenlevel == 'Sektor':
-        st.write('Halaman Sektor')
-        
+    elif screenlevel == 'Industri':
+        ind = pd.read_csv('Finansial.csv', sep=';').sort_values('Kode')
+        indus = ind['SubIndustri']
+        indus = indus.drop_duplicates()
+        selected_ind = st.sidebar.selectbox('Pilih Industri :', indus)
     else:
        st.subheader('Screener Saham Dengan Fraksi Harga Lebih Dari 5000')
        scr1 = scr1.query("skg > 5000 and p>=@awal and p<=@akhir and om>=@omawal and om<=@omakhir and dev>=@devawal and dev<=@devakhir and roe>=@roeawal and roe<=@roeakhir and tun>=@tunawal and tun<=@tunakhir")
