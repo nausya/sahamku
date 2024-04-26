@@ -700,7 +700,7 @@ def screener():
         KOMPAS100 = [item for sublist in KOMPAS100 for item in sublist]
         scr1 = scr1.query("kode in @KOMPAS100 and p>=@awal and p<=@akhir and om>=@omawal and om<=@omakhir and dev>=@devawal and dev<=@devakhir and roe>=@roeawal and roe<=@roeakhir and tun>=@tunawal and tun<=@tunakhir")
 
-    elif screenlevel == 'Industri':
+    #elif screenlevel == 'Industri':
      #   ind = pd.read_csv('Finansial.csv', sep=';').sort_values('SubIndustri')
       #  indus = ind['SubIndustri']
       #  indus = indus.drop_duplicates()
