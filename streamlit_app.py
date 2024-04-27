@@ -704,8 +704,8 @@ def screener():
     
     def filterscreen():
         scr2.query("p>=@awal and p<=@akhir and om>=@omawal and om<=@omakhir and dev>=@devawal and dev<=@devakhir and roe>=@roeawal and roe<=@roeakhir and tun>=@tunawal and tun<=@tunakhir and pbvy>=@nbawal and pbvy<=@nbakhir")   
-    def screener():
-        scr2
+
+    scr2
     s = scr1.copy()
     col1, col2 = st.columns([1,1], gap="large")
     with col1:
