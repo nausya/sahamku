@@ -708,8 +708,8 @@ def screener():
         subind = ind.query("SubIndustri == '@piihind'")
         subind = subind['Kode']
         subind = subind.values.tolist()
-        #subind
-        scr1 = scr1.query("kode in @subind and p>=@awal and p<=@akhir and om>=@omawal and om<=@omakhir and dev>=@devawal and dev<=@devakhir and roe>=@roeawal and roe<=@roeakhir and tun>=@tunawal and tun<=@tunakhir and pbvy>=@nbawal and pbvy<=@nbakhir")
+        st.write("subind")
+        #scr1 = scr1.query("kode in @subind and p>=@awal and p<=@akhir and om>=@omawal and om<=@omakhir and dev>=@devawal and dev<=@devakhir and roe>=@roeawal and roe<=@roeakhir and tun>=@tunawal and tun<=@tunakhir and pbvy>=@nbawal and pbvy<=@nbakhir")
         #st.write('Industri')#(f'{pilihind}')
     else:
        st.subheader('Screener Saham Dengan Fraksi Harga Lebih Dari 5000')
