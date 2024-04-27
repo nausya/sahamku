@@ -705,8 +705,8 @@ def screener():
         indus = ind['SubIndustri']
         indus = indus.drop_duplicates()
         pilihind = st.selectbox('Pilih Industri :', indus)
-        pilihind.values[0]
-        subind = ind.query("SubIndustri == 'Alternative Fuels'")
+        pilihind
+        subind = ind.query("SubIndustri == 'pilihind'")
         subind = subind['Kode']
         subind = subind.values.tolist()
         scr1 = scr1.query("kode in @subind")
