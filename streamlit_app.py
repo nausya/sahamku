@@ -673,18 +673,18 @@ def screener():
         nbawal, nbunakhir = st.slider('Nilai Buku (X)', min_value=0, max_value=10, value=(0, 10))
     if screenlevel == '<Rp200':
        st.subheader('Screener Saham Dengan Fraksi Harga Rentang 50-200')
-       scr1=scr1.query("skg > 50 and skg<= 200 and p>=@awal and p<=@akhir and om>=@omawal and om<=@omakhir and dev>=@devawal and dev<=@devakhir and roe>=@roeawal and roe<=@roeakhir and tun>=@tunawal and tun<=@tunakhir and pvby>=@nbawal and pbvy<=@nbakhir")
+       scr1=scr1.query("skg > 50 and skg<= 200 and p>=@awal and p<=@akhir and om>=@omawal and om<=@omakhir and dev>=@devawal and dev<=@devakhir and roe>=@roeawal and roe<=@roeakhir and tun>=@tunawal and tun<=@tunakhir and pbvy>=@nbawal and pbvy<=@nbakhir")
 
     elif screenlevel == '<Rp5rb':
        st.subheader('Screener Saham Dengan Fraksi Harga Kurang Dari 5000')
-       scr1=scr1.query("skg > 200 and skg <= 5000 and p>=@awal and p<=@akhir and om>=@omawal and om<=@omakhir and dev>=@devawal and dev<=@devakhir and roe>=@roeawal and roe<=@roeakhir and tun>=@tunawal and tun<=@tunakhir and pvby>=@nbawal and pbvy<=@nbakhir")
+       scr1=scr1.query("skg > 200 and skg <= 5000 and p>=@awal and p<=@akhir and om>=@omawal and om<=@omakhir and dev>=@devawal and dev<=@devakhir and roe>=@roeawal and roe<=@roeakhir and tun>=@tunawal and tun<=@tunakhir and pbvy>=@nbawal and pbvy<=@nbakhir")
 
     elif screenlevel == 'BagiDeviden':
         st.subheader('Screener Rutin Bagi Deviden di atas 5%')
         dev = pd.read_csv('devhunter.csv')
         dev = dev.values.tolist()
         dev = [item for sublist in dev for item in sublist]
-        scr1 = scr1.query("kode in @dev and p>=@awal and p<=@akhir and om>=@omawal and om<=@omakhir and dev>=@devawal and dev<=@devakhir and roe>=@roeawal and roe<=@roeakhir and tun>=@tunawal and tun<=@tunakhir and pvby>=@nbawal and pbvy<=@nbakhir")
+        scr1 = scr1.query("kode in @dev and p>=@awal and p<=@akhir and om>=@omawal and om<=@omakhir and dev>=@devawal and dev<=@devakhir and roe>=@roeawal and roe<=@roeakhir and tun>=@tunawal and tun<=@tunakhir and pbvy>=@nbawal and pbvy<=@nbakhir")
 
     elif screenlevel == 'LQ45':
         st.subheader('Screener Saham LQ45')
