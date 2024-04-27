@@ -703,6 +703,9 @@ def screener():
     scr2 = scr2.style.applymap(lambda x: 'background-color: pink' if x in nota['Kode'].values else '')
     s = scr1.copy()
     scr2
+    st.markdown('<span style="background-color: #ffc0cb; padding: 3px;">KODE</span> : Emiten Dengan Notasi Khusus', unsafe_allow_html=True)
+    st.caption('Last Update : 27 April 2024')
+    
     st.write('Filter Berdasarkan :')
     col1, col2, col3, col4, col5, col6 = st.columns([1,1,1,1,1,1], gap="large")
     with col1:
@@ -723,10 +726,6 @@ def screener():
         tunawal, tunakhir = st.slider('Tunai Per Saham (X)', min_value=0, max_value=10, value=(0, 10))
     with col6:
         nbawal, nbakhir = st.slider('Nilai Buku (X)', min_value=0, max_value=10, value=(0, 10))
-        
-    
-    st.markdown('<span style="background-color: #ffc0cb; padding: 3px;">KODE</span> : Emiten Dengan Notasi Khusus', unsafe_allow_html=True)
-    st.caption('Last Update : 27 April 2024')
     
     st.subheader('Grafik')
     pilgra = st.radio('Posisi Harga Terkini Terhadap : ', ['Margin Operasi', 'Rasio Bayar Deviden', 'Tunai Per Saham', 'Return on Equity', 'Nilai Buku'])
