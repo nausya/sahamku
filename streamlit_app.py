@@ -718,11 +718,19 @@ def screener():
     s = scr1.copy()
     ########### minmax slider ################
     dfmm = scr1.copy()
-    dfmm = dfmm[['p','om','dev','roe','pbvy']]
+    dfmm = dfmm[['p','om','dev','roe','pbvy','tun']]
     dfmax = dfmm.max()
+    maxom = dfmax['om']
+    maxdev = dfmax['dev']
     maxroe = dfmax['roe']
+    maxnb = dfmax['pbvy']
+    maxtun = dfmax['tun']
     dfmin = dfmm.min()
+    minom = dfmin['om']
+    mindev = dfmin['dev']
     minroe = dfmin['roe']
+    minnb = dfmin['pbvy']
+    mintun = dfmin['tun']
     ########### end of minmax slider ################
     col1, col2 = st.columns([1,1], gap="large")
     with col1:
@@ -734,12 +742,12 @@ def screener():
     with col1:
         awal, akhir = st.slider('Posisi', min_value=0, max_value=100, value=(0, 100))   
     with col2:
-        omawal, omakhir = st.slider('Margin Operasi (%)', min_value=0, max_value=100, value=(0, 100))
+        omawal, omakhir = st.slider('Margin Operasi (%)', min_value=minom, max_value=maxom, value=(minom, maxom))
         omawal = omawal/100
         omakhir = omakhir/100
        
     with col3:
-        devawal, devakhir = st.slider('Deviden (%)', min_value=0, max_value=100, value=(0, 100))
+        devawal, devakhir = st.slider('Deviden (%)', min_value=mindev, max_value=maxdev, value=(mindev, maxdev))
         devawal = devawal/100
         devakhir = devakhir/100
       
@@ -749,10 +757,10 @@ def screener():
         roeakhir = roeakhir/100
        
     with col5:
-        tunawal, tunakhir = st.slider('Tunai Per Saham (X)', min_value=0, max_value=10, value=(0, 10))
+        tunawal, tunakhir = st.slider('Tunai Per Saham (X)', min_value=mintun, max_value=maxtun, value=(mintun, maxtun))
     
     with col6:
-        nbawal, nbakhir = st.slider('Nilai Buku (X)', min_value=0, max_value=10, value=(0, 10))        
+        nbawal, nbakhir = st.slider('Nilai Buku (X)', min_value=minnb, max_value=maxnb, value=(minnb, maxnb))        
        
     
     st.subheader('Grafik')
