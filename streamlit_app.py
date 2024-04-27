@@ -693,7 +693,7 @@ def screener():
             subsek = ind.query("Sektor == @pilihsek")
             subsek = subsek['Kode']
             subsek = subsek.values.tolist()
-            scr1 = scr1.query("kode in @subsek")
+        scr1 = scr1.query("kode in @subsek")
         with col2:
             #indus = ind['SubIndustri']
             #indus = indus.drop_duplicates()
