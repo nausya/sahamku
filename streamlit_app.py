@@ -693,14 +693,14 @@ def screener():
         with col1:
             pilihsek = st.selectbox('Pilih Sektor :', sektor)
             subsek = ind.query("Sektor == @pilihsek")
-            subind = subsek['Kode']
+            subsek = subsek['Kode']
         with col2:
             pilihind = st.selectbox('Pilih Industri :', indus)
             subind = ind.query("SubIndustri == @pilihind")
             subind = subind['Kode']
-        subind
+        subsek = subsek.values.tolist()
         subind = subind.values.tolist()
-        scr1 = scr1.query("kode in @subind")
+        scr1 = scr1.query("kode in @subind or kode in @subsek")
         #scr1 = scr1.query("kode in @subind and p>=@awal and p<=@akhir and om>=@omawal and om<=@omakhir and dev>=@devawal and dev<=@devakhir and roe>=@roeawal and roe<=@roeakhir and tun>=@tunawal and tun<=@tunakhir and pbvy>=@nbawal and pbvy<=@nbakhir")
     
     else:
