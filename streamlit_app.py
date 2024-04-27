@@ -700,12 +700,16 @@ def screener():
         KOMPAS100 = [item for sublist in KOMPAS100 for item in sublist]
         scr1 = scr1.query("kode in @KOMPAS100 and p>=@awal and p<=@akhir and om>=@omawal and om<=@omakhir and dev>=@devawal and dev<=@devakhir and roe>=@roeawal and roe<=@roeakhir and tun>=@tunawal and tun<=@tunakhir and pbvy>=@nbawal and pbvy<=@nbakhir")
 
-    #elif screenlevel == 'Industri':
-     #   ind = pd.read_csv('Finansial.csv', sep=';').sort_values('SubIndustri')
-      #  indus = ind['SubIndustri']
-      #  indus = indus.drop_duplicates()
-      #  pilihind = st.selectbox('Pilih Industri :', indus)
-       # st.write('Industri')#(f'{pilihind}')
+    elif screenlevel == 'Industri':
+        ind = pd.read_csv('Finansial.csv', sep=';', usecols=['Sektor', 'SubIndustri', 'Kode']).sort_values('SubIndustri')
+        indus = ind['SubIndustri']
+        indus = indus.drop_duplicates()
+        pilihind = st.selectbox('Pilih Industri :', indus)
+        subind = ind['Kode'].query("SubIndustri = @pilihind")
+        subind = subind.values.tolist()
+        subind = [item for sublist in subind for item in sublist]
+        scr1 = scr1.query("kode in @subind and p>=@awal and p<=@akhir and om>=@omawal and om<=@omakhir and dev>=@devawal and dev<=@devakhir and roe>=@roeawal and roe<=@roeakhir and tun>=@tunawal and tun<=@tunakhir and pbvy>=@nbawal and pbvy<=@nbakhir")
+        #st.write('Industri')#(f'{pilihind}')
     else:
        st.subheader('Screener Saham Dengan Fraksi Harga Lebih Dari 5000')
        scr1 = scr1.query("skg > 5000 and p>=@awal and p<=@akhir and om>=@omawal and om<=@omakhir and dev>=@devawal and dev<=@devakhir and roe>=@roeawal and roe<=@roeakhir and tun>=@tunawal and tun<=@tunakhir and pbvy>=@nbawal and pbvy<=@nbakhir")
