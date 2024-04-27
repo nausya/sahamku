@@ -741,7 +741,7 @@ def screener():
         ylabel = 'Margin Operasi (%)'
     elif pilgra == 'Rasio Bayar Deviden':
         y = s['dev']*100
-        ylabel = 'Deviden (%)'
+        ylabel = 'Rasio Bayar Deviden (%)'
     elif pilgra == 'Tunai Per Saham':
         y = s['tun']
         ylabel = 'Tunai Per Saham (X)'
