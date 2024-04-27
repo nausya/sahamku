@@ -703,33 +703,33 @@ def screener():
     scr2 = scr2.style.applymap(lambda x: 'background-color: pink' if x in nota['Kode'].values else '')
     s = scr1.copy()
     scr2
-    def filterscreen():
-        col1, col2 = st.columns([1,1], gap="large")
-        with col1:
-            st.markdown('<span style="background-color: #ffc0cb; padding: 3px;">KODE</span> : Emiten Dengan Notasi Khusus', unsafe_allow_html=True)
-        with col2:
-            st.caption('Last Update : 27 April 2024')
-        
-        st.write('Filter Berdasarkan :')
-        col1, col2, col3, col4, col5, col6 = st.columns([1,1,1,1,1,1], gap="large")
-        with col1:
-            awal, akhir = st.slider('Posisi', min_value=0, max_value=100, value=(0, 100))
-        with col2:
-            omawal, omakhir = st.slider('Margin Operasi (%)', min_value=0, max_value=100, value=(0, 100))
-            omawal = omawal/100
-            omakhir = omakhir/100
-        with col3:
-            devawal, devakhir = st.slider('Deviden (%)', min_value=0, max_value=100, value=(0, 100))
-            devawal = devawal/100
-            devakhir = devakhir/100
-        with col4:
-            roeawal, roeakhir = st.slider('Return on Equity (%)', min_value=0, max_value=100, value=(0, 100))
-            roeawal = roeawal/100
-            roeakhir = roeakhir/100
-        with col5:
-            tunawal, tunakhir = st.slider('Tunai Per Saham (X)', min_value=0, max_value=10, value=(0, 10))
-        with col6:
-            nbawal, nbakhir = st.slider('Nilai Buku (X)', min_value=0, max_value=10, value=(0, 10))
+    
+    col1, col2 = st.columns([1,1], gap="large")
+    with col1:
+        st.markdown('<span style="background-color: #ffc0cb; padding: 3px;">KODE</span> : Emiten Dengan Notasi Khusus', unsafe_allow_html=True)
+    with col2:
+        st.caption('Last Update : 27 April 2024')
+    st.write('Filter Berdasarkan :')
+    col1, col2, col3, col4, col5, col6 = st.columns([1,1,1,1,1,1], gap="large")
+    with col1:
+        awal, akhir = st.slider('Posisi', min_value=0, max_value=100, value=(0, 100))
+    with col2:
+        omawal, omakhir = st.slider('Margin Operasi (%)', min_value=0, max_value=100, value=(0, 100))
+        omawal = omawal/100
+        omakhir = omakhir/100
+    with col3:
+        devawal, devakhir = st.slider('Deviden (%)', min_value=0, max_value=100, value=(0, 100))
+        devawal = devawal/100
+        devakhir = devakhir/100
+    with col4:
+        roeawal, roeakhir = st.slider('Return on Equity (%)', min_value=0, max_value=100, value=(0, 100))
+        roeawal = roeawal/100
+        roeakhir = roeakhir/100
+    with col5:
+        tunawal, tunakhir = st.slider('Tunai Per Saham (X)', min_value=0, max_value=10, value=(0, 10))
+    with col6:
+        nbawal, nbakhir = st.slider('Nilai Buku (X)', min_value=0, max_value=10, value=(0, 10))        
+
     
     st.subheader('Grafik')
     pilgra = st.radio('Posisi Harga Terkini Terhadap : ', ['Margin Operasi', 'Rasio Bayar Deviden', 'Tunai Per Saham', 'Return on Equity', 'Nilai Buku'])
