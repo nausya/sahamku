@@ -650,7 +650,7 @@ def screener():
     scr1['tun'] = round(scr1['tun'],1)
     scr1 = scr1.fillna(0)
     if screenlevel == 'Fraksi Harga':
-        pilihhg = st.selectbox('Pilih Fraksi Harga :', ['Kurang Dari Rp200','Kurang Dari Rp5000','Lebih Dari Rp5000'])
+        pilihhg = st.selectbox('Pilih Fraksi Harga :', ['Kurang Dari Rp200','Kurang Dari Rp5000','Lebih Dari Rp5000','Semua Harga'])
         if pilihhg == 'Kurang Dari Rp200':
             st.subheader('Screener Saham Dengan Fraksi Harga Rentang 50 - 200')
             scr1=scr1.query("skg > 50 and skg<= 200")
@@ -661,11 +661,15 @@ def screener():
             scr1=scr1.query("skg > 200 and skg <= 5000")
            #scr1=scr1.query("skg > 200 and skg <= 5000 and p>=@awal and p<=@akhir and om>=@omawal and om<=@omakhir and dev>=@devawal and dev<=@devakhir and roe>=@roeawal and roe<=@roeakhir and tun>=@tunawal and tun<=@tunakhir and pbvy>=@nbawal and pbvy<=@nbakhir")
 
-        else:
+        elif pilihhg == 'Lebih Dari Rp5000':
             st.subheader('Screener Saham Dengan Fraksi Harga Lebih Dari 5000')
             scr1 = scr1.query("skg > 5000")
             #scr1 = scr1.query("skg > 5000 and p>=@awal and p<=@akhir and om>=@omawal and om<=@omakhir and dev>=@devawal and dev<=@devakhir and roe>=@roeawal and roe<=@roeakhir and tun>=@tunawal and tun<=@tunakhir and pbvy>=@nbawal and pbvy<=@nbakhir")
-  
+
+        else:
+            st.subheader('Screener Saham Semua Harga')
+            scr1
+                
     elif screenlevel == 'BagiDeviden':
         st.subheader('Screener Rutin Bagi Deviden di atas 5%')
         dev = pd.read_csv('devhunter.csv')
