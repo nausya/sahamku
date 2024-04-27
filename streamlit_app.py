@@ -719,8 +719,10 @@ def screener():
     ########### minmax slider ################
     dfmm = scr1.copy()
     dfmm = dfmm[['p','om','dev','roe','pbvy']]
-    dfmm = dfmm.max()
-    dfmm
+    dfmax = dfmm.max()
+    dfmax
+    dfmin = dfmm.min()
+    dfmin
     ########### end of minmax slider ################
     col1, col2 = st.columns([1,1], gap="large")
     with col1:
