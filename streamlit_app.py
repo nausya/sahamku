@@ -645,10 +645,10 @@ def screener():
    
 
     scr1 = pd.read_csv('porto.csv', sep=';', index_col=False)
-    scr1 = scr1.fillna(0)
+    
     scr1['tun'] = scr1['tcs']/scr1['skg']
     scr1['tun'] = round(scr1['tun'],1)
-
+    scr1 = scr1.fillna(0)
     if screenlevel == '<Rp200':
         st.subheader('Screener Saham Dengan Fraksi Harga Rentang 50-200')
         scr1=scr1.query("skg > 50 and skg<= 200")
