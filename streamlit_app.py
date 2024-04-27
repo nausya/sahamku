@@ -652,7 +652,7 @@ def screener():
     scr1 = scr1.fillna(0)
     scr1['tun'] = scr1['tcs']/scr1['skg']
     scr1['tun'] = round(scr1['tun'],1)
-    col1, col2, col3, col4, col5 = st.columns([1,1,1,1,1], gap="large")
+    col1, col2, col3, col4, col5, col6 = st.columns([1,1,1,1,1,1], gap="large")
     with col1:
         awal, akhir = st.slider('Posisi', min_value=0, max_value=100, value=(0, 100))
     with col2:
@@ -669,36 +669,36 @@ def screener():
         roeakhir = roeakhir/100
     with col5:
         tunawal, tunakhir = st.slider('Tunai Per Saham (X)', min_value=0, max_value=10, value=(0, 10))
-        tunawal = tunawal
-        tunakhir = tunakhir
+    with col6:
+        nbawal, nbunakhir = st.slider('Nilai Buku (X)', min_value=0, max_value=10, value=(0, 10))
     if screenlevel == '<Rp200':
        st.subheader('Screener Saham Dengan Fraksi Harga Rentang 50-200')
-       scr1=scr1.query("skg > 50 and skg<= 200 and p>=@awal and p<=@akhir and om>=@omawal and om<=@omakhir and dev>=@devawal and dev<=@devakhir and roe>=@roeawal and roe<=@roeakhir and tun>=@tunawal and tun<=@tunakhir")
+       scr1=scr1.query("skg > 50 and skg<= 200 and p>=@awal and p<=@akhir and om>=@omawal and om<=@omakhir and dev>=@devawal and dev<=@devakhir and roe>=@roeawal and roe<=@roeakhir and tun>=@tunawal and tun<=@tunakhir and pvby>=@nbawal and pbvy<=@nbakhir")
 
     elif screenlevel == '<Rp5rb':
        st.subheader('Screener Saham Dengan Fraksi Harga Kurang Dari 5000')
-       scr1=scr1.query("skg > 200 and skg <= 5000 and p>=@awal and p<=@akhir and om>=@omawal and om<=@omakhir and dev>=@devawal and dev<=@devakhir and roe>=@roeawal and roe<=@roeakhir and tun>=@tunawal and tun<=@tunakhir")
+       scr1=scr1.query("skg > 200 and skg <= 5000 and p>=@awal and p<=@akhir and om>=@omawal and om<=@omakhir and dev>=@devawal and dev<=@devakhir and roe>=@roeawal and roe<=@roeakhir and tun>=@tunawal and tun<=@tunakhir and pvby>=@nbawal and pbvy<=@nbakhir")
 
     elif screenlevel == 'BagiDeviden':
         st.subheader('Screener Rutin Bagi Deviden di atas 5%')
         dev = pd.read_csv('devhunter.csv')
         dev = dev.values.tolist()
         dev = [item for sublist in dev for item in sublist]
-        scr1 = scr1.query("kode in @dev and p>=@awal and p<=@akhir and om>=@omawal and om<=@omakhir and dev>=@devawal and dev<=@devakhir and roe>=@roeawal and roe<=@roeakhir and tun>=@tunawal and tun<=@tunakhir")
+        scr1 = scr1.query("kode in @dev and p>=@awal and p<=@akhir and om>=@omawal and om<=@omakhir and dev>=@devawal and dev<=@devakhir and roe>=@roeawal and roe<=@roeakhir and tun>=@tunawal and tun<=@tunakhir and pvby>=@nbawal and pbvy<=@nbakhir")
 
     elif screenlevel == 'LQ45':
         st.subheader('Screener Saham LQ45')
         LQ = pd.read_csv('LQ45.csv')
         LQ = LQ.values.tolist()
         LQ = [item for sublist in LQ for item in sublist]
-        scr1 = scr1.query("kode in @LQ and p>=@awal and p<=@akhir and om>=@omawal and om<=@omakhir and dev>=@devawal and dev<=@devakhir and roe>=@roeawal and roe<=@roeakhir and tun>=@tunawal and tun<=@tunakhir")
+        scr1 = scr1.query("kode in @LQ and p>=@awal and p<=@akhir and om>=@omawal and om<=@omakhir and dev>=@devawal and dev<=@devakhir and roe>=@roeawal and roe<=@roeakhir and tun>=@tunawal and tun<=@tunakhir and pbvy>=@nbawal and pbvy<=@nbakhir")
 
     elif screenlevel == 'KOMPAS100':
         st.subheader('Screener Saham KOMPAS100')
         KOMPAS100 = pd.read_csv('KOMPAS100.csv')
         KOMPAS100 = KOMPAS100.values.tolist()
         KOMPAS100 = [item for sublist in KOMPAS100 for item in sublist]
-        scr1 = scr1.query("kode in @KOMPAS100 and p>=@awal and p<=@akhir and om>=@omawal and om<=@omakhir and dev>=@devawal and dev<=@devakhir and roe>=@roeawal and roe<=@roeakhir and tun>=@tunawal and tun<=@tunakhir")
+        scr1 = scr1.query("kode in @KOMPAS100 and p>=@awal and p<=@akhir and om>=@omawal and om<=@omakhir and dev>=@devawal and dev<=@devakhir and roe>=@roeawal and roe<=@roeakhir and tun>=@tunawal and tun<=@tunakhir and pbvy>=@nbawal and pbvy<=@nbakhir")
 
     #elif screenlevel == 'Industri':
      #   ind = pd.read_csv('Finansial.csv', sep=';').sort_values('SubIndustri')
@@ -708,7 +708,7 @@ def screener():
        # st.write('Industri')#(f'{pilihind}')
     else:
        st.subheader('Screener Saham Dengan Fraksi Harga Lebih Dari 5000')
-       scr1 = scr1.query("skg > 5000 and p>=@awal and p<=@akhir and om>=@omawal and om<=@omakhir and dev>=@devawal and dev<=@devakhir and roe>=@roeawal and roe<=@roeakhir and tun>=@tunawal and tun<=@tunakhir")
+       scr1 = scr1.query("skg > 5000 and p>=@awal and p<=@akhir and om>=@omawal and om<=@omakhir and dev>=@devawal and dev<=@devakhir and roe>=@roeawal and roe<=@roeakhir and tun>=@tunawal and tun<=@tunakhir and pbvy>=@nbawal and pbvy<=@nbakhir")
     scr2 = scr1.copy()
     scr2 = scr2.style.applymap(lambda x: 'background-color: pink' if x in nota['Kode'].values else '')
     s = scr1.copy()
