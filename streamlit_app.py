@@ -657,7 +657,8 @@ def screener():
         elif pilihhg == 'Notasi Khusus':
             st.subheader('Screener Saham Emiten Dengan Notasi Khusus')
             notkus = nota['Kode'].values.tolist()
-            notkus = [item for sublist in notkus for item in sublist]
+            notkus
+            #notkus = [item for sublist in notkus for item in sublist]
             scr1 = scr1.query("kode in @notkus")
             
         elif pilihhg == 'Kurang Dari Rp5000':
