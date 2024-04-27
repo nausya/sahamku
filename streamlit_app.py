@@ -641,7 +641,7 @@ def model_engine(model, num):
         
 #Screener Grafik Kuadran
 def screener():
-    screenlevel = option_menu(None, ['>Rp5rb','<Rp5rb','<Rp200','LQ45','KOMPAS100','BagiDeviden','Industri'], icons=['arrow-up-square', 'arrow-down-square', 'arrow-down-square-fill', 'bullseye'], menu_icon="cast", default_index=0, orientation="horizontal")
+    screenlevel = option_menu(None, ['Fraksi Harga','LQ45','KOMPAS100','BagiDeviden','Industri'], icons=['arrow-up-square', 'arrow-down-square', 'arrow-down-square-fill', 'bullseye'], menu_icon="cast", default_index=0, orientation="horizontal")
    
 
     scr1 = pd.read_csv('porto.csv', sep=';', index_col=False)
@@ -649,10 +649,13 @@ def screener():
     scr1['tun'] = scr1['tcs']/scr1['skg']
     scr1['tun'] = round(scr1['tun'],1)
     scr1 = scr1.fillna(0)
-    if screenlevel == '<Rp200':
-        st.subheader('Screener Saham Dengan Fraksi Harga Rentang 50-200')
-        scr1=scr1.query("skg > 50 and skg<= 200")
-       #scr1=scr1.query("skg > 50 and skg<= 200 and p>=@awal and p<=@akhir and om>=@omawal and om<=@omakhir and dev>=@devawal and dev<=@devakhir and roe>=@roeawal and roe<=@roeakhir and tun>=@tunawal and tun<=@tunakhir and pbvy>=@nbawal and pbvy<=@nbakhir")
+    if screenlevel == 'Fraksi Harga':
+        pilihhg = st.selectbox('Pilih Sektor :', ['Kurang Dari Rp200','Kurang Dari Rp5000','Lebih Dari Rp5000'])
+        if pilihhg == 'Kurang Dari Rp200':
+            subsek = ind.query("Sektor == @pilihsek")
+            st.subheader('Screener Saham Dengan Fraksi Harga Rentang 50-200')
+            scr1=scr1.query("skg > 50 and skg<= 200")
+           #scr1=scr1.query("skg > 50 and skg<= 200 and p>=@awal and p<=@akhir and om>=@omawal and om<=@omakhir and dev>=@devawal and dev<=@devakhir and roe>=@roeawal and roe<=@roeakhir and tun>=@tunawal and tun<=@tunakhir and pbvy>=@nbawal and pbvy<=@nbakhir")
 
     elif screenlevel == '<Rp5rb':
         st.subheader('Screener Saham Dengan Fraksi Harga Kurang Dari 5000')
