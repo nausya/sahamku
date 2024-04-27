@@ -726,7 +726,7 @@ def screener():
     #"Last Update : " + tgl
     
     st.subheader('Grafik')
-    pilgra = st.radio('Posisi Harga Terkini Terhadap : ', ['Margin Operasi', 'Deviden', 'TunaiPerSaham', 'Return on Equity'])
+    pilgra = st.radio('Posisi Harga Terkini Terhadap : ', ['Margin Operasi', 'Deviden', 'Tunai Per Saham', 'Return on Equity', 'Nilai Buku'])
     fig, ax = plt.subplots()
     
     x = s['p']
@@ -736,9 +736,12 @@ def screener():
     elif pilgra == 'Deviden':
         y = s['dev']*100
         ylabel = 'Deviden (%)'
-    elif pilgra == 'TunaiPerSaham':
+    elif pilgra == 'Tunai Per Saham':
         y = s['tun']
         ylabel = 'Tunai Per Saham (X)'
+    elif pilgra == 'Nilai Buku':
+        y = s['pbvy']
+        ylabel = 'Nilai Buku (X)'
     else:
         y = s['roe']*100
         ylabel = 'Return on Equity (%)'
@@ -747,7 +750,7 @@ def screener():
     plt.xlabel("Posisi Harga")
     plt.ylabel(f"{ylabel}")
     for a,b,c in zip(x,y,kd):
-        if pilgra == 'TunaiPerSaham':
+        if pilgra in ('Tunai Per Saham', 'Nilai Buku'):
             label = f"{c} {round(b,1)}X"
         else:
             label = f"{c} {int(b)}%"
