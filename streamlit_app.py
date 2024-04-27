@@ -691,13 +691,13 @@ def screener():
         indus = indus.drop_duplicates()
         col1, col2 = st.columns([1,1], gap="large")
         with col1:
-            pilihsek = st.selectbox('Pilih Sektor :', sektor):
+            pilihsek = st.selectbox('Pilih Sektor :', sektor)
             subsek = ind.query("Sektor == @pilihsek")
             subsek = subsek['Kode']
             subsek = subsek.values.tolist()
             scr1 = scr1.query("kode in @subsek")
         with col2:
-            pilihind = st.selectbox('Pilih Industri :', indus):
+            pilihind = st.selectbox('Pilih Industri :', indus)
             subind = ind.query("SubIndustri == @pilihind")
             subind = subind['Kode']
             subind = subind.values.tolist()
