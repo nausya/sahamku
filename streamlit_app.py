@@ -685,18 +685,18 @@ def screener():
 
     elif screenlevel == 'Industri':
         ind = pd.read_csv('Finansial.csv', sep=';', usecols=['Sektor', 'SubIndustri', 'Kode']).sort_values('SubIndustri')
-        sektor = ind['Sektor']
-        sektor = sektor.drop_duplicates()
-        indus = ind['SubIndustri']
-        indus = indus.drop_duplicates()
         col1, col2 = st.columns([1,1], gap="large")
         with col1:
+            sektor = ind['Sektor']
+            sektor = sektor.drop_duplicates()
             pilihsek = st.selectbox('Pilih Sektor :', sektor)
             subsek = ind.query("Sektor == @pilihsek")
             subsek = subsek['Kode']
             subsek = subsek.values.tolist()
             scr1 = scr1.query("kode in @subsek")
         with col2:
+            indus = ind['SubIndustri']
+            indus = indus.drop_duplicates()
             pilihind = st.selectbox('Pilih Industri :', indus)
             subind = ind.query("SubIndustri == @pilihind")
             subind = subind['Kode']
