@@ -650,7 +650,7 @@ def screener():
     scr1['tun'] = round(scr1['tun'],1)
     scr1 = scr1.fillna(0)
     if screenlevel == 'Fraksi Harga':
-        pilihhg = st.selectbox('Pilih Fraksi Harga :', ['Kurang Dari Rp200','Kurang Dari Rp5000','Lebih Dari Rp5000','Semua Harga'])
+        pilihhg = st.selectbox('Pilih Fraksi Harga :', ['Semua Harga','Kurang Dari Rp200','Kurang Dari Rp5000','Lebih Dari Rp5000'])
         if pilihhg == 'Semua Harga':
             st.subheader('Screener Saham Semua Harga')
             scr1
