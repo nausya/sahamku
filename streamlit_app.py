@@ -643,7 +643,7 @@ def model_engine(model, num):
 def screener():
     screenlevel = option_menu(None, ['>Rp5rb','<Rp5rb','<Rp200','LQ45','KOMPAS100','BagiDeviden','Industri'], icons=['arrow-up-square', 'arrow-down-square', 'arrow-down-square-fill', 'bullseye'], menu_icon="cast", default_index=0, orientation="horizontal")
    
-    st.write('Filter Berdasarkan :')
+
     scr1 = pd.read_csv('porto.csv', sep=';', index_col=False)
     scr1 = scr1.fillna(0)
     scr1['tun'] = scr1['tcs']/scr1['skg']
@@ -702,7 +702,8 @@ def screener():
     scr2 = scr1.copy()
     scr2 = scr2.style.applymap(lambda x: 'background-color: pink' if x in nota['Kode'].values else '')
     s = scr1.copy()
-
+    
+    st.write('Filter Berdasarkan :')
     col1, col2, col3, col4, col5, col6 = st.columns([1,1,1,1,1,1], gap="large")
     with col1:
         awal, akhir = st.slider('Posisi', min_value=0, max_value=100, value=(0, 100))
