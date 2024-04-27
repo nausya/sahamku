@@ -742,7 +742,7 @@ def screener():
     st.write('Filter Berdasarkan :')
     col1, col2, col3, col4, col5, col6 = st.columns([1,1,1,1,1,1], gap="large")
     with col1:
-        awal, akhir = st.slider('Posisi', min_value=minp, max_value=maxp, value=(0, 100))   
+        awal, akhir = st.slider('Posisi', min_value=minp, max_value=maxp, value=(0, maxp))   
     with col2:
         omawal, omakhir = st.slider('Margin Operasi', min_value=minom, max_value=maxom, value=(minom, maxom))
         omawal = omawal
