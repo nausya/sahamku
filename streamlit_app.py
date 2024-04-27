@@ -716,6 +716,12 @@ def screener():
     
     scr2
     s = scr1.copy()
+    ########### minmax slider ################
+    dfmm = df.copy()
+    dfmm = dfmm[['p','om','dev','roe','pbvy']]
+    dfmm = dfmm.max()
+    dfmm
+    ########### end of minmax slider ################
     col1, col2 = st.columns([1,1], gap="large")
     with col1:
         st.markdown('<span style="background-color: #ffc0cb; padding: 3px;">KODE</span> : Emiten Dengan Notasi Khusus', unsafe_allow_html=True)
