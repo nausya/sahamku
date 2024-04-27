@@ -694,7 +694,7 @@ def screener():
             pilihsek = st.selectbox('Pilih Sektor :', sektor)
             subsek = ind.query("Sektor == @pilihsek")
             subsek = subsek['Kode']
-        with col1:
+        with col2:
             pilihind = st.selectbox('Pilih Industri :', indus)
             subind = ind.query("SubIndustri == @pilihind")
             subind = subind['Kode']
