@@ -720,12 +720,14 @@ def screener():
     dfmm = scr1.copy()
     dfmm = dfmm[['p','om','dev','roe','pbvy','tun']]
     dfmax = dfmm.max()
+    maxp = dfmax['p']
     maxom = dfmax['om']
     maxdev = dfmax['dev']
     maxroe = dfmax['roe']
     maxnb = dfmax['pbvy']
     maxtun = dfmax['tun']
     dfmin = dfmm.min()
+    minp = dfmin['p']
     minom = dfmin['om']
     mindev = dfmin['dev']
     minroe = dfmin['roe']
@@ -740,19 +742,19 @@ def screener():
     st.write('Filter Berdasarkan :')
     col1, col2, col3, col4, col5, col6 = st.columns([1,1,1,1,1,1], gap="large")
     with col1:
-        awal, akhir = st.slider('Posisi', min_value=0, max_value=100, value=(0, 100))   
+        awal, akhir = st.slider('Posisi', min_value=minp, max_value=maxp, value=(minp, maxp))   
     with col2:
-        omawal, omakhir = st.slider('Margin Operasi (%)', min_value=minom, max_value=maxom, value=(minom, maxom))
-        omawal = omawal/100
-        omakhir = omakhir/100
+        omawal, omakhir = st.slider('Margin Operasi', min_value=minom, max_value=maxom, value=(minom, maxom))
+        omawal = omawal
+        omakhir = omakhir
        
     with col3:
-        devawal, devakhir = st.slider('Deviden (%)', min_value=mindev, max_value=maxdev, value=(mindev, maxdev))
-        devawal = devawal/100
-        devakhir = devakhir/100
+        devawal, devakhir = st.slider('Deviden', min_value=mindev, max_value=maxdev, value=(mindev, maxdev))
+        devawal = devawal
+        devakhir = devakhir
       
     with col4:
-        roeawal, roeakhir = st.slider(f'Return on Equity (%)', min_value=minroe, max_value=maxroe, value=(minroe, maxroe))
+        roeawal, roeakhir = st.slider(f'Return on Equity', min_value=minroe, max_value=maxroe, value=(minroe, maxroe))
         roeawal = roeawal
         roeakhir = roeakhir
        
@@ -769,11 +771,11 @@ def screener():
     s = s.query("p>=@awal and p<=@akhir and om>=@omawal and om<=@omakhir and dev>=@devawal and dev<=@devakhir and roe>=@roeawal and roe<=@roeakhir and tun>=@tunawal and tun<=@tunakhir and pbvy>=@nbawal and pbvy<=@nbakhir")   
     x = s['p']
     if pilgra == 'Margin Operasi':
-        y = s['om']*100
-        ylabel = 'Margin Operasi (%)'
+        y = s['om']
+        ylabel = 'Margin Operasi'
     elif pilgra == 'Rasio Bayar Deviden':
-        y = s['dev']*100
-        ylabel = 'Rasio Bayar Deviden (%)'
+        y = s['dev']
+        ylabel = 'Rasio Bayar Deviden'
     elif pilgra == 'Tunai Per Saham':
         y = s['tun']
         ylabel = 'Tunai Per Saham (X)'
@@ -782,7 +784,7 @@ def screener():
         ylabel = 'Nilai Buku (X)'
     else:
         y = s['roe']
-        ylabel = 'Return on Equity (%)'
+        ylabel = 'Return on Equity'
     kd = s['kode']
     sns.scatterplot(s,x=x, y=y, marker='>')
     plt.xlabel("Posisi Harga")
@@ -791,7 +793,7 @@ def screener():
         if pilgra in ('Tunai Per Saham', 'Nilai Buku'):
             label = f"{c} {round(b,1)}X"
         else:
-            label = f"{c} {int(b)}%"
+            label = f"{c} {int(b)}"
         ax.annotate(label,(a,b), xytext=(3, -3),textcoords='offset points',fontsize='7')
     
     st.pyplot(fig)
