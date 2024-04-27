@@ -656,7 +656,7 @@ def screener():
 
         elif pilihhg == 'Notasi Khusus':
             st.subheader('Screener Saham Emiten Dengan Notasi Khusus')
-            nota['Kode']
+            nota['Kode'].values[0]
             
         elif pilihhg == 'Kurang Dari Rp5000':
             st.subheader('Screener Saham Dengan Fraksi Harga Kurang Dari 5000')
