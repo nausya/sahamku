@@ -753,8 +753,8 @@ def screener():
       
     with col4:
         roeawal, roeakhir = st.slider(f'Return on Equity (%)', min_value=minroe, max_value=maxroe, value=(minroe, maxroe))
-        roeawal = roeawal/100
-        roeakhir = roeakhir/100
+        roeawal = roeawal
+        roeakhir = roeakhir
        
     with col5:
         tunawal, tunakhir = st.slider('Tunai Per Saham (X)', min_value=mintun, max_value=maxtun, value=(mintun, maxtun))
@@ -781,7 +781,7 @@ def screener():
         y = s['pbvy']
         ylabel = 'Nilai Buku (X)'
     else:
-        y = s['roe']*100
+        y = s['roe']
         ylabel = 'Return on Equity (%)'
     kd = s['kode']
     sns.scatterplot(s,x=x, y=y, marker='>')
