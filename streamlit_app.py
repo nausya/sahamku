@@ -685,16 +685,15 @@ def screener():
 
     elif screenlevel == 'Industri':
         ind = pd.read_csv('Finansial.csv', sep=';', usecols=['Sektor', 'SubIndustri', 'Kode']).sort_values('SubIndustri')
-        col1, col2 = st.columns([1,1], gap="large")
-        with col1:
-            sektor = ind['Sektor']
-            sektor = sektor.drop_duplicates()
-            pilihsek = st.selectbox('Pilih Sektor :', sektor)
-            subsek = ind.query("Sektor == @pilihsek")
-            subsek = subsek['Kode']
-            subsek = subsek.values.tolist()
+
+        sektor = ind['Sektor']
+        sektor = sektor.drop_duplicates()
+        pilihsek = st.selectbox('Pilih Sektor :', sektor)
+        subsek = ind.query("Sektor == @pilihsek")
+        subsek = subsek['Kode']
+        subsek = subsek.values.tolist()
         scr1 = scr1.query("kode in @subsek")
-        with col2:
+ 
             #indus = ind['SubIndustri']
             #indus = indus.drop_duplicates()
             #pilihind = st.selectbox('Pilih Industri :', indus)
@@ -702,7 +701,7 @@ def screener():
             #subind = subind['Kode']
             #subind = subind.values.tolist()
             #scr1 = scr1.query("kode in @subind")
-        #scr1 = scr1.query("kode in @subind and p>=@awal and p<=@akhir and om>=@omawal and om<=@omakhir and dev>=@devawal and dev<=@devakhir and roe>=@roeawal and roe<=@roeakhir and tun>=@tunawal and tun<=@tunakhir and pbvy>=@nbawal and pbvy<=@nbakhir")
+            #scr1 = scr1.query("kode in @subind and p>=@awal and p<=@akhir and om>=@omawal and om<=@omakhir and dev>=@devawal and dev<=@devakhir and roe>=@roeawal and roe<=@roeakhir and tun>=@tunawal and tun<=@tunakhir and pbvy>=@nbawal and pbvy<=@nbakhir")
     
     else:
         st.subheader('Screener Saham Dengan Fraksi Harga Lebih Dari 5000')
