@@ -723,7 +723,6 @@ def screener():
     maxroe = dfmax['roe']
     dfmin = dfmm.min()
     minroe = dfmin['roe']
-    minroe,values[0]
     ########### end of minmax slider ################
     col1, col2 = st.columns([1,1], gap="large")
     with col1:
@@ -745,7 +744,7 @@ def screener():
         devakhir = devakhir/100
       
     with col4:
-        roeawal, roeakhir = st.slider('Return on Equity (%)', min_value=0, max_value=100, value=(0, 100))
+        roeawal, roeakhir = st.slider(f'Return on Equity (%)', min_value={minroe}, max_value={maxroe}, value=(0, 100))
         roeawal = roeawal/100
         roeakhir = roeakhir/100
        
