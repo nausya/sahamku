@@ -670,7 +670,7 @@ def screener():
     with col5:
         tunawal, tunakhir = st.slider('Tunai Per Saham (X)', min_value=0, max_value=10, value=(0, 10))
     with col6:
-        nbawal, nbunakhir = st.slider('Nilai Buku (X)', min_value=0, max_value=10, value=(0, 10))
+        nbawal, nbakhir = st.slider('Nilai Buku (X)', min_value=0, max_value=10, value=(0, 10))
     if screenlevel == '<Rp200':
        st.subheader('Screener Saham Dengan Fraksi Harga Rentang 50-200')
        scr1=scr1.query("skg > 50 and skg<= 200 and p>=@awal and p<=@akhir and om>=@omawal and om<=@omakhir and dev>=@devawal and dev<=@devakhir and roe>=@roeawal and roe<=@roeakhir and tun>=@tunawal and tun<=@tunakhir and pbvy>=@nbawal and pbvy<=@nbakhir")
