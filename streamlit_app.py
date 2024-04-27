@@ -645,10 +645,6 @@ def screener():
    
     st.write('Filter Berdasarkan :')
     scr1 = pd.read_csv('porto.csv', sep=';', index_col=False)
-    #pd.options.display.float_format = '{:.2f}'.format
-    #tgl = scr1['date'].values[0]
-    #tgl = tgl[8:10] + "/" + tgl[5:7]+ "/" + tgl[0:4]
-    
     scr1 = scr1.fillna(0)
     scr1['tun'] = scr1['tcs']/scr1['skg']
     scr1['tun'] = round(scr1['tun'],1)
@@ -716,18 +712,10 @@ def screener():
     scr2 = scr1.copy()
     scr2 = scr2.style.applymap(lambda x: 'background-color: pink' if x in nota['Kode'].values else '')
     s = scr1.copy()
-    #scr2 = scr2.set_index('kode')
-    #scr2['mcap'] = scr1['mcap']/1000000000000
+
     scr2
-    #st.text('Kode Emiten Dengan Warna Pink : Notasi Khusus')
     st.markdown('<span style="background-color: #ffc0cb; padding: 3px;">KODE</span> : Emiten Dengan Notasi Khusus', unsafe_allow_html=True)
     st.caption('Last Update : 27 April 2024')
-   
-    #scr1 = scr1.rename(columns = {"p": "Posisi","kode":"Kode","aksiy": "Saran","skg":"Harga","lo":"1YMin","hi":"1YMax","bl":"2M","m":"6M", 
-    #                              "om":"Margin Operasi(%)", "dev":"Deviden PR(%)","roe": "ROE(%)","pery": "PER(%)",
-    #                              "pbvy": "Nilai Buku","bvy": "Harga Dasar","ph": "Pendapatan(M)","totshm": "Total Saham(M)","mcap": "Omzet(T)","epsy": "Laba Per Saham","opcash": "Kas Operasional(M)",
-    #                              "ut": "Utang(M)","cash": "Nilai Kas(M)","tcs": "Tunai Per Saham", "vol": "Volume(J)","date": "Tanggal"}).sort_values(['kode'])
-    #"Last Update : " + tgl
     
     st.subheader('Grafik')
     pilgra = st.radio('Posisi Harga Terkini Terhadap : ', ['Margin Operasi', 'Rasio Bayar Deviden', 'Tunai Per Saham', 'Return on Equity', 'Nilai Buku'])
