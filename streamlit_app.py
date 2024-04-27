@@ -701,9 +701,12 @@ def screener():
     
     scr2 = scr1.copy()
     scr2 = scr2.style.applymap(lambda x: 'background-color: pink' if x in nota['Kode'].values else '')
-    s = scr1.copy()
-    scr2
     
+    if st.slider():
+        scr2
+    else:
+        scr2.query("p>=@awal and p<=@akhir and om>=@omawal and om<=@omakhir and dev>=@devawal and dev<=@devakhir and roe>=@roeawal and roe<=@roeakhir and tun>=@tunawal and tun<=@tunakhir and pbvy>=@nbawal and pbvy<=@nbakhir")
+    s = scr1.copy()
     col1, col2 = st.columns([1,1], gap="large")
     with col1:
         st.markdown('<span style="background-color: #ffc0cb; padding: 3px;">KODE</span> : Emiten Dengan Notasi Khusus', unsafe_allow_html=True)
