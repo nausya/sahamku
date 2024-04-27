@@ -744,7 +744,7 @@ def screener():
         devakhir = devakhir/100
       
     with col4:
-        roeawal, roeakhir = st.slider(f'Return on Equity (%)', min_value=minroe, max_value=maxroe, value=(0, 100))
+        roeawal, roeakhir = st.slider(f'Return on Equity (%)', min_value=minroe, max_value=maxroe, value=(minroe, maxroe))
         roeawal = roeawal/100
         roeakhir = roeakhir/100
        
