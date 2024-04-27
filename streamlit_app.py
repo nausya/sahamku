@@ -730,14 +730,14 @@ def screener():
     #"Last Update : " + tgl
     
     st.subheader('Grafik')
-    pilgra = st.radio('Posisi Harga Terkini Terhadap : ', ['Margin Operasi', 'Deviden', 'Tunai Per Saham', 'Return on Equity', 'Nilai Buku'])
+    pilgra = st.radio('Posisi Harga Terkini Terhadap : ', ['Margin Operasi', 'Rasio Bayar Deviden', 'Tunai Per Saham', 'Return on Equity', 'Nilai Buku'])
     fig, ax = plt.subplots()
     
     x = s['p']
     if pilgra == 'Margin Operasi':
         y = s['om']*100
         ylabel = 'Margin Operasi (%)'
-    elif pilgra == 'Deviden':
+    elif pilgra == 'Rasio Bayar Deviden':
         y = s['dev']*100
         ylabel = 'Deviden (%)'
     elif pilgra == 'Tunai Per Saham':
