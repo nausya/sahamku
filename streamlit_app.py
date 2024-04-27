@@ -691,15 +691,16 @@ def screener():
         indus = indus.drop_duplicates()
         col1, col2 = st.columns([1,1], gap="large")
         with col1:
-            pilihsek = st.selectbox('Pilih Sektor :', sektor)
-            subsek = ind.query("Sektor == @pilihsek")
-            subsek = subsek['Kode']
+            if pilihsek = st.selectbox('Pilih Sektor :', sektor):
+                subsek = ind.query("Sektor == @pilihsek")
+                subsek = subsek['Kode']
+                subsek = subsek.values.tolist()
         with col2:
-            pilihind = st.selectbox('Pilih Industri :', indus)
-            subind = ind.query("SubIndustri == @pilihind")
-            subind = subind['Kode']
-        subsek = subsek.values.tolist()
-        subind = subind.values.tolist()
+            if pilihind = st.selectbox('Pilih Industri :', indus):
+                subind = ind.query("SubIndustri == @pilihind")
+                subind = subind['Kode']
+                subind = subind.values.tolist()
+        
         scr1 = scr1.query("kode in @subind or kode in @subsek")
         #scr1 = scr1.query("kode in @subind and p>=@awal and p<=@akhir and om>=@omawal and om<=@omakhir and dev>=@devawal and dev<=@devakhir and roe>=@roeawal and roe<=@roeakhir and tun>=@tunawal and tun<=@tunakhir and pbvy>=@nbawal and pbvy<=@nbakhir")
     
