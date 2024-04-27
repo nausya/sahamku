@@ -717,7 +717,7 @@ def screener():
     scr2
     s = scr1.copy()
     ########### minmax slider ################
-    dfmm = df.copy()
+    dfmm = scr1.copy()
     dfmm = dfmm[['p','om','dev','roe','pbvy']]
     dfmm = dfmm.max()
     dfmm
