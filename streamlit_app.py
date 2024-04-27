@@ -723,7 +723,7 @@ def screener():
     maxroe = dfmax['roe']
     dfmin = dfmm.min()
     minroe = dfmin['roe']
-    minroe
+    minroe,values[0]
     ########### end of minmax slider ################
     col1, col2 = st.columns([1,1], gap="large")
     with col1:
