@@ -703,8 +703,11 @@ def screener():
     scr2 = scr2.style.applymap(lambda x: 'background-color: pink' if x in nota['Kode'].values else '')
     s = scr1.copy()
     scr2
-    st.markdown('<span style="background-color: #ffc0cb; padding: 3px;">KODE</span> : Emiten Dengan Notasi Khusus', unsafe_allow_html=True)
-    st.caption('Last Update : 27 April 2024')
+    col1, col2 = st.columns([1,1], gap="large")
+    with col1:
+        st.markdown('<span style="background-color: #ffc0cb; padding: 3px;">KODE</span> : Emiten Dengan Notasi Khusus', unsafe_allow_html=True)
+    with col2:
+        st.caption('Last Update : 27 April 2024')
     
     st.write('Filter Berdasarkan :')
     col1, col2, col3, col4, col5, col6 = st.columns([1,1,1,1,1,1], gap="large")
