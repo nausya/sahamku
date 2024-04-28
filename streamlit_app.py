@@ -475,6 +475,7 @@ else:
    bmd = pd.read_csv('Finansial.csv', sep=';', usecols=['Kode','Sektor','EPSRP','BVRP','PER','PBV','DER','ROA(%)','ROE(%)','NPM(%)']).sort_values('Kode')
    bmd = bmd.query("Sektor == @bmsek")
    bmd = bmd[['Kode','EPSRP','BVRP','PER','PBV','DER','ROA(%)','ROE(%)','NPM(%)']]
+   bmd = bmd.set_index('Kode')
    st.dataframe(bmd) 
    st.subheader("", divider="rainbow")
    ################## END OF BENCHMARK DETIL
