@@ -720,19 +720,19 @@ def screener():
     dfmm = scr1.copy()
     dfmm = dfmm[['p','om','dev','roe','pbvy','tun']]
     dfmax = dfmm.max()
-    maxp = dfmax['p']
-    maxom = dfmax['om']
-    maxdev = dfmax['dev']
-    maxroe = dfmax['roe']
-    maxnb = dfmax['pbvy']
-    maxtun = dfmax['tun']
+    maxp = round(dfmax['p'])
+    maxom = round(dfmax['om'])
+    maxdev = round(dfmax['dev'])
+    maxroe = round(dfmax['roe'])
+    maxnb = round(dfmax['pbvy'])
+    maxtun = round(dfmax['tun'])
     dfmin = dfmm.min()
-    minp = dfmin['p']
-    minom = dfmin['om']
-    mindev = dfmin['dev']
-    minroe = dfmin['roe']
-    minnb = dfmin['pbvy']
-    mintun = dfmin['tun']
+    minp = round(dfmin['p'])
+    minom = round(dfmin['om'])
+    mindev = round(dfmin['dev'])
+    minroe = round(dfmin['roe'])
+    minnb = round(dfmin['pbvy'])
+    mintun = round(dfmin['tun'])
     ########### end of minmax slider ################
     col1, col2 = st.columns([1,1], gap="large")
     with col1:
