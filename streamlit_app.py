@@ -475,9 +475,7 @@ else:
    bmd = bmd.query("KodeInd == @fin[5]")
    bmd = bmd[['Kode','EPSRP','BVRP','PER','PBV','DER','ROA(%)','ROE(%)','NPM(%)']]
    #bmd = bmd.set_index('Kode')
-def highlight_pink(s):
-    return ['background-color: pink' if Kode == 'BBRI' else '' for code in s]
-   bmd = bmd.style.apply(highlight_pink, axis=1)
+   bmd = bmd.style.apply(lambda s: ['background-color: pink' if code == 'BBRI' else '' for code in s], axis=1)
    st.dataframe(bmd) 
    st.subheader("", divider="rainbow")
    ################## END OF BENCHMARK DETIL
