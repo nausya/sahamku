@@ -467,13 +467,13 @@ else:
    col10.metric("Utang(Rp)", digit(ut), digit(utlap))
    st.subheader("", divider="rainbow")
 
-   st.subheader(f"STANDAR KINERJA EMITEN SEJENIS \n EPS : Rp.{bmeps} | BV : Rp.{round(bmbv)} | PBV : {bmpbv} | PER : {round(bmper)} | DER : {bmder} | SUBSEKTOR : {bmsek}", divider="rainbow")
+   st.subheader(f"STANDAR KINERJA \n EPS : Rp.{bmeps} | BV : Rp.{round(bmbv)} | PBV : {bmpbv} | PER : {round(bmper)} | DER : {bmder} | SUBSEKTOR : {bmsek}", divider="rainbow")
 
    ################## BENCHMARK DETIL
    st.subheader(f"KINERJA EMITEN SEJENIS", divider="rainbow")
-   st.write("Finansial (Milyar Rupiah)")
+   st.write("(Dalam Milyar Rupiah)")
    bmd = pd.read_csv('Finansial.csv', index_col=[0], sep=';', usecols=['Kode','EPSRP','BVRP','PER','PBV','DER','ROA(%)','ROE(%)','NPM(%)']).sort_values('Kode')
-   bmd = bmd.query("SubIndustri == @bmsek")
+   bmd = bmd.query("SubIndustri == 'Banks'")
    st.dataframe(bmd)   
    ################## END OF BENCHMARK DETIL
 
