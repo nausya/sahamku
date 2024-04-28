@@ -473,8 +473,7 @@ else:
    st.subheader(f"KINERJA EMITEN SEJENIS")
    st.write("(Dalam Milyar Rupiah)")
    bmd = pd.read_csv('Finansial.csv', sep=';', usecols=['Kode','KodeInd','EPSRP','BVRP','PER','PBV','DER','ROA(%)','ROE(%)','NPM(%)']).sort_values('Kode')
-   ind
-   bmd = bmd.query("KodeInd == @ind")
+   bmd = bmd.query("KodeInd == @fin[5]")
    bmd = bmd[['Kode','EPSRP','BVRP','PER','PBV','DER','ROA(%)','ROE(%)','NPM(%)']]
    bmd = bmd.set_index('Kode')
    st.dataframe(bmd) 
