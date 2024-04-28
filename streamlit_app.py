@@ -474,7 +474,7 @@ else:
    bmd = pd.read_csv('Finansial.csv', sep=';', usecols=['Kode','KodeInd','EPSRP','BVRP','PER','PBV','DER','ROA(%)','ROE(%)','NPM(%)']).sort_values('Kode')
    bmd = bmd.query("KodeInd == @fin[5]")
    bmd = bmd[['Kode','EPSRP','BVRP','PER','PBV','DER','ROA(%)','ROE(%)','NPM(%)']]
-   bmd = bmd.set_index('Kode')
+   #bmd = bmd.set_index('Kode')
    bmd = bmd.style.apply(lambda s: ['background-color: pink' if Kode == 'Kode' else '' for Kode in s], axis=1)
    st.dataframe(bmd) 
    st.subheader("", divider="rainbow")
