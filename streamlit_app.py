@@ -467,7 +467,7 @@ else:
    col10.metric("Utang(Rp)", digit(ut), digit(utlap))
    st.subheader("", divider="rainbow")
 
-   st.subheader(f"STANDAR KINERJA EMITEN SEJENIS \n LABA SAHAM (EPS) : Rp.{bmeps} | HARGA BUKU (BV) : Rp.{round(bmbv)} | NILAI BUKU (PBV) : {bmpbv} | RASIO LABA-HARGA (PER) : {round(bmper)} | RASIO HUTANG-MODAL (DER) : {bmder} | SUB SEKTOR : {bmsek}", divider="rainbow")
+   st.subheader(f"STANDAR KINERJA EMITEN SEJENIS \n EPS : Rp.{bmeps} | BV : Rp.{round(bmbv)} | PBV : {bmpbv} | PER : {round(bmper)} | DER : {bmder} | SUBSEKTOR : {bmsek}", divider="rainbow")
    #BENCHMARK2
    #bm2 = pd.read_csv('minmax-perder.csv', sep=";")
    #bm2 = bm2.query("Kode like '@kodebm%'")
