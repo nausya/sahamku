@@ -468,11 +468,15 @@ else:
    st.subheader("", divider="rainbow")
 
    st.subheader(f"STANDAR KINERJA EMITEN SEJENIS \n EPS : Rp.{bmeps} | BV : Rp.{round(bmbv)} | PBV : {bmpbv} | PER : {round(bmper)} | DER : {bmder} | SUBSEKTOR : {bmsek}", divider="rainbow")
-   #BENCHMARK2
-   #bm2 = pd.read_csv('minmax-perder.csv', sep=";")
-   #bm2 = bm2.query("Kode like '@kodebm%'")
-   #st.dataframe(bm2)
-   
+
+   ################## BENCHMARK DETIL
+   st.subheader(f"KINERJA EMITEN SEJENIS", divider="rainbow")
+   st.write("Finansial (Milyar Rupiah)")
+   bmd = pd.read_csv('Finansial.csv', index_col=[0], sep=';', usecols=['Kode','EPSRP','BVRP','PER','PBV','DER','ROA(%)','ROE(%)','NPM(%)]).sort_values('Kode')
+   bmd = bmd.query("SubIndustri == @bmsek")
+   st.dataframe(bmd)   
+   ################## END OF BENCHMARK DETIL
+
    ##################RINGKASAN
    st.subheader(f"RINGKASAN PORTOFOLIO", divider="rainbow")
 
@@ -494,6 +498,8 @@ else:
    dfringkas = dfringkas.set_index('Kode')
    st.dataframe(dfringkas)
    ##################END OF RINGKASAN
+
+
 
 st.info('Untuk jangka panjang perlu diperhatikan kisaran posisi harga kurang dari 10')
 
