@@ -481,7 +481,7 @@ else:
    ################## END OF BENCHMARK DETIL
 
    ##################RINGKASAN
-   st.subheader(f"RINGKASAN PORTOFOLIO", divider="rainbow")
+   st.subheader(f"RINGKASAN PORTOFOLIO")
 
    aksik = 0
    cash = cash/1000000000
@@ -500,6 +500,7 @@ else:
    dfringkas = pd.DataFrame(dfringkas, index = np.arange(1))
    dfringkas = dfringkas.set_index('Kode')
    st.dataframe(dfringkas)
+   st.subheader("", divider="rainbow")
    ##################END OF RINGKASAN
 
 
