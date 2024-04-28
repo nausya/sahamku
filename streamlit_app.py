@@ -791,9 +791,9 @@ def screener():
     plt.ylabel(f"{ylabel}")
     for a,b,c in zip(x,y,kd):
         if pilgra in ('Tunai Per Saham', 'Nilai Buku'):
-            label = f"{c} {round(b,1)}X"
+            label = f"{c} {round(b)}X"
         else:
-            label = f"{c} {int(b)}"
+            label = f"{c} {round(b)}"
         ax.annotate(label,(a,b), xytext=(3, -3),textcoords='offset points',fontsize='7')
     
     st.pyplot(fig)
