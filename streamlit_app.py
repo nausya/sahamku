@@ -473,7 +473,7 @@ else:
    #bm2 = bm2.query("Kode like '@kodebm%'")
    #st.dataframe(bm2)
    
-   #RINGKASAN
+   ##################RINGKASAN
    st.subheader(f"RINGKASAN PORTOFOLIO", divider="rainbow")
 
    aksik = 0
@@ -488,11 +488,12 @@ else:
    dfringkas = {'Kode':kode,'Tanggal':date,'Harga':C,'1YMin':L52,'2Mon':int(BL),'6Mon':int(M),'1YMax':H52,'Margin Operasi(%)':ceknon(om),
                 'Deviden(%)':ceknon(dev),'ROE(%)':ceknon(roe),'Posisi':round(P,0),'Uang Tunai(M)':round(cash),'Kas Operasional(M)':int(opcash),'Pendapatan(M)':int(ph),
                 'Utang(M)':round(ut),'Kas Per Saham(Rp)':round(tcs),'EPS(Rp)':eps,'Harga Buku(Rp)':round(bv),'Nilai Buku':round(pbv,1),
-                'PER':round(per),'Volume(Juta)':round(vol,0),'TotalSaham(M)':round(totshm),'Omzet(M)':round(mcap),'Saran':aksiy,'Aksi':aksik,'User':id}    
+                'PER':round(per),'Volume(Juta)':round(vol,0),'TotalSaham(M)':round(totshm),'Omzet(M)':round(mcap),'Saran':aksiy}#,'Aksi':aksik,'User':id}    
 
    dfringkas = pd.DataFrame(dfringkas, index = np.arange(1))
    dfringkas = dfringkas.set_index('Kode')
    st.dataframe(dfringkas)
+   ##################END OF RINGKASAN
 
 st.info('Untuk jangka panjang perlu diperhatikan kisaran posisi harga kurang dari 10')
 
