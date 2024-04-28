@@ -474,9 +474,9 @@ else:
    bmd = pd.read_csv('Finansial.csv', sep=';', usecols=['Kode','KodeInd','EPSRP','BVRP','PER','PBV','DER','ROA(%)','ROE(%)','NPM(%)']).sort_values('Kode')
    bmd = bmd.query("KodeInd == @fin[5]")
    bmd = bmd[['Kode','EPSRP','BVRP','PER','PBV','DER','ROA(%)','ROE(%)','NPM(%)']]
-   bmd = bmd.set_index('Kode')
+   #bmd = bmd.set_index('Kode')
    def highlight_pink(s):
-       return ['background-color: pink' if Kode == 'Kode' else '' for code in s]
+       return ['background-color: pink' if Kode == 'BBRI' else '' for code in s]
    bmd = bmd.style.apply(highlight_pink, axis=1)
    st.dataframe(bmd) 
    st.subheader("", divider="rainbow")
