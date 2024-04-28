@@ -472,7 +472,7 @@ else:
    ################## BENCHMARK DETIL
    st.subheader(f"KINERJA EMITEN SEJENIS", divider="rainbow")
    st.write("Finansial (Milyar Rupiah)")
-   bmd = pd.read_csv('Finansial.csv', index_col=[0], sep=';', usecols=['Kode','EPSRP','BVRP','PER','PBV','DER','ROA(%)','ROE(%)','NPM(%)])
+   bmd = pd.read_csv('Finansial.csv', index_col=[0], sep=';', usecols=['Kode','EPSRP','BVRP','PER','PBV','DER','ROA(%)','ROE(%)','NPM(%)']).sort_values('Kode')
    bmd = bmd.query("SubIndustri == @bmsek")
    st.dataframe(bmd)   
    ################## END OF BENCHMARK DETIL
@@ -645,7 +645,7 @@ def model_engine(model, num):
         st.text(f'Hari ke-{day}: {round(i)}')
         day += 1
         
-#Screener Grafik Kuadran
+###############Screener Grafik Kuadran
 def screener():
     screenlevel = option_menu(None, ['Fraksi Harga','LQ45','KOMPAS100','BagiDeviden','Industri'], icons=['arrow-up-square', 'arrow-down-square', 'arrow-down-square-fill', 'bullseye'], menu_icon="cast", default_index=0, orientation="horizontal")
    
@@ -705,7 +705,7 @@ def screener():
         scr1 = scr1.query("kode in @KOMPAS100")
         #scr1 = scr1.query("kode in @KOMPAS100 and p>=@awal and p<=@akhir and om>=@omawal and om<=@omakhir and dev>=@devawal and dev<=@devakhir and roe>=@roeawal and roe<=@roeakhir and tun>=@tunawal and tun<=@tunakhir and pbvy>=@nbawal and pbvy<=@nbakhir")
 
-    else:# screenlevel == 'Industri':
+    else:
         ind = pd.read_csv('Finansial.csv', sep=';', usecols=['Sektor', 'SubIndustri', 'Kode']).sort_values('SubIndustri')
 
         sektor = ind['Sektor']
