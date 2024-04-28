@@ -476,8 +476,9 @@ else:
    bmd = bmd[['Kode','EPSRP','BVRP','PER','PBV','DER','ROA(%)','ROE(%)','NPM(%)']]
    #bmd = bmd.set_index('Kode')
    
-   bmd = bmd.style.apply(lambda s: ['background-color: pink' if Kode == '@kodesaja' else '' for Kode in s], axis=1)
-   st.dataframe(bmd) 
+   bmd = bmd.style.apply(lambda s: ['background-color: pink' if Kode == 'AMAG' else '' for Kode in s], axis=1)
+   bmd
+    #st.dataframe(bmd) 
    st.subheader("", divider="rainbow")
    ################## END OF BENCHMARK DETIL
 
