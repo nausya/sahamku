@@ -470,11 +470,12 @@ else:
    st.subheader(f"STANDAR KINERJA \n EPS : Rp.{bmeps} | BV : Rp.{round(bmbv)} | PBV : {bmpbv} | PER : {round(bmper)} | DER : {bmder} | SUBSEKTOR : {bmsek}", divider="rainbow")
 
    ################## BENCHMARK DETIL
-   st.subheader(f"KINERJA EMITEN SEJENIS", divider="rainbow")
+   st.subheader(f"KINERJA EMITEN SEJENIS")
    st.write("(Dalam Milyar Rupiah)")
    bmd = pd.read_csv('Finansial.csv', index_col=[0], sep=';', usecols=['Kode','SubIndustri','EPSRP','BVRP','PER','PBV','DER','ROA(%)','ROE(%)','NPM(%)']).sort_values('Kode')
    bmd = bmd.query("SubIndustri == @bmsek")
-   st.dataframe(bmd)   
+   st.dataframe(bmd) 
+   st.subheader("", divider="rainbow")
    ################## END OF BENCHMARK DETIL
 
    ##################RINGKASAN
