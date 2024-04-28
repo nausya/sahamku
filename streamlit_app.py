@@ -472,8 +472,9 @@ else:
    ################## BENCHMARK DETIL
    st.subheader(f"KINERJA EMITEN SEJENIS")
    st.write("(Dalam Milyar Rupiah)")
-   bmd = pd.read_csv('Finansial.csv', index_col=[0], sep=';', usecols=['Kode','SubIndustri','EPSRP','BVRP','PER','PBV','DER','ROA(%)','ROE(%)','NPM(%)']).sort_values('Kode')
-   bmd = bmd.query("SubIndustri == @bmsek")
+   bmd = pd.read_csv('Finansial.csv', index_col=[0], sep=';', usecols=['Kode','Sektor','EPSRP','BVRP','PER','PBV','DER','ROA(%)','ROE(%)','NPM(%)']).sort_values('Kode')
+   bmd = bmd.query("Sektor == @bmsek")
+   bmd = bmd[['Kode','EPSRP','BVRP','PER','PBV','DER','ROA(%)','ROE(%)','NPM(%)']]
    st.dataframe(bmd) 
    st.subheader("", divider="rainbow")
    ################## END OF BENCHMARK DETIL
