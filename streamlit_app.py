@@ -472,11 +472,11 @@ else:
    #bm2 = pd.read_csv('minmax-perder.csv', sep=";")
    #bm2 = bm2.query("Kode like '@kodebm%'")
    #st.dataframe(bm2)
+   
    #RINGKASAN
    st.subheader(f"RINGKASAN PORTOFOLIO", divider="rainbow")
 
    aksik = 0
-   
    cash = cash/1000000000
    ph = ph/1000000000
    ut = ut/1000000000
@@ -492,7 +492,6 @@ else:
 
    dfringkas = pd.DataFrame(dfringkas, index = np.arange(1))
    dfringkas = dfringkas.set_index('Kode')
-   #dfringkas['Tanggal'] = pd.to_datetime(dfringkas['Tanggal'], format='%Y-%m-%d')
    st.dataframe(dfringkas)
 
 st.info('Untuk jangka panjang perlu diperhatikan kisaran posisi harga kurang dari 10')
