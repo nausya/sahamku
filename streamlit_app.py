@@ -481,8 +481,8 @@ else:
     except (ValueError, TypeError):
         return value  # Jika tidak bisa dikonversi, biarkan nilainya tetap
         
-    for col in bmd.columns:
-    if col != 'Kode' and col != 'KodeInd':
+   for col in bmd.columns:
+      if col != 'Kode' and col != 'KodeInd':
         bmd[col] = pd.to_numeric(bmd[col])
    bmd
    st.subheader("", divider="rainbow")
