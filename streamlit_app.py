@@ -475,7 +475,9 @@ else:
    bmd = bmd.query("KodeInd == @fin[5]")
    bmd = bmd[['Kode','EPSRP','BVRP','PER','PBV','DER','ROA(%)','ROE(%)','NPM(%)']]
    bmd = bmd.set_index('Kode')
-   #bmd = bmd.astype(int)
+   for col in bmd.columns:
+    if col != 'Kode' and col != 'KodeInd':
+        bmd[col] = pd.to_numeric(bmd[col])
    bmd
    st.subheader("", divider="rainbow")
    ################## END OF BENCHMARK DETIL
