@@ -475,7 +475,13 @@ else:
    bmd = bmd.query("KodeInd == @fin[5]")
    bmd = bmd[['Kode','EPSRP','BVRP','PER','PBV','DER','ROA(%)','ROE(%)','NPM(%)']]
    bmd = bmd.set_index('Kode')
-   for col in bmd.columns:
+   def convert_to_int(value):
+    try:
+        return int(value)
+    except (ValueError, TypeError):
+        return value  # Jika tidak bisa dikonversi, biarkan nilainya tetap
+        
+    for col in bmd.columns:
     if col != 'Kode' and col != 'KodeInd':
         bmd[col] = pd.to_numeric(bmd[col])
    bmd
