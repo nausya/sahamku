@@ -333,7 +333,7 @@ TCID;Consumer Non-Cyclicals;D421;Personal Care Products;Mandom Indonesia Tbk;S;1
 UCID;Consumer Non-Cyclicals;D421;Personal Care Products;PT Uni-Charm Indonesia Tbk.;S;12/31/2023;Dec;A;WTM;8488;2924;5564;10245;574;435;435;105;1339;9;0.68;0.53;5;8;4
 UNVR;Consumer Non-Cyclicals;D421;Personal Care Products;Unilever Indonesia Tbk.;S;12/31/2023;Dec;A;WTM;16664;13283;3381;38611;6202;4801;4801;126;89;21;30.46;3.93;29;142;12
 PALM;Consumer Non-Cyclicals;D232;Plantations & Crops;Provident Agro Tbk;S;12/31/2023;Dec;A;WTM;8806;6346;2460;3;-3305;-3304;-3304;-220;164;-2;2.54;2.58;-38;-134;-107803
-IKAI;Consumer Cyclicals;E512;Hotels; Resorts & Cruise Lines;Intikeramik Alamasri Industri Tbk;S;09/30/2023;Dec;U;;1224;475;749;165;1;2;1;0;56;222;0.6;0.63;0;0;1
+IKAI;Consumer Cyclicals;E512;Hotels Resorts & Cruise Lines;Intikeramik Alamasri Industri Tbk;S;09/30/2023;Dec;U;;1224;475;749;165;1;2;1;0;56;222;0.6;0.63;0;0;1
 AUTO;Consumer Cyclicals;E111;Auto Parts & Equipment;Astra Otoparts Tbk;S;12/31/2023;Dec;A;WTM;19613;5073;14540;18649;2315;2013;1842;382;3017;6;0.74;0.35;9;13;10
 BOLT;Consumer Cyclicals;E111;Auto Parts & Equipment;Garuda Metalindo Tbk;S;09/30/2023;Dec;U;;1382;490;892;1132;142;110;105;68;381;12;2.19;0.55;12;18;14
 BRAM;Consumer Cyclicals;E112;Tires;Indo Kordsa Tbk;S;12/31/2023;Dec;A;WTM;4614;1125;3490;3890;385;269;236;525;7754;11;0.73;0.32;5;7;6
@@ -383,50 +383,50 @@ SSTM;Consumer Cyclicals;E413;Textiles;Sunson Textile Manufacturer Tbk;S;09/30/20
 TFCO;Consumer Cyclicals;E413;Textiles;Tifico Fiber Indonesia Tbk;S;09/30/2023;Dec;U;;5170;388;4782;2314;27;27;27;-2;992;-265;0.66;0.08;0;0;-1
 TRIS;Consumer Cyclicals;E411;Clothing; Accessories & Bags;Trisula International Tbk;S;09/30/2023;Dec;U;;1160;439;722;1045;70;54;28;11;230;16;0.78;0.61;3;5;3
 UNIT;Consumer Cyclicals;E413;Textiles;Nusantara Inti Corpora Tbk;S;06/30/2020;Dec;U;;364;117;247;53;0;0;0;5;3275;0;0.1;0.47;0;0;1
-AKKU;Consumer Cyclicals;E512;Hotels; Resorts & Cruise Lines;Anugerah Kagum Karya Utama Tbk;S;09/30/2023;Dec;U;;727;295;431;5;-3;-3;-3;-7;67;-5;0.51;0.69;-6;-10;-910
-ARTA;Consumer Cyclicals;E512;Hotels; Resorts & Cruise Lines;Arthavest Tbk;S;12/31/2023;Dec;A;WTM;291;18;272;78;2;2;1;3;609;866;4.4;0.07;0;1;2
+AKKU;Consumer Cyclicals;E512;Hotels Resorts & Cruise Lines;Anugerah Kagum Karya Utama Tbk;S;09/30/2023;Dec;U;;727;295;431;5;-3;-3;-3;-7;67;-5;0.51;0.69;-6;-10;-910
+ARTA;Consumer Cyclicals;E512;Hotels Resorts & Cruise Lines;Arthavest Tbk;S;12/31/2023;Dec;A;WTM;291;18;272;78;2;2;1;3;609;866;4.4;0.07;0;1;2
 BAYU;Consumer Cyclicals;E513;Travel Agencies;Bayu Buana Tbk;S;09/30/2023;Dec;U;;793;376;417;1668;71;58;58;224;1181;6;1.21;0.9;10;19;5
 BLTZ;Consumer Cyclicals;E514;Recreational & Sports Facilities;Graha Layar Prima Tbk;S;09/30/2023;Dec;U;;2110;1675;435;797;-33;-37;-38;-93;498;-22;4.11;3.85;-4;-19;-10
 BOLA;Consumer Cyclicals;E514;Recreational & Sports Facilities;Bali Bintang Sejahtera Tbk;S;09/30/2023;Dec;U;;771;53;718;239;4;4;2;-2;120;-53;0.85;0.07;-1;-2;-5
-BUVA;Consumer Cyclicals;E512;Hotels; Resorts & Cruise Lines;Bukit Uluwatu Villa Tbk;S;09/30/2023;Dec;U;;1957;1245;712;279;42;42;58;2;35;32;1.53;1.75;2;5;12
-CLAY;Consumer Cyclicals;E512;Hotels; Resorts & Cruise Lines;Citra Putra Realty Tbk;S;09/30/2023;Dec;U;;569;566;3;160;10;3;4;-2;1;-175;341.78;209.17;-1;-196;-3
+BUVA;Consumer Cyclicals;E512;Hotels Resorts & Cruise Lines;Bukit Uluwatu Villa Tbk;S;09/30/2023;Dec;U;;1957;1245;712;279;42;42;58;2;35;32;1.53;1.75;2;5;12
+CLAY;Consumer Cyclicals;E512;Hotels Resorts & Cruise Lines;Citra Putra Realty Tbk;S;09/30/2023;Dec;U;;569;566;3;160;10;3;4;-2;1;-175;341.78;209.17;-1;-196;-3
 CSMI;Consumer Cyclicals;E515;Restaurants;Cipta Selera Murni Tbk;S;09/30/2023;Dec;U;;65;57;9;3;-4;-4;-4;-7;11;-388;271.41;6.61;-9;-70;-213
-DFAM;Consumer Cyclicals;E512;Hotels; Resorts & Cruise Lines;Dafam Property Indonesia Tbk;S;12/31/2023;Dec;A;WTM;248;210;38;69;-16;-16;-16;-9;20;-6;2.49;5.49;-7;-43;-23
+DFAM;Consumer Cyclicals;E512;Hotels Resorts & Cruise Lines;Dafam Property Indonesia Tbk;S;12/31/2023;Dec;A;WTM;248;210;38;69;-16;-16;-16;-9;20;-6;2.49;5.49;-7;-43;-23
 DUCK;Consumer Cyclicals;E515;Restaurants;Jaya Bersama Indo Tbk;S;09/30/2020;Dec;U;;1345;422;923;180;31;21;21;32;719;0;0.24;0.46;3;4;23
-EAST;Consumer Cyclicals;E512;Hotels; Resorts & Cruise Lines;Eastparc Hotel Tbk;S;12/31/2023;Dec;A;WTM;483;21;462;106;47;38;38;9;112;15;1.21;0.05;8;8;36
+EAST;Consumer Cyclicals;E512;Hotels Resorts & Cruise Lines;Eastparc Hotel Tbk;S;12/31/2023;Dec;A;WTM;483;21;462;106;47;38;38;9;112;15;1.21;0.05;8;8;36
 ENAK;Consumer Cyclicals;E515;Restaurants;Champ Resto Indonesia Tbk;S;09/30/2023;Dec;U;;899;642;257;1033;14;15;15;14;119;79;9.26;2.5;3;12;3
-ESTA;Consumer Cyclicals;E512;Hotels; Resorts & Cruise Lines;Esta Multi Usaha Tbk;S;09/30/2023;Dec;U;;278;117;161;34;-2;-2;-2;2;66;45;1.19;0.73;2;3;13
+ESTA;Consumer Cyclicals;E512;Hotels Resorts & Cruise Lines;Esta Multi Usaha Tbk;S;09/30/2023;Dec;U;;278;117;161;34;-2;-2;-2;2;66;45;1.19;0.73;2;3;13
 FAST;Consumer Cyclicals;E515;Restaurants;Fast Food Indonesia Tbk;S;09/30/2023;Dec;U;;3776;2871;905;4620;-195;-152;-152;-53;227;-14;3.4;3.17;-6;-24;-5
-FITT;Consumer Cyclicals;E512;Hotels; Resorts & Cruise Lines;Hotel Fitra International Tbk;S;12/31/2023;Dec;U;;58;30;28;12;-7;-7;-6;-8;39;-80;15.6;1.05;-10;-20;-47
-HOME;Consumer Cyclicals;E512;Hotels; Resorts & Cruise Lines;Hotel Mandarine Regency Tbk;S;09/30/2020;Dec;U;;2452;334;2118;10;-12;-12;-12;-2;95;0;0.52;0.16;-1;-2;-341
-HOTL;Consumer Cyclicals;E512;Hotels; Resorts & Cruise Lines;Saraswati Griya Lestari Tbk;S;09/30/2021;Dec;U;;1316;1014;301;36;-27;-27;-27;-12;85;0;0.59;3.37;-3;-14;-116
-HRME;Consumer Cyclicals;E512;Hotels; Resorts & Cruise Lines;Menteng Heritage Realty Tbk;S;09/30/2023;Dec;U;;950;294;655;79;-11;-9;-9;-2;110;-15;0.31;0.45;-1;-2;-17
+FITT;Consumer Cyclicals;E512;Hotels Resorts & Cruise Lines;Hotel Fitra International Tbk;S;12/31/2023;Dec;U;;58;30;28;12;-7;-7;-6;-8;39;-80;15.6;1.05;-10;-20;-47
+HOME;Consumer Cyclicals;E512;Hotels Resorts & Cruise Lines;Hotel Mandarine Regency Tbk;S;09/30/2020;Dec;U;;2452;334;2118;10;-12;-12;-12;-2;95;0;0.52;0.16;-1;-2;-341
+HOTL;Consumer Cyclicals;E512;Hotels Resorts & Cruise Lines;Saraswati Griya Lestari Tbk;S;09/30/2021;Dec;U;;1316;1014;301;36;-27;-27;-27;-12;85;0;0.59;3.37;-3;-14;-116
+HRME;Consumer Cyclicals;E512;Hotels Resorts & Cruise Lines;Menteng Heritage Realty Tbk;S;09/30/2023;Dec;U;;950;294;655;79;-11;-9;-9;-2;110;-15;0.31;0.45;-1;-2;-17
 IDEA;Consumer Cyclicals;E521;Education Services;Idea Indonesia Akademi Tbk;S;12/31/2023;Dec;A;WTM;79;17;62;20;1;1;1;1;58;62;0.94;0.28;1;2;5
 JGLE;Consumer Cyclicals;E514;Recreational & Sports Facilities;Graha Andrasentra Propertindo Tbk;S;12/31/2023;Dec;A;WTM;1621;482;1138;155;-42;-42;-42;-2;50;-18;0.67;0.42;-3;-4;-27
-JIHD;Consumer Cyclicals;E512;Hotels; Resorts & Cruise Lines;Jakarta International Hotels & Development Tbk;S;12/31/2023;Dec;A;WTM;6530;1804;4726;1466;244;214;53;23;2029;16;0.18;0.38;1;1;4
-JSPT;Consumer Cyclicals;E512;Hotels; Resorts & Cruise Lines;Jakarta Setiabudi Internasional Tbk;S;09/30/2023;Dec;U;;6216;3414;2802;1284;140;91;57;17;1209;87;1.26;1.22;1;1;3
-KPIG;Consumer Cyclicals;E512;Hotels; Resorts & Cruise Lines;MNC Land Tbk;S;09/30/2023;Dec;U;;32565;6785;25780;1047;310;309;288;4;264;15;0.23;0.26;1;2;37
+JIHD;Consumer Cyclicals;E512;Hotels Resorts & Cruise Lines;Jakarta International Hotels & Development Tbk;S;12/31/2023;Dec;A;WTM;6530;1804;4726;1466;244;214;53;23;2029;16;0.18;0.38;1;1;4
+JSPT;Consumer Cyclicals;E512;Hotels Resorts & Cruise Lines;Jakarta Setiabudi Internasional Tbk;S;09/30/2023;Dec;U;;6216;3414;2802;1284;140;91;57;17;1209;87;1.26;1.22;1;1;3
+KPIG;Consumer Cyclicals;E512;Hotels Resorts & Cruise Lines;MNC Land Tbk;S;09/30/2023;Dec;U;;32565;6785;25780;1047;310;309;288;4;264;15;0.23;0.26;1;2;37
 LUCY;Consumer Cyclicals;E515;Restaurants;Lima Dua Lima Tiga Tbk;S;06/30/2023;Dec;A;WTM;94;49;45;42;2;2;2;3;32;46;4.35;1.1;4;9;10
-MABA;Consumer Cyclicals;E512;Hotels; Resorts & Cruise Lines;Marga Abhinaya Abadi Tbk;S;12/31/2019;Dec;A;TMP;2225;1941;284;45;-266;-266;-262;-17;18;0;2.71;6.84;-12;-92;-576
-MAMI;Consumer Cyclicals;E512;Hotels; Resorts & Cruise Lines;Mas Murni Indonesia Tbk;S;09/30/2022;Dec;U;;1768;534;1234;30;-34;-33;-34;-3;100;0;0.5;0.43;-2;-3;-119
-MAMIP;Consumer Cyclicals;E512;Hotels; Resorts & Cruise Lines;Mas Murni Tbk (Preferred Stock);S;09/30/2022;Dec;U;;1768;534;1234;30;-34;-33;-34;-5991;205659;0;0.0;0.43;-2;-3;-119
+MABA;Consumer Cyclicals;E512;Hotels Resorts & Cruise Lines;Marga Abhinaya Abadi Tbk;S;12/31/2019;Dec;A;TMP;2225;1941;284;45;-266;-266;-262;-17;18;0;2.71;6.84;-12;-92;-576
+MAMI;Consumer Cyclicals;E512;Hotels Resorts & Cruise Lines;Mas Murni Indonesia Tbk;S;09/30/2022;Dec;U;;1768;534;1234;30;-34;-33;-34;-3;100;0;0.5;0.43;-2;-3;-119
+MAMIP;Consumer Cyclicals;E512;Hotels Resorts & Cruise Lines;Mas Murni Tbk (Preferred Stock);S;09/30/2022;Dec;U;;1768;534;1234;30;-34;-33;-34;-5991;205659;0;0.0;0.43;-2;-3;-119
 MAPB;Consumer Cyclicals;E515;Restaurants;MAP Boga Adiperkasa Tbk;S;09/30/2023;Dec;U;;3244;1514;1730;3072;156;121;121;67;724;28;2.63;0.88;5;9;5
-MINA;Consumer Cyclicals;E512;Hotels; Resorts & Cruise Lines;Sanurhasta Mitra Tbk;S;12/31/2023;Dec;A;WTM;105;9;97;12;-3;-3;-3;0;15;-83;2.51;0.09;-3;-3;-25
-NATO;Consumer Cyclicals;E512;Hotels; Resorts & Cruise Lines;Surya Permata Andalan Tbk;S;12/31/2023;Dec;A;WTM;803;3;800;12;1;1;1;0;100;1864;1.56;0.0;0;0;5
-NUSA;Consumer Cyclicals;E512;Hotels; Resorts & Cruise Lines;Sinergi Megah Internusa Tbk;S;09/30/2019;Dec;U;;818;65;753;9;-11;-11;-11;-2;98;0;0.51;0.09;-1;-2;-133
+MINA;Consumer Cyclicals;E512;Hotels Resorts & Cruise Lines;Sanurhasta Mitra Tbk;S;12/31/2023;Dec;A;WTM;105;9;97;12;-3;-3;-3;0;15;-83;2.51;0.09;-3;-3;-25
+NATO;Consumer Cyclicals;E512;Hotels Resorts & Cruise Lines;Surya Permata Andalan Tbk;S;12/31/2023;Dec;A;WTM;803;3;800;12;1;1;1;0;100;1864;1.56;0.0;0;0;5
+NUSA;Consumer Cyclicals;E512;Hotels Resorts & Cruise Lines;Sinergi Megah Internusa Tbk;S;09/30/2019;Dec;U;;818;65;753;9;-11;-11;-11;-2;98;0;0.51;0.09;-1;-2;-133
 PANR;Consumer Cyclicals;E513;Travel Agencies;Panorama Sentrawisata Tbk;S;12/31/2023;Dec;A;WTM;1636;930;706;2859;157;123;63;45;509;10;0.86;1.32;4;9;2
 PDES;Consumer Cyclicals;E513;Travel Agencies;Destinasi Tirta Nusantara Tbk;S;12/31/2023;Dec;A;WTM;266;194;72;369;38;35;24;33;101;6;1.98;2.69;9;33;6
-PGLI;Consumer Cyclicals;E512;Hotels; Resorts & Cruise Lines;Pembangunan Graha Lestari Indah Tbk;S;09/30/2023;Dec;U;;90;38;52;14;-20;-16;-16;-57;107;-2;1.26;0.73;-31;-53;-197
+PGLI;Consumer Cyclicals;E512;Hotels Resorts & Cruise Lines;Pembangunan Graha Lestari Indah Tbk;S;09/30/2023;Dec;U;;90;38;52;14;-20;-16;-16;-57;107;-2;1.26;0.73;-31;-53;-197
 PJAA;Consumer Cyclicals;E514;Recreational & Sports Facilities;Pembangunan Jaya Ancol Tbk;S;12/31/2023;Dec;A;WTM;3743;2075;1668;1274;374;241;235;147;1043;6;0.87;1.24;6;14;18
-PLAN;Consumer Cyclicals;E512;Hotels; Resorts & Cruise Lines;Planet Properindo Jaya Tbk;S;06/30/2023;Dec;U;;88;28;60;5;-1;-1;-1;-3;67;-8;0.34;0.46;-3;-4;-49
-PNSE;Consumer Cyclicals;E512;Hotels; Resorts & Cruise Lines;Pudjiadi & Sons Tbk;S;09/30/2023;Dec;U;;361;183;178;150;1;1;-6;-12;223;-39;2.02;1.03;-3;-5;-6
-PSKT;Consumer Cyclicals;E512;Hotels; Resorts & Cruise Lines;Red Planet Indonesia Tbk;S;12/31/2023;Dec;A;WTM;400;60;340;54;-7;-11;-11;-1;33;-36;1.13;0.18;-3;-3;-20
+PLAN;Consumer Cyclicals;E512;Hotels Resorts & Cruise Lines;Planet Properindo Jaya Tbk;S;06/30/2023;Dec;U;;88;28;60;5;-1;-1;-1;-3;67;-8;0.34;0.46;-3;-4;-49
+PNSE;Consumer Cyclicals;E512;Hotels Resorts & Cruise Lines;Pudjiadi & Sons Tbk;S;09/30/2023;Dec;U;;361;183;178;150;1;1;-6;-12;223;-39;2.02;1.03;-3;-5;-6
+PSKT;Consumer Cyclicals;E512;Hotels Resorts & Cruise Lines;Red Planet Indonesia Tbk;S;12/31/2023;Dec;A;WTM;400;60;340;54;-7;-11;-11;-1;33;-36;1.13;0.18;-3;-3;-20
 PTSP;Consumer Cyclicals;E515;Restaurants;Pioneerindo Gourmet International Tbk;S;12/31/2023;Dec;A;WTM;329;178;151;624;18;18;16;73;683;17;1.79;1.18;5;11;3
 PZZA;Consumer Cyclicals;E515;Restaurants;Sarimelati Kencana Tbk;S;09/30/2023;Dec;U;;2329;1202;1128;2752;-48;-39;-39;-9;373;-33;0.78;1.07;-1;-2;-1
 RAFI;Consumer Cyclicals;E515;Restaurants;PT Sari Kreasi Boga Tbk;S;09/30/2023;Dec;A;WTM;376;44;332;292;110;106;106;34;106;1;0.47;0.13;29;32;37
-SHID;Consumer Cyclicals;E512;Hotels; Resorts & Cruise Lines;Hotel Sahid Jaya International Tbk;S;09/30/2023;Dec;U;;1277;511;766;85;-16;-16;-16;-11;685;-125;1.92;0.67;-1;-2;-14
-SNLK;Consumer Cyclicals;E512;Hotels; Resorts & Cruise Lines;Sunter Lakeside Hotel Tbk;S;12/31/2023;Dec;A;WTM;218;48;170;47;-2;3;3;6;377;77;1.32;0.28;1;2;6
-SOTS;Consumer Cyclicals;E512;Hotels; Resorts & Cruise Lines;Satria Mega Kencana Tbk;S;09/30/2023;Dec;U;;402;171;231;16;-11;-11;-11;-13;231;-19;1.07;0.74;-3;-6;-79
+SHID;Consumer Cyclicals;E512;Hotels Resorts & Cruise Lines;Hotel Sahid Jaya International Tbk;S;09/30/2023;Dec;U;;1277;511;766;85;-16;-16;-16;-11;685;-125;1.92;0.67;-1;-2;-14
+SNLK;Consumer Cyclicals;E512;Hotels Resorts & Cruise Lines;Sunter Lakeside Hotel Tbk;S;12/31/2023;Dec;A;WTM;218;48;170;47;-2;3;3;6;377;77;1.32;0.28;1;2;6
+SOTS;Consumer Cyclicals;E512;Hotels Resorts & Cruise Lines;Satria Mega Kencana Tbk;S;09/30/2023;Dec;U;;402;171;231;16;-11;-11;-11;-13;231;-19;1.07;0.74;-3;-6;-79
 ABBA;Consumer Cyclicals;E614;Consumer Publishing;Mahaka Media Tbk;S;09/30/2023;Dec;U;;291;349;-59;132;-34;-40;-34;-10;-15;-4;-2.29;-5.96;-13;0;-29
 DIGI;Consumer Cyclicals;E614;Consumer Publishing;Arkadia Digital Media Tbk;S;12/31/2023;Dec;A;WTM;19;27;-8;58;-3;-4;-4;-3;-5;-5;-2.44;-3.35;-22;0;-7
 FILM;Consumer Cyclicals;E621;Entertainment & Movie Production;PT MD Pictures Tbk.;S;12/31/2023;Dec;A;WTM;1713;84;1629;370;125;95;97;10;171;432;25.63;0.05;6;6;26
@@ -468,9 +468,9 @@ TRIO;Consumer Cyclicals;E742;Electronics Retail;Trikomsel Oke Tbk;S;09/30/2023;D
 UFOE;Consumer Cyclicals;E742;Electronics Retail;Damai Sejahtera Abadi Tbk;S;09/30/2023;Dec;U;;454;246;208;642;15;11;11;6;91;34;2.26;1.18;3;7;2
 YELO;Consumer Cyclicals;E522;Consumer Support Services;PT Yelooo Integra Datanet Tbk.;S;09/30/2023;Dec;U;;1053;755;298;648;10;6;6;0;156;126;0.22;2.53;0;0;0
 ZONE;Consumer Cyclicals;E741;Apparel & Textile Retail;Mega Perintis Tbk;S;09/30/2023;Dec;U;;727;352;375;543;59;46;46;64;431;17;2.6;0.94;8;15;10
-NASA;Consumer Cyclicals;E512;Hotels; Resorts & Cruise Lines;Andalan Perkasa Abadi Tbk;S;09/30/2023;Dec;U;;1126;51;1075;11;3;3;3;0;98;36;0.14;0.05;0;0;39
-RISE;Consumer Cyclicals;E512;Hotels; Resorts & Cruise Lines;Jaya Sukses Makmur Sentosa Tbk;S;12/31/2023;Dec;A;WTM;3211;773;2438;279;22;15;13;1;223;828;4.42;0.32;0;1;5
-UANG;Consumer Cyclicals;E512;Hotels; Resorts & Cruise Lines;Pakuan Tbk;S;12/31/2023;Dec;A;WDP;1457;1215;242;539;261;261;261;216;200;3;3.05;5.03;18;108;48
+NASA;Consumer Cyclicals;E512;Hotels Resorts & Cruise Lines;Andalan Perkasa Abadi Tbk;S;09/30/2023;Dec;U;;1126;51;1075;11;3;3;3;0;98;36;0.14;0.05;0;0;39
+RISE;Consumer Cyclicals;E512;Hotels Resorts & Cruise Lines;Jaya Sukses Makmur Sentosa Tbk;S;12/31/2023;Dec;A;WTM;3211;773;2438;279;22;15;13;1;223;828;4.42;0.32;0;1;5
+UANG;Consumer Cyclicals;E512;Hotels Resorts & Cruise Lines;Pakuan Tbk;S;12/31/2023;Dec;A;WDP;1457;1215;242;539;261;261;261;216;200;3;3.05;5.03;18;108;48
 WIFI;Consumer Cyclicals;E611;Advertising;Solusi Sinergi Digital Tbk;S;09/30/2023;Dec;U;;1530;893;637;378;41;24;24;29;270;5;0.49;1.4;5;11;18
 BMHS;Healthcare;F121;Healthcare Providers;Bundamedik Tbk;S;09/30/2023;Dec;U;;3019;1220;1799;1099;12;9;6;2;209;190;1.65;0.68;1;1;1
 CARE;Healthcare;F121;Healthcare Providers;PT Metro Healthcare Indonesia Tbk;S;09/30/2023;Dec;U;;4152;1036;3116;152;-89;-91;-91;-3;94;-47;1.57;0.33;-3;-3;-69
