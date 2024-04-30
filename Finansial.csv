@@ -239,13 +239,13 @@ SDPC;Consumer Non-Cyclicals;D111;Drug Retail & Distributors;Millennium Pharmacon
 WICO;Consumer Non-Cyclicals;D112;Food Retail & Distributors;Wicaksana Overseas International Tbk;S;09/30/2023;Dec;LR;;352;337;15;1098;-103;-103;-103;-50;6;-2;19.44;22.82;-34;-813;-11
 AALI;Consumer Non-Cyclicals;D232;Plantations & Crops;Astra Agro Lestari Tbk;S;12/31/2023;Dec;A;WTM;28846;6280;22566;20745;1498;1088;1056;549;11725;13;0.59;0.28;4;5;5
 ADES;Consumer Non-Cyclicals;D212;Soft Drinks;Akasha Wira International Tbk;S;12/31/2023;Dec;A;WTM;2085;355;1730;1525;504;396;396;671;2932;14;3.1;0.21;19;23;26
-AGAR;Consumer Non-Cyclicals;D231;Fish; Meat; & Poultry;Asia Sejahtera Mina Tbk;S;12/31/2023;Dec;A;WTM;197;90;107;438;0;0;0;0;107;5094;0.82;0.84;0;0;0
+AGAR;Consumer Non-Cyclicals;D231;Fish Meat & Poultry;Asia Sejahtera Mina Tbk;S;12/31/2023;Dec;A;WTM;197;90;107;438;0;0;0;0;107;5094;0.82;0.84;0;0;0
 AISA;Consumer Non-Cyclicals;D222;Processed Foods;FKS Food Sejahtera Tbk;S;12/31/2023;Dec;A;WTM;1850;882;968;1704;51;19;19;2;104;62;1.2;0.91;1;2;1
 ALTO;Consumer Non-Cyclicals;D212;Soft Drinks;Tri Banyan Tirta Tbk;S;09/30/2023;Dec;U;;1009;669;340;233;-9;-9;-9;-13;155;-3;0.22;1.97;-3;-8;-12
-AMMS;Consumer Non-Cyclicals;D231;Fish; Meat; & Poultry;PT Agung Menjangan Mas Tbk;S;06/30/2023;Dec;U;;71;2;69;5;1;1;1;1;58;24;0.5;0.03;2;2;32
+AMMS;Consumer Non-Cyclicals;D231;Fish Meat & Poultry;PT Agung Menjangan Mas Tbk;S;06/30/2023;Dec;U;;71;2;69;5;1;1;1;1;58;24;0.5;0.03;2;2;32
 ANDI;Consumer Non-Cyclicals;D232;Plantations & Crops;PT Andira Agro Tbk;S;12/31/2023;Dec;A;WTM;378;195;183;220;-66;-56;-56;-6;20;-6;1.74;1.07;-15;-31;-25
 ANJT;Consumer Non-Cyclicals;D232;Plantations & Crops;PT Austindo Nusantara Jaya Tbk.;S;09/30/2023;Dec;U;;9431;2897;6533;2736;108;1;9;7;1948;106;0.37;0.44;0;0;1
-ASHA;Consumer Non-Cyclicals;D231;Fish; Meat; & Poultry;Cilacap Samudera Fishing Industry Tbk;S;09/30/2023;Dec;U;;224;43;180;295;1;1;1;0;36;111;1.39;0.24;1;1;1
+ASHA;Consumer Non-Cyclicals;D231;Fish Meat & Poultry;Cilacap Samudera Fishing Industry Tbk;S;09/30/2023;Dec;U;;224;43;180;295;1;1;1;0;36;111;1.39;0.24;1;1;1
 BEEF;Consumer Non-Cyclicals;D222;Processed Foods;Estika Tata Tiara Tbk;S;09/30/2023;Dec;A;WTM;752;615;137;384;65;54;54;3;20;91;13.33;4.49;3;15;5
 BISI;Consumer Non-Cyclicals;D232;Plantations & Crops;BISI INTERNATIONAL Tbk;S;12/31/2023;Dec;A;WTM;3902;455;3447;2298;734;596;596;199;1149;10;1.78;0.13;15;17;26
 BOBA;Consumer Non-Cyclicals;D222;Processed Foods;Formosa Ingredient Factory Tbk;S;12/31/2023;Dec;A;WTM;176;25;151;154;19;15;15;13;131;12;1.19;0.16;9;10;10
@@ -257,16 +257,16 @@ CEKA;Consumer Non-Cyclicals;D222;Processed Foods;Wilmar Cahaya Indonesia Tbk;S;1
 CLEO;Consumer Non-Cyclicals;D212;Soft Drinks;Sariguna Primatirta Tbk;S;09/30/2023;Dec;U;;1878;507;1371;1153;260;205;205;21;114;37;6.7;0.37;13;18;22
 CMRY;Consumer Non-Cyclicals;D221;Dairy Products;Cisarua Mountain Dairy Tbk;S;12/31/2023;Dec;A;WTM;7047;1106;5941;7773;1561;1242;1242;156;749;31;6.54;0.19;18;21;16
 COCO;Consumer Non-Cyclicals;D222;Processed Foods;Wahana Interfood Nusantara Tbk;S;09/30/2023;Dec;U;;583;394;190;138;-15;-15;-15;-14;213;-13;0.87;2.08;-2;-7;-9
-CPIN;Consumer Non-Cyclicals;D231;Fish; Meat; & Poultry;Charoen Pokphand Indonesia Tbk;S;12/31/2023;Dec;A;WTM;40971;13942;27029;61616;2997;2318;2319;141;1648;37;3.19;0.52;6;9;4
-CPRO;Consumer Non-Cyclicals;D231;Fish; Meat; & Poultry;Central Proteina Prima Tbk;S;09/30/2023;Dec;U;;7038;3537;3501;6765;439;322;321;7;59;8;0.88;1.01;6;12;6
-CRAB;Consumer Non-Cyclicals;D231;Fish; Meat; & Poultry;PT Toba Surimi Industries Tbk;S;12/31/2023;Dec;A;WTM;347;153;194;598;23;18;18;9;99;30;2.7;0.79;5;9;3
+CPIN;Consumer Non-Cyclicals;D231;Fish Meat & Poultry;Charoen Pokphand Indonesia Tbk;S;12/31/2023;Dec;A;WTM;40971;13942;27029;61616;2997;2318;2319;141;1648;37;3.19;0.52;6;9;4
+CPRO;Consumer Non-Cyclicals;D231;Fish Meat & Poultry;Central Proteina Prima Tbk;S;09/30/2023;Dec;U;;7038;3537;3501;6765;439;322;321;7;59;8;0.88;1.01;6;12;6
+CRAB;Consumer Non-Cyclicals;D231;Fish Meat & Poultry;PT Toba Surimi Industries Tbk;S;12/31/2023;Dec;A;WTM;347;153;194;598;23;18;18;9;99;30;2.7;0.79;5;9;3
 CSRA;Consumer Non-Cyclicals;D232;Plantations & Crops;PT Cisadane Sawit Raya Tbk.;S;12/31/2023;Dec;A;WTM;1822;723;1099;876;177;130;130;63;536;7;0.83;0.66;7;12;15
-DEWI;Consumer Non-Cyclicals;D231;Fish; Meat; & Poultry;PT Dewi Shri Farmindo Tbk;S;09/30/2023;Dec;U;;177;22;155;60;8;8;8;4;77;16;0.88;0.14;5;5;14
+DEWI;Consumer Non-Cyclicals;D231;Fish Meat & Poultry;PT Dewi Shri Farmindo Tbk;S;09/30/2023;Dec;U;;177;22;155;60;8;8;8;4;77;16;0.88;0.14;5;5;14
 DLTA;Consumer Non-Cyclicals;D211;Liquors;Delta Djakarta Tbk;S;09/30/2023;Dec;U;;1182;284;898;543;198;157;157;256;1121;13;3.03;0.32;17;23;38
-DPUM;Consumer Non-Cyclicals;D231;Fish; Meat; & Poultry;Dua Putra Utama Makmur Tbk;S;09/30/2023;Dec;U;;1336;776;561;606;-17;-13;-13;-7;134;-3;0.14;1.38;-2;-5;-5
-DSFI;Consumer Non-Cyclicals;D231;Fish; Meat; & Poultry;Dharma Samudera Fishing Industries Tbk;S;12/31/2023;Dec;A;WTM;412;161;251;560;16;12;12;7;135;8;0.38;0.64;3;5;2
+DPUM;Consumer Non-Cyclicals;D231;Fish Meat & Poultry;Dua Putra Utama Makmur Tbk;S;09/30/2023;Dec;U;;1336;776;561;606;-17;-13;-13;-7;134;-3;0.14;1.38;-2;-5;-5
+DSFI;Consumer Non-Cyclicals;D231;Fish Meat & Poultry;Dharma Samudera Fishing Industries Tbk;S;12/31/2023;Dec;A;WTM;412;161;251;560;16;12;12;7;135;8;0.38;0.64;3;5;2
 DSNG;Consumer Non-Cyclicals;D232;Plantations & Crops;PT Dharma Satya Nusantara Tbk.;S;12/31/2023;Dec;A;WTM;16178;7289;8889;9499;1141;842;840;79;839;8;0.78;0.82;5;9;9
-ENZO;Consumer Non-Cyclicals;D231;Fish; Meat; & Poultry;Morenzo Abadi Perkasa Tbk;S;09/30/2023;Dec;U;;306;145;162;376;1;1;1;0;75;628;0.52;0.9;0;0;0
+ENZO;Consumer Non-Cyclicals;D231;Fish Meat & Poultry;Morenzo Abadi Perkasa Tbk;S;09/30/2023;Dec;U;;306;145;162;376;1;1;1;0;75;628;0.52;0.9;0;0;0
 FAPA;Consumer Non-Cyclicals;D232;Plantations & Crops;PT FAP Agri Tbk;S;09/30/2023;Dec;U;;8541;4523;4018;3487;159;119;113;76;1107;70;4.79;1.13;3;7;8
 FISH;Consumer Non-Cyclicals;D232;Plantations & Crops;FKS Multi Agro Tbk;S;09/30/2023;Dec;U;;7911;5302;2609;15941;300;237;230;903;5435;6;1.02;2.03;5;17;3
 FOOD;Consumer Non-Cyclicals;D222;Processed Foods;Sentra Food Indonesia Tbk;S;09/30/2023;Dec;U;;63;31;32;58;-10;-10;-7;-20;49;-5;2.23;0.97;-21;-41;-23
@@ -277,16 +277,16 @@ GZCO;Consumer Non-Cyclicals;D232;Plantations & Crops;Gozco Plantations Tbk;S;09/
 HOKI;Consumer Non-Cyclicals;D222;Processed Foods;Buyung Poetra Sembada Tbk;S;12/31/2023;Dec;A;WTM;1046;385;662;1285;-2;-3;-1;0;68;-1043;2.31;0.58;0;0;0
 IBOS;Consumer Non-Cyclicals;D232;Plantations & Crops;PT Indo Boga Sukses Tbk;-;06/30/2023;Dec;U;;372;41;332;42;4;4;4;1;41;714;16.98;0.12;2;2;19
 ICBP;Consumer Non-Cyclicals;D222;Processed Foods;Indofood CBP Sukses Makmur Tbk;S;12/31/2023;Dec;A;WTM;119267;57163;62104;67910;11445;8465;6991;599;5325;19;2.18;0.92;6;11;10
-IKAN;Consumer Non-Cyclicals;D231;Fish; Meat; & Poultry;Era Mandiri Cemerlang Tbk;S;09/30/2023;Dec;U;;126;53;73;104;1;0;0;2;88;30;0.57;0.72;1;2;1
+IKAN;Consumer Non-Cyclicals;D231;Fish Meat & Poultry;Era Mandiri Cemerlang Tbk;S;09/30/2023;Dec;U;;126;53;73;104;1;0;0;2;88;30;0.57;0.72;1;2;1
 INDF;Consumer Non-Cyclicals;D222;Processed Foods;Indofood Sukses Makmur Tbk;S;12/31/2023;Dec;A;WTM;186588;86123;100465;111704;15615;11494;8147;928;11442;7;0.56;0.86;4;8;7
 IPPE;Consumer Non-Cyclicals;D232;Plantations & Crops;Indo Pureco Pratama Tbk;S;09/30/2023;Dec;U;;297;12;285;29;4;3;3;0;62;364;0.55;0.04;0;0;1
 JARR;Consumer Non-Cyclicals;D232;Plantations & Crops;PT Jhonlin Agro Raya Tbk;S;12/31/2023;Dec;A;WTM;3653;2211;1442;4442;217;77;77;8;156;35;1.9;1.53;2;5;2
 JAWA;Consumer Non-Cyclicals;D232;Plantations & Crops;Jaya Agra Wattie Tbk;S;09/30/2023;Dec;U;;3633;3541;92;685;-251;-246;-245;-23;6;-3;13.26;38.58;-10;-400;-54
-JPFA;Consumer Non-Cyclicals;D231;Fish; Meat; & Poultry;Japfa Comfeed Indonesia Tbk;S;12/31/2023;Dec;A;WTM;34109;19942;14167;51176;1261;946;930;79;1208;15;0.98;1.41;3;7;2
+JPFA;Consumer Non-Cyclicals;D231;Fish Meat & Poultry;Japfa Comfeed Indonesia Tbk;S;12/31/2023;Dec;A;WTM;34109;19942;14167;51176;1261;946;930;79;1208;15;0.98;1.41;3;7;2
 KEJU;Consumer Non-Cyclicals;D221;Dairy Products;Mulia Boga Raya Tbk;S;12/31/2023;Dec;A;WTM;828;158;671;1020;103;80;80;54;447;21;2.57;0.23;10;12;8
 LSIP;Consumer Non-Cyclicals;D232;Plantations & Crops;PP London Sumatra Indonesia Tbk;S;12/31/2023;Dec;A;WTM;12514;1167;11347;4190;911;761;762;112;1663;8;0.54;0.1;6;7;18
 MAGP;Consumer Non-Cyclicals;D232;Plantations & Crops;Multi Agro Gemilang Plantation Tbk;S;03/31/2022;Dec;U;;840;764;76;32;-11;-11;-11;-7;8;0;5.93;10.07;-8;-84;-197
-MAIN;Consumer Non-Cyclicals;D231;Fish; Meat; & Poultry;Malindo Feedmill Tbk;S;09/30/2023;Dec;U;;5439;3318;2121;8970;103;46;46;55;947;9;0.53;1.56;2;6;1
+MAIN;Consumer Non-Cyclicals;D231;Fish Meat & Poultry;Malindo Feedmill Tbk;S;09/30/2023;Dec;U;;5439;3318;2121;8970;103;46;46;55;947;9;0.53;1.56;2;6;1
 MGRO;Consumer Non-Cyclicals;D232;Plantations & Crops;PT Mahkota Group Tbk.;S;09/30/2023;Dec;U;;2331;1813;518;4201;-156;-163;-144;-33;146;-21;4.77;3.5;-5;-22;-3
 MLBI;Consumer Non-Cyclicals;D211;Liquors;Multi Bintang Indonesia Tbk;S;12/31/2023;Dec;A;WTM;3407;2016;1391;3322;1398;1066;1066;506;660;14;10.75;1.45;31;77;32
 MYOR;Consumer Non-Cyclicals;D222;Processed Foods;Mayora Indah Tbk;S;12/31/2023;Dec;A;WTM;23870;8588;15282;31485;4094;3245;3194;143;684;18;3.72;0.56;13;21;10
@@ -300,7 +300,7 @@ PSGO;Consumer Non-Cyclicals;D232;Plantations & Crops;PT Palma Serasih Tbk.;S;09/
 ROTI;Consumer Non-Cyclicals;D222;Processed Foods;Nippon Indosari Corpindo Tbk;S;12/31/2023;Dec;A;WTM;3944;1550;2393;3821;428;333;333;54;387;22;3.04;0.65;8;14;9
 SGRO;Consumer Non-Cyclicals;D232;Plantations & Crops;PT Sampoerna Agro Tbk;S;12/31/2023;Dec;A;WTM;10068;4555;5512;5621;744;441;484;266;3031;8;0.66;0.83;5;9;9
 SIMP;Consumer Non-Cyclicals;D232;Plantations & Crops;Salim Ivomas Pratama Tbk;S;12/31/2023;Dec;A;WTM;35012;13291;21721;16003;1488;927;736;47;1373;8;0.28;0.61;2;3;5
-SIPD;Consumer Non-Cyclicals;D231;Fish; Meat; & Poultry;Sreeya Sewu Indonesia Tbk;S;12/31/2023;Dec;A;WDP;3281;2088;1193;6091;-42;-17;-17;-9;649;-96;1.39;1.75;-1;-1;0
+SIPD;Consumer Non-Cyclicals;D231;Fish Meat & Poultry;Sreeya Sewu Indonesia Tbk;S;12/31/2023;Dec;A;WDP;3281;2088;1193;6091;-42;-17;-17;-9;649;-96;1.39;1.75;-1;-1;0
 SKBM;Consumer Non-Cyclicals;D222;Processed Foods;Sekar Bumi Tbk;S;09/30/2023;Dec;U;;1875;817;1058;2269;7;1;1;21;612;12;0.41;0.77;2;3;2
 SKLT;Consumer Non-Cyclicals;D222;Processed Foods;Sekar Laut Tbk;S;09/30/2023;Dec;U;;1065;437;628;1363;67;54;54;12;91;12;1.56;0.7;8;13;6
 SMAR;Consumer Non-Cyclicals;D232;Plantations & Crops;PT Sinas Mas Agro Resources and Technology Tbk;S;12/31/2023;Dec;A;WTM;39716;20645;19072;66531;1109;918;918;320;6640;12;0.57;1.08;2;5;1
@@ -316,8 +316,8 @@ TRGU;Consumer Non-Cyclicals;D222;Processed Foods;PT Cerestar Indonesia Tbk;S;09/
 ULTJ;Consumer Non-Cyclicals;D221;Dairy Products;Ultra Jaya Milk Industry & Trading Company Tbk;S;12/31/2023;Dec;A;WTM;7524;837;6687;8303;1507;1186;1169;101;579;20;3.41;0.13;16;17;14
 UNSP;Consumer Non-Cyclicals;D232;Plantations & Crops;Bakrie Sumatera Plantations Tbk;S;12/31/2023;Dec;A;WTM;4560;10493;-5933;2405;95;26;63;25;-2373;4;-0.04;-1.77;1;0;3
 WAPO;Consumer Non-Cyclicals;D232;Plantations & Crops;Wahana Pronatural Tbk;S;09/30/2023;Dec;U;;127;56;72;252;1;1;1;-2;58;-69;2.27;0.78;-2;-3;-1
-WMPP;Consumer Non-Cyclicals;D231;Fish; Meat; & Poultry;Widodo Makmur Perkasa Tbk;S;09/30/2023;Dec;U;;5615;3798;1817;738;-279;-280;-263;-19;62;-2;0.55;2.09;-10;-31;-76
-WMUU;Consumer Non-Cyclicals;D231;Fish; Meat; & Poultry;Widodo Makmur Unggas Tbk;S;09/30/2023;Dec;U;;2597;1466;1131;275;-67;-67;-67;-13;87;-3;0.39;1.3;-6;-15;-61
+WMPP;Consumer Non-Cyclicals;D231;Fish Meat & Poultry;Widodo Makmur Perkasa Tbk;S;09/30/2023;Dec;U;;5615;3798;1817;738;-279;-280;-263;-19;62;-2;0.55;2.09;-10;-31;-76
+WMUU;Consumer Non-Cyclicals;D231;Fish Meat & Poultry;Widodo Makmur Unggas Tbk;S;09/30/2023;Dec;U;;2597;1466;1131;275;-67;-67;-67;-13;87;-3;0.39;1.3;-6;-15;-61
 GGRM;Consumer Non-Cyclicals;D311;Tobacco;Gudang Garam Tbk;S;12/31/2023;Dec;A;WTM;92451;31588;60863;118953;6861;5325;5325;2767;31632;7;0.63;0.52;6;9;4
 HMSP;Consumer Non-Cyclicals;D311;Tobacco;HM Sampoerna Tbk;S;12/31/2023;Dec;A;WTM;55316;25446;29870;115983;10311;8097;8097;70;257;12;3.35;0.85;15;27;7
 ITIC;Consumer Non-Cyclicals;D311;Tobacco;PT Indonesian Tobacco Tbk.;S;12/31/2023;Dec;A;WTM;560;162;398;304;36;27;27;29;423;9;0.64;0.41;5;7;9
