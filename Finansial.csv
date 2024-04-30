@@ -5,7 +5,7 @@ AIMS;Energy;A121;Coal Production;Akbar Indo Makmur Stimec Tbk;S;12/31/2023;Dec;A
 AKRA;Energy;A112;Oil & Gas Storage & Distribution;AKR Corporindo Tbk.;S;12/31/2023;Dec;A;WTM;30255;16212;14043;42087;3687;3078;2780;139;700;12;2.46;1.15;9;20;7
 APEX;Energy;A131;Oil & Gas Drilling Service;Apexindo Pratama Duta Tbk;S;09/30/2023;Dec;U;;3991;2947;1044;726;-9;17;17;-9;356;-18;0.46;2.82;-1;-3;-4
 ARII;Energy;A121;Coal Production;Atlas Resources Tbk;S;09/30/2023;Dec;U;;7378;6288;1090;3070;1;0;-20;-24;318;-11;0.85;5.77;-1;-8;-3
-ARTI;Energy;A132;Oil, Gas & Coal Equipment & Services;Ratu Prabu Energi Tbk;S;09/30/2023;Dec;U;;637;791;-154;98;2;2;1;2;-20;2;-0.15;-5.13;2;0;13
+ARTI;Energy;A132;Oil. Gas & Coal Equipment & Services;Ratu Prabu Energi Tbk;S;09/30/2023;Dec;U;;637;791;-154;98;2;2;1;2;-20;2;-0.15;-5.13;2;0;13
 BBRM;Energy;A122;Coal Distribution;Pelayaran Nasional Bina Buana Raya Tbk;S;12/31/2023;Dec;A;WTM;537;78;460;163;64;62;62;7;54;9;1.25;0.17;12;14;38
 BESS;Energy;A122;Coal Distribution;Batulicin Nusantara Maritim Tbk;S;09/30/2023;Dec;U;;685;141;545;262;52;51;51;21;158;9;1.19;0.26;11;13;28
 BIPI;Energy;A111;Oil & Gas Production & Refinery;Astrindo Nusantara Infrastruktur Tbk;S;09/30/2023;Dec;U;;28988;17889;11099;7640;888;545;537;6;174;14;0.47;1.61;1;3;5
@@ -18,8 +18,8 @@ BYAN;Energy;A121;Coal Production;Bayan Resources Tbk;S;12/31/2023;Dec;A;WTM;5317
 CANI;Energy;A122;Coal Distribution;Capitol Nusantara Indonesia Tbk;S;12/31/2023;Jun;U;;218;689;-471;29;-11;-11;-11;-61;-566;-1;-0.07;-1.46;-23;0;-175
 CNKO;Energy;A122;Coal Distribution;Exploitasi Energi Indonesia Tbk;S;12/31/2023;Dec;A;WTM;976;2303;-1327;1742;-34;-42;-41;-5;-148;-7;-0.23;-1.74;-4;0;-2
 COAL;Energy;A121;Coal Production;PT Black Diamond Resources Tbk;S;09/30/2023;Dec;U;;717;385;332;523;53;43;42;5;53;9;0.94;1.16;5;10;6
-DEWA;Energy;A132;Oil, Gas & Coal Equipment & Services;Darma Henwa Tbk;S;09/30/2023;Dec;LR;;8137;4885;3252;5423;19;13;13;-5;149;-12;0.42;1.5;-1;-4;-2
-DOID;Energy;A132;Oil, Gas & Coal Equipment & Services;Delta Dunia Makmur Tbk;S;12/31/2023;Dec;A;WTM;28942;24733;4209;28305;932;556;556;64;488;6;0.84;5.88;2;13;2
+DEWA;Energy;A132;Oil. Gas & Coal Equipment & Services;Darma Henwa Tbk;S;09/30/2023;Dec;LR;;8137;4885;3252;5423;19;13;13;-5;149;-12;0.42;1.5;-1;-4;-2
+DOID;Energy;A132;Oil. Gas & Coal Equipment & Services;Delta Dunia Makmur Tbk;S;12/31/2023;Dec;A;WTM;28942;24733;4209;28305;932;556;556;64;488;6;0.84;5.88;2;13;2
 DSSA;Energy;A121;Coal Production;Dian Swastatika Sentosa Tbk;S;09/30/2023;Dec;A;WTM;40054;15449;24605;63393;15643;11609;5820;12705;31932;10;3.85;0.63;24;40;15
 DWGL;Energy;A122;Coal Distribution;Dwi Guna Laksana Tbk;S;12/31/2023;Dec;A;WTM;1844;1688;156;3261;24;16;16;2;17;65;6.45;10.79;1;10;0
 ELSA;Energy;A131;Oil & Gas Drilling Service;Elnusa Tbk;S;12/31/2023;Dec;A;WTM;9601;5185;4416;12564;647;503;503;69;605;6;0.64;1.17;5;11;4
@@ -32,7 +32,7 @@ HITS;Energy;A112;Oil & Gas Storage & Distribution;Humpuss Intermoda Transportasi
 HRUM;Energy;A121;Coal Production;Harum Energy Tbk;S;09/30/2023;Dec;LR;;22850;5380;17470;9950;3069;2245;1661;203;1292;7;1.04;0.31;12;16;28
 INDY;Energy;A121;Coal Production;Indika Energy Tbk;S;09/30/2023;Dec;U;;48405;27290;21115;35600;3171;1854;1453;644;4053;2;0.37;1.29;7;16;9
 INPS;Energy;A112;Oil & Gas Storage & Distribution;Indah Prakasa Sentosa Tbk;S;09/30/2023;Dec;U;;301;231;69;207;50;50;49;-36;107;-4;1.23;3.34;-8;-33;-11
-ITMA;Energy;A132;Oil, Gas & Coal Equipment & Services;SUMBER ENERGI ANDALAN Tbk;S;12/31/2023;Dec;A;WTM;3500;233;3267;4;32;32;34;34;3270;27;0.28;0.07;1;1;890
+ITMA;Energy;A132;Oil. Gas & Coal Equipment & Services;SUMBER ENERGI ANDALAN Tbk;S;12/31/2023;Dec;A;WTM;3500;233;3267;4;32;32;34;34;3270;27;0.28;0.07;1;1;890
 ITMG;Energy;A121;Coal Production;Indo Tambangraya Megah Tbk;S;12/31/2023;Dec;A;WTM;33778;6165;27613;36657;9944;7714;7725;6836;24438;4;1.09;0.22;23;28;21
 KKGI;Energy;A121;Coal Production;Resource Alam Indonesia Tbk;S;12/31/2023;Dec;A;WTM;3096;945;2151;4549;604;414;415;83;430;4;0.77;0.44;13;19;9
 KOPI;Energy;A112;Oil & Gas Storage & Distribution;Mitra Energi Persada Tbk;S;09/30/2023;Dec;U;;319;217;102;151;7;4;4;6;146;64;2.52;2.13;1;4;3
@@ -42,34 +42,34 @@ MBSS;Energy;A122;Coal Distribution;Mitrabahtera Segara Sejati Tbk;S;12/31/2023;D
 MCOL;Energy;A121;Coal Production;Prima Andalan Mandiri Tbk;S;12/31/2023;Dec;A;WTM;11500;2458;9042;14158;4554;3627;3517;989;2543;6;2.28;0.27;31;39;25
 MEDC;Energy;A111;Oil & Gas Production & Refinery;Medco Energi Internasional Tbk;S;09/30/2023;Dec;U;;105828;74923;30904;25860;7762;3985;3754;236;1229;6;1.16;2.42;6;19;23
 MTFN;Energy;A112;Oil & Gas Storage & Distribution;Capitalinc Investment Tbk;S;09/30/2022;Dec;U;;806;852;-46;311;-10;-13;-13;0;-1;0;-34.8;-18.61;0;0;-1
-MYOH;Energy;A132;Oil, Gas & Coal Equipment & Services;Samindo Resources Tbk;S;09/30/2023;Dec;U;;2655;280;2375;1469;215;179;179;112;1077;18;1.84;0.12;9;10;17
+MYOH;Energy;A132;Oil. Gas & Coal Equipment & Services;Samindo Resources Tbk;S;09/30/2023;Dec;U;;2655;280;2375;1469;215;179;179;112;1077;18;1.84;0.12;9;10;17
 PGAS;Energy;A112;Oil & Gas Storage & Distribution;Perusahaan Gas Negara Tbk;S;12/31/2023;Dec;A;WTM;101886;47225;54660;56295;8088;5815;4293;177;2255;8;0.6;0.86;4;8;8
-PKPK;Energy;A132;Oil, Gas & Coal Equipment & Services;Perdana Karya Perkasa Tbk;S;12/31/2023;Dec;A;WTM;251;8;243;58;-6;-6;-6;-5;203;-65;1.63;0.03;-2;-3;-11
+PKPK;Energy;A132;Oil. Gas & Coal Equipment & Services;Perdana Karya Perkasa Tbk;S;12/31/2023;Dec;A;WTM;251;8;243;58;-6;-6;-6;-5;203;-65;1.63;0.03;-2;-3;-11
 PSSI;Energy;A122;Coal Distribution;Pelita Samudera Shipping Tbk;S;12/31/2023;Dec;A;WTM;3148;544;2603;1581;710;631;630;116;481;4;1.05;0.21;20;24;40
 PTBA;Energy;A121;Coal Production;Bukit Asam Tbk;S;12/31/2023;Dec;A;WTM;38765;17202;21563;38489;8154;6293;6106;530;1872;6;1.59;0.8;16;28;16
 PTIS;Energy;A122;Coal Distribution;Indo Straits Tbk;S;09/30/2023;Dec;U;;631;316;315;124;27;15;15;24;572;10;0.41;1.0;2;4;11
-PTRO;Energy;A132;Oil, Gas & Coal Equipment & Services;Petrosea Tbk;S;09/30/2023;Dec;U;;11093;7474;3619;6486;184;166;164;330;3588;13;1.17;2.07;3;9;5
+PTRO;Energy;A132;Oil. Gas & Coal Equipment & Services;Petrosea Tbk;S;09/30/2023;Dec;U;;11093;7474;3619;6486;184;166;164;330;3588;13;1.17;2.07;3;9;5
 RAJA;Energy;A112;Oil & Gas Storage & Distribution;Rukun Raharja Tbk;S;12/31/2023;Dec;A;WTM;5074;2688;2386;3146;628;419;395;94;564;15;2.42;1.13;8;17;13
 RIGS;Energy;A122;Coal Distribution;Rig Tenders Indonesia Tbk;S;12/31/2023;Jun;U;;740;21;719;169;40;40;40;129;1180;4;0.42;0.03;11;11;46
 RMKE;Energy;A122;Coal Distribution;RMK Energy Tbk;S;09/30/2023;Dec;U;;2018;557;1461;1840;368;285;282;91;334;5;1.49;0.38;20;27;22
-RUIS;Energy;A132;Oil, Gas & Coal Equipment & Services;Radiant Utama Interinsco Tbk;S;09/30/2023;Dec;U;;1408;862;546;1300;20;13;13;17;709;11;0.26;1.58;1;2;1
+RUIS;Energy;A132;Oil. Gas & Coal Equipment & Services;Radiant Utama Interinsco Tbk;S;09/30/2023;Dec;U;;1408;862;546;1300;20;13;13;17;709;11;0.26;1.58;1;2;1
 SGER;Energy;A122;Coal Distribution;Sumber Global Energy Tbk;S;09/30/2023;Dec;U;;2689;1352;1337;9525;759;609;608;115;306;18;6.86;1.01;19;38;5
 SHIP;Energy;A112;Oil & Gas Storage & Distribution;Sillo Maritime Perdana Tbk;S;09/30/2023;Dec;U;;6669;3693;2976;1733;420;370;279;129;1094;8;0.91;1.24;5;12;20
-SICO;Energy;A132;Oil, Gas & Coal Equipment & Services;PT Sigma Energy Compressindo Tbk;S;12/31/2023;Dec;A;WTM;138;21;117;100;14;12;11;12;129;8;0.76;0.18;8;9;11
+SICO;Energy;A132;Oil. Gas & Coal Equipment & Services;PT Sigma Energy Compressindo Tbk;S;12/31/2023;Dec;A;WTM;138;21;117;100;14;12;11;12;129;8;0.76;0.18;8;9;11
 SMMT;Energy;A121;Coal Production;Golden Eagle Energy Tbk;S;12/31/2023;Dec;A;WTM;1008;208;800;1016;280;256;244;78;254;10;3.03;0.26;24;31;24
-SMRU;Energy;A132;Oil, Gas & Coal Equipment & Services;SMR Utama Tbk;S;09/30/2023;Dec;U;;885;736;149;248;-46;-46;-46;0;12;-3411;4.2;4.95;0;0;0
+SMRU;Energy;A132;Oil. Gas & Coal Equipment & Services;SMR Utama Tbk;S;09/30/2023;Dec;U;;885;736;149;248;-46;-46;-46;0;12;-3411;4.2;4.95;0;0;0
 SOCI;Energy;A112;Oil & Gas Storage & Distribution;Soechi Lines Tbk;S;12/31/2023;Dec;A;WTM;9330;3424;5906;2624;168;138;138;20;837;9;0.2;0.58;1;2;5
 SUGI;Energy;A111;Oil & Gas Production & Refinery;Sugih Energy Tbk;S;09/30/2018;Dec;U;;7201;4903;2297;12;-23;-20;-20;-48;93;0;0.54;2.13;-16;-52;-9608
 SURE;Energy;A111;Oil & Gas Production & Refinery;Super Energy Tbk;S;12/31/2023;Dec;A;WTM;984;520;463;305;-172;-142;-117;-78;309;-22;5.59;1.12;-12;-25;-39
-TAMU;Energy;A132;Oil, Gas & Coal Equipment & Services;PT Pelayaran Tamarin Samudra Tbk.;S;09/30/2023;Dec;U;;962;491;471;141;-8;-9;-9;-1;13;-5;0.56;1.04;-5;-11;-37
+TAMU;Energy;A132;Oil. Gas & Coal Equipment & Services;PT Pelayaran Tamarin Samudra Tbk.;S;09/30/2023;Dec;U;;962;491;471;141;-8;-9;-9;-1;13;-5;0.56;1.04;-5;-11;-37
 TCPI;Energy;A122;Coal Distribution;Transcoal Pacific Tbk;S;12/31/2023;Dec;A;WTM;3509;1413;2096;1826;218;189;181;36;419;201;17.35;0.67;5;9;10
 TEBE;Energy;A122;Coal Distribution;Dana Brata Luhur Tbk;S;09/30/2023;Dec;U;;1184;114;1071;459;222;173;172;212;833;4;0.94;0.11;23;25;59
 TOBA;Energy;A121;Coal Production;TBS Energi Utama Tbk;S;12/31/2023;Dec;A;WTM;14634;8092;6541;7739;507;322;122;15;807;17;0.32;1.24;1;2;2
 TPMA;Energy;A122;Coal Distribution;Trans Power Marine Tbk;S;12/31/2023;Dec;A;WTM;1813;384;1428;1028;316;304;304;115;542;6;1.27;0.27;17;21;30
 TRAM;Energy;A121;Coal Production;Trada Alam Minera Tbk;S;12/31/2020;Dec;A;WDP;5404;4083;1321;3554;-1165;-1114;-819;-17;27;0;1.88;3.09;-15;-62;-23
-UNIQ;Energy;A132;Oil, Gas & Coal Equipment & Services;PT Ulima Nitra Tbk;S;12/31/2023;Dec;A;WTM;726;336;390;572;52;42;42;14;124;29;3.14;0.86;6;11;7
-WINS;Energy;A132;Oil, Gas & Coal Equipment & Services;Wintermar Offshore Marine Tbk;S;12/31/2023;Dec;A;WTM;3007;508;2500;1120;103;102;103;24;573;21;0.88;0.2;3;4;9
-WOWS;Energy;A132;Oil, Gas & Coal Equipment & Services;PT Ginting Jaya Energi Tbk;S;12/31/2023;Dec;A;WDP;666;143;523;122;-10;-10;-10;-4;211;-8;0.16;0.27;-1;-2;-8
+UNIQ;Energy;A132;Oil. Gas & Coal Equipment & Services;PT Ulima Nitra Tbk;S;12/31/2023;Dec;A;WTM;726;336;390;572;52;42;42;14;124;29;3.14;0.86;6;11;7
+WINS;Energy;A132;Oil. Gas & Coal Equipment & Services;Wintermar Offshore Marine Tbk;S;12/31/2023;Dec;A;WTM;3007;508;2500;1120;103;102;103;24;573;21;0.88;0.2;3;4;9
+WOWS;Energy;A132;Oil. Gas & Coal Equipment & Services;PT Ginting Jaya Energi Tbk;S;12/31/2023;Dec;A;WDP;666;143;523;122;-10;-10;-10;-4;211;-8;0.16;0.27;-1;-2;-8
 JSKY;Energy;A211;Alternative Energy Equipment;Sky Energy Indonesia Tbk;S;12/31/2021;Dec;A;WTP;387;227;161;148;-83;-73;-73;-36;79;0;0.66;1.41;-19;-45;-49
 SEMA;Energy;A211;Alternative Energy Equipment;Semacom Integrated Tbk;S;12/31/2023;Dec;A;WTM;285;127;158;220;17;13;13;10;117;14;1.13;0.8;5;8;6
 ETWA;Energy;A221;Alternative Fuels;Eterindo Wahanatama Tbk;S;09/30/2023;Dec;U;;883;1314;-431;0;-33;-33;-33;-17;-92;-4;-0.76;-3.05;-9;0;-1285643
