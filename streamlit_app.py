@@ -478,7 +478,7 @@ else:
        p = pd.read_csv('porto.csv', sep=';',usecols=['kode','p'])
        bmd = pd.merge(bmd, p, left_on='Kode', right_on='kode', how='inner')
        bmd = bmd[['Kode','p','EPSRP','BVRP','PER','PBV','DER','ROA(%)','ROE(%)','NPM(%)']]
-       bmd = bmd.set_index('Kode')
+       #bmd = bmd.set_index('Kode')
        bmd
        g = bmd.copy()
    with col2:
