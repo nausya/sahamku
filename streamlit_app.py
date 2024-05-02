@@ -503,16 +503,16 @@ else:
             ylabel = 'Nilai Buku'
         elif pilkin == 'Rasio Utang':
             y = g['DER']
-            ylabel = 'Rasio Utang'
+            ylabel = 'Rasio Utang Modal'
         elif pilkin == 'ROA':
             y = g['ROA(%)']
-            ylabel = 'ROA'
+            ylabel = 'Rasio Pengembalian Aset (%)'
         elif pilkin == 'ROE':
             y = g['ROE(%)']
-            ylabel = 'ROE'
+            ylabel = 'Rasio Pengembalian Modal (%)'
         else:
             y = g['NPM(%)']
-            ylabel = 'Margin Operasi'
+            ylabel = 'Margin Operasi (%)'
         kd = g['Kode']
         sns.scatterplot(g,x=x, y=y, marker='>')
         plt.xlabel("Posisi Harga")
