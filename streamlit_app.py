@@ -510,8 +510,8 @@ else:
         else:
             y = g['NPM(%)']
             ylabel = 'Margin Operasi'
-        kd = g['kode']
-        sns.scatterplot(s,x=x, y=y, marker='>')
+        kd = g['Kode']
+        sns.scatterplot(g,x=x, y=y, marker='>')
         plt.xlabel("Posisi Harga")
         plt.ylabel(f"{ylabel}")
         for a,b,c in zip(x,y,kd):
