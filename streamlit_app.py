@@ -483,7 +483,8 @@ else:
        bmd
        
    with col2:
-        pilkin = st.radio('Posisi Harga Terhadap : ', ['Laba Per Saham', 'Harga Buku', 'PER', 'Nilai Buku', 'Rasio Utang', 'ROA', 'ROE', 'NPM'])
+       pawal, pakhir = st.slider('Posisi', min_value=0, max_value=100, value=(0, 100))  
+       pilkin = st.radio('Posisi Harga Terhadap : ', ['Laba Per Saham', 'Harga Buku', 'PER', 'Nilai Buku', 'Rasio Utang', 'ROA', 'ROE', 'NPM'])
    with col3:
         fig, ax = plt.subplots()
         x = g['p']
