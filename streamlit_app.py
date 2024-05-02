@@ -515,7 +515,7 @@ else:
         plt.xlabel("Posisi Harga")
         plt.ylabel(f"{ylabel}")
         for a,b,c in zip(x,y,kd):
-            if pilgra in ('Tunai Per Saham', 'Nilai Buku'):
+            if pilkin in ('Tunai Per Saham', 'Nilai Buku'):
                 label = f"{c} {round(b,1)}X"
             else:
                 label = f"{c} {round(b,1)}"
