@@ -486,9 +486,10 @@ else:
    df = pd.DataFrame(screensaham)
    df = df.fillna(0)
    df['P'] = df.apply(lambda row: pentil(row['min'], row['max'], row['c']), axis=1)
+   df
    bmd = pd.merge(bmd, df, on='Kode', how='inner')
    bmd = bmd[['Kode','P','EPSRP','BVRP','PER','PBV','DER','ROA(%)','ROE(%)','NPM(%)']]
-   bmd
+   #bmd
    st.subheader("", divider="rainbow")
    ################## END OF BENCHMARK DETIL
 
