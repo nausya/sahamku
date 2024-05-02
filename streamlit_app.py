@@ -488,6 +488,7 @@ else:
    df['P'] = df.apply(lambda row: pentil(row['min'], row['max'], row['c']), axis=1)
    bmd = pd.merge(bmd, df, on='Kode', how='inner')
    bmd = bmd[['Kode','P','EPSRP','BVRP','PER','PBV','DER','ROA(%)','ROE(%)','NPM(%)']]
+   bmd
    st.subheader("", divider="rainbow")
    ################## END OF BENCHMARK DETIL
 
