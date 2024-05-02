@@ -480,10 +480,48 @@ else:
        bmd = bmd[['Kode','p','EPSRP','BVRP','PER','PBV','DER','ROA(%)','ROE(%)','NPM(%)']]
        bmd = bmd.set_index('Kode')
        bmd
+       g = bmd.copy()
    with col2:
-        st.write("Col2")
+        pilkin = st.radio('Posisi Harga Terkini Terhadap : ', ['Laba Per Saham', 'Harga Buku', 'PER', 'Nilai Buku', 'Rasio Utang', 'ROA', 'ROE', 'NPM'])
    with col3:
-        st.write("Col3")
+        fig, ax = plt.subplots()
+        x = g['p']
+        if pilkin == 'Laba Per Saham':
+            y = g['EPSRP']
+            ylabel = 'Laba Per Saham'
+        elif pilkin == 'Harga Buku':
+            y = g['BVRP']
+            ylabel = 'Harga Buku'
+        elif pilkin == 'PER':
+            y = g['PER']
+            ylabel = 'PER'
+        elif pilkin == 'Nilai Buku':
+            y = g['PBV']
+            ylabel = 'Nilai Buku'
+        elif pilkin == 'Rasio Utang':
+            y = g['DER']
+            ylabel = 'Rasio Utang'
+        elif pilkin == 'ROA':
+            y = g['ROA(%)']
+            ylabel = 'ROA'
+        elif pilkin == 'ROE':
+            y = g['ROE(%)']
+            ylabel = 'ROE'
+        else:
+            y = g['NPM(%)']
+            ylabel = 'Margin Operasi'
+        kd = g['kode']
+        sns.scatterplot(s,x=x, y=y, marker='>')
+        plt.xlabel("Posisi Harga")
+        plt.ylabel(f"{ylabel}")
+        for a,b,c in zip(x,y,kd):
+            if pilgra in ('Tunai Per Saham', 'Nilai Buku'):
+                label = f"{c} {round(b,1)}X"
+            else:
+                label = f"{c} {round(b,1)}"
+            ax.annotate(label,(a,b), xytext=(3, -3),textcoords='offset points',fontsize='7')
+        
+        st.pyplot(fig)
    st.subheader("", divider="rainbow")
    ################## END OF BENCHMARK DETIL
 
