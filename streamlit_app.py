@@ -473,9 +473,21 @@ else:
    st.subheader(f"KINERJA EMITEN SEJENIS")
    bmd = pd.read_csv('Finansial.csv', sep=';', usecols=['Kode','KodeInd','EPSRP','BVRP','PER','PBV','DER','ROA(%)','ROE(%)','NPM(%)']).sort_values('Kode')
    bmd = bmd.query("KodeInd == @fin[5]")
-   bmd = bmd[['Kode','EPSRP','BVRP','PER','PBV','DER','ROA(%)','ROE(%)','NPM(%)']]
-   bmd = bmd.set_index('Kode')
-   bmd
+   #bmd = bmd.set_index('Kode')
+   saham = bmd['Kode'].values.tolist()
+   screensaham = []
+   for stock in saham:
+        info = yf.Ticker(stock).info
+        kode = stock.replace('.JK','')
+        c = info.get('previousClose')
+        min  = info.get('fiftyTwoWeekLow')
+        max = info.get('twoHundredDayAverage')
+        screensaham.append({'Kode':kode,'c':c,'min':min,'max':max})
+   df = pd.DataFrame(screensaham)
+   df = df.fillna(0)
+   df['P'] = df.apply(lambda row: pentil(row['min'], row['max'], row['c']), axis=1)
+   bmd = pd.merge(bmd, df, on='Kode', how='inner')
+   bmd = bmd[['Kode','P','EPSRP','BVRP','PER','PBV','DER','ROA(%)','ROE(%)','NPM(%)']]
    st.subheader("", divider="rainbow")
    ################## END OF BENCHMARK DETIL
 
