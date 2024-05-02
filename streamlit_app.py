@@ -471,19 +471,19 @@ else:
 
    ################## BENCHMARK DETIL
    st.subheader(f"KINERJA EMITEN SEJENIS")
-col1, col2, col3 = st.columns([2, 1, 2])
-with col1:
-   bmd = pd.read_csv('Finansial.csv', sep=';', usecols=['Kode','KodeInd','EPSRP','BVRP','PER','PBV','DER','ROA(%)','ROE(%)','NPM(%)']).sort_values('Kode')
-   bmd = bmd.query("KodeInd == @fin[5]")
-   p = pd.read_csv('porto.csv', sep=';',usecols=['kode','p'])
-   bmd = pd.merge(bmd, p, left_on='Kode', right_on='kode', how='inner')
-   bmd = bmd[['Kode','p','EPSRP','BVRP','PER','PBV','DER','ROA(%)','ROE(%)','NPM(%)']]
-   bmd = bmd.set_index('Kode')
-   bmd
-with col2:
-    st.write("Col2")
-with col3:
-    st.write("Col3")
+    col1, col2, col3 = st.columns([2, 1, 2])
+    with col1:
+       bmd = pd.read_csv('Finansial.csv', sep=';', usecols=['Kode','KodeInd','EPSRP','BVRP','PER','PBV','DER','ROA(%)','ROE(%)','NPM(%)']).sort_values('Kode')
+       bmd = bmd.query("KodeInd == @fin[5]")
+       p = pd.read_csv('porto.csv', sep=';',usecols=['kode','p'])
+       bmd = pd.merge(bmd, p, left_on='Kode', right_on='kode', how='inner')
+       bmd = bmd[['Kode','p','EPSRP','BVRP','PER','PBV','DER','ROA(%)','ROE(%)','NPM(%)']]
+       bmd = bmd.set_index('Kode')
+       bmd
+    with col2:
+        st.write("Col2")
+    with col3:
+        st.write("Col3")
    st.subheader("", divider="rainbow")
    ################## END OF BENCHMARK DETIL
 
