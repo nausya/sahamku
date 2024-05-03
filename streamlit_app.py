@@ -475,9 +475,9 @@ else:
    with col1:
        bmd = pd.read_csv('Finansial.csv', sep=';', usecols=['Kode','KodeInd','EPSRP','BVRP','PER','PBV','DER','ROA(%)','ROE(%)','NPM(%)']).sort_values('Kode')
        bmd = bmd.query("KodeInd == @fin[5]")
-       p = pd.read_csv('porto.csv', sep=';',usecols=['kode','p'])
-       bmd = pd.merge(bmd, p, left_on='Kode', right_on='kode', how='inner')
-       bmd = bmd[['Kode','p','EPSRP','BVRP','PER','PBV','DER','ROA(%)','ROE(%)','NPM(%)']]
+       P = pd.read_csv('porto.csv', sep=';',usecols=['kode','p'])
+       bmd = pd.merge(bmd, P, left_on='Kode', right_on='kode', how='inner')
+       bmd = bmd[['Kode','P','EPSRP','BVRP','PER','PBV','DER','ROA(%)','ROE(%)','NPM(%)']]
        g = bmd.copy()
        bmd = bmd.set_index('Kode')
        bmd
