@@ -471,7 +471,7 @@ else:
 
    ################## BENCHMARK DETIL
    st.subheader(f"KINERJA EMITEN SEJENIS")
-   col1, col2, col3 = st.columns([3, 1, 3])
+   col1, col2, col3 = st.columns([2, 1, 4])
    with col1:
        bmd = pd.read_csv('Finansial.csv', sep=';', usecols=['Kode','KodeInd','EPSRP','BVRP','PER','PBV','DER','ROA(%)','ROE(%)','NPM(%)']).sort_values('Kode')
        bmd = bmd.query("KodeInd == @fin[5]")
