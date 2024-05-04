@@ -479,7 +479,7 @@ else:
        bmd = pd.merge(bmd, P, left_on='Kode', right_on='kode', how='inner')
        bmd = bmd[['Kode','P','EPSRP','BVRP','PER','PBV','DER','ROA(%)','ROE(%)','NPM(%)']]
        g = bmd.copy()
-       bmd = bmd.set_index('Kode')
+       #bmd = bmd.set_index('Kode')
        bmd
        
    with col2:
