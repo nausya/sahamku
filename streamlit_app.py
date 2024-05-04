@@ -759,6 +759,7 @@ def screener():
 
     else:
         ind = pd.read_csv('Finansial.csv', sep=";")#, usecols=['SubIndustri', 'Kode', 'Sektor']).sort_values('SubIndustri')
+        st.write("aaaa")
         sektor = ind['Sektor']
         sektor = sektor.drop_duplicates()
         pilihsek = st.selectbox('Pilih Sektor :', sektor)
