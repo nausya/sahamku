@@ -802,17 +802,17 @@ def screener():
     with col1:
         awal, akhir = st.slider('Posisi', min_value=0, max_value=100, value=(0, 100))   
     with col2:
-        omawal, omakhir = st.slider('Margin Operasi', min_value=0, max_value=50, value=(0, 50))
+        omawal, omakhir = st.slider('Margin Operasi', min_value=0, max_value=100, value=(0, 100)) 
         omawal = omawal
         omakhir = omakhir
        
     with col3:
-        devawal, devakhir = st.slider('Deviden', min_value=0, max_value=50, value=(0, 50))
+        devawal, devakhir = st.slider('Deviden', min_value=0, max_value=100, value=(0, 100)) 
         devawal = devawal
         devakhir = devakhir
       
     with col4:
-        roeawal, roeakhir = st.slider('Return on Equity', min_value=0, max_value=5, value=(0, 5))
+        roeawal, roeakhir = st.slider('Return on Equity', min_value=0, max_value=100, value=(0, 100)) 
         roeawal = roeawal
         roeakhir = roeakhir
        
@@ -820,7 +820,7 @@ def screener():
         tunawal, tunakhir = st.slider('Tunai Per Saham (X)', min_value=mintun, max_value=maxtun, value=(mintun, maxtun))
     
     with col6:
-        nbawal, nbakhir = st.slider('Nilai Buku (X)', min_value=0, max_value=100, value=(0, 1000))        
+        nbawal, nbakhir = st.slider('Nilai Buku (X)', min_value=0, max_value=1000, value=(0, 1000))        
        
     
     st.subheader('Grafik')
