@@ -479,8 +479,8 @@ else:
        bmd = pd.merge(bmd, pb, left_on='Kode', right_on='kode', how='inner')
        bmd = bmd[['Kode','p','EPSRP','BVRP','PER','PBV','DER','ROA(%)','ROE(%)','NPM(%)']]
        g = bmd.copy()
-       #bmd = bmd.set_index('Kode')
-       #bmd
+       bmd = bmd.set_index('Kode')
+       bmd
        
    with col2:
        pawal, pakhir = st.slider('Posisi', min_value=0, max_value=100, value=(0, 100))  
@@ -524,7 +524,7 @@ else:
                 label = f"{c} {round(b,1)}"
             ax.annotate(label,(a,b), xytext=(3, -3),textcoords='offset points',fontsize='7')
         
-        #st.pyplot(fig)
+        st.pyplot(fig)
    st.subheader("", divider="rainbow")
    ################## END OF BENCHMARK DETIL
 
