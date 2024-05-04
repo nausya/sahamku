@@ -812,7 +812,7 @@ def screener():
         devakhir = devakhir
       
     with col4:
-        roeawal, roeakhir = st.slider(f'Return on Equity', min_value=0, max_value=5, value=(0, 5))
+        roeawal, roeakhir = st.slider('Return on Equity', min_value=0, max_value=5, value=(0, 5))
         roeawal = roeawal
         roeakhir = roeakhir
        
