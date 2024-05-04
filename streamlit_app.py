@@ -770,7 +770,7 @@ def screener():
 
   
     scr2 = scr1.copy()
-    scr2 = scr2.style.applymap(lambda x: 'background-color: pink' if x in nota['Kode'].values else '')
+    scr2 = scr2.style.map(lambda x: 'background-color: pink' if x in nota['Kode'].values else '')
     scr2
     s = scr1.copy()
     ########### minmax slider ################
