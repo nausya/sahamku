@@ -807,7 +807,8 @@ def screener():
       
     with col4:
         roeawal, roeakhir = st.slider('Return on Equity', min_value=minroe, max_value=maxroe, value=(minroe, maxroe))
-       
+        roeawal
+        roeakhir       
     with col5:
         tunawal, tunakhir = st.slider('Tunai Per Saham (X)', min_value=mintun, max_value=maxtun, value=(mintun, maxtun))
     
