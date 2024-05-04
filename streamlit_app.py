@@ -758,8 +758,7 @@ def screener():
         #scr1 = scr1.query("kode in @KOMPAS100 and p>=@awal and p<=@akhir and om>=@omawal and om<=@omakhir and dev>=@devawal and dev<=@devakhir and roe>=@roeawal and roe<=@roeakhir and tun>=@tunawal and tun<=@tunakhir and pbvy>=@nbawal and pbvy<=@nbakhir")
 
     else:
-        ind = pd.read_csv('Finansial.csv', sep=";", usecols=['Sektor', 'SubIndustri', 'Kode']).sort_values('SubIndustri')
-
+        ind = pd.read_csv('Finansial.csv', sep=";", usecols=['SubIndustri', 'Kode', 'Sektor']).sort_values('SubIndustri')
         sektor = ind['Sektor']
         sektor = sektor.drop_duplicates()
         pilihsek = st.selectbox('Pilih Sektor :', sektor)
