@@ -475,8 +475,8 @@ else:
    with col1:
        bmd = pd.read_csv('Finansial.csv', sep=';', usecols=['Kode','KodeInd','EPSRP','BVRP','PER','PBV','DER','ROA(%)','ROE(%)','NPM(%)']).sort_values('Kode')
        bmd = bmd.query("KodeInd == @fin[5]")
-       pb = pd.read_csv('porto.csv', sep=';',usecols=['kode','p'])
-       bmd = pd.merge(bmd, pb, left_on='Kode', right_on='kode', how='inner')
+       p = pd.read_csv('porto.csv', sep=';',usecols=['kode','p'])
+       bmd = pd.merge(bmd, p, left_on='Kode', right_on='kode', how='inner')
        bmd = bmd[['Kode','p','EPSRP','BVRP','PER','PBV','DER','ROA(%)','ROE(%)','NPM(%)']]
        g = bmd.copy()
        bmd = bmd.set_index('Kode')
@@ -800,7 +800,7 @@ def screener():
     st.write('Filter Berdasarkan :')
     col1, col2, col3, col4, col5, col6 = st.columns([1,1,1,1,1,1], gap="large")
     with col1:
-        awal, akhir = st.slider('Posisi', min_value=0, max_value=100, value=(0, 100))   
+        awal, akhir = st.slider('Posisi', min_value=minp, max_value=maxp, value=(minp, maxp))   
     with col2:
         omawal, omakhir = st.slider('Margin Operasi', min_value=minom, max_value=maxom, value=(minom, maxom))
         omawal = omawal
