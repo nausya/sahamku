@@ -828,7 +828,7 @@ def screener():
     fig, ax = plt.subplots()
     s = s.query("p>=@awal and p<=@akhir and om>=@omawal and om<=@omakhir and dev>=@devawal and dev<=@devakhir and roe>=@roeawal and roe<=@roeakhir and tun>=@tunawal and tun<=@tunakhir and pbvy>=@nbawal and pbvy<=@nbakhir")   
     x = s['p']
-    if pilgra == 'Margin Operasi':
+    if pilgra == 'Margin Operasi': 
         y = s['om']
         ylabel = 'Margin Operasi'
     elif pilgra == 'Rasio Bayar Deviden':
