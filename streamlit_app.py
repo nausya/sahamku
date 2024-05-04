@@ -483,7 +483,7 @@ else:
        bmd
        
    with col2:
-       pawal, pakhir = st.slider('Posisi', min_value=0, max_value=100, value=(0, 100))  
+       pawal, pakhir = st.slider('Posisi Terkini', min_value=0, max_value=100, value=(0, 100))  
        pilkin = st.radio('Posisi Harga Terhadap : ', ['Laba Per Saham', 'Harga Buku', 'PER', 'Nilai Buku', 'Rasio Utang', 'ROA', 'ROE', 'NPM'])
    with col3:
         fig, ax = plt.subplots()
@@ -771,7 +771,6 @@ def screener():
   
     scr2 = scr1.copy()
     scr2 = scr2.style.applymap(lambda x: 'background-color: pink' if x in nota['Kode'].values else '')
-    
     scr2
     s = scr1.copy()
     ########### minmax slider ################
@@ -803,18 +802,12 @@ def screener():
         awal, akhir = st.slider('Posisi', min_value=minp, max_value=maxp, value=(minp, maxp))   
     with col2:
         omawal, omakhir = st.slider('Margin Operasi', min_value=minom, max_value=maxom, value=(minom, maxom))
-        omawal = omawal
-        omakhir = omakhir
        
     with col3:
         devawal, devakhir = st.slider('Deviden', min_value=mindev, max_value=maxdev, value=(mindev, maxdev))
-        devawal = devawal
-        devakhir = devakhir
       
     with col4:
-        roeawal, roeakhir = st.slider(f'Return on Equity', min_value=minroe, max_value=maxroe, value=(minroe, maxroe))
-        roeawal = roeawal
-        roeakhir = roeakhir
+        roeawal, roeakhir = st.slider('Return on Equity', min_value=minroe, max_value=maxroe, value=(minroe, maxroe))
        
     with col5:
         tunawal, tunakhir = st.slider('Tunai Per Saham (X)', min_value=mintun, max_value=maxtun, value=(mintun, maxtun))
