@@ -789,7 +789,7 @@ def screener():
     minroe = round(dfmin['roe'])
     minnb = round(dfmin['pbvy'])
     mintun = round(dfmin['tun'])
-    ########### end of minmax slider ################
+    ########### end of minmax slider ###############
     col1, col2 = st.columns([1,1], gap="large")
     with col1:
         st.markdown('<span style="background-color: #ffc0cb; padding: 3px;">KODE</span> : Emiten Dengan Notasi Khusus', unsafe_allow_html=True)
