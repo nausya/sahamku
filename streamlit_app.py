@@ -467,7 +467,7 @@ else:
    col10.metric("Utang(Rp)", digit(ut), digit(utlap))
    st.subheader("", divider="rainbow")
 
-   st.subheader(f"STANDAR KINERJA \n EPS : Rp.{bmeps} | BV : Rp.{round(bmbv)} | PBV : {bmpbv} | PER : {round(bmper)} | DER : {bmder} | SEKTOR : {bmsek}", divider="rainbow")
+   st.subheader(f"STANDAR KINERJA SEKTOR : {bmsek.upper()}\n EPS : Rp.{bmeps} | BV : Rp.{round(bmbv)} | PBV : {bmpbv} | PER : {round(bmper)} | DER : {bmder}", divider="rainbow")
 
    ################## BENCHMARK DETIL
    st.subheader(f"KINERJA EMITEN SEJENIS")
