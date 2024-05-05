@@ -485,13 +485,14 @@ else:
        g = bmd.copy()
        bmd = bmd.set_index('Kode')
        st.dataframe(bmd)
-       
+       "Jumlah : " + str(bmd.shape[0]) + " Emiten"
    with tab2:
         pawal, pakhir = st.slider('Posisi Terkini', min_value=0, max_value=100, value=(0, 100))  
         pilkin = st.radio('Posisi Harga Terhadap : ', ['Laba Per Saham', 'Harga Buku', 'PER', 'Nilai Buku', 'Rasio Utang', 'ROA', 'ROE', 'NPM'])
    #with col3:
         fig, ax = plt.subplots()
         g = g.query("p>=@pawal and p<=@pakhir")
+        "Jumlah : " + str(g.shape[0]) + " Emiten"
         x = g['p']
         if pilkin == 'Laba Per Saham':
             y = g['EPSRP']
@@ -780,12 +781,13 @@ def screener():
         st.dataframe(scr2)
         s = scr1.copy()
 
-        col1, col2 = st.columns([1,1], gap="large")
+        col1, col2, col3 = st.columns([1,1,1], gap="large")
         with col1:
             st.markdown('<span style="background-color: #ffc0cb; padding: 3px;">KODE</span> : Emiten Dengan Notasi Khusus', unsafe_allow_html=True)
         with col2:
             st.caption('Last Update : 4 Mei 2024')
-        
+        with col3:
+            "Jumlah : " + str(scr2.shape[0]) + " Emiten"
     with tab2:
         ########### minmax slider ################
         dfmm = scr1.copy()
@@ -838,6 +840,7 @@ def screener():
         pilgra = st.radio('Posisi Harga Terkini Terhadap : ', ['Margin Operasi', 'Rasio Bayar Deviden', 'Tunai Per Saham', 'Return on Equity', 'Nilai Buku'])
         fig, ax = plt.subplots()
         s = s.query("p>=@awal and p<=@akhir and om>=@omawal and om<=@omakhir and dev>=@devawal and dev<=@devakhir and roe>=@roeawal and roe<=@roeakhir and tun>=@tunawal and tun<=@tunakhir and pbvy>=@nbawal and pbvy<=@nbakhir")   
+        "Jumlah : " + str(s.shape[0]) + " Emiten"
         x = s['p']
         if pilgra == 'Margin Operasi':
             y = s['om']
