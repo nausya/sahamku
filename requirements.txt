@@ -9,4 +9,3 @@ matplotlib
 ta
 xgboost
 seaborn
-watch -n 1 streamlit run streamlit_app.py
