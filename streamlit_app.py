@@ -471,8 +471,12 @@ else:
 
    ################## BENCHMARK DETIL
    st.subheader(f"KINERJA EMITEN SEJENIS")
-   col1, col2, col3 = st.columns([2, 1, 4])
-   with col1:
+   tab1, tab2 = st.tabs(['Tabel','Grafik'])                                                                                                                                                                                                                                                                                                                                                                                                                                                         
+   with tab1:                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
+       #st.write('Selamat Datang di Halaman Simulasi')
+        
+   #col1, col2, col3 = st.columns([2, 1, 4])
+   #with col1:
        bmd = pd.read_csv('Finansial.csv', sep=';', usecols=['Kode','KodeInd','EPSRP','BVRP','PER','PBV','DER','ROA(%)','ROE(%)','NPM(%)']).sort_values('Kode')
        bmd = bmd.query("KodeInd == @fin[5]")
        p = pd.read_csv('porto.csv', sep=';',usecols=['kode','p'])
@@ -482,10 +486,10 @@ else:
        bmd = bmd.set_index('Kode')
        bmd
        
-   with col2:
-       pawal, pakhir = st.slider('Posisi Terkini', min_value=0, max_value=100, value=(0, 100))  
-       pilkin = st.radio('Posisi Harga Terhadap : ', ['Laba Per Saham', 'Harga Buku', 'PER', 'Nilai Buku', 'Rasio Utang', 'ROA', 'ROE', 'NPM'])
-   with col3:
+   with tab2:
+        pawal, pakhir = st.slider('Posisi Terkini', min_value=0, max_value=100, value=(0, 100))  
+        pilkin = st.radio('Posisi Harga Terhadap : ', ['Laba Per Saham', 'Harga Buku', 'PER', 'Nilai Buku', 'Rasio Utang', 'ROA', 'ROE', 'NPM'])
+   #with col3:
         fig, ax = plt.subplots()
         g = g.query("p>=@pawal and p<=@pakhir")
         x = g['p']
