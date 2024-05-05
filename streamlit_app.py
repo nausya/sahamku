@@ -787,7 +787,7 @@ def screener():
         with col2:
             st.caption('Last Update : 4 Mei 2024')
         with col3:
-            "Jumlah : " + str(scr2.shape[0]) + " Emiten"
+            "Jumlah : " + str(scr1.shape[0]) + " Emiten"
     with tab2:
         ########### minmax slider ################
         dfmm = scr1.copy()
