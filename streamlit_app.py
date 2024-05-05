@@ -860,5 +860,5 @@ def screener():
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
 if __name__ == '__main__':
     main()
-#st.rerun()  
+st.rerun()  
 #st.sidebar.info("@2024")
