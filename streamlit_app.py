@@ -825,7 +825,12 @@ def screener():
             nbawal, nbakhir = st.slider('Nilai Buku (X)', min_value=minnb, max_value=maxnb, value=(minnb, maxnb))        
 
         if st.button('Reset 0-100'):
-            st.write('Tombol Ditekan 0-100')
+            awal, akhir = 0, 100
+            omawal, omakhir = 0, 100
+            devawal, devakhir = 0, 100
+            roeawal, roeakhir = 0, 100
+            tunawal, tunakhir = 0, 100
+            nbawal, nbakhir = 0, 100
         st.subheader('Grafik')
         pilgra = st.radio('Posisi Harga Terkini Terhadap : ', ['Margin Operasi', 'Rasio Bayar Deviden', 'Tunai Per Saham', 'Return on Equity', 'Nilai Buku'])
         fig, ax = plt.subplots()
