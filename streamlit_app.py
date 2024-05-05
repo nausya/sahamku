@@ -484,7 +484,7 @@ else:
        bmd = bmd[['Kode','p','EPSRP','BVRP','PER','PBV','DER','ROA(%)','ROE(%)','NPM(%)']]
        g = bmd.copy()
        bmd = bmd.set_index('Kode')
-       bmd
+       st.dataframe(bmd)
        
    with tab2:
         pawal, pakhir = st.slider('Posisi Terkini', min_value=0, max_value=100, value=(0, 100))  
@@ -777,7 +777,7 @@ def screener():
   
         scr2 = scr1.copy()
         scr2 = scr2.style.map(lambda x: 'background-color: pink' if x in nota['Kode'].values else '')
-        scr2
+        st.dataframe(scr2)
         s = scr1.copy()
 
         col1, col2 = st.columns([1,1], gap="large")
