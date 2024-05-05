@@ -807,20 +807,7 @@ def screener():
         ########### end of minmax slider ###############
         st.write('Filter Berdasarkan :')
         col1, col2, col3, col4, col5, col6 = st.columns([1,1,1,1,1,1], gap="large")
-        if st.button('Reset 0-100'):
-            with col1:
-                awal, akhir = st.slider('Posisi', min_value=0, max_value=100, value=(0, 100))   
-            with col2:
-                omawal, omakhir = st.slider('Margin Operasi', min_value=0, max_value=100, value=(0, 100))
-            with col3:
-                devawal, devakhir = st.slider('Deviden', min_value=0, max_value=100, value=(0, 100))
-            with col4:
-                roeawal, roeakhir = st.slider('Return on Equity', min_value=0, max_value=100, value=(0, 100))
-            with col5:
-                tunawal, tunakhir = st.slider('Tunai Per Saham (X)', min_value=0, max_value=100, value=(0, 100))
-            with col6:
-                nbawal, nbakhir = st.slider('Nilai Buku (X)', min_value=0, max_value=100, value=(0, 100))       
-        else:
+        if st.button('Reset'):
             with col1:
                 awal, akhir = st.slider('Posisi', min_value=minp, max_value=maxp, value=(minp, maxp))   
             with col2:
@@ -833,7 +820,19 @@ def screener():
                 tunawal, tunakhir = st.slider('Tunai Per Saham (X)', min_value=mintun, max_value=maxtun, value=(mintun, maxtun))
             with col6:
                 nbawal, nbakhir = st.slider('Nilai Buku (X)', min_value=minnb, max_value=maxnb, value=(minnb, maxnb))        
-
+        else:
+            with col1:
+                awal, akhir = st.slider('Posisi', min_value=0, max_value=100, value=(0, 100))   
+            with col2:
+                omawal, omakhir = st.slider('Margin Operasi', min_value=0, max_value=100, value=(0, 100))
+            with col3:
+                devawal, devakhir = st.slider('Deviden', min_value=0, max_value=100, value=(0, 100))
+            with col4:
+                roeawal, roeakhir = st.slider('Return on Equity', min_value=0, max_value=100, value=(0, 100))
+            with col5:
+                tunawal, tunakhir = st.slider('Tunai Per Saham (X)', min_value=0, max_value=100, value=(0, 100))
+            with col6:
+                nbawal, nbakhir = st.slider('Nilai Buku (X)', min_value=0, max_value=100, value=(0, 100))       
 
         st.subheader('Grafik')
         pilgra = st.radio('Posisi Harga Terkini Terhadap : ', ['Margin Operasi', 'Rasio Bayar Deviden', 'Tunai Per Saham', 'Return on Equity', 'Nilai Buku'])
