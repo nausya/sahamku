@@ -711,147 +711,151 @@ def screener():
     scr1['tun'] = scr1['tcs']/scr1['skg']
     scr1['tun'] = round(scr1['tun'],1)
     scr1 = scr1.fillna(0)
-    if screenlevel == 'Fraksi Harga':
-        pilihhg = st.selectbox('Pilih Fraksi Harga :', ['Semua Harga','Kurang Dari Rp200','Kurang Dari Rp5000','Lebih Dari Rp5000','Notasi Khusus'])
-        if pilihhg == 'Semua Harga':
-            st.subheader('Screener Saham Semua Harga')
-
-        elif pilihhg == 'Notasi Khusus':
-            st.subheader('Screener Saham Emiten Dengan Notasi Khusus')
-            notkus = nota['Kode'].values.tolist()
-            scr1 = scr1.query("kode in @notkus")
-            
-        elif pilihhg == 'Kurang Dari Rp5000':
-            st.subheader('Screener Saham Dengan Fraksi Harga Kurang Dari 5000')
-            scr1=scr1.query("skg > 200 and skg <= 5000")
-           #scr1=scr1.query("skg > 200 and skg <= 5000 and p>=@awal and p<=@akhir and om>=@omawal and om<=@omakhir and dev>=@devawal and dev<=@devakhir and roe>=@roeawal and roe<=@roeakhir and tun>=@tunawal and tun<=@tunakhir and pbvy>=@nbawal and pbvy<=@nbakhir")
-
-        elif pilihhg == 'Lebih Dari Rp5000':
-            st.subheader('Screener Saham Dengan Fraksi Harga Lebih Dari 5000')
-            scr1 = scr1.query("skg > 5000")
-            #scr1 = scr1.query("skg > 5000 and p>=@awal and p<=@akhir and om>=@omawal and om<=@omakhir and dev>=@devawal and dev<=@devakhir and roe>=@roeawal and roe<=@roeakhir and tun>=@tunawal and tun<=@tunakhir and pbvy>=@nbawal and pbvy<=@nbakhir")
-
-        else:
-            st.subheader('Screener Saham Dengan Fraksi Harga Rentang 50 - 200')
-            scr1=scr1.query("skg > 50 and skg<= 200")
-           #scr1=scr1.query("skg > 50 and skg<= 200 and p>=@awal and p<=@akhir and om>=@omawal and om<=@omakhir and dev>=@devawal and dev<=@devakhir and roe>=@roeawal and roe<=@roeakhir and tun>=@tunawal and tun<=@tunakhir and pbvy>=@nbawal and pbvy<=@nbakhir")
-
+    tab1, tab2 = st.tabs(['Tabel','Grafik'])                                                                                                                                                                                                                                                                                                                                                                                                                                                         
+    with tab1:                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
+        #st.write('Selamat Datang di Halaman Simulasi')
+        if screenlevel == 'Fraksi Harga':
+            pilihhg = st.selectbox('Pilih Fraksi Harga :', ['Semua Harga','Kurang Dari Rp200','Kurang Dari Rp5000','Lebih Dari Rp5000','Notasi Khusus'])
+            if pilihhg == 'Semua Harga':
+                st.subheader('Screener Saham Semua Harga')
+    
+            elif pilihhg == 'Notasi Khusus':
+                st.subheader('Screener Saham Emiten Dengan Notasi Khusus')
+                notkus = nota['Kode'].values.tolist()
+                scr1 = scr1.query("kode in @notkus")
                 
-    elif screenlevel == 'BagiDeviden':
-        st.subheader('Screener Rutin Bagi Deviden di atas 5%')
-        dev = pd.read_csv('devhunter.csv')
-        dev = dev.values.tolist()
-        dev = [item for sublist in dev for item in sublist]
-        scr1 = scr1.query("kode in @dev")
-        #scr1 = scr1.query("kode in @dev and p>=@awal and p<=@akhir and om>=@omawal and om<=@omakhir and dev>=@devawal and dev<=@devakhir and roe>=@roeawal and roe<=@roeakhir and tun>=@tunawal and tun<=@tunakhir and pbvy>=@nbawal and pbvy<=@nbakhir")
-
-    elif screenlevel == 'LQ45':
-        st.subheader('Screener Saham LQ45')
-        LQ = pd.read_csv('LQ45.csv')
-        LQ = LQ.values.tolist()
-        LQ = [item for sublist in LQ for item in sublist]
-        scr1 = scr1.query("kode in @LQ")
-        #scr1 = scr1.query("kode in @LQ and p>=@awal and p<=@akhir and om>=@omawal and om<=@omakhir and dev>=@devawal and dev<=@devakhir and roe>=@roeawal and roe<=@roeakhir and tun>=@tunawal and tun<=@tunakhir and pbvy>=@nbawal and pbvy<=@nbakhir")
-
-    elif screenlevel == 'KOMPAS100':
-        st.subheader('Screener Saham KOMPAS100')
-        KOMPAS100 = pd.read_csv('KOMPAS100.csv')
-        KOMPAS100 = KOMPAS100.values.tolist()
-        KOMPAS100 = [item for sublist in KOMPAS100 for item in sublist]
-        scr1 = scr1.query("kode in @KOMPAS100")
-        #scr1 = scr1.query("kode in @KOMPAS100 and p>=@awal and p<=@akhir and om>=@omawal and om<=@omakhir and dev>=@devawal and dev<=@devakhir and roe>=@roeawal and roe<=@roeakhir and tun>=@tunawal and tun<=@tunakhir and pbvy>=@nbawal and pbvy<=@nbakhir")
-
-    else:
-        ind = pd.read_csv('Finansial.csv', sep=";").sort_values('SubIndustri')
-        sektor = ind['Sektor']
-        sektor = sektor.drop_duplicates()
-        pilihsek = st.selectbox('Pilih Sektor :', sektor)
-        subsek = ind.query("Sektor == @pilihsek")
-        subsek = subsek['Kode']
-        subsek = subsek.values.tolist()
-        scr1 = scr1.query("kode in @subsek")
+            elif pilihhg == 'Kurang Dari Rp5000':
+                st.subheader('Screener Saham Dengan Fraksi Harga Kurang Dari 5000')
+                scr1=scr1.query("skg > 200 and skg <= 5000")
+               #scr1=scr1.query("skg > 200 and skg <= 5000 and p>=@awal and p<=@akhir and om>=@omawal and om<=@omakhir and dev>=@devawal and dev<=@devakhir and roe>=@roeawal and roe<=@roeakhir and tun>=@tunawal and tun<=@tunakhir and pbvy>=@nbawal and pbvy<=@nbakhir")
+    
+            elif pilihhg == 'Lebih Dari Rp5000':
+                st.subheader('Screener Saham Dengan Fraksi Harga Lebih Dari 5000')
+                scr1 = scr1.query("skg > 5000")
+                #scr1 = scr1.query("skg > 5000 and p>=@awal and p<=@akhir and om>=@omawal and om<=@omakhir and dev>=@devawal and dev<=@devakhir and roe>=@roeawal and roe<=@roeakhir and tun>=@tunawal and tun<=@tunakhir and pbvy>=@nbawal and pbvy<=@nbakhir")
+    
+            else:
+                st.subheader('Screener Saham Dengan Fraksi Harga Rentang 50 - 200')
+                scr1=scr1.query("skg > 50 and skg<= 200")
+               #scr1=scr1.query("skg > 50 and skg<= 200 and p>=@awal and p<=@akhir and om>=@omawal and om<=@omakhir and dev>=@devawal and dev<=@devakhir and roe>=@roeawal and roe<=@roeakhir and tun>=@tunawal and tun<=@tunakhir and pbvy>=@nbawal and pbvy<=@nbakhir")
+    
+                    
+        elif screenlevel == 'BagiDeviden':
+            st.subheader('Screener Rutin Bagi Deviden di atas 5%')
+            dev = pd.read_csv('devhunter.csv')
+            dev = dev.values.tolist()
+            dev = [item for sublist in dev for item in sublist]
+            scr1 = scr1.query("kode in @dev")
+            #scr1 = scr1.query("kode in @dev and p>=@awal and p<=@akhir and om>=@omawal and om<=@omakhir and dev>=@devawal and dev<=@devakhir and roe>=@roeawal and roe<=@roeakhir and tun>=@tunawal and tun<=@tunakhir and pbvy>=@nbawal and pbvy<=@nbakhir")
+    
+        elif screenlevel == 'LQ45':
+            st.subheader('Screener Saham LQ45')
+            LQ = pd.read_csv('LQ45.csv')
+            LQ = LQ.values.tolist()
+            LQ = [item for sublist in LQ for item in sublist]
+            scr1 = scr1.query("kode in @LQ")
+            #scr1 = scr1.query("kode in @LQ and p>=@awal and p<=@akhir and om>=@omawal and om<=@omakhir and dev>=@devawal and dev<=@devakhir and roe>=@roeawal and roe<=@roeakhir and tun>=@tunawal and tun<=@tunakhir and pbvy>=@nbawal and pbvy<=@nbakhir")
+    
+        elif screenlevel == 'KOMPAS100':
+            st.subheader('Screener Saham KOMPAS100')
+            KOMPAS100 = pd.read_csv('KOMPAS100.csv')
+            KOMPAS100 = KOMPAS100.values.tolist()
+            KOMPAS100 = [item for sublist in KOMPAS100 for item in sublist]
+            scr1 = scr1.query("kode in @KOMPAS100")
+            #scr1 = scr1.query("kode in @KOMPAS100 and p>=@awal and p<=@akhir and om>=@omawal and om<=@omakhir and dev>=@devawal and dev<=@devakhir and roe>=@roeawal and roe<=@roeakhir and tun>=@tunawal and tun<=@tunakhir and pbvy>=@nbawal and pbvy<=@nbakhir")
+    
+        else:
+            ind = pd.read_csv('Finansial.csv', sep=";").sort_values('SubIndustri')
+            sektor = ind['Sektor']
+            sektor = sektor.drop_duplicates()
+            pilihsek = st.selectbox('Pilih Sektor :', sektor)
+            subsek = ind.query("Sektor == @pilihsek")
+            subsek = subsek['Kode']
+            subsek = subsek.values.tolist()
+            scr1 = scr1.query("kode in @subsek")
 
   
-    scr2 = scr1.copy()
-    scr2 = scr2.style.map(lambda x: 'background-color: pink' if x in nota['Kode'].values else '')
-    scr2
-    s = scr1.copy()
-    ########### minmax slider ################
-    dfmm = scr1.copy()
-    dfmm = dfmm[['p','om','dev','roe','pbvy','tun']]
-    dfmax = dfmm.max()
-    maxp = round(dfmax['p'])
-    maxom = round(dfmax['om'])
-    maxdev = round(dfmax['dev'])
-    maxroe = round(dfmax['roe'])
-    maxnb = round(dfmax['pbvy'])
-    maxtun = round(dfmax['tun'])
-    dfmin = dfmm.min()
-    minp = round(dfmin['p'])
-    minom = round(dfmin['om'])
-    mindev = round(dfmin['dev'])
-    minroe = round(dfmin['roe'])
-    minnb = round(dfmin['pbvy'])
-    mintun = round(dfmin['tun'])
-    ########### end of minmax slider ###############
-    col1, col2 = st.columns([1,1], gap="large")
-    with col1:
-        st.markdown('<span style="background-color: #ffc0cb; padding: 3px;">KODE</span> : Emiten Dengan Notasi Khusus', unsafe_allow_html=True)
-    with col2:
-        st.caption('Last Update : 4 Mei 2024')
-    st.write('Filter Berdasarkan :')
-    col1, col2, col3, col4, col5, col6 = st.columns([1,1,1,1,1,1], gap="large")
-    with col1:
-        awal, akhir = st.slider('Posisi', min_value=minp, max_value=maxp, value=(minp, maxp))   
-    with col2:
-        omawal, omakhir = st.slider('Margin Operasi', min_value=minom, max_value=maxom, value=(minom, maxom))
-       
-    with col3:
-        devawal, devakhir = st.slider('Deviden', min_value=mindev, max_value=maxdev, value=(mindev, maxdev))
-      
-    with col4:
-        roeawal, roeakhir = st.slider('Return on Equity', min_value=minroe, max_value=maxroe, value=(minroe, maxroe))
-        roeawal
-        roeakhir       
-    with col5:
-        tunawal, tunakhir = st.slider('Tunai Per Saham (X)', min_value=mintun, max_value=maxtun, value=(mintun, maxtun))
-    
-    with col6:
-        nbawal, nbakhir = st.slider('Nilai Buku (X)', min_value=minnb, max_value=maxnb, value=(minnb, maxnb))        
-       
-    
-    st.subheader('Grafik')
-    pilgra = st.radio('Posisi Harga Terkini Terhadap : ', ['Margin Operasi', 'Rasio Bayar Deviden', 'Tunai Per Saham', 'Return on Equity', 'Nilai Buku'])
-    fig, ax = plt.subplots()
-    s = s.query("p>=@awal and p<=@akhir and om>=@omawal and om<=@omakhir and dev>=@devawal and dev<=@devakhir and roe>=@roeawal and roe<=@roeakhir and tun>=@tunawal and tun<=@tunakhir and pbvy>=@nbawal and pbvy<=@nbakhir")   
-    x = s['p']
-    if pilgra == 'Margin Operasi':
-        y = s['om']
-        ylabel = 'Margin Operasi'
-    elif pilgra == 'Rasio Bayar Deviden':
-        y = s['dev']
-        ylabel = 'Rasio Bayar Deviden'
-    elif pilgra == 'Tunai Per Saham':
-        y = s['tun']
-        ylabel = 'Tunai Per Saham (X)'
-    elif pilgra == 'Nilai Buku':
-        y = s['pbvy']
-        ylabel = 'Nilai Buku (X)'
-    else:
-        y = s['roe']
-        ylabel = 'Return on Equity'
-    kd = s['kode']
-    sns.scatterplot(s,x=x, y=y, marker='>')
-    plt.xlabel("Posisi Harga")
-    plt.ylabel(f"{ylabel}")
-    for a,b,c in zip(x,y,kd):
-        if pilgra in ('Tunai Per Saham', 'Nilai Buku'):
-            label = f"{c} {round(b,1)}X"
+        scr2 = scr1.copy()
+        scr2 = scr2.style.map(lambda x: 'background-color: pink' if x in nota['Kode'].values else '')
+        scr2
+        s = scr1.copy()
+
+        col1, col2 = st.columns([1,1], gap="large")
+        with col1:
+            st.markdown('<span style="background-color: #ffc0cb; padding: 3px;">KODE</span> : Emiten Dengan Notasi Khusus', unsafe_allow_html=True)
+        with col2:
+            st.caption('Last Update : 4 Mei 2024')
+        
+    with tab2:
+        ########### minmax slider ################
+        dfmm = scr1.copy()
+        dfmm = dfmm[['p','om','dev','roe','pbvy','tun']]
+        dfmax = dfmm.max()
+        maxp = round(dfmax['p'])
+        maxom = round(dfmax['om'])
+        maxdev = round(dfmax['dev'])
+        maxroe = round(dfmax['roe'])
+        maxnb = round(dfmax['pbvy'])
+        maxtun = round(dfmax['tun'])
+        dfmin = dfmm.min()
+        minp = round(dfmin['p'])
+        minom = round(dfmin['om'])
+        mindev = round(dfmin['dev'])
+        minroe = round(dfmin['roe'])
+        minnb = round(dfmin['pbvy'])
+        mintun = round(dfmin['tun'])
+        ########### end of minmax slider ###############
+        st.write('Filter Berdasarkan :')
+        col1, col2, col3, col4, col5, col6 = st.columns([1,1,1,1,1,1], gap="large")
+        with col1:
+            awal, akhir = st.slider('Posisi', min_value=minp, max_value=maxp, value=(minp, maxp))   
+        with col2:
+            omawal, omakhir = st.slider('Margin Operasi', min_value=minom, max_value=maxom, value=(minom, maxom))
+           
+        with col3:
+            devawal, devakhir = st.slider('Deviden', min_value=mindev, max_value=maxdev, value=(mindev, maxdev))
+          
+        with col4:
+            roeawal, roeakhir = st.slider('Return on Equity', min_value=minroe, max_value=maxroe, value=(minroe, maxroe))
+         
+        with col5:
+            tunawal, tunakhir = st.slider('Tunai Per Saham (X)', min_value=mintun, max_value=maxtun, value=(mintun, maxtun))
+        
+        with col6:
+            nbawal, nbakhir = st.slider('Nilai Buku (X)', min_value=minnb, max_value=maxnb, value=(minnb, maxnb))        
+        
+        st.subheader('Grafik')
+        pilgra = st.radio('Posisi Harga Terkini Terhadap : ', ['Margin Operasi', 'Rasio Bayar Deviden', 'Tunai Per Saham', 'Return on Equity', 'Nilai Buku'])
+        fig, ax = plt.subplots()
+        s = s.query("p>=@awal and p<=@akhir and om>=@omawal and om<=@omakhir and dev>=@devawal and dev<=@devakhir and roe>=@roeawal and roe<=@roeakhir and tun>=@tunawal and tun<=@tunakhir and pbvy>=@nbawal and pbvy<=@nbakhir")   
+        x = s['p']
+        if pilgra == 'Margin Operasi':
+            y = s['om']
+            ylabel = 'Margin Operasi'
+        elif pilgra == 'Rasio Bayar Deviden':
+            y = s['dev']
+            ylabel = 'Rasio Bayar Deviden'
+        elif pilgra == 'Tunai Per Saham':
+            y = s['tun']
+            ylabel = 'Tunai Per Saham (X)'
+        elif pilgra == 'Nilai Buku':
+            y = s['pbvy']
+            ylabel = 'Nilai Buku (X)'
         else:
-            label = f"{c} {round(b,1)}"
-        ax.annotate(label,(a,b), xytext=(3, -3),textcoords='offset points',fontsize='7')
-    
-    st.pyplot(fig)
+            y = s['roe']
+            ylabel = 'Return on Equity'
+        kd = s['kode']
+        sns.scatterplot(s,x=x, y=y, marker='>')
+        plt.xlabel("Posisi Harga")
+        plt.ylabel(f"{ylabel}")
+        for a,b,c in zip(x,y,kd):
+            if pilgra in ('Tunai Per Saham', 'Nilai Buku'):
+                label = f"{c} {round(b,1)}X"
+            else:
+                label = f"{c} {round(b,1)}"
+            ax.annotate(label,(a,b), xytext=(3, -3),textcoords='offset points',fontsize='7')
+        
+        st.pyplot(fig)
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
 if __name__ == '__main__':
