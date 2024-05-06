@@ -857,7 +857,7 @@ def screener():
             y = s['pbvy']
             ylabel = 'Nilai Buku (X)'
         else:
-            y = s['roe']*100
+            y = s['roe']
             ylabel = 'Return on Equity'
         kd = s['kode']
         sns.scatterplot(s,x=x, y=y, marker='>')
