@@ -415,6 +415,8 @@ else:
    pbv = df['pbvy'].values[0]
    per = df['pery'].values[0]
    ph = df['ph'].values[0]
+   cash = df['cash'].values[0]
+   opcash = df['opcash'].values[0]
    ut = df['ut'].values[0]
    utlap = fin[6] * 1000000000
    sek = fin[4]
