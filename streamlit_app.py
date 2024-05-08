@@ -164,7 +164,7 @@ for stock in saham:
     vole = info.get('volume')
     vol = info.get('averageDailyVolume10Day')
     mcap = info.get('marketCap')
-    totshm = info.get('sharesOutstanding')
+    jmlshm = info.get('sharesOutstanding')
     bl = info.get('fiftyDayAverage')
     m = info.get('twoHundredDayAverage')
     cash = info.get('totalCash')
@@ -174,7 +174,7 @@ for stock in saham:
     tcs = info.get('totalCashPerShare')
     #der = info.get('debtToEquity')
     screensaham.append({'kode':kode,'skg':skg,'lo':lo,'hi':hi,'om':om,'dev':dev,'roe':roe,
-                       'pery':pery,'epsy':epsy,'pbvy':pbvy,'bvy':bvy,'aksiy':aksiy,'vol':vol,'totshm':totshm,
+                       'pery':pery,'epsy':epsy,'pbvy':pbvy,'bvy':bvy,'aksiy':aksiy,'vol':vol,'jmlshm':jmlshm,
                       'm':m,'bl':bl,'mcap':mcap,'cash':cash,'opcash':opcash,'ph':ph,'ut':ut,'tcs':tcs})
 #kodek = df['kode'].values[0]
 df = pd.DataFrame(screensaham)
@@ -546,7 +546,7 @@ else:
    opcash = opcash/1000000000
    vol = vol/1000000
    mcap = mcap/1000000000
-   totshm = totshm/1000000000
+   totshm = jmlshm/1000000000
 
    dfringkas = {'Kode':kode,'Tanggal':date,'Harga':C,'1YMin':L52,'2Mon':int(BL),'6Mon':int(M),'1YMax':H52,'Margin Operasi(%)':ceknon(om),
                 'Deviden(%)':ceknon(dev),'ROE(%)':ceknon(roe),'Posisi':round(P,0),'Uang Tunai(M)':round(cash),'Kas Operasional(M)':int(opcash),'Pendapatan(M)':int(ph),
