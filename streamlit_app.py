@@ -426,6 +426,7 @@ else:
    vol = int(vol) if vol !=None else 0
    vole = int(vole) if vole !=None else 0
    dev = dev if dev !=None else 0
+   jmlshm = jmlshm if jmlshm !=None else 0
    mcap = int(mcap) if mcap !=None else 0
 
    #BENCHMARK
