@@ -298,6 +298,7 @@ else:
    for y in n:
     for x in y:
      st.error(x)
+   st.text("Data per tanggal 07 Mei 2024 Pkl. 15:00 WIB")
 ##########End of Notasi Saham################
 ###### CHART GAUGE
 plot_bgcolor = "lightcyan"
