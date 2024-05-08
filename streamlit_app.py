@@ -26,7 +26,7 @@ from sklearn.ensemble import RandomForestRegressor
 from sklearn.ensemble import ExtraTreesRegressor
 from sklearn.metrics import r2_score, mean_absolute_error
 import os
-
+pd.set_option('future.no_silent_downcasting', True)
 
 
 ####### TOKEN GITHUB
