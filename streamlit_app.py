@@ -821,7 +821,7 @@ def screener():
             with col3:
                 devawal, devakhir = st.slider('Deviden', min_value=mindev, max_value=maxdev, value=(mindev, maxdev))
             with col4:
-                roeawal, roeakhir = st.slider('Return on Equity', min_value=minroe, max_value=maxroe, value=(minroe, maxroe))
+                roeawal, roeakhir = st.slider('Return on Equity', min_value=-10, max_value=10, value=(-10, 10))
             with col5:
                 tunawal, tunakhir = st.slider('Tunai Per Saham (X)', min_value=mintun, max_value=maxtun, value=(mintun, maxtun))
             with col6:
