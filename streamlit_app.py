@@ -270,7 +270,7 @@ with col1:
 ######End of Halaman Utama
 with col2:
 
-    if C <= 50 or L52 <=50:
+    if C <= 50 or L52 <=50 or H52 <=50:
        hg = st.slider('Harga Terkini', 0, round(H52), round(C),  disabled=False, step=5)
        marg = (hg - C)/hg * 100
        marg = round(marg,1)
