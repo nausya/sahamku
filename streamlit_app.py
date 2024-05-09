@@ -471,7 +471,7 @@ else:
    col10.metric("Utang(Rp)", digit(ut), digit(utlap))
    st.subheader("", divider="rainbow")
 
-   st.subheader(f"STANDAR KINERJA SEKTOR : {bmsek.upper()}\n EPS : Rp.{bmeps} | BV : Rp.{round(bmbv)} | PBV : {bmpbv} | PER : {round(bmper)} | DER : {bmder}", divider="rainbow")
+   st.subheader(f"STANDAR KINERJA SEKTOR : {bmsek.upper()}\n EPS : Rp.{bmeeps} | BV : Rp.{round(bmbv)} | PBV : {bmpbv} | PER : {round(bmper)} | DER : {bmder}", divider="rainbow")
 
    ################## BENCHMARK DETIL
    st.subheader(f"KINERJA EMITEN SEJENIS")
@@ -565,9 +565,11 @@ else:
 st.info('Untuk jangka panjang perlu diperhatikan kisaran posisi harga kurang dari 10')
 
 def tech_indicators():
+col1, col2 = st.columns([1, 4])
+with col1:
     st.header('Teknikal Indikator')
     option = st.radio('Pilih Teknikal Indikator', ['Close', 'BB', 'MACD', 'RSI', 'EMA'])
-
+with col2:
     # Bollinger bands
     bb_indicator = BollingerBands(data.Close)
     bb = data
@@ -602,9 +604,26 @@ def tech_indicators():
     else:
         st.write('Exponential Moving Average')
         st.line_chart(ema)
-    
+    ########### Grafik Vol
+    st.write('Volume')
     st.bar_chart(data.Volume)
-
+    ########### end of Grafik Vol
+    ########### Grafik Funda
+    f1 = pd.read_csv('f2201.csv', sep=',')
+    f2 = pd.read_csv('f2202.csv', sep=',')
+    f3 = pd.read_csv('f2203.csv', sep=',')
+    f4 = pd.read_csv('f2301.csv', sep=',')
+    f5 = pd.read_csv('f2302.csv', sep=',')
+    f6 = pd.read_csv('f2303.csv', sep=',')
+    f7 = pd.read_csv('f2401.csv', sep=',')
+    fs = [f1,f2,f3,f4,f5,f6,f7]
+    fg = pd.concat(fs)
+    fg = fg.query("Kode == @kodesaja")
+    fgcol = ["EPS(RP)","BV(RP)","PER","PBV"]
+    chart_data = fg, columns=fgcol)
+    st.write('Penyandingan Fundamental')
+    st.line_chart(chart_data)
+    ########### end of Grafik Funda
 #################### CARI DATA ###############
 def dataframe():
     caridata = option_menu(None, ['Simulasi','10 Data','Fundamental','Index Per Sektor'], icons=['arrow-up-square', 'arrow-down-square'], menu_icon="cast", default_index=0, orientation="horizontal")
