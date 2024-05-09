@@ -565,11 +565,11 @@ else:
 st.info('Untuk jangka panjang perlu diperhatikan kisaran posisi harga kurang dari 10')
 
 def tech_indicators():
-    col1, col2 = st.columns([1, 4])
-    with col1:
+    #col1, col2 = st.columns([1, 4])
+    #with col1:
         st.header('Teknikal Indikator')
         option = st.radio('Pilih Teknikal Indikator', ['Close', 'BB', 'MACD', 'RSI', 'EMA'])
-    with col2:
+    #with col2:
         # Bollinger bands
         bb_indicator = BollingerBands(data.Close)
         bb = data
