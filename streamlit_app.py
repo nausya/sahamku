@@ -602,7 +602,7 @@ def tech_indicators():
     else:
         st.write('Exponential Moving Average')
         st.line_chart(ema)
-    
+    st.write('Volume')
     st.bar_chart(data.Volume)
     ########### Grafik Funda
     f1 = pd.read_csv('f2201.csv', sep=',')
