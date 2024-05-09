@@ -615,9 +615,9 @@ def tech_indicators():
     fs = [f1,f2,f3,f4,f5,f6,f7]
     fg = pd.concat(fs)
     fg = fg.query("Kode == @kodesaja")
-    fg = fg[["Kode","Tanggal","Proft","ProftOwner"]]
+    #fg = fg[["Kode","Tanggal","Proft","ProftOwner"]]
     st.write('Penyandingan Fundamental')
-    st.line_chart(fg)
+    st.line_chart(fg, x="Tanggal", y=["Proft","ProftOwner"])
     ########### end of Grafik Funda
 #################### CARI DATA ###############
 def dataframe():
