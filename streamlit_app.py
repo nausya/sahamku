@@ -604,7 +604,21 @@ def tech_indicators():
         st.line_chart(ema)
     
     st.bar_chart(data.Volume)
-
+    ########### Grafik Funda
+    f1 = pd.read_csv('f2201.csv', sep=',')
+    f2 = pd.read_csv('f2202.csv', sep=',')
+    f3 = pd.read_csv('f2203.csv', sep=',')
+    f4 = pd.read_csv('f2301.csv', sep=',')
+    f5 = pd.read_csv('f2302.csv', sep=',')
+    f6 = pd.read_csv('f2303.csv', sep=',')
+    f7 = pd.read_csv('f2401.csv', sep=',')
+    fs = [f1,f2,f3,f4,f5,f6,f7]
+    fg = pd.concat(fs)
+    fg = fg.query("Kode == @kodesaja")
+    fg = fg[["Kode","Tanggal","Proft","ProftOwner"]]
+    st.write('Penyandingan Fundamental')
+    st.line_chart(fg)
+    ########### end of Grafik Funda
 #################### CARI DATA ###############
 def dataframe():
     caridata = option_menu(None, ['Simulasi','10 Data','Fundamental','Index Per Sektor'], icons=['arrow-up-square', 'arrow-down-square'], menu_icon="cast", default_index=0, orientation="horizontal")
