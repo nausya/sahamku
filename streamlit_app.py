@@ -565,7 +565,7 @@ else:
 st.info('Untuk jangka panjang perlu diperhatikan kisaran posisi harga kurang dari 10')
 
 def tech_indicators():
-    st.header('Teknikal Indikator')
+    st.write('Teknikal Indikator')
     option = st.radio('Pilih Teknikal Indikator', ['Close', 'BB', 'MACD', 'RSI', 'EMA'])
         
     # Bollinger bands
@@ -602,8 +602,7 @@ def tech_indicators():
     else:
         st.write('Exponential Moving Average')
         st.line_chart(ema)
-    st.write('Volume')
-    st.bar_chart(data.Volume)
+
     ########### Grafik Funda
     f1 = pd.read_csv('f2201.csv', sep=',')
     f2 = pd.read_csv('f2202.csv', sep=',')
@@ -627,6 +626,8 @@ def tech_indicators():
     if listfin:
         st.line_chart(fg, x="Tanggal", y=listfin)
     ########### end of Grafik Funda
+    st.write('Volume')
+    st.bar_chart(data.Volume)
 #################### CARI DATA ###############
 def dataframe():
     caridata = option_menu(None, ['Simulasi','10 Data','Fundamental','Index Per Sektor'], icons=['arrow-up-square', 'arrow-down-square'], menu_icon="cast", default_index=0, orientation="horizontal")
