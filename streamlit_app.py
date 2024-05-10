@@ -615,7 +615,7 @@ def tech_indicators():
     fs = [f1,f2,f3,f4,f5,f6,f7]
     fg = pd.concat(fs)
     fg = fg.query("Kode == @kodesaja")
-    fg['Tanggal'] = pd.to_datetime(fg['Tanggal'])
+    #fg['Tanggal'] = pd.to_datetime(fg['Tanggal'])
     st.write('Penyandingan Fundamental')
     yf = ["Aset","Utang","Modal","Penjual","EBT(RP)","Proft","EPS(RP)","BV(RP)","PER","DER"]
     cols = st.columns(10)
