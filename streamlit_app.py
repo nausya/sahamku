@@ -623,7 +623,7 @@ def tech_indicators():
         num = col.checkbox(f'{yf[idx]}')
         if num:
             listfin.append(yf[idx])
-    if num is not None:
+    if listfin:
         st.line_chart(fg, x="Tanggal", y=listfin)
     ########### end of Grafik Funda
 #################### CARI DATA ###############
