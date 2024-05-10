@@ -566,8 +566,12 @@ st.info('Untuk jangka panjang perlu diperhatikan kisaran posisi harga kurang dar
 
 def tech_indicators():
     st.header('Teknikal Indikator')
-    option = st.radio('Pilih Teknikal Indikator', ['Close', 'BB', 'MACD', 'RSI', 'EMA'])
-
+    #option = st.radio('Pilih Teknikal Indikator', ['Close', 'BB', 'MACD', 'RSI', 'EMA'])
+    indi = ['Close', 'BB', 'MACD', 'RSI', 'EMA']
+    kols = st.columns(5)
+    for indx, kol in enumerate(kols):
+        option = kol.radio(f'{yf[indx]}')
+        
     # Bollinger bands
     bb_indicator = BollingerBands(data.Close)
     bb = data
