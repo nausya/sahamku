@@ -619,11 +619,10 @@ def tech_indicators():
     yf = ["Aset","Utang","Modal","Penjual","EBT(RP)","Proft","ProftOwner","EPS(RP)","BV(RP)","PER","PBV","DER","ROA(%)","ROE(%)","NPM(%)"]
     cols = st.columns(15)
     listfin = []
-    for i in yf:
-        with cols[i]:
-            num = st.checkbox(f'{i}')
-            if num:
-                listfin.append(i)
+    for idx, col in enumerate(cols):
+        num = col.checkbox(f'{yf[idx]}')
+        if num:
+            listfin.append(yf[idx])
     st.line_chart(fg, x="Tanggal", y=listfin)
     ########### end of Grafik Funda
 #################### CARI DATA ###############
