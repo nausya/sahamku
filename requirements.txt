@@ -9,4 +9,3 @@ matplotlib
 ta
 xgboost
 seaborn
-peewee
