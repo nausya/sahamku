@@ -616,8 +616,8 @@ def tech_indicators():
     fg = pd.concat(fs)
     fg = fg.query("Kode == @kodesaja")
     st.write('Penyandingan Fundamental')
-    yf = ["Aset","Utang","Modal","Penjual","EBT(RP)","Proft","ProftOwner","EPS(RP)","BV(RP)","PER","PBV","DER","ROA(%)","ROE(%)","NPM(%)"]
-    cols = st.columns(15)
+    yf = ["Aset","Utang","Modal","Penjual","EBT(RP)","Proft","EPS(RP)","BV(RP)","PER","DER","ROA(%)","ROE(%)","NPM(%)"]
+    cols = st.columns(13)
     listfin = []
     for idx, col in enumerate(cols):
         num = col.checkbox(f'{yf[idx]}')
