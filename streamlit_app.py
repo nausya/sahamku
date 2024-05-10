@@ -570,7 +570,7 @@ def tech_indicators():
     indi = ['Close', 'BB', 'MACD', 'RSI', 'EMA']
     kols = st.columns(5)
     for indx, kol in enumerate(kols):
-        option = kol.radio(f'{yf[indx]}')
+        option = kol.radio(f'{indi[indx]}')
         
     # Bollinger bands
     bb_indicator = BollingerBands(data.Close)
