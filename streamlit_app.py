@@ -615,10 +615,16 @@ def tech_indicators():
     fs = [f1,f2,f3,f4,f5,f6,f7]
     fg = pd.concat(fs)
     fg = fg.query("Kode == @kodesaja")
-    #fg = fg[["Kode","Tanggal","Proft","ProftOwner"]]
     st.write('Penyandingan Fundamental')
     yf = ["Aset","Utang","Modal","Penjual","EBT(RP)","Proft","ProftOwner","EPS(RP)","BV(RP)","PER","PBV","DER","ROA(%)","ROE(%)","NPM(%)"]
-    st.line_chart(fg, x="Tanggal", y=yf)
+    cols = st.columns(15)
+    listfin = []
+    for i in yf:
+        with cols[i]:
+            num = st.checkbox(f'{i}')
+            if num:
+                listfin.append(i)
+    st.line_chart(fg, x="Tanggal", y=listfin)
     ########### end of Grafik Funda
 #################### CARI DATA ###############
 def dataframe():
