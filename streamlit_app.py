@@ -506,11 +506,12 @@ else:
        h = h.to_dict(orient='records')
        dp = pentilsaham(h)
        dp = pd.DataFrame(dp)
-       if st.button('Gorengan'):
+       opsipentil = st.radio('Pilih Posisi Harga', ['Gorengan 2 Bulan', 'Cemilan 6 Bulan', 'Tanam Jati 1 Tahun'])
+       if opsipentil == 'Gorengan 2 Bulan:
           dp = dp[['kode','p2m']]
-       elif st.button('Cemilan'):
+       if opsipentil == 'Cemilan 6 Bulan':
           dp = dp[['kode','p6m']]
-       else:
+       if opsipentil == 'Tanam Jati 1 Tahun':
           dp = dp[['kode','p1y']]
        dp         
        p = pd.read_csv('porto.csv', sep=';',usecols=['kode','p'])
