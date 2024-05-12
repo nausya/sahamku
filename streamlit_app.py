@@ -507,7 +507,7 @@ else:
        dp = pentilsaham(h)
        dp = pd.DataFrame(dp)
        opsipentil = st.radio('Pilih Posisi Harga', ['Gorengan 2 Bulan', 'Cemilan 6 Bulan', 'Tanam Jati 1 Tahun'])
-       if opsipentil == 'Gorengan 2 Bulan:
+       if opsipentil == 'Gorengan 2 Bulan':
           dp = dp[['kode','p2m']]
        if opsipentil == 'Cemilan 6 Bulan':
           dp = dp[['kode','p6m']]
