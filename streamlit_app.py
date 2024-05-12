@@ -507,11 +507,11 @@ else:
        dp = pentilsaham(h)
        dp = pd.DataFrame(dp)
        if st.button('Gorengan'):
-          dp = dp[['Kode','p2m']]
+          dp = dp[['kode','p2m']]
        elif st.button('Cemilan'):
-          dp = dp[['Kode','p6m']]
+          dp = dp[['kode','p6m']]
        else:
-          dp = dp[['Kode','p1y']]
+          dp = dp[['kode','p1y']]
        dp         
        p = pd.read_csv('porto.csv', sep=';',usecols=['kode','p'])
        bmd = pd.merge(bmd, p, left_on='Kode', right_on='kode', how='inner')
