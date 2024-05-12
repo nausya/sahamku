@@ -509,12 +509,15 @@ else:
        opsipentil = st.radio('Pilih Posisi Harga', ['Gorengan 2 Bulan', 'Cemilan 6 Bulan', 'Tanam Jati 1 Tahun'])
        if opsipentil == 'Gorengan 2 Bulan':
           dp = dp[['kode','p2m']]
+          dp = dp.rename(columns = {"p2m": "p"})
        if opsipentil == 'Cemilan 6 Bulan':
           dp = dp[['kode','p6m']]
+          dp = dp.rename(columns = {"p6m": "p"})
        if opsipentil == 'Tanam Jati 1 Tahun':
           dp = dp[['kode','p1y']]
-       dp         
-       p = pd.read_csv('porto.csv', sep=';',usecols=['kode','p'])
+          dp = dp.rename(columns = {"p1y": "p"})
+       p = dp.copy()       
+       #p = pd.read_csv('porto.csv', sep=';',usecols=['kode','p'])
        bmd = pd.merge(bmd, p, left_on='Kode', right_on='kode', how='inner')
        bmd = bmd[['Kode','p','EPSRP','BVRP','PER','PBV','DER','ROA(%)','ROE(%)','NPM(%)']]
        g = bmd.copy()
