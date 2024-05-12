@@ -56,11 +56,29 @@ def main():
 ###### END OF FUNGSI MENU #############
 @st.cache_resource
 ############# KUMPULAN FUNGSI ######
-#Percentil
+#######Percentil satuan
 def pentil(min,max,c):
     p = np.interp(c, [min, max], [0, 100])
     return round(p)
-    
+#######Percentil Masal
+def pentilsaham(saham):
+    saham_pentil = []
+    for stock in saham:
+        stock = stock['Kode'] + str('.JK')
+        info = yf.Ticker(stock).info
+        kode = stock.replace('.JK', '')
+        c = round(info.get('currentPrice'))
+        min_val = round(info.get('fiftyTwoWeekLow'))
+        max2m = round(info.get('fiftyDayAverage'))
+        max6m = round(info.get('twoHundredDayAverage'))
+        max1y = round(info.get('fiftyTwoWeekHigh'))
+        p2m = round(np.interp(c, [min_val, max2m], [0, 100]))
+        p6m = round(np.interp(c, [min_val, max6m], [0, 100]))
+        p1y = round(np.interp(c, [min_val, max1y], [0, 100]))
+        saham_pentil.append({'kode': kode, 'c': c, 'min': min_val, 'max2m': max2m, 'max6m': max6m, 'max1y': max1y, 'p2m': p2m, 'p6m': p6m, 'p1y': p1y})
+    return saham_pentil
+#######End Of Percentil
+
 #ganti value None
 def ceknon(x):
     if x is not None:
@@ -483,6 +501,12 @@ else:
    #with col1:
        bmd = pd.read_csv('Finansial.csv', sep=';', usecols=['Kode','KodeInd','EPSRP','BVRP','PER','PBV','DER','ROA(%)','ROE(%)','NPM(%)']).sort_values('Kode')
        bmd = bmd.query("KodeInd == @fin[5]")
+       h = bmd.copy()
+       h = h[['Kode']]
+       h = h.to_dict(orient='records')
+       dp = pentilsaham(h)
+       dp = pd.DataFrame(dp)
+       dp
        p = pd.read_csv('porto.csv', sep=';',usecols=['kode','p'])
        bmd = pd.merge(bmd, p, left_on='Kode', right_on='kode', how='inner')
        bmd = bmd[['Kode','p','EPSRP','BVRP','PER','PBV','DER','ROA(%)','ROE(%)','NPM(%)']]
