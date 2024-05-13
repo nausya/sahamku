@@ -504,13 +504,17 @@ else:
        h = bmd.copy()
        h = h[['Kode']]
        h = h.to_dict(orient='records')
-       dp = pentilsaham(h)
-       dp = pd.DataFrame(dp)
-       #h = h.values.tolist()
-       #h = [item[0] for item in h]
-       #dp = pd.read_csv('pentilsaham.csv', sep=',')
-       #dp = dp.query("kode in @h")
-       #dp
+       ####### jike live none ambil dari file
+       kp = h[0]['Kode'] + '.JK'
+       info = yf.Ticker(kp).info
+       if info is not None:
+         h = [item['Kode'] for item in h]
+         dp = pd.read_csv('pentilsaham.csv', sep=',')
+         dp = dp.query("kode in @h")
+       else:
+         dp = pentilsaham(h)
+         dp = pd.DataFrame(dp)
+       ############
        opsipentil = st.radio('Pilih Posisi Harga', ['Gorengan 2 Bulan', 'Cemilan 6 Bulan', 'Tanam Jati 1 Tahun'])
        if opsipentil == 'Gorengan 2 Bulan':
           dp = dp[['kode','p2m']]
