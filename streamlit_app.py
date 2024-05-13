@@ -537,9 +537,9 @@ else:
         pilkin = st.radio('Posisi Harga Terhadap : ', ['Laba Per Saham', 'Harga Buku', 'PER', 'Nilai Buku', 'Rasio Utang', 'ROA', 'ROE', 'NPM'])
    #with col3:
         fig, ax = plt.subplots()
-        g = g.query("p>=@pawal and p<=@pakhir")
+        g = g.query("Posisi>=@pawal and Posisi<=@pakhir")
         "Jumlah : " + str(g.shape[0]) + " Emiten"
-        x = g['p']
+        x = g['Posisi']
         if pilkin == 'Laba Per Saham':
             y = g['EPSRP']
             ylabel = 'Laba Per Saham'
