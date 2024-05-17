@@ -34,7 +34,7 @@ pd.set_option('future.no_silent_downcasting', True)
 github_token = os.environ.get('GITHUB_TOKEN')
 
 ######Halaman Utama
-st.set_page_config(page_title="Sahamku", layout="wide")
+st.set_page_config(page_title="SaranaCuan", layout="wide")
 st.header('ANALITIK SAHAM INDONESIA')
 ######End of Halaman Utama
 import streamlit as st
