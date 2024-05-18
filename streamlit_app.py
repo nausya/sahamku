@@ -608,8 +608,8 @@ st.info('Untuk jangka panjang perlu diperhatikan kisaran posisi harga kurang dar
 
 def tech_indicators():
     st.write('Teknikal Indikator')
-    option = st.radio('Pilih Teknikal Indikator', ['Close', 'BB', 'MACD', 'RSI', 'EMA'])
-        
+    #option = st.radio('Pilih Teknikal Indikator', ['Close', 'BB', 'MACD', 'RSI', 'EMA'])
+    option = st.radio('Pilih Teknikal Indikator', ['MACD', 'RSI','Close'])
     # Bollinger bands
     bb_indicator = BollingerBands(data.Close)
     bb = data
@@ -625,16 +625,15 @@ def tech_indicators():
     #sma = SMAIndicator(data.Close, window=14).sma_indicator()
     # EMA
     ema = EMAIndicator(data.Close).ema_indicator()
-
-    if option == 'Close':
+    if option == 'MACD':
+        st.write('Moving Average Convergence Divergence')
+        st.line_chart(macd)
+    elif option == 'Close':
         st.write('Close Price')
         st.line_chart(data.Close)
     elif option == 'BB':
         st.write('BollingerBands')
         st.line_chart(bb)
-    elif option == 'MACD':
-        st.write('Moving Average Convergence Divergence')
-        st.line_chart(macd)
     elif option == 'RSI':
         st.write('Relative Strength Indicator')
         st.line_chart(rsi)
