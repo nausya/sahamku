@@ -161,7 +161,15 @@ data = download_data(option, start_date, end_date)
 scaler = StandardScaler()
 ######## End Proses sidebar data
 
-#Display Persentil
+######## Manual PDF
+st.sidebar.markdown("Baca Panduan Web (manualv1.pdf)")
+
+# Menampilkan PDF menggunakan iframe
+st.markdown(f'<iframe src="manualv1.pdf" width="700" height="1000"></iframe>', unsafe_allow_html=True)
+
+############ End of Manual
+
+########Display Persentil
 saham = [option]
 
 screensaham = []
