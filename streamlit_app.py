@@ -165,8 +165,8 @@ scaler = StandardScaler()
 ########## PDF Manual
 # Menampilkan PDF di dalam aplikasi
 #pdf_file = "manualv1.pdf"
-
-st.sidebar.markdown(f"Baca Panduan Web(https://github.com/nausya/sahamku/blob/main/manualv1.pdf)")
+st.sidebar.link_button("Baca Panduan Web", "manualv1.pdf")
+#st.sidebar.markdown(f"Baca Panduan Web(https://github.com/nausya/sahamku/blob/main/manualv1.pdf)")
 ########## End of PDF Manual
 
 #### Tampilkan Panduan PDF
