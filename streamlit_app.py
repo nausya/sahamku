@@ -164,9 +164,14 @@ scaler = StandardScaler()
 
 ########## PDF Manual
 # Menampilkan PDF di dalam aplikasi
-#pdf_file = "manualv1.pdf"
-st.sidebar.link_button("Baca Panduan Web", "manualv1.pdf")
-#st.sidebar.markdown(f"Baca Panduan Web(https://github.com/nausya/sahamku/blob/main/manualv1.pdf)")
+import streamlit as st
+
+# Menambahkan link ke file PDF pada sidebar
+st.sidebar.markdown("[Buka PDF](file/manualv1.pdf)")
+
+# Menampilkan PDF menggunakan iframe
+st.markdown(f'<iframe src="file/manualv1.pdf" width="700" height="1000"></iframe>', unsafe_allow_html=True)
+
 ########## End of PDF Manual
 
 #### Tampilkan Panduan PDF
