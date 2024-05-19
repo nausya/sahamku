@@ -162,7 +162,7 @@ scaler = StandardScaler()
 ######## End Proses sidebar data
 
 ######## Manual PDF
-st.page_link("streamlit_app.py", label="Home", icon="🏠")
+st.sidebar.page_link("manualv1.pdf", label="Baca Panduan Web", icon="🏠")
 
 ############ End of Manual
 
