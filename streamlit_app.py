@@ -39,6 +39,10 @@ st.header('ANALITIK SAHAM INDONESIA')
 ######End of Halaman Utama
 import streamlit as st
 
+#### Tampilkan Panduan PDF
+# Menampilkan PDF menggunakan iframe
+st.markdown(f'<iframe src="{pdf_file}" width="700" height="1000"></iframe>', unsafe_allow_html=True)
+#### End of Tampilkan Panduan PDF
 
 ###### FUNGSI MENU #############
 def main():
@@ -161,7 +165,13 @@ data = download_data(option, start_date, end_date)
 scaler = StandardScaler()
 ######## End Proses sidebar data
 
-#Display Persentil
+########## PDF Manual
+# Menampilkan PDF di dalam aplikasi
+pdf_file = "manual-dashboard v1.pdf"
+
+st.sidebar.markdown(f"[Baca Panduan Web]({pdf_file})")
+########## End of PDF Manual
+##############Display Persentil
 saham = [option]
 
 screensaham = []
