@@ -162,22 +162,6 @@ data = download_data(option, start_date, end_date)
 scaler = StandardScaler()
 ######## End Proses sidebar data
 
-########## PDF Manual
-# Menampilkan PDF di dalam aplikasi
-import streamlit as st
-
-# Menambahkan link ke file PDF pada sidebar
-st.sidebar.markdown("[Buka PDF](file/manualv1.pdf)")
-
-# Menampilkan PDF menggunakan iframe
-st.markdown(f'<iframe src="file/manualv1.pdf" width="700" height="1000"></iframe>', unsafe_allow_html=True)
-
-########## End of PDF Manual
-
-#### Tampilkan Panduan PDF
-# Menampilkan PDF menggunakan iframe
-#st.markdown(f'<iframe src="{pdf_file}" width="700" height="1000"></iframe>', unsafe_allow_html=True)
-#### End of Tampilkan Panduan PDF
 
 ##############Display Persentil
 saham = [option]
