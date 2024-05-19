@@ -164,14 +164,14 @@ scaler = StandardScaler()
 
 ########## PDF Manual
 # Menampilkan PDF di dalam aplikasi
-pdf_file = "manual-dashboard v1.pdf"
+pdf_file = "manual-dashboardv1.pdf"
 
 st.sidebar.markdown(f"[Baca Panduan Web]({pdf_file})")
 ########## End of PDF Manual
 
 #### Tampilkan Panduan PDF
 # Menampilkan PDF menggunakan iframe
-st.markdown(f'<iframe src="{pdf_file}" width="700" height="1000"></iframe>', unsafe_allow_html=True)
+#st.markdown(f'<iframe src="{pdf_file}" width="700" height="1000"></iframe>', unsafe_allow_html=True)
 #### End of Tampilkan Panduan PDF
 
 ##############Display Persentil
