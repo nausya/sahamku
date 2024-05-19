@@ -162,7 +162,14 @@ scaler = StandardScaler()
 ######## End Proses sidebar data
 
 ######## Manual PDF
-st.sidebar.page_link("manualv1.pdf", label="Baca Panduan Web", icon="🏠")
+# Menambahkan link ke file PDF pada sidebar
+pdf_path = os.path.join("file", "manualv1.pdf")
+
+st.sidebar.markdown(f"Baca Panduan Web({pdf_path})", unsafe_allow_html=True)
+
+
+# Menampilkan PDF menggunakan iframe
+st.markdown(f'<iframe src="{pdf_path}" width="700" height="1000"></iframe>', unsafe_allow_html=True)
 
 ############ End of Manual
 
