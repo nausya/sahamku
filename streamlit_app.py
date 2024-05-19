@@ -164,9 +164,9 @@ scaler = StandardScaler()
 
 ########## PDF Manual
 # Menampilkan PDF di dalam aplikasi
-pdf_file = "manual-dashboardv1.pdf"
+#pdf_file = "manualv1.pdf"
 
-st.sidebar.markdown(f"[Baca Panduan Web]({pdf_file})")
+st.sidebar.markdown(f"Baca Panduan Web(manualv1.pdf)")
 ########## End of PDF Manual
 
 #### Tampilkan Panduan PDF
