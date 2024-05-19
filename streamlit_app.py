@@ -169,7 +169,7 @@ st.sidebar.markdown(f"Baca Panduan Web({pdf_path})", unsafe_allow_html=True)
 
 
 # Menampilkan PDF menggunakan iframe
-st.markdown(f'<iframe src="{pdf_path}" width="700" height="1000"></iframe>', unsafe_allow_html=True)
+st.markdown(f'{pdf_path}', unsafe_allow_html=True)
 
 ############ End of Manual
 
