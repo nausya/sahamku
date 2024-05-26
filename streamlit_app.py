@@ -161,22 +161,7 @@ data = download_data(option, start_date, end_date)
 scaler = StandardScaler()
 ######## End Proses sidebar data
 
-######## Manual PDF
-# Path relatif ke file PDF
-pdf_path = "file/manualv1.pdf"
 
-# Memastikan file PDF ada
-if os.path.exists(pdf_path):
-    st.sidebar.markdown(f"[Baca Panduan Web]({pdf_path})", unsafe_allow_html=True)
-
-    # Menampilkan PDF menggunakan iframe
-    st.markdown(f'<iframe src="{pdf_path}" width="1200" height="1000"></iframe>', unsafe_allow_html=True)
-else:
-    st.sidebar.error("File PDF tidak ditemukan. Pastikan path benar.")
-    st.error("File PDF tidak ditemukan. Pastikan path benar.")
-
-
-############ End of Manual
 
 ########Display Persentil
 saham = [option]
