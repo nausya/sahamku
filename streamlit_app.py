@@ -582,8 +582,9 @@ else:
    ################## END OF BENCHMARK DETIL
    ################## HISTORI GAIN
    st.subheader(f"HISTORI GAIN")
-   dg = pd.read_csv('gain.csv', sep=';')
+   dg = pd.read_csv('gain.csv', sep=';').sort_values('KODE','HIGH DATE')
    dg = dg.query("KODE in @h")
+   dg = dg.set_index('KODE')
    st.dataframe(dg)
    st.subheader("", divider="rainbow")
    ################## END OF HISTORI GAIN
