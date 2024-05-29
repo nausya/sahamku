@@ -582,7 +582,7 @@ else:
    ################## END OF BENCHMARK DETIL
    ################## HISTORI GAIN
    st.subheader(f"HISTORI GAIN")
-   dg = pd.read_csv('gain.csv', sep=';').sort_values(by=['KODE', 'HIGH DATE'], ascending=[True, False])
+   dg = pd.read_csv('gain.csv', sep=';').sort_values(by=['KODE', 'HIGH DATE'], ascending=[True, True])
    dg = dg.query("KODE in @h")
    dg = dg.set_index('KODE')
    st.dataframe(dg)
