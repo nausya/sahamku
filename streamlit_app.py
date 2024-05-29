@@ -580,7 +580,13 @@ else:
         st.pyplot(fig)
    st.subheader("", divider="rainbow")
    ################## END OF BENCHMARK DETIL
-
+   ################## HISTORI GAIN
+   st.subheader(f"HISTORI GAIN")
+   dg = pd.read_csv('gain.csv', sep=';')
+   dg = dg.query("kode in @h")
+   st.dataframe(dg)
+   st.subheader("", divider="rainbow")
+   ################## END OF HISTORI GAIN
    ##################RINGKASAN
    st.subheader(f"RINGKASAN PORTOFOLIO")
 
