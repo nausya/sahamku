@@ -583,7 +583,7 @@ else:
    ################## HISTORI GAIN
    st.subheader(f"HISTORI GAIN")
    dg = pd.read_csv('gain.csv', sep=';')
-   dg = dg.query("kode in @h")
+   dg = dg.query("KODE in @h")
    st.dataframe(dg)
    st.subheader("", divider="rainbow")
    ################## END OF HISTORI GAIN
