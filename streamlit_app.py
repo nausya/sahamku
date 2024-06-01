@@ -579,7 +579,7 @@ else:
                 ax.annotate(label,(a,b), xytext=(3, -3),textcoords='offset points',fontsize='7')
             
             st.pyplot(fig)
-       st.subheader("", divider="rainbow")
+       #st.subheader("", divider="rainbow")
    ################## END OF BENCHMARK DETIL
    with col2:
        ################## HISTORI GAIN
@@ -591,8 +591,8 @@ else:
           dg = dg.query("KODE in @kodesaja")
        dg = dg.set_index('KODE')
        st.dataframe(dg)
-       st.subheader("", divider="rainbow")
        ################## END OF HISTORI GAIN
+   st.subheader("", divider="rainbow")
    ##################RINGKASAN
    st.subheader(f"RINGKASAN PORTOFOLIO")
 
