@@ -34,11 +34,10 @@ pd.set_option('future.no_silent_downcasting', True)
 github_token = os.environ.get('GITHUB_TOKEN')
 
 ######Halaman Utama
-st.set_page_config(page_title="Sahamku", layout="wide")
+st.set_page_config(page_title="SaranaCuan", layout="wide")
 st.header('ANALITIK SAHAM INDONESIA')
 ######End of Halaman Utama
 import streamlit as st
-
 
 
 ###### FUNGSI MENU #############
@@ -163,7 +162,8 @@ scaler = StandardScaler()
 ######## End Proses sidebar data
 
 
-##############Display Persentil
+
+########Display Persentil
 saham = [option]
 
 screensaham = []
@@ -492,95 +492,107 @@ else:
    st.subheader("", divider="rainbow")
 
    st.subheader(f"STANDAR KINERJA SEKTOR : {bmsek.upper()}\n EPS : Rp.{bmeps} | BV : Rp.{round(bmbv)} | PBV : {bmpbv} | PER : {round(bmper)} | DER : {bmder}", divider="rainbow")
-
-   ################## BENCHMARK DETIL
-   st.subheader(f"KINERJA EMITEN SEJENIS")
-   tab1, tab2 = st.tabs(['Tabel','Grafik'])                                                                                                                                                                                                                                                                                                                                                                                                                                                         
-   with tab1:                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
-       #st.write('Selamat Datang di Halaman Simulasi')
-        
-   #col1, col2, col3 = st.columns([2, 1, 4])
-   #with col1:
-       bmd = pd.read_csv('Finansial.csv', sep=';', usecols=['Kode','KodeInd','EPSRP','BVRP','PER','PBV','DER','ROA(%)','ROE(%)','NPM(%)']).sort_values('Kode')
-       bmd = bmd.query("KodeInd == @fin[5]")
-       h = bmd.copy()
-       h = h[['Kode']]
-       h = h.to_dict(orient='records')
-       ####### jike live none ambil dari file
-       kp = h[0]['Kode'] + '.JK'
-       info = yf.Ticker(kp).info
-       if info is not None:
-         h = [item['Kode'] for item in h]
-         dp = pd.read_csv('pentilsaham.csv', sep=',')
-         dp = dp.query("kode in @h")
-       else:
-         dp = pentilsaham(h)
-         dp = pd.DataFrame(dp)
-       ############
-       opsipentil = st.radio('Pilih Posisi Harga', ['Gorengan 2 Bulan', 'Cemilan 6 Bulan', 'Tanam Jati 1 Tahun'])
-       if opsipentil == 'Gorengan 2 Bulan':
-          dp = dp[['kode','p2m']]
-          dp = dp.rename(columns = {"p2m": "Posisi"})
-       if opsipentil == 'Cemilan 6 Bulan':
-          dp = dp[['kode','p6m']]
-          dp = dp.rename(columns = {"p6m": "Posisi"})
-       if opsipentil == 'Tanam Jati 1 Tahun':
-          dp = dp[['kode','p1y']]
-          dp = dp.rename(columns = {"p1y": "Posisi"})
-       bmp = dp.copy()       
-       bmd = pd.merge(bmd, bmp, left_on='Kode', right_on='kode', how='inner')
-       bmd = bmd[['Kode','Posisi','EPSRP','BVRP','PER','PBV','DER','ROA(%)','ROE(%)','NPM(%)']]
-       g = bmd.copy()
-       bmd = bmd.set_index('Kode')
-       st.dataframe(bmd)
-       "Jumlah : " + str(bmd.shape[0]) + " Emiten"
-   with tab2:
-        pawal, pakhir = st.slider('Posisi Terkini', min_value=0, max_value=100, value=(0, 100))  
-        pilkin = st.radio('Posisi Harga Terhadap : ', ['Laba Per Saham', 'Harga Buku', 'PER', 'Nilai Buku', 'Rasio Utang', 'ROA', 'ROE', 'NPM'])
-   #with col3:
-        fig, ax = plt.subplots()
-        g = g.query("Posisi>=@pawal and Posisi<=@pakhir")
-        "Jumlah : " + str(g.shape[0]) + " Emiten"
-        x = g['Posisi']
-        if pilkin == 'Laba Per Saham':
-            y = g['EPSRP']
-            ylabel = 'Laba Per Saham'
-        elif pilkin == 'Harga Buku':
-            y = g['BVRP']
-            ylabel = 'Harga Buku'
-        elif pilkin == 'PER':
-            y = g['PER']
-            ylabel = 'PER'
-        elif pilkin == 'Nilai Buku':
-            y = g['PBV']
-            ylabel = 'Nilai Buku'
-        elif pilkin == 'Rasio Utang':
-            y = g['DER']
-            ylabel = 'Rasio Utang Modal'
-        elif pilkin == 'ROA':
-            y = g['ROA(%)']
-            ylabel = 'Rasio Pengembalian Aset (%)'
-        elif pilkin == 'ROE':
-            y = g['ROE(%)']
-            ylabel = 'Rasio Pengembalian Modal (%)'
-        else:
-            y = g['NPM(%)']
-            ylabel = 'Margin Operasi (%)'
-        kd = g['Kode']
-        sns.scatterplot(g,x=x, y=y, marker='>')
-        plt.xlabel("Posisi Harga")
-        plt.ylabel(f"{ylabel}")
-        for a,b,c in zip(x,y,kd):
-            if pilkin in ('Tunai Per Saham', 'Nilai Buku'):
-                label = f"{c} {round(b,1)}X"
+   col1, col2 = st.columns([1, 1])
+   with col1:
+       ################## BENCHMARK DETIL
+       st.subheader(f"KINERJA EMITEN SEJENIS")
+       tab1, tab2 = st.tabs(['Tabel','Grafik'])                                                                                                                                                                                                                                                                                                                                                                                                                                                         
+       with tab1:                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
+           #st.write('Selamat Datang di Halaman Simulasi')
+            
+       #col1, col2, col3 = st.columns([2, 1, 4])
+       #with col1:
+           bmd = pd.read_csv('Finansial.csv', sep=';', usecols=['Kode','KodeInd','EPSRP','BVRP','PER','PBV','DER','ROA(%)','ROE(%)','NPM(%)']).sort_values('Kode')
+           bmd = bmd.query("KodeInd == @fin[5]")
+           h = bmd.copy()
+           h = h[['Kode']]
+           h = h.to_dict(orient='records')
+           ####### jike live none ambil dari file
+           kp = h[0]['Kode'] + '.JK'
+           info = yf.Ticker(kp).info
+           if info is not None:
+             h = [item['Kode'] for item in h]
+             dp = pd.read_csv('pentilsaham.csv', sep=',')
+             dp = dp.query("kode in @h")
+           else:
+             dp = pentilsaham(h)
+             dp = pd.DataFrame(dp)
+           ############
+           opsipentil = st.radio('Pilih Posisi Harga', ['Gorengan 2 Bulan', 'Cemilan 6 Bulan', 'Tanam Jati 1 Tahun'])
+           if opsipentil == 'Gorengan 2 Bulan':
+              dp = dp[['kode','p2m']]
+              dp = dp.rename(columns = {"p2m": "Posisi"})
+           if opsipentil == 'Cemilan 6 Bulan':
+              dp = dp[['kode','p6m']]
+              dp = dp.rename(columns = {"p6m": "Posisi"})
+           if opsipentil == 'Tanam Jati 1 Tahun':
+              dp = dp[['kode','p1y']]
+              dp = dp.rename(columns = {"p1y": "Posisi"})
+           bmp = dp.copy()       
+           bmd = pd.merge(bmd, bmp, left_on='Kode', right_on='kode', how='inner')
+           bmd = bmd[['Kode','Posisi','EPSRP','BVRP','PER','PBV','DER','ROA(%)','ROE(%)','NPM(%)']]
+           g = bmd.copy()
+           bmd = bmd.set_index('Kode')
+           st.dataframe(bmd)
+           "Jumlah : " + str(bmd.shape[0]) + " Emiten"
+       with tab2:
+            pawal, pakhir = st.slider('Posisi Terkini', min_value=0, max_value=100, value=(0, 100))  
+            pilkin = st.radio('Posisi Harga Terhadap : ', ['Laba Per Saham', 'Harga Buku', 'PER', 'Nilai Buku', 'Rasio Utang', 'ROA', 'ROE', 'NPM'])
+       #with col3:
+            fig, ax = plt.subplots()
+            g = g.query("Posisi>=@pawal and Posisi<=@pakhir")
+            "Jumlah : " + str(g.shape[0]) + " Emiten"
+            x = g['Posisi']
+            if pilkin == 'Laba Per Saham':
+                y = g['EPSRP']
+                ylabel = 'Laba Per Saham'
+            elif pilkin == 'Harga Buku':
+                y = g['BVRP']
+                ylabel = 'Harga Buku'
+            elif pilkin == 'PER':
+                y = g['PER']
+                ylabel = 'PER'
+            elif pilkin == 'Nilai Buku':
+                y = g['PBV']
+                ylabel = 'Nilai Buku'
+            elif pilkin == 'Rasio Utang':
+                y = g['DER']
+                ylabel = 'Rasio Utang Modal'
+            elif pilkin == 'ROA':
+                y = g['ROA(%)']
+                ylabel = 'Rasio Pengembalian Aset (%)'
+            elif pilkin == 'ROE':
+                y = g['ROE(%)']
+                ylabel = 'Rasio Pengembalian Modal (%)'
             else:
-                label = f"{c} {round(b,1)}"
-            ax.annotate(label,(a,b), xytext=(3, -3),textcoords='offset points',fontsize='7')
-        
-        st.pyplot(fig)
-   st.subheader("", divider="rainbow")
+                y = g['NPM(%)']
+                ylabel = 'Margin Operasi (%)'
+            kd = g['Kode']
+            sns.scatterplot(g,x=x, y=y, marker='>')
+            plt.xlabel("Posisi Harga")
+            plt.ylabel(f"{ylabel}")
+            for a,b,c in zip(x,y,kd):
+                if pilkin in ('Tunai Per Saham', 'Nilai Buku'):
+                    label = f"{c} {round(b,1)}X"
+                else:
+                    label = f"{c} {round(b,1)}"
+                ax.annotate(label,(a,b), xytext=(3, -3),textcoords='offset points',fontsize='7')
+            
+            st.pyplot(fig)
+       #st.subheader("", divider="rainbow")
    ################## END OF BENCHMARK DETIL
-
+   with col2:
+       ################## HISTORI GAIN
+       st.subheader(f"HISTORI GAIN")
+       dg = pd.read_csv('gain.csv', sep=',').sort_values(by=['KODE', 'HIGH DATE'], ascending=[True, True])
+       if st.button('Sektor Sejenis'):
+          dg = dg.query("KODE in @h")
+       else:#if st.button(f'{kodesaja}'):
+          dg = dg.query("KODE in @kodesaja")
+       dg = dg.set_index('KODE')
+       st.dataframe(dg)
+       ################## END OF HISTORI GAIN
+   st.subheader("", divider="rainbow")
    ##################RINGKASAN
    st.subheader(f"RINGKASAN PORTOFOLIO")
 
@@ -610,8 +622,8 @@ st.info('Untuk jangka panjang perlu diperhatikan kisaran posisi harga kurang dar
 
 def tech_indicators():
     st.write('Teknikal Indikator')
-    option = st.radio('Pilih Teknikal Indikator', ['Close', 'BB', 'MACD', 'RSI', 'EMA'])
-        
+    #option = st.radio('Pilih Teknikal Indikator', ['Close', 'BB', 'MACD', 'RSI', 'EMA'])
+    option = st.radio('Pilih Teknikal Indikator', ['MACD', 'RSI','Close'])
     # Bollinger bands
     bb_indicator = BollingerBands(data.Close)
     bb = data
@@ -627,16 +639,15 @@ def tech_indicators():
     #sma = SMAIndicator(data.Close, window=14).sma_indicator()
     # EMA
     ema = EMAIndicator(data.Close).ema_indicator()
-
-    if option == 'Close':
+    if option == 'MACD':
+        st.write('Moving Average Convergence Divergence')
+        st.line_chart(macd)
+    elif option == 'Close':
         st.write('Close Price')
         st.line_chart(data.Close)
     elif option == 'BB':
         st.write('BollingerBands')
         st.line_chart(bb)
-    elif option == 'MACD':
-        st.write('Moving Average Convergence Divergence')
-        st.line_chart(macd)
     elif option == 'RSI':
         st.write('Relative Strength Indicator')
         st.line_chart(rsi)
