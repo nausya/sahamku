@@ -584,7 +584,7 @@ else:
    with col2:
        ################## HISTORI GAIN
        st.subheader(f"HISTORI GAIN")
-       dg = pd.read_csv('gain.csv', sep=';').sort_values(by=['KODE', 'HIGH DATE'], ascending=[True, True])
+       dg = pd.read_csv('gain.csv', sep=',').sort_values(by=['KODE', 'HIGH DATE'], ascending=[True, True])
        if st.button('Sektor Sejenis'):
           dg = dg.query("KODE in @h")
        else:#if st.button(f'{kodesaja}'):
