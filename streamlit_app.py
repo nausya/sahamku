@@ -704,7 +704,7 @@ def dataframe():
     elif caridata == 'Fundamental':
         ###### KONTAINER TABS #############
         tab1, tab2, tab3 = st.tabs(['Portofolio','Deviden','Finansial'])
-        st.write('Last Update : 4 Mei 2024')
+        st.write('Last Update : 4 November 2024')
         with tab1:
            st.write('Filter Data')
            
